@@ -23,7 +23,7 @@ You should have received a copy of the GNU Affero General Public License
 along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 ## How to use
-- Choose the branch version to the game release you wish to dump
+- Choose the branch you wish to use
 - Compile the dll in x64-Release
 - Sign the DLL using the provided fakesign tool (/sign)
 - Rename the output DLL to discord-rpc.dll and replace it with the game's original (make a backup of the original first) (\Client\ShadowTrackerExtra\Plugins\Discord\Binaries\Win64\discord-rpc.dll)
