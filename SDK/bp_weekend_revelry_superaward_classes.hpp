@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_weekend_revelry_superaward.bp_weekend_revelry_superaward_C
-// 0x0018 (0x0400 - 0x03E8)
+// 0x0018 (0x03F0 - 0x03D8)
 class Abp_weekend_revelry_superaward_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FBP_STRUCT_WeekendRevelrySuperaward_Info BP_STRUCT_WeekendRevelrySuperaward_Info;         // 0x03F0(0x0004)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	uint8                                         Pad_3F4[0x4];                                      // 0x03F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03F8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_WeekendRevelrySuperaward_Info BP_STRUCT_WeekendRevelrySuperaward_Info;         // 0x03E0(0x0004)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	uint8                                         Pad_3E4[0x4];                                      // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();

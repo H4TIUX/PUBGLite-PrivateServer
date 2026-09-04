@@ -18,22 +18,22 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_share_shop_gift.bp_share_shop_gift_C
-// 0x0080 (0x0468 - 0x03E8)
+// 0x0080 (0x0458 - 0x03D8)
 class Abp_share_shop_gift_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FBP_STRUCT_ShareGiftRecv               BP_STRUCT_ShareGiftRecv;                           // 0x03F0(0x0070)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0460(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_ShareGiftRecv               BP_STRUCT_ShareGiftRecv;                           // 0x03E0(0x0070)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
+	void EventShareShopGiftHide();
+	void EventShareShopGiftHide_NoFetch();
 	void EventFetchInfo();
 	void EventFetchInfo_NoFetch();
 	void EventSetInfo_Push();
 	void EventSetInfo_Push_NoFetch();
-	void EventShareShopGiftHide();
-	void EventShareShopGiftHide_NoFetch();
 
 public:
 	static class UClass* StaticClass()

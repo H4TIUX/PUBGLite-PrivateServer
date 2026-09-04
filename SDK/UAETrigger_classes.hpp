@@ -42,50 +42,6 @@ public:
 	}
 };
 
-// Class UAETrigger.LevelEventCenter
-// 0x0050 (0x0078 - 0x0028)
-class ULevelEventCenter final : public UObject
-{
-public:
-	TMap<class FString, class UTriggerEvent*>     TriggerEvents;                                     // 0x0028(0x0050)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("LevelEventCenter")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"LevelEventCenter")
-	}
-	static class ULevelEventCenter* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULevelEventCenter>();
-	}
-};
-
-// Class UAETrigger.TriggerCondition
-// 0x0008 (0x0030 - 0x0028)
-class UTriggerCondition : public UObject
-{
-public:
-	class UVariableSet*                           DataSource;                                        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TriggerCondition")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TriggerCondition")
-	}
-	static class UTriggerCondition* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTriggerCondition>();
-	}
-};
-
 // Class UAETrigger.FlowNodeBase
 // 0x0048 (0x0070 - 0x0028)
 class UFlowNodeBase : public UObject
@@ -136,46 +92,82 @@ public:
 	}
 };
 
-// Class UAETrigger.UAELevelDirector
-// 0x0080 (0x0440 - 0x03C0)
-class AUAELevelDirector final : public AActor
+// Class UAETrigger.TriggerCondition
+// 0x0008 (0x0030 - 0x0028)
+class UTriggerCondition : public UObject
 {
 public:
-	struct FUAELevelDirectorRepData               LevelDirectorRepData;                              // 0x03C0(0x0018)(Net, Transient, RepNotify, NativeAccessSpecifierPrivate)
-	class UTriggersFlowTree*                      TriggersFlowTree;                                  // 0x03D8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TMap<class FString, class UUAETriggerObject*> TriggerObjectMap;                                  // 0x03E0(0x0050)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	class UVariableSet*                           AllVariableSet;                                    // 0x0430(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_438[0x8];                                      // 0x0438(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class UTriggerAction* AddActionToTrigger(const class FString& TriggerName, class UClass* Action);
-	class UTriggerCondition* AddConditionToTrigger(const class FString& TriggerName, class UClass* Condition);
-	void AddEventToTrigger(const class FString& TriggerName, class UClass* Event);
-	uint8 AddTrigger(const class FString& TriggerName, class UClass* TriggerClass);
-	uint8 FlowControllAnd(const TArray<class FString>& TriggerNames);
-	uint8 FlowControllMultiSequence(const TArray<class FString>& TriggerNames);
-	uint8 FlowControllOneSequence(const class FString& TriggerName);
-	uint8 FlowControllOr(const TArray<class FString>& TriggerNames);
-	uint8 FlowControllSubControll(const TArray<class FString>& TriggerNames);
-	class UVariableSet* GetDataSet();
-	uint8 InitialLevelDirector();
-	void OnRep_LevelDirectorData();
-	void RequestTriggerComplete(class UUAETriggerObject* CompleteTrigger);
-	void SetTriggerRunType(const class FString& TriggerName, EUAETriggerRunType RunType);
-	uint8 StartLevelDirector();
+	class UVariableSet*                           DataSource;                                        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("UAELevelDirector")
+		STATIC_CLASS_IMPL("TriggerCondition")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"UAELevelDirector")
+		STATIC_NAME_IMPL(L"TriggerCondition")
 	}
-	static class AUAELevelDirector* GetDefaultObj()
+	static class UTriggerCondition* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<AUAELevelDirector>();
+		return GetDefaultObjImpl<UTriggerCondition>();
+	}
+};
+
+// Class UAETrigger.LevelEventCenter
+// 0x0050 (0x0078 - 0x0028)
+class ULevelEventCenter final : public UObject
+{
+public:
+	TMap<class FString, class UTriggerEvent*>     TriggerEvents;                                     // 0x0028(0x0050)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LevelEventCenter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LevelEventCenter")
+	}
+	static class ULevelEventCenter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULevelEventCenter>();
+	}
+};
+
+// Class UAETrigger.UAETriggerObject
+// 0x0108 (0x0130 - 0x0028)
+class UUAETriggerObject final : public UObject
+{
+public:
+	EUAETriggerRunType                            RunType;                                           // 0x0028(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 TriggerName;                                       // 0x0030(0x0010)(Edit, ZeroConstructor, EditConst, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         bEnableTick : 1;                                   // 0x0040(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TickInterval;                                      // 0x0044(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class AActor*                                 OuterActor;                                        // 0x0048(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_50[0x50];                                      // 0x0050(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UClass*>                         TriggerEventsClass;                                // 0x00A0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<class UTriggerCondition*>              TriggerConditions;                                 // 0x00B0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<class UTriggerAction*>                 TriggerActions;                                    // 0x00C0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	class UFlowNodeBase*                          CarrierFlowNode;                                   // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSet<class UTriggerEvent*>                    TriggeredEvents;                                   // 0x00D8(0x0050)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_128[0x8];                                      // 0x0128(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UAETriggerObject")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UAETriggerObject")
+	}
+	static class UUAETriggerObject* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUAETriggerObject>();
 	}
 };
 
@@ -336,6 +328,49 @@ public:
 	}
 };
 
+// Class UAETrigger.UAELevelDirector
+// 0x0080 (0x0430 - 0x03B0)
+class AUAELevelDirector final : public AActor
+{
+public:
+	struct FUAELevelDirectorRepData               LevelDirectorRepData;                              // 0x03B0(0x0018)(Net, Transient, RepNotify, NativeAccessSpecifierPrivate)
+	class UTriggersFlowTree*                      TriggersFlowTree;                                  // 0x03C8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TMap<class FString, class UUAETriggerObject*> TriggerObjectMap;                                  // 0x03D0(0x0050)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	class UVariableSet*                           AllVariableSet;                                    // 0x0420(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_428[0x8];                                      // 0x0428(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	class UTriggerAction* AddActionToTrigger(const class FString& TriggerName, class UClass* Action);
+	class UTriggerCondition* AddConditionToTrigger(const class FString& TriggerName, class UClass* Condition);
+	void AddEventToTrigger(const class FString& TriggerName, class UClass* Event);
+	uint8 AddTrigger(const class FString& TriggerName, class UClass* TriggerClass);
+	uint8 FlowControllAnd(const TArray<class FString>& TriggerNames);
+	uint8 FlowControllMultiSequence(const TArray<class FString>& TriggerNames);
+	uint8 FlowControllOneSequence(const class FString& TriggerName);
+	uint8 FlowControllOr(const TArray<class FString>& TriggerNames);
+	uint8 FlowControllSubControll(const TArray<class FString>& TriggerNames);
+	class UVariableSet* GetDataSet();
+	uint8 InitialLevelDirector();
+	void OnRep_LevelDirectorData();
+	void RequestTriggerComplete(class UUAETriggerObject* CompleteTrigger);
+	void SetTriggerRunType(const class FString& TriggerName, EUAETriggerRunType RunType);
+	uint8 StartLevelDirector();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UAELevelDirector")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UAELevelDirector")
+	}
+	static class AUAELevelDirector* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AUAELevelDirector>();
+	}
+};
+
 // Class UAETrigger.UAELevelEventCenterInterface
 // 0x0000 (0x0000 - 0x0000)
 class IUAELevelEventCenterInterface final
@@ -380,41 +415,6 @@ public:
 	static class UUAETriggerEventSystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UUAETriggerEventSystem>();
-	}
-};
-
-// Class UAETrigger.UAETriggerObject
-// 0x0108 (0x0130 - 0x0028)
-class UUAETriggerObject final : public UObject
-{
-public:
-	EUAETriggerRunType                            RunType;                                           // 0x0028(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 TriggerName;                                       // 0x0030(0x0010)(Edit, ZeroConstructor, EditConst, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         bEnableTick : 1;                                   // 0x0040(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         TickInterval;                                      // 0x0044(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class AActor*                                 OuterActor;                                        // 0x0048(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_50[0x50];                                      // 0x0050(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UClass*>                         TriggerEventsClass;                                // 0x00A0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<class UTriggerCondition*>              TriggerConditions;                                 // 0x00B0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<class UTriggerAction*>                 TriggerActions;                                    // 0x00C0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	class UFlowNodeBase*                          CarrierFlowNode;                                   // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSet<class UTriggerEvent*>                    TriggeredEvents;                                   // 0x00D8(0x0050)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_128[0x8];                                      // 0x0128(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UAETriggerObject")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UAETriggerObject")
-	}
-	static class UUAETriggerObject* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUAETriggerObject>();
 	}
 };
 

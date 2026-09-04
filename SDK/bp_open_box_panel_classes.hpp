@@ -18,26 +18,26 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_open_box_panel.bp_open_box_panel_C
-// 0x0030 (0x0418 - 0x03E8)
+// 0x0030 (0x0408 - 0x03D8)
 class Abp_open_box_panel_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FBP_STRUCT_OpenBoxPanel_ItemData       BP_STRUCT_OpenBoxPanel_ItemData;                   // 0x03F0(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0410(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_OpenBoxPanel_ItemData       BP_STRUCT_OpenBoxPanel_ItemData;                   // 0x03E0(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0400(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventSetInfo_Push();
-	void EventSetInfo_Push_NoFetch();
 	void EventAfterHideOpenBox();
 	void EventAfterHideOpenBox_NoFetch();
-	void EventOpenBoxBuyAgain();
-	void EventOpenBoxBuyAgain_NoFetch();
-	void EventCheckOpenBox();
-	void EventCheckOpenBox_NoFetch();
 	void EventFetchInfo();
 	void EventFetchInfo_NoFetch();
+	void EventCheckOpenBox();
+	void EventCheckOpenBox_NoFetch();
+	void EventOpenBoxBuyAgain();
+	void EventOpenBoxBuyAgain_NoFetch();
+	void EventSetInfo_Push();
+	void EventSetInfo_Push_NoFetch();
 
 public:
 	static class UClass* StaticClass()

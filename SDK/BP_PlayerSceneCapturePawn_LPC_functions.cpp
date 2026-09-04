@@ -189,9 +189,9 @@ class UBackpackAvatarHandle* ABP_PlayerSceneCapturePawn_LPC_C::GetBattleItemFrom
 // Function BP_PlayerSceneCapturePawn_LPC.BP_PlayerSceneCapturePawn_LPC_C.GetAnimInstance
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ULobby_AnimBP_C**                 AnimInstance                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UCH_SceneCapture_C**              AnimInstance                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PlayerSceneCapturePawn_LPC_C::GetAnimInstance(class ULobby_AnimBP_C** AnimInstance)
+void ABP_PlayerSceneCapturePawn_LPC_C::GetAnimInstance(class UCH_SceneCapture_C** AnimInstance)
 {
 	static class UFunction* Func = nullptr;
 

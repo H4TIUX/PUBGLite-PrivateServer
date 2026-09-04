@@ -73,6 +73,26 @@ void ABP_LitePCLobbyPC_C::ReceiveBeginPlay()
 }
 
 
+// Function BP_LItePCLobbyPC.BP_LitePCLobbyPC_C.InpActEvt_H_K2Node_InputKeyEvent_1
+// (BlueprintEvent)
+// Parameters:
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void ABP_LitePCLobbyPC_C::InpActEvt_H_K2Node_InputKeyEvent_1(const struct FKey& Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BP_LitePCLobbyPC_C", "InpActEvt_H_K2Node_InputKeyEvent_1");
+
+	Params::BP_LitePCLobbyPC_C_InpActEvt_H_K2Node_InputKeyEvent_1 Parms{};
+
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_LItePCLobbyPC.BP_LitePCLobbyPC_C.InpActEvt_TakeScreenshot_K2Node_InputActionEvent_6
 // (BlueprintEvent)
 // Parameters:

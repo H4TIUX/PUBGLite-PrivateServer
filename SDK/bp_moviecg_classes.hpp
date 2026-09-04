@@ -17,21 +17,21 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_moviecg.bp_moviecg_C
-// 0x0010 (0x03F8 - 0x03E8)
+// 0x0010 (0x03E8 - 0x03D8)
 class Abp_moviecg_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03F0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03E0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventFetchInfo();
-	void EventFetchInfo_NoFetch();
-	void EventShowMovieCG();
-	void EventShowMovieCG_NoFetch();
 	void EventShowAuthorization();
 	void EventShowAuthorization_NoFetch();
+	void EventShowMovieCG();
+	void EventShowMovieCG_NoFetch();
+	void EventFetchInfo();
+	void EventFetchInfo_NoFetch();
 
 public:
 	static class UClass* StaticClass()

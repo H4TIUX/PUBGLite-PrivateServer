@@ -10,18 +10,18 @@
 
 #include "Basic.hpp"
 
+#include "Basic_structs.hpp"
+#include "UMG_structs.hpp"
 #include "EBackPackDragOrigin_structs.hpp"
 #include "Engine_structs.hpp"
-#include "Basic_structs.hpp"
 #include "UnrealArchExt_classes.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass FitingSlotItem_BP.FitingSlotItem_BP_C
-// 0x0158 (0x0410 - 0x02B8)
+// 0x0150 (0x0408 - 0x02B8)
 class UFitingSlotItem_BP_C final : public UUAEUserWidget
 {
 public:
@@ -40,9 +40,9 @@ public:
 	UMulticastDelegateProperty_                   ItemBeDragCancel;                                  // 0x0330(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class UPistolInfoItem_BP_C*                   PistolInfo;                                        // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	UMulticastDelegateProperty_                   ShowToolTip;                                       // 0x0348(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FBattleItemData                        ItemData;                                          // 0x0358(0x00A0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	UMulticastDelegateProperty_                   OnLeaveSlot;                                       // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	uint8                                         IsMouseOver : 1;                                   // 0x0408(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	struct FBattleItemData                        ItemData;                                          // 0x0358(0x0098)(Edit, BlueprintVisible, DisableEditOnInstance)
+	UMulticastDelegateProperty_                   OnLeaveSlot;                                       // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	uint8                                         IsMouseOver : 1;                                   // 0x0400(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
 
 public:
 	void ExecuteUbergraph_FitingSlotItem_BP(int32 EntryPoint);

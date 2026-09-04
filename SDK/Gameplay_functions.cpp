@@ -17,6 +17,425 @@
 namespace SDK
 {
 
+// Function Gameplay.GeneratorActorAIInterface.RegisterAIPickupPoint
+// (Native, Public)
+// Parameters:
+// class UItemSpotSceneComponent*          Spot                                                   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           PickUpActor                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void IGeneratorActorAIInterface::RegisterAIPickupPoint(class UItemSpotSceneComponent* Spot, class AActor* PickUpActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("GeneratorActorAIInterface", "RegisterAIPickupPoint");
+
+	Params::GeneratorActorAIInterface_RegisterAIPickupPoint Parms{};
+
+	Parms.Spot = Spot;
+	Parms.PickUpActor = PickUpActor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerState.GetUserIDByMemberID
+// (Native, Public)
+// Parameters:
+// int32                                   memberID                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint32                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint32 AUAEPlayerState::GetUserIDByMemberID(int32 memberID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerState", "GetUserIDByMemberID");
+
+	Params::UAEPlayerState_GetUserIDByMemberID Parms{};
+
+	Parms.memberID = memberID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.UAEPlayerState.OnRep_GVMemberID
+// (Final, Native, Public)
+
+void AUAEPlayerState::OnRep_GVMemberID()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerState", "OnRep_GVMemberID");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerState.OnRep_PlayerKillsChange
+// (Native, Public)
+
+void AUAEPlayerState::OnRep_PlayerKillsChange()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerState", "OnRep_PlayerKillsChange");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerState.OnRep_TeamID
+// (Native, Public)
+
+void AUAEPlayerState::OnRep_TeamID()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerState", "OnRep_TeamID");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerState.SetGVMemberID
+// (Final, Native, Public)
+// Parameters:
+// int32                                   memberID                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AUAEPlayerState::SetGVMemberID(int32 memberID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerState", "SetGVMemberID");
+
+	Params::UAEPlayerState_SetGVMemberID Parms{};
+
+	Parms.memberID = memberID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerState.SetGVMemberIDServerCall
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// Parameters:
+// int32                                   memberID                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AUAEPlayerState::SetGVMemberIDServerCall(int32 memberID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerState", "SetGVMemberIDServerCall");
+
+	Params::UAEPlayerState_SetGVMemberIDServerCall Parms{};
+
+	Parms.memberID = memberID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerState.GetPlayerBattleResultData
+// (Native, Public, Const)
+// Parameters:
+// struct FGameModePlayerBattleResultData  ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FGameModePlayerBattleResultData AUAEPlayerState::GetPlayerBattleResultData() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerState", "GetPlayerBattleResultData");
+
+	Params::UAEPlayerState_GetPlayerBattleResultData Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.UAEPlayerState.GetTeammateBattleResultData
+// (Native, Public, Const)
+// Parameters:
+// struct FGameModeTeammateBattleResultDataReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FGameModeTeammateBattleResultData AUAEPlayerState::GetTeammateBattleResultData() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerState", "GetTeammateBattleResultData");
+
+	Params::UAEPlayerState_GetTeammateBattleResultData Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.UAECharacter.ClientAcknowledgeReconnection_2
+// (Net, NetReliable, Native, Event, Public, NetClient)
+// Parameters:
+// uint32                                  Token                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AUAECharacter::ClientAcknowledgeReconnection_2(uint32 Token)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAECharacter", "ClientAcknowledgeReconnection_2");
+
+	Params::UAECharacter_ClientAcknowledgeReconnection_2 Parms{};
+
+	Parms.Token = Token;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAECharacter.GetPlayerKey
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString AUAECharacter::GetPlayerKey()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAECharacter", "GetPlayerKey");
+
+	Params::UAECharacter_GetPlayerKey Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.UAECharacter.OnRep_InitialItemList
+// (Native, Public)
+
+void AUAECharacter::OnRep_InitialItemList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAECharacter", "OnRep_InitialItemList");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAECharacter.OnRep_PlayerKey
+// (Native, Public)
+
+void AUAECharacter::OnRep_PlayerKey()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAECharacter", "OnRep_PlayerKey");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAECharacter.OnRep_TeamID
+// (Final, Native, Public)
+
+void AUAECharacter::OnRep_TeamID()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAECharacter", "OnRep_TeamID");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAECharacter.GetNonDedicatedComponents
+// (Native, Event, Public, BlueprintEvent, Const)
+// Parameters:
+// TArray<class UActorComponent*>          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+TArray<class UActorComponent*> AUAECharacter::GetNonDedicatedComponents() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAECharacter", "GetNonDedicatedComponents");
+
+	Params::UAECharacter_GetNonDedicatedComponents Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.UAECharacter.GetNonSimulatedComponents
+// (Native, Event, Public, BlueprintEvent, Const)
+// Parameters:
+// TArray<class UActorComponent*>          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+TArray<class UActorComponent*> AUAECharacter::GetNonSimulatedComponents() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAECharacter", "GetNonSimulatedComponents");
+
+	Params::UAECharacter_GetNonSimulatedComponents Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.UAECharacter.GetNonSimulatedComponents_NonTeammates
+// (Native, Event, Public, BlueprintEvent, Const)
+// Parameters:
+// TArray<class UActorComponent*>          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+TArray<class UActorComponent*> AUAECharacter::GetNonSimulatedComponents_NonTeammates() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAECharacter", "GetNonSimulatedComponents_NonTeammates");
+
+	Params::UAECharacter_GetNonSimulatedComponents_NonTeammates Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.UAECharacter.GetNonSimulatedComponents_OnFighting
+// (Native, Event, Public, BlueprintEvent, Const)
+// Parameters:
+// TArray<class UActorComponent*>          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+TArray<class UActorComponent*> AUAECharacter::GetNonSimulatedComponents_OnFighting() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAECharacter", "GetNonSimulatedComponents_OnFighting");
+
+	Params::UAECharacter_GetNonSimulatedComponents_OnFighting Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Gameplay.UAEGameMode.AddAirDropBox
 // (Native, Public, HasOutParams, HasDefaults)
 // Parameters:
@@ -323,6 +742,259 @@ TArray<class AUAEPlayerState*> AUAEGameMode::GetPlayerStateListWithTeamID(int32 
 }
 
 
+// Function Gameplay.GroupSpotSceneComponent.DoPickUp
+// (Final, Native, Public)
+
+void UGroupSpotSceneComponent::DoPickUp()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GroupSpotSceneComponent", "DoPickUp");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.GroupSpotSceneComponent.FindWorldCompositionID
+// (Final, Native, Public)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UGroupSpotSceneComponent::FindWorldCompositionID()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GroupSpotSceneComponent", "FindWorldCompositionID");
+
+	Params::GroupSpotSceneComponent_FindWorldCompositionID Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.GroupSpotSceneComponent.IsValidGroup
+// (Native, Public)
+// Parameters:
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 UGroupSpotSceneComponent::IsValidGroup()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GroupSpotSceneComponent", "IsValidGroup");
+
+	Params::GroupSpotSceneComponent_IsValidGroup Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.GroupSpotSceneComponent.SetGroupValid
+// (Native, Public)
+// Parameters:
+// uint8                                   Valid                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGroupSpotSceneComponent::SetGroupValid(uint8 Valid)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GroupSpotSceneComponent", "SetGroupValid");
+
+	Params::GroupSpotSceneComponent_SetGroupValid Parms{};
+
+	Parms.Valid = Valid;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.ItemGroupSpotSceneComponent.RandomRepeatGenerateItemCD
+// (Final, Native, Public, HasOutParams)
+// Parameters:
+// const struct FSpotGroupProperty&        GroupProperty                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UItemGroupSpotSceneComponent::RandomRepeatGenerateItemCD(const struct FSpotGroupProperty& GroupProperty)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ItemGroupSpotSceneComponent", "RandomRepeatGenerateItemCD");
+
+	Params::ItemGroupSpotSceneComponent_RandomRepeatGenerateItemCD Parms{};
+
+	Parms.GroupProperty = std::move(GroupProperty);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.ItemGroupSpotSceneComponent.RandomSingleSpot
+// (Final, Native, Protected, HasOutParams)
+// Parameters:
+// TArray<class UItemSpotSceneComponent*>* Spots                                                  (Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// const struct FSpotTypeProperty&         Property                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UItemGroupSpotSceneComponent::RandomSingleSpot(TArray<class UItemSpotSceneComponent*>* Spots, const struct FSpotTypeProperty& Property)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ItemGroupSpotSceneComponent", "RandomSingleSpot");
+
+	Params::ItemGroupSpotSceneComponent_RandomSingleSpot Parms{};
+
+	Parms.Property = std::move(Property);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Spots != nullptr)
+		*Spots = std::move(Parms.Spots);
+}
+
+
+// Function Gameplay.ItemGroupSpotSceneComponent.RandomSpotByType
+// (Final, Native, Protected, HasOutParams)
+// Parameters:
+// ESpotType                               SpotType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class UItemSpotSceneComponent*>* AllSpots                                               (Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// const struct FSpotTypeProperty&         Property                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UItemGroupSpotSceneComponent::RandomSpotByType(ESpotType SpotType, TArray<class UItemSpotSceneComponent*>* AllSpots, const struct FSpotTypeProperty& Property)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ItemGroupSpotSceneComponent", "RandomSpotByType");
+
+	Params::ItemGroupSpotSceneComponent_RandomSpotByType Parms{};
+
+	Parms.SpotType = SpotType;
+	Parms.Property = std::move(Property);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AllSpots != nullptr)
+		*AllSpots = std::move(Parms.AllSpots);
+}
+
+
+// Function Gameplay.ItemGroupSpotSceneComponent.RepeatSingleSpot
+// (Final, Native, Protected)
+// Parameters:
+// class UItemSpotSceneComponent*          Spot                                                   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UItemGroupSpotSceneComponent::RepeatSingleSpot(class UItemSpotSceneComponent* Spot)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ItemGroupSpotSceneComponent", "RepeatSingleSpot");
+
+	Params::ItemGroupSpotSceneComponent_RepeatSingleSpot Parms{};
+
+	Parms.Spot = Spot;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.ItemGroupSpotSceneComponent.RepeatSpots
+// (Final, Native, Protected)
+
+void UItemGroupSpotSceneComponent::RepeatSpots()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ItemGroupSpotSceneComponent", "RepeatSpots");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.ItemGroupSpotSceneComponent.SetGroupProperty
+// (Final, Native, Public, HasOutParams)
+// Parameters:
+// class UItemGeneratorComponent*          Generator                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FSpotGroupProperty&        Property                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UItemGroupSpotSceneComponent::SetGroupProperty(class UItemGeneratorComponent* Generator, const struct FSpotGroupProperty& Property)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ItemGroupSpotSceneComponent", "SetGroupProperty");
+
+	Params::ItemGroupSpotSceneComponent_SetGroupProperty Parms{};
+
+	Parms.Generator = Generator;
+	Parms.Property = std::move(Property);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function Gameplay.SpotSceneComponent.GenerateActor
 // (Native, Public, HasOutParams, HasDefaults)
 // Parameters:
@@ -506,19 +1178,295 @@ void USpotSceneComponent::SetSpotValid(uint8 Valid)
 }
 
 
-// Function Gameplay.UAECharacter.ClientAcknowledgeReconnection_2
-// (Net, NetReliable, Native, Event, Public, NetClient)
+// Function Gameplay.GeneratorActorInterface.InitData
+// (Native, Public)
 // Parameters:
-// uint32                                  Token                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UItemSpotSceneComponent*          ItemSpotSceneComponent                                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ItemCount                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Category                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   RepeatGenerateItem                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void AUAECharacter::ClientAcknowledgeReconnection_2(uint32 Token)
+void IGeneratorActorInterface::InitData(class UItemSpotSceneComponent* ItemSpotSceneComponent, int32 ItemCount, const class FString& Value, const class FString& Category, uint8 RepeatGenerateItem)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAECharacter", "ClientAcknowledgeReconnection_2");
+		Func = AsUObject()->Class->GetFunction("GeneratorActorInterface", "InitData");
 
-	Params::UAECharacter_ClientAcknowledgeReconnection_2 Parms{};
+	Params::GeneratorActorInterface_InitData Parms{};
+
+	Parms.ItemSpotSceneComponent = ItemSpotSceneComponent;
+	Parms.ItemCount = ItemCount;
+	Parms.Value = std::move(Value);
+	Parms.Category = std::move(Category);
+	Parms.RepeatGenerateItem = RepeatGenerateItem;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.TestAttrModifyActor.GetAttrValue
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// int32*                                  I                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  F                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ATestAttrModifyActor::GetAttrValue(int32* I, float* F)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("TestAttrModifyActor", "GetAttrValue");
+
+	Params::TestAttrModifyActor_GetAttrValue Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (I != nullptr)
+		*I = Parms.I;
+
+	if (F != nullptr)
+		*F = Parms.F;
+}
+
+
+// Function Gameplay.TestAttrModifyActor.SetModify
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// uint8                                   Enable                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ATestAttrModifyActor::SetModify(uint8 Enable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("TestAttrModifyActor", "SetModify");
+
+	Params::TestAttrModifyActor_SetModify Parms{};
+
+	Parms.Enable = Enable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.TestAttrModifyActor.TestGetVariable
+// (Final, Native, Protected, BlueprintCallable)
+// Parameters:
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 ATestAttrModifyActor::TestGetVariable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("TestAttrModifyActor", "TestGetVariable");
+
+	Params::TestAttrModifyActor_TestGetVariable Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.UAECharacterAnimListComponent.OnAsyncLoadingFinished
+// (Final, Native, Public)
+// Parameters:
+// const struct FAsyncLoadCharAnimParams&  LoadingParam                                           (Parm, NativeAccessSpecifierPublic)
+
+void UUAECharacterAnimListComponent::OnAsyncLoadingFinished(const struct FAsyncLoadCharAnimParams& LoadingParam)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAECharacterAnimListComponent", "OnAsyncLoadingFinished");
+
+	Params::UAECharacterAnimListComponent_OnAsyncLoadingFinished Parms{};
+
+	Parms.LoadingParam = std::move(LoadingParam);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAECharacterAnimListComponent.GetCharacterAnim
+// (Final, Native, Public, Const)
+// Parameters:
+// ECharacterAnimType                      AnimType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ECharacterPoseType                      PoseType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAnimationAsset*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAnimationAsset* UUAECharacterAnimListComponent::GetCharacterAnim(ECharacterAnimType AnimType, ECharacterPoseType PoseType) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAECharacterAnimListComponent", "GetCharacterAnim");
+
+	Params::UAECharacterAnimListComponent_GetCharacterAnim Parms{};
+
+	Parms.AnimType = AnimType;
+	Parms.PoseType = PoseType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.UAECharacterAnimListComponent.GetCharacterJumpAnim
+// (Final, Native, Public, Const)
+// Parameters:
+// ECharacterJumpType                      JumpType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FPlayerAnimData>          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FPlayerAnimData> UUAECharacterAnimListComponent::GetCharacterJumpAnim(ECharacterJumpType JumpType) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAECharacterAnimListComponent", "GetCharacterJumpAnim");
+
+	Params::UAECharacterAnimListComponent_GetCharacterJumpAnim Parms{};
+
+	Parms.JumpType = JumpType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.UAEPlayerController.ActorReports
+// (Final, Exec, Native, Public)
+// Parameters:
+// const class FString&                    InFileName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AUAEPlayerController::ActorReports(const class FString& InFileName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "ActorReports");
+
+	Params::UAEPlayerController_ActorReports Parms{};
+
+	Parms.InFileName = std::move(InFileName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.CastUIMsg
+// (Exec, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    strMsg                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    module                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AUAEPlayerController::CastUIMsg(const class FString& strMsg, const class FString& module)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "CastUIMsg");
+
+	Params::UAEPlayerController_CastUIMsg Parms{};
+
+	Parms.strMsg = std::move(strMsg);
+	Parms.module = std::move(module);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.CheckAcknowledgedPawn
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class APawn*                            InPawn                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 AUAEPlayerController::CheckAcknowledgedPawn(class APawn* InPawn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "CheckAcknowledgedPawn");
+
+	Params::UAEPlayerController_CheckAcknowledgedPawn Parms{};
+
+	Parms.InPawn = InPawn;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.UAEPlayerController.ClientAcknowledgeReconnection_3
+// (Net, NetReliable, Native, Event, Public, NetClient)
+// Parameters:
+// uint32                                  Token                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AUAEPlayerController::ClientAcknowledgeReconnection_3(uint32 Token)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "ClientAcknowledgeReconnection_3");
+
+	Params::UAEPlayerController_ClientAcknowledgeReconnection_3 Parms{};
 
 	Parms.Token = Token;
 
@@ -531,19 +1479,2750 @@ void AUAECharacter::ClientAcknowledgeReconnection_2(uint32 Token)
 }
 
 
-// Function Gameplay.UAECharacter.GetPlayerKey
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Function Gameplay.UAEPlayerController.ClientBroadcastReconnectionSuccessful
+// (Net, NetReliable, Native, Event, Public, NetClient)
+
+void AUAEPlayerController::ClientBroadcastReconnectionSuccessful()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "ClientBroadcastReconnectionSuccessful");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.ClientBroadcastRespawnComplete
+// (Net, NetReliable, Native, Event, Public, NetClient)
+
+void AUAEPlayerController::ClientBroadcastRespawnComplete()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "ClientBroadcastRespawnComplete");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.CopyDebugInfo
+// (Final, Exec, Native, Public)
+
+void AUAEPlayerController::CopyDebugInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "CopyDebugInfo");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.CopyDebugInfoLocation
+// (Final, Exec, Native, Public)
+
+void AUAEPlayerController::CopyDebugInfoLocation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "CopyDebugInfoLocation");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.CopyDebugInfoRotation
+// (Final, Exec, Native, Public)
+
+void AUAEPlayerController::CopyDebugInfoRotation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "CopyDebugInfoRotation");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.DisableInGameUI
+// (Final, Exec, Native, Public)
+
+void AUAEPlayerController::DisableInGameUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "DisableInGameUI");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.DoCrash
+// (Final, Exec, Native, Public)
+
+void AUAEPlayerController::DoCrash()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "DoCrash");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.DumpAllActors
+// (Final, Exec, Native, Public)
+
+void AUAEPlayerController::DumpAllActors()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "DumpAllActors");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.DumpAllObjects
+// (Final, Exec, Native, Public)
+
+void AUAEPlayerController::DumpAllObjects()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "DumpAllObjects");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.DumpAllUI
+// (Final, Exec, Native, Public)
+
+void AUAEPlayerController::DumpAllUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "DumpAllUI");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.DumpNetActors
+// (Final, Exec, Native, Public)
+
+void AUAEPlayerController::DumpNetActors()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "DumpNetActors");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.EnableInGameUI
+// (Final, Exec, Native, Public)
+
+void AUAEPlayerController::EnableInGameUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "EnableInGameUI");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.ExcuteIntCounterRecord
+// (Final, Native, Public)
+// Parameters:
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Count                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AUAEPlayerController::ExcuteIntCounterRecord(const class FString& Key, int32 Count)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "ExcuteIntCounterRecord");
+
+	Params::UAEPlayerController_ExcuteIntCounterRecord Parms{};
+
+	Parms.Key = std::move(Key);
+	Parms.Count = Count;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.ExcuteIntRecord
+// (Final, Native, Public)
+// Parameters:
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Count                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AUAEPlayerController::ExcuteIntRecord(const class FString& Key, int32 Count)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "ExcuteIntRecord");
+
+	Params::UAEPlayerController_ExcuteIntRecord Parms{};
+
+	Parms.Key = std::move(Key);
+	Parms.Count = Count;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.ExitGame
+// (Native, Public, BlueprintCallable)
+
+void AUAEPlayerController::ExitGame()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "ExitGame");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.InitInGameUI
+// (Native, Public, BlueprintCallable)
+
+void AUAEPlayerController::InitInGameUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "InitInGameUI");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.InitWithPlayerParams
+// (Final, Native, Public, HasOutParams)
+// Parameters:
+// const struct FGameModePlayerParams&     Params_0                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void AUAEPlayerController::InitWithPlayerParams(const struct FGameModePlayerParams& Params_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "InitWithPlayerParams");
+
+	Params::UAEPlayerController_InitWithPlayerParams Parms{};
+
+	Parms.Params_0 = std::move(Params_0);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.KickSelf
+// (Final, Exec, Native, Public)
+
+void AUAEPlayerController::KickSelf()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "KickSelf");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.LobbyMemberVoice
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// int32                                   Member                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   State                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AUAEPlayerController::LobbyMemberVoice(int32 Member, int32 State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "LobbyMemberVoice");
+
+	Params::UAEPlayerController_LobbyMemberVoice Parms{};
+
+	Parms.Member = Member;
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Gameplay.UAEPlayerController.ObjectCountReport
+// (Final, Exec, Native, Public)
+// Parameters:
+// const class FString&                    InFileName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AUAEPlayerController::ObjectCountReport(const class FString& InFileName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "ObjectCountReport");
+
+	Params::UAEPlayerController_ObjectCountReport Parms{};
+
+	Parms.InFileName = std::move(InFileName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.ObjectPathReport
+// (Final, Exec, Native, Public)
+// Parameters:
+// const class FString&                    InFileName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AUAEPlayerController::ObjectPathReport(const class FString& InFileName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "ObjectPathReport");
+
+	Params::UAEPlayerController_ObjectPathReport Parms{};
+
+	Parms.InFileName = std::move(InFileName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.ObjectReports
+// (Final, Exec, Native, Public)
+// Parameters:
+// const class FString&                    InFileName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AUAEPlayerController::ObjectReports(const class FString& InFileName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "ObjectReports");
+
+	Params::UAEPlayerController_ObjectReports Parms{};
+
+	Parms.InFileName = std::move(InFileName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.OnCharacterDestroyed
+// (Final, Native, Public)
+// Parameters:
+// class AActor*                           Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AUAEPlayerController::OnCharacterDestroyed(class AActor* Actor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "OnCharacterDestroyed");
+
+	Params::UAEPlayerController_OnCharacterDestroyed Parms{};
+
+	Parms.Actor = Actor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.OnRep_Emotes
+// (Final, Native, Public)
+
+void AUAEPlayerController::OnRep_Emotes()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "OnRep_Emotes");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.OnRep_InitialEquipmentAvatarList
+// (Final, Native, Public)
+
+void AUAEPlayerController::OnRep_InitialEquipmentAvatarList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "OnRep_InitialEquipmentAvatarList");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.OnRep_InitialItemList
+// (Final, Native, Public)
+
+void AUAEPlayerController::OnRep_InitialItemList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "OnRep_InitialItemList");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.OnRep_InitialVehicleAvatarList
+// (Final, Native, Public)
+
+void AUAEPlayerController::OnRep_InitialVehicleAvatarList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "OnRep_InitialVehicleAvatarList");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.OnRep_InitialVoiceList
+// (Final, Native, Public)
+
+void AUAEPlayerController::OnRep_InitialVoiceList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "OnRep_InitialVoiceList");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.OnRep_InitialWeaponAvatarList
+// (Final, Native, Public)
+
+void AUAEPlayerController::OnRep_InitialWeaponAvatarList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "OnRep_InitialWeaponAvatarList");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.OnRep_IsObserver
+// (Native, Public)
+
+void AUAEPlayerController::OnRep_IsObserver()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "OnRep_IsObserver");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.OnRep_IsSpectating
+// (Native, Public)
+
+void AUAEPlayerController::OnRep_IsSpectating()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "OnRep_IsSpectating");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.PlayerStartIDReceived
+// (Final, Native, Protected)
+
+void AUAEPlayerController::PlayerStartIDReceived()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "PlayerStartIDReceived");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.PrintLocation
+// (Final, Exec, Native, Public)
+
+void AUAEPlayerController::PrintLocation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "PrintLocation");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.PrintStatistics
+// (Final, Exec, Native, Public)
+
+void AUAEPlayerController::PrintStatistics()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "PrintStatistics");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.ReleaseInGameUI
+// (Native, Public, BlueprintCallable)
+
+void AUAEPlayerController::ReleaseInGameUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "ReleaseInGameUI");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.RequestScreenshot
+// (Final, Native, Public, BlueprintCallable)
+
+void AUAEPlayerController::RequestScreenshot()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "RequestScreenshot");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.Respawn
+// (Native, Public, BlueprintCallable)
+
+void AUAEPlayerController::Respawn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "Respawn");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.ServerAcknowledgeReconnection_1
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// Parameters:
+// uint32                                  Token                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AUAEPlayerController::ServerAcknowledgeReconnection_1(uint32 Token)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "ServerAcknowledgeReconnection_1");
+
+	Params::UAEPlayerController_ServerAcknowledgeReconnection_1 Parms{};
+
+	Parms.Token = Token;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.ServerExitGame
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+
+void AUAEPlayerController::ServerExitGame()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "ServerExitGame");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.ServerKickSelf
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+
+void AUAEPlayerController::ServerKickSelf()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "ServerKickSelf");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.ServerSetVoiceId
+// (Net, NetReliable, Native, Event, Public, NetServer, BlueprintCallable, NetValidate)
+// Parameters:
+// int32                                   VoiceID                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AUAEPlayerController::ServerSetVoiceId(int32 VoiceID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "ServerSetVoiceId");
+
+	Params::UAEPlayerController_ServerSetVoiceId Parms{};
+
+	Parms.VoiceID = VoiceID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.SetCustomDepth
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// uint8                                   bOn                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AUAEPlayerController::SetCustomDepth(uint8 bOn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "SetCustomDepth");
+
+	Params::UAEPlayerController_SetCustomDepth Parms{};
+
+	Parms.bOn = bOn;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.SetPanels
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<class UUAEUserWidget*>&    panels                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+void AUAEPlayerController::SetPanels(const TArray<class UUAEUserWidget*>& panels)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "SetPanels");
+
+	Params::UAEPlayerController_SetPanels Parms{};
+
+	Parms.panels = std::move(panels);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.TestReqScreenshot
+// (Final, Exec, Native, Public)
+
+void AUAEPlayerController::TestReqScreenshot()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "TestReqScreenshot");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.TestRespawn
+// (Final, Exec, Native, Public)
+
+void AUAEPlayerController::TestRespawn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "TestRespawn");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEPlayerController.IsInSpectating
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 AUAEPlayerController::IsInSpectating() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "IsInSpectating");
+
+	Params::UAEPlayerController_IsInSpectating Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.UAEPlayerController.IsObserver
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 AUAEPlayerController::IsObserver() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "IsObserver");
+
+	Params::UAEPlayerController_IsObserver Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.UAEPlayerController.IsSpectator
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 AUAEPlayerController::IsSpectator() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEPlayerController", "IsSpectator");
+
+	Params::UAEPlayerController_IsSpectator Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.UAEHouseActor.BroadcastWindowRepDataUpdated
+// (Net, NetReliable, Native, Event, NetMulticast, Public)
+// Parameters:
+// const struct FUAEWindowRepData&         InRepData                                              (Parm, NativeAccessSpecifierPublic)
+
+void AUAEHouseActor::BroadcastWindowRepDataUpdated(const struct FUAEWindowRepData& InRepData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEHouseActor", "BroadcastWindowRepDataUpdated");
+
+	Params::UAEHouseActor_BroadcastWindowRepDataUpdated Parms{};
+
+	Parms.InRepData = std::move(InRepData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEHouseActor.OnRep_WindowList
+// (Final, Native, Private)
+
+void AUAEHouseActor::OnRep_WindowList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEHouseActor", "OnRep_WindowList");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEProjectile.GlassDetect
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector&                   Start                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   End                                                    (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AUAEProjectile::GlassDetect(const struct FVector& Start, const struct FVector& End)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEProjectile", "GlassDetect");
+
+	Params::UAEProjectile_GlassDetect Parms{};
+
+	Parms.Start = std::move(Start);
+	Parms.End = std::move(End);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEProjectile.IsOwnerAutomous
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 AUAEProjectile::IsOwnerAutomous()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEProjectile", "IsOwnerAutomous");
+
+	Params::UAEProjectile_IsOwnerAutomous Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.UAEProjectile.IsServerAlreadyExplodedCppNotify
+// (Native, Event, Public, BlueprintEvent)
+
+void AUAEProjectile::IsServerAlreadyExplodedCppNotify()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEProjectile", "IsServerAlreadyExplodedCppNotify");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEProjectile.OnRep_IsServerAlreadyExplodedCpp
+// (Final, Native, Public)
+
+void AUAEProjectile::OnRep_IsServerAlreadyExplodedCpp()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEProjectile", "OnRep_IsServerAlreadyExplodedCpp");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEProjectile.OnStartFly
+// (Final, Native, Public, BlueprintCallable)
+
+void AUAEProjectile::OnStartFly()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEProjectile", "OnStartFly");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEProjectile.SendFireWeapon
+// (Final, Native, Public, BlueprintCallable)
+
+void AUAEProjectile::SendFireWeapon()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEProjectile", "SendFireWeapon");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEProjectile.ServerFireWeapon
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// Parameters:
+// const struct FAttackId&                 AttackId                                               (ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void AUAEProjectile::ServerFireWeapon(const struct FAttackId& AttackId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEProjectile", "ServerFireWeapon");
+
+	Params::UAEProjectile_ServerFireWeapon Parms{};
+
+	Parms.AttackId = std::move(AttackId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEProjectile.SetRotationAndLocationByNormal
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class USceneComponent*                  Comp                                                   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AUAEProjectile::SetRotationAndLocationByNormal(class USceneComponent* Comp)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEProjectile", "SetRotationAndLocationByNormal");
+
+	Params::UAEProjectile_SetRotationAndLocationByNormal Parms{};
+
+	Parms.Comp = Comp;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEProjectile.GetStartFlyPos
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector*                         Out                                                    (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AUAEProjectile::GetStartFlyPos(struct FVector* Out) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEProjectile", "GetStartFlyPos");
+
+	Params::UAEProjectile_GetStartFlyPos Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Out != nullptr)
+		*Out = std::move(Parms.Out);
+}
+
+
+// Function Gameplay.ItemSpotSceneComponent.CountCacheItemValeCategory
+// (Final, Native, Protected)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UItemSpotSceneComponent::CountCacheItemValeCategory()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ItemSpotSceneComponent", "CountCacheItemValeCategory");
+
+	Params::ItemSpotSceneComponent_CountCacheItemValeCategory Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.ItemSpotSceneComponent.DoPickUp
+// (Final, Native, Public)
+// Parameters:
+// const class FString&                    ItemValue                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    ItemCategory                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UItemSpotSceneComponent::DoPickUp(const class FString& ItemValue, const class FString& ItemCategory)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ItemSpotSceneComponent", "DoPickUp");
+
+	Params::ItemSpotSceneComponent_DoPickUp Parms{};
+
+	Parms.ItemValue = std::move(ItemValue);
+	Parms.ItemCategory = std::move(ItemCategory);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.ItemSpotSceneComponent.GenerateItems
+// (Final, Native, Protected, HasOutParams)
+// Parameters:
+// TArray<struct FItemGenerateSpawnClass>* AllItemClass                                           (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UItemSpotSceneComponent::GenerateItems(TArray<struct FItemGenerateSpawnClass>* AllItemClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ItemSpotSceneComponent", "GenerateItems");
+
+	Params::ItemSpotSceneComponent_GenerateItems Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AllItemClass != nullptr)
+		*AllItemClass = std::move(Parms.AllItemClass);
+}
+
+
+// Function Gameplay.ItemSpotSceneComponent.GenerateSpot
+// (Native, Public)
+// Parameters:
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 UItemSpotSceneComponent::GenerateSpot()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ItemSpotSceneComponent", "GenerateSpot");
+
+	Params::ItemSpotSceneComponent_GenerateSpot Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.ItemSpotSceneComponent.GetAllItemNames
+// (Final, Native, Public)
+// Parameters:
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FName> UItemSpotSceneComponent::GetAllItemNames()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ItemSpotSceneComponent", "GetAllItemNames");
+
+	Params::ItemSpotSceneComponent_GetAllItemNames Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.ItemSpotSceneComponent.RepeatSpotProperty
+// (Final, Native, Public, HasOutParams)
+// Parameters:
+// const struct FSpotTypeProperty&         Property                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UItemSpotSceneComponent::RepeatSpotProperty(const struct FSpotTypeProperty& Property)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ItemSpotSceneComponent", "RepeatSpotProperty");
+
+	Params::ItemSpotSceneComponent_RepeatSpotProperty Parms{};
+
+	Parms.Property = std::move(Property);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.ItemSpotSceneComponent.SetSpotProperty
+// (Final, Native, Public, HasOutParams)
+// Parameters:
+// int32                                   CompositionID                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ESpotGroupType                          GroupType                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UItemGeneratorComponent*          Generator                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FSpotTypeProperty&         Property                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UGroupSpotSceneComponent*         Component                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   RepeatGenerateItem                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UItemSpotSceneComponent::SetSpotProperty(int32 CompositionID, ESpotGroupType GroupType, class UItemGeneratorComponent* Generator, const struct FSpotTypeProperty& Property, class UGroupSpotSceneComponent* Component, uint8 RepeatGenerateItem)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ItemSpotSceneComponent", "SetSpotProperty");
+
+	Params::ItemSpotSceneComponent_SetSpotProperty Parms{};
+
+	Parms.CompositionID = CompositionID;
+	Parms.GroupType = GroupType;
+	Parms.Generator = Generator;
+	Parms.Property = std::move(Property);
+	Parms.Component = Component;
+	Parms.RepeatGenerateItem = RepeatGenerateItem;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.BaseGeneratorComponent.CheckTileLevelsVisible
+// (Final, Native, Protected)
+
+void UBaseGeneratorComponent::CheckTileLevelsVisible()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BaseGeneratorComponent", "CheckTileLevelsVisible");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.BaseGeneratorComponent.GenerateSpotOnTick
+// (Native, Public)
+
+void UBaseGeneratorComponent::GenerateSpotOnTick()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BaseGeneratorComponent", "GenerateSpotOnTick");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.BaseGeneratorComponent.GenerateSpots
+// (Native, Public)
+
+void UBaseGeneratorComponent::GenerateSpots()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BaseGeneratorComponent", "GenerateSpots");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.BaseGeneratorComponent.GeneratorWorldTileSpots
+// (Final, Native, Protected, HasOutParams)
+// Parameters:
+// struct FWorldTileSpotArray*             SpotArray                                              (Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+void UBaseGeneratorComponent::GeneratorWorldTileSpots(struct FWorldTileSpotArray* SpotArray)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BaseGeneratorComponent", "GeneratorWorldTileSpots");
+
+	Params::BaseGeneratorComponent_GeneratorWorldTileSpots Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (SpotArray != nullptr)
+		*SpotArray = std::move(Parms.SpotArray);
+}
+
+
+// Function Gameplay.BaseGeneratorComponent.RegisterGroupSpotComponent
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UGroupSpotSceneComponent*         GroupSpotComponent                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBaseGeneratorComponent::RegisterGroupSpotComponent(class UGroupSpotSceneComponent* GroupSpotComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BaseGeneratorComponent", "RegisterGroupSpotComponent");
+
+	Params::BaseGeneratorComponent_RegisterGroupSpotComponent Parms{};
+
+	Parms.GroupSpotComponent = GroupSpotComponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.BaseGeneratorComponent.RegisterSpotComponentToTick
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class USpotSceneComponent*              SpotComponent                                          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBaseGeneratorComponent::RegisterSpotComponentToTick(class USpotSceneComponent* SpotComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BaseGeneratorComponent", "RegisterSpotComponentToTick");
+
+	Params::BaseGeneratorComponent_RegisterSpotComponentToTick Parms{};
+
+	Parms.SpotComponent = SpotComponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.BaseGeneratorComponent.RegisterWorldTileSpot
+// (Native, Public)
+// Parameters:
+// class USpotSceneComponent*              Spot                                                   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBaseGeneratorComponent::RegisterWorldTileSpot(class USpotSceneComponent* Spot)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BaseGeneratorComponent", "RegisterWorldTileSpot");
+
+	Params::BaseGeneratorComponent_RegisterWorldTileSpot Parms{};
+
+	Parms.Spot = Spot;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.VehicleGeneratorComponent.AddVehicleClassCount
+// (Final, Native, Protected)
+// Parameters:
+// const class FString&                    Path                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   IsValid                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Count                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UVehicleGeneratorComponent::AddVehicleClassCount(const class FString& Path, uint8 IsValid, int32 Count)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "AddVehicleClassCount");
+
+	Params::VehicleGeneratorComponent_AddVehicleClassCount Parms{};
+
+	Parms.Path = std::move(Path);
+	Parms.IsValid = IsValid;
+	Parms.Count = Count;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.VehicleGeneratorComponent.AddVehicleSpotCount
+// (Final, Native, Protected)
+// Parameters:
+// ESpotType                               SpotType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Path                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   LocationX                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   LocationY                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   LocationZ                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UVehicleGeneratorComponent::AddVehicleSpotCount(ESpotType SpotType, const class FString& Path, float LocationX, float LocationY, float LocationZ)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "AddVehicleSpotCount");
+
+	Params::VehicleGeneratorComponent_AddVehicleSpotCount Parms{};
+
+	Parms.SpotType = SpotType;
+	Parms.Path = std::move(Path);
+	Parms.LocationX = LocationX;
+	Parms.LocationY = LocationY;
+	Parms.LocationZ = LocationZ;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.VehicleGeneratorComponent.DeleteGroups
+// (Final, Native, Protected)
+
+void UVehicleGeneratorComponent::DeleteGroups()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "DeleteGroups");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.VehicleGeneratorComponent.GenerateSpotOnTick
+// (Native, Protected)
+
+void UVehicleGeneratorComponent::GenerateSpotOnTick()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "GenerateSpotOnTick");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.VehicleGeneratorComponent.GetRandomCategory
+// (Native, Protected, HasOutParams)
+// Parameters:
+// const TArray<struct FSpotWeight>&       SpotWeights                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UVehicleGeneratorComponent::GetRandomCategory(const TArray<struct FSpotWeight>& SpotWeights)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "GetRandomCategory");
+
+	Params::VehicleGeneratorComponent_GetRandomCategory Parms{};
+
+	Parms.SpotWeights = std::move(SpotWeights);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.VehicleGeneratorComponent.GetRandomVehicleClass
+// (Final, Native, Public)
+// Parameters:
+// const class FString&                    Category                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVehicleGenerateSpawnData        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FVehicleGenerateSpawnData UVehicleGeneratorComponent::GetRandomVehicleClass(const class FString& Category)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "GetRandomVehicleClass");
+
+	Params::VehicleGeneratorComponent_GetRandomVehicleClass Parms{};
+
+	Parms.Category = std::move(Category);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.VehicleGeneratorComponent.GetVehicleSpotRandomInfo
+// (Final, Native, Public, HasOutParams)
+// Parameters:
+// struct FVehicleSpotProperty*            SpotProperty                                           (Parm, OutParm, NativeAccessSpecifierPublic)
+// struct FVehicleGenerateRandomInfo       ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FVehicleGenerateRandomInfo UVehicleGeneratorComponent::GetVehicleSpotRandomInfo(struct FVehicleSpotProperty* SpotProperty)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "GetVehicleSpotRandomInfo");
+
+	Params::VehicleGeneratorComponent_GetVehicleSpotRandomInfo Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (SpotProperty != nullptr)
+		*SpotProperty = std::move(Parms.SpotProperty);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.VehicleGeneratorComponent.GetVehicleSpotRandomInfoBySpotType
+// (Final, Native, Public)
+// Parameters:
+// ESpotType                               SpotType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVehicleGenerateRandomInfo       ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FVehicleGenerateRandomInfo UVehicleGeneratorComponent::GetVehicleSpotRandomInfoBySpotType(ESpotType SpotType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "GetVehicleSpotRandomInfoBySpotType");
+
+	Params::VehicleGeneratorComponent_GetVehicleSpotRandomInfoBySpotType Parms{};
+
+	Parms.SpotType = SpotType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.VehicleGeneratorComponent.LoadVehicleGenerateTable
+// (Native, Event, Public, BlueprintEvent)
+
+void UVehicleGeneratorComponent::LoadVehicleGenerateTable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "LoadVehicleGenerateTable");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.VehicleGeneratorComponent.RandomGroups
+// (Native, Public, BlueprintCallable)
+
+void UVehicleGeneratorComponent::RandomGroups()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "RandomGroups");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.VehicleGeneratorComponent.RandomSingleSpots
+// (Final, Native, Protected, HasOutParams)
+// Parameters:
+// TArray<class UVehicleSpotSceneComponent*>*AllSpots                                               (Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// struct FVehicleSpotProperty*            Property                                               (Parm, OutParm, NativeAccessSpecifierPublic)
+
+void UVehicleGeneratorComponent::RandomSingleSpots(TArray<class UVehicleSpotSceneComponent*>* AllSpots, struct FVehicleSpotProperty* Property)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "RandomSingleSpots");
+
+	Params::VehicleGeneratorComponent_RandomSingleSpots Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AllSpots != nullptr)
+		*AllSpots = std::move(Parms.AllSpots);
+
+	if (Property != nullptr)
+		*Property = std::move(Parms.Property);
+}
+
+
+// Function Gameplay.VehicleGeneratorComponent.RandomSpotsByType
+// (Final, Native, Protected, HasOutParams)
+// Parameters:
+// struct FVehicleSpotProperty*            Property                                               (Parm, OutParm, NativeAccessSpecifierPublic)
+// struct FVehicleSpotComponentArray*      Spots                                                  (Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+void UVehicleGeneratorComponent::RandomSpotsByType(struct FVehicleSpotProperty* Property, struct FVehicleSpotComponentArray* Spots)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "RandomSpotsByType");
+
+	Params::VehicleGeneratorComponent_RandomSpotsByType Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Property != nullptr)
+		*Property = std::move(Parms.Property);
+
+	if (Spots != nullptr)
+		*Spots = std::move(Parms.Spots);
+}
+
+
+// Function Gameplay.VehicleGeneratorComponent.RegisterGroupSpotComponent
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UGroupSpotSceneComponent*         GroupSpotComponent                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UVehicleGeneratorComponent::RegisterGroupSpotComponent(class UGroupSpotSceneComponent* GroupSpotComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "RegisterGroupSpotComponent");
+
+	Params::VehicleGeneratorComponent_RegisterGroupSpotComponent Parms{};
+
+	Parms.GroupSpotComponent = GroupSpotComponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.VehicleGeneratorComponent.RegisterVehicleGenerateSpawnData
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FVehicleGenerateSpawnData& Data                                                   (Parm, NativeAccessSpecifierPublic)
+
+void UVehicleGeneratorComponent::RegisterVehicleGenerateSpawnData(const struct FVehicleGenerateSpawnData& Data)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "RegisterVehicleGenerateSpawnData");
+
+	Params::VehicleGeneratorComponent_RegisterVehicleGenerateSpawnData Parms{};
+
+	Parms.Data = std::move(Data);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.VehicleGeneratorComponent.WriteAllVehicleStatisticsDatas
+// (Final, Native, Protected, BlueprintCallable)
+
+void UVehicleGeneratorComponent::WriteAllVehicleStatisticsDatas()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "WriteAllVehicleStatisticsDatas");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.VehicleGeneratorComponent.WriteVehicleClassStatisticsDatas
+// (Final, Native, Protected)
+
+void UVehicleGeneratorComponent::WriteVehicleClassStatisticsDatas()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "WriteVehicleClassStatisticsDatas");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.VehicleGeneratorComponent.WriteVehicleSpotStatisticsDatas
+// (Final, Native, Protected)
+
+void UVehicleGeneratorComponent::WriteVehicleSpotStatisticsDatas()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "WriteVehicleSpotStatisticsDatas");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEWindowComponent.GetRepData
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FUAEWindowRepData                ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FUAEWindowRepData UUAEWindowComponent::GetRepData()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEWindowComponent", "GetRepData");
+
+	Params::UAEWindowComponent_GetRepData Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.UAEWindowComponent.HandleBroken
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class APlayerController*                Instigator                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   bLocal                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UUAEWindowComponent::HandleBroken(class APlayerController* Instigator, uint8 bLocal)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEWindowComponent", "HandleBroken");
+
+	Params::UAEWindowComponent_HandleBroken Parms{};
+
+	Parms.Instigator = Instigator;
+	Parms.bLocal = bLocal;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEWindowComponent.LocalHandleWindowBroken
+// (Final, Native, Protected, BlueprintCallable)
+// Parameters:
+// uint8                                   bInitial                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   bLocal                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UUAEWindowComponent::LocalHandleWindowBroken(uint8 bInitial, uint8 bLocal)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEWindowComponent", "LocalHandleWindowBroken");
+
+	Params::UAEWindowComponent_LocalHandleWindowBroken Parms{};
+
+	Parms.bInitial = bInitial;
+	Parms.bLocal = bLocal;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEWindowComponent.LocalHandleWindowBrokenBP
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// uint8                                   bInitial                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   bLocal                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UUAEWindowComponent::LocalHandleWindowBrokenBP(uint8 bInitial, uint8 bLocal)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEWindowComponent", "LocalHandleWindowBrokenBP");
+
+	Params::UAEWindowComponent_LocalHandleWindowBrokenBP Parms{};
+
+	Parms.bInitial = bInitial;
+	Parms.bLocal = bLocal;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Gameplay.UAEWindowComponent.NotifyRepDataUpdated
+// (Final, Native, Protected)
+// Parameters:
+// uint8                                   bInitial                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   bLocal                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UUAEWindowComponent::NotifyRepDataUpdated(uint8 bInitial, uint8 bLocal)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEWindowComponent", "NotifyRepDataUpdated");
+
+	Params::UAEWindowComponent_NotifyRepDataUpdated Parms{};
+
+	Parms.bInitial = bInitial;
+	Parms.bLocal = bLocal;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.UAEWindowComponent.NotifyServerBroken
+// (Event, Protected, BlueprintEvent)
+
+void UUAEWindowComponent::NotifyServerBroken()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEWindowComponent", "NotifyServerBroken");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Gameplay.VehicleConfigActorComponent.LoadActorClass
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    Path                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UClass*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UClass* UVehicleConfigActorComponent::LoadActorClass(const class FString& Path)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleConfigActorComponent", "LoadActorClass");
+
+	Params::VehicleConfigActorComponent_LoadActorClass Parms{};
+
+	Parms.Path = std::move(Path);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.AddVehicleClassCount
+// (Final, Native, Protected)
+// Parameters:
+// const class FString&                    Path                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   IsValid                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Count                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UVehicleAndTreasureBoxGeneratorComponent::AddVehicleClassCount(const class FString& Path, uint8 IsValid, int32 Count)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "AddVehicleClassCount");
+
+	Params::VehicleAndTreasureBoxGeneratorComponent_AddVehicleClassCount Parms{};
+
+	Parms.Path = std::move(Path);
+	Parms.IsValid = IsValid;
+	Parms.Count = Count;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.AddVehicleSpotCount
+// (Final, Native, Protected)
+// Parameters:
+// ESpotType                               SpotType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Path                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   LocationX                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   LocationY                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   LocationZ                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UVehicleAndTreasureBoxGeneratorComponent::AddVehicleSpotCount(ESpotType SpotType, const class FString& Path, float LocationX, float LocationY, float LocationZ)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "AddVehicleSpotCount");
+
+	Params::VehicleAndTreasureBoxGeneratorComponent_AddVehicleSpotCount Parms{};
+
+	Parms.SpotType = SpotType;
+	Parms.Path = std::move(Path);
+	Parms.LocationX = LocationX;
+	Parms.LocationY = LocationY;
+	Parms.LocationZ = LocationZ;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.DeleteGroups
+// (Final, Native, Protected)
+
+void UVehicleAndTreasureBoxGeneratorComponent::DeleteGroups()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "DeleteGroups");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GenerateSpotOnTick
+// (Native, Protected)
+
+void UVehicleAndTreasureBoxGeneratorComponent::GenerateSpotOnTick()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "GenerateSpotOnTick");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetRandomCategory
+// (Native, Protected, HasOutParams)
+// Parameters:
+// const TArray<struct FSpotWeight>&       SpotWeights                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UVehicleAndTreasureBoxGeneratorComponent::GetRandomCategory(const TArray<struct FSpotWeight>& SpotWeights)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "GetRandomCategory");
+
+	Params::VehicleAndTreasureBoxGeneratorComponent_GetRandomCategory Parms{};
+
+	Parms.SpotWeights = std::move(SpotWeights);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetRandomVehicleClass
+// (Final, Native, Public)
+// Parameters:
+// const class FString&                    Category                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVehicleGenerateSpawnData        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FVehicleGenerateSpawnData UVehicleAndTreasureBoxGeneratorComponent::GetRandomVehicleClass(const class FString& Category)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "GetRandomVehicleClass");
+
+	Params::VehicleAndTreasureBoxGeneratorComponent_GetRandomVehicleClass Parms{};
+
+	Parms.Category = std::move(Category);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetTreasureBoxSpotRandomInfo
+// (Final, Native, Public, HasOutParams)
+// Parameters:
+// struct FTreasureBoxSpotProperty*        SpotProperty                                           (Parm, OutParm, NativeAccessSpecifierPublic)
+// struct FVehicleGenerateRandomInfo       ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FVehicleGenerateRandomInfo UVehicleAndTreasureBoxGeneratorComponent::GetTreasureBoxSpotRandomInfo(struct FTreasureBoxSpotProperty* SpotProperty)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "GetTreasureBoxSpotRandomInfo");
+
+	Params::VehicleAndTreasureBoxGeneratorComponent_GetTreasureBoxSpotRandomInfo Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (SpotProperty != nullptr)
+		*SpotProperty = std::move(Parms.SpotProperty);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetVehicleSpotRandomInfo
+// (Final, Native, Public, HasOutParams)
+// Parameters:
+// struct FVehicleSpotProperty*            SpotProperty                                           (Parm, OutParm, NativeAccessSpecifierPublic)
+// struct FVehicleGenerateRandomInfo       ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FVehicleGenerateRandomInfo UVehicleAndTreasureBoxGeneratorComponent::GetVehicleSpotRandomInfo(struct FVehicleSpotProperty* SpotProperty)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "GetVehicleSpotRandomInfo");
+
+	Params::VehicleAndTreasureBoxGeneratorComponent_GetVehicleSpotRandomInfo Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (SpotProperty != nullptr)
+		*SpotProperty = std::move(Parms.SpotProperty);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetVehicleSpotRandomInfoBySpotType
+// (Final, Native, Public)
+// Parameters:
+// ESpotType                               SpotType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVehicleGenerateRandomInfo       ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FVehicleGenerateRandomInfo UVehicleAndTreasureBoxGeneratorComponent::GetVehicleSpotRandomInfoBySpotType(ESpotType SpotType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "GetVehicleSpotRandomInfoBySpotType");
+
+	Params::VehicleAndTreasureBoxGeneratorComponent_GetVehicleSpotRandomInfoBySpotType Parms{};
+
+	Parms.SpotType = SpotType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.LoadVehicleGenerateTable
+// (Event, Public, BlueprintEvent)
+
+void UVehicleAndTreasureBoxGeneratorComponent::LoadVehicleGenerateTable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "LoadVehicleGenerateTable");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RandomGroups
+// (Native, Public, BlueprintCallable)
+
+void UVehicleAndTreasureBoxGeneratorComponent::RandomGroups()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "RandomGroups");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RandomSingleSpots
+// (Final, Native, Protected, HasOutParams)
+// Parameters:
+// TArray<class UVehicleSpotSceneComponent*>*AllSpots                                               (Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// struct FVehicleSpotProperty*            Property                                               (Parm, OutParm, NativeAccessSpecifierPublic)
+
+void UVehicleAndTreasureBoxGeneratorComponent::RandomSingleSpots(TArray<class UVehicleSpotSceneComponent*>* AllSpots, struct FVehicleSpotProperty* Property)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "RandomSingleSpots");
+
+	Params::VehicleAndTreasureBoxGeneratorComponent_RandomSingleSpots Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AllSpots != nullptr)
+		*AllSpots = std::move(Parms.AllSpots);
+
+	if (Property != nullptr)
+		*Property = std::move(Parms.Property);
+}
+
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RandomSpotsByType
+// (Final, Native, Protected, HasOutParams)
+// Parameters:
+// struct FVehicleSpotProperty*            Property                                               (Parm, OutParm, NativeAccessSpecifierPublic)
+// struct FVehicleSpotComponentArray*      Spots                                                  (Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+void UVehicleAndTreasureBoxGeneratorComponent::RandomSpotsByType(struct FVehicleSpotProperty* Property, struct FVehicleSpotComponentArray* Spots)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "RandomSpotsByType");
+
+	Params::VehicleAndTreasureBoxGeneratorComponent_RandomSpotsByType Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Property != nullptr)
+		*Property = std::move(Parms.Property);
+
+	if (Spots != nullptr)
+		*Spots = std::move(Parms.Spots);
+}
+
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RandomTreasureBoxSingleSpots
+// (Final, Native, Protected, HasOutParams)
+// Parameters:
+// TArray<class UVehicleSpotSceneComponent*>*AllSpots                                               (Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// struct FTreasureBoxSpotProperty*        Property                                               (Parm, OutParm, NativeAccessSpecifierPublic)
+
+void UVehicleAndTreasureBoxGeneratorComponent::RandomTreasureBoxSingleSpots(TArray<class UVehicleSpotSceneComponent*>* AllSpots, struct FTreasureBoxSpotProperty* Property)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "RandomTreasureBoxSingleSpots");
+
+	Params::VehicleAndTreasureBoxGeneratorComponent_RandomTreasureBoxSingleSpots Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AllSpots != nullptr)
+		*AllSpots = std::move(Parms.AllSpots);
+
+	if (Property != nullptr)
+		*Property = std::move(Parms.Property);
+}
+
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RandomTreasureBoxSpotsByType
+// (Final, Native, Protected, HasOutParams)
+// Parameters:
+// struct FTreasureBoxSpotProperty*        Property                                               (Parm, OutParm, NativeAccessSpecifierPublic)
+// struct FVehicleSpotComponentArray*      Spots                                                  (Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+void UVehicleAndTreasureBoxGeneratorComponent::RandomTreasureBoxSpotsByType(struct FTreasureBoxSpotProperty* Property, struct FVehicleSpotComponentArray* Spots)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "RandomTreasureBoxSpotsByType");
+
+	Params::VehicleAndTreasureBoxGeneratorComponent_RandomTreasureBoxSpotsByType Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Property != nullptr)
+		*Property = std::move(Parms.Property);
+
+	if (Spots != nullptr)
+		*Spots = std::move(Parms.Spots);
+}
+
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RegisterGroupSpotComponent
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UGroupSpotSceneComponent*         GroupSpotComponent                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UVehicleAndTreasureBoxGeneratorComponent::RegisterGroupSpotComponent(class UGroupSpotSceneComponent* GroupSpotComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "RegisterGroupSpotComponent");
+
+	Params::VehicleAndTreasureBoxGeneratorComponent_RegisterGroupSpotComponent Parms{};
+
+	Parms.GroupSpotComponent = GroupSpotComponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RegisterVehicleGenerateSpawnData
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FVehicleGenerateSpawnData& Data                                                   (Parm, NativeAccessSpecifierPublic)
+
+void UVehicleAndTreasureBoxGeneratorComponent::RegisterVehicleGenerateSpawnData(const struct FVehicleGenerateSpawnData& Data)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "RegisterVehicleGenerateSpawnData");
+
+	Params::VehicleAndTreasureBoxGeneratorComponent_RegisterVehicleGenerateSpawnData Parms{};
+
+	Parms.Data = std::move(Data);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.WriteAllVehicleStatisticsDatas
+// (Final, Native, Protected, BlueprintCallable)
+
+void UVehicleAndTreasureBoxGeneratorComponent::WriteAllVehicleStatisticsDatas()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "WriteAllVehicleStatisticsDatas");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.WriteAllVehicleStatisticsDatasToLog
+// (Final, Native, Protected, BlueprintCallable)
+
+void UVehicleAndTreasureBoxGeneratorComponent::WriteAllVehicleStatisticsDatasToLog()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "WriteAllVehicleStatisticsDatasToLog");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.WriteVehicleClassStatisticsDatas
+// (Final, Native, Protected)
+
+void UVehicleAndTreasureBoxGeneratorComponent::WriteVehicleClassStatisticsDatas()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "WriteVehicleClassStatisticsDatas");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.WriteVehicleSpotStatisticsDatas
+// (Final, Native, Protected)
+
+void UVehicleAndTreasureBoxGeneratorComponent::WriteVehicleSpotStatisticsDatas()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "WriteVehicleSpotStatisticsDatas");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Gameplay.VehicleSpotSceneComponent.GenerateSpot
+// (Native, Public)
+// Parameters:
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 UVehicleSpotSceneComponent::GenerateSpot()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("VehicleSpotSceneComponent", "GenerateSpot");
+
+	Params::VehicleSpotSceneComponent_GenerateSpot Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Gameplay.VehicleSpotSceneComponent.GetVehiclePath
+// (Final, Native, Public)
 // Parameters:
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class FString AUAECharacter::GetPlayerKey()
+class FString UVehicleSpotSceneComponent::GetVehiclePath()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAECharacter", "GetPlayerKey");
+		Func = GetClass()->GetFunction("VehicleSpotSceneComponent", "GetVehiclePath");
 
-	Params::UAECharacter_GetPlayerKey Parms{};
+	Params::VehicleSpotSceneComponent_GetVehiclePath Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -556,76 +4235,19 @@ class FString AUAECharacter::GetPlayerKey()
 }
 
 
-// Function Gameplay.UAECharacter.OnRep_InitialItemList
-// (Native, Public)
-
-void AUAECharacter::OnRep_InitialItemList()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAECharacter", "OnRep_InitialItemList");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAECharacter.OnRep_PlayerKey
-// (Native, Public)
-
-void AUAECharacter::OnRep_PlayerKey()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAECharacter", "OnRep_PlayerKey");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAECharacter.OnRep_TeamID
-// (Final, Native, Public)
-
-void AUAECharacter::OnRep_TeamID()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAECharacter", "OnRep_TeamID");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAECharacter.GetNonDedicatedComponents
-// (Native, Event, Public, BlueprintEvent, Const)
+// Function Gameplay.VehicleSpotSceneComponent.SetSpotRandomInfo
+// (Final, Native, Public, HasOutParams)
 // Parameters:
-// TArray<class UActorComponent*>          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// struct FVehicleGenerateRandomInfo*      RandomInfo                                             (Parm, OutParm, NativeAccessSpecifierPublic)
 
-TArray<class UActorComponent*> AUAECharacter::GetNonDedicatedComponents() const
+void UVehicleSpotSceneComponent::SetSpotRandomInfo(struct FVehicleGenerateRandomInfo* RandomInfo)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAECharacter", "GetNonDedicatedComponents");
+		Func = GetClass()->GetFunction("VehicleSpotSceneComponent", "SetSpotRandomInfo");
 
-	Params::UAECharacter_GetNonDedicatedComponents Parms{};
+	Params::VehicleSpotSceneComponent_SetSpotRandomInfo Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -634,248 +4256,8 @@ TArray<class UActorComponent*> AUAECharacter::GetNonDedicatedComponents() const
 
 	Func->FunctionFlags = Flgs;
 
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.UAECharacter.GetNonSimulatedComponents
-// (Native, Event, Public, BlueprintEvent, Const)
-// Parameters:
-// TArray<class UActorComponent*>          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-
-TArray<class UActorComponent*> AUAECharacter::GetNonSimulatedComponents() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAECharacter", "GetNonSimulatedComponents");
-
-	Params::UAECharacter_GetNonSimulatedComponents Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.UAECharacter.GetNonSimulatedComponents_NonTeammates
-// (Native, Event, Public, BlueprintEvent, Const)
-// Parameters:
-// TArray<class UActorComponent*>          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-
-TArray<class UActorComponent*> AUAECharacter::GetNonSimulatedComponents_NonTeammates() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAECharacter", "GetNonSimulatedComponents_NonTeammates");
-
-	Params::UAECharacter_GetNonSimulatedComponents_NonTeammates Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.UAECharacter.GetNonSimulatedComponents_OnFighting
-// (Native, Event, Public, BlueprintEvent, Const)
-// Parameters:
-// TArray<class UActorComponent*>          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-
-TArray<class UActorComponent*> AUAECharacter::GetNonSimulatedComponents_OnFighting() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAECharacter", "GetNonSimulatedComponents_OnFighting");
-
-	Params::UAECharacter_GetNonSimulatedComponents_OnFighting Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.UAEPlayerState.GetUserIDByMemberID
-// (Native, Public)
-// Parameters:
-// int32                                   memberID                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint32                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint32 AUAEPlayerState::GetUserIDByMemberID(int32 memberID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerState", "GetUserIDByMemberID");
-
-	Params::UAEPlayerState_GetUserIDByMemberID Parms{};
-
-	Parms.memberID = memberID;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.UAEPlayerState.OnRep_PlayerKillsChange
-// (Native, Public)
-
-void AUAEPlayerState::OnRep_PlayerKillsChange()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerState", "OnRep_PlayerKillsChange");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerState.OnRep_TeamID
-// (Native, Public)
-
-void AUAEPlayerState::OnRep_TeamID()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerState", "OnRep_TeamID");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerState.SetGVMemberID
-// (Final, Native, Public)
-// Parameters:
-// int32                                   memberID                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AUAEPlayerState::SetGVMemberID(int32 memberID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerState", "SetGVMemberID");
-
-	Params::UAEPlayerState_SetGVMemberID Parms{};
-
-	Parms.memberID = memberID;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerState.SetGVMemberIDServerCall
-// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
-// Parameters:
-// int32                                   memberID                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AUAEPlayerState::SetGVMemberIDServerCall(int32 memberID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerState", "SetGVMemberIDServerCall");
-
-	Params::UAEPlayerState_SetGVMemberIDServerCall Parms{};
-
-	Parms.memberID = memberID;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerState.GetPlayerBattleResultData
-// (Native, Public, Const)
-// Parameters:
-// struct FGameModePlayerBattleResultData  ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FGameModePlayerBattleResultData AUAEPlayerState::GetPlayerBattleResultData() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerState", "GetPlayerBattleResultData");
-
-	Params::UAEPlayerState_GetPlayerBattleResultData Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.UAEPlayerState.GetTeammateBattleResultData
-// (Native, Public, Const)
-// Parameters:
-// struct FGameModeTeammateBattleResultDataReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FGameModeTeammateBattleResultData AUAEPlayerState::GetTeammateBattleResultData() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerState", "GetTeammateBattleResultData");
-
-	Params::UAEPlayerState_GetTeammateBattleResultData Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
+	if (RandomInfo != nullptr)
+		*RandomInfo = std::move(Parms.RandomInfo);
 }
 
 
@@ -2064,2117 +5446,6 @@ class UBattleItemHandleBase* UBackpackComponent::NewItemHandle(const struct FIte
 }
 
 
-// Function Gameplay.UAEPlayerController.ActorReports
-// (Final, Exec, Native, Public)
-// Parameters:
-// const class FString&                    InFileName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AUAEPlayerController::ActorReports(const class FString& InFileName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "ActorReports");
-
-	Params::UAEPlayerController_ActorReports Parms{};
-
-	Parms.InFileName = std::move(InFileName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.CastUIMsg
-// (Exec, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    strMsg                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    module                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AUAEPlayerController::CastUIMsg(const class FString& strMsg, const class FString& module)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "CastUIMsg");
-
-	Params::UAEPlayerController_CastUIMsg Parms{};
-
-	Parms.strMsg = std::move(strMsg);
-	Parms.module = std::move(module);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.CheckAcknowledgedPawn
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class APawn*                            InPawn                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 AUAEPlayerController::CheckAcknowledgedPawn(class APawn* InPawn)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "CheckAcknowledgedPawn");
-
-	Params::UAEPlayerController_CheckAcknowledgedPawn Parms{};
-
-	Parms.InPawn = InPawn;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.UAEPlayerController.ClientAcknowledgeReconnection_3
-// (Net, NetReliable, Native, Event, Public, NetClient)
-// Parameters:
-// uint32                                  Token                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AUAEPlayerController::ClientAcknowledgeReconnection_3(uint32 Token)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "ClientAcknowledgeReconnection_3");
-
-	Params::UAEPlayerController_ClientAcknowledgeReconnection_3 Parms{};
-
-	Parms.Token = Token;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.ClientBroadcastReconnectionSuccessful
-// (Net, NetReliable, Native, Event, Public, NetClient)
-
-void AUAEPlayerController::ClientBroadcastReconnectionSuccessful()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "ClientBroadcastReconnectionSuccessful");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.ClientBroadcastRespawnComplete
-// (Net, NetReliable, Native, Event, Public, NetClient)
-
-void AUAEPlayerController::ClientBroadcastRespawnComplete()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "ClientBroadcastRespawnComplete");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.CopyDebugInfo
-// (Final, Exec, Native, Public)
-
-void AUAEPlayerController::CopyDebugInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "CopyDebugInfo");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.CopyDebugInfoLocation
-// (Final, Exec, Native, Public)
-
-void AUAEPlayerController::CopyDebugInfoLocation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "CopyDebugInfoLocation");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.CopyDebugInfoRotation
-// (Final, Exec, Native, Public)
-
-void AUAEPlayerController::CopyDebugInfoRotation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "CopyDebugInfoRotation");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.DisableInGameUI
-// (Final, Exec, Native, Public)
-
-void AUAEPlayerController::DisableInGameUI()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "DisableInGameUI");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.DoCrash
-// (Final, Exec, Native, Public)
-
-void AUAEPlayerController::DoCrash()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "DoCrash");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.DumpAllActors
-// (Final, Exec, Native, Public)
-
-void AUAEPlayerController::DumpAllActors()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "DumpAllActors");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.DumpAllObjects
-// (Final, Exec, Native, Public)
-
-void AUAEPlayerController::DumpAllObjects()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "DumpAllObjects");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.DumpAllUI
-// (Final, Exec, Native, Public)
-
-void AUAEPlayerController::DumpAllUI()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "DumpAllUI");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.DumpNetActors
-// (Final, Exec, Native, Public)
-
-void AUAEPlayerController::DumpNetActors()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "DumpNetActors");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.EnableInGameUI
-// (Final, Exec, Native, Public)
-
-void AUAEPlayerController::EnableInGameUI()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "EnableInGameUI");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.ExcuteIntCounterRecord
-// (Final, Native, Public)
-// Parameters:
-// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Count                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AUAEPlayerController::ExcuteIntCounterRecord(const class FString& Key, int32 Count)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "ExcuteIntCounterRecord");
-
-	Params::UAEPlayerController_ExcuteIntCounterRecord Parms{};
-
-	Parms.Key = std::move(Key);
-	Parms.Count = Count;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.ExcuteIntRecord
-// (Final, Native, Public)
-// Parameters:
-// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Count                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AUAEPlayerController::ExcuteIntRecord(const class FString& Key, int32 Count)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "ExcuteIntRecord");
-
-	Params::UAEPlayerController_ExcuteIntRecord Parms{};
-
-	Parms.Key = std::move(Key);
-	Parms.Count = Count;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.ExitGame
-// (Native, Public, BlueprintCallable)
-
-void AUAEPlayerController::ExitGame()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "ExitGame");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.InitInGameUI
-// (Native, Public, BlueprintCallable)
-
-void AUAEPlayerController::InitInGameUI()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "InitInGameUI");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.InitWithPlayerParams
-// (Final, Native, Public, HasOutParams)
-// Parameters:
-// const struct FGameModePlayerParams&     Params_0                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void AUAEPlayerController::InitWithPlayerParams(const struct FGameModePlayerParams& Params_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "InitWithPlayerParams");
-
-	Params::UAEPlayerController_InitWithPlayerParams Parms{};
-
-	Parms.Params_0 = std::move(Params_0);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.KickSelf
-// (Final, Exec, Native, Public)
-
-void AUAEPlayerController::KickSelf()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "KickSelf");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.LobbyMemberVoice
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// int32                                   Member                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   State                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AUAEPlayerController::LobbyMemberVoice(int32 Member, int32 State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "LobbyMemberVoice");
-
-	Params::UAEPlayerController_LobbyMemberVoice Parms{};
-
-	Parms.Member = Member;
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Gameplay.UAEPlayerController.ObjectCountReport
-// (Final, Exec, Native, Public)
-// Parameters:
-// const class FString&                    InFileName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AUAEPlayerController::ObjectCountReport(const class FString& InFileName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "ObjectCountReport");
-
-	Params::UAEPlayerController_ObjectCountReport Parms{};
-
-	Parms.InFileName = std::move(InFileName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.ObjectPathReport
-// (Final, Exec, Native, Public)
-// Parameters:
-// const class FString&                    InFileName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AUAEPlayerController::ObjectPathReport(const class FString& InFileName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "ObjectPathReport");
-
-	Params::UAEPlayerController_ObjectPathReport Parms{};
-
-	Parms.InFileName = std::move(InFileName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.ObjectReports
-// (Final, Exec, Native, Public)
-// Parameters:
-// const class FString&                    InFileName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AUAEPlayerController::ObjectReports(const class FString& InFileName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "ObjectReports");
-
-	Params::UAEPlayerController_ObjectReports Parms{};
-
-	Parms.InFileName = std::move(InFileName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.OnCharacterDestroyed
-// (Final, Native, Public)
-// Parameters:
-// class AActor*                           Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AUAEPlayerController::OnCharacterDestroyed(class AActor* Actor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "OnCharacterDestroyed");
-
-	Params::UAEPlayerController_OnCharacterDestroyed Parms{};
-
-	Parms.Actor = Actor;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.OnRep_Emotes
-// (Final, Native, Public)
-
-void AUAEPlayerController::OnRep_Emotes()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "OnRep_Emotes");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.OnRep_InitialEquipmentAvatarList
-// (Final, Native, Public)
-
-void AUAEPlayerController::OnRep_InitialEquipmentAvatarList()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "OnRep_InitialEquipmentAvatarList");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.OnRep_InitialItemList
-// (Final, Native, Public)
-
-void AUAEPlayerController::OnRep_InitialItemList()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "OnRep_InitialItemList");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.OnRep_InitialVehicleAvatarList
-// (Final, Native, Public)
-
-void AUAEPlayerController::OnRep_InitialVehicleAvatarList()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "OnRep_InitialVehicleAvatarList");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.OnRep_InitialWeaponAvatarList
-// (Final, Native, Public)
-
-void AUAEPlayerController::OnRep_InitialWeaponAvatarList()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "OnRep_InitialWeaponAvatarList");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.OnRep_IsObserver
-// (Native, Public)
-
-void AUAEPlayerController::OnRep_IsObserver()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "OnRep_IsObserver");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.OnRep_IsSpectating
-// (Native, Public)
-
-void AUAEPlayerController::OnRep_IsSpectating()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "OnRep_IsSpectating");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.PlayerStartIDReceived
-// (Final, Native, Protected)
-
-void AUAEPlayerController::PlayerStartIDReceived()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "PlayerStartIDReceived");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.PrintLocation
-// (Final, Exec, Native, Public)
-
-void AUAEPlayerController::PrintLocation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "PrintLocation");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.PrintStatistics
-// (Final, Exec, Native, Public)
-
-void AUAEPlayerController::PrintStatistics()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "PrintStatistics");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.ReleaseInGameUI
-// (Native, Public, BlueprintCallable)
-
-void AUAEPlayerController::ReleaseInGameUI()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "ReleaseInGameUI");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.RequestScreenshot
-// (Final, Native, Public, BlueprintCallable)
-
-void AUAEPlayerController::RequestScreenshot()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "RequestScreenshot");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.Respawn
-// (Native, Public, BlueprintCallable)
-
-void AUAEPlayerController::Respawn()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "Respawn");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.ServerAcknowledgeReconnection_1
-// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
-// Parameters:
-// uint32                                  Token                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AUAEPlayerController::ServerAcknowledgeReconnection_1(uint32 Token)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "ServerAcknowledgeReconnection_1");
-
-	Params::UAEPlayerController_ServerAcknowledgeReconnection_1 Parms{};
-
-	Parms.Token = Token;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.ServerExitGame
-// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
-
-void AUAEPlayerController::ServerExitGame()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "ServerExitGame");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.ServerKickSelf
-// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
-
-void AUAEPlayerController::ServerKickSelf()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "ServerKickSelf");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.ServerSetVoiceId
-// (Net, NetReliable, Native, Event, Public, NetServer, BlueprintCallable, NetValidate)
-// Parameters:
-// int32                                   VoiceID                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AUAEPlayerController::ServerSetVoiceId(int32 VoiceID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "ServerSetVoiceId");
-
-	Params::UAEPlayerController_ServerSetVoiceId Parms{};
-
-	Parms.VoiceID = VoiceID;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.SetCustomDepth
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// uint8                                   bOn                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AUAEPlayerController::SetCustomDepth(uint8 bOn)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "SetCustomDepth");
-
-	Params::UAEPlayerController_SetCustomDepth Parms{};
-
-	Parms.bOn = bOn;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.SetPanels
-// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const TArray<class UUAEUserWidget*>&    panels                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-
-void AUAEPlayerController::SetPanels(const TArray<class UUAEUserWidget*>& panels)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "SetPanels");
-
-	Params::UAEPlayerController_SetPanels Parms{};
-
-	Parms.panels = std::move(panels);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.TestReqScreenshot
-// (Final, Exec, Native, Public)
-
-void AUAEPlayerController::TestReqScreenshot()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "TestReqScreenshot");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.TestRespawn
-// (Final, Exec, Native, Public)
-
-void AUAEPlayerController::TestRespawn()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "TestRespawn");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEPlayerController.IsInSpectating
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 AUAEPlayerController::IsInSpectating() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "IsInSpectating");
-
-	Params::UAEPlayerController_IsInSpectating Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.UAEPlayerController.IsObserver
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 AUAEPlayerController::IsObserver() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "IsObserver");
-
-	Params::UAEPlayerController_IsObserver Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.UAEPlayerController.IsSpectator
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 AUAEPlayerController::IsSpectator() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEPlayerController", "IsSpectator");
-
-	Params::UAEPlayerController_IsSpectator Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.BaseGeneratorComponent.CheckTileLevelsVisible
-// (Final, Native, Protected)
-
-void UBaseGeneratorComponent::CheckTileLevelsVisible()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BaseGeneratorComponent", "CheckTileLevelsVisible");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.BaseGeneratorComponent.GenerateSpotOnTick
-// (Native, Public)
-
-void UBaseGeneratorComponent::GenerateSpotOnTick()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BaseGeneratorComponent", "GenerateSpotOnTick");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.BaseGeneratorComponent.GenerateSpots
-// (Native, Public)
-
-void UBaseGeneratorComponent::GenerateSpots()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BaseGeneratorComponent", "GenerateSpots");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.BaseGeneratorComponent.GeneratorWorldTileSpots
-// (Final, Native, Protected, HasOutParams)
-// Parameters:
-// struct FWorldTileSpotArray*             SpotArray                                              (Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-
-void UBaseGeneratorComponent::GeneratorWorldTileSpots(struct FWorldTileSpotArray* SpotArray)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BaseGeneratorComponent", "GeneratorWorldTileSpots");
-
-	Params::BaseGeneratorComponent_GeneratorWorldTileSpots Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (SpotArray != nullptr)
-		*SpotArray = std::move(Parms.SpotArray);
-}
-
-
-// Function Gameplay.BaseGeneratorComponent.RegisterGroupSpotComponent
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UGroupSpotSceneComponent*         GroupSpotComponent                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBaseGeneratorComponent::RegisterGroupSpotComponent(class UGroupSpotSceneComponent* GroupSpotComponent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BaseGeneratorComponent", "RegisterGroupSpotComponent");
-
-	Params::BaseGeneratorComponent_RegisterGroupSpotComponent Parms{};
-
-	Parms.GroupSpotComponent = GroupSpotComponent;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.BaseGeneratorComponent.RegisterSpotComponentToTick
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class USpotSceneComponent*              SpotComponent                                          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBaseGeneratorComponent::RegisterSpotComponentToTick(class USpotSceneComponent* SpotComponent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BaseGeneratorComponent", "RegisterSpotComponentToTick");
-
-	Params::BaseGeneratorComponent_RegisterSpotComponentToTick Parms{};
-
-	Parms.SpotComponent = SpotComponent;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.BaseGeneratorComponent.RegisterWorldTileSpot
-// (Native, Public)
-// Parameters:
-// class USpotSceneComponent*              Spot                                                   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBaseGeneratorComponent::RegisterWorldTileSpot(class USpotSceneComponent* Spot)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BaseGeneratorComponent", "RegisterWorldTileSpot");
-
-	Params::BaseGeneratorComponent_RegisterWorldTileSpot Parms{};
-
-	Parms.Spot = Spot;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.AddVehicleClassCount
-// (Final, Native, Protected)
-// Parameters:
-// const class FString&                    Path                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   IsValid                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Count                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVehicleAndTreasureBoxGeneratorComponent::AddVehicleClassCount(const class FString& Path, uint8 IsValid, int32 Count)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "AddVehicleClassCount");
-
-	Params::VehicleAndTreasureBoxGeneratorComponent_AddVehicleClassCount Parms{};
-
-	Parms.Path = std::move(Path);
-	Parms.IsValid = IsValid;
-	Parms.Count = Count;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.AddVehicleSpotCount
-// (Final, Native, Protected)
-// Parameters:
-// ESpotType                               SpotType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Path                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   LocationX                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   LocationY                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   LocationZ                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVehicleAndTreasureBoxGeneratorComponent::AddVehicleSpotCount(ESpotType SpotType, const class FString& Path, float LocationX, float LocationY, float LocationZ)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "AddVehicleSpotCount");
-
-	Params::VehicleAndTreasureBoxGeneratorComponent_AddVehicleSpotCount Parms{};
-
-	Parms.SpotType = SpotType;
-	Parms.Path = std::move(Path);
-	Parms.LocationX = LocationX;
-	Parms.LocationY = LocationY;
-	Parms.LocationZ = LocationZ;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.DeleteGroups
-// (Final, Native, Protected)
-
-void UVehicleAndTreasureBoxGeneratorComponent::DeleteGroups()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "DeleteGroups");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GenerateSpotOnTick
-// (Native, Protected)
-
-void UVehicleAndTreasureBoxGeneratorComponent::GenerateSpotOnTick()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "GenerateSpotOnTick");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetRandomCategory
-// (Native, Protected, HasOutParams)
-// Parameters:
-// const TArray<struct FSpotWeight>&       SpotWeights                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString UVehicleAndTreasureBoxGeneratorComponent::GetRandomCategory(const TArray<struct FSpotWeight>& SpotWeights)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "GetRandomCategory");
-
-	Params::VehicleAndTreasureBoxGeneratorComponent_GetRandomCategory Parms{};
-
-	Parms.SpotWeights = std::move(SpotWeights);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetRandomVehicleClass
-// (Final, Native, Public)
-// Parameters:
-// const class FString&                    Category                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVehicleGenerateSpawnData        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FVehicleGenerateSpawnData UVehicleAndTreasureBoxGeneratorComponent::GetRandomVehicleClass(const class FString& Category)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "GetRandomVehicleClass");
-
-	Params::VehicleAndTreasureBoxGeneratorComponent_GetRandomVehicleClass Parms{};
-
-	Parms.Category = std::move(Category);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetTreasureBoxSpotRandomInfo
-// (Final, Native, Public, HasOutParams)
-// Parameters:
-// struct FTreasureBoxSpotProperty*        SpotProperty                                           (Parm, OutParm, NativeAccessSpecifierPublic)
-// struct FVehicleGenerateRandomInfo       ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FVehicleGenerateRandomInfo UVehicleAndTreasureBoxGeneratorComponent::GetTreasureBoxSpotRandomInfo(struct FTreasureBoxSpotProperty* SpotProperty)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "GetTreasureBoxSpotRandomInfo");
-
-	Params::VehicleAndTreasureBoxGeneratorComponent_GetTreasureBoxSpotRandomInfo Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (SpotProperty != nullptr)
-		*SpotProperty = std::move(Parms.SpotProperty);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetVehicleSpotRandomInfo
-// (Final, Native, Public, HasOutParams)
-// Parameters:
-// struct FVehicleSpotProperty*            SpotProperty                                           (Parm, OutParm, NativeAccessSpecifierPublic)
-// struct FVehicleGenerateRandomInfo       ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FVehicleGenerateRandomInfo UVehicleAndTreasureBoxGeneratorComponent::GetVehicleSpotRandomInfo(struct FVehicleSpotProperty* SpotProperty)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "GetVehicleSpotRandomInfo");
-
-	Params::VehicleAndTreasureBoxGeneratorComponent_GetVehicleSpotRandomInfo Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (SpotProperty != nullptr)
-		*SpotProperty = std::move(Parms.SpotProperty);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetVehicleSpotRandomInfoBySpotType
-// (Final, Native, Public)
-// Parameters:
-// ESpotType                               SpotType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVehicleGenerateRandomInfo       ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FVehicleGenerateRandomInfo UVehicleAndTreasureBoxGeneratorComponent::GetVehicleSpotRandomInfoBySpotType(ESpotType SpotType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "GetVehicleSpotRandomInfoBySpotType");
-
-	Params::VehicleAndTreasureBoxGeneratorComponent_GetVehicleSpotRandomInfoBySpotType Parms{};
-
-	Parms.SpotType = SpotType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.LoadVehicleGenerateTable
-// (Event, Public, BlueprintEvent)
-
-void UVehicleAndTreasureBoxGeneratorComponent::LoadVehicleGenerateTable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "LoadVehicleGenerateTable");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RandomGroups
-// (Native, Public, BlueprintCallable)
-
-void UVehicleAndTreasureBoxGeneratorComponent::RandomGroups()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "RandomGroups");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RandomSingleSpots
-// (Final, Native, Protected, HasOutParams)
-// Parameters:
-// TArray<class UVehicleSpotSceneComponent*>*AllSpots                                               (Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-// struct FVehicleSpotProperty*            Property                                               (Parm, OutParm, NativeAccessSpecifierPublic)
-
-void UVehicleAndTreasureBoxGeneratorComponent::RandomSingleSpots(TArray<class UVehicleSpotSceneComponent*>* AllSpots, struct FVehicleSpotProperty* Property)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "RandomSingleSpots");
-
-	Params::VehicleAndTreasureBoxGeneratorComponent_RandomSingleSpots Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AllSpots != nullptr)
-		*AllSpots = std::move(Parms.AllSpots);
-
-	if (Property != nullptr)
-		*Property = std::move(Parms.Property);
-}
-
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RandomSpotsByType
-// (Final, Native, Protected, HasOutParams)
-// Parameters:
-// struct FVehicleSpotProperty*            Property                                               (Parm, OutParm, NativeAccessSpecifierPublic)
-// struct FVehicleSpotComponentArray*      Spots                                                  (Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-
-void UVehicleAndTreasureBoxGeneratorComponent::RandomSpotsByType(struct FVehicleSpotProperty* Property, struct FVehicleSpotComponentArray* Spots)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "RandomSpotsByType");
-
-	Params::VehicleAndTreasureBoxGeneratorComponent_RandomSpotsByType Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Property != nullptr)
-		*Property = std::move(Parms.Property);
-
-	if (Spots != nullptr)
-		*Spots = std::move(Parms.Spots);
-}
-
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RandomTreasureBoxSingleSpots
-// (Final, Native, Protected, HasOutParams)
-// Parameters:
-// TArray<class UVehicleSpotSceneComponent*>*AllSpots                                               (Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-// struct FTreasureBoxSpotProperty*        Property                                               (Parm, OutParm, NativeAccessSpecifierPublic)
-
-void UVehicleAndTreasureBoxGeneratorComponent::RandomTreasureBoxSingleSpots(TArray<class UVehicleSpotSceneComponent*>* AllSpots, struct FTreasureBoxSpotProperty* Property)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "RandomTreasureBoxSingleSpots");
-
-	Params::VehicleAndTreasureBoxGeneratorComponent_RandomTreasureBoxSingleSpots Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AllSpots != nullptr)
-		*AllSpots = std::move(Parms.AllSpots);
-
-	if (Property != nullptr)
-		*Property = std::move(Parms.Property);
-}
-
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RandomTreasureBoxSpotsByType
-// (Final, Native, Protected, HasOutParams)
-// Parameters:
-// struct FTreasureBoxSpotProperty*        Property                                               (Parm, OutParm, NativeAccessSpecifierPublic)
-// struct FVehicleSpotComponentArray*      Spots                                                  (Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-
-void UVehicleAndTreasureBoxGeneratorComponent::RandomTreasureBoxSpotsByType(struct FTreasureBoxSpotProperty* Property, struct FVehicleSpotComponentArray* Spots)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "RandomTreasureBoxSpotsByType");
-
-	Params::VehicleAndTreasureBoxGeneratorComponent_RandomTreasureBoxSpotsByType Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Property != nullptr)
-		*Property = std::move(Parms.Property);
-
-	if (Spots != nullptr)
-		*Spots = std::move(Parms.Spots);
-}
-
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RegisterGroupSpotComponent
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UGroupSpotSceneComponent*         GroupSpotComponent                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVehicleAndTreasureBoxGeneratorComponent::RegisterGroupSpotComponent(class UGroupSpotSceneComponent* GroupSpotComponent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "RegisterGroupSpotComponent");
-
-	Params::VehicleAndTreasureBoxGeneratorComponent_RegisterGroupSpotComponent Parms{};
-
-	Parms.GroupSpotComponent = GroupSpotComponent;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RegisterVehicleGenerateSpawnData
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const struct FVehicleGenerateSpawnData& Data                                                   (Parm, NativeAccessSpecifierPublic)
-
-void UVehicleAndTreasureBoxGeneratorComponent::RegisterVehicleGenerateSpawnData(const struct FVehicleGenerateSpawnData& Data)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "RegisterVehicleGenerateSpawnData");
-
-	Params::VehicleAndTreasureBoxGeneratorComponent_RegisterVehicleGenerateSpawnData Parms{};
-
-	Parms.Data = std::move(Data);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.WriteAllVehicleStatisticsDatas
-// (Final, Native, Protected, BlueprintCallable)
-
-void UVehicleAndTreasureBoxGeneratorComponent::WriteAllVehicleStatisticsDatas()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "WriteAllVehicleStatisticsDatas");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.WriteAllVehicleStatisticsDatasToLog
-// (Final, Native, Protected, BlueprintCallable)
-
-void UVehicleAndTreasureBoxGeneratorComponent::WriteAllVehicleStatisticsDatasToLog()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "WriteAllVehicleStatisticsDatasToLog");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.WriteVehicleClassStatisticsDatas
-// (Final, Native, Protected)
-
-void UVehicleAndTreasureBoxGeneratorComponent::WriteVehicleClassStatisticsDatas()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "WriteVehicleClassStatisticsDatas");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.WriteVehicleSpotStatisticsDatas
-// (Final, Native, Protected)
-
-void UVehicleAndTreasureBoxGeneratorComponent::WriteVehicleSpotStatisticsDatas()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleAndTreasureBoxGeneratorComponent", "WriteVehicleSpotStatisticsDatas");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.TestAttrModifyActor.GetAttrValue
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// int32*                                  I                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float*                                  F                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ATestAttrModifyActor::GetAttrValue(int32* I, float* F)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("TestAttrModifyActor", "GetAttrValue");
-
-	Params::TestAttrModifyActor_GetAttrValue Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (I != nullptr)
-		*I = Parms.I;
-
-	if (F != nullptr)
-		*F = Parms.F;
-}
-
-
-// Function Gameplay.TestAttrModifyActor.SetModify
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// uint8                                   Enable                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ATestAttrModifyActor::SetModify(uint8 Enable)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("TestAttrModifyActor", "SetModify");
-
-	Params::TestAttrModifyActor_SetModify Parms{};
-
-	Parms.Enable = Enable;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.TestAttrModifyActor.TestGetVariable
-// (Final, Native, Protected, BlueprintCallable)
-// Parameters:
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 ATestAttrModifyActor::TestGetVariable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("TestAttrModifyActor", "TestGetVariable");
-
-	Params::TestAttrModifyActor_TestGetVariable Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.UAEHouseActor.BroadcastWindowRepDataUpdated
-// (Net, NetReliable, Native, Event, NetMulticast, Public)
-// Parameters:
-// const struct FUAEWindowRepData&         InRepData                                              (Parm, NativeAccessSpecifierPublic)
-
-void AUAEHouseActor::BroadcastWindowRepDataUpdated(const struct FUAEWindowRepData& InRepData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEHouseActor", "BroadcastWindowRepDataUpdated");
-
-	Params::UAEHouseActor_BroadcastWindowRepDataUpdated Parms{};
-
-	Parms.InRepData = std::move(InRepData);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEHouseActor.OnRep_WindowList
-// (Final, Native, Private)
-
-void AUAEHouseActor::OnRep_WindowList()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEHouseActor", "OnRep_WindowList");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAECharacterAnimListComponent.OnAsyncLoadingFinished
-// (Final, Native, Public)
-// Parameters:
-// const struct FAsyncLoadCharAnimParams&  LoadingParam                                           (Parm, NativeAccessSpecifierPublic)
-
-void UUAECharacterAnimListComponent::OnAsyncLoadingFinished(const struct FAsyncLoadCharAnimParams& LoadingParam)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAECharacterAnimListComponent", "OnAsyncLoadingFinished");
-
-	Params::UAECharacterAnimListComponent_OnAsyncLoadingFinished Parms{};
-
-	Parms.LoadingParam = std::move(LoadingParam);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAECharacterAnimListComponent.GetCharacterAnim
-// (Final, Native, Public, Const)
-// Parameters:
-// ECharacterAnimType                      AnimType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// ECharacterPoseType                      PoseType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UAnimationAsset*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UAnimationAsset* UUAECharacterAnimListComponent::GetCharacterAnim(ECharacterAnimType AnimType, ECharacterPoseType PoseType) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAECharacterAnimListComponent", "GetCharacterAnim");
-
-	Params::UAECharacterAnimListComponent_GetCharacterAnim Parms{};
-
-	Parms.AnimType = AnimType;
-	Parms.PoseType = PoseType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.UAECharacterAnimListComponent.GetCharacterJumpAnim
-// (Final, Native, Public, Const)
-// Parameters:
-// ECharacterJumpType                      JumpType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FPlayerAnimData>          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FPlayerAnimData> UUAECharacterAnimListComponent::GetCharacterJumpAnim(ECharacterJumpType JumpType) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAECharacterAnimListComponent", "GetCharacterJumpAnim");
-
-	Params::UAECharacterAnimListComponent_GetCharacterJumpAnim Parms{};
-
-	Parms.JumpType = JumpType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.GeneratorActorAIInterface.RegisterAIPickupPoint
-// (Native, Public)
-// Parameters:
-// class UItemSpotSceneComponent*          Spot                                                   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor*                           PickUpActor                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void IGeneratorActorAIInterface::RegisterAIPickupPoint(class UItemSpotSceneComponent* Spot, class AActor* PickUpActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("GeneratorActorAIInterface", "RegisterAIPickupPoint");
-
-	Params::GeneratorActorAIInterface_RegisterAIPickupPoint Parms{};
-
-	Parms.Spot = Spot;
-	Parms.PickUpActor = PickUpActor;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.GeneratorActorInterface.InitData
-// (Native, Public)
-// Parameters:
-// class UItemSpotSceneComponent*          ItemSpotSceneComponent                                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ItemCount                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Category                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   RepeatGenerateItem                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void IGeneratorActorInterface::InitData(class UItemSpotSceneComponent* ItemSpotSceneComponent, int32 ItemCount, const class FString& Value, const class FString& Category, uint8 RepeatGenerateItem)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("GeneratorActorInterface", "InitData");
-
-	Params::GeneratorActorInterface_InitData Parms{};
-
-	Parms.ItemSpotSceneComponent = ItemSpotSceneComponent;
-	Parms.ItemCount = ItemCount;
-	Parms.Value = std::move(Value);
-	Parms.Category = std::move(Category);
-	Parms.RepeatGenerateItem = RepeatGenerateItem;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleSpotSceneComponent.GenerateSpot
-// (Native, Public)
-// Parameters:
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 UVehicleSpotSceneComponent::GenerateSpot()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleSpotSceneComponent", "GenerateSpot");
-
-	Params::VehicleSpotSceneComponent_GenerateSpot Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.VehicleSpotSceneComponent.GetVehiclePath
-// (Final, Native, Public)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString UVehicleSpotSceneComponent::GetVehiclePath()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleSpotSceneComponent", "GetVehiclePath");
-
-	Params::VehicleSpotSceneComponent_GetVehiclePath Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.VehicleSpotSceneComponent.SetSpotRandomInfo
-// (Final, Native, Public, HasOutParams)
-// Parameters:
-// struct FVehicleGenerateRandomInfo*      RandomInfo                                             (Parm, OutParm, NativeAccessSpecifierPublic)
-
-void UVehicleSpotSceneComponent::SetSpotRandomInfo(struct FVehicleGenerateRandomInfo* RandomInfo)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleSpotSceneComponent", "SetSpotRandomInfo");
-
-	Params::VehicleSpotSceneComponent_SetSpotRandomInfo Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (RandomInfo != nullptr)
-		*RandomInfo = std::move(Parms.RandomInfo);
-}
-
-
 // Function Gameplay.GeneratorVehicleInterface.InitVehicle
 // (Native, Public)
 // Parameters:
@@ -4241,518 +5512,6 @@ void AGlobalConfigActor::Init()
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleGeneratorComponent.AddVehicleClassCount
-// (Final, Native, Protected)
-// Parameters:
-// const class FString&                    Path                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   IsValid                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Count                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVehicleGeneratorComponent::AddVehicleClassCount(const class FString& Path, uint8 IsValid, int32 Count)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "AddVehicleClassCount");
-
-	Params::VehicleGeneratorComponent_AddVehicleClassCount Parms{};
-
-	Parms.Path = std::move(Path);
-	Parms.IsValid = IsValid;
-	Parms.Count = Count;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleGeneratorComponent.AddVehicleSpotCount
-// (Final, Native, Protected)
-// Parameters:
-// ESpotType                               SpotType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Path                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   LocationX                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   LocationY                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   LocationZ                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVehicleGeneratorComponent::AddVehicleSpotCount(ESpotType SpotType, const class FString& Path, float LocationX, float LocationY, float LocationZ)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "AddVehicleSpotCount");
-
-	Params::VehicleGeneratorComponent_AddVehicleSpotCount Parms{};
-
-	Parms.SpotType = SpotType;
-	Parms.Path = std::move(Path);
-	Parms.LocationX = LocationX;
-	Parms.LocationY = LocationY;
-	Parms.LocationZ = LocationZ;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleGeneratorComponent.DeleteGroups
-// (Final, Native, Protected)
-
-void UVehicleGeneratorComponent::DeleteGroups()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "DeleteGroups");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleGeneratorComponent.GenerateSpotOnTick
-// (Native, Protected)
-
-void UVehicleGeneratorComponent::GenerateSpotOnTick()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "GenerateSpotOnTick");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleGeneratorComponent.GetRandomCategory
-// (Native, Protected, HasOutParams)
-// Parameters:
-// const TArray<struct FSpotWeight>&       SpotWeights                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString UVehicleGeneratorComponent::GetRandomCategory(const TArray<struct FSpotWeight>& SpotWeights)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "GetRandomCategory");
-
-	Params::VehicleGeneratorComponent_GetRandomCategory Parms{};
-
-	Parms.SpotWeights = std::move(SpotWeights);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.VehicleGeneratorComponent.GetRandomVehicleClass
-// (Final, Native, Public)
-// Parameters:
-// const class FString&                    Category                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVehicleGenerateSpawnData        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FVehicleGenerateSpawnData UVehicleGeneratorComponent::GetRandomVehicleClass(const class FString& Category)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "GetRandomVehicleClass");
-
-	Params::VehicleGeneratorComponent_GetRandomVehicleClass Parms{};
-
-	Parms.Category = std::move(Category);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.VehicleGeneratorComponent.GetVehicleSpotRandomInfo
-// (Final, Native, Public, HasOutParams)
-// Parameters:
-// struct FVehicleSpotProperty*            SpotProperty                                           (Parm, OutParm, NativeAccessSpecifierPublic)
-// struct FVehicleGenerateRandomInfo       ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FVehicleGenerateRandomInfo UVehicleGeneratorComponent::GetVehicleSpotRandomInfo(struct FVehicleSpotProperty* SpotProperty)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "GetVehicleSpotRandomInfo");
-
-	Params::VehicleGeneratorComponent_GetVehicleSpotRandomInfo Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (SpotProperty != nullptr)
-		*SpotProperty = std::move(Parms.SpotProperty);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.VehicleGeneratorComponent.GetVehicleSpotRandomInfoBySpotType
-// (Final, Native, Public)
-// Parameters:
-// ESpotType                               SpotType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVehicleGenerateRandomInfo       ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FVehicleGenerateRandomInfo UVehicleGeneratorComponent::GetVehicleSpotRandomInfoBySpotType(ESpotType SpotType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "GetVehicleSpotRandomInfoBySpotType");
-
-	Params::VehicleGeneratorComponent_GetVehicleSpotRandomInfoBySpotType Parms{};
-
-	Parms.SpotType = SpotType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.VehicleGeneratorComponent.LoadVehicleGenerateTable
-// (Native, Event, Public, BlueprintEvent)
-
-void UVehicleGeneratorComponent::LoadVehicleGenerateTable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "LoadVehicleGenerateTable");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleGeneratorComponent.RandomGroups
-// (Native, Public, BlueprintCallable)
-
-void UVehicleGeneratorComponent::RandomGroups()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "RandomGroups");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleGeneratorComponent.RandomSingleSpots
-// (Final, Native, Protected, HasOutParams)
-// Parameters:
-// TArray<class UVehicleSpotSceneComponent*>*AllSpots                                               (Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-// struct FVehicleSpotProperty*            Property                                               (Parm, OutParm, NativeAccessSpecifierPublic)
-
-void UVehicleGeneratorComponent::RandomSingleSpots(TArray<class UVehicleSpotSceneComponent*>* AllSpots, struct FVehicleSpotProperty* Property)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "RandomSingleSpots");
-
-	Params::VehicleGeneratorComponent_RandomSingleSpots Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AllSpots != nullptr)
-		*AllSpots = std::move(Parms.AllSpots);
-
-	if (Property != nullptr)
-		*Property = std::move(Parms.Property);
-}
-
-
-// Function Gameplay.VehicleGeneratorComponent.RandomSpotsByType
-// (Final, Native, Protected, HasOutParams)
-// Parameters:
-// struct FVehicleSpotProperty*            Property                                               (Parm, OutParm, NativeAccessSpecifierPublic)
-// struct FVehicleSpotComponentArray*      Spots                                                  (Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-
-void UVehicleGeneratorComponent::RandomSpotsByType(struct FVehicleSpotProperty* Property, struct FVehicleSpotComponentArray* Spots)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "RandomSpotsByType");
-
-	Params::VehicleGeneratorComponent_RandomSpotsByType Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Property != nullptr)
-		*Property = std::move(Parms.Property);
-
-	if (Spots != nullptr)
-		*Spots = std::move(Parms.Spots);
-}
-
-
-// Function Gameplay.VehicleGeneratorComponent.RegisterGroupSpotComponent
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UGroupSpotSceneComponent*         GroupSpotComponent                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVehicleGeneratorComponent::RegisterGroupSpotComponent(class UGroupSpotSceneComponent* GroupSpotComponent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "RegisterGroupSpotComponent");
-
-	Params::VehicleGeneratorComponent_RegisterGroupSpotComponent Parms{};
-
-	Parms.GroupSpotComponent = GroupSpotComponent;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleGeneratorComponent.RegisterVehicleGenerateSpawnData
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const struct FVehicleGenerateSpawnData& Data                                                   (Parm, NativeAccessSpecifierPublic)
-
-void UVehicleGeneratorComponent::RegisterVehicleGenerateSpawnData(const struct FVehicleGenerateSpawnData& Data)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "RegisterVehicleGenerateSpawnData");
-
-	Params::VehicleGeneratorComponent_RegisterVehicleGenerateSpawnData Parms{};
-
-	Parms.Data = std::move(Data);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleGeneratorComponent.WriteAllVehicleStatisticsDatas
-// (Final, Native, Protected, BlueprintCallable)
-
-void UVehicleGeneratorComponent::WriteAllVehicleStatisticsDatas()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "WriteAllVehicleStatisticsDatas");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleGeneratorComponent.WriteVehicleClassStatisticsDatas
-// (Final, Native, Protected)
-
-void UVehicleGeneratorComponent::WriteVehicleClassStatisticsDatas()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "WriteVehicleClassStatisticsDatas");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.VehicleGeneratorComponent.WriteVehicleSpotStatisticsDatas
-// (Final, Native, Protected)
-
-void UVehicleGeneratorComponent::WriteVehicleSpotStatisticsDatas()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleGeneratorComponent", "WriteVehicleSpotStatisticsDatas");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.GroupSpotSceneComponent.DoPickUp
-// (Final, Native, Public)
-
-void UGroupSpotSceneComponent::DoPickUp()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GroupSpotSceneComponent", "DoPickUp");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.GroupSpotSceneComponent.FindWorldCompositionID
-// (Final, Native, Public)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UGroupSpotSceneComponent::FindWorldCompositionID()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GroupSpotSceneComponent", "FindWorldCompositionID");
-
-	Params::GroupSpotSceneComponent_FindWorldCompositionID Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.GroupSpotSceneComponent.IsValidGroup
-// (Native, Public)
-// Parameters:
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 UGroupSpotSceneComponent::IsValidGroup()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GroupSpotSceneComponent", "IsValidGroup");
-
-	Params::GroupSpotSceneComponent_IsValidGroup Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.GroupSpotSceneComponent.SetGroupValid
-// (Native, Public)
-// Parameters:
-// uint8                                   Valid                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGroupSpotSceneComponent::SetGroupValid(uint8 Valid)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GroupSpotSceneComponent", "SetGroupValid");
-
-	Params::GroupSpotSceneComponent_SetGroupValid Parms{};
-
-	Parms.Valid = Valid;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -4976,14 +5735,6 @@ void UItemGeneratorComponent::GenerateSpotOnTick()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("ItemGeneratorComponent", "GenerateSpotOnTick");
-
-	printf("GenerateSpotOnTick UFunction = %p\n", Func);
-
-	if (Func)
-	{
-		printf("Func->ExecFunction = %p\n",
-			reinterpret_cast<void*>(Func->ExecFunction));
-	}
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -5482,727 +6233,6 @@ void UItemGeneratorComponent::WriteItemClassStatisticsDatas()
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.ItemGroupSpotSceneComponent.RandomRepeatGenerateItemCD
-// (Final, Native, Public, HasOutParams)
-// Parameters:
-// const struct FSpotGroupProperty&        GroupProperty                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UItemGroupSpotSceneComponent::RandomRepeatGenerateItemCD(const struct FSpotGroupProperty& GroupProperty)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("ItemGroupSpotSceneComponent", "RandomRepeatGenerateItemCD");
-
-	Params::ItemGroupSpotSceneComponent_RandomRepeatGenerateItemCD Parms{};
-
-	Parms.GroupProperty = std::move(GroupProperty);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.ItemGroupSpotSceneComponent.RandomSingleSpot
-// (Final, Native, Protected, HasOutParams)
-// Parameters:
-// TArray<class UItemSpotSceneComponent*>* Spots                                                  (Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-// const struct FSpotTypeProperty&         Property                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UItemGroupSpotSceneComponent::RandomSingleSpot(TArray<class UItemSpotSceneComponent*>* Spots, const struct FSpotTypeProperty& Property)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("ItemGroupSpotSceneComponent", "RandomSingleSpot");
-
-	Params::ItemGroupSpotSceneComponent_RandomSingleSpot Parms{};
-
-	Parms.Property = std::move(Property);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Spots != nullptr)
-		*Spots = std::move(Parms.Spots);
-}
-
-
-// Function Gameplay.ItemGroupSpotSceneComponent.RandomSpotByType
-// (Final, Native, Protected, HasOutParams)
-// Parameters:
-// ESpotType                               SpotType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class UItemSpotSceneComponent*>* AllSpots                                               (Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-// const struct FSpotTypeProperty&         Property                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UItemGroupSpotSceneComponent::RandomSpotByType(ESpotType SpotType, TArray<class UItemSpotSceneComponent*>* AllSpots, const struct FSpotTypeProperty& Property)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("ItemGroupSpotSceneComponent", "RandomSpotByType");
-
-	Params::ItemGroupSpotSceneComponent_RandomSpotByType Parms{};
-
-	Parms.SpotType = SpotType;
-	Parms.Property = std::move(Property);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AllSpots != nullptr)
-		*AllSpots = std::move(Parms.AllSpots);
-}
-
-
-// Function Gameplay.ItemGroupSpotSceneComponent.RepeatSingleSpot
-// (Final, Native, Protected)
-// Parameters:
-// class UItemSpotSceneComponent*          Spot                                                   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UItemGroupSpotSceneComponent::RepeatSingleSpot(class UItemSpotSceneComponent* Spot)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("ItemGroupSpotSceneComponent", "RepeatSingleSpot");
-
-	Params::ItemGroupSpotSceneComponent_RepeatSingleSpot Parms{};
-
-	Parms.Spot = Spot;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.ItemGroupSpotSceneComponent.RepeatSpots
-// (Final, Native, Protected)
-
-void UItemGroupSpotSceneComponent::RepeatSpots()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("ItemGroupSpotSceneComponent", "RepeatSpots");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.ItemGroupSpotSceneComponent.SetGroupProperty
-// (Final, Native, Public, HasOutParams)
-// Parameters:
-// class UItemGeneratorComponent*          Generator                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FSpotGroupProperty&        Property                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UItemGroupSpotSceneComponent::SetGroupProperty(class UItemGeneratorComponent* Generator, const struct FSpotGroupProperty& Property)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("ItemGroupSpotSceneComponent", "SetGroupProperty");
-
-	Params::ItemGroupSpotSceneComponent_SetGroupProperty Parms{};
-
-	Parms.Generator = Generator;
-	Parms.Property = std::move(Property);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.ItemSpotSceneComponent.CountCacheItemValeCategory
-// (Final, Native, Protected)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UItemSpotSceneComponent::CountCacheItemValeCategory()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("ItemSpotSceneComponent", "CountCacheItemValeCategory");
-
-	Params::ItemSpotSceneComponent_CountCacheItemValeCategory Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.ItemSpotSceneComponent.DoPickUp
-// (Final, Native, Public)
-// Parameters:
-// const class FString&                    ItemValue                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemCategory                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UItemSpotSceneComponent::DoPickUp(const class FString& ItemValue, const class FString& ItemCategory)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("ItemSpotSceneComponent", "DoPickUp");
-
-	Params::ItemSpotSceneComponent_DoPickUp Parms{};
-
-	Parms.ItemValue = std::move(ItemValue);
-	Parms.ItemCategory = std::move(ItemCategory);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.ItemSpotSceneComponent.GenerateItems
-// (Final, Native, Protected, HasOutParams)
-// Parameters:
-// TArray<struct FItemGenerateSpawnClass>* AllItemClass                                           (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void UItemSpotSceneComponent::GenerateItems(TArray<struct FItemGenerateSpawnClass>* AllItemClass)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("ItemSpotSceneComponent", "GenerateItems");
-
-	Params::ItemSpotSceneComponent_GenerateItems Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AllItemClass != nullptr)
-		*AllItemClass = std::move(Parms.AllItemClass);
-}
-
-
-// Function Gameplay.ItemSpotSceneComponent.GenerateSpot
-// (Native, Public)
-// Parameters:
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 UItemSpotSceneComponent::GenerateSpot()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("ItemSpotSceneComponent", "GenerateSpot");
-
-	Params::ItemSpotSceneComponent_GenerateSpot Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.ItemSpotSceneComponent.GetAllItemNames
-// (Final, Native, Public)
-// Parameters:
-// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<class FName> UItemSpotSceneComponent::GetAllItemNames()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("ItemSpotSceneComponent", "GetAllItemNames");
-
-	Params::ItemSpotSceneComponent_GetAllItemNames Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.ItemSpotSceneComponent.RepeatSpotProperty
-// (Final, Native, Public, HasOutParams)
-// Parameters:
-// const struct FSpotTypeProperty&         Property                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UItemSpotSceneComponent::RepeatSpotProperty(const struct FSpotTypeProperty& Property)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("ItemSpotSceneComponent", "RepeatSpotProperty");
-
-	Params::ItemSpotSceneComponent_RepeatSpotProperty Parms{};
-
-	Parms.Property = std::move(Property);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.ItemSpotSceneComponent.SetSpotProperty
-// (Final, Native, Public, HasOutParams)
-// Parameters:
-// int32                                   CompositionID                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// ESpotGroupType                          GroupType                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UItemGeneratorComponent*          Generator                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FSpotTypeProperty&         Property                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UGroupSpotSceneComponent*         Component                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   RepeatGenerateItem                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UItemSpotSceneComponent::SetSpotProperty(int32 CompositionID, ESpotGroupType GroupType, class UItemGeneratorComponent* Generator, const struct FSpotTypeProperty& Property, class UGroupSpotSceneComponent* Component, uint8 RepeatGenerateItem)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("ItemSpotSceneComponent", "SetSpotProperty");
-
-	Params::ItemSpotSceneComponent_SetSpotProperty Parms{};
-
-	Parms.CompositionID = CompositionID;
-	Parms.GroupType = GroupType;
-	Parms.Generator = Generator;
-	Parms.Property = std::move(Property);
-	Parms.Component = Component;
-	Parms.RepeatGenerateItem = RepeatGenerateItem;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEProjectile.GlassDetect
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FVector&                   Start                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   End                                                    (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AUAEProjectile::GlassDetect(const struct FVector& Start, const struct FVector& End)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEProjectile", "GlassDetect");
-
-	Params::UAEProjectile_GlassDetect Parms{};
-
-	Parms.Start = std::move(Start);
-	Parms.End = std::move(End);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEProjectile.IsOwnerAutomous
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 AUAEProjectile::IsOwnerAutomous()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEProjectile", "IsOwnerAutomous");
-
-	Params::UAEProjectile_IsOwnerAutomous Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.UAEProjectile.IsServerAlreadyExplodedCppNotify
-// (Native, Event, Public, BlueprintEvent)
-
-void AUAEProjectile::IsServerAlreadyExplodedCppNotify()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEProjectile", "IsServerAlreadyExplodedCppNotify");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEProjectile.OnRep_IsServerAlreadyExplodedCpp
-// (Final, Native, Public)
-
-void AUAEProjectile::OnRep_IsServerAlreadyExplodedCpp()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEProjectile", "OnRep_IsServerAlreadyExplodedCpp");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEProjectile.OnStartFly
-// (Final, Native, Public, BlueprintCallable)
-
-void AUAEProjectile::OnStartFly()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEProjectile", "OnStartFly");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEProjectile.SendFireWeapon
-// (Final, Native, Public, BlueprintCallable)
-
-void AUAEProjectile::SendFireWeapon()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEProjectile", "SendFireWeapon");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEProjectile.ServerFireWeapon
-// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
-// Parameters:
-// const struct FAttackId&                 AttackId                                               (ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-
-void AUAEProjectile::ServerFireWeapon(const struct FAttackId& AttackId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEProjectile", "ServerFireWeapon");
-
-	Params::UAEProjectile_ServerFireWeapon Parms{};
-
-	Parms.AttackId = std::move(AttackId);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEProjectile.SetRotationAndLocationByNormal
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class USceneComponent*                  Comp                                                   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AUAEProjectile::SetRotationAndLocationByNormal(class USceneComponent* Comp)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEProjectile", "SetRotationAndLocationByNormal");
-
-	Params::UAEProjectile_SetRotationAndLocationByNormal Parms{};
-
-	Parms.Comp = Comp;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEProjectile.GetStartFlyPos
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector*                         Out                                                    (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AUAEProjectile::GetStartFlyPos(struct FVector* Out) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEProjectile", "GetStartFlyPos");
-
-	Params::UAEProjectile_GetStartFlyPos Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Out != nullptr)
-		*Out = std::move(Parms.Out);
-}
-
-
-// Function Gameplay.UAEWindowComponent.GetRepData
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FUAEWindowRepData                ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FUAEWindowRepData UUAEWindowComponent::GetRepData()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEWindowComponent", "GetRepData");
-
-	Params::UAEWindowComponent_GetRepData Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Gameplay.UAEWindowComponent.HandleBroken
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class APlayerController*                Instigator                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   bLocal                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UUAEWindowComponent::HandleBroken(class APlayerController* Instigator, uint8 bLocal)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEWindowComponent", "HandleBroken");
-
-	Params::UAEWindowComponent_HandleBroken Parms{};
-
-	Parms.Instigator = Instigator;
-	Parms.bLocal = bLocal;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEWindowComponent.LocalHandleWindowBroken
-// (Final, Native, Protected, BlueprintCallable)
-// Parameters:
-// uint8                                   bInitial                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   bLocal                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UUAEWindowComponent::LocalHandleWindowBroken(uint8 bInitial, uint8 bLocal)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEWindowComponent", "LocalHandleWindowBroken");
-
-	Params::UAEWindowComponent_LocalHandleWindowBroken Parms{};
-
-	Parms.bInitial = bInitial;
-	Parms.bLocal = bLocal;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEWindowComponent.LocalHandleWindowBrokenBP
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// uint8                                   bInitial                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   bLocal                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UUAEWindowComponent::LocalHandleWindowBrokenBP(uint8 bInitial, uint8 bLocal)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEWindowComponent", "LocalHandleWindowBrokenBP");
-
-	Params::UAEWindowComponent_LocalHandleWindowBrokenBP Parms{};
-
-	Parms.bInitial = bInitial;
-	Parms.bLocal = bLocal;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Gameplay.UAEWindowComponent.NotifyRepDataUpdated
-// (Final, Native, Protected)
-// Parameters:
-// uint8                                   bInitial                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   bLocal                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UUAEWindowComponent::NotifyRepDataUpdated(uint8 bInitial, uint8 bLocal)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEWindowComponent", "NotifyRepDataUpdated");
-
-	Params::UAEWindowComponent_NotifyRepDataUpdated Parms{};
-
-	Parms.bInitial = bInitial;
-	Parms.bLocal = bLocal;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Gameplay.UAEWindowComponent.NotifyServerBroken
-// (Event, Protected, BlueprintEvent)
-
-void UUAEWindowComponent::NotifyServerBroken()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEWindowComponent", "NotifyServerBroken");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Gameplay.VehicleConfigActorComponent.LoadActorClass
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    Path                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UClass*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UClass* UVehicleConfigActorComponent::LoadActorClass(const class FString& Path)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("VehicleConfigActorComponent", "LoadActorClass");
-
-	Params::VehicleConfigActorComponent_LoadActorClass Parms{};
-
-	Parms.Path = std::move(Path);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 }

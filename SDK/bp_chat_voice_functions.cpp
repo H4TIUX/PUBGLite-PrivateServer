@@ -30,174 +30,6 @@ void Abp_chat_voice_C::UserConstructionScript()
 }
 
 
-// Function bp_chat_voice.bp_chat_voice_C.EventUploadGVoiceRecord
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_voice_C::EventUploadGVoiceRecord()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventUploadGVoiceRecord");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_voice.bp_chat_voice_C.EventUploadGVoiceRecord_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_voice_C::EventUploadGVoiceRecord_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventUploadGVoiceRecord_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_voice.bp_chat_voice_C.EventNotifyVoiceProcedureFailed
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_voice_C::EventNotifyVoiceProcedureFailed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyVoiceProcedureFailed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_voice.bp_chat_voice_C.EventNotifyVoiceProcedureFailed_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_voice_C::EventNotifyVoiceProcedureFailed_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyVoiceProcedureFailed_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_voice.bp_chat_voice_C.EventStartGVoiceRecord
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_voice_C::EventStartGVoiceRecord()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventStartGVoiceRecord");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_voice.bp_chat_voice_C.EventStartGVoiceRecord_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_voice_C::EventStartGVoiceRecord_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventStartGVoiceRecord_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_voice.bp_chat_voice_C.EventChangeMicState
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_voice_C::EventChangeMicState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventChangeMicState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_voice.bp_chat_voice_C.EventChangeMicState_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_voice_C::EventChangeMicState_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventChangeMicState_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_voice.bp_chat_voice_C.EventNotifyRecordTooShort
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_voice_C::EventNotifyRecordTooShort()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyRecordTooShort");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_voice.bp_chat_voice_C.EventNotifyRecordTooShort_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_voice_C::EventNotifyRecordTooShort_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyRecordTooShort_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_voice.bp_chat_voice_C.EventClearGVoiceProcedure
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_voice_C::EventClearGVoiceProcedure()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventClearGVoiceProcedure");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_voice.bp_chat_voice_C.EventClearGVoiceProcedure_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_voice_C::EventClearGVoiceProcedure_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventClearGVoiceProcedure_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_chat_voice.bp_chat_voice_C.EventTickVoiceRoom
 // (BlueprintCallable, BlueprintEvent)
 
@@ -221,6 +53,90 @@ void Abp_chat_voice_C::EventTickVoiceRoom_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventTickVoiceRoom_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_voice.bp_chat_voice_C.EventChangeSpeakerState
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_voice_C::EventChangeSpeakerState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventChangeSpeakerState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_voice.bp_chat_voice_C.EventChangeSpeakerState_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_voice_C::EventChangeSpeakerState_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventChangeSpeakerState_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_voice.bp_chat_voice_C.EventNotifySystemSpeakerOpen
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_voice_C::EventNotifySystemSpeakerOpen()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifySystemSpeakerOpen");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_voice.bp_chat_voice_C.EventNotifySystemSpeakerOpen_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_voice_C::EventNotifySystemSpeakerOpen_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifySystemSpeakerOpen_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_voice.bp_chat_voice_C.EventNotifyVoiceChatFailToRecord
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_voice_C::EventNotifyVoiceChatFailToRecord()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyVoiceChatFailToRecord");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_voice.bp_chat_voice_C.EventNotifyVoiceChatFailToRecord_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_voice_C::EventNotifyVoiceChatFailToRecord_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyVoiceChatFailToRecord_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -254,29 +170,29 @@ void Abp_chat_voice_C::EventOnTryOpenMic_NoFetch()
 }
 
 
-// Function bp_chat_voice.bp_chat_voice_C.EventChangeGVoiceMode
+// Function bp_chat_voice.bp_chat_voice_C.EventNotifyVoiceProcedureFailed
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_voice_C::EventChangeGVoiceMode()
+void Abp_chat_voice_C::EventNotifyVoiceProcedureFailed()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventChangeGVoiceMode");
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyVoiceProcedureFailed");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_voice.bp_chat_voice_C.EventChangeGVoiceMode_NoFetch
+// Function bp_chat_voice.bp_chat_voice_C.EventNotifyVoiceProcedureFailed_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_voice_C::EventChangeGVoiceMode_NoFetch()
+void Abp_chat_voice_C::EventNotifyVoiceProcedureFailed_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventChangeGVoiceMode_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyVoiceProcedureFailed_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -338,57 +254,29 @@ void Abp_chat_voice_C::EventStopGVoiceRecord_NoFetch()
 }
 
 
-// Function bp_chat_voice.bp_chat_voice_C.EventNotifyDownloadFailed
+// Function bp_chat_voice.bp_chat_voice_C.EventStopPlayGVoiceRecord
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_voice_C::EventNotifyDownloadFailed()
+void Abp_chat_voice_C::EventStopPlayGVoiceRecord()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyDownloadFailed");
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventStopPlayGVoiceRecord");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_voice.bp_chat_voice_C.EventNotifyDownloadFailed_NoFetch
+// Function bp_chat_voice.bp_chat_voice_C.EventStopPlayGVoiceRecord_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_voice_C::EventNotifyDownloadFailed_NoFetch()
+void Abp_chat_voice_C::EventStopPlayGVoiceRecord_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyDownloadFailed_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_voice.bp_chat_voice_C.EventChangeSpeakerState
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_voice_C::EventChangeSpeakerState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventChangeSpeakerState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_voice.bp_chat_voice_C.EventChangeSpeakerState_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_voice_C::EventChangeSpeakerState_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventChangeSpeakerState_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventStopPlayGVoiceRecord_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -422,34 +310,6 @@ void Abp_chat_voice_C::EventSetInfo_Push_NoFetch()
 }
 
 
-// Function bp_chat_voice.bp_chat_voice_C.EventNotifyVoiceOpenSpeaker
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_voice_C::EventNotifyVoiceOpenSpeaker()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyVoiceOpenSpeaker");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_voice.bp_chat_voice_C.EventNotifyVoiceOpenSpeaker_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_voice_C::EventNotifyVoiceOpenSpeaker_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyVoiceOpenSpeaker_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_chat_voice.bp_chat_voice_C.EventCancelGVoiceRecord
 // (BlueprintCallable, BlueprintEvent)
 
@@ -478,57 +338,113 @@ void Abp_chat_voice_C::EventCancelGVoiceRecord_NoFetch()
 }
 
 
-// Function bp_chat_voice.bp_chat_voice_C.EventNotifyVoiceRecordTooShort
+// Function bp_chat_voice.bp_chat_voice_C.EventChangeGVoiceMode
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_voice_C::EventNotifyVoiceRecordTooShort()
+void Abp_chat_voice_C::EventChangeGVoiceMode()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyVoiceRecordTooShort");
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventChangeGVoiceMode");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_voice.bp_chat_voice_C.EventNotifyVoiceRecordTooShort_NoFetch
+// Function bp_chat_voice.bp_chat_voice_C.EventChangeGVoiceMode_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_voice_C::EventNotifyVoiceRecordTooShort_NoFetch()
+void Abp_chat_voice_C::EventChangeGVoiceMode_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyVoiceRecordTooShort_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventChangeGVoiceMode_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_voice.bp_chat_voice_C.EventStopPlayGVoiceRecord
+// Function bp_chat_voice.bp_chat_voice_C.EventNotifyRecordTooShort
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_voice_C::EventStopPlayGVoiceRecord()
+void Abp_chat_voice_C::EventNotifyRecordTooShort()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventStopPlayGVoiceRecord");
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyRecordTooShort");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_voice.bp_chat_voice_C.EventStopPlayGVoiceRecord_NoFetch
+// Function bp_chat_voice.bp_chat_voice_C.EventNotifyRecordTooShort_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_voice_C::EventStopPlayGVoiceRecord_NoFetch()
+void Abp_chat_voice_C::EventNotifyRecordTooShort_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventStopPlayGVoiceRecord_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyRecordTooShort_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_voice.bp_chat_voice_C.EventNotifyDownloadFailed
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_voice_C::EventNotifyDownloadFailed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyDownloadFailed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_voice.bp_chat_voice_C.EventNotifyDownloadFailed_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_voice_C::EventNotifyDownloadFailed_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyDownloadFailed_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_voice.bp_chat_voice_C.EventNotifySystemMicOpen
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_voice_C::EventNotifySystemMicOpen()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifySystemMicOpen");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_voice.bp_chat_voice_C.EventNotifySystemMicOpen_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_voice_C::EventNotifySystemMicOpen_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifySystemMicOpen_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -562,29 +478,141 @@ void Abp_chat_voice_C::EventNotifySystemVoiceOpen_NoFetch()
 }
 
 
-// Function bp_chat_voice.bp_chat_voice_C.EventNotifyVoiceChatFailToRecord
+// Function bp_chat_voice.bp_chat_voice_C.EventNotifyVoiceRecordTooShort
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_voice_C::EventNotifyVoiceChatFailToRecord()
+void Abp_chat_voice_C::EventNotifyVoiceRecordTooShort()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyVoiceChatFailToRecord");
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyVoiceRecordTooShort");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_voice.bp_chat_voice_C.EventNotifyVoiceChatFailToRecord_NoFetch
+// Function bp_chat_voice.bp_chat_voice_C.EventNotifyVoiceRecordTooShort_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_voice_C::EventNotifyVoiceChatFailToRecord_NoFetch()
+void Abp_chat_voice_C::EventNotifyVoiceRecordTooShort_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyVoiceChatFailToRecord_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyVoiceRecordTooShort_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_voice.bp_chat_voice_C.EventNotifyVoiceOpenSpeaker
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_voice_C::EventNotifyVoiceOpenSpeaker()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyVoiceOpenSpeaker");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_voice.bp_chat_voice_C.EventNotifyVoiceOpenSpeaker_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_voice_C::EventNotifyVoiceOpenSpeaker_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifyVoiceOpenSpeaker_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_voice.bp_chat_voice_C.EventStartGVoiceRecord
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_voice_C::EventStartGVoiceRecord()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventStartGVoiceRecord");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_voice.bp_chat_voice_C.EventStartGVoiceRecord_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_voice_C::EventStartGVoiceRecord_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventStartGVoiceRecord_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_voice.bp_chat_voice_C.EventUploadGVoiceRecord
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_voice_C::EventUploadGVoiceRecord()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventUploadGVoiceRecord");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_voice.bp_chat_voice_C.EventUploadGVoiceRecord_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_voice_C::EventUploadGVoiceRecord_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventUploadGVoiceRecord_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_voice.bp_chat_voice_C.EventClearGVoiceProcedure
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_voice_C::EventClearGVoiceProcedure()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventClearGVoiceProcedure");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_voice.bp_chat_voice_C.EventClearGVoiceProcedure_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_voice_C::EventClearGVoiceProcedure_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventClearGVoiceProcedure_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -618,57 +646,29 @@ void Abp_chat_voice_C::EventFetchInfo_NoFetch()
 }
 
 
-// Function bp_chat_voice.bp_chat_voice_C.EventNotifySystemSpeakerOpen
+// Function bp_chat_voice.bp_chat_voice_C.EventChangeMicState
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_voice_C::EventNotifySystemSpeakerOpen()
+void Abp_chat_voice_C::EventChangeMicState()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifySystemSpeakerOpen");
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventChangeMicState");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_voice.bp_chat_voice_C.EventNotifySystemSpeakerOpen_NoFetch
+// Function bp_chat_voice.bp_chat_voice_C.EventChangeMicState_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_voice_C::EventNotifySystemSpeakerOpen_NoFetch()
+void Abp_chat_voice_C::EventChangeMicState_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifySystemSpeakerOpen_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_voice.bp_chat_voice_C.EventNotifySystemMicOpen
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_voice_C::EventNotifySystemMicOpen()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifySystemMicOpen");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_voice.bp_chat_voice_C.EventNotifySystemMicOpen_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_voice_C::EventNotifySystemMicOpen_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventNotifySystemMicOpen_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_voice_C", "EventChangeMicState_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

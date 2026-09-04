@@ -10,71 +10,71 @@
 
 #include "Basic.hpp"
 
-#include "BP_STRUCT_MailInfo_structs.hpp"
 #include "Client_classes.hpp"
+#include "BP_STRUCT_MailInfo_structs.hpp"
 
 
 namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_mail.bp_mail_C
-// 0x0080 (0x0468 - 0x03E8)
+// 0x0080 (0x0458 - 0x03D8)
 class Abp_mail_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_MailInfo>            BP_ARRAY_MailList;                                 // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         Mail_Select_ID;                                    // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_404[0x4];                                      // 0x0404(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Mail_OpenUrl;                                      // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         Mail_Count;                                        // 0x0418(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41C[0x4];                                      // 0x041C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Mail_Filter_Type;                                  // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         Mail_ShowRecvAttachMailId;                         // 0x0430(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	int32                                         Mail_Count;                                        // 0x03E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E4[0x4];                                      // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Mail_OpenUrl;                                      // 0x03E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         Mail_Select_ID;                                    // 0x03F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3FC[0x4];                                      // 0x03FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_MailInfo>            BP_ARRAY_MailList;                                 // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         Mail_ShowRecvAttachMailId;                         // 0x0410(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Mail_Notice_Unread_Count;                          // 0x0414(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 BP_MailClickHead_UID;                              // 0x0418(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         Mail_Friend_Unread_Count;                          // 0x0428(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Mail_Sys_Unread_Count;                             // 0x042C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Mail_Gift_Unread_Count;                            // 0x0430(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_434[0x4];                                      // 0x0434(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_MailClickHead_UID;                              // 0x0438(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Mail_Filter_Type;                                  // 0x0438(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	int32                                         Mail_Max_Count;                                    // 0x0448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Mail_Gift_Unread_Count;                            // 0x044C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Mail_Friend_Unread_Count;                          // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Mail_Notice_Unread_Count;                          // 0x0454(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Mail_UpdateOneMailItem;                            // 0x0458(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Mail_Sys_Unread_Count;                             // 0x045C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0460(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	int32                                         Mail_UpdateOneMailItem;                            // 0x044C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventMailRead();
-	void EventMailRead_NoFetch();
-	void EventHideGiftMsgCenter();
-	void EventHideGiftMsgCenter_NoFetch();
-	void EventMailAddTestDatas();
-	void EventMailAddTestDatas_NoFetch();
-	void EventMailChangeFilterType();
-	void EventMailChangeFilterType_NoFetch();
-	void EventMailRequestList();
-	void EventMailRequestList_NoFetch();
-	void EventMailReceiveAll();
-	void EventMailReceiveAll_NoFetch();
-	void EventMailReadAll();
-	void EventMailReadAll_NoFetch();
-	void EventShowGiftMsgCenter();
-	void EventShowGiftMsgCenter_NoFetch();
-	void EventOnClickHead_Push();
-	void EventOnClickHead_Push_NoFetch();
-	void EventMailClose();
-	void EventMailClose_NoFetch();
-	void EventMailDeleteAll();
-	void EventMailDeleteAll_NoFetch();
 	void EventMailDelete();
 	void EventMailDelete_NoFetch();
-	void EventMailReceiveAllNext();
-	void EventMailReceiveAllNext_NoFetch();
-	void EventFetchMailInfo();
-	void EventFetchMailInfo_NoFetch();
+	void EventMailChangeFilterType();
+	void EventMailChangeFilterType_NoFetch();
+	void EventMailAddTestDatas();
+	void EventMailAddTestDatas_NoFetch();
+	void EventMailReadAll();
+	void EventMailReadAll_NoFetch();
 	void EventMailReceiveAttach();
 	void EventMailReceiveAttach_NoFetch();
+	void EventFetchMailInfo();
+	void EventFetchMailInfo_NoFetch();
+	void EventHideGiftMsgCenter();
+	void EventHideGiftMsgCenter_NoFetch();
+	void EventMailReceiveAll();
+	void EventMailReceiveAll_NoFetch();
+	void EventShowGiftMsgCenter();
+	void EventShowGiftMsgCenter_NoFetch();
 	void EventMailViewBtnClick();
 	void EventMailViewBtnClick_NoFetch();
+	void EventMailClose();
+	void EventMailClose_NoFetch();
+	void EventMailRequestList();
+	void EventMailRequestList_NoFetch();
+	void EventMailRead();
+	void EventMailRead_NoFetch();
+	void EventMailReceiveAllNext();
+	void EventMailReceiveAllNext_NoFetch();
+	void EventOnClickHead_Push();
+	void EventOnClickHead_Push_NoFetch();
+	void EventMailDeleteAll();
+	void EventMailDeleteAll_NoFetch();
 
 public:
 	static class UClass* StaticClass()

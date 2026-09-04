@@ -30,90 +30,6 @@ void Abp_corps_task_C::UserConstructionScript()
 }
 
 
-// Function bp_corps_task.bp_corps_task_C.EventCorpsTaskGoTo_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_task_C::EventCorpsTaskGoTo_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_task_C", "EventCorpsTaskGoTo_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_task.bp_corps_task_C.EventCorpsTaskGoTo_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_task_C::EventCorpsTaskGoTo_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_task_C", "EventCorpsTaskGoTo_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_task.bp_corps_task_C.EventCorpsTaskGenTaskRewardData_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_task_C::EventCorpsTaskGenTaskRewardData_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_task_C", "EventCorpsTaskGenTaskRewardData_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_task.bp_corps_task_C.EventCorpsTaskGenTaskRewardData_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_task_C::EventCorpsTaskGenTaskRewardData_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_task_C", "EventCorpsTaskGenTaskRewardData_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_task.bp_corps_task_C.EventCorpsTaskGetReward_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_task_C::EventCorpsTaskGetReward_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_task_C", "EventCorpsTaskGetReward_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_task.bp_corps_task_C.EventCorpsTaskGetReward_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_task_C::EventCorpsTaskGetReward_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_task_C", "EventCorpsTaskGetReward_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_corps_task.bp_corps_task_C.EventCorpsTaskClickAwarded_Push
 // (BlueprintCallable, BlueprintEvent)
 
@@ -193,6 +109,90 @@ void Abp_corps_task_C::EventCorpsTaskGetActivenessReward_Push_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_corps_task_C", "EventCorpsTaskGetActivenessReward_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_task.bp_corps_task_C.EventCorpsTaskGenTaskRewardData_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_task_C::EventCorpsTaskGenTaskRewardData_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_task_C", "EventCorpsTaskGenTaskRewardData_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_task.bp_corps_task_C.EventCorpsTaskGenTaskRewardData_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_task_C::EventCorpsTaskGenTaskRewardData_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_task_C", "EventCorpsTaskGenTaskRewardData_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_task.bp_corps_task_C.EventCorpsTaskGoTo_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_task_C::EventCorpsTaskGoTo_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_task_C", "EventCorpsTaskGoTo_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_task.bp_corps_task_C.EventCorpsTaskGoTo_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_task_C::EventCorpsTaskGoTo_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_task_C", "EventCorpsTaskGoTo_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_task.bp_corps_task_C.EventCorpsTaskGetReward_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_task_C::EventCorpsTaskGetReward_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_task_C", "EventCorpsTaskGetReward_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_task.bp_corps_task_C.EventCorpsTaskGetReward_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_task_C::EventCorpsTaskGetReward_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_task_C", "EventCorpsTaskGetReward_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

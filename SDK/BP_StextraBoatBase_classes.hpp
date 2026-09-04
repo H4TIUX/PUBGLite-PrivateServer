@@ -19,20 +19,20 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_StextraBoatBase.BP_StextraBoatBase_C
-// 0x0050 (0x08C0 - 0x0870)
+// 0x0050 (0x08B0 - 0x0860)
 class ABP_StextraBoatBase_C final : public ASTExtraFloatingVehicle
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0870(0x0008)(Transient, DuplicateTransient)
-	class UBoatAvatarComponent_BP_C*              BoatAvatarComponent_BP;                            // 0x0878(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCameraComponent*                       FPPCamera;                                         // 0x0880(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UVehicleSpringArmComponent*             FPPCameraSpringArm;                                // 0x0888(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               PSCFire;                                           // 0x0890(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               PSCSmoke;                                          // 0x0898(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               PS_Water;                                          // 0x08A0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCameraComponent*                       TPPCamera;                                         // 0x08A8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UVehicleSpringArmComponent*             TPPCameraSpringArm;                                // 0x08B0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	uint8                                         IsActivate : 1;                                    // 0x08B8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0860(0x0008)(Transient, DuplicateTransient)
+	class UBoatAvatarComponent_BP_C*              BoatAvatarComponent_BP;                            // 0x0868(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCameraComponent*                       FPPCamera;                                         // 0x0870(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UVehicleSpringArmComponent*             FPPCameraSpringArm;                                // 0x0878(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               PSCFire;                                           // 0x0880(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               PSCSmoke;                                          // 0x0888(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               PS_Water;                                          // 0x0890(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCameraComponent*                       TPPCamera;                                         // 0x0898(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UVehicleSpringArmComponent*             TPPCameraSpringArm;                                // 0x08A0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	uint8                                         IsActivate : 1;                                    // 0x08A8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
 
 public:
 	void ExecuteUbergraph_BP_StextraBoatBase(int32 EntryPoint);

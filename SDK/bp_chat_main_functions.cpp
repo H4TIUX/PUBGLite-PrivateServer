@@ -30,225 +30,57 @@ void Abp_chat_main_C::UserConstructionScript()
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventHoverAddFriend
+// Function bp_chat_main.bp_chat_main_C.EventChangeVoiceChatMode
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventHoverAddFriend()
+void Abp_chat_main_C::EventChangeVoiceChatMode()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverAddFriend");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChangeVoiceChatMode");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventHoverAddFriend_NoFetch
+// Function bp_chat_main.bp_chat_main_C.EventChangeVoiceChatMode_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventHoverAddFriend_NoFetch()
+void Abp_chat_main_C::EventChangeVoiceChatMode_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverAddFriend_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChangeVoiceChatMode_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventInitJoinRoom
+// Function bp_chat_main.bp_chat_main_C.EventOnAfterHideWnd
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventInitJoinRoom()
+void Abp_chat_main_C::EventOnAfterHideWnd()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventInitJoinRoom");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventOnAfterHideWnd");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventInitJoinRoom_NoFetch
+// Function bp_chat_main.bp_chat_main_C.EventOnAfterHideWnd_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventInitJoinRoom_NoFetch()
+void Abp_chat_main_C::EventOnAfterHideWnd_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventInitJoinRoom_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventChatMainBeforeHide
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventChatMainBeforeHide()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChatMainBeforeHide");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventChatMainBeforeHide_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventChatMainBeforeHide_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChatMainBeforeHide_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventCheckBlackList
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventCheckBlackList()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventCheckBlackList");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventCheckBlackList_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventCheckBlackList_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventCheckBlackList_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventChangeChannelType
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventChangeChannelType()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChangeChannelType");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventChangeChannelType_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventChangeChannelType_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChangeChannelType_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventRecruitMember
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventRecruitMember()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventRecruitMember");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventRecruitMember_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventRecruitMember_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventRecruitMember_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventNotifyVoiceRecordTooShort
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventNotifyVoiceRecordTooShort()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventNotifyVoiceRecordTooShort");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventNotifyVoiceRecordTooShort_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventNotifyVoiceRecordTooShort_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventNotifyVoiceRecordTooShort_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventNotifyFriendChatRequireSelect
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventNotifyFriendChatRequireSelect()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventNotifyFriendChatRequireSelect");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventNotifyFriendChatRequireSelect_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventNotifyFriendChatRequireSelect_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventNotifyFriendChatRequireSelect_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventOnAfterHideWnd_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -282,57 +114,29 @@ void Abp_chat_main_C::EventShowEmoji_NoFetch()
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventHoverBlockTarget
+// Function bp_chat_main.bp_chat_main_C.EventCheckBlackList
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventHoverBlockTarget()
+void Abp_chat_main_C::EventCheckBlackList()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverBlockTarget");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventCheckBlackList");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventHoverBlockTarget_NoFetch
+// Function bp_chat_main.bp_chat_main_C.EventCheckBlackList_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventHoverBlockTarget_NoFetch()
+void Abp_chat_main_C::EventCheckBlackList_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverBlockTarget_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventSwitchToFriendChat
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventSwitchToFriendChat()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventSwitchToFriendChat");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventSwitchToFriendChat_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventSwitchToFriendChat_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventSwitchToFriendChat_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventCheckBlackList_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -366,225 +170,29 @@ void Abp_chat_main_C::EventTryStartRecordVoice_NoFetch()
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventHoverShowFriendInfo
+// Function bp_chat_main.bp_chat_main_C.EventHoverJoinTeam
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventHoverShowFriendInfo()
+void Abp_chat_main_C::EventHoverJoinTeam()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverShowFriendInfo");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverJoinTeam");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventHoverShowFriendInfo_NoFetch
+// Function bp_chat_main.bp_chat_main_C.EventHoverJoinTeam_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventHoverShowFriendInfo_NoFetch()
+void Abp_chat_main_C::EventHoverJoinTeam_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverShowFriendInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventCheckTodayDate
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventCheckTodayDate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventCheckTodayDate");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventCheckTodayDate_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventCheckTodayDate_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventCheckTodayDate_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventDownloadVoiceFile
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventDownloadVoiceFile()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventDownloadVoiceFile");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventDownloadVoiceFile_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventDownloadVoiceFile_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventDownloadVoiceFile_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventHideChatMainWnd
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventHideChatMainWnd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHideChatMainWnd");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventHideChatMainWnd_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventHideChatMainWnd_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHideChatMainWnd_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventSendChatVoiceMsg
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventSendChatVoiceMsg()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventSendChatVoiceMsg");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventSendChatVoiceMsg_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventSendChatVoiceMsg_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventSendChatVoiceMsg_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventNotifyNoText
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventNotifyNoText()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventNotifyNoText");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventNotifyNoText_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventNotifyNoText_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventNotifyNoText_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventInputChatMsg
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventInputChatMsg()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventInputChatMsg");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventInputChatMsg_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventInputChatMsg_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventInputChatMsg_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventAchieveVoiceRoom
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventAchieveVoiceRoom()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventAchieveVoiceRoom");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventAchieveVoiceRoom_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventAchieveVoiceRoom_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventAchieveVoiceRoom_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverJoinTeam_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -613,6 +221,426 @@ void Abp_chat_main_C::EventGetProfile_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_chat_main_C", "EventGetProfile_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventChatVoiceBanInfo
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventChatVoiceBanInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChatVoiceBanInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventChatVoiceBanInfo_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventChatVoiceBanInfo_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChatVoiceBanInfo_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventNotifyFriendChatRequireSelect
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventNotifyFriendChatRequireSelect()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventNotifyFriendChatRequireSelect");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventNotifyFriendChatRequireSelect_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventNotifyFriendChatRequireSelect_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventNotifyFriendChatRequireSelect_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventChatMainBeforeShow
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventChatMainBeforeShow()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChatMainBeforeShow");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventChatMainBeforeShow_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventChatMainBeforeShow_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChatMainBeforeShow_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventTryStopPlayRecordVoice
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventTryStopPlayRecordVoice()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventTryStopPlayRecordVoice");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventTryStopPlayRecordVoice_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventTryStopPlayRecordVoice_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventTryStopPlayRecordVoice_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventRecruitMember
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventRecruitMember()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventRecruitMember");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventRecruitMember_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventRecruitMember_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventRecruitMember_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventPopMessageBuffer
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventPopMessageBuffer()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventPopMessageBuffer");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventPopMessageBuffer_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventPopMessageBuffer_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventPopMessageBuffer_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventHideEmoji
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventHideEmoji()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHideEmoji");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventHideEmoji_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventHideEmoji_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHideEmoji_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventHoverBlockTarget
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventHoverBlockTarget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverBlockTarget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventHoverBlockTarget_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventHoverBlockTarget_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverBlockTarget_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventHoverAddFriend
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventHoverAddFriend()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverAddFriend");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventHoverAddFriend_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventHoverAddFriend_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverAddFriend_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventChatMainBeforeHide
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventChatMainBeforeHide()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChatMainBeforeHide");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventChatMainBeforeHide_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventChatMainBeforeHide_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChatMainBeforeHide_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventFetchInfo
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventFetchInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventFetchInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventFetchInfo_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventFetchInfo_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventFetchInfo_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventFetchFriendData
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventFetchFriendData()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventFetchFriendData");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventFetchFriendData_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventFetchFriendData_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventFetchFriendData_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventClickCorpsRecruit
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventClickCorpsRecruit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventClickCorpsRecruit");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventClickCorpsRecruit_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventClickCorpsRecruit_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventClickCorpsRecruit_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventHoverInviteTeam
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventHoverInviteTeam()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverInviteTeam");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventHoverInviteTeam_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventHoverInviteTeam_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverInviteTeam_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventNotifyVoiceChatFailToRecord
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventNotifyVoiceChatFailToRecord()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventNotifyVoiceChatFailToRecord");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventNotifyVoiceChatFailToRecord_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventNotifyVoiceChatFailToRecord_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventNotifyVoiceChatFailToRecord_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -674,29 +702,57 @@ void Abp_chat_main_C::EventRefreshSelfProfile_NoFetch()
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventHideEmoji
+// Function bp_chat_main.bp_chat_main_C.EventNotifyOutofTextRange
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventHideEmoji()
+void Abp_chat_main_C::EventNotifyOutofTextRange()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHideEmoji");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventNotifyOutofTextRange");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventHideEmoji_NoFetch
+// Function bp_chat_main.bp_chat_main_C.EventNotifyOutofTextRange_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventHideEmoji_NoFetch()
+void Abp_chat_main_C::EventNotifyOutofTextRange_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHideEmoji_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventNotifyOutofTextRange_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventChatVoiceCheckBan
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventChatVoiceCheckBan()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChatVoiceCheckBan");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventChatVoiceCheckBan_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventChatVoiceCheckBan_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChatVoiceCheckBan_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -730,29 +786,57 @@ void Abp_chat_main_C::EventRequireHoverTeamup_NoFetch()
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventOnAfterHideWnd
+// Function bp_chat_main.bp_chat_main_C.EventDownloadVoiceFile
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventOnAfterHideWnd()
+void Abp_chat_main_C::EventDownloadVoiceFile()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventOnAfterHideWnd");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventDownloadVoiceFile");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventOnAfterHideWnd_NoFetch
+// Function bp_chat_main.bp_chat_main_C.EventDownloadVoiceFile_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventOnAfterHideWnd_NoFetch()
+void Abp_chat_main_C::EventDownloadVoiceFile_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventOnAfterHideWnd_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventDownloadVoiceFile_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventInitJoinRoom
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventInitJoinRoom()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventInitJoinRoom");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventInitJoinRoom_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventInitJoinRoom_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventInitJoinRoom_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -786,85 +870,29 @@ void Abp_chat_main_C::EventClickFriendItem_NoFetch()
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventShowHover
+// Function bp_chat_main.bp_chat_main_C.EventOpenRecruitPanel
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventShowHover()
+void Abp_chat_main_C::EventOpenRecruitPanel()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventShowHover");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventOpenRecruitPanel");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventShowHover_NoFetch
+// Function bp_chat_main.bp_chat_main_C.EventOpenRecruitPanel_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventShowHover_NoFetch()
+void Abp_chat_main_C::EventOpenRecruitPanel_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventShowHover_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventFetchInfo
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventFetchInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventFetchInfo");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventFetchInfo_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventFetchInfo_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventFetchInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventTryStopPlayRecordVoice
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventTryStopPlayRecordVoice()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventTryStopPlayRecordVoice");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventTryStopPlayRecordVoice_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventTryStopPlayRecordVoice_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventTryStopPlayRecordVoice_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventOpenRecruitPanel_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -898,85 +926,29 @@ void Abp_chat_main_C::EventClickCorpsGoto_NoFetch()
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventClickCorpsRecruit
+// Function bp_chat_main.bp_chat_main_C.EventHoverShowFriendInfo
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventClickCorpsRecruit()
+void Abp_chat_main_C::EventHoverShowFriendInfo()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventClickCorpsRecruit");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverShowFriendInfo");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventClickCorpsRecruit_NoFetch
+// Function bp_chat_main.bp_chat_main_C.EventHoverShowFriendInfo_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventClickCorpsRecruit_NoFetch()
+void Abp_chat_main_C::EventHoverShowFriendInfo_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventClickCorpsRecruit_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventNotifyVoiceChatFailToRecord
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventNotifyVoiceChatFailToRecord()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventNotifyVoiceChatFailToRecord");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventNotifyVoiceChatFailToRecord_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventNotifyVoiceChatFailToRecord_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventNotifyVoiceChatFailToRecord_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventHoverInviteTeam
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventHoverInviteTeam()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverInviteTeam");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventHoverInviteTeam_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventHoverInviteTeam_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverInviteTeam_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverShowFriendInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1010,34 +982,6 @@ void Abp_chat_main_C::EventHideHover_NoFetch()
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventOnAfterShowWnd
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventOnAfterShowWnd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventOnAfterShowWnd");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventOnAfterShowWnd_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventOnAfterShowWnd_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventOnAfterShowWnd_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_chat_main.bp_chat_main_C.EventCheckFriendList
 // (BlueprintCallable, BlueprintEvent)
 
@@ -1066,85 +1010,169 @@ void Abp_chat_main_C::EventCheckFriendList_NoFetch()
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventHoverReportTarget
+// Function bp_chat_main.bp_chat_main_C.EventCheckTodayDate
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventHoverReportTarget()
+void Abp_chat_main_C::EventCheckTodayDate()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverReportTarget");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventCheckTodayDate");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventHoverReportTarget_NoFetch
+// Function bp_chat_main.bp_chat_main_C.EventCheckTodayDate_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventHoverReportTarget_NoFetch()
+void Abp_chat_main_C::EventCheckTodayDate_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverReportTarget_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventCheckTodayDate_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventPopMessageBuffer
+// Function bp_chat_main.bp_chat_main_C.EventChangeChannelType
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventPopMessageBuffer()
+void Abp_chat_main_C::EventChangeChannelType()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventPopMessageBuffer");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChangeChannelType");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventPopMessageBuffer_NoFetch
+// Function bp_chat_main.bp_chat_main_C.EventChangeChannelType_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventPopMessageBuffer_NoFetch()
+void Abp_chat_main_C::EventChangeChannelType_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventPopMessageBuffer_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChangeChannelType_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventFetchFriendData
+// Function bp_chat_main.bp_chat_main_C.EventNotifyNoText
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventFetchFriendData()
+void Abp_chat_main_C::EventNotifyNoText()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventFetchFriendData");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventNotifyNoText");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventFetchFriendData_NoFetch
+// Function bp_chat_main.bp_chat_main_C.EventNotifyNoText_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventFetchFriendData_NoFetch()
+void Abp_chat_main_C::EventNotifyNoText_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventFetchFriendData_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventNotifyNoText_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventNotifyVoiceRecordTooShort
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventNotifyVoiceRecordTooShort()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventNotifyVoiceRecordTooShort");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventNotifyVoiceRecordTooShort_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventNotifyVoiceRecordTooShort_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventNotifyVoiceRecordTooShort_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventHideChatMainWnd
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventHideChatMainWnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHideChatMainWnd");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventHideChatMainWnd_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventHideChatMainWnd_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHideChatMainWnd_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventSendChatVoiceMsg
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventSendChatVoiceMsg()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventSendChatVoiceMsg");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_main.bp_chat_main_C.EventSendChatVoiceMsg_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_main_C::EventSendChatVoiceMsg_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventSendChatVoiceMsg_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1178,29 +1206,29 @@ void Abp_chat_main_C::EventSendChatMsg_NoFetch()
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventOpenRecruitPanel
+// Function bp_chat_main.bp_chat_main_C.EventInputChatMsg
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventOpenRecruitPanel()
+void Abp_chat_main_C::EventInputChatMsg()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventOpenRecruitPanel");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventInputChatMsg");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventOpenRecruitPanel_NoFetch
+// Function bp_chat_main.bp_chat_main_C.EventInputChatMsg_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventOpenRecruitPanel_NoFetch()
+void Abp_chat_main_C::EventInputChatMsg_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventOpenRecruitPanel_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventInputChatMsg_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1262,169 +1290,141 @@ void Abp_chat_main_C::EventTryStopRecordVoice_NoFetch()
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventChatMainBeforeShow
+// Function bp_chat_main.bp_chat_main_C.EventSwitchToFriendChat
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventChatMainBeforeShow()
+void Abp_chat_main_C::EventSwitchToFriendChat()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChatMainBeforeShow");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventSwitchToFriendChat");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventChatMainBeforeShow_NoFetch
+// Function bp_chat_main.bp_chat_main_C.EventSwitchToFriendChat_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventChatMainBeforeShow_NoFetch()
+void Abp_chat_main_C::EventSwitchToFriendChat_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChatMainBeforeShow_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventSwitchToFriendChat_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventNotifyOutofTextRange
+// Function bp_chat_main.bp_chat_main_C.EventHoverReportTarget
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventNotifyOutofTextRange()
+void Abp_chat_main_C::EventHoverReportTarget()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventNotifyOutofTextRange");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverReportTarget");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventNotifyOutofTextRange_NoFetch
+// Function bp_chat_main.bp_chat_main_C.EventHoverReportTarget_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventNotifyOutofTextRange_NoFetch()
+void Abp_chat_main_C::EventHoverReportTarget_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventNotifyOutofTextRange_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverReportTarget_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventChatVoiceBanInfo
+// Function bp_chat_main.bp_chat_main_C.EventShowHover
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventChatVoiceBanInfo()
+void Abp_chat_main_C::EventShowHover()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChatVoiceBanInfo");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventShowHover");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventChatVoiceBanInfo_NoFetch
+// Function bp_chat_main.bp_chat_main_C.EventShowHover_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventChatVoiceBanInfo_NoFetch()
+void Abp_chat_main_C::EventShowHover_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChatVoiceBanInfo_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventShowHover_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventChatVoiceCheckBan
+// Function bp_chat_main.bp_chat_main_C.EventAchieveVoiceRoom
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventChatVoiceCheckBan()
+void Abp_chat_main_C::EventAchieveVoiceRoom()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChatVoiceCheckBan");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventAchieveVoiceRoom");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventChatVoiceCheckBan_NoFetch
+// Function bp_chat_main.bp_chat_main_C.EventAchieveVoiceRoom_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventChatVoiceCheckBan_NoFetch()
+void Abp_chat_main_C::EventAchieveVoiceRoom_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChatVoiceCheckBan_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventAchieveVoiceRoom_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventHoverJoinTeam
+// Function bp_chat_main.bp_chat_main_C.EventOnAfterShowWnd
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventHoverJoinTeam()
+void Abp_chat_main_C::EventOnAfterShowWnd()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverJoinTeam");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventOnAfterShowWnd");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_main.bp_chat_main_C.EventHoverJoinTeam_NoFetch
+// Function bp_chat_main.bp_chat_main_C.EventOnAfterShowWnd_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_main_C::EventHoverJoinTeam_NoFetch()
+void Abp_chat_main_C::EventOnAfterShowWnd_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventHoverJoinTeam_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventChangeVoiceChatMode
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventChangeVoiceChatMode()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChangeVoiceChatMode");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_main.bp_chat_main_C.EventChangeVoiceChatMode_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_main_C::EventChangeVoiceChatMode_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_main_C", "EventChangeVoiceChatMode_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_main_C", "EventOnAfterShowWnd_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

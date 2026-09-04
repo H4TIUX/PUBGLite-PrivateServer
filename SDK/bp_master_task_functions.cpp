@@ -58,34 +58,6 @@ void Abp_master_task_C::EventFetchInfo_NoFetch()
 }
 
 
-// Function bp_master_task.bp_master_task_C.EventMasterTaskConditionJump
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_master_task_C::EventMasterTaskConditionJump()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_master_task_C", "EventMasterTaskConditionJump");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_master_task.bp_master_task_C.EventMasterTaskConditionJump_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_master_task_C::EventMasterTaskConditionJump_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_master_task_C", "EventMasterTaskConditionJump_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_master_task.bp_master_task_C.EventMasterTaskGetAward
 // (BlueprintCallable, BlueprintEvent)
 
@@ -109,6 +81,34 @@ void Abp_master_task_C::EventMasterTaskGetAward_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_master_task_C", "EventMasterTaskGetAward_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_master_task.bp_master_task_C.EventMasterTaskConditionJump
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_master_task_C::EventMasterTaskConditionJump()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_master_task_C", "EventMasterTaskConditionJump");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_master_task.bp_master_task_C.EventMasterTaskConditionJump_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_master_task_C::EventMasterTaskConditionJump_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_master_task_C", "EventMasterTaskConditionJump_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

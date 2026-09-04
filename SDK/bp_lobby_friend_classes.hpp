@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "BP_STRUCT_Intimacy_DetailData_structs.hpp"
+#include "BP_STRUCT_Intimacy_Data_structs.hpp"
 #include "BP_STRUCT_Lobby_Friend_Apply_Data_structs.hpp"
-#include "BP_STRUCT_Lobby_Friend_Common_Data_structs.hpp"
 #include "BP_STRUCT_Lobby_Friend_Search_Data_structs.hpp"
+#include "BP_STRUCT_Lobby_Friend_Common_Data_structs.hpp"
 #include "BP_STRUCT_FriendProfile_structs.hpp"
 #include "BP_STRUCT_FriendLiteProfile_structs.hpp"
-#include "BP_STRUCT_Intimacy_Data_structs.hpp"
+#include "BP_STRUCT_Intimacy_DetailData_structs.hpp"
 #include "BP_STRUCT_Search_Data_structs.hpp"
 #include "Client_classes.hpp"
 
@@ -25,204 +25,203 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_lobby_friend.bp_lobby_friend_C
-// 0x0938 (0x0D20 - 0x03E8)
+// 0x0928 (0x0D00 - 0x03D8)
 class Abp_lobby_friend_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	uint8                                         BP_NearBy_Location_Open : 1;                       // 0x03F0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_3F1[0x7];                                      // 0x03F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_FriendSystem_Present_Coin_Friend_ID;            // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_Intimacy_DetailData> BP_Array_Intimacy_DetailData;                      // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_Recent_Teammate_ScrollStart;                    // 0x0418(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41C[0x4];                                      // 0x041C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_Lobby_Friend_Search_Data> BP_ARRAY_Search_Friend_Detail_Profile;        // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_Friend_Search_Tendency;                         // 0x0430(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_Friend_Platform;                                // 0x0434(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 BP_Friend_SearchName;                              // 0x0438(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Search_Friend_Profile;                    // 0x0448(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_Add_Friend_Gender;                              // 0x0458(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_45C[0x4];                                      // 0x045C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_Intimacy_Data>       BP_ARRAY_Intimacy_Data;                            // 0x0460(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FBP_STRUCT_FriendLiteProfile>   BP_ARRAY_Plat_Friend_Lite_Profile;                 // 0x0470(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBP_STRUCT_Intimacy_DetailData         BP_STRUCT_Intimacy_DetailData;                     // 0x0480(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FBP_STRUCT_Lobby_Friend_Common_Data    BP_STRUCT_Lobby_Friend_Common_Data;                // 0x04A0(0x00E8)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class FString                                 BP_NearBy_Empty_Tips_Location_Close;               // 0x0588(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_Friend_Intimacy_Build_Relation;                 // 0x0598(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_BlackList_Friend_Scroll_Start;                  // 0x059C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_BlackList_Friend_Scroll_End;                    // 0x05A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A4[0x4];                                      // 0x05A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Recent_Teammate_Profile;                  // 0x05A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBP_STRUCT_Intimacy_Data               BP_STRUCT_Intimacy_Data;                           // 0x05B8(0x0078)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	uint8                                         BP_Friend_Search_Is_Same_City : 1;                 // 0x0630(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_631[0x7];                                      // 0x0631(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_Delete_Friend_ID;                               // 0x0638(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_Search_Data>         BP_Array_Search_Data;                              // 0x0648(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class FString                                 BP_FRIEND_PROFILE_ID;                              // 0x0658(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_RSPAdd_Friend_ID;                               // 0x0668(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_FRIEND_CHAT_ID;                                 // 0x0678(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	uint8                                         BP_Friend_Is_Show : 1;                             // 0x0688(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_689[0x7];                                      // 0x0689(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Near_By_Profile;                          // 0x0690(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBP_STRUCT_Lobby_Friend_Apply_Data     BP_STRUCT_Lobby_Friend_Apply_Data;                 // 0x06A0(0x0110)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Inner_Friend_Profile;                     // 0x07B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_Friend_Panel_Tab_Index;                         // 0x07C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7C4[0x4];                                      // 0x07C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_DELETE_FRIEND_BLACK_ID;                         // 0x07C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_Friend_Intimacy_Relation;                       // 0x07D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_Friend_Search_PlayTime;                         // 0x07DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_Friend_Intimacy_Op;                             // 0x07E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7E4[0x4];                                      // 0x07E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_Friend_Intimacy_NickName;                       // 0x07E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	uint8                                         BP_LobbyFriend_Master_RedPoint : 1;                // 0x07F8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_7F9[0x7];                                      // 0x07F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_Friend_Intimacy_Delete_NickName;                // 0x0800(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_Friend_Intimacy_Delete_State;                   // 0x0810(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_814[0x4];                                      // 0x0814(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_Friend_Intimacy_Build_Gid;                      // 0x0818(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_Inner_Friend_Scroll_End;                        // 0x0828(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_Apply_Friend_Scroll_Start;                      // 0x082C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_Friend_Add_Index;                               // 0x0830(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_834[0x4];                                      // 0x0834(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Near_By_Gender_Filter_Profile;            // 0x0838(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class FString                                 BP_FriendSystem_SelectedFriendNickNameAddQQFriend; // 0x0848(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	uint8                                         BP_Friend_Process_Add_Friend : 1;                  // 0x0858(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_859[0x3];                                      // 0x0859(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         BP_Friend_Intimacy_Delete_Relation;                // 0x085C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_FriendLiteProfile>   BP_ARRAY_Blacklist_Friend_Lite_Profile;            // 0x0860(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Blacklist_Friend_Profile;                 // 0x0870(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Plat_Friend_Profile;                      // 0x0880(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_Friend_UpdateInnerIndex;                        // 0x0890(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_894[0x4];                                      // 0x0894(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_Add_Friend_Verify;                              // 0x0898(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_FriendLiteProfile           BP_STRUCT_FriendLiteProfile;                       // 0x08A8(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class FString                                 BP_Friend_Intimacy_Gid;                            // 0x08B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_Verify_MaxWordCount;                            // 0x08C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_Search_Friend_Scroll_Start;                     // 0x08CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_Platform_Friend_Scroll_End;                     // 0x08D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D4[0x4];                                      // 0x08D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_Friend_Intimacy_Delete_Gid;                     // 0x08D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_NearBy_Gender_Filter;                           // 0x08E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         BP_Friend_Intimacy_Apply_Has_New : 1;              // 0x08EC(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_8ED[0x3];                                      // 0x08ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_DELETE_FRIEND_BLACK_NAME;                       // 0x08F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_Friend_Search_Gender;                           // 0x0900(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_904[0x4];                                      // 0x0904(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_XY_API_URL;                                     // 0x0908(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_NearBy_SelfUID;                                 // 0x0918(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_FriendLiteProfile>   BP_ARRAY_Recent_Teammate_Lite_Profile;             // 0x0928(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class FString                                 BP_NearBy_Empty_Tips;                              // 0x0938(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Plat_Friend_Detail_Profile;               // 0x0948(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBP_STRUCT_Lobby_Friend_Search_Data    BP_STRUCT_Lobby_Friend_Search_Data;                // 0x0958(0x0100)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Apply_Friend_Profile;                     // 0x0A58(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_Search_Friend_Scroll_End;                       // 0x0A68(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A6C[0x4];                                      // 0x0A6C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_FriendLiteProfile>   BP_ARRAY_Apply_Friend_Lite_Profile;                // 0x0A70(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_Platform_Friend_Scroll_Start;                   // 0x0A80(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A84[0x4];                                      // 0x0A84(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_Add_Friend_ID;                                  // 0x0A88(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Inner_Friend_Detail_Profile;              // 0x0A98(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Blacklist_Friend_Detail_Profile;          // 0x0AA8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FBP_STRUCT_FriendLiteProfile>   BP_ARRAY_Search_Friend_Lite_Profile;               // 0x0AB8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_Friend_Search_PlayDate;                         // 0x0AC8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_Recent_Teammate_ScrollEnd;                      // 0x0ACC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_Inner_Friend_Scroll_Start;                      // 0x0AD0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AD4[0x4];                                      // 0x0AD4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Recent_Teammate_Detail_Profile;           // 0x0AD8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_Apply_Friend_Scroll_End;                        // 0x0AE8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AEC[0x4];                                      // 0x0AEC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_FriendLiteProfile>   BP_ARRAY_Inner_Friend_Lite_Profile;                // 0x0AF0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBP_STRUCT_Search_Data                 BP_STRUCT_Search_Data;                             // 0x0B00(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class FString                                 BP_RSPAdd_OP;                                      // 0x0B20(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_Delete_Friend_Name;                             // 0x0B30(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_FriendProfile               BP_STRUCT_FriendProfile;                           // 0x0B40(0x01C0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_Lobby_Friend_Apply_Data> BP_ARRAY_Apply_Friend_Detail_Profile;          // 0x0D00(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_Friend_UpdatePlatIndex;                         // 0x0D10(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_Friend_Search_Segment;                          // 0x0D14(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0D18(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_Intimacy_Data>       BP_ARRAY_Intimacy_Data;                            // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_Platform_Friend_Scroll_Start;                   // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3F4[0x4];                                      // 0x03F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_Lobby_Friend_Common_Data    BP_STRUCT_Lobby_Friend_Common_Data;                // 0x03F8(0x00E8)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_Friend_Search_Tendency;                         // 0x04E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4E4[0x4];                                      // 0x04E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Recent_Teammate_Detail_Profile;           // 0x04E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FBP_STRUCT_FriendLiteProfile>   BP_ARRAY_Blacklist_Friend_Lite_Profile;            // 0x04F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class FString                                 BP_Add_Friend_Verify;                              // 0x0508(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_Friend_Platform;                                // 0x0518(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51C[0x4];                                      // 0x051C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_RSPAdd_OP;                                      // 0x0520(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_FriendSystem_SelectedFriendNickNameAddQQFriend; // 0x0530(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	struct FBP_STRUCT_Intimacy_DetailData         BP_STRUCT_Intimacy_DetailData;                     // 0x0540(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	uint8                                         BP_Friend_Is_Show : 1;                             // 0x0560(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_561[0x7];                                      // 0x0561(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_RSPAdd_Friend_ID;                               // 0x0568(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Near_By_Gender_Filter_Profile;            // 0x0578(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_Friend_Intimacy_Relation;                       // 0x0588(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_Friend_Intimacy_Delete_State;                   // 0x058C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBP_STRUCT_Lobby_Friend_Search_Data    BP_STRUCT_Lobby_Friend_Search_Data;                // 0x0590(0x0100)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class FString                                 BP_DELETE_FRIEND_BLACK_ID;                         // 0x0690(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Near_By_Profile;                          // 0x06A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Recent_Teammate_Profile;                  // 0x06B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	struct FBP_STRUCT_FriendLiteProfile           BP_STRUCT_FriendLiteProfile;                       // 0x06C0(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Apply_Friend_Profile;                     // 0x06D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_Inner_Friend_Scroll_End;                        // 0x06E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6E4[0x4];                                      // 0x06E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_NearBy_Empty_Tips_Location_Close;               // 0x06E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_NearBy_SelfUID;                                 // 0x06F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Plat_Friend_Profile;                      // 0x0708(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_Friend_UpdateInnerIndex;                        // 0x0718(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71C[0x4];                                      // 0x071C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_FRIEND_CHAT_ID;                                 // 0x0720(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_Recent_Teammate_ScrollStart;                    // 0x0730(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_Recent_Teammate_ScrollEnd;                      // 0x0734(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 BP_Friend_Intimacy_Gid;                            // 0x0738(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_DELETE_FRIEND_BLACK_NAME;                       // 0x0748(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_Platform_Friend_Scroll_End;                     // 0x0758(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_75C[0x4];                                      // 0x075C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_Friend_Intimacy_NickName;                       // 0x0760(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_Friend_Intimacy_Delete_Gid;                     // 0x0770(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Plat_Friend_Detail_Profile;               // 0x0780(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_Friend_Panel_Tab_Index;                         // 0x0790(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_794[0x4];                                      // 0x0794(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_Delete_Friend_ID;                               // 0x0798(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Inner_Friend_Profile;                     // 0x07A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FBP_STRUCT_Lobby_Friend_Apply_Data> BP_ARRAY_Apply_Friend_Detail_Profile;          // 0x07B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FBP_STRUCT_FriendLiteProfile>   BP_ARRAY_Search_Friend_Lite_Profile;               // 0x07C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_Inner_Friend_Scroll_Start;                      // 0x07D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7DC[0x4];                                      // 0x07DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_Lobby_Friend_Search_Data> BP_ARRAY_Search_Friend_Detail_Profile;        // 0x07E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_Search_Friend_Scroll_End;                       // 0x07F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7F4[0x4];                                      // 0x07F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_Friend_Intimacy_Build_Gid;                      // 0x07F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Blacklist_Friend_Profile;                 // 0x0808(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	struct FBP_STRUCT_FriendProfile               BP_STRUCT_FriendProfile;                           // 0x0818(0x01C0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_Friend_Intimacy_Build_Relation;                 // 0x09D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9DC[0x4];                                      // 0x09DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_Friend_SearchName;                              // 0x09E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_BlackList_Friend_Scroll_End;                    // 0x09F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9F4[0x4];                                      // 0x09F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Blacklist_Friend_Detail_Profile;          // 0x09F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class FString                                 BP_FriendSystem_Present_Coin_Friend_ID;            // 0x0A08(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_FRIEND_PROFILE_ID;                              // 0x0A18(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_XY_API_URL;                                     // 0x0A28(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_Friend_Intimacy_Delete_NickName;                // 0x0A38(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_FriendLiteProfile>   BP_ARRAY_Plat_Friend_Lite_Profile;                 // 0x0A48(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FBP_STRUCT_FriendLiteProfile>   BP_ARRAY_Apply_Friend_Lite_Profile;                // 0x0A58(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	uint8                                         BP_Friend_Search_Is_Same_City : 1;                 // 0x0A68(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_A69[0x3];                                      // 0x0A69(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BP_Friend_Intimacy_Delete_Relation;                // 0x0A6C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_NearBy_Gender_Filter;                           // 0x0A70(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_Search_Friend_Scroll_Start;                     // 0x0A74(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_FriendLiteProfile>   BP_ARRAY_Inner_Friend_Lite_Profile;                // 0x0A78(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_Apply_Friend_Scroll_End;                        // 0x0A88(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_Friend_UpdatePlatIndex;                         // 0x0A8C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         BP_Friend_Process_Add_Friend : 1;                  // 0x0A90(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_A91[0x3];                                      // 0x0A91(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BP_Add_Friend_Gender;                              // 0x0A94(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_Intimacy_DetailData> BP_Array_Intimacy_DetailData;                      // 0x0A98(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	uint8                                         BP_NearBy_Location_Open : 1;                       // 0x0AA8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_AA9[0x3];                                      // 0x0AA9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BP_Apply_Friend_Scroll_Start;                      // 0x0AAC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Search_Friend_Profile;                    // 0x0AB0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class FString                                 BP_NearBy_Empty_Tips;                              // 0x0AC0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         BP_Friend_Intimacy_Apply_Has_New : 1;              // 0x0AD0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         BP_LobbyFriend_Master_RedPoint : 1;                // 0x0AD1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_AD2[0x2];                                      // 0x0AD2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BP_Friend_Search_Segment;                          // 0x0AD4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 BP_Add_Friend_ID;                                  // 0x0AD8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	struct FBP_STRUCT_Search_Data                 BP_STRUCT_Search_Data;                             // 0x0AE8(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_Friend_Search_PlayTime;                         // 0x0B08(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_Verify_MaxWordCount;                            // 0x0B0C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_Friend_Search_Gender;                           // 0x0B10(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B14[0x4];                                      // 0x0B14(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_FriendProfile>       BP_ARRAY_Inner_Friend_Detail_Profile;              // 0x0B18(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_BlackList_Friend_Scroll_Start;                  // 0x0B28(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B2C[0x4];                                      // 0x0B2C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_Intimacy_Data               BP_STRUCT_Intimacy_Data;                           // 0x0B30(0x0078)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FBP_STRUCT_Lobby_Friend_Apply_Data     BP_STRUCT_Lobby_Friend_Apply_Data;                 // 0x0BA8(0x0110)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class FString                                 BP_Delete_Friend_Name;                             // 0x0CB8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_FriendLiteProfile>   BP_ARRAY_Recent_Teammate_Lite_Profile;             // 0x0CC8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_Friend_Add_Index;                               // 0x0CD8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CDC[0x4];                                      // 0x0CDC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_Search_Data>         BP_Array_Search_Data;                              // 0x0CE0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_Friend_Intimacy_Op;                             // 0x0CF0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_Friend_Search_PlayDate;                         // 0x0CF4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0CF8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
+	void EventShowSendAddFriendRequestTips();
+	void EventShowSendAddFriendRequestTips_NoFetch();
+	void EventSetXYAPIHideRedPoint();
+	void EventSetXYAPIHideRedPoint_NoFetch();
+	void EventLobbyFriendAddFriendReqList();
+	void EventLobbyFriendAddFriendReqList_NoFetch();
+	void EventLobbyFriendLabelSearchReq();
+	void EventLobbyFriendLabelSearchReq_NoFetch();
 	void EventLobbyFriendDeleteRelationReq();
 	void EventLobbyFriendDeleteRelationReq_NoFetch();
+	void EventLobbyFriendChat();
+	void EventLobbyFriendChat_NoFetch();
 	void EventLobbyFriendReplyRelationReq();
 	void EventLobbyFriendReplyRelationReq_NoFetch();
-	void EventLobbyFriendSearchReq();
-	void EventLobbyFriendSearchReq_NoFetch();
 	void EventLobbyFriendScrollApplyList();
 	void EventLobbyFriendScrollApplyList_NoFetch();
-	void EventLobbyFriendRespondApply();
-	void EventLobbyFriendRespondApply_NoFetch();
-	void EventLobbyFriendBuildRelationReq();
-	void EventLobbyFriendBuildRelationReq_NoFetch();
-	void EventFetchNewNearByPersonInfoList();
-	void EventFetchNewNearByPersonInfoList_NoFetch();
-	void EventLobbyFriendDeleteReq();
-	void EventLobbyFriendDeleteReq_NoFetch();
-	void EventOpenMyCardPanelInFriendPanel();
-	void EventOpenMyCardPanelInFriendPanel_NoFetch();
-	void EventLobbyFriendScrollPlatList();
-	void EventLobbyFriendScrollPlatList_NoFetch();
-	void EventLobbyFriendBlackListScroll();
-	void EventLobbyFriendBlackListScroll_NoFetch();
-	void EventLobbyFriendApplyReq();
-	void EventLobbyFriendApplyReq_NoFetch();
 	void EventLobbyFriendFetchFriendList();
 	void EventLobbyFriendFetchFriendList_NoFetch();
+	void EventNearByOpenLocation();
+	void EventNearByOpenLocation_NoFetch();
+	void EventLobbyFriendGetBlackListReq();
+	void EventLobbyFriendGetBlackListReq_NoFetch();
+	void EventGetRecentTeammateList();
+	void EventGetRecentTeammateList_NoFetch();
+	void EventRecentTeammateScrollApplyList();
+	void EventRecentTeammateScrollApplyList_NoFetch();
+	void EventOpenMyCardPanelInFriendPanel();
+	void EventOpenMyCardPanelInFriendPanel_NoFetch();
+	void EventLobbyFriendBlackListScroll();
+	void EventLobbyFriendBlackListScroll_NoFetch();
+	void EventXYAPISetUrl();
+	void EventXYAPISetUrl_NoFetch();
+	void EventLobbyFriendBuildRelationReq();
+	void EventLobbyFriendBuildRelationReq_NoFetch();
+	void EventLobbyFriendDeleteReq();
+	void EventLobbyFriendDeleteReq_NoFetch();
 	void EventNearByUpdateFilterArray();
 	void EventNearByUpdateFilterArray_NoFetch();
-	void EventFetchInfo();
-	void EventFetchInfo_NoFetch();
+	void EventLobbyFriendApplyReq();
+	void EventLobbyFriendApplyReq_NoFetch();
 	void EventLobbyFriendMasterNotOpen();
 	void EventLobbyFriendMasterNotOpen_NoFetch();
 	void EventHideMasterPanel();
 	void EventHideMasterPanel_NoFetch();
 	void EventOpenMasterPanel();
 	void EventOpenMasterPanel_NoFetch();
-	void EventLobbyFriendAddFriendReqList();
-	void EventLobbyFriendAddFriendReqList_NoFetch();
-	void EventLobbyPresentCoinReq();
-	void EventLobbyPresentCoinReq_NoFetch();
+	void EventFetchNewNearByPersonInfoList();
+	void EventFetchNewNearByPersonInfoList_NoFetch();
 	void EventOpenNearByPanel();
 	void EventOpenNearByPanel_NoFetch();
-	void EventRecentTeammateScrollApplyList();
-	void EventRecentTeammateScrollApplyList_NoFetch();
-	void EventShowSendAddFriendRequestTips();
-	void EventShowSendAddFriendRequestTips_NoFetch();
-	void EventLobbyFriendGetBlackListReq();
-	void EventLobbyFriendGetBlackListReq_NoFetch();
-	void EventOpenFriendRuleDescriptionPanel();
-	void EventOpenFriendRuleDescriptionPanel_NoFetch();
-	void EventLobbyFriendAddQQFriend();
-	void EventLobbyFriendAddQQFriend_NoFetch();
-	void EventLobbyFriendIntimacyReq();
-	void EventLobbyFriendIntimacyReq_NoFetch();
-	void EventSetXYAPIHideRedPoint();
-	void EventSetXYAPIHideRedPoint_NoFetch();
 	void EventNearByCloseLocation();
 	void EventNearByCloseLocation_NoFetch();
-	void EventLobbyFriendChat();
-	void EventLobbyFriendChat_NoFetch();
-	void EventXYAPISetUrl();
-	void EventXYAPISetUrl_NoFetch();
-	void EventLobbyFriendDeleteBlackReq();
-	void EventLobbyFriendDeleteBlackReq_NoFetch();
-	void EventLobbyFriendScrollInnerList();
-	void EventLobbyFriendScrollInnerList_NoFetch();
 	void EventOpenIntimacyDescriptionPanel();
 	void EventOpenIntimacyDescriptionPanel_NoFetch();
-	void EventGetRecentTeammateList();
-	void EventGetRecentTeammateList_NoFetch();
-	void EventLobbyFriendProfileReq();
-	void EventLobbyFriendProfileReq_NoFetch();
-	void EventLobbyFriendLabelSearchReq();
-	void EventLobbyFriendLabelSearchReq_NoFetch();
-	void EventSetXYAPIShowRedPoint();
-	void EventSetXYAPIShowRedPoint_NoFetch();
+	void EventOpenFriendRuleDescriptionPanel();
+	void EventOpenFriendRuleDescriptionPanel_NoFetch();
+	void EventLobbyFriendScrollPlatList();
+	void EventLobbyFriendScrollPlatList_NoFetch();
+	void EventFetchInfo();
+	void EventFetchInfo_NoFetch();
 	void EventLobbyFriendScrollSearchList();
 	void EventLobbyFriendScrollSearchList_NoFetch();
-	void EventNearByOpenLocation();
-	void EventNearByOpenLocation_NoFetch();
+	void EventLobbyFriendIntimacyReq();
+	void EventLobbyFriendIntimacyReq_NoFetch();
+	void EventSetXYAPIShowRedPoint();
+	void EventSetXYAPIShowRedPoint_NoFetch();
+	void EventLobbyFriendRespondApply();
+	void EventLobbyFriendRespondApply_NoFetch();
+	void EventLobbyFriendDeleteBlackReq();
+	void EventLobbyFriendDeleteBlackReq_NoFetch();
+	void EventLobbyFriendAddQQFriend();
+	void EventLobbyFriendAddQQFriend_NoFetch();
+	void EventLobbyFriendSearchReq();
+	void EventLobbyFriendSearchReq_NoFetch();
+	void EventLobbyFriendScrollInnerList();
+	void EventLobbyFriendScrollInnerList_NoFetch();
+	void EventLobbyPresentCoinReq();
+	void EventLobbyPresentCoinReq_NoFetch();
+	void EventLobbyFriendProfileReq();
+	void EventLobbyFriendProfileReq_NoFetch();
 
 public:
 	static class UClass* StaticClass()

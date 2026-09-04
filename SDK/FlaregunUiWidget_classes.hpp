@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
+#include "Engine_structs.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
 
 
@@ -40,8 +40,8 @@ public:
 
 public:
 	void ExecuteUbergraph_FlaregunUiWidget(int32 EntryPoint);
-	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void Construct();
 	void SetPackage_Number(int32 NumPackage, uint8 CanFire, uint8 WaitingMine);
 	void SetVehicleNumber(int32 NumVehicel, uint8 CanFire, uint8 WaitingMine);
 	void IsCharacterInWhiteZone(uint8* IsIn);

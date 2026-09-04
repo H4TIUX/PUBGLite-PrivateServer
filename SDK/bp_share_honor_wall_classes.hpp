@@ -18,22 +18,22 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_share_honor_wall.bp_share_honor_wall_C
-// 0x0048 (0x0430 - 0x03E8)
+// 0x0048 (0x0420 - 0x03D8)
 class Abp_share_honor_wall_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FBP_STRUCT_ShareHonorWall_ShareInfo    BP_STRUCT_ShareHonorWall_ShareInfo;                // 0x03F0(0x0038)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0428(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_ShareHonorWall_ShareInfo    BP_STRUCT_ShareHonorWall_ShareInfo;                // 0x03E0(0x0038)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0418(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventSetInfo_Push();
-	void EventSetInfo_Push_NoFetch();
 	void EventFetchInfo();
 	void EventFetchInfo_NoFetch();
 	void EventShareHonorWallHide();
 	void EventShareHonorWallHide_NoFetch();
+	void EventSetInfo_Push();
+	void EventSetInfo_Push_NoFetch();
 
 public:
 	static class UClass* StaticClass()

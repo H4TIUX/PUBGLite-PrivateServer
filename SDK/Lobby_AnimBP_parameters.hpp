@@ -18,17 +18,34 @@ namespace SDK::Params
 {
 
 // Function Lobby_AnimBP.Lobby_AnimBP_C.ExecuteUbergraph_Lobby_AnimBP
-// 0x0028 (0x0028 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct Lobby_AnimBP_C_ExecuteUbergraph_Lobby_AnimBP final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0004(0x000C)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue : 1;        // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimSequence*                          CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSlotId_ReturnValue;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x0024(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsInCustomizationScene_ReturnValue : 1;   // 0x0004(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetSlotId_ReturnValue;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x000C(0x000C)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue : 1;        // 0x0018(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_BooleanAND_ReturnValue : 1;               // 0x0019(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimSequence*                          CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaTimeX;                           // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_PlayerLobbyPawn_C*                  K2Node_DynamicCast_AsBP_Player_Lobby_Pawn;         // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         K2Node_DynamicCast_bSuccess : 1;                   // 0x0040(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x0041(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsValid_ReturnValue2 : 1;                 // 0x0042(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+};
+
+// Function Lobby_AnimBP.Lobby_AnimBP_C.BlueprintUpdateAnimation
+// 0x0004 (0x0004 - 0x0000)
+struct Lobby_AnimBP_C_BlueprintUpdateAnimation final
+{
+public:
+	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 // Function Lobby_AnimBP.Lobby_AnimBP_C.SetAnimWeaponPose
@@ -37,14 +54,6 @@ struct Lobby_AnimBP_C_SetAnimWeaponPose final
 {
 public:
 	EAnimWeaponType                               WeaponType_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function Lobby_AnimBP.Lobby_AnimBP_C.SetCharacter
-// 0x0008 (0x0008 - 0x0000)
-struct Lobby_AnimBP_C_SetCharacter final
-{
-public:
-	class ALobbyCharacter*                        Character;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 // Function Lobby_AnimBP.Lobby_AnimBP_C.SetSlot

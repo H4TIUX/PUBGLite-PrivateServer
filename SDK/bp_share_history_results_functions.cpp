@@ -30,29 +30,29 @@ void Abp_share_history_results_C::UserConstructionScript()
 }
 
 
-// Function bp_share_history_results.bp_share_history_results_C.EventFetchInfo
+// Function bp_share_history_results.bp_share_history_results_C.EventShareHistoryResultsHide
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_share_history_results_C::EventFetchInfo()
+void Abp_share_history_results_C::EventShareHistoryResultsHide()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_history_results_C", "EventFetchInfo");
+		Func = GetClass()->GetFunction("bp_share_history_results_C", "EventShareHistoryResultsHide");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_share_history_results.bp_share_history_results_C.EventFetchInfo_NoFetch
+// Function bp_share_history_results.bp_share_history_results_C.EventShareHistoryResultsHide_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_share_history_results_C::EventFetchInfo_NoFetch()
+void Abp_share_history_results_C::EventShareHistoryResultsHide_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_history_results_C", "EventFetchInfo_NoFetch");
+		Func = GetClass()->GetFunction("bp_share_history_results_C", "EventShareHistoryResultsHide_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,29 +86,29 @@ void Abp_share_history_results_C::EventSetInfo_Push_NoFetch()
 }
 
 
-// Function bp_share_history_results.bp_share_history_results_C.EventShareHistoryResultsHide
+// Function bp_share_history_results.bp_share_history_results_C.EventFetchInfo
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_share_history_results_C::EventShareHistoryResultsHide()
+void Abp_share_history_results_C::EventFetchInfo()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_history_results_C", "EventShareHistoryResultsHide");
+		Func = GetClass()->GetFunction("bp_share_history_results_C", "EventFetchInfo");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_share_history_results.bp_share_history_results_C.EventShareHistoryResultsHide_NoFetch
+// Function bp_share_history_results.bp_share_history_results_C.EventFetchInfo_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_share_history_results_C::EventShareHistoryResultsHide_NoFetch()
+void Abp_share_history_results_C::EventFetchInfo_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_history_results_C", "EventShareHistoryResultsHide_NoFetch");
+		Func = GetClass()->GetFunction("bp_share_history_results_C", "EventFetchInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

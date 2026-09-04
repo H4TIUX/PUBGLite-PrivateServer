@@ -10,47 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "Skill_structs.hpp"
+#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
 
 namespace SDK
 {
-
-// Class Skill.UTSkillInterface
-// 0x0000 (0x0000 - 0x0000)
-class IUTSkillInterface final
-{
-public:
-	void HandleSkillEnd(int32 SkillID, EUTSkillStopReason Reason);
-	void HandleSkillStart(int32 SkillID);
-	void TriggerEvent(int32 SkillID, EUTSkillEventType EventType);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UTSkillInterface")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UTSkillInterface")
-	}
-	static class IUTSkillInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IUTSkillInterface>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
 
 // Class Skill.UTSkillBaseWidget
 // 0x0028 (0x0130 - 0x0108)
@@ -75,36 +42,6 @@ public:
 	static class UUTSkillBaseWidget* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UUTSkillBaseWidget>();
-	}
-};
-
-// Class Skill.UTSkillEffect
-// 0x0010 (0x0140 - 0x0130)
-class UUTSkillEffect : public UUTSkillBaseWidget
-{
-public:
-	float                                         fADScale;                                          // 0x0130(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         fAPScale;                                          // 0x0134(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class AUTSkill>                OwnerSkill;                                        // 0x0138(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	uint8 DoAction();
-	void DoHurtAppearance(class APawn* Victim);
-	void UndoAction();
-	void UpdateAction(float DeltaSeconds);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UTSkillEffect")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UTSkillEffect")
-	}
-	static class UUTSkillEffect* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUTSkillEffect>();
 	}
 };
 
@@ -173,6 +110,36 @@ public:
 	}
 };
 
+// Class Skill.UTSkillEffect
+// 0x0010 (0x0140 - 0x0130)
+class UUTSkillEffect : public UUTSkillBaseWidget
+{
+public:
+	float                                         fADScale;                                          // 0x0130(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         fAPScale;                                          // 0x0134(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class AUTSkill>                OwnerSkill;                                        // 0x0138(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	uint8 DoAction();
+	void DoHurtAppearance(class APawn* Victim);
+	void UndoAction();
+	void UpdateAction(float DeltaSeconds);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UTSkillEffect")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UTSkillEffect")
+	}
+	static class UUTSkillEffect* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUTSkillEffect>();
+	}
+};
+
 // Class Skill.UTSkillAction
 // 0x0018 (0x0158 - 0x0140)
 class UUTSkillAction : public UUTSkillEffect
@@ -204,6 +171,39 @@ public:
 	}
 };
 
+// Class Skill.UTSkillInterface
+// 0x0000 (0x0000 - 0x0000)
+class IUTSkillInterface final
+{
+public:
+	void HandleSkillEnd(int32 SkillID, EUTSkillStopReason Reason);
+	void HandleSkillStart(int32 SkillID);
+	void TriggerEvent(int32 SkillID, EUTSkillEventType EventType);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UTSkillInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UTSkillInterface")
+	}
+	static class IUTSkillInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IUTSkillInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+
 // Class Skill.UTSkillCondition
 // 0x0008 (0x0138 - 0x0130)
 class UUTSkillCondition : public UUTSkillBaseWidget
@@ -227,61 +227,6 @@ public:
 	static class UUTSkillCondition* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UUTSkillCondition>();
-	}
-};
-
-// Class Skill.UTSkill
-// 0x0118 (0x04D8 - 0x03C0)
-class AUTSkill : public AActor
-{
-public:
-	class FString                                 SkillName;                                         // 0x03C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SkillDescription;                                  // 0x03D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SkillDetailDes;                                    // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bMeleeSkill : 1;                                   // 0x03F0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bNeedAutonomousClientSimulate : 1;                 // 0x03F1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bClearInputCache : 1;                              // 0x03F2(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_3F3[0x5];                                      // 0x03F3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUTSkillCreateData                     BaseData;                                          // 0x03F8(0x0040)(Edit, BlueprintVisible, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	class UTexture2D*                             SkillIcon;                                         // 0x0438(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture2D*                             SkillVehicleIcon;                                  // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SkillVehicleName;                                  // 0x0448(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         NegativeSkill : 1;                                 // 0x0458(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         ShouldShowTargetPrompt : 1;                        // 0x0459(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         ChangePawnStatus : 1;                              // 0x045A(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_45B[0x1];                                      // 0x045B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TWeakObjectPtr<class APawn>                   OwnerPawn;                                         // 0x045C(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class UUTSkillManagerComponent> OwnerSkillManager;                                // 0x0464(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class AActor>                  LastSpawnedActor;                                  // 0x046C(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class APawn>                   LastSpawnedPawn;                                   // 0x0474(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_47C[0x30];                                     // 0x047C(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         PhasePercentage;                                   // 0x04AC(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         ParentFolderPath;                                  // 0x04B0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	int64                                         LastEditBluePrintTime;                             // 0x04C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         CurComponentNameIndex;                             // 0x04C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         IsSkillEnabled : 1;                                // 0x04CC(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_4CD[0xB];                                      // 0x04CD(0x000B)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	uint8 CanBePlayed(uint8 bShowErrorMsg);
-	void DoSkillCoolDown();
-	class UUTSkillPhase* GetSkillPhase(int32 PhaseIndex);
-	float GetSkillPhasePercentage();
-	uint8 OnEvent(EUTSkillEventType TheEventType);
-	void SetSkillPhasePercentage(float Percentage);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UTSkill")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UTSkill")
-	}
-	static class AUTSkill* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AUTSkill>();
 	}
 };
 
@@ -379,6 +324,61 @@ public:
 	static class UUTSkillPicker* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UUTSkillPicker>();
+	}
+};
+
+// Class Skill.UTSkill
+// 0x0118 (0x04C8 - 0x03B0)
+class AUTSkill : public AActor
+{
+public:
+	class FString                                 SkillName;                                         // 0x03B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SkillDescription;                                  // 0x03C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SkillDetailDes;                                    // 0x03D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bMeleeSkill : 1;                                   // 0x03E0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bNeedAutonomousClientSimulate : 1;                 // 0x03E1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bClearInputCache : 1;                              // 0x03E2(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_3E3[0x5];                                      // 0x03E3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUTSkillCreateData                     BaseData;                                          // 0x03E8(0x0040)(Edit, BlueprintVisible, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	class UTexture2D*                             SkillIcon;                                         // 0x0428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture2D*                             SkillVehicleIcon;                                  // 0x0430(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SkillVehicleName;                                  // 0x0438(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         NegativeSkill : 1;                                 // 0x0448(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         ShouldShowTargetPrompt : 1;                        // 0x0449(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         ChangePawnStatus : 1;                              // 0x044A(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_44B[0x1];                                      // 0x044B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class APawn>                   OwnerPawn;                                         // 0x044C(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UUTSkillManagerComponent> OwnerSkillManager;                                // 0x0454(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class AActor>                  LastSpawnedActor;                                  // 0x045C(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class APawn>                   LastSpawnedPawn;                                   // 0x0464(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_46C[0x30];                                     // 0x046C(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         PhasePercentage;                                   // 0x049C(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         ParentFolderPath;                                  // 0x04A0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	int64                                         LastEditBluePrintTime;                             // 0x04B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CurComponentNameIndex;                             // 0x04B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         IsSkillEnabled : 1;                                // 0x04BC(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_4BD[0xB];                                      // 0x04BD(0x000B)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	uint8 CanBePlayed(uint8 bShowErrorMsg);
+	void DoSkillCoolDown();
+	class UUTSkillPhase* GetSkillPhase(int32 PhaseIndex);
+	float GetSkillPhasePercentage();
+	uint8 OnEvent(EUTSkillEventType TheEventType);
+	void SetSkillPhasePercentage(float Percentage);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UTSkill")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UTSkill")
+	}
+	static class AUTSkill* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AUTSkill>();
 	}
 };
 

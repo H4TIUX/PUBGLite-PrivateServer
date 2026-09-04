@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "UMG_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "Gameplay_structs.hpp"
 
 

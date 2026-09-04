@@ -19,11 +19,11 @@ namespace SDK
 {
 
 // Class UAEStateMachine.TestStatemachine
-// 0x0008 (0x03C8 - 0x03C0)
+// 0x0008 (0x03B8 - 0x03B0)
 class ATestStatemachine final : public AActor
 {
 public:
-	class UUAEStateMachineComponent*              UAEStateMachineComponent;                          // 0x03C0(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UUAEStateMachineComponent*              UAEStateMachineComponent;                          // 0x03B0(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()

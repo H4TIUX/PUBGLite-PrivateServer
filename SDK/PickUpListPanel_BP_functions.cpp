@@ -37,6 +37,34 @@ void UPickUpListPanel_BP_C::ExecuteUbergraph_PickUpListPanel_BP(int32 EntryPoint
 }
 
 
+// Function PickUpListPanel_BP.PickUpListPanel_BP_C.OnBackpackClose
+// (BlueprintCallable, BlueprintEvent)
+
+void UPickUpListPanel_BP_C::OnBackpackClose()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("PickUpListPanel_BP_C", "OnBackpackClose");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PickUpListPanel_BP.PickUpListPanel_BP_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UPickUpListPanel_BP_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("PickUpListPanel_BP_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function PickUpListPanel_BP.PickUpListPanel_BP_C.ItemBePickUpEvent
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -338,6 +366,20 @@ void UPickUpListPanel_BP_C::BndEvt__Button_ClosePickUpListUI_K2Node_ComponentBou
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("PickUpListPanel_BP_C", "BndEvt__Button_ClosePickUpListUI_K2Node_ComponentBoundEvent_35_OnButtonClickedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PickUpListPanel_BP.PickUpListPanel_BP_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UPickUpListPanel_BP_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("PickUpListPanel_BP_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

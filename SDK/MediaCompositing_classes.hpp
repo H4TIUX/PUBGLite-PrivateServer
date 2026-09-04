@@ -20,11 +20,11 @@ namespace SDK
 {
 
 // Class MediaCompositing.MediaPlane
-// 0x0008 (0x03C8 - 0x03C0)
+// 0x0008 (0x03B8 - 0x03B0)
 class AMediaPlane final : public AActor
 {
 public:
-	class UMediaPlaneComponent*                   MediaPlane;                                        // 0x03C0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMediaPlaneComponent*                   MediaPlane;                                        // 0x03B0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()

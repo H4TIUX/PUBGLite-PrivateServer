@@ -17,25 +17,25 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_redpacket.bp_redpacket_C
-// 0x0050 (0x0438 - 0x03E8)
+// 0x0050 (0x0428 - 0x03D8)
 class Abp_redpacket_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	class FString                                 BP_REDPACKET_WXBKIMG;                              // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_REDPACKET_QQBKIMG;                              // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_REDPACKET_WXBKIMG2;                             // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_REDPACKET_QQBKIMG2;                             // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0430(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class FString                                 BP_REDPACKET_QQBKIMG;                              // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_REDPACKET_WXBKIMG2;                             // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_REDPACKET_QQBKIMG2;                             // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_REDPACKET_WXBKIMG;                              // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0420(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventRedPacketFetchInfo();
-	void EventRedPacketFetchInfo_NoFetch();
 	void EventClickRedPacketRuleBtn();
 	void EventClickRedPacketRuleBtn_NoFetch();
 	void EventRedPacket_Push();
 	void EventRedPacket_Push_NoFetch();
+	void EventRedPacketFetchInfo();
+	void EventRedPacketFetchInfo_NoFetch();
 	void EventHideRedPacketUI();
 	void EventHideRedPacketUI_NoFetch();
 

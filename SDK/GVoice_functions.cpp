@@ -37,6 +37,20 @@ void UGVoice_C::ExecuteUbergraph_GVoice(int32 EntryPoint)
 }
 
 
+// Function GVoice.GVoice_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UGVoice_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoice_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GVoice.GVoice_C.ReceiveHide
 // (Event, Protected, BlueprintEvent)
 

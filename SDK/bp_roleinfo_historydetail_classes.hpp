@@ -11,50 +11,47 @@
 #include "Basic.hpp"
 
 #include "BP_STRUCT_RoleInfoHistoryRecordDetail_structs.hpp"
+#include "BP_STRUCT_RoleInfoHistoryRoleBasicInfo_structs.hpp"
+#include "BP_STRUCT_RoleInfoHistoryTeammateInfo_structs.hpp"
 #include "BP_STRUCT_RoleInfoHistoryRadarInfo_structs.hpp"
 #include "Client_classes.hpp"
-#include "BP_STRUCT_RoleInfoHistoryTeammateInfo_structs.hpp"
-#include "BP_STRUCT_RoleInfoHistoryRoleBasicInfo_structs.hpp"
 
 
 namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_roleinfo_historydetail.bp_roleinfo_historydetail_C
-// 0x0250 (0x0638 - 0x03E8)
+// 0x0248 (0x0620 - 0x03D8)
 class Abp_roleinfo_historydetail_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	class FString                                 BP_HistoryDetail_SelfName;                         // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_RoleInfoHistoryRecordDetail BP_STRUCT_RoleInfoHistoryRecordDetail;             // 0x0400(0x00B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FBP_STRUCT_RoleInfoHistoryRadarInfo    BP_STRUCT_RoleInfoHistoryRadarInfo;                // 0x04B0(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_RoleInfoHistoryTeammateInfo> BP_ARRAY_RoleInfoHistoryTeammateInfoList;  // 0x0500(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_HistoryDetail_SelfGender;                       // 0x0510(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_514[0x4];                                      // 0x0514(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_RoleInfoHistoryTeammateInfo BP_STRUCT_RoleInfoHistoryTeammateInfo;             // 0x0518(0x0080)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_HistoryDetail_TodayShareNum;                    // 0x0598(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         BP_HistoryDetail_ShareGold : 1;                    // 0x059C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_59D[0x3];                                      // 0x059D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_HistoryDetail_SegmentProtectTips;               // 0x05A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_HistoryDetail_SelfID;                           // 0x05B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_HistoryDetail_SelfFrameLevel;                   // 0x05C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C4[0x4];                                      // 0x05C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_RoleInfoHistoryRoleBasicInfo BP_STRUCT_RoleInfoHistoryRoleBasicInfo;           // 0x05C8(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class FString                                 BP_HistoryDetail_SelfIconURL;                      // 0x0608(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_HistoryDetail_AddFriendUID;                     // 0x0618(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_HistoryDetail_AddFriendGender;                  // 0x0628(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_62C[0x4];                                      // 0x062C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0630(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_RoleInfoHistoryRecordDetail BP_STRUCT_RoleInfoHistoryRecordDetail;             // 0x03E0(0x00B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class FString                                 BP_HistoryDetail_SelfName;                         // 0x0490(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_HistoryDetail_AddFriendUID;                     // 0x04A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	struct FBP_STRUCT_RoleInfoHistoryRoleBasicInfo BP_STRUCT_RoleInfoHistoryRoleBasicInfo;           // 0x04B0(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_RoleInfoHistoryTeammateInfo> BP_ARRAY_RoleInfoHistoryTeammateInfoList;  // 0x04F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_HistoryDetail_SelfFrameLevel;                   // 0x0500(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_HistoryDetail_TodayShareNum;                    // 0x0504(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         BP_HistoryDetail_ShareGold : 1;                    // 0x0508(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_509[0x7];                                      // 0x0509(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_RoleInfoHistoryTeammateInfo BP_STRUCT_RoleInfoHistoryTeammateInfo;             // 0x0510(0x0080)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FBP_STRUCT_RoleInfoHistoryRadarInfo    BP_STRUCT_RoleInfoHistoryRadarInfo;                // 0x0590(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class FString                                 BP_HistoryDetail_SelfIconURL;                      // 0x05E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_HistoryDetail_SegmentProtectTips;               // 0x05F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_HistoryDetail_SelfGender;                       // 0x0600(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_HistoryDetail_AddFriendGender;                  // 0x0604(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 BP_HistoryDetail_SelfID;                           // 0x0608(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0618(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
+	void EventRoleInfoHistoryDetailAddFriend();
+	void EventRoleInfoHistoryDetailAddFriend_NoFetch();
 	void EventRoleInfoHistoryShareResults();
 	void EventRoleInfoHistoryShareResults_NoFetch();
 	void EventRoleInfoHistoryShareRanking();
 	void EventRoleInfoHistoryShareRanking_NoFetch();
-	void EventRoleInfoHistoryDetailAddFriend();
-	void EventRoleInfoHistoryDetailAddFriend_NoFetch();
 
 public:
 	static class UClass* StaticClass()

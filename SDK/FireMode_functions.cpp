@@ -37,6 +37,20 @@ void UFireMode_C::ExecuteUbergraph_FireMode(int32 EntryPoint)
 }
 
 
+// Function FireMode.FireMode_C.GameUserSettingChanged
+// (BlueprintCallable, BlueprintEvent)
+
+void UFireMode_C::GameUserSettingChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("FireMode_C", "GameUserSettingChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function FireMode.FireMode_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_28_OnButtonPressedEvent__DelegateSignature
 // (BlueprintEvent)
 
@@ -310,6 +324,26 @@ void UFireMode_C::RefreshBulletImage(class UObject* Image)
 	Params::FireMode_C_RefreshBulletImage Parms{};
 
 	Parms.Image = Image;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function FireMode.FireMode_C.ChangeCurrentBulletTextColor
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// uint8                                   IsGunRunOutOfAmmo                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UFireMode_C::ChangeCurrentBulletTextColor(uint8 IsGunRunOutOfAmmo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("FireMode_C", "ChangeCurrentBulletTextColor");
+
+	Params::FireMode_C_ChangeCurrentBulletTextColor Parms{};
+
+	Parms.IsGunRunOutOfAmmo = IsGunRunOutOfAmmo;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

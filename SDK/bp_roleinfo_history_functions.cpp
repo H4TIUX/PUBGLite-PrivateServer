@@ -30,34 +30,6 @@ void Abp_roleinfo_history_C::UserConstructionScript()
 }
 
 
-// Function bp_roleinfo_history.bp_roleinfo_history_C.EventRoleInfoHistoryUIClose
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_history_C::EventRoleInfoHistoryUIClose()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_history_C", "EventRoleInfoHistoryUIClose");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo_history.bp_roleinfo_history_C.EventRoleInfoHistoryUIClose_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_history_C::EventRoleInfoHistoryUIClose_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_history_C", "EventRoleInfoHistoryUIClose_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_roleinfo_history.bp_roleinfo_history_C.EventRoleInfoHistorySettingHistory
 // (BlueprintCallable, BlueprintEvent)
 
@@ -109,6 +81,34 @@ void Abp_roleinfo_history_C::EventRoleInfoHistoryShowRecord_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_roleinfo_history_C", "EventRoleInfoHistoryShowRecord_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo_history.bp_roleinfo_history_C.EventRoleInfoHistoryUIClose
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_history_C::EventRoleInfoHistoryUIClose()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_history_C", "EventRoleInfoHistoryUIClose");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo_history.bp_roleinfo_history_C.EventRoleInfoHistoryUIClose_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_history_C::EventRoleInfoHistoryUIClose_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_history_C", "EventRoleInfoHistoryUIClose_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

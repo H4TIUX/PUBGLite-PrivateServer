@@ -10,10 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "BP_STRUCT_Item_type_structs.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -129,23 +130,29 @@ public:
 };
 
 // Function KillInfoItem_BP.KillInfoItem_BP_C.SetTeamNumberUI
-// 0x0078 (0x0078 - 0x0000)
+// 0x0080 (0x0080 - 0x0000)
 struct KillInfoItem_BP_C_SetTeamNumberUI final
 {
 public:
 	int32                                         CauserTeamID;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         VictimTeamID;                                      // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         NewLocalVar_0 : 1;                                 // 0x0008(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	ESlateVisibility                              ___byte_Variable;                                  // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           CallFunc_GetTeamIdColor_ReturnValue;               // 0x000C(0x0010)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0020(0x0018)()
 	struct FLinearColor                           CallFunc_GetTeamIdColor_ReturnValue2;              // 0x0038(0x0010)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_IntToText_ReturnValue2;              // 0x0048(0x0018)()
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ASTExtraPlayerController*               K2Node_DynamicCast_AsSTExtra_Player_Controller;    // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         K2Node_DynamicCast_bSuccess : 1;                   // 0x0070(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_IsObserving_ReturnValue : 1;              // 0x0071(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_NotEqual_IntInt_ReturnValue : 1;          // 0x0060(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	ESlateVisibility                              ___byte_Variable2;                                 // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         ___bool_Variable : 1;                              // 0x0062(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0063(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ASTExtraPlayerController*               K2Node_DynamicCast_AsSTExtra_Player_Controller;    // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         K2Node_DynamicCast_bSuccess : 1;                   // 0x0078(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsObserving_ReturnValue : 1;              // 0x0079(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 };
 
 }

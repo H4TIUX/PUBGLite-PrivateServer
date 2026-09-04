@@ -10,27 +10,27 @@
 
 #include "Basic.hpp"
 
-#include "BP_STRUCT_MessageBoxButton_structs.hpp"
 #include "BP_STRUCT_MessageBoxData_structs.hpp"
 #include "Client_classes.hpp"
+#include "BP_STRUCT_MessageBoxButton_structs.hpp"
 
 
 namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_popup_notice.bp_popup_notice_C
-// 0x00A0 (0x0488 - 0x03E8)
+// 0x00A0 (0x0478 - 0x03D8)
 class Abp_popup_notice_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FBP_STRUCT_MessageBoxButton            BP_STRUCT_MessageBoxButton;                        // 0x03F0(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FBP_STRUCT_MessageBoxData              BP_STRUCT_MessageBoxData;                          // 0x0410(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class FString                                 BP_NoticeTitle;                                    // 0x0440(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_NoticeMsg;                                      // 0x0450(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_MessageBoxData              BP_STRUCT_MessageBoxData;                          // 0x03E0(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class FString                                 BP_NoticeTitle;                                    // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_NoticeMsg;                                      // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	struct FBP_STRUCT_MessageBoxButton            BP_STRUCT_MessageBoxButton;                        // 0x0430(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class FString                                 BP_PendingMessageBoxCallback;                      // 0x0450(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	TArray<struct FBP_STRUCT_MessageBoxData>      BP_ARRAY_MessageBoxStack;                          // 0x0460(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class FString                                 BP_PendingMessageBoxCallback;                      // 0x0470(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0480(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0470(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
@@ -40,10 +40,10 @@ public:
 	void EventPopupNoticeShowBox_Push_NoFetch();
 	void EventShowOpenSpeakerAtFirst_Push();
 	void EventShowOpenSpeakerAtFirst_Push_NoFetch();
-	void EventFetchInfo();
-	void EventFetchInfo_NoFetch();
 	void EventShrinkMessageBoxStack();
 	void EventShrinkMessageBoxStack_NoFetch();
+	void EventFetchInfo();
+	void EventFetchInfo_NoFetch();
 
 public:
 	static class UClass* StaticClass()

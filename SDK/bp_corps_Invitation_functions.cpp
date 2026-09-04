@@ -30,6 +30,34 @@ void Abp_corps_Invitation_C::UserConstructionScript()
 }
 
 
+// Function bp_corps_Invitation.bp_corps_Invitation_C.EventCorpsInvitationReport
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_Invitation_C::EventCorpsInvitationReport()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_Invitation_C", "EventCorpsInvitationReport");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_Invitation.bp_corps_Invitation_C.EventCorpsInvitationReport_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_Invitation_C::EventCorpsInvitationReport_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_Invitation_C", "EventCorpsInvitationReport_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_corps_Invitation.bp_corps_Invitation_C.EventCorpsInvitationApply
 // (BlueprintCallable, BlueprintEvent)
 
@@ -109,34 +137,6 @@ void Abp_corps_Invitation_C::EventCorpsInvitationUIClose_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_corps_Invitation_C", "EventCorpsInvitationUIClose_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_Invitation.bp_corps_Invitation_C.EventCorpsInvitationReport
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_Invitation_C::EventCorpsInvitationReport()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_Invitation_C", "EventCorpsInvitationReport");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_Invitation.bp_corps_Invitation_C.EventCorpsInvitationReport_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_Invitation_C::EventCorpsInvitationReport_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_Invitation_C", "EventCorpsInvitationReport_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

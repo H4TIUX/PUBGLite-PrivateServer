@@ -30,34 +30,6 @@ void Abp_market_appearance_C::UserConstructionScript()
 }
 
 
-// Function bp_market_appearance.bp_market_appearance_C.EventMarketAppearanceUIResetAvatar
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_market_appearance_C::EventMarketAppearanceUIResetAvatar()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_appearance_C", "EventMarketAppearanceUIResetAvatar");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_market_appearance.bp_market_appearance_C.EventMarketAppearanceUIResetAvatar_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_market_appearance_C::EventMarketAppearanceUIResetAvatar_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_appearance_C", "EventMarketAppearanceUIResetAvatar_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_market_appearance.bp_market_appearance_C.EventMarketAppearanceUIGetCurrentSelectNum
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,118 +53,6 @@ void Abp_market_appearance_C::EventMarketAppearanceUIGetCurrentSelectNum_NoFetch
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_market_appearance_C", "EventMarketAppearanceUIGetCurrentSelectNum_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_market_appearance.bp_market_appearance_C.EventMarketAppearanceUIToggleOwn
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_market_appearance_C::EventMarketAppearanceUIToggleOwn()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_appearance_C", "EventMarketAppearanceUIToggleOwn");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_market_appearance.bp_market_appearance_C.EventMarketAppearanceUIToggleOwn_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_market_appearance_C::EventMarketAppearanceUIToggleOwn_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_appearance_C", "EventMarketAppearanceUIToggleOwn_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_market_appearance.bp_market_appearance_C.EventMarketAppearanceUISelect
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_market_appearance_C::EventMarketAppearanceUISelect()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_appearance_C", "EventMarketAppearanceUISelect");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_market_appearance.bp_market_appearance_C.EventMarketAppearanceUISelect_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_market_appearance_C::EventMarketAppearanceUISelect_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_appearance_C", "EventMarketAppearanceUISelect_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_market_appearance.bp_market_appearance_C.EventMarketAppearanceUISelectType
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_market_appearance_C::EventMarketAppearanceUISelectType()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_appearance_C", "EventMarketAppearanceUISelectType");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_market_appearance.bp_market_appearance_C.EventMarketAppearanceUISelectType_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_market_appearance_C::EventMarketAppearanceUISelectType_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_appearance_C", "EventMarketAppearanceUISelectType_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_market_appearance.bp_market_appearance_C.EventMarketAppearanceUIBuy
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_market_appearance_C::EventMarketAppearanceUIBuy()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_appearance_C", "EventMarketAppearanceUIBuy");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_market_appearance.bp_market_appearance_C.EventMarketAppearanceUIBuy_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_market_appearance_C::EventMarketAppearanceUIBuy_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_appearance_C", "EventMarketAppearanceUIBuy_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -226,6 +86,34 @@ void Abp_market_appearance_C::EventMarketAppearanceUIBatchBuy_NoFetch()
 }
 
 
+// Function bp_market_appearance.bp_market_appearance_C.EventMarketAppearanceUIBuy
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_market_appearance_C::EventMarketAppearanceUIBuy()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_market_appearance_C", "EventMarketAppearanceUIBuy");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_market_appearance.bp_market_appearance_C.EventMarketAppearanceUIBuy_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_market_appearance_C::EventMarketAppearanceUIBuy_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_market_appearance_C", "EventMarketAppearanceUIBuy_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_market_appearance.bp_market_appearance_C.EventMarketAppearanceUISwitchGender
 // (BlueprintCallable, BlueprintEvent)
 
@@ -249,6 +137,118 @@ void Abp_market_appearance_C::EventMarketAppearanceUISwitchGender_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_market_appearance_C", "EventMarketAppearanceUISwitchGender_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_market_appearance.bp_market_appearance_C.EventMarketAppearanceUIResetAvatar
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_market_appearance_C::EventMarketAppearanceUIResetAvatar()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_market_appearance_C", "EventMarketAppearanceUIResetAvatar");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_market_appearance.bp_market_appearance_C.EventMarketAppearanceUIResetAvatar_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_market_appearance_C::EventMarketAppearanceUIResetAvatar_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_market_appearance_C", "EventMarketAppearanceUIResetAvatar_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_market_appearance.bp_market_appearance_C.EventMarketAppearanceUIToggleOwn
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_market_appearance_C::EventMarketAppearanceUIToggleOwn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_market_appearance_C", "EventMarketAppearanceUIToggleOwn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_market_appearance.bp_market_appearance_C.EventMarketAppearanceUIToggleOwn_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_market_appearance_C::EventMarketAppearanceUIToggleOwn_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_market_appearance_C", "EventMarketAppearanceUIToggleOwn_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_market_appearance.bp_market_appearance_C.EventMarketAppearanceUISelectType
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_market_appearance_C::EventMarketAppearanceUISelectType()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_market_appearance_C", "EventMarketAppearanceUISelectType");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_market_appearance.bp_market_appearance_C.EventMarketAppearanceUISelectType_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_market_appearance_C::EventMarketAppearanceUISelectType_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_market_appearance_C", "EventMarketAppearanceUISelectType_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_market_appearance.bp_market_appearance_C.EventMarketAppearanceUISelect
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_market_appearance_C::EventMarketAppearanceUISelect()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_market_appearance_C", "EventMarketAppearanceUISelect");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_market_appearance.bp_market_appearance_C.EventMarketAppearanceUISelect_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_market_appearance_C::EventMarketAppearanceUISelect_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_market_appearance_C", "EventMarketAppearanceUISelect_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

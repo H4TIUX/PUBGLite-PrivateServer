@@ -17,23 +17,23 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_corps.bp_corps_C
-// 0x0018 (0x0400 - 0x03E8)
+// 0x0018 (0x03F0 - 0x03D8)
 class Abp_corps_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	int32                                         BP_Corps_Checkbox_ID;                              // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         BP_CorpsUI_Has_New_IvitedCorps : 1;                // 0x03F4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         BP_Corps_NeedReOpenRoleInfo : 1;                   // 0x03F5(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_3F6[0x2];                                      // 0x03F6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03F8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	int32                                         BP_Corps_Checkbox_ID;                              // 0x03E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         BP_CorpsUI_Has_New_IvitedCorps : 1;                // 0x03E4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         BP_Corps_NeedReOpenRoleInfo : 1;                   // 0x03E5(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_3E6[0x2];                                      // 0x03E6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventClickToggle_Push();
-	void EventClickToggle_Push_NoFetch();
 	void EventOnCorpsClose();
 	void EventOnCorpsClose_NoFetch();
+	void EventClickToggle_Push();
+	void EventClickToggle_Push_NoFetch();
 
 public:
 	static class UClass* StaticClass()

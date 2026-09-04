@@ -13,74 +13,14 @@
 #include "CoreUObject_classes.hpp"
 #include "CoreUObject_parameters.hpp"
 
+#include "../UtilsDefs.h"
+
 
 namespace SDK
 {
 
-	// Predefined Function
-	// Finds a UObject in the global object array by name, optionally with ECastFlags to reduce heavy string comparison
-
-	class UObject* UObject::FindObjectFastImpl(const std::string& Name, EClassCastFlags RequiredType)
-	{
-		for (int i = 0; i < GObjects->Num(); ++i)
-		{
-			UObject* Object = GObjects->GetByIndex(i);
-
-			if (!Object)
-				continue;
-
-			if (Object->HasTypeFlag(RequiredType) && Object->GetName() == Name)
-				return Object;
-		}
-
-		return nullptr;
-	}
-
-
-	// Predefined Function
-	// Finds a UObject in the global object array by full-name, optionally with ECastFlags to reduce heavy string comparison
-
-	class UObject* UObject::FindObjectImpl(const std::string& FullName, EClassCastFlags RequiredType)
-	{
-		for (int i = 0; i < GObjects->Num(); ++i)
-		{
-			UObject* Object = GObjects->GetByIndex(i);
-
-			if (!Object)
-				continue;
-
-			if (Object->HasTypeFlag(RequiredType) && Object->GetFullName() == FullName)
-				return Object;
-		}
-
-		return nullptr;
-	}
-
-
-	// Predefined Function
-	// Returns the name of this object in the format 'Class Package.Outer.Object'
-
-	std::string UObject::GetFullName() const
-	{
-		if (this && GetClass())
-		{
-			std::string Temp;
-
-			for (UObject* NextOuter = GetOuter(); NextOuter; NextOuter = NextOuter->GetOuter())
-			{
-				Temp = NextOuter->GetName() + "." + Temp;
-			}
-
-			std::string Name = GetClass()->GetName();
-			Name += " ";
-			Name += Temp;
-			Name += GetName();
-
-			return Name;
-		}
-
-		return "None";
-	}
+// Predefined Function
+// Finds a UObject in the global object array by name, optionally with ECastFlags to reduce heavy string comparison
 
 	int32 UObject::GetIndex() const
 	{
@@ -99,159 +39,221 @@ namespace SDK
 		return reinterpret_cast<UObject*>(Dec::outer(cast));
 	}
 
-	// Predefined Function
-	// Retuns the name of this object
-
-	std::string UObject::GetName() const
+class UObject* UObject::FindObjectFastImpl(const std::string& Name, EClassCastFlags RequiredType)
+{
+	for (int i = 0; i < GObjects->Num(); ++i)
 	{
-		if (!this)
-			return "None";
+		UObject* Object = GObjects->GetByIndex(i);
+	
+		if (!Object)
+			continue;
+		
+		if (Object->HasTypeFlag(RequiredType) && Object->GetName() == Name)
+			return Object;
+	}
 
-		struct FName_Decrypted
+	return nullptr;
+}
+
+
+// Predefined Function
+// Finds a UObject in the global object array by full-name, optionally with ECastFlags to reduce heavy string comparison
+
+class UObject* UObject::FindObjectImpl(const std::string& FullName, EClassCastFlags RequiredType)
+{
+	for (int i = 0; i < GObjects->Num(); ++i)
+	{
+		UObject* Object = GObjects->GetByIndex(i);
+	
+		if (!Object)
+			continue;
+		
+		if (Object->HasTypeFlag(RequiredType) && Object->GetFullName() == FullName)
+			return Object;
+	}
+
+	return nullptr;
+}
+
+
+// Predefined Function
+// Returns the name of this object in the format 'Class Package.Outer.Object'
+
+std::string UObject::GetFullName() const
+{
+	if (this && GetClass())
+	{
+		std::string Temp;
+
+		for (UObject* NextOuter = GetOuter(); NextOuter; NextOuter = NextOuter->GetOuter())
 		{
-			uint32_t ComparisonIndex;
-			uint32_t Number;
-		};
-		FName EncryptedName = Name;
-		FName_Decrypted DecryptedName;
+			Temp = NextOuter->GetName() + "." + Temp;
+		}
 
-		uint32_t v14 = std::rotl(uint32_t(Name.ComparisonIndex) ^ 0x179C8BC9, 12);
-		DecryptedName.ComparisonIndex = v14 ^ (v14 << 0x10) ^ 0x6BC4F232;
-		uint32_t v15 = std::rotl(Name.Number ^ 0x8B6B3E42, 8);
-		DecryptedName.Number = v15 ^ (v15 << 0x10) ^ 0x877DA5AD;
+		std::string Name = GetClass()->GetName();
+		Name += " ";
+		Name += Temp;
+		Name += GetName();
 
-		FName StaticName = FName(DecryptedName.ComparisonIndex, DecryptedName.Number);
-
-		return StaticName.ToString();
+		return Name;
 	}
 
-	// Predefined Function
-	// Checks Class->FunctionFlags for TypeFlags
+	return "None";
+}
 
-	bool UObject::HasTypeFlag(EClassCastFlags TypeFlags) const
+
+// Predefined Function
+// Retuns the name of this object
+
+std::string UObject::GetName() const
+{
+	//return this ? Name.ToString() : "None";
+
+	if (!this)
+		return "None";
+
+	struct FName_Decrypted
 	{
-		return (GetClass()->CastFlags & TypeFlags);
-	}
+		uint32_t ComparisonIndex;
+		uint32_t Number;
+	};
+	FName EncryptedName = Name;
+	FName_Decrypted DecryptedName;
+
+	uint32_t v14 = std::rotl(uint32_t(EncryptedName.ComparisonIndex) ^ 0xED10C7AF, 4);
+	DecryptedName.ComparisonIndex = v14 ^ (v14 << 16) ^ 0x3C659A4D;
+	uint32_t v15 = std::rotl(EncryptedName.Number ^ 0xF7B20EA6, 14);
+	DecryptedName.Number = v15 ^ (v15 << 16) ^ 0xF914F7B2;
+
+	FName StaticName = FName(DecryptedName.ComparisonIndex, DecryptedName.Number);
+
+	return StaticName.ToString();
+}
 
 
-	// Predefined Function
-	// Checks a UObjects' type by TypeFlags
+// Predefined Function
+// Checks Class->FunctionFlags for TypeFlags
 
-	bool UObject::IsA(EClassCastFlags TypeFlags) const
+bool UObject::HasTypeFlag(EClassCastFlags TypeFlags) const
+{
+	return (GetClass()->CastFlags & TypeFlags);
+}
+
+
+// Predefined Function
+// Checks a UObjects' type by TypeFlags
+
+bool UObject::IsA(EClassCastFlags TypeFlags) const
+{
+	return (GetClass()->CastFlags & TypeFlags);
+}
+
+
+// Predefined Function
+// Checks a UObjects' type by Class name
+
+bool UObject::IsA(const class FName& ClassName) const
+{
+	return GetClass()->IsSubclassOf(ClassName);
+}
+
+
+// Predefined Function
+// Checks a UObjects' type by Class
+
+bool UObject::IsA(const class UClass* TypeClass) const
+{
+	return GetClass()->IsSubclassOf(TypeClass);
+}
+
+
+// Predefined Function
+// Checks whether this object is a classes' default-object
+
+bool UObject::IsDefaultObject() const
+{
+	//return (Flags & EObjectFlags::ClassDefaultObject);
+	if (GetName().contains("Default__"))
+		return true;
+
+	return false;
+}
+
+
+// Function CoreUObject.Object.ExecuteUbergraph
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// int32                                   EntryPoint                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UObject::ExecuteUbergraph(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("Object", "ExecuteUbergraph");
+
+	Params::Object_ExecuteUbergraph Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Predefined Function
+// Checks if this class has a certain base
+bool UStruct::IsSubclassOf(const FName& baseClassName) const
+{
+	if (baseClassName.IsNone())
+		return false;
+
+	for (const UStruct* Struct = this; Struct; Struct = Struct->Super)
 	{
-		return (Class->CastFlags & TypeFlags);
-	}
-
-
-	// Predefined Function
-	// Checks a UObjects' type by Class name
-
-	bool UObject::IsA(const class FName& ClassName) const
-	{
-		return Class->IsSubclassOf(ClassName);
-	}
-
-
-	// Predefined Function
-	// Checks a UObjects' type by Class
-
-	bool UObject::IsA(const class UClass* TypeClass) const
-	{
-		return GetClass()->IsSubclassOf(TypeClass);
-	}
-
-
-	// Predefined Function
-	// Checks whether this object is a classes' default-object
-
-	bool UObject::IsDefaultObject() const
-	{
-		//return (Flags & EObjectFlags::ClassDefaultObject);
-		if (GetName().contains("Default__"))
+		if (Struct->Name == baseClassName)
 			return true;
+	}
 
+	return false;
+}
+
+
+// Predefined Function
+// Checks if this class has a certain base
+
+bool UStruct::IsSubclassOf(const UStruct* Base) const
+{
+	if (!Base)
 		return false;
+
+	for (const UStruct* Struct = this; Struct; Struct = Struct->Super)
+	{
+		if (Struct == Base)
+			return true;
 	}
 
+	return false;
+}
 
-	// Function CoreUObject.Object.ExecuteUbergraph
-	// (Event, Public, BlueprintEvent)
-	// Parameters:
-	// int32                                   EntryPoint                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-	void UObject::ExecuteUbergraph(int32 EntryPoint)
+// Predefined Function
+// Gets a UFunction from this UClasses' 'Children' list
+
+class UFunction* UClass::GetFunction(const char* ClassName, const char* FuncName) const
+{
+	for(const UStruct* Clss = this; Clss; Clss = Clss->Super)
 	{
-		static class UFunction* Func = nullptr;
-
-		if (Func == nullptr)
-			Func = Class->GetFunction("Object", "ExecuteUbergraph");
-
-		Params::Object_ExecuteUbergraph Parms{};
-
-		Parms.EntryPoint = EntryPoint;
-
-		UObject::ProcessEvent(Func, &Parms);
-	}
-
-
-	// Predefined Function
-	// Checks if this class has a certain base
-
-	bool UStruct::IsSubclassOf(const UStruct* Base) const
-	{
-		if (!Base)
-			return false;
-
-		for (const UStruct* Struct = this; Struct; Struct = Struct->Super)
+		if (Clss->GetName() != ClassName)
+			continue;
+			
+		for (UField* Field = Clss->Children; Field; Field = Field->Next)
 		{
-			if (Struct == Base)
-				return true;
+			if(Field->HasTypeFlag(EClassCastFlags::Function) && Field->GetName() == FuncName)
+				return static_cast<class UFunction*>(Field);
 		}
-
-		return false;
 	}
 
-
-	// Predefined Function
-	// Checks if this class has a certain base
-
-	bool UStruct::IsSubclassOf(const FName& baseClassName) const
-	{
-		if (baseClassName.IsNone())
-			return false;
-
-		for (const UStruct* Struct = this; Struct; Struct = Struct->Super)
-		{
-			if (Struct->Name == baseClassName)
-				return true;
-		}
-
-		return false;
-	}
-
-
-	// Predefined Function
-	// Gets a UFunction from this UClasses' 'Children' list
-
-	class UFunction* UClass::GetFunction(const char* ClassName, const char* FuncName) const
-	{
-		for (const UStruct* Clss = this; Clss; Clss = Clss->Super)
-		{
-			if (!Clss)
-				continue;
-
-			if (Clss->GetName() != ClassName)
-				continue;
-
-			for (UField* Field = Clss->Children; Field; Field = Field->Next)
-			{
-				if (Field->HasTypeFlag(EClassCastFlags::Function) && Field->GetName() == FuncName)
-					return static_cast<class UFunction*>(Field);
-			}
-		}
-
-		return nullptr;
-	}
+	return nullptr;
+}
 
 }
 

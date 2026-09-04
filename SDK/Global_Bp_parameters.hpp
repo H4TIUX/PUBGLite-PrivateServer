@@ -12,8 +12,8 @@
 
 #include "BP_STRUCT_CorpsBadge_type_structs.hpp"
 #include "BP_STRUCT_RankIntegralLevel_type_structs.hpp"
-#include "BP_STRUCT_AvatarFrame_type_structs.hpp"
 #include "Engine_structs.hpp"
+#include "BP_STRUCT_AvatarFrame_type_structs.hpp"
 
 
 namespace SDK::Params

@@ -37,6 +37,48 @@ void UFreeCameraBtn_C::ExecuteUbergraph_FreeCameraBtn(int32 EntryPoint)
 }
 
 
+// Function FreeCameraBtn.FreeCameraBtn_C.OnScopeChanged
+// (BlueprintCallable, BlueprintEvent)
+
+void UFreeCameraBtn_C::OnScopeChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("FreeCameraBtn_C", "OnScopeChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function FreeCameraBtn.FreeCameraBtn_C.OnSwitchCameraModeScope_Aim
+// (BlueprintCallable, BlueprintEvent)
+
+void UFreeCameraBtn_C::OnSwitchCameraModeScope_Aim()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("FreeCameraBtn_C", "OnSwitchCameraModeScope_Aim");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function FreeCameraBtn.FreeCameraBtn_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UFreeCameraBtn_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("FreeCameraBtn_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function FreeCameraBtn.FreeCameraBtn_C.CustomEvent_0
 // (BlueprintCallable, BlueprintEvent)
 
@@ -84,6 +126,20 @@ void UFreeCameraBtn_C::Tick(const struct FGeometry& MyGeometry_0, float InDeltaT
 	Parms.InDeltaTime = InDeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function FreeCameraBtn.FreeCameraBtn_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UFreeCameraBtn_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("FreeCameraBtn_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

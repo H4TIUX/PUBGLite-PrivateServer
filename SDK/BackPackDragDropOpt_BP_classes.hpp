@@ -11,20 +11,20 @@
 #include "Basic.hpp"
 
 #include "Basic_structs.hpp"
-#include "EBackPackDragOrigin_structs.hpp"
 #include "UMG_classes.hpp"
+#include "EBackPackDragOrigin_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BackPackDragDropOpt_BP.BackPackDragDropOpt_BP_C
-// 0x00A8 (0x0130 - 0x0088)
+// 0x00A0 (0x0128 - 0x0088)
 class UBackPackDragDropOpt_BP_C final : public UDragDropOperation
 {
 public:
-	struct FBattleItemData                        ItemData;                                          // 0x0088(0x00A0)(Edit, BlueprintVisible, ExposeOnSpawn)
-	EBackPackDragOrigin                           ItemFrom;                                          // 0x0128(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FBattleItemData                        ItemData;                                          // 0x0088(0x0098)(Edit, BlueprintVisible, ExposeOnSpawn)
+	EBackPackDragOrigin                           ItemFrom;                                          // 0x0120(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()

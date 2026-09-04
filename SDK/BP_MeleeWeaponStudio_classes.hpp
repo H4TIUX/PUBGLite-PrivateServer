@@ -18,13 +18,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MeleeWeaponStudio.BP_MeleeWeaponStudio_C
-// 0x0020 (0x0440 - 0x0420)
+// 0x0020 (0x0430 - 0x0410)
 class ABP_MeleeWeaponStudio_C final : public AItemStudio
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0420(0x0008)(Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   WeaponStaticMesh;                                  // 0x0428(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        WeaponComponent;                                   // 0x0430(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0008)(Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   WeaponStaticMesh;                                  // 0x0418(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        WeaponComponent;                                   // 0x0420(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_MeleeWeaponStudio(int32 EntryPoint);

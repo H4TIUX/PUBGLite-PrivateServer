@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Basic_structs.hpp"
-#include "ShadowTrackerExtra_structs.hpp"
 #include "BP_STRUCT_BackpackMapping_type_structs.hpp"
 #include "Gameplay_structs.hpp"
+#include "ShadowTrackerExtra_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "BP_STRUCT_Item_type_structs.hpp"
 #include "Engine_structs.hpp"
@@ -315,14 +315,14 @@ struct BP_CharacterStudio_C_SetAnimPose final
 {
 public:
 	class ASTExtraWeapon*                         CallFunc_GetCurrentWeapon_ReturnValue;             // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ULobby_AnimBP_C*                        CallFunc_GetAnimInstance_AnimInstance;             // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCH_SceneCapture_C*                     CallFunc_GetAnimInstance_AnimInstance;             // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EAnimWeaponType                               CallFunc_GetAnimWeaponType_ReturnValue;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x0011(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 	uint8                                         CallFunc_IsValid_ReturnValue2 : 1;                 // 0x0012(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 	uint8                                         CallFunc_IsValid_ReturnValue3 : 1;                 // 0x0013(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 	uint8                                         CallFunc_IsValid_ReturnValue4 : 1;                 // 0x0014(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULobby_AnimBP_C*                        CallFunc_GetAnimInstance_AnimInstance2;            // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCH_SceneCapture_C*                     CallFunc_GetAnimInstance_AnimInstance2;            // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_IsValid_ReturnValue5 : 1;                 // 0x0020(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 	uint8                                         CallFunc_IsValid_ReturnValue6 : 1;                 // 0x0021(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 };

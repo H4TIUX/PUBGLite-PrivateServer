@@ -97,13 +97,13 @@ void UBP_VoiceDataObject_C::InitSubList()
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   Postion                                                (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   postion                                                (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   CheckLength                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class ASTExtraBaseCharacter*            nowPlayer                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class ASTExtraShootWeapon*              nowWeapon                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class ASTExtraVehicleBase*              nowVehicle                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_VoiceDataObject_C::SetCheckData(int32 Index_0, const struct FVector& Postion, float CheckLength, class ASTExtraBaseCharacter* nowPlayer, class ASTExtraShootWeapon* nowWeapon, class ASTExtraVehicleBase* nowVehicle)
+void UBP_VoiceDataObject_C::SetCheckData(int32 Index_0, const struct FVector& postion, float CheckLength, class ASTExtraBaseCharacter* nowPlayer, class ASTExtraShootWeapon* nowWeapon, class ASTExtraVehicleBase* nowVehicle)
 {
 	static class UFunction* Func = nullptr;
 
@@ -113,7 +113,7 @@ void UBP_VoiceDataObject_C::SetCheckData(int32 Index_0, const struct FVector& Po
 	Params::BP_VoiceDataObject_C_SetCheckData Parms{};
 
 	Parms.Index_0 = Index_0;
-	Parms.Postion = std::move(Postion);
+	Parms.postion = std::move(postion);
 	Parms.CheckLength = CheckLength;
 	Parms.nowPlayer = nowPlayer;
 	Parms.nowWeapon = nowWeapon;

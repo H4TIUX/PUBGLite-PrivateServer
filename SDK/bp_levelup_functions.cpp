@@ -30,34 +30,6 @@ void Abp_levelup_C::UserConstructionScript()
 }
 
 
-// Function bp_levelup.bp_levelup_C.EventLevelUpShareRank
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_levelup_C::EventLevelUpShareRank()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_levelup_C", "EventLevelUpShareRank");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_levelup.bp_levelup_C.EventLevelUpShareRank_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_levelup_C::EventLevelUpShareRank_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_levelup_C", "EventLevelUpShareRank_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_levelup.bp_levelup_C.EventLevelUpShareLevel
 // (BlueprintCallable, BlueprintEvent)
 
@@ -109,6 +81,34 @@ void Abp_levelup_C::EventFetchInfo_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_levelup_C", "EventFetchInfo_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_levelup.bp_levelup_C.EventLevelUpShareRank
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_levelup_C::EventLevelUpShareRank()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_levelup_C", "EventLevelUpShareRank");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_levelup.bp_levelup_C.EventLevelUpShareRank_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_levelup_C::EventLevelUpShareRank_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_levelup_C", "EventLevelUpShareRank_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -58,141 +58,29 @@ void Abp_setting_C::EventShowBackToLobbyFromTrainingNotice_NoFetch()
 }
 
 
-// Function bp_setting.bp_setting_C.EventSettingCannotSetHigherFps_Push
+// Function bp_setting.bp_setting_C.EventSettingShowAASettingModifiedNotice
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_setting_C::EventSettingCannotSetHigherFps_Push()
+void Abp_setting_C::EventSettingShowAASettingModifiedNotice()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingCannotSetHigherFps_Push");
+		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingShowAASettingModifiedNotice");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_setting.bp_setting_C.EventSettingCannotSetHigherFps_Push_NoFetch
+// Function bp_setting.bp_setting_C.EventSettingShowAASettingModifiedNotice_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_setting_C::EventSettingCannotSetHigherFps_Push_NoFetch()
+void Abp_setting_C::EventSettingShowAASettingModifiedNotice_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingCannotSetHigherFps_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventTurnonManualRecord
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventTurnonManualRecord()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventTurnonManualRecord");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventTurnonManualRecord_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventTurnonManualRecord_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventTurnonManualRecord_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventClickSwitchButton
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventClickSwitchButton()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventClickSwitchButton");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventClickSwitchButton_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventClickSwitchButton_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventClickSwitchButton_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventSettingNoticeHighestArtClosed
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventSettingNoticeHighestArtClosed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingNoticeHighestArtClosed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventSettingNoticeHighestArtClosed_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventSettingNoticeHighestArtClosed_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingNoticeHighestArtClosed_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventSetDingYue
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventSetDingYue()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventSetDingYue");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventSetDingYue_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventSetDingYue_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventSetDingYue_NoFetch");
+		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingShowAASettingModifiedNotice_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -226,57 +114,141 @@ void Abp_setting_C::EventShowLogOutNoticce_NoFetch()
 }
 
 
-// Function bp_setting.bp_setting_C.EventSetDingYueNewVer
+// Function bp_setting.bp_setting_C.EventShowNoQuickMsgSelected
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_setting_C::EventSetDingYueNewVer()
+void Abp_setting_C::EventShowNoQuickMsgSelected()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventSetDingYueNewVer");
+		Func = GetClass()->GetFunction("bp_setting_C", "EventShowNoQuickMsgSelected");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_setting.bp_setting_C.EventSetDingYueNewVer_NoFetch
+// Function bp_setting.bp_setting_C.EventShowNoQuickMsgSelected_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_setting_C::EventSetDingYueNewVer_NoFetch()
+void Abp_setting_C::EventShowNoQuickMsgSelected_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventSetDingYueNewVer_NoFetch");
+		Func = GetClass()->GetFunction("bp_setting_C", "EventShowNoQuickMsgSelected_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_setting.bp_setting_C.EventSettingSendCanShowHistory
+// Function bp_setting.bp_setting_C.EventTurnonMomentRecord
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_setting_C::EventSettingSendCanShowHistory()
+void Abp_setting_C::EventTurnonMomentRecord()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingSendCanShowHistory");
+		Func = GetClass()->GetFunction("bp_setting_C", "EventTurnonMomentRecord");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_setting.bp_setting_C.EventSettingSendCanShowHistory_NoFetch
+// Function bp_setting.bp_setting_C.EventTurnonMomentRecord_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_setting_C::EventSettingSendCanShowHistory_NoFetch()
+void Abp_setting_C::EventTurnonMomentRecord_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingSendCanShowHistory_NoFetch");
+		Func = GetClass()->GetFunction("bp_setting_C", "EventTurnonMomentRecord_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventClickSwitchButton
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventClickSwitchButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventClickSwitchButton");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventClickSwitchButton_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventClickSwitchButton_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventClickSwitchButton_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventShowMyRecordVideos
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventShowMyRecordVideos()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventShowMyRecordVideos");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventShowMyRecordVideos_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventShowMyRecordVideos_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventShowMyRecordVideos_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventOpenKefuUrl
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventOpenKefuUrl()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventOpenKefuUrl");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventOpenKefuUrl_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventOpenKefuUrl_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventOpenKefuUrl_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -310,29 +282,29 @@ void Abp_setting_C::EventShowDuplactedMsgSelected_NoFetch()
 }
 
 
-// Function bp_setting.bp_setting_C.EventSettingShowConfirmModifyHDR
+// Function bp_setting.bp_setting_C.EventShowQuickMsgBackToDefaultMsg
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_setting_C::EventSettingShowConfirmModifyHDR()
+void Abp_setting_C::EventShowQuickMsgBackToDefaultMsg()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingShowConfirmModifyHDR");
+		Func = GetClass()->GetFunction("bp_setting_C", "EventShowQuickMsgBackToDefaultMsg");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_setting.bp_setting_C.EventSettingShowConfirmModifyHDR_NoFetch
+// Function bp_setting.bp_setting_C.EventShowQuickMsgBackToDefaultMsg_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_setting_C::EventSettingShowConfirmModifyHDR_NoFetch()
+void Abp_setting_C::EventShowQuickMsgBackToDefaultMsg_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingShowConfirmModifyHDR_NoFetch");
+		Func = GetClass()->GetFunction("bp_setting_C", "EventShowQuickMsgBackToDefaultMsg_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -394,202 +366,6 @@ void Abp_setting_C::EventShowQuickMsgModifiedSuccess_NoFetch()
 }
 
 
-// Function bp_setting.bp_setting_C.EventCancelDingYue
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventCancelDingYue()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventCancelDingYue");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventCancelDingYue_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventCancelDingYue_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventCancelDingYue_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventOpenKefuUrl
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventOpenKefuUrl()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventOpenKefuUrl");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventOpenKefuUrl_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventOpenKefuUrl_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventOpenKefuUrl_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventTurnonMomentRecord
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventTurnonMomentRecord()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventTurnonMomentRecord");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventTurnonMomentRecord_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventTurnonMomentRecord_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventTurnonMomentRecord_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventCancelDingYueNewVer
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventCancelDingYueNewVer()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventCancelDingYueNewVer");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventCancelDingYueNewVer_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventCancelDingYueNewVer_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventCancelDingYueNewVer_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventSettingShowAASettingModifiedNotice
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventSettingShowAASettingModifiedNotice()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingShowAASettingModifiedNotice");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventSettingShowAASettingModifiedNotice_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventSettingShowAASettingModifiedNotice_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingShowAASettingModifiedNotice_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventShowBackToLobbyNotice
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventShowBackToLobbyNotice()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventShowBackToLobbyNotice");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventShowBackToLobbyNotice_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventShowBackToLobbyNotice_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventShowBackToLobbyNotice_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventShowNoQuickMsgSelected
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventShowNoQuickMsgSelected()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventShowNoQuickMsgSelected");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventShowNoQuickMsgSelected_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventShowNoQuickMsgSelected_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventShowNoQuickMsgSelected_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_setting.bp_setting_C.EventForceSwitchToManulRecord
 // (BlueprintCallable, BlueprintEvent)
 
@@ -613,174 +389,6 @@ void Abp_setting_C::EventForceSwitchToManulRecord_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_setting_C", "EventForceSwitchToManulRecord_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventFetchInfo
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventFetchInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventFetchInfo");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventFetchInfo_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventFetchInfo_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventFetchInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventShowMyRecordVideos
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventShowMyRecordVideos()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventShowMyRecordVideos");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventShowMyRecordVideos_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventShowMyRecordVideos_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventShowMyRecordVideos_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventSettingShowConfirmModifyFps
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventSettingShowConfirmModifyFps()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingShowConfirmModifyFps");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventSettingShowConfirmModifyFps_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventSettingShowConfirmModifyFps_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingShowConfirmModifyFps_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventShowQuickMsgBackToDefaultMsg
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventShowQuickMsgBackToDefaultMsg()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventShowQuickMsgBackToDefaultMsg");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventShowQuickMsgBackToDefaultMsg_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventShowQuickMsgBackToDefaultMsg_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventShowQuickMsgBackToDefaultMsg_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventSettingCannotSetHigherQuality_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventSettingCannotSetHigherQuality_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingCannotSetHigherQuality_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventSettingCannotSetHigherQuality_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventSettingCannotSetHigherQuality_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingCannotSetHigherQuality_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventSettingConfirmModifyArtQuality_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventSettingConfirmModifyArtQuality_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingConfirmModifyArtQuality_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_setting.bp_setting_C.EventSettingConfirmModifyArtQuality_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_setting_C::EventSettingConfirmModifyArtQuality_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingConfirmModifyArtQuality_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -814,6 +422,314 @@ void Abp_setting_C::EventForceSwitchToMomentRecord_NoFetch()
 }
 
 
+// Function bp_setting.bp_setting_C.EventTurnonManualRecord
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventTurnonManualRecord()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventTurnonManualRecord");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventTurnonManualRecord_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventTurnonManualRecord_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventTurnonManualRecord_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventSettingConfirmModifyArtQuality_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventSettingConfirmModifyArtQuality_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingConfirmModifyArtQuality_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventSettingConfirmModifyArtQuality_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventSettingConfirmModifyArtQuality_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingConfirmModifyArtQuality_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventCancelDingYueNewVer
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventCancelDingYueNewVer()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventCancelDingYueNewVer");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventCancelDingYueNewVer_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventCancelDingYueNewVer_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventCancelDingYueNewVer_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventCancelDingYue
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventCancelDingYue()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventCancelDingYue");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventCancelDingYue_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventCancelDingYue_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventCancelDingYue_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventSetDingYueNewVer
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventSetDingYueNewVer()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventSetDingYueNewVer");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventSetDingYueNewVer_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventSetDingYueNewVer_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventSetDingYueNewVer_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventSetDingYue
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventSetDingYue()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventSetDingYue");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventSetDingYue_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventSetDingYue_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventSetDingYue_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventFetchInfo
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventFetchInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventFetchInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventFetchInfo_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventFetchInfo_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventFetchInfo_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventSettingShowConfirmModifyFps
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventSettingShowConfirmModifyFps()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingShowConfirmModifyFps");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventSettingShowConfirmModifyFps_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventSettingShowConfirmModifyFps_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingShowConfirmModifyFps_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventSettingNoticeHighestArtClosed
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventSettingNoticeHighestArtClosed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingNoticeHighestArtClosed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventSettingNoticeHighestArtClosed_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventSettingNoticeHighestArtClosed_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingNoticeHighestArtClosed_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventSettingShowConfirmModifyHDR
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventSettingShowConfirmModifyHDR()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingShowConfirmModifyHDR");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventSettingShowConfirmModifyHDR_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventSettingShowConfirmModifyHDR_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingShowConfirmModifyHDR_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventShowBackToLobbyNotice
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventShowBackToLobbyNotice()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventShowBackToLobbyNotice");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventShowBackToLobbyNotice_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventShowBackToLobbyNotice_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventShowBackToLobbyNotice_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_setting.bp_setting_C.EventSettingNotSupportHDR
 // (BlueprintCallable, BlueprintEvent)
 
@@ -842,6 +758,34 @@ void Abp_setting_C::EventSettingNotSupportHDR_NoFetch()
 }
 
 
+// Function bp_setting.bp_setting_C.EventSettingSendCanShowHistory
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventSettingSendCanShowHistory()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingSendCanShowHistory");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventSettingSendCanShowHistory_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventSettingSendCanShowHistory_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingSendCanShowHistory_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_setting.bp_setting_C.EventSettingCurPicSettingNotSupportThisFps
 // (BlueprintCallable, BlueprintEvent)
 
@@ -865,6 +809,62 @@ void Abp_setting_C::EventSettingCurPicSettingNotSupportThisFps_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingCurPicSettingNotSupportThisFps_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventSettingCannotSetHigherFps_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventSettingCannotSetHigherFps_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingCannotSetHigherFps_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventSettingCannotSetHigherFps_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventSettingCannotSetHigherFps_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingCannotSetHigherFps_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventSettingCannotSetHigherQuality_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventSettingCannotSetHigherQuality_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingCannotSetHigherQuality_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_setting.bp_setting_C.EventSettingCannotSetHigherQuality_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_setting_C::EventSettingCannotSetHigherQuality_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_setting_C", "EventSettingCannotSetHigherQuality_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

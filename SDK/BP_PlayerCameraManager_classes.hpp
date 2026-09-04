@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PlayerCameraManager.BP_PlayerCameraManager_C
-// 0x0000 (0x1AE0 - 0x1AE0)
+// 0x0000 (0x1BD0 - 0x1BD0)
 class ABP_PlayerCameraManager_C final : public ATslPlayerCameraManager
 {
 public:

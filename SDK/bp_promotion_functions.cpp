@@ -30,6 +30,90 @@ void Abp_promotion_C::UserConstructionScript()
 }
 
 
+// Function bp_promotion.bp_promotion_C.EventPromotionViewRegisterFriend
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_promotion_C::EventPromotionViewRegisterFriend()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_promotion_C", "EventPromotionViewRegisterFriend");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_promotion.bp_promotion_C.EventPromotionViewRegisterFriend_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_promotion_C::EventPromotionViewRegisterFriend_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_promotion_C", "EventPromotionViewRegisterFriend_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_promotion.bp_promotion_C.EventPromotionRule
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_promotion_C::EventPromotionRule()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_promotion_C", "EventPromotionRule");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_promotion.bp_promotion_C.EventPromotionRule_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_promotion_C::EventPromotionRule_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_promotion_C", "EventPromotionRule_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_promotion.bp_promotion_C.EventPromotionShare
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_promotion_C::EventPromotionShare()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_promotion_C", "EventPromotionShare");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_promotion.bp_promotion_C.EventPromotionShare_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_promotion_C::EventPromotionShare_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_promotion_C", "EventPromotionShare_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_promotion.bp_promotion_C.EventSetInfo_Push
 // (BlueprintCallable, BlueprintEvent)
 
@@ -86,29 +170,57 @@ void Abp_promotion_C::EventFetchInfo_NoFetch()
 }
 
 
-// Function bp_promotion.bp_promotion_C.EventPromotionRule
+// Function bp_promotion.bp_promotion_C.EventPromotionCloseUI
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_promotion_C::EventPromotionRule()
+void Abp_promotion_C::EventPromotionCloseUI()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_promotion_C", "EventPromotionRule");
+		Func = GetClass()->GetFunction("bp_promotion_C", "EventPromotionCloseUI");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_promotion.bp_promotion_C.EventPromotionRule_NoFetch
+// Function bp_promotion.bp_promotion_C.EventPromotionCloseUI_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_promotion_C::EventPromotionRule_NoFetch()
+void Abp_promotion_C::EventPromotionCloseUI_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_promotion_C", "EventPromotionRule_NoFetch");
+		Func = GetClass()->GetFunction("bp_promotion_C", "EventPromotionCloseUI_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_promotion.bp_promotion_C.EventPromotionFriendInvite
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_promotion_C::EventPromotionFriendInvite()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_promotion_C", "EventPromotionFriendInvite");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_promotion.bp_promotion_C.EventPromotionFriendInvite_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_promotion_C::EventPromotionFriendInvite_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_promotion_C", "EventPromotionFriendInvite_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -142,90 +254,6 @@ void Abp_promotion_C::EventPromotionNextPage_NoFetch()
 }
 
 
-// Function bp_promotion.bp_promotion_C.EventPromotionViewRegisterFriend
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_promotion_C::EventPromotionViewRegisterFriend()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_promotion_C", "EventPromotionViewRegisterFriend");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_promotion.bp_promotion_C.EventPromotionViewRegisterFriend_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_promotion_C::EventPromotionViewRegisterFriend_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_promotion_C", "EventPromotionViewRegisterFriend_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_promotion.bp_promotion_C.EventPromotionShare
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_promotion_C::EventPromotionShare()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_promotion_C", "EventPromotionShare");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_promotion.bp_promotion_C.EventPromotionShare_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_promotion_C::EventPromotionShare_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_promotion_C", "EventPromotionShare_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_promotion.bp_promotion_C.EventPromotionCloseUI
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_promotion_C::EventPromotionCloseUI()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_promotion_C", "EventPromotionCloseUI");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_promotion.bp_promotion_C.EventPromotionCloseUI_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_promotion_C::EventPromotionCloseUI_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_promotion_C", "EventPromotionCloseUI_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_promotion.bp_promotion_C.EventPromotionGetAward
 // (BlueprintCallable, BlueprintEvent)
 
@@ -249,34 +277,6 @@ void Abp_promotion_C::EventPromotionGetAward_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_promotion_C", "EventPromotionGetAward_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_promotion.bp_promotion_C.EventPromotionFriendInvite
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_promotion_C::EventPromotionFriendInvite()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_promotion_C", "EventPromotionFriendInvite");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_promotion.bp_promotion_C.EventPromotionFriendInvite_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_promotion_C::EventPromotionFriendInvite_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_promotion_C", "EventPromotionFriendInvite_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

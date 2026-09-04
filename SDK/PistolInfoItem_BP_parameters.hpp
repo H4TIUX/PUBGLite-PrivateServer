@@ -10,23 +10,23 @@
 
 #include "Basic.hpp"
 
+#include "BP_STRUCT_LocalizeRes_type_structs.hpp"
 #include "InputCore_structs.hpp"
-#include "UMG_structs.hpp"
-#include "BP_STRUCT_Item_type_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
-#include "Basic_structs.hpp"
+#include "UMG_structs.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "Basic_structs.hpp"
+#include "BP_STRUCT_Item_type_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "EBackPackDragOrigin_structs.hpp"
-#include "BP_STRUCT_LocalizeRes_type_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function PistolInfoItem_BP.PistolInfoItem_BP_C.ExecuteUbergraph_PistolInfoItem_BP
-// 0x05B8 (0x05B8 - 0x0000)
+// 0x05A8 (0x05A8 - 0x0000)
 struct PistolInfoItem_BP_C_ExecuteUbergraph_PistolInfoItem_BP final
 {
 public:
@@ -45,54 +45,54 @@ public:
 	uint8                                         CallFunc_GetDataTableRowFromName_ReturnValue : 1;  // 0x0060(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FBattleItemData                        K2Node_CustomEvent_ItemData;                       // 0x0068(0x00A0)()
-	EBackPackDragOrigin                           K2Node_CustomEvent_DragOrigin;                     // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerEvent                          K2Node_Event_PointerEvent3;                        // 0x0110(0x0078)()
-	class UDragDropOperation*                     K2Node_Event_Operation3;                           // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FPointerEvent                          K2Node_Event_MouseEvent2;                          // 0x0190(0x0078)()
-	struct FSlateBrush                            K2Node_CustomEvent_Brush;                          // 0x0208(0x0078)()
-	struct FBattleItemData                        K2Node_CustomEvent_battleItemData;                 // 0x0280(0x00A0)()
-	uint8                                         K2Node_CustomEvent_IsShow : 1;                     // 0x0320(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_IsAttachSlotMouseOver_IsMouseOver : 1;    // 0x0321(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_322[0x2];                                      // 0x0322(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometry                              K2Node_Event_MyGeometry2;                          // 0x0324(0x0038)(IsPlainOldData, NoDestructor)
-	uint8                                         Pad_35C[0x4];                                      // 0x035C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerEvent                          K2Node_Event_MouseEvent;                           // 0x0360(0x0078)()
-	struct FVector2D                              K2Node_Event_TempScreenPos;                        // 0x03D8(0x0008)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ASTExtraPlayerController*               K2Node_DynamicCast_AsSTExtra_Player_Controller;    // 0x03E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         K2Node_DynamicCast_bSuccess : 1;                   // 0x03F0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_3F1[0x3];                                      // 0x03F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x03F4(0x0038)(IsPlainOldData, NoDestructor)
-	uint8                                         Pad_42C[0x4];                                      // 0x042C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerEvent                          K2Node_Event_PointerEvent2;                        // 0x0430(0x0078)()
-	class UDragDropOperation*                     K2Node_Event_Operation2;                           // 0x04A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGroundDragDropOpt_BP_C*                K2Node_DynamicCast_AsGround_Drag_Drop_Opt_BP;      // 0x04B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         K2Node_DynamicCast_bSuccess2 : 1;                  // 0x04B8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_4B9[0x7];                                      // 0x04B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerEvent                          K2Node_Event_PointerEvent;                         // 0x04C0(0x0078)()
-	class UDragDropOperation*                     K2Node_Event_Operation;                            // 0x0538(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x0540(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_IsPistolGun_IsPistolGun : 1;              // 0x0541(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	struct FBattleItemData                        K2Node_CustomEvent_ItemData;                       // 0x0068(0x0098)()
+	EBackPackDragOrigin                           K2Node_CustomEvent_DragOrigin;                     // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerEvent                          K2Node_Event_PointerEvent3;                        // 0x0108(0x0078)()
+	class UDragDropOperation*                     K2Node_Event_Operation3;                           // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerEvent                          K2Node_Event_MouseEvent2;                          // 0x0188(0x0078)()
+	struct FSlateBrush                            K2Node_CustomEvent_Brush;                          // 0x0200(0x0078)()
+	struct FBattleItemData                        K2Node_CustomEvent_battleItemData;                 // 0x0278(0x0098)()
+	uint8                                         K2Node_CustomEvent_IsShow : 1;                     // 0x0310(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsAttachSlotMouseOver_IsMouseOver : 1;    // 0x0311(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_312[0x2];                                      // 0x0312(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometry                              K2Node_Event_MyGeometry2;                          // 0x0314(0x0038)(IsPlainOldData, NoDestructor)
+	uint8                                         Pad_34C[0x4];                                      // 0x034C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerEvent                          K2Node_Event_MouseEvent;                           // 0x0350(0x0078)()
+	struct FVector2D                              K2Node_Event_TempScreenPos;                        // 0x03C8(0x0008)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x03D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ASTExtraPlayerController*               K2Node_DynamicCast_AsSTExtra_Player_Controller;    // 0x03D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         K2Node_DynamicCast_bSuccess : 1;                   // 0x03E0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_3E1[0x3];                                      // 0x03E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x03E4(0x0038)(IsPlainOldData, NoDestructor)
+	uint8                                         Pad_41C[0x4];                                      // 0x041C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerEvent                          K2Node_Event_PointerEvent2;                        // 0x0420(0x0078)()
+	class UDragDropOperation*                     K2Node_Event_Operation2;                           // 0x0498(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGroundDragDropOpt_BP_C*                K2Node_DynamicCast_AsGround_Drag_Drop_Opt_BP;      // 0x04A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         K2Node_DynamicCast_bSuccess2 : 1;                  // 0x04A8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_4A9[0x7];                                      // 0x04A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerEvent                          K2Node_Event_PointerEvent;                         // 0x04B0(0x0078)()
+	class UDragDropOperation*                     K2Node_Event_Operation;                            // 0x0528(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x0530(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsPistolGun_IsPistolGun : 1;              // 0x0531(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_532[0x6];                                      // 0x0532(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_WeaponStudio_C*                     K2Node_DynamicCast_AsBP_Weapon_Studio;             // 0x0538(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         K2Node_DynamicCast_bSuccess3 : 1;                  // 0x0540(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsValid_ReturnValue2 : 1;                 // 0x0541(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 	uint8                                         Pad_542[0x6];                                      // 0x0542(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_WeaponStudio_C*                     K2Node_DynamicCast_AsBP_Weapon_Studio;             // 0x0548(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         K2Node_DynamicCast_bSuccess3 : 1;                  // 0x0550(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_IsValid_ReturnValue2 : 1;                 // 0x0551(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_552[0x6];                                      // 0x0552(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(const struct FSlateBrush& Brush, const struct FBattleItemData& BattleItemData, uint8 IsShow)> K2Node_CreateDelegate_OutputDelegate; // 0x0558(0x0010)(ZeroConstructor, NoDestructor)
-	class ABP_WeaponStudio_C*                     K2Node_DynamicCast_AsBP_Weapon_Studio2;            // 0x0568(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         K2Node_DynamicCast_bSuccess4 : 1;                  // 0x0570(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_IsValid_ReturnValue3 : 1;                 // 0x0571(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_572[0x6];                                      // 0x0572(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate2;             // 0x0578(0x0010)(ZeroConstructor, NoDestructor)
-	class ASTExtraPlayerCharacter*                CallFunc_GetOwningPlayerPawnOrVehicleDriver_ReturnValue; // 0x0588(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FBattleItemData& ItemData, EBackPackDragOrigin DragOrigin)> K2Node_CreateDelegate_OutputDelegate3; // 0x0590(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         CallFunc_ShouldDropBagItem_ReturnValue : 1;        // 0x05A0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_BooleanOR_ReturnValue : 1;                // 0x05A1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_IsValid_ReturnValue4 : 1;                 // 0x05A2(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_5A3[0x5];                                      // 0x05A3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UFitingSlotItem_BP_C*>           K2Node_MakeArray_Array;                            // 0x05A8(0x0010)(ZeroConstructor, ReferenceParm)
+	TDelegate<void(const struct FSlateBrush& Brush, const struct FBattleItemData& BattleItemData, uint8 IsShow)> K2Node_CreateDelegate_OutputDelegate; // 0x0548(0x0010)(ZeroConstructor, NoDestructor)
+	class ABP_WeaponStudio_C*                     K2Node_DynamicCast_AsBP_Weapon_Studio2;            // 0x0558(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         K2Node_DynamicCast_bSuccess4 : 1;                  // 0x0560(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsValid_ReturnValue3 : 1;                 // 0x0561(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_562[0x6];                                      // 0x0562(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate2;             // 0x0568(0x0010)(ZeroConstructor, NoDestructor)
+	class ASTExtraPlayerCharacter*                CallFunc_GetOwningPlayerPawnOrVehicleDriver_ReturnValue; // 0x0578(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FBattleItemData& ItemData, EBackPackDragOrigin DragOrigin)> K2Node_CreateDelegate_OutputDelegate3; // 0x0580(0x0010)(ZeroConstructor, NoDestructor)
+	uint8                                         CallFunc_ShouldDropBagItem_ReturnValue : 1;        // 0x0590(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_BooleanOR_ReturnValue : 1;                // 0x0591(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsValid_ReturnValue4 : 1;                 // 0x0592(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_593[0x5];                                      // 0x0593(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UFitingSlotItem_BP_C*>           K2Node_MakeArray_Array;                            // 0x0598(0x0010)(ZeroConstructor, ReferenceParm)
 };
 
 // Function PistolInfoItem_BP.PistolInfoItem_BP_C.OnDragLeave
@@ -132,13 +132,13 @@ public:
 };
 
 // Function PistolInfoItem_BP.PistolInfoItem_BP_C.ShowToolTipAttachment
-// 0x0120 (0x0120 - 0x0000)
+// 0x0118 (0x0118 - 0x0000)
 struct PistolInfoItem_BP_C_ShowToolTipAttachment final
 {
 public:
 	struct FSlateBrush                            Brush;                                             // 0x0000(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FBattleItemData                        BattleItemData;                                    // 0x0078(0x00A0)(BlueprintVisible, BlueprintReadOnly, Parm)
-	uint8                                         IsShow : 1;                                        // 0x0118(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor))
+	struct FBattleItemData                        BattleItemData;                                    // 0x0078(0x0098)(BlueprintVisible, BlueprintReadOnly, Parm)
+	uint8                                         IsShow : 1;                                        // 0x0110(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor))
 };
 
 // Function PistolInfoItem_BP.PistolInfoItem_BP_C.OnMouseLeave
@@ -159,12 +159,12 @@ public:
 };
 
 // Function PistolInfoItem_BP.PistolInfoItem_BP_C.FittingItemBeDragBegin
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x00A0 (0x00A0 - 0x0000)
 struct PistolInfoItem_BP_C_FittingItemBeDragBegin final
 {
 public:
-	struct FBattleItemData                        ItemData;                                          // 0x0000(0x00A0)(BlueprintVisible, BlueprintReadOnly, Parm)
-	EBackPackDragOrigin                           DragOrigin;                                        // 0x00A0(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBattleItemData                        ItemData;                                          // 0x0000(0x0098)(BlueprintVisible, BlueprintReadOnly, Parm)
+	EBackPackDragOrigin                           DragOrigin;                                        // 0x0098(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 // Function PistolInfoItem_BP.PistolInfoItem_BP_C.OnTouchStarted
@@ -201,14 +201,15 @@ struct PistolInfoItem_BP_C_UpdateWeaponAppearanceInfo final
 {
 public:
 	struct FBP_STRUCT_Item_type                   Record;                                            // 0x0000(0x0240)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	struct FBattleItemData                        ItemData;                                          // 0x0240(0x00A0)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x02E0(0x0008)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class AActor* SpawnedActor)>   K2Node_CreateDelegate_OutputDelegate;              // 0x02E8(0x0010)(ZeroConstructor, NoDestructor)
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x02F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_IntFloat_ReturnValue;            // 0x02FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x0300(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_301[0x3];                                      // 0x0301(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0304(0x000C)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBattleItemData                        ItemData;                                          // 0x0240(0x0098)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x02D8(0x0008)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class AActor* SpawnedActor)>   K2Node_CreateDelegate_OutputDelegate;              // 0x02E0(0x0010)(ZeroConstructor, NoDestructor)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x02F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_IntFloat_ReturnValue;            // 0x02F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x02F8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_2F9[0x3];                                      // 0x02F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x02FC(0x000C)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_308[0x8];                                      // 0x0308(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0310(0x0030)(IsPlainOldData, NoDestructor)
 	class ASTExtraPlayerController*               CallFunc_GetOwningPlayer_ReturnValue;              // 0x0340(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate2;             // 0x0348(0x0010)(ZeroConstructor, NoDestructor)

@@ -30,6 +30,34 @@ void Abp_roleinfo_honorwall_C::UserConstructionScript()
 }
 
 
+// Function bp_roleinfo_honorwall.bp_roleinfo_honorwall_C.EventHonorWallUpdateSelect
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_honorwall_C::EventHonorWallUpdateSelect()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_honorwall_C", "EventHonorWallUpdateSelect");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo_honorwall.bp_roleinfo_honorwall_C.EventHonorWallUpdateSelect_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_honorwall_C::EventHonorWallUpdateSelect_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_honorwall_C", "EventHonorWallUpdateSelect_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_roleinfo_honorwall.bp_roleinfo_honorwall_C.EventHonorWallButtonShare
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,34 +109,6 @@ void Abp_roleinfo_honorwall_C::EventHonorWallHelp_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_roleinfo_honorwall_C", "EventHonorWallHelp_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo_honorwall.bp_roleinfo_honorwall_C.EventHonorWallUpdateSelect
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_honorwall_C::EventHonorWallUpdateSelect()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_honorwall_C", "EventHonorWallUpdateSelect");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo_honorwall.bp_roleinfo_honorwall_C.EventHonorWallUpdateSelect_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_honorwall_C::EventHonorWallUpdateSelect_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_honorwall_C", "EventHonorWallUpdateSelect_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

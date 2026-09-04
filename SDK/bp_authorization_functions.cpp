@@ -30,29 +30,57 @@ void Abp_authorization_C::UserConstructionScript()
 }
 
 
-// Function bp_authorization.bp_authorization_C.EventAutoAuthLogin
+// Function bp_authorization.bp_authorization_C.EventWXLogin
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_authorization_C::EventAutoAuthLogin()
+void Abp_authorization_C::EventWXLogin()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventAutoAuthLogin");
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventWXLogin");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_authorization.bp_authorization_C.EventAutoAuthLogin_NoFetch
+// Function bp_authorization.bp_authorization_C.EventWXLogin_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_authorization_C::EventAutoAuthLogin_NoFetch()
+void Abp_authorization_C::EventWXLogin_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventAutoAuthLogin_NoFetch");
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventWXLogin_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventShowRefuse
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventShowRefuse()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventShowRefuse");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventShowRefuse_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventShowRefuse_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventShowRefuse_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,6 +114,90 @@ void Abp_authorization_C::EventGuestLogin_NoFetch()
 }
 
 
+// Function bp_authorization.bp_authorization_C.EventAutoAuthLogin
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventAutoAuthLogin()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventAutoAuthLogin");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventAutoAuthLogin_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventAutoAuthLogin_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventAutoAuthLogin_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventFetchInfo
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventFetchInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventFetchInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventFetchInfo_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventFetchInfo_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventFetchInfo_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventClearLoginLimit
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventClearLoginLimit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventClearLoginLimit");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventClearLoginLimit_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventClearLoginLimit_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventClearLoginLimit_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_authorization.bp_authorization_C.EventLoginCheck
 // (BlueprintCallable, BlueprintEvent)
 
@@ -109,6 +221,202 @@ void Abp_authorization_C::EventLoginCheck_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_authorization_C", "EventLoginCheck_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventGameVersion
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventGameVersion()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventGameVersion");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventGameVersion_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventGameVersion_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventGameVersion_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventAuthHideButtons
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventAuthHideButtons()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventAuthHideButtons");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventAuthHideButtons_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventAuthHideButtons_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventAuthHideButtons_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventStartAuthorization
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventStartAuthorization()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventStartAuthorization");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventStartAuthorization_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventStartAuthorization_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventStartAuthorization_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventLogout
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventLogout()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventLogout");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventLogout_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventLogout_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventLogout_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventQQLogin
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventQQLogin()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventQQLogin");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventQQLogin_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventQQLogin_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventQQLogin_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventCheckWeChatInstalled
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventCheckWeChatInstalled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventCheckWeChatInstalled");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventCheckWeChatInstalled_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventCheckWeChatInstalled_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventCheckWeChatInstalled_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventAddLoginCount
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventAddLoginCount()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventAddLoginCount");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventAddLoginCount_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventAddLoginCount_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventAddLoginCount_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -142,29 +450,113 @@ void Abp_authorization_C::EventClickKefu_NoFetch()
 }
 
 
-// Function bp_authorization.bp_authorization_C.EventStartAuthorization
+// Function bp_authorization.bp_authorization_C.EventDeleteSavedDir
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_authorization_C::EventStartAuthorization()
+void Abp_authorization_C::EventDeleteSavedDir()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventStartAuthorization");
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventDeleteSavedDir");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_authorization.bp_authorization_C.EventStartAuthorization_NoFetch
+// Function bp_authorization.bp_authorization_C.EventDeleteSavedDir_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_authorization_C::EventStartAuthorization_NoFetch()
+void Abp_authorization_C::EventDeleteSavedDir_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventStartAuthorization_NoFetch");
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventDeleteSavedDir_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventUpdateLoginTime
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventUpdateLoginTime()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventUpdateLoginTime");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventUpdateLoginTime_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventUpdateLoginTime_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventUpdateLoginTime_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventAuthShowButtons
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventAuthShowButtons()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventAuthShowButtons");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventAuthShowButtons_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventAuthShowButtons_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventAuthShowButtons_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventShowService
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventShowService()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventShowService");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_authorization.bp_authorization_C.EventShowService_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_authorization_C::EventShowService_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_authorization_C", "EventShowService_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -226,286 +618,6 @@ void Abp_authorization_C::EventRedoAutoAuthorization_NoFetch()
 }
 
 
-// Function bp_authorization.bp_authorization_C.EventDeleteSavedDir
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventDeleteSavedDir()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventDeleteSavedDir");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventDeleteSavedDir_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventDeleteSavedDir_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventDeleteSavedDir_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventGameVersion
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventGameVersion()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventGameVersion");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventGameVersion_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventGameVersion_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventGameVersion_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventClearLoginLimit
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventClearLoginLimit()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventClearLoginLimit");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventClearLoginLimit_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventClearLoginLimit_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventClearLoginLimit_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventWXLogin
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventWXLogin()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventWXLogin");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventWXLogin_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventWXLogin_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventWXLogin_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventQQLogin
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventQQLogin()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventQQLogin");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventQQLogin_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventQQLogin_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventQQLogin_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventLogout
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventLogout()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventLogout");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventLogout_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventLogout_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventLogout_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventAuthShowButtons
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventAuthShowButtons()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventAuthShowButtons");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventAuthShowButtons_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventAuthShowButtons_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventAuthShowButtons_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventUpdateLoginTime
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventUpdateLoginTime()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventUpdateLoginTime");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventUpdateLoginTime_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventUpdateLoginTime_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventUpdateLoginTime_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventAuthHideButtons
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventAuthHideButtons()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventAuthHideButtons");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventAuthHideButtons_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventAuthHideButtons_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventAuthHideButtons_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventCheckWeChatInstalled
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventCheckWeChatInstalled()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventCheckWeChatInstalled");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventCheckWeChatInstalled_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventCheckWeChatInstalled_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventCheckWeChatInstalled_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_authorization.bp_authorization_C.EventShowTouristNotice
 // (BlueprintCallable, BlueprintEvent)
 
@@ -529,118 +641,6 @@ void Abp_authorization_C::EventShowTouristNotice_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_authorization_C", "EventShowTouristNotice_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventShowRefuse
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventShowRefuse()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventShowRefuse");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventShowRefuse_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventShowRefuse_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventShowRefuse_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventShowService
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventShowService()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventShowService");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventShowService_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventShowService_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventShowService_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventFetchInfo
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventFetchInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventFetchInfo");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventFetchInfo_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventFetchInfo_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventFetchInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventAddLoginCount
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventAddLoginCount()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventAddLoginCount");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_authorization.bp_authorization_C.EventAddLoginCount_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_authorization_C::EventAddLoginCount_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_authorization_C", "EventAddLoginCount_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

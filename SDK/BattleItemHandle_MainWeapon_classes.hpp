@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Basic_structs.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
 #include "BattleItemHandleBase_BP_classes.hpp"
+#include "Basic_structs.hpp"
 
 
 namespace SDK

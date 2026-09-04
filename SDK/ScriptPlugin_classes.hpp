@@ -10,41 +10,58 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
 #include "Engine_classes.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 namespace SDK
 {
 
-// Class ScriptPlugin.ScriptContextComponent
-// 0x0010 (0x0118 - 0x0108)
-class UScriptContextComponent final : public UActorComponent
+// Class ScriptPlugin.ScriptBlueprintGeneratedClass
+// 0x0030 (0x0318 - 0x02E8)
+class UScriptBlueprintGeneratedClass final : public UBlueprintGeneratedClass
 {
 public:
-	uint8                                         Pad_108[0x8];                                      // 0x0108(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULuaStateWrapper*                       OwningLuaStateWrapper;                             // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void CallScriptFunction(const class FString& FunctionName);
-	void CallScriptFunctionWithoutFetch(const class FString& FunctionName);
-	void FetchAllScriptPropertyValues();
-	void FetchOneScriptPropertyValues(const class FString& ParamName);
-	void PushAllScriptPropertyValues();
-	void PushOneScriptPropertyValues(const class FString& ParamName);
+	TArray<uint8>                                 ByteCode;                                          // 0x02E8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	class FString                                 SourceCode;                                        // 0x02F8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UProperty*>                      ScriptProperties;                                  // 0x0308(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ScriptContextComponent")
+		STATIC_CLASS_IMPL("ScriptBlueprintGeneratedClass")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ScriptContextComponent")
+		STATIC_NAME_IMPL(L"ScriptBlueprintGeneratedClass")
 	}
-	static class UScriptContextComponent* GetDefaultObj()
+	static class UScriptBlueprintGeneratedClass* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UScriptContextComponent>();
+		return GetDefaultObjImpl<UScriptBlueprintGeneratedClass>();
+	}
+};
+
+// Class ScriptPlugin.LuaContext
+// 0x0018 (0x03C8 - 0x03B0)
+class ALuaContext : public AActor
+{
+public:
+	class ULuaStateWrapper*                       OwningLuaStateWrapper;                             // 0x03B0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UObject*                                OwningObject;                                      // 0x03B8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UScriptContextComponent*                ScriptContextComponent;                            // 0x03C0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LuaContext")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LuaContext")
+	}
+	static class ALuaContext* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ALuaContext>();
 	}
 };
 
@@ -98,30 +115,6 @@ public:
 	}
 };
 
-// Class ScriptPlugin.LuaContext
-// 0x0018 (0x03D8 - 0x03C0)
-class ALuaContext : public AActor
-{
-public:
-	class ULuaStateWrapper*                       OwningLuaStateWrapper;                             // 0x03C0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UObject*                                OwningObject;                                      // 0x03C8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UScriptContextComponent*                ScriptContextComponent;                            // 0x03D0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("LuaContext")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"LuaContext")
-	}
-	static class ALuaContext* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ALuaContext>();
-	}
-};
-
 // Class ScriptPlugin.LuaStateWrapper
 // 0x00E0 (0x0108 - 0x0028)
 class ULuaStateWrapper final : public UObject
@@ -168,30 +161,6 @@ public:
 	}
 };
 
-// Class ScriptPlugin.ScriptBlueprintGeneratedClass
-// 0x0030 (0x0320 - 0x02F0)
-class UScriptBlueprintGeneratedClass final : public UBlueprintGeneratedClass
-{
-public:
-	TArray<uint8>                                 ByteCode;                                          // 0x02F0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	class FString                                 SourceCode;                                        // 0x0300(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UProperty*>                      ScriptProperties;                                  // 0x0310(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ScriptBlueprintGeneratedClass")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ScriptBlueprintGeneratedClass")
-	}
-	static class UScriptBlueprintGeneratedClass* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UScriptBlueprintGeneratedClass>();
-	}
-};
-
 // Class ScriptPlugin.ScriptContext
 // 0x0008 (0x0030 - 0x0028)
 class UScriptContext final : public UObject
@@ -214,6 +183,37 @@ public:
 	static class UScriptContext* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UScriptContext>();
+	}
+};
+
+// Class ScriptPlugin.ScriptContextComponent
+// 0x0010 (0x0118 - 0x0108)
+class UScriptContextComponent final : public UActorComponent
+{
+public:
+	uint8                                         Pad_108[0x8];                                      // 0x0108(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULuaStateWrapper*                       OwningLuaStateWrapper;                             // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void CallScriptFunction(const class FString& FunctionName);
+	void CallScriptFunctionWithoutFetch(const class FString& FunctionName);
+	void FetchAllScriptPropertyValues();
+	void FetchOneScriptPropertyValues(const class FString& ParamName);
+	void PushAllScriptPropertyValues();
+	void PushOneScriptPropertyValues(const class FString& ParamName);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ScriptContextComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ScriptContextComponent")
+	}
+	static class UScriptContextComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UScriptContextComponent>();
 	}
 };
 
@@ -267,14 +267,14 @@ public:
 };
 
 // Class ScriptPlugin.ScriptTestActor
-// 0x0018 (0x03D8 - 0x03C0)
+// 0x0018 (0x03C8 - 0x03B0)
 class AScriptTestActor final : public AActor
 {
 public:
-	class FString                                 TestString;                                        // 0x03C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TestValue;                                         // 0x03D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         TestBool : 1;                                      // 0x03D4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_3D5[0x3];                                      // 0x03D5(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 TestString;                                        // 0x03B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TestValue;                                         // 0x03C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         TestBool : 1;                                      // 0x03C4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_3C5[0x3];                                      // 0x03C5(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	float TestFunction(float InValue, float InFactor, uint8 bMultiply);
@@ -295,7 +295,7 @@ public:
 };
 
 // Class ScriptPlugin.LuaClassBaseObj
-// 0x0000 (0x03C0 - 0x03C0)
+// 0x0000 (0x03B0 - 0x03B0)
 class ALuaClassBaseObj final : public AActor
 {
 public:

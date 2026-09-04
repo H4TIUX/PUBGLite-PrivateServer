@@ -16,6 +16,14 @@
 namespace SDK
 {
 
+// ScriptStruct SessionMessages.SessionServiceLogUnsubscribe
+// 0x0001 (0x0001 - 0x0000)
+struct FSessionServiceLogUnsubscribe final
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
 // ScriptStruct SessionMessages.SessionServicePong
 // 0x0098 (0x0098 - 0x0000)
 struct FSessionServicePong final
@@ -35,14 +43,6 @@ public:
 	class FString                                 SessionOwner;                                      // 0x0080(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Standalone : 1;                                    // 0x0090(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct SessionMessages.SessionServiceLogUnsubscribe
-// 0x0001 (0x0001 - 0x0000)
-struct FSessionServiceLogUnsubscribe final
-{
-public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 
 // ScriptStruct SessionMessages.SessionServiceLogSubscribe

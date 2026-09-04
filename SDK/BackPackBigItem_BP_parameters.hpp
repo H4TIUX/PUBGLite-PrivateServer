@@ -28,20 +28,20 @@ public:
 };
 
 // Function BackPackBigItem_BP.BackPackBigItem_BP_C.InitData
-// 0x0120 (0x0120 - 0x0000)
+// 0x0118 (0x0118 - 0x0000)
 struct BackPackBigItem_BP_C_InitData final
 {
 public:
-	struct FBattleItemData                        ItemData;                                          // 0x0000(0x00A0)(BlueprintVisible, BlueprintReadOnly, Parm)
-	int32                                         Count;                                             // 0x00A0(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x00A8(0x0018)()
-	struct FSoftObjectPath                        CallFunc_MakeSoftObjectPath_ReturnValue;           // 0x00C0(0x0018)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00D8(0x0018)()
-	class UObject*                                CallFunc_GetAssetByAssetReference_ReturnValue;     // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue2;           // 0x00F8(0x0018)()
-	class UTexture2D*                             K2Node_DynamicCast_AsTexture_2D;                   // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         K2Node_DynamicCast_bSuccess : 1;                   // 0x0118(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	struct FBattleItemData                        ItemData;                                          // 0x0000(0x0098)(BlueprintVisible, BlueprintReadOnly, Parm)
+	int32                                         Count;                                             // 0x0098(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x00A0(0x0018)()
+	struct FSoftObjectPath                        CallFunc_MakeSoftObjectPath_ReturnValue;           // 0x00B8(0x0018)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00D0(0x0018)()
+	class UObject*                                CallFunc_GetAssetByAssetReference_ReturnValue;     // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue2;           // 0x00F0(0x0018)()
+	class UTexture2D*                             K2Node_DynamicCast_AsTexture_2D;                   // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         K2Node_DynamicCast_bSuccess : 1;                   // 0x0110(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 };
 
 // Function BackPackBigItem_BP.BackPackBigItem_BP_C.ChangeState

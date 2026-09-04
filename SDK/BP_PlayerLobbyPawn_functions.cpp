@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function BP_PlayerLobbyPawn.BP_PlayerLobbyPawn_C.ExecuteUbergraph_BP_PlayerLobbyPawn
-// ()
+// (HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -397,9 +397,9 @@ void ABP_PlayerLobbyPawn_C::WeaponAttachComponent()
 // Function BP_PlayerLobbyPawn.BP_PlayerLobbyPawn_C.SpawnWeapon
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   WeaponID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   WeaponId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PlayerLobbyPawn_C::SpawnWeapon(int32 WeaponID)
+void ABP_PlayerLobbyPawn_C::SpawnWeapon(int32 WeaponId)
 {
 	static class UFunction* Func = nullptr;
 
@@ -408,7 +408,7 @@ void ABP_PlayerLobbyPawn_C::SpawnWeapon(int32 WeaponID)
 
 	Params::BP_PlayerLobbyPawn_C_SpawnWeapon Parms{};
 
-	Parms.WeaponID = WeaponID;
+	Parms.WeaponId = WeaponId;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

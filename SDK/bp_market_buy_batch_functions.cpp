@@ -58,29 +58,29 @@ void Abp_market_buy_batch_C::EventOnSwitchItemSelected_NoFetch()
 }
 
 
-// Function bp_market_buy_batch.bp_market_buy_batch_C.EventMarketBuyBatchUIOnBuy
+// Function bp_market_buy_batch.bp_market_buy_batch_C.EventOnCheckBoxChecked
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_market_buy_batch_C::EventMarketBuyBatchUIOnBuy()
+void Abp_market_buy_batch_C::EventOnCheckBoxChecked()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_buy_batch_C", "EventMarketBuyBatchUIOnBuy");
+		Func = GetClass()->GetFunction("bp_market_buy_batch_C", "EventOnCheckBoxChecked");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_market_buy_batch.bp_market_buy_batch_C.EventMarketBuyBatchUIOnBuy_NoFetch
+// Function bp_market_buy_batch.bp_market_buy_batch_C.EventOnCheckBoxChecked_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_market_buy_batch_C::EventMarketBuyBatchUIOnBuy_NoFetch()
+void Abp_market_buy_batch_C::EventOnCheckBoxChecked_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_buy_batch_C", "EventMarketBuyBatchUIOnBuy_NoFetch");
+		Func = GetClass()->GetFunction("bp_market_buy_batch_C", "EventOnCheckBoxChecked_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,29 +114,29 @@ void Abp_market_buy_batch_C::EventMarketBuyBatchUIClose_NoFetch()
 }
 
 
-// Function bp_market_buy_batch.bp_market_buy_batch_C.EventOnCheckBoxChecked
+// Function bp_market_buy_batch.bp_market_buy_batch_C.EventMarketBuyBatchUIOnBuy
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_market_buy_batch_C::EventOnCheckBoxChecked()
+void Abp_market_buy_batch_C::EventMarketBuyBatchUIOnBuy()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_buy_batch_C", "EventOnCheckBoxChecked");
+		Func = GetClass()->GetFunction("bp_market_buy_batch_C", "EventMarketBuyBatchUIOnBuy");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_market_buy_batch.bp_market_buy_batch_C.EventOnCheckBoxChecked_NoFetch
+// Function bp_market_buy_batch.bp_market_buy_batch_C.EventMarketBuyBatchUIOnBuy_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_market_buy_batch_C::EventOnCheckBoxChecked_NoFetch()
+void Abp_market_buy_batch_C::EventMarketBuyBatchUIOnBuy_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_buy_batch_C", "EventOnCheckBoxChecked_NoFetch");
+		Func = GetClass()->GetFunction("bp_market_buy_batch_C", "EventMarketBuyBatchUIOnBuy_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

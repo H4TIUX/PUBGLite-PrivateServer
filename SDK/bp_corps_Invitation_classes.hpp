@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_STRUCT_CorpsInvitation_AvatarData_structs.hpp"
 #include "BP_STRUCT_BASE_INFO_structs.hpp"
+#include "BP_STRUCT_CorpsInvitation_AvatarData_structs.hpp"
 #include "BP_STRUCT_CorpsSummary_Data_structs.hpp"
 #include "Client_classes.hpp"
 
@@ -20,28 +20,28 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_corps_Invitation.bp_corps_Invitation_C
-// 0x0118 (0x0500 - 0x03E8)
+// 0x0118 (0x04F0 - 0x03D8)
 class Abp_corps_Invitation_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FBP_STRUCT_CorpsInvitation_AvatarData  BP_STRUCT_CorpsInvitation_AvatarData;              // 0x03F0(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FBP_STRUCT_BASE_INFO                   BP_STRUCT_BASE_INFO;                               // 0x0440(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_CorpsInvitation_ShowType;                       // 0x0490(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_494[0x4];                                      // 0x0494(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_CorpsSummary_Data           BP_STRUCT_CorpsSummary_Data;                       // 0x0498(0x0060)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04F8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	int32                                         BP_CorpsInvitation_ShowType;                       // 0x03E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E4[0x4];                                      // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_CorpsInvitation_AvatarData  BP_STRUCT_CorpsInvitation_AvatarData;              // 0x03E8(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FBP_STRUCT_BASE_INFO                   BP_STRUCT_BASE_INFO;                               // 0x0438(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FBP_STRUCT_CorpsSummary_Data           BP_STRUCT_CorpsSummary_Data;                       // 0x0488(0x0060)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04E8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
+	void EventCorpsInvitationReport();
+	void EventCorpsInvitationReport_NoFetch();
 	void EventCorpsInvitationApply();
 	void EventCorpsInvitationApply_NoFetch();
 	void EventCorpsInvitationUIConfirm();
 	void EventCorpsInvitationUIConfirm_NoFetch();
 	void EventCorpsInvitationUIClose();
 	void EventCorpsInvitationUIClose_NoFetch();
-	void EventCorpsInvitationReport();
-	void EventCorpsInvitationReport_NoFetch();
 
 public:
 	static class UClass* StaticClass()

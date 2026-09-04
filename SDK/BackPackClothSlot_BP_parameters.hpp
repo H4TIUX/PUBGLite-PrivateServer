@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "Basic_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "BP_STRUCT_Item_type_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "EBackPackDragOrigin_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "UMG_structs.hpp"
-#include "EBackPackDragOrigin_structs.hpp"
 
 
 namespace SDK::Params
@@ -199,21 +199,21 @@ public:
 };
 
 // Function BackPackClothSlot_BP.BackPackClothSlot_BP_C.ShowItem
-// 0x0168 (0x0168 - 0x0000)
+// 0x0160 (0x0160 - 0x0000)
 struct BackPackClothSlot_BP_C_ShowItem final
 {
 public:
-	struct FBattleItemData                        ItemData_0;                                        // 0x0000(0x00A0)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x00A0(0x0008)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_GetSmallIcon_IsFound : 1;                 // 0x00A8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetSmallIcon_ItemSmallIcon;               // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FSoftObjectPath                        CallFunc_MakeSoftObjectPath_ReturnValue;           // 0x00C0(0x0018)(HasGetValueTypeHash)
-	class UObject*                                CallFunc_GetAssetByAssetReference_ReturnValue;     // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTexture2D*                             K2Node_DynamicCast_AsTexture_2D;                   // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         K2Node_DynamicCast_bSuccess : 1;                   // 0x00E8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x00F0(0x0078)()
+	struct FBattleItemData                        ItemData_0;                                        // 0x0000(0x0098)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0098(0x0008)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_GetSmallIcon_IsFound : 1;                 // 0x00A0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetSmallIcon_ItemSmallIcon;               // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FSoftObjectPath                        CallFunc_MakeSoftObjectPath_ReturnValue;           // 0x00B8(0x0018)(HasGetValueTypeHash)
+	class UObject*                                CallFunc_GetAssetByAssetReference_ReturnValue;     // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             K2Node_DynamicCast_AsTexture_2D;                   // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         K2Node_DynamicCast_bSuccess : 1;                   // 0x00E0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x00E8(0x0078)()
 };
 
 // Function BackPackClothSlot_BP.BackPackClothSlot_BP_C.HighLightSlot

@@ -17,179 +17,6 @@
 namespace SDK
 {
 
-// Function Skill.UTSkillInterface.HandleSkillEnd
-// (Native, Event, Public, BlueprintEvent)
-// Parameters:
-// int32                                   SkillID                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EUTSkillStopReason                      Reason                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void IUTSkillInterface::HandleSkillEnd(int32 SkillID, EUTSkillStopReason Reason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("UTSkillInterface", "HandleSkillEnd");
-
-	Params::UTSkillInterface_HandleSkillEnd Parms{};
-
-	Parms.SkillID = SkillID;
-	Parms.Reason = Reason;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Skill.UTSkillInterface.HandleSkillStart
-// (Native, Event, Public, BlueprintEvent)
-// Parameters:
-// int32                                   SkillID                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void IUTSkillInterface::HandleSkillStart(int32 SkillID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("UTSkillInterface", "HandleSkillStart");
-
-	Params::UTSkillInterface_HandleSkillStart Parms{};
-
-	Parms.SkillID = SkillID;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Skill.UTSkillInterface.TriggerEvent
-// (Native, Event, Public, BlueprintEvent)
-// Parameters:
-// int32                                   SkillID                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EUTSkillEventType                       EventType                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void IUTSkillInterface::TriggerEvent(int32 SkillID, EUTSkillEventType EventType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("UTSkillInterface", "TriggerEvent");
-
-	Params::UTSkillInterface_TriggerEvent Parms{};
-
-	Parms.SkillID = SkillID;
-	Parms.EventType = EventType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Skill.UTSkillEffect.DoAction
-// (Native, Public)
-// Parameters:
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 UUTSkillEffect::DoAction()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UTSkillEffect", "DoAction");
-
-	Params::UTSkillEffect_DoAction Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Skill.UTSkillEffect.DoHurtAppearance
-// (Native, Public)
-// Parameters:
-// class APawn*                            Victim                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UUTSkillEffect::DoHurtAppearance(class APawn* Victim)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UTSkillEffect", "DoHurtAppearance");
-
-	Params::UTSkillEffect_DoHurtAppearance Parms{};
-
-	Parms.Victim = Victim;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Skill.UTSkillEffect.UndoAction
-// (Native, Public)
-
-void UUTSkillEffect::UndoAction()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UTSkillEffect", "UndoAction");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Skill.UTSkillEffect.UpdateAction
-// (Native, Public)
-// Parameters:
-// float                                   DeltaSeconds                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UUTSkillEffect::UpdateAction(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UTSkillEffect", "UpdateAction");
-
-	Params::UTSkillEffect_UpdateAction Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function Skill.UTSkillManagerComponent.OnSameTeam
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -833,6 +660,100 @@ uint8 UUTSkillManagerComponent::IsCastingSkill() const
 }
 
 
+// Function Skill.UTSkillEffect.DoAction
+// (Native, Public)
+// Parameters:
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 UUTSkillEffect::DoAction()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UTSkillEffect", "DoAction");
+
+	Params::UTSkillEffect_DoAction Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Skill.UTSkillEffect.DoHurtAppearance
+// (Native, Public)
+// Parameters:
+// class APawn*                            Victim                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UUTSkillEffect::DoHurtAppearance(class APawn* Victim)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UTSkillEffect", "DoHurtAppearance");
+
+	Params::UTSkillEffect_DoHurtAppearance Parms{};
+
+	Parms.Victim = Victim;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Skill.UTSkillEffect.UndoAction
+// (Native, Public)
+
+void UUTSkillEffect::UndoAction()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UTSkillEffect", "UndoAction");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Skill.UTSkillEffect.UpdateAction
+// (Native, Public)
+// Parameters:
+// float                                   DeltaSeconds                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UUTSkillEffect::UpdateAction(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UTSkillEffect", "UpdateAction");
+
+	Params::UTSkillEffect_UpdateAction Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function Skill.UTSkillAction.DoAction
 // (Native, Public)
 // Parameters:
@@ -971,6 +892,85 @@ void UUTSkillAction::UpdateAction(float DeltaSeconds)
 }
 
 
+// Function Skill.UTSkillInterface.HandleSkillEnd
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// int32                                   SkillID                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EUTSkillStopReason                      Reason                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void IUTSkillInterface::HandleSkillEnd(int32 SkillID, EUTSkillStopReason Reason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("UTSkillInterface", "HandleSkillEnd");
+
+	Params::UTSkillInterface_HandleSkillEnd Parms{};
+
+	Parms.SkillID = SkillID;
+	Parms.Reason = Reason;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Skill.UTSkillInterface.HandleSkillStart
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// int32                                   SkillID                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void IUTSkillInterface::HandleSkillStart(int32 SkillID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("UTSkillInterface", "HandleSkillStart");
+
+	Params::UTSkillInterface_HandleSkillStart Parms{};
+
+	Parms.SkillID = SkillID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Skill.UTSkillInterface.TriggerEvent
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// int32                                   SkillID                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EUTSkillEventType                       EventType                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void IUTSkillInterface::TriggerEvent(int32 SkillID, EUTSkillEventType EventType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("UTSkillInterface", "TriggerEvent");
+
+	Params::UTSkillInterface_TriggerEvent Parms{};
+
+	Parms.SkillID = SkillID;
+	Parms.EventType = EventType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function Skill.UTSkillCondition.IsOK
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
@@ -1021,159 +1021,6 @@ uint8 UUTSkillCondition::IsTargetOK(class APawn* Target)
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
-}
-
-
-// Function Skill.UTSkill.CanBePlayed
-// (Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// uint8                                   bShowErrorMsg                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 AUTSkill::CanBePlayed(uint8 bShowErrorMsg)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UTSkill", "CanBePlayed");
-
-	Params::UTSkill_CanBePlayed Parms{};
-
-	Parms.bShowErrorMsg = bShowErrorMsg;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Skill.UTSkill.DoSkillCoolDown
-// (Native, Public, BlueprintCallable)
-
-void AUTSkill::DoSkillCoolDown()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UTSkill", "DoSkillCoolDown");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Skill.UTSkill.GetSkillPhase
-// (Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int32                                   PhaseIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UUTSkillPhase*                    ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UUTSkillPhase* AUTSkill::GetSkillPhase(int32 PhaseIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UTSkill", "GetSkillPhase");
-
-	Params::UTSkill_GetSkillPhase Parms{};
-
-	Parms.PhaseIndex = PhaseIndex;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Skill.UTSkill.GetSkillPhasePercentage
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float AUTSkill::GetSkillPhasePercentage()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UTSkill", "GetSkillPhasePercentage");
-
-	Params::UTSkill_GetSkillPhasePercentage Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Skill.UTSkill.OnEvent
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// EUTSkillEventType                       TheEventType                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 AUTSkill::OnEvent(EUTSkillEventType TheEventType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UTSkill", "OnEvent");
-
-	Params::UTSkill_OnEvent Parms{};
-
-	Parms.TheEventType = TheEventType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Skill.UTSkill.SetSkillPhasePercentage
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   Percentage                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AUTSkill::SetSkillPhasePercentage(float Percentage)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UTSkill", "SetSkillPhasePercentage");
-
-	Params::UTSkill_SetSkillPhasePercentage Parms{};
-
-	Parms.Percentage = Percentage;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
 }
 
 
@@ -1465,6 +1312,159 @@ uint8 UUTSkillPhase::TryJumpToPhase(int32 PhaseID)
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function Skill.UTSkill.CanBePlayed
+// (Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// uint8                                   bShowErrorMsg                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 AUTSkill::CanBePlayed(uint8 bShowErrorMsg)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UTSkill", "CanBePlayed");
+
+	Params::UTSkill_CanBePlayed Parms{};
+
+	Parms.bShowErrorMsg = bShowErrorMsg;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Skill.UTSkill.DoSkillCoolDown
+// (Native, Public, BlueprintCallable)
+
+void AUTSkill::DoSkillCoolDown()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UTSkill", "DoSkillCoolDown");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Skill.UTSkill.GetSkillPhase
+// (Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int32                                   PhaseIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UUTSkillPhase*                    ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UUTSkillPhase* AUTSkill::GetSkillPhase(int32 PhaseIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UTSkill", "GetSkillPhase");
+
+	Params::UTSkill_GetSkillPhase Parms{};
+
+	Parms.PhaseIndex = PhaseIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Skill.UTSkill.GetSkillPhasePercentage
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float AUTSkill::GetSkillPhasePercentage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UTSkill", "GetSkillPhasePercentage");
+
+	Params::UTSkill_GetSkillPhasePercentage Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Skill.UTSkill.OnEvent
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// EUTSkillEventType                       TheEventType                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 AUTSkill::OnEvent(EUTSkillEventType TheEventType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UTSkill", "OnEvent");
+
+	Params::UTSkill_OnEvent Parms{};
+
+	Parms.TheEventType = TheEventType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Skill.UTSkill.SetSkillPhasePercentage
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   Percentage                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AUTSkill::SetSkillPhasePercentage(float Percentage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UTSkill", "SetSkillPhasePercentage");
+
+	Params::UTSkill_SetSkillPhasePercentage Parms{};
+
+	Parms.Percentage = Percentage;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 }

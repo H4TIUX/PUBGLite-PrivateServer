@@ -30,29 +30,141 @@ void Abp_createrole_C::UserConstructionScript()
 }
 
 
-// Function bp_createrole.bp_createrole_C.EventSelectHairColor3
+// Function bp_createrole.bp_createrole_C.EventFetchInfo
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_createrole_C::EventSelectHairColor3()
+void Abp_createrole_C::EventFetchInfo()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectHairColor3");
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventFetchInfo");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_createrole.bp_createrole_C.EventSelectHairColor3_NoFetch
+// Function bp_createrole.bp_createrole_C.EventFetchInfo_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_createrole_C::EventSelectHairColor3_NoFetch()
+void Abp_createrole_C::EventFetchInfo_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectHairColor3_NoFetch");
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventFetchInfo_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_createrole.bp_createrole_C.EventShowAvatarResetBuyPanel
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_createrole_C::EventShowAvatarResetBuyPanel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventShowAvatarResetBuyPanel");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_createrole.bp_createrole_C.EventShowAvatarResetBuyPanel_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_createrole_C::EventShowAvatarResetBuyPanel_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventShowAvatarResetBuyPanel_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_createrole.bp_createrole_C.EventGetCreateRoleHeadID
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_createrole_C::EventGetCreateRoleHeadID()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventGetCreateRoleHeadID");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_createrole.bp_createrole_C.EventGetCreateRoleHeadID_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_createrole_C::EventGetCreateRoleHeadID_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventGetCreateRoleHeadID_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_createrole.bp_createrole_C.EventSelectRace
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_createrole_C::EventSelectRace()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectRace");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_createrole.bp_createrole_C.EventSelectRace_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_createrole_C::EventSelectRace_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectRace_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_createrole.bp_createrole_C.EventSelectHairColor6
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_createrole_C::EventSelectHairColor6()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectHairColor6");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_createrole.bp_createrole_C.EventSelectHairColor6_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_createrole_C::EventSelectHairColor6_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectHairColor6_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,85 +198,141 @@ void Abp_createrole_C::EventSelectHairColor1_NoFetch()
 }
 
 
-// Function bp_createrole.bp_createrole_C.EventGetCreateRoleHairColor
+// Function bp_createrole.bp_createrole_C.EventSelectHairColor3
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_createrole_C::EventGetCreateRoleHairColor()
+void Abp_createrole_C::EventSelectHairColor3()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventGetCreateRoleHairColor");
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectHairColor3");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_createrole.bp_createrole_C.EventGetCreateRoleHairColor_NoFetch
+// Function bp_createrole.bp_createrole_C.EventSelectHairColor3_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_createrole_C::EventGetCreateRoleHairColor_NoFetch()
+void Abp_createrole_C::EventSelectHairColor3_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventGetCreateRoleHairColor_NoFetch");
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectHairColor3_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_createrole.bp_createrole_C.EventFilterName
+// Function bp_createrole.bp_createrole_C.EventCloseAvatarResetPanel
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_createrole_C::EventFilterName()
+void Abp_createrole_C::EventCloseAvatarResetPanel()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventFilterName");
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventCloseAvatarResetPanel");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_createrole.bp_createrole_C.EventFilterName_NoFetch
+// Function bp_createrole.bp_createrole_C.EventCloseAvatarResetPanel_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_createrole_C::EventFilterName_NoFetch()
+void Abp_createrole_C::EventCloseAvatarResetPanel_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventFilterName_NoFetch");
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventCloseAvatarResetPanel_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_createrole.bp_createrole_C.EventSelectMale
+// Function bp_createrole.bp_createrole_C.EventSelectHairColor2
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_createrole_C::EventSelectMale()
+void Abp_createrole_C::EventSelectHairColor2()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectMale");
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectHairColor2");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_createrole.bp_createrole_C.EventSelectMale_NoFetch
+// Function bp_createrole.bp_createrole_C.EventSelectHairColor2_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_createrole_C::EventSelectMale_NoFetch()
+void Abp_createrole_C::EventSelectHairColor2_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectMale_NoFetch");
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectHairColor2_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_createrole.bp_createrole_C.EventSetInfo_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_createrole_C::EventSetInfo_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventSetInfo_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_createrole.bp_createrole_C.EventSetInfo_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_createrole_C::EventSetInfo_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventSetInfo_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_createrole.bp_createrole_C.EventSelectFeMale
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_createrole_C::EventSelectFeMale()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectFeMale");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_createrole.bp_createrole_C.EventSelectFeMale_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_createrole_C::EventSelectFeMale_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectFeMale_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -226,85 +394,57 @@ void Abp_createrole_C::EventEnterLobby_NoFetch()
 }
 
 
-// Function bp_createrole.bp_createrole_C.EventSelectRace
+// Function bp_createrole.bp_createrole_C.EventGetCreateRoleSex
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_createrole_C::EventSelectRace()
+void Abp_createrole_C::EventGetCreateRoleSex()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectRace");
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventGetCreateRoleSex");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_createrole.bp_createrole_C.EventSelectRace_NoFetch
+// Function bp_createrole.bp_createrole_C.EventGetCreateRoleSex_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_createrole_C::EventSelectRace_NoFetch()
+void Abp_createrole_C::EventGetCreateRoleSex_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectRace_NoFetch");
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventGetCreateRoleSex_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_createrole.bp_createrole_C.EventSetInfo_Push
+// Function bp_createrole.bp_createrole_C.EventGetCreateRoleHairColor
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_createrole_C::EventSetInfo_Push()
+void Abp_createrole_C::EventGetCreateRoleHairColor()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventSetInfo_Push");
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventGetCreateRoleHairColor");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_createrole.bp_createrole_C.EventSetInfo_Push_NoFetch
+// Function bp_createrole.bp_createrole_C.EventGetCreateRoleHairColor_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_createrole_C::EventSetInfo_Push_NoFetch()
+void Abp_createrole_C::EventGetCreateRoleHairColor_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventSetInfo_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_createrole.bp_createrole_C.EventSelectHairColor6
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_createrole_C::EventSelectHairColor6()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectHairColor6");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_createrole.bp_createrole_C.EventSelectHairColor6_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_createrole_C::EventSelectHairColor6_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectHairColor6_NoFetch");
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventGetCreateRoleHairColor_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -338,141 +478,29 @@ void Abp_createrole_C::EventGetCreateRoleHairID_NoFetch()
 }
 
 
-// Function bp_createrole.bp_createrole_C.EventBuyAvatar
+// Function bp_createrole.bp_createrole_C.EventFilterName
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_createrole_C::EventBuyAvatar()
+void Abp_createrole_C::EventFilterName()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventBuyAvatar");
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventFilterName");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_createrole.bp_createrole_C.EventBuyAvatar_NoFetch
+// Function bp_createrole.bp_createrole_C.EventFilterName_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_createrole_C::EventBuyAvatar_NoFetch()
+void Abp_createrole_C::EventFilterName_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventBuyAvatar_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_createrole.bp_createrole_C.EventShowAvatarResetBuyPanel
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_createrole_C::EventShowAvatarResetBuyPanel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventShowAvatarResetBuyPanel");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_createrole.bp_createrole_C.EventShowAvatarResetBuyPanel_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_createrole_C::EventShowAvatarResetBuyPanel_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventShowAvatarResetBuyPanel_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_createrole.bp_createrole_C.EventFetchInfo
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_createrole_C::EventFetchInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventFetchInfo");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_createrole.bp_createrole_C.EventFetchInfo_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_createrole_C::EventFetchInfo_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventFetchInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_createrole.bp_createrole_C.EventCloseAvatarResetPanel
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_createrole_C::EventCloseAvatarResetPanel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventCloseAvatarResetPanel");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_createrole.bp_createrole_C.EventCloseAvatarResetPanel_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_createrole_C::EventCloseAvatarResetPanel_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventCloseAvatarResetPanel_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_createrole.bp_createrole_C.EventCancelAvatarReset
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_createrole_C::EventCancelAvatarReset()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventCancelAvatarReset");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_createrole.bp_createrole_C.EventCancelAvatarReset_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_createrole_C::EventCancelAvatarReset_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventCancelAvatarReset_NoFetch");
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventFilterName_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -501,6 +529,62 @@ void Abp_createrole_C::EventSelectHairColor5_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectHairColor5_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_createrole.bp_createrole_C.EventCloseAvatarResetPanelInter
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_createrole_C::EventCloseAvatarResetPanelInter()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventCloseAvatarResetPanelInter");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_createrole.bp_createrole_C.EventCloseAvatarResetPanelInter_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_createrole_C::EventCloseAvatarResetPanelInter_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventCloseAvatarResetPanelInter_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_createrole.bp_createrole_C.EventCancelAvatarReset
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_createrole_C::EventCancelAvatarReset()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventCancelAvatarReset");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_createrole.bp_createrole_C.EventCancelAvatarReset_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_createrole_C::EventCancelAvatarReset_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventCancelAvatarReset_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -562,6 +646,62 @@ void Abp_createrole_C::EventOpenAvatarResetPanel_NoFetch()
 }
 
 
+// Function bp_createrole.bp_createrole_C.EventSelectMale
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_createrole_C::EventSelectMale()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectMale");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_createrole.bp_createrole_C.EventSelectMale_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_createrole_C::EventSelectMale_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectMale_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_createrole.bp_createrole_C.EventBuyAvatar
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_createrole_C::EventBuyAvatar()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventBuyAvatar");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_createrole.bp_createrole_C.EventBuyAvatar_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_createrole_C::EventBuyAvatar_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_createrole_C", "EventBuyAvatar_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_createrole.bp_createrole_C.EventSelectHairColor4
 // (BlueprintCallable, BlueprintEvent)
 
@@ -590,118 +730,6 @@ void Abp_createrole_C::EventSelectHairColor4_NoFetch()
 }
 
 
-// Function bp_createrole.bp_createrole_C.EventSelectHairColor2
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_createrole_C::EventSelectHairColor2()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectHairColor2");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_createrole.bp_createrole_C.EventSelectHairColor2_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_createrole_C::EventSelectHairColor2_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectHairColor2_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_createrole.bp_createrole_C.EventSelectFeMale
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_createrole_C::EventSelectFeMale()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectFeMale");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_createrole.bp_createrole_C.EventSelectFeMale_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_createrole_C::EventSelectFeMale_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventSelectFeMale_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_createrole.bp_createrole_C.EventCloseAvatarResetPanelInter
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_createrole_C::EventCloseAvatarResetPanelInter()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventCloseAvatarResetPanelInter");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_createrole.bp_createrole_C.EventCloseAvatarResetPanelInter_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_createrole_C::EventCloseAvatarResetPanelInter_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventCloseAvatarResetPanelInter_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_createrole.bp_createrole_C.EventGetCreateRoleHeadID
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_createrole_C::EventGetCreateRoleHeadID()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventGetCreateRoleHeadID");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_createrole.bp_createrole_C.EventGetCreateRoleHeadID_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_createrole_C::EventGetCreateRoleHeadID_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventGetCreateRoleHeadID_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_createrole.bp_createrole_C.EventRandomName
 // (BlueprintCallable, BlueprintEvent)
 
@@ -725,34 +753,6 @@ void Abp_createrole_C::EventRandomName_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_createrole_C", "EventRandomName_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_createrole.bp_createrole_C.EventGetCreateRoleSex
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_createrole_C::EventGetCreateRoleSex()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventGetCreateRoleSex");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_createrole.bp_createrole_C.EventGetCreateRoleSex_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_createrole_C::EventGetCreateRoleSex_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_createrole_C", "EventGetCreateRoleSex_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

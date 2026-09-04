@@ -58,90 +58,6 @@ void Abp_complaint_C::EventComplaintGetTeamlist_NoFetch()
 }
 
 
-// Function bp_complaint.bp_complaint_C.EventComplaintNumOverTips
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_complaint_C::EventComplaintNumOverTips()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_complaint_C", "EventComplaintNumOverTips");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_complaint.bp_complaint_C.EventComplaintNumOverTips_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_complaint_C::EventComplaintNumOverTips_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_complaint_C", "EventComplaintNumOverTips_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_complaint.bp_complaint_C.EventComplaintClose
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_complaint_C::EventComplaintClose()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_complaint_C", "EventComplaintClose");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_complaint.bp_complaint_C.EventComplaintClose_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_complaint_C::EventComplaintClose_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_complaint_C", "EventComplaintClose_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_complaint.bp_complaint_C.EventNameHadComplaintedTips
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_complaint_C::EventNameHadComplaintedTips()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_complaint_C", "EventNameHadComplaintedTips");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_complaint.bp_complaint_C.EventNameHadComplaintedTips_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_complaint_C::EventNameHadComplaintedTips_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_complaint_C", "EventNameHadComplaintedTips_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_complaint.bp_complaint_C.EventComplaintNumEmptyTips
 // (BlueprintCallable, BlueprintEvent)
 
@@ -198,6 +114,34 @@ void Abp_complaint_C::EventComplaintRefreshUI_NoFetch()
 }
 
 
+// Function bp_complaint.bp_complaint_C.EventNameHadComplaintedTips
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_complaint_C::EventNameHadComplaintedTips()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_complaint_C", "EventNameHadComplaintedTips");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_complaint.bp_complaint_C.EventNameHadComplaintedTips_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_complaint_C::EventNameHadComplaintedTips_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_complaint_C", "EventNameHadComplaintedTips_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_complaint.bp_complaint_C.EventComplaintClickSubmit
 // (BlueprintCallable, BlueprintEvent)
 
@@ -249,6 +193,62 @@ void Abp_complaint_C::EventComplaintClickReplay_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_complaint_C", "EventComplaintClickReplay_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_complaint.bp_complaint_C.EventComplaintClose
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_complaint_C::EventComplaintClose()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_complaint_C", "EventComplaintClose");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_complaint.bp_complaint_C.EventComplaintClose_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_complaint_C::EventComplaintClose_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_complaint_C", "EventComplaintClose_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_complaint.bp_complaint_C.EventComplaintNumOverTips
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_complaint_C::EventComplaintNumOverTips()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_complaint_C", "EventComplaintNumOverTips");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_complaint.bp_complaint_C.EventComplaintNumOverTips_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_complaint_C::EventComplaintNumOverTips_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_complaint_C", "EventComplaintNumOverTips_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

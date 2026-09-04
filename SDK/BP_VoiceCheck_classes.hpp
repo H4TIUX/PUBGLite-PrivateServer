@@ -13,8 +13,8 @@
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "BP_VoiceCheckData_structs.hpp"
-#include "BP_VoiceCheckWeatherConfig_structs.hpp"
 #include "BP_VoiceCheckType_structs.hpp"
+#include "BP_VoiceCheckWeatherConfig_structs.hpp"
 
 
 namespace SDK

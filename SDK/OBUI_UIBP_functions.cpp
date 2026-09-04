@@ -37,6 +37,48 @@ void UOBUI_UIBP_C::ExecuteUbergraph_OBUI_UIBP(int32 EntryPoint)
 }
 
 
+// Function OBUI_UIBP.OBUI_UIBP_C.OnFreeCameraChangeEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UOBUI_UIBP_C::OnFreeCameraChangeEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("OBUI_UIBP_C", "OnFreeCameraChangeEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function OBUI_UIBP.OBUI_UIBP_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UOBUI_UIBP_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("OBUI_UIBP_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function OBUI_UIBP.OBUI_UIBP_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UOBUI_UIBP_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("OBUI_UIBP_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function OBUI_UIBP.OBUI_UIBP_C.BndEvt__Button_Down_K2Node_ComponentBoundEvent_103_OnButtonReleasedEvent__DelegateSignature
 // (BlueprintEvent)
 
@@ -93,20 +135,6 @@ void UOBUI_UIBP_C::BndEvt__Button_UP_K2Node_ComponentBoundEvent_33_OnButtonPress
 }
 
 
-// Function OBUI_UIBP.OBUI_UIBP_C.BndEvt__Button_FreeCam_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UOBUI_UIBP_C::BndEvt__Button_FreeCam_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("OBUI_UIBP_C", "BndEvt__Button_FreeCam_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function OBUI_UIBP.OBUI_UIBP_C.ReceivedInitWidget
 // (Event, Public, BlueprintEvent)
 
@@ -116,6 +144,34 @@ void UOBUI_UIBP_C::ReceivedInitWidget()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("OBUI_UIBP_C", "ReceivedInitWidget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function OBUI_UIBP.OBUI_UIBP_C.BndEvt__Button_BackToLobby_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UOBUI_UIBP_C::BndEvt__Button_BackToLobby_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("OBUI_UIBP_C", "BndEvt__Button_BackToLobby_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function OBUI_UIBP.OBUI_UIBP_C.BndEvt__Button_FreeCam_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UOBUI_UIBP_C::BndEvt__Button_FreeCam_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("OBUI_UIBP_C", "BndEvt__Button_FreeCam_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -144,20 +200,6 @@ void UOBUI_UIBP_C::BndEvt__Button_SwitchPlayer_K2Node_ComponentBoundEvent_19_OnB
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("OBUI_UIBP_C", "BndEvt__Button_SwitchPlayer_K2Node_ComponentBoundEvent_19_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function OBUI_UIBP.OBUI_UIBP_C.BndEvt__Button_BackToLobby_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UOBUI_UIBP_C::BndEvt__Button_BackToLobby_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("OBUI_UIBP_C", "BndEvt__Button_BackToLobby_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

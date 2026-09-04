@@ -308,5 +308,28 @@ void UCharacterAvatarComp_BP_C::GetBackpackLobbyItemID(int32 ItemID, int32* BPID
 		*BPID = Parms.BPID;
 }
 
+
+// Function CharacterAvatarComp_BP.CharacterAvatarComp_BP_C.GetFindSkinItemID
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InItemID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+int32 UCharacterAvatarComp_BP_C::GetFindSkinItemID(int32 InItemID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("CharacterAvatarComp_BP_C", "GetFindSkinItemID");
+
+	Params::CharacterAvatarComp_BP_C_GetFindSkinItemID Parms{};
+
+	Parms.InItemID = InItemID;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
 }
 

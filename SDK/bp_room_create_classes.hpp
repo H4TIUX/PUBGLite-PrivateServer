@@ -17,22 +17,22 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_room_create.bp_room_create_C
-// 0x0050 (0x0438 - 0x03E8)
+// 0x0048 (0x0420 - 0x03D8)
 class Abp_room_create_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class FString                                 BP_CreateRoom_Passwd;                              // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 BP_RoomCreate_SelfName;                            // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_CreateRoom_MapID;                               // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_404[0x4];                                      // 0x0404(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BP_CreateRoom_Mode;                                // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_CreateRoom_MapID;                               // 0x0404(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 BP_CreateRoom_Name;                                // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_CreateRoom_Passwd;                              // 0x0418(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_CreateRoom_Mode;                                // 0x0428(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42C[0x4];                                      // 0x042C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0430(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0418(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
+	void EventRoomCreateRelease();
+	void EventRoomCreateRelease_NoFetch();
 	void EventCloseRoomModeChatUI();
 	void EventCloseRoomModeChatUI_NoFetch();
 	void EventOpenRoomModeChatUI();
@@ -43,8 +43,6 @@ public:
 	void EventCreateRoomCheckNameEmpty_NoFetch();
 	void EventCreateRoom();
 	void EventCreateRoom_NoFetch();
-	void EventRoomCreateRelease();
-	void EventRoomCreateRelease_NoFetch();
 	void EventFetchInfo();
 	void EventFetchInfo_NoFetch();
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "ItemGeneratorSuperDrop_structs.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ItemGeneratorSuperDrop_structs.hpp"
 #include "ItemGeneratorDS_structs.hpp"
 #include "Engine_structs.hpp"
 

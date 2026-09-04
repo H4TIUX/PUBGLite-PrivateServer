@@ -17,100 +17,6 @@
 namespace SDK::Params
 {
 
-// Function UnrealArchExt.FrontendHUD.GetLogicManager
-// 0x0010 (0x0010 - 0x0000)
-struct FrontendHUD_GetLogicManager final
-{
-public:
-	int32                                         LogicManagerIndex;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULogicManagerBase*                      ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function UnrealArchExt.FrontendHUD.GetLogicManagerByName
-// 0x0010 (0x0010 - 0x0000)
-struct FrontendHUD_GetLogicManagerByName final
-{
-public:
-	class FName                                   LogicManagerTagName;                               // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULogicManagerBase*                      ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function UnrealArchExt.FrontendHUD.OnPostLoadMapWithWorld
-// 0x0008 (0x0008 - 0x0000)
-struct FrontendHUD_OnPostLoadMapWithWorld final
-{
-public:
-	class UWorld*                                 World;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function UnrealArchExt.FrontendHUD.OnPreLoadMap
-// 0x0010 (0x0010 - 0x0000)
-struct FrontendHUD_OnPreLoadMap final
-{
-public:
-	class FString                                 MapName;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function UnrealArchExt.FrontendHUD.SwitchGameStatus
-// 0x0018 (0x0018 - 0x0000)
-struct FrontendHUD_SwitchGameStatus final
-{
-public:
-	class FName                                   GameStatus;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Options;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function UnrealArchExt.FrontendHUD.GetGameMode
-// 0x0008 (0x0008 - 0x0000)
-struct FrontendHUD_GetGameMode final
-{
-public:
-	class AGameMode*                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function UnrealArchExt.FrontendHUD.GetGameViewportClient
-// 0x0008 (0x0008 - 0x0000)
-struct FrontendHUD_GetGameViewportClient final
-{
-public:
-	class UGameViewportClient*                    ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function UnrealArchExt.FrontendHUD.GetPlayerController
-// 0x0008 (0x0008 - 0x0000)
-struct FrontendHUD_GetPlayerController final
-{
-public:
-	class APlayerController*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function UnrealArchExt.FrontendHUD.GetUtils
-// 0x0008 (0x0008 - 0x0000)
-struct FrontendHUD_GetUtils final
-{
-public:
-	class UFrontendUtils*                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function UnrealArchExt.FrontendHUD.GetWorld
-// 0x0008 (0x0008 - 0x0000)
-struct FrontendHUD_GetWorld final
-{
-public:
-	class UWorld*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function UnrealArchExt.BackendHUD.GetFrontendHUD
-// 0x0010 (0x0010 - 0x0000)
-struct BackendHUD_GetFrontendHUD final
-{
-public:
-	int32                                         FrontendHUDIndex;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFrontendHUD*                           ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
 // Function UnrealArchExt.UAEUserWidget.FindChild
 // 0x0018 (0x0018 - 0x0000)
 struct UAEUserWidget_FindChild final
@@ -240,6 +146,90 @@ struct UAEWidgetContainer_RemoveWidgetInternal final
 {
 public:
 	class UUAEUserWidget*                         Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function UnrealArchExt.FrontendHUD.GetLogicManager
+// 0x0010 (0x0010 - 0x0000)
+struct FrontendHUD_GetLogicManager final
+{
+public:
+	int32                                         LogicManagerIndex;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULogicManagerBase*                      ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function UnrealArchExt.FrontendHUD.GetLogicManagerByName
+// 0x0010 (0x0010 - 0x0000)
+struct FrontendHUD_GetLogicManagerByName final
+{
+public:
+	class FName                                   LogicManagerTagName;                               // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULogicManagerBase*                      ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function UnrealArchExt.FrontendHUD.OnPostLoadMapWithWorld
+// 0x0008 (0x0008 - 0x0000)
+struct FrontendHUD_OnPostLoadMapWithWorld final
+{
+public:
+	class UWorld*                                 World;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function UnrealArchExt.FrontendHUD.OnPreLoadMap
+// 0x0010 (0x0010 - 0x0000)
+struct FrontendHUD_OnPreLoadMap final
+{
+public:
+	class FString                                 MapName;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function UnrealArchExt.FrontendHUD.SwitchGameStatus
+// 0x0018 (0x0018 - 0x0000)
+struct FrontendHUD_SwitchGameStatus final
+{
+public:
+	class FName                                   GameStatus;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Options;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function UnrealArchExt.FrontendHUD.GetGameMode
+// 0x0008 (0x0008 - 0x0000)
+struct FrontendHUD_GetGameMode final
+{
+public:
+	class AGameMode*                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function UnrealArchExt.FrontendHUD.GetGameViewportClient
+// 0x0008 (0x0008 - 0x0000)
+struct FrontendHUD_GetGameViewportClient final
+{
+public:
+	class UGameViewportClient*                    ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function UnrealArchExt.FrontendHUD.GetPlayerController
+// 0x0008 (0x0008 - 0x0000)
+struct FrontendHUD_GetPlayerController final
+{
+public:
+	class APlayerController*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function UnrealArchExt.FrontendHUD.GetUtils
+// 0x0008 (0x0008 - 0x0000)
+struct FrontendHUD_GetUtils final
+{
+public:
+	class UFrontendUtils*                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function UnrealArchExt.FrontendHUD.GetWorld
+// 0x0008 (0x0008 - 0x0000)
+struct FrontendHUD_GetWorld final
+{
+public:
+	class UWorld*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 // Function UnrealArchExt.LogicManagerBase.DispatchUIMessage
@@ -383,6 +373,16 @@ public:
 	class FString                                 DelegateNum;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         ReturnValue : 1;                                   // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function UnrealArchExt.BackendHUD.GetFrontendHUD
+// 0x0010 (0x0010 - 0x0000)
+struct BackendHUD_GetFrontendHUD final
+{
+public:
+	int32                                         FrontendHUDIndex;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFrontendHUD*                           ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 }

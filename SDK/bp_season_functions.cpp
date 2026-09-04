@@ -30,57 +30,29 @@ void Abp_season_C::UserConstructionScript()
 }
 
 
-// Function bp_season.bp_season_C.EventTakeSeasonInReward
+// Function bp_season.bp_season_C.EventSeasonTips
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_season_C::EventTakeSeasonInReward()
+void Abp_season_C::EventSeasonTips()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_season_C", "EventTakeSeasonInReward");
+		Func = GetClass()->GetFunction("bp_season_C", "EventSeasonTips");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_season.bp_season_C.EventTakeSeasonInReward_NoFetch
+// Function bp_season.bp_season_C.EventSeasonTips_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_season_C::EventTakeSeasonInReward_NoFetch()
+void Abp_season_C::EventSeasonTips_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_season_C", "EventTakeSeasonInReward_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_season.bp_season_C.EventSeasonSelectMode
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_season_C::EventSeasonSelectMode()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_season_C", "EventSeasonSelectMode");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_season.bp_season_C.EventSeasonSelectMode_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_season_C::EventSeasonSelectMode_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_season_C", "EventSeasonSelectMode_NoFetch");
+		Func = GetClass()->GetFunction("bp_season_C", "EventSeasonTips_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,29 +86,57 @@ void Abp_season_C::EventTakeSeasonEndReward_NoFetch()
 }
 
 
-// Function bp_season.bp_season_C.EventSeasonTips
+// Function bp_season.bp_season_C.EventSeasonSelectMode
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_season_C::EventSeasonTips()
+void Abp_season_C::EventSeasonSelectMode()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_season_C", "EventSeasonTips");
+		Func = GetClass()->GetFunction("bp_season_C", "EventSeasonSelectMode");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_season.bp_season_C.EventSeasonTips_NoFetch
+// Function bp_season.bp_season_C.EventSeasonSelectMode_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_season_C::EventSeasonTips_NoFetch()
+void Abp_season_C::EventSeasonSelectMode_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_season_C", "EventSeasonTips_NoFetch");
+		Func = GetClass()->GetFunction("bp_season_C", "EventSeasonSelectMode_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_season.bp_season_C.EventTakeSeasonInReward
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_season_C::EventTakeSeasonInReward()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_season_C", "EventTakeSeasonInReward");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_season.bp_season_C.EventTakeSeasonInReward_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_season_C::EventTakeSeasonInReward_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_season_C", "EventTakeSeasonInReward_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "BP_STRUCT_Item_type_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "Basic_structs.hpp"
+#include "Engine_structs.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "UnrealArchExt_classes.hpp"
+#include "BP_STRUCT_Item_type_structs.hpp"
 
 
 namespace SDK

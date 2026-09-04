@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
+#include "InputCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "ShadowTrackerExtra_classes.hpp"
-#include "InputCore_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
@@ -39,9 +39,13 @@ public:
 
 public:
 	void ExecuteUbergraph_FreeCameraBtn(int32 EntryPoint);
+	void OnScopeChanged();
+	void OnSwitchCameraModeScope_Aim();
+	void Destruct();
 	void CustomEvent_0();
 	void ReceivedInitWidget();
 	void Tick(const struct FGeometry& MyGeometry_0, float InDeltaTime);
+	void Construct();
 	struct FEventReply OnTouchStarted(const struct FGeometry& MyGeometry_0, struct FPointerEvent& InTouchEvent);
 	struct FEventReply OnTouchEnded(const struct FGeometry& MyGeometry_0, struct FPointerEvent& InTouchEvent);
 	void SwitchCameraModeScope_Aim();

@@ -11,18 +11,18 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "BP_STRUCT_Item_type_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "EConsumableListSortMode_structs.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "UnrealArchExt_classes.hpp"
+#include "BP_STRUCT_Item_type_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ConsumableItemList.ConsumableItemList_C
-// 0x04A8 (0x0760 - 0x02B8)
+// 0x04A0 (0x0758 - 0x02B8)
 class UConsumableItemList_C final : public UUAEUserWidget
 {
 public:
@@ -87,21 +87,21 @@ public:
 	TArray<struct FCompatableComsumableItemType>  CompableItemArray;                                 // 0x0678(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	int32                                         ConsumableMinID;                                   // 0x0688(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ConsumableMaxID;                                   // 0x068C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FCompatableComsumableItemType          CurFirstItemTypeData;                              // 0x0690(0x00A8)(Edit, BlueprintVisible, DisableEditOnInstance)
-	uint8                                         bIntelligentDrugs : 1;                             // 0x0738(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_739[0x3];                                      // 0x0739(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CacheHP;                                           // 0x073C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EConsumableListSortMode                       SortingMode;                                       // 0x0740(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         bIsDoneFullHealthSort : 1;                         // 0x0741(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         bIsDoneLittleBitWoundSort : 1;                     // 0x0742(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         bIsDonePlentyWoundSort : 1;                        // 0x0743(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         bIsDoneSeriousWoundSort : 1;                       // 0x0744(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         bIsDoneAlmostDieSort : 1;                          // 0x0745(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         bForceUpdate : 1;                                  // 0x0746(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_747[0x1];                                      // 0x0747(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LastMannualSortTime;                               // 0x0748(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MannualSortTimeThreshold;                          // 0x074C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 FirstItemImagePath;                                // 0x0750(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FCompatableComsumableItemType          CurFirstItemTypeData;                              // 0x0690(0x00A0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	uint8                                         bIntelligentDrugs : 1;                             // 0x0730(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_731[0x3];                                      // 0x0731(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CacheHP;                                           // 0x0734(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EConsumableListSortMode                       SortingMode;                                       // 0x0738(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         bIsDoneFullHealthSort : 1;                         // 0x0739(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         bIsDoneLittleBitWoundSort : 1;                     // 0x073A(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         bIsDonePlentyWoundSort : 1;                        // 0x073B(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         bIsDoneSeriousWoundSort : 1;                       // 0x073C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         bIsDoneAlmostDieSort : 1;                          // 0x073D(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         bForceUpdate : 1;                                  // 0x073E(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_73F[0x1];                                      // 0x073F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LastMannualSortTime;                               // 0x0740(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MannualSortTimeThreshold;                          // 0x0744(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 FirstItemImagePath;                                // 0x0748(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_ConsumableItemList(int32 EntryPoint);

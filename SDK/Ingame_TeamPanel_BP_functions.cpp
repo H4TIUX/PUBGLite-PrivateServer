@@ -37,6 +37,48 @@ void UIngame_TeamPanel_BP_C::ExecuteUbergraph_Ingame_TeamPanel_BP(int32 EntryPoi
 }
 
 
+// Function Ingame_TeamPanel_BP.Ingame_TeamPanel_BP_C.OnUpdateTeamPFList
+// (BlueprintCallable, BlueprintEvent)
+
+void UIngame_TeamPanel_BP_C::OnUpdateTeamPFList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("Ingame_TeamPanel_BP_C", "OnUpdateTeamPFList");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Ingame_TeamPanel_BP.Ingame_TeamPanel_BP_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UIngame_TeamPanel_BP_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("Ingame_TeamPanel_BP_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Ingame_TeamPanel_BP.Ingame_TeamPanel_BP_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UIngame_TeamPanel_BP_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("Ingame_TeamPanel_BP_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Ingame_TeamPanel_BP.Ingame_TeamPanel_BP_C.UpdateTeamUIPosition
 // (Event, Public, BlueprintEvent)
 // Parameters:

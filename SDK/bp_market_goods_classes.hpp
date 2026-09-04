@@ -18,28 +18,28 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_market_goods.bp_market_goods_C
-// 0x0040 (0x0428 - 0x03E8)
+// 0x0040 (0x0418 - 0x03D8)
 class Abp_market_goods_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	int32                                         BP_MarketGoodsSelectTypeIdx;                       // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         BP_MarketGoods_ReloadDonotJump : 1;                // 0x03F4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_3F5[0x3];                                      // 0x03F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_MarketDropItem              BP_STRUCT_MarketDropItem;                          // 0x03F8(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_MarketDropItem>      BP_ARRAY_MarketDropList;                           // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	struct FBP_STRUCT_MarketDropItem              BP_STRUCT_MarketDropItem;                          // 0x03F0(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_MarketGoodsSelectTypeIdx;                       // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         BP_MarketGoods_ReloadDonotJump : 1;                // 0x0404(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_405[0x3];                                      // 0x0405(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         BP_MarketGoodsSelectIdx;                           // 0x0408(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_40C[0x4];                                      // 0x040C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_MarketDropItem>      BP_ARRAY_MarketDropList;                           // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0420(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0410(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventMarketGoodsUIBuy();
-	void EventMarketGoodsUIBuy_NoFetch();
-	void EventMarketGoodsUISelectType();
-	void EventMarketGoodsUISelectType_NoFetch();
 	void EventMarketGoodsUISelect();
 	void EventMarketGoodsUISelect_NoFetch();
+	void EventMarketGoodsUISelectType();
+	void EventMarketGoodsUISelectType_NoFetch();
+	void EventMarketGoodsUIBuy();
+	void EventMarketGoodsUIBuy_NoFetch();
 
 public:
 	static class UClass* StaticClass()

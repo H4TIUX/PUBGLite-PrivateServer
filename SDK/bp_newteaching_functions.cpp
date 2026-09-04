@@ -30,34 +30,6 @@ void Abp_newteaching_C::UserConstructionScript()
 }
 
 
-// Function bp_newteaching.bp_newteaching_C.EventNewteachingEnterRoom
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_newteaching_C::EventNewteachingEnterRoom()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_newteaching_C", "EventNewteachingEnterRoom");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_newteaching.bp_newteaching_C.EventNewteachingEnterRoom_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_newteaching_C::EventNewteachingEnterRoom_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_newteaching_C", "EventNewteachingEnterRoom_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_newteaching.bp_newteaching_C.EventNewteachingTitleBtnClick
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,6 +53,34 @@ void Abp_newteaching_C::EventNewteachingTitleBtnClick_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_newteaching_C", "EventNewteachingTitleBtnClick_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_newteaching.bp_newteaching_C.EventNewteachingEnterRoom
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_newteaching_C::EventNewteachingEnterRoom()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_newteaching_C", "EventNewteachingEnterRoom");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_newteaching.bp_newteaching_C.EventNewteachingEnterRoom_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_newteaching_C::EventNewteachingEnterRoom_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_newteaching_C", "EventNewteachingEnterRoom_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

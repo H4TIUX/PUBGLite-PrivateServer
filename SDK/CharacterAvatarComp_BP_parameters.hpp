@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Gameplay_structs.hpp"
+#include "Basic_structs.hpp"
 #include "BP_STRUCT_BackpackMapping_type_structs.hpp"
 #include "BP_STRUCT_AvatarBPTable_type_structs.hpp"
+#include "Gameplay_structs.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
-#include "Basic_structs.hpp"
 #include "BP_STRUCT_Item_type_structs.hpp"
 
 
@@ -221,6 +221,19 @@ public:
 	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBP_STRUCT_BackpackMapping_type        CallFunc_GetDataTableRowFromName_OutRow;           // 0x003C(0x0020)(HasGetValueTypeHash)
 	uint8                                         CallFunc_GetDataTableRowFromName_ReturnValue : 1;  // 0x005C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+};
+
+// Function CharacterAvatarComp_BP.CharacterAvatarComp_BP_C.GetFindSkinItemID
+// 0x0048 (0x0048 - 0x0000)
+struct CharacterAvatarComp_BP_C_GetFindSkinItemID final
+{
+public:
+	int32                                         InItemID;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBP_STRUCT_BackpackMapping_type        CallFunc_GetDataTableRowFromName_OutRow;           // 0x0020(0x0020)(HasGetValueTypeHash)
+	uint8                                         CallFunc_GetDataTableRowFromName_ReturnValue : 1;  // 0x0040(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 };
 
 }

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass VehicleAvatarHandleBase_BP.VehicleAvatarHandleBase_BP_C
-// 0x0000 (0x01D8 - 0x01D8)
+// 0x0000 (0x01E0 - 0x01E0)
 class UVehicleAvatarHandleBase_BP_C final : public UBackpackVehicleAvatarHandle
 {
 public:

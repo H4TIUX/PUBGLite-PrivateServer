@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Basic_structs.hpp"
 #include "BP_STRUCT_PlaneBPTable_type_structs.hpp"
-#include "BP_STRUCT_EmoteBPTable_type_structs.hpp"
+#include "Basic_structs.hpp"
 #include "BP_STRUCT_VehicleBPTable_type_structs.hpp"
+#include "BP_STRUCT_EmoteBPTable_type_structs.hpp"
 #include "BP_STRUCT_ArmoryWeaponBPTable_type_structs.hpp"
 #include "BP_STRUCT_AvatarBPTable_type_structs.hpp"
 #include "BP_STRUCT_ConsumableBPTable_type_structs.hpp"

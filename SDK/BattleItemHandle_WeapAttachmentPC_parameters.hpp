@@ -377,7 +377,7 @@ public:
 };
 
 // Function BattleItemHandle_WeapAttachmentPC.BattleItemHandle_WeapAttachmentPC_C.CurBackpackCapacity
-// 0x00E0 (0x00E0 - 0x0000)
+// 0x00D8 (0x00D8 - 0x0000)
 struct BattleItemHandle_WeapAttachmentPC_C_CurBackpackCapacity final
 {
 public:
@@ -388,12 +388,12 @@ public:
 	uint8                                         CallFunc_Greater_FloatFloat_ReturnValue : 1;       // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FItemDefineID                          CallFunc_GetDefineID_ReturnValue;                  // 0x0018(0x0018)(NoDestructor, HasGetValueTypeHash)
-	struct FBattleItemData                        CallFunc_GetItemByDefineID_ReturnValue;            // 0x0030(0x00A0)()
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue : 1;        // 0x00D4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_D5[0x3];                                       // 0x00D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Add_FloatFloat_ReturnValue2;              // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Greater_FloatFloat_ReturnValue2 : 1;      // 0x00DC(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	struct FBattleItemData                        CallFunc_GetItemByDefineID_ReturnValue;            // 0x0030(0x0098)()
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue : 1;        // 0x00CC(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_CD[0x3];                                       // 0x00CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Add_FloatFloat_ReturnValue2;              // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Greater_FloatFloat_ReturnValue2 : 1;      // 0x00D4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 };
 
 // Function BattleItemHandle_WeapAttachmentPC.BattleItemHandle_WeapAttachmentPC_C.GetWorldInternal
@@ -406,16 +406,16 @@ public:
 };
 
 // Function BattleItemHandle_WeapAttachmentPC.BattleItemHandle_WeapAttachmentPC_C.ExtractItemData
-// 0x0258 (0x0258 - 0x0000)
+// 0x0240 (0x0240 - 0x0000)
 struct BattleItemHandle_WeapAttachmentPC_C_ExtractItemData final
 {
 public:
-	struct FBattleItemData                        ReturnValue;                                       // 0x0000(0x00A0)(Parm, OutParm, ReturnParm)
-	TMap<class FName, struct FItemAssociation>    CallFunc_GetAssociationMap_ReturnValue;            // 0x00A0(0x0050)(ZeroConstructor)
-	TArray<struct FItemAssociation>               CallFunc_Map_Values_Values;                        // 0x00F0(0x0010)(ZeroConstructor, ReferenceParm)
-	struct FItemDefineID                          CallFunc_GetDefineID_ReturnValue;                  // 0x0100(0x0018)(NoDestructor, HasGetValueTypeHash)
-	struct FBattleItemData                        CallFunc_ConstructBattleItemDataByDefineID_ReturnValue; // 0x0118(0x00A0)()
-	struct FBattleItemData                        K2Node_SetFieldsInStruct_StructOut;                // 0x01B8(0x00A0)()
+	struct FBattleItemData                        ReturnValue;                                       // 0x0000(0x0098)(Parm, OutParm, ReturnParm)
+	TMap<class FName, struct FItemAssociation>    CallFunc_GetAssociationMap_ReturnValue;            // 0x0098(0x0050)(ZeroConstructor)
+	TArray<struct FItemAssociation>               CallFunc_Map_Values_Values;                        // 0x00E8(0x0010)(ZeroConstructor, ReferenceParm)
+	struct FItemDefineID                          CallFunc_GetDefineID_ReturnValue;                  // 0x00F8(0x0018)(NoDestructor, HasGetValueTypeHash)
+	struct FBattleItemData                        CallFunc_ConstructBattleItemDataByDefineID_ReturnValue; // 0x0110(0x0098)()
+	struct FBattleItemData                        K2Node_SetFieldsInStruct_StructOut;                // 0x01A8(0x0098)()
 };
 
 }

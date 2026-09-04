@@ -38,6 +38,8 @@ public:
 
 public:
 	void ExecuteUbergraph_SurviveInfoPanel(int32 EntryPoint);
+	void Destruct();
+	void Construct();
 	void OnTeamNumChanged();
 	void ReceivedInitWidget();
 	void RebindEvents();

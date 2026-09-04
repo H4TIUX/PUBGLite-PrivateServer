@@ -30,29 +30,29 @@ void Abp_eightday_C::UserConstructionScript()
 }
 
 
-// Function bp_eightday.bp_eightday_C.EventEightDayUpdateUI
+// Function bp_eightday.bp_eightday_C.EventEightDaySignUpReq
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_eightday_C::EventEightDayUpdateUI()
+void Abp_eightday_C::EventEightDaySignUpReq()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_eightday_C", "EventEightDayUpdateUI");
+		Func = GetClass()->GetFunction("bp_eightday_C", "EventEightDaySignUpReq");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_eightday.bp_eightday_C.EventEightDayUpdateUI_NoFetch
+// Function bp_eightday.bp_eightday_C.EventEightDaySignUpReq_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_eightday_C::EventEightDayUpdateUI_NoFetch()
+void Abp_eightday_C::EventEightDaySignUpReq_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_eightday_C", "EventEightDayUpdateUI_NoFetch");
+		Func = GetClass()->GetFunction("bp_eightday_C", "EventEightDaySignUpReq_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,34 +86,6 @@ void Abp_eightday_C::EventEightDayHideUI_NoFetch()
 }
 
 
-// Function bp_eightday.bp_eightday_C.EventFetchInfo
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_eightday_C::EventFetchInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_eightday_C", "EventFetchInfo");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_eightday.bp_eightday_C.EventFetchInfo_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_eightday_C::EventFetchInfo_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_eightday_C", "EventFetchInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_eightday.bp_eightday_C.EventEightDaySignUpReq_Push
 // (BlueprintCallable, BlueprintEvent)
 
@@ -142,29 +114,57 @@ void Abp_eightday_C::EventEightDaySignUpReq_Push_NoFetch()
 }
 
 
-// Function bp_eightday.bp_eightday_C.EventEightDaySignUpReq
+// Function bp_eightday.bp_eightday_C.EventEightDayUpdateUI
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_eightday_C::EventEightDaySignUpReq()
+void Abp_eightday_C::EventEightDayUpdateUI()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_eightday_C", "EventEightDaySignUpReq");
+		Func = GetClass()->GetFunction("bp_eightday_C", "EventEightDayUpdateUI");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_eightday.bp_eightday_C.EventEightDaySignUpReq_NoFetch
+// Function bp_eightday.bp_eightday_C.EventEightDayUpdateUI_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_eightday_C::EventEightDaySignUpReq_NoFetch()
+void Abp_eightday_C::EventEightDayUpdateUI_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_eightday_C", "EventEightDaySignUpReq_NoFetch");
+		Func = GetClass()->GetFunction("bp_eightday_C", "EventEightDayUpdateUI_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_eightday.bp_eightday_C.EventFetchInfo
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_eightday_C::EventFetchInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_eightday_C", "EventFetchInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_eightday.bp_eightday_C.EventFetchInfo_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_eightday_C::EventFetchInfo_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_eightday_C", "EventFetchInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

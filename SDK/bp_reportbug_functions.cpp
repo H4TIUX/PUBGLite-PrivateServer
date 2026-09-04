@@ -30,34 +30,6 @@ void Abp_reportbug_C::UserConstructionScript()
 }
 
 
-// Function bp_reportbug.bp_reportbug_C.EventReportBugClose
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_reportbug_C::EventReportBugClose()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_reportbug_C", "EventReportBugClose");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_reportbug.bp_reportbug_C.EventReportBugClose_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_reportbug_C::EventReportBugClose_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_reportbug_C", "EventReportBugClose_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_reportbug.bp_reportbug_C.EventReportBugRefresh
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,6 +53,34 @@ void Abp_reportbug_C::EventReportBugRefresh_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_reportbug_C", "EventReportBugRefresh_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_reportbug.bp_reportbug_C.EventReportBugClose
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_reportbug_C::EventReportBugClose()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_reportbug_C", "EventReportBugClose");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_reportbug.bp_reportbug_C.EventReportBugClose_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_reportbug_C::EventReportBugClose_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_reportbug_C", "EventReportBugClose_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

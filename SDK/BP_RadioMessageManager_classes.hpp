@@ -21,6 +21,11 @@ namespace SDK
 class UBP_RadioMessageManager_C final : public UTslRadioMessageManager
 {
 public:
+	class FString FindRadioMessageText(int32 InActorID, int32 InVoiceID);
+	class FString FindAkEventName(int32 InActorID, int32 InVoiceID);
+	class FString FindRadioMessageCategory(int32 InActorID, int32 InVoiceID);
+
+public:
 	static class UClass* StaticClass()
 	{
 		BP_STATIC_CLASS_IMPL("BP_RadioMessageManager_C")

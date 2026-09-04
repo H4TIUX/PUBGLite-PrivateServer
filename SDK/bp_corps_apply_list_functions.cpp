@@ -30,29 +30,29 @@ void Abp_corps_apply_list_C::UserConstructionScript()
 }
 
 
-// Function bp_corps_apply_list.bp_corps_apply_list_C.EventCorpsOnClickAgreeMemberJoin
+// Function bp_corps_apply_list.bp_corps_apply_list_C.EventCorpsOnClickRefuseMemberJoin
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_apply_list_C::EventCorpsOnClickAgreeMemberJoin()
+void Abp_corps_apply_list_C::EventCorpsOnClickRefuseMemberJoin()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_apply_list_C", "EventCorpsOnClickAgreeMemberJoin");
+		Func = GetClass()->GetFunction("bp_corps_apply_list_C", "EventCorpsOnClickRefuseMemberJoin");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_corps_apply_list.bp_corps_apply_list_C.EventCorpsOnClickAgreeMemberJoin_NoFetch
+// Function bp_corps_apply_list.bp_corps_apply_list_C.EventCorpsOnClickRefuseMemberJoin_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_apply_list_C::EventCorpsOnClickAgreeMemberJoin_NoFetch()
+void Abp_corps_apply_list_C::EventCorpsOnClickRefuseMemberJoin_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_apply_list_C", "EventCorpsOnClickAgreeMemberJoin_NoFetch");
+		Func = GetClass()->GetFunction("bp_corps_apply_list_C", "EventCorpsOnClickRefuseMemberJoin_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,29 +86,29 @@ void Abp_corps_apply_list_C::EventCorpsOnClickPlayerDetail_NoFetch()
 }
 
 
-// Function bp_corps_apply_list.bp_corps_apply_list_C.EventCorpsOnClickRefuseMemberJoin
+// Function bp_corps_apply_list.bp_corps_apply_list_C.EventCorpsOnClickAgreeMemberJoin
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_apply_list_C::EventCorpsOnClickRefuseMemberJoin()
+void Abp_corps_apply_list_C::EventCorpsOnClickAgreeMemberJoin()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_apply_list_C", "EventCorpsOnClickRefuseMemberJoin");
+		Func = GetClass()->GetFunction("bp_corps_apply_list_C", "EventCorpsOnClickAgreeMemberJoin");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_corps_apply_list.bp_corps_apply_list_C.EventCorpsOnClickRefuseMemberJoin_NoFetch
+// Function bp_corps_apply_list.bp_corps_apply_list_C.EventCorpsOnClickAgreeMemberJoin_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_apply_list_C::EventCorpsOnClickRefuseMemberJoin_NoFetch()
+void Abp_corps_apply_list_C::EventCorpsOnClickAgreeMemberJoin_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_apply_list_C", "EventCorpsOnClickRefuseMemberJoin_NoFetch");
+		Func = GetClass()->GetFunction("bp_corps_apply_list_C", "EventCorpsOnClickAgreeMemberJoin_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

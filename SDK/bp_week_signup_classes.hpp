@@ -18,32 +18,32 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_week_signup.bp_week_signup_C
-// 0x0090 (0x0478 - 0x03E8)
+// 0x0090 (0x0468 - 0x03D8)
 class Abp_week_signup_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FBP_STRUCT_WeekSignUpUI_Info           BP_STRUCT_WeekSignUpUI_Info;                       // 0x03F0(0x0048)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_Request_SignUp_day;                             // 0x0438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_CurrentSignUpDayInWeek;                         // 0x043C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_WeekSignUpUI_Info>   BP_ARRAY_Week_SignUp_Info;                         // 0x0440(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_Week_SignUp_Platform;                           // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_454[0x4];                                      // 0x0454(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_Week_SignUp_TimeString;                         // 0x0458(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_Week_SignUp_QQVip;                              // 0x0468(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_Week_SignUp_Startup;                            // 0x046C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0470(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_WeekSignUpUI_Info           BP_STRUCT_WeekSignUpUI_Info;                       // 0x03E0(0x0048)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_CurrentSignUpDayInWeek;                         // 0x0428(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_42C[0x4];                                      // 0x042C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_WeekSignUpUI_Info>   BP_ARRAY_Week_SignUp_Info;                         // 0x0430(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_Request_SignUp_day;                             // 0x0440(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_Week_SignUp_Platform;                           // 0x0444(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_Week_SignUp_Startup;                            // 0x0448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_Week_SignUp_QQVip;                              // 0x044C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 BP_Week_SignUp_TimeString;                         // 0x0450(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0460(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
 	void EventWeekSignUpHide();
 	void EventWeekSignUpHide_NoFetch();
+	void EventWeekSignUpInit();
+	void EventWeekSignUpInit_NoFetch();
 	void EventWeekSignPlatform_FetchInfo();
 	void EventWeekSignPlatform_FetchInfo_NoFetch();
 	void EventWeekSignUpReq();
 	void EventWeekSignUpReq_NoFetch();
-	void EventWeekSignUpInit();
-	void EventWeekSignUpInit_NoFetch();
 	void EventWeekSignUpReq_Push();
 	void EventWeekSignUpReq_Push_NoFetch();
 	void EventFetchInfo();

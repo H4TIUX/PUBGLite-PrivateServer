@@ -58,34 +58,6 @@ void Abp_market_package_C::EventMarketPackageUISelect_NoFetch()
 }
 
 
-// Function bp_market_package.bp_market_package_C.EventMarketPackageUISelectType
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_market_package_C::EventMarketPackageUISelectType()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_package_C", "EventMarketPackageUISelectType");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_market_package.bp_market_package_C.EventMarketPackageUISelectType_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_market_package_C::EventMarketPackageUISelectType_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_package_C", "EventMarketPackageUISelectType_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_market_package.bp_market_package_C.EventMarketPackageUIBuy
 // (BlueprintCallable, BlueprintEvent)
 
@@ -109,6 +81,34 @@ void Abp_market_package_C::EventMarketPackageUIBuy_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_market_package_C", "EventMarketPackageUIBuy_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_market_package.bp_market_package_C.EventMarketPackageUISelectType
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_market_package_C::EventMarketPackageUISelectType()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_market_package_C", "EventMarketPackageUISelectType");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_market_package.bp_market_package_C.EventMarketPackageUISelectType_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_market_package_C::EventMarketPackageUISelectType_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_market_package_C", "EventMarketPackageUISelectType_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

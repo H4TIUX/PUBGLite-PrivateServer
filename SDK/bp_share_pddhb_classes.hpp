@@ -17,31 +17,31 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_share_pddhb.bp_share_pddhb_C
-// 0x0060 (0x0448 - 0x03E8)
+// 0x0060 (0x0438 - 0x03D8)
 class Abp_share_pddhb_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	uint8                                         BP_PDDHB_VALID : 1;                                // 0x03F0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_3F1[0x7];                                      // 0x03F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_PDDHBRoomId;                                    // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_PDDHBRemainNum;                                 // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_PDDHB_WXBKIMG;                                  // 0x0418(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_PDDHB_DelayShowTime;                            // 0x0428(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42C[0x4];                                      // 0x042C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_PDDHB_QQBKIMG;                                  // 0x0430(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class FString                                 BP_PDDHBRemainNum;                                 // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_PDDHB_WXBKIMG;                                  // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_PDDHB_QQBKIMG;                                  // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_PDDHB_DelayShowTime;                            // 0x0410(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_414[0x4];                                      // 0x0414(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_PDDHBRoomId;                                    // 0x0418(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         BP_PDDHB_VALID : 1;                                // 0x0428(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_429[0x7];                                      // 0x0429(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0430(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
+	void EventSharePDD_Push();
+	void EventSharePDD_Push_NoFetch();
 	void EventSharePDDFetchInfo();
 	void EventSharePDDFetchInfo_NoFetch();
 	void EventClickSharePDDBtn();
 	void EventClickSharePDDBtn_NoFetch();
 	void EventHidePDDHBUI();
 	void EventHidePDDHBUI_NoFetch();
-	void EventSharePDD_Push();
-	void EventSharePDD_Push_NoFetch();
 
 public:
 	static class UClass* StaticClass()

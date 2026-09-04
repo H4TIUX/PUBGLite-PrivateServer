@@ -17,30 +17,29 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_market_package.bp_market_package_C
-// 0x0048 (0x0430 - 0x03E8)
+// 0x0040 (0x0418 - 0x03D8)
 class Abp_market_package_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	TArray<int32>                                 BP_ARRAY_MarketPackageUIWearList;                  // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_MarketPackageUI_ChangeItemResId;                // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_MarketPackageUIBuyIdx;                          // 0x0404(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         BP_MarketPackageUINotOwn : 1;                      // 0x0408(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_409[0x3];                                      // 0x0409(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         BP_MarketPackageUISelectTypeIdx;                   // 0x040C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         BP_MarketPackageUI_ReloadDonotJump : 1;            // 0x0410(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_411[0x7];                                      // 0x0411(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 BP_ARRAY_MarketPackageUISelectList;                // 0x0418(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0428(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	uint8                                         BP_MarketPackageUINotOwn : 1;                      // 0x03E0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         BP_MarketPackageUI_ReloadDonotJump : 1;            // 0x03E1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_3E2[0x2];                                      // 0x03E2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BP_MarketPackageUIBuyIdx;                          // 0x03E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_MarketPackageUISelectTypeIdx;                   // 0x03E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_MarketPackageUI_ChangeItemResId;                // 0x03EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<int32>                                 BP_ARRAY_MarketPackageUISelectList;                // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	TArray<int32>                                 BP_ARRAY_MarketPackageUIWearList;                  // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0410(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
 	void EventMarketPackageUISelect();
 	void EventMarketPackageUISelect_NoFetch();
-	void EventMarketPackageUISelectType();
-	void EventMarketPackageUISelectType_NoFetch();
 	void EventMarketPackageUIBuy();
 	void EventMarketPackageUIBuy_NoFetch();
+	void EventMarketPackageUISelectType();
+	void EventMarketPackageUISelectType_NoFetch();
 	void EventMarketPackageUIToggleOwn();
 	void EventMarketPackageUIToggleOwn_NoFetch();
 

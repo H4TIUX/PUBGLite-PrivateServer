@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Basic_structs.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
 #include "BP_STRUCT_Item_type_structs.hpp"
+#include "Basic_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -145,7 +145,7 @@ public:
 };
 
 // Function ConsumableItemList.ConsumableItemList_C.UpdateConsumableItemArray
-// 0x02C0 (0x02C0 - 0x0000)
+// 0x02A8 (0x02A8 - 0x0000)
 struct ConsumableItemList_C_UpdateConsumableItemArray final
 {
 public:
@@ -181,16 +181,16 @@ public:
 	TArray<struct FBattleItemData>                CallFunc_GetConsumablesInBackpack_ReturnValue;     // 0x00A8(0x0010)(ZeroConstructor, ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue4;                // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBattleItemData                        CallFunc_Array_Get_Item;                           // 0x00C0(0x00A0)()
-	uint8                                         CallFunc_Less_IntInt_ReturnValue : 1;              // 0x0160(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	EConsumeItemType                              CallFunc_GetConsumItemTypeBySpecificID_Type;       // 0x0161(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_IsAConsumableItem_IsComsumableItem : 1;   // 0x0162(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_163[0x5];                                      // 0x0163(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType;    // 0x0168(0x00A8)()
-	struct FCompatableComsumableItemType          CallFunc_SetItemPriorityBySortMode_OutData;        // 0x0210(0x00A8)()
-	uint8                                         CallFunc_InRange_IntInt_ReturnValue : 1;           // 0x02B8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_2B9[0x3];                                      // 0x02B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x02BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBattleItemData                        CallFunc_Array_Get_Item;                           // 0x00C0(0x0098)()
+	uint8                                         CallFunc_Less_IntInt_ReturnValue : 1;              // 0x0158(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	EConsumeItemType                              CallFunc_GetConsumItemTypeBySpecificID_Type;       // 0x0159(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_IsAConsumableItem_IsComsumableItem : 1;   // 0x015A(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_15B[0x5];                                      // 0x015B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType;    // 0x0160(0x00A0)()
+	struct FCompatableComsumableItemType          CallFunc_SetItemPriorityBySortMode_OutData;        // 0x0200(0x00A0)()
+	uint8                                         CallFunc_InRange_IntInt_ReturnValue : 1;           // 0x02A0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_2A1[0x3];                                      // 0x02A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x02A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 // Function ConsumableItemList.ConsumableItemList_C.GetConsumItemTypeBySpecificID
@@ -209,7 +209,7 @@ public:
 };
 
 // Function ConsumableItemList.ConsumableItemList_C.IsFirstItemRunOut
-// 0x00C0 (0x00C0 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct ConsumableItemList_C_IsFirstItemRunOut final
 {
 public:
@@ -219,10 +219,10 @@ public:
 	int32                                         ___int_Array_Index_Variable;                       // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ___int_Loop_Counter_Variable;                      // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FCompatableComsumableItemType          CallFunc_Array_Get_Item;                           // 0x0010(0x00A8)()
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Less_IntInt_ReturnValue : 1;              // 0x00BC(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_EqualEqual_ByteByte_ReturnValue : 1;      // 0x00BD(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	struct FCompatableComsumableItemType          CallFunc_Array_Get_Item;                           // 0x0010(0x00A0)()
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Less_IntInt_ReturnValue : 1;              // 0x00B4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_EqualEqual_ByteByte_ReturnValue : 1;      // 0x00B5(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 };
 
 // Function ConsumableItemList.ConsumableItemList_C.UpdateFirstItemImage
@@ -355,58 +355,58 @@ public:
 };
 
 // Function ConsumableItemList.ConsumableItemList_C.SetItemPriorityBySortMode
-// 0x15E0 (0x15E0 - 0x0000)
+// 0x14D8 (0x14D8 - 0x0000)
 struct ConsumableItemList_C_SetItemPriorityBySortMode final
 {
 public:
-	struct FCompatableComsumableItemType          InData;                                            // 0x0000(0x00A8)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FCompatableComsumableItemType          OutData;                                           // 0x00A8(0x00A8)(Parm, OutParm)
-	struct FCompatableComsumableItemType          LocalData;                                         // 0x0150(0x00A8)(Edit, BlueprintVisible)
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType;    // 0x01F8(0x00A8)()
-	uint8                                         K2Node_SwitchEnum_CmpSuccess : 1;                  // 0x02A0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         K2Node_SwitchEnum2_CmpSuccess : 1;                 // 0x02A1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_2A2[0x6];                                      // 0x02A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType2;   // 0x02A8(0x00A8)()
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType3;   // 0x0350(0x00A8)()
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType4;   // 0x03F8(0x00A8)()
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType5;   // 0x04A0(0x00A8)()
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType6;   // 0x0548(0x00A8)()
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType7;   // 0x05F0(0x00A8)()
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType8;   // 0x0698(0x00A8)()
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType9;   // 0x0740(0x00A8)()
-	uint8                                         K2Node_SwitchEnum3_CmpSuccess : 1;                 // 0x07E8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_7E9[0x7];                                      // 0x07E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType10;  // 0x07F0(0x00A8)()
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType11;  // 0x0898(0x00A8)()
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType12;  // 0x0940(0x00A8)()
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType13;  // 0x09E8(0x00A8)()
-	uint8                                         K2Node_SwitchEnum4_CmpSuccess : 1;                 // 0x0A90(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_A91[0x7];                                      // 0x0A91(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType14;  // 0x0A98(0x00A8)()
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType15;  // 0x0B40(0x00A8)()
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType16;  // 0x0BE8(0x00A8)()
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType17;  // 0x0C90(0x00A8)()
-	uint8                                         K2Node_SwitchEnum5_CmpSuccess : 1;                 // 0x0D38(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_D39[0x7];                                      // 0x0D39(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType18;  // 0x0D40(0x00A8)()
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType19;  // 0x0DE8(0x00A8)()
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType20;  // 0x0E90(0x00A8)()
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType21;  // 0x0F38(0x00A8)()
-	uint8                                         K2Node_SwitchEnum6_CmpSuccess : 1;                 // 0x0FE0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_FE1[0x7];                                      // 0x0FE1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType22;  // 0x0FE8(0x00A8)()
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType23;  // 0x1090(0x00A8)()
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType24;  // 0x1138(0x00A8)()
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType25;  // 0x11E0(0x00A8)()
-	uint8                                         K2Node_SwitchEnum7_CmpSuccess : 1;                 // 0x1288(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_1289[0x7];                                     // 0x1289(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType26;  // 0x1290(0x00A8)()
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType27;  // 0x1338(0x00A8)()
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType28;  // 0x13E0(0x00A8)()
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType29;  // 0x1488(0x00A8)()
-	uint8                                         K2Node_SwitchEnum8_CmpSuccess : 1;                 // 0x1530(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_1531[0x7];                                     // 0x1531(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType30;  // 0x1538(0x00A8)()
+	struct FCompatableComsumableItemType          InData;                                            // 0x0000(0x00A0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FCompatableComsumableItemType          OutData;                                           // 0x00A0(0x00A0)(Parm, OutParm)
+	struct FCompatableComsumableItemType          LocalData;                                         // 0x0140(0x00A0)(Edit, BlueprintVisible)
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType;    // 0x01E0(0x00A0)()
+	uint8                                         K2Node_SwitchEnum_CmpSuccess : 1;                  // 0x0280(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         K2Node_SwitchEnum2_CmpSuccess : 1;                 // 0x0281(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_282[0x6];                                      // 0x0282(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType2;   // 0x0288(0x00A0)()
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType3;   // 0x0328(0x00A0)()
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType4;   // 0x03C8(0x00A0)()
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType5;   // 0x0468(0x00A0)()
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType6;   // 0x0508(0x00A0)()
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType7;   // 0x05A8(0x00A0)()
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType8;   // 0x0648(0x00A0)()
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType9;   // 0x06E8(0x00A0)()
+	uint8                                         K2Node_SwitchEnum3_CmpSuccess : 1;                 // 0x0788(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_789[0x7];                                      // 0x0789(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType10;  // 0x0790(0x00A0)()
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType11;  // 0x0830(0x00A0)()
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType12;  // 0x08D0(0x00A0)()
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType13;  // 0x0970(0x00A0)()
+	uint8                                         K2Node_SwitchEnum4_CmpSuccess : 1;                 // 0x0A10(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_A11[0x7];                                      // 0x0A11(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType14;  // 0x0A18(0x00A0)()
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType15;  // 0x0AB8(0x00A0)()
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType16;  // 0x0B58(0x00A0)()
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType17;  // 0x0BF8(0x00A0)()
+	uint8                                         K2Node_SwitchEnum5_CmpSuccess : 1;                 // 0x0C98(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_C99[0x7];                                      // 0x0C99(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType18;  // 0x0CA0(0x00A0)()
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType19;  // 0x0D40(0x00A0)()
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType20;  // 0x0DE0(0x00A0)()
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType21;  // 0x0E80(0x00A0)()
+	uint8                                         K2Node_SwitchEnum6_CmpSuccess : 1;                 // 0x0F20(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_F21[0x7];                                      // 0x0F21(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType22;  // 0x0F28(0x00A0)()
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType23;  // 0x0FC8(0x00A0)()
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType24;  // 0x1068(0x00A0)()
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType25;  // 0x1108(0x00A0)()
+	uint8                                         K2Node_SwitchEnum7_CmpSuccess : 1;                 // 0x11A8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_11A9[0x7];                                     // 0x11A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType26;  // 0x11B0(0x00A0)()
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType27;  // 0x1250(0x00A0)()
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType28;  // 0x12F0(0x00A0)()
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType29;  // 0x1390(0x00A0)()
+	uint8                                         K2Node_SwitchEnum8_CmpSuccess : 1;                 // 0x1430(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_1431[0x7];                                     // 0x1431(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCompatableComsumableItemType          K2Node_MakeStruct_CompatableComsumableItemType30;  // 0x1438(0x00A0)()
 };
 
 // Function ConsumableItemList.ConsumableItemList_C.SetSortModeBySetting
@@ -427,7 +427,7 @@ public:
 };
 
 // Function ConsumableItemList.ConsumableItemList_C.OnItemClick
-// 0x00F0 (0x00F0 - 0x0000)
+// 0x00E8 (0x00E8 - 0x0000)
 struct ConsumableItemList_C_OnItemClick final
 {
 public:
@@ -439,11 +439,11 @@ public:
 	class UUIDataProcessingFunctionLibrary*       CallFunc_UILibraryInstance_ReturnValue;            // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FCompatableComsumableItemType>  CallFunc_ResetItemPriorityInArray_Out;             // 0x0028(0x0010)(ZeroConstructor, ReferenceParm)
 	TArray<struct FCompatableComsumableItemType>  CallFunc_SortConsumableItemArray_ReturnValue;      // 0x0038(0x0010)(ZeroConstructor, ReferenceParm)
-	struct FCompatableComsumableItemType          CallFunc_Array_Get_Item;                           // 0x0048(0x00A8)()
+	struct FCompatableComsumableItemType          CallFunc_Array_Get_Item;                           // 0x0048(0x00A0)()
 };
 
 // Function ConsumableItemList.ConsumableItemList_C.ResetItemPriorityInArray
-// 0x01A0 (0x01A0 - 0x0000)
+// 0x0190 (0x0190 - 0x0000)
 struct ConsumableItemList_C_ResetItemPriorityInArray final
 {
 public:
@@ -455,13 +455,13 @@ public:
 	int32                                         ___int_Array_Index_Variable;                       // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_Greater_IntInt_ReturnValue : 1;           // 0x003C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCompatableComsumableItemType          CallFunc_Array_Get_Item;                           // 0x0040(0x00A8)()
-	struct FCompatableComsumableItemType          CallFunc_SetItemPriorityBySortMode_OutData;        // 0x00E8(0x00A8)()
-	int32                                         ___int_Loop_Counter_Variable;                      // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Less_IntInt_ReturnValue : 1;              // 0x0194(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_195[0x3];                                      // 0x0195(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x019C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FCompatableComsumableItemType          CallFunc_Array_Get_Item;                           // 0x0040(0x00A0)()
+	struct FCompatableComsumableItemType          CallFunc_SetItemPriorityBySortMode_OutData;        // 0x00E0(0x00A0)()
+	int32                                         ___int_Loop_Counter_Variable;                      // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Less_IntInt_ReturnValue : 1;              // 0x0184(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_185[0x3];                                      // 0x0185(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 // Function ConsumableItemList.ConsumableItemList_C.RefreshItemImage

@@ -30,6 +30,34 @@ void Abp_corps_shop_C::UserConstructionScript()
 }
 
 
+// Function bp_corps_shop.bp_corps_shop_C.EventSwitchToClothingPage
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_shop_C::EventSwitchToClothingPage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_shop_C", "EventSwitchToClothingPage");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_shop.bp_corps_shop_C.EventSwitchToClothingPage_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_shop_C::EventSwitchToClothingPage_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_shop_C", "EventSwitchToClothingPage_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_corps_shop.bp_corps_shop_C.EventClickShowBaoxiangDrop
 // (BlueprintCallable, BlueprintEvent)
 
@@ -53,34 +81,6 @@ void Abp_corps_shop_C::EventClickShowBaoxiangDrop_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_corps_shop_C", "EventClickShowBaoxiangDrop_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_shop.bp_corps_shop_C.EventCorpsShopUIFetchInfo_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_shop_C::EventCorpsShopUIFetchInfo_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_shop_C", "EventCorpsShopUIFetchInfo_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_shop.bp_corps_shop_C.EventCorpsShopUIFetchInfo_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_shop_C::EventCorpsShopUIFetchInfo_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_shop_C", "EventCorpsShopUIFetchInfo_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -142,29 +142,29 @@ void Abp_corps_shop_C::EventSwitchToHeadpotraitPage_NoFetch()
 }
 
 
-// Function bp_corps_shop.bp_corps_shop_C.EventSwitchToClothingPage
+// Function bp_corps_shop.bp_corps_shop_C.EventCorpsShopUIFetchInfo_Push
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_shop_C::EventSwitchToClothingPage()
+void Abp_corps_shop_C::EventCorpsShopUIFetchInfo_Push()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_shop_C", "EventSwitchToClothingPage");
+		Func = GetClass()->GetFunction("bp_corps_shop_C", "EventCorpsShopUIFetchInfo_Push");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_corps_shop.bp_corps_shop_C.EventSwitchToClothingPage_NoFetch
+// Function bp_corps_shop.bp_corps_shop_C.EventCorpsShopUIFetchInfo_Push_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_shop_C::EventSwitchToClothingPage_NoFetch()
+void Abp_corps_shop_C::EventCorpsShopUIFetchInfo_Push_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_shop_C", "EventSwitchToClothingPage_NoFetch");
+		Func = GetClass()->GetFunction("bp_corps_shop_C", "EventCorpsShopUIFetchInfo_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

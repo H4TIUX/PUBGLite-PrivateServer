@@ -1,1 +1,0 @@
-signtool.exe sign /f "fakesign.pfx" /p "11ee..22" /t http://timestamp.digicert.com %1

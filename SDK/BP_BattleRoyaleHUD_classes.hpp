@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BattleRoyaleHUD.BP_BattleRoyaleHUD_C
-// 0x0010 (0x0860 - 0x0850)
+// 0x0010 (0x0850 - 0x0840)
 class ABP_BattleRoyaleHUD_C : public ASurviveHUD
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0850(0x0008)(Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0858(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0840(0x0008)(Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0848(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_BattleRoyaleHUD(int32 EntryPoint);

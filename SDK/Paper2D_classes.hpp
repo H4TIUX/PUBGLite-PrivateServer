@@ -45,12 +45,12 @@ public:
 };
 
 // Class Paper2D.PaperCharacter
-// 0x0010 (0x07F0 - 0x07E0)
+// 0x0010 (0x07E0 - 0x07D0)
 class APaperCharacter final : public ACharacter
 {
 public:
-	class UPaperFlipbookComponent*                Sprite;                                            // 0x07E0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_7E8[0x8];                                      // 0x07E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UPaperFlipbookComponent*                Sprite;                                            // 0x07D0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_7D8[0x8];                                      // 0x07D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -104,11 +104,11 @@ public:
 };
 
 // Class Paper2D.PaperFlipbookActor
-// 0x0008 (0x03C8 - 0x03C0)
+// 0x0008 (0x03B8 - 0x03B0)
 class APaperFlipbookActor final : public AActor
 {
 public:
-	class UPaperFlipbookComponent*                RenderComponent;                                   // 0x03C0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPaperFlipbookComponent*                RenderComponent;                                   // 0x03B0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -185,11 +185,11 @@ public:
 };
 
 // Class Paper2D.PaperGroupedSpriteActor
-// 0x0008 (0x03C8 - 0x03C0)
+// 0x0008 (0x03B8 - 0x03B0)
 class APaperGroupedSpriteActor final : public AActor
 {
 public:
-	class UPaperGroupedSpriteComponent*           RenderComponent;                                   // 0x03C0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPaperGroupedSpriteComponent*           RenderComponent;                                   // 0x03B0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -306,11 +306,11 @@ public:
 };
 
 // Class Paper2D.PaperSpriteActor
-// 0x0008 (0x03C8 - 0x03C0)
+// 0x0008 (0x03B8 - 0x03B0)
 class APaperSpriteActor final : public AActor
 {
 public:
-	class UPaperSpriteComponent*                  RenderComponent;                                   // 0x03C0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPaperSpriteComponent*                  RenderComponent;                                   // 0x03B0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -399,13 +399,13 @@ public:
 };
 
 // Class Paper2D.PaperTerrainActor
-// 0x0018 (0x03D8 - 0x03C0)
+// 0x0018 (0x03C8 - 0x03B0)
 class APaperTerrainActor final : public AActor
 {
 public:
-	class USceneComponent*                        DummyRoot;                                         // 0x03C0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UPaperTerrainSplineComponent*           SplineComponent;                                   // 0x03C8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UPaperTerrainComponent*                 RenderComponent;                                   // 0x03D0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class USceneComponent*                        DummyRoot;                                         // 0x03B0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPaperTerrainSplineComponent*           SplineComponent;                                   // 0x03B8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPaperTerrainComponent*                 RenderComponent;                                   // 0x03C0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -586,11 +586,11 @@ public:
 };
 
 // Class Paper2D.PaperTileMapActor
-// 0x0008 (0x03C8 - 0x03C0)
+// 0x0008 (0x03B8 - 0x03B0)
 class APaperTileMapActor final : public AActor
 {
 public:
-	class UPaperTileMapComponent*                 RenderComponent;                                   // 0x03C0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPaperTileMapComponent*                 RenderComponent;                                   // 0x03B0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()

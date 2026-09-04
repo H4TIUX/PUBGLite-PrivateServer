@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "AnimGraphRuntime_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
 
 
@@ -20,7 +20,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass Lobby_AnimBP.Lobby_AnimBP_C
-// 0x0D78 (0x1130 - 0x03B8)
+// 0x0D80 (0x1138 - 0x03B8)
 class ULobby_AnimBP_C final : public UAnimInstance
 {
 public:
@@ -35,7 +35,7 @@ public:
 	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive_8DA05499428414A4017E28AC85C92530; // 0x0830(0x0078)()
 	struct FAnimNode_Root                         AnimGraphNode_Root_AFF52F6C457272B774D5C286273B97F4; // 0x08A8(0x0048)()
 	struct FAnimNode_Slot                         AnimGraphNode_Slot_79A2703B467373D9467D57BB63DBBF47; // 0x08F0(0x0068)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_5C2BCF7740C86FB0F391C1B3F7F2B94C; // 0x0958(0x0070)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_B793782543C3DC9F8DA53CAA84CCE84D; // 0x0958(0x0070)()
 	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_CA2313704920A4A06FD9CF88CE299E8B; // 0x09C8(0x00D0)()
 	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_AE76977F41DA59F71BCBA9AFEB389F75; // 0x0A98(0x0070)()
 	struct FAnimNode_Root                         AnimGraphNode_StateResult_E586209847D768958BCB748FEEF5F884; // 0x0B08(0x0048)()
@@ -59,17 +59,17 @@ public:
 	int32                                         slotID;                                            // 0x1110(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1114[0x4];                                     // 0x1114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UAnimSequence*>                  AnimList;                                          // 0x1118(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class ALobbyCharacter*                        CurLobbyCharacter;                                 // 0x1128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_PlayerLobbyPawn_C*                  CurCharacter;                                      // 0x1128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         IsInCustomScene : 1;                               // 0x1130(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
 
 public:
 	void ExecuteUbergraph_Lobby_AnimBP(int32 EntryPoint);
-	void BlueprintInitializeAnimation();
+	void BlueprintUpdateAnimation(float DeltaTimeX);
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_Lobby_AnimBP_AnimGraphNode_AnimDynamics_2BE462B7452BD6CC7AA9BEB99A15F46B();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_Lobby_AnimBP_AnimGraphNode_BlendListByBool_CA2313704920A4A06FD9CF88CE299E8B();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_Lobby_AnimBP_AnimGraphNode_BlendListByEnum_7BE2FF8848245A2F4691C49B0539E1C2();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_Lobby_AnimBP_AnimGraphNode_SequencePlayer_AE76977F41DA59F71BCBA9AFEB389F75();
 	void SetAnimWeaponPose(EAnimWeaponType WeaponType_0);
-	void SetCharacter(class ALobbyCharacter* Character);
 	void SetSlot(int32 slotID_0);
 
 public:

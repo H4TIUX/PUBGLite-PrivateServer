@@ -30,34 +30,6 @@ void Abp_weekend_revelry_C::UserConstructionScript()
 }
 
 
-// Function bp_weekend_revelry.bp_weekend_revelry_C.EventWeekendRevelryAwardClicked
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_weekend_revelry_C::EventWeekendRevelryAwardClicked()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_weekend_revelry_C", "EventWeekendRevelryAwardClicked");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_weekend_revelry.bp_weekend_revelry_C.EventWeekendRevelryAwardClicked_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_weekend_revelry_C::EventWeekendRevelryAwardClicked_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_weekend_revelry_C", "EventWeekendRevelryAwardClicked_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_weekend_revelry.bp_weekend_revelry_C.EventWeekendRevelryHelpClicked
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,34 +53,6 @@ void Abp_weekend_revelry_C::EventWeekendRevelryHelpClicked_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_weekend_revelry_C", "EventWeekendRevelryHelpClicked_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_weekend_revelry.bp_weekend_revelry_C.EventWeekendRevelrySuperawardClicked
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_weekend_revelry_C::EventWeekendRevelrySuperawardClicked()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_weekend_revelry_C", "EventWeekendRevelrySuperawardClicked");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_weekend_revelry.bp_weekend_revelry_C.EventWeekendRevelrySuperawardClicked_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_weekend_revelry_C::EventWeekendRevelrySuperawardClicked_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_weekend_revelry_C", "EventWeekendRevelrySuperawardClicked_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -170,6 +114,34 @@ void Abp_weekend_revelry_C::EventWeekendRevelryLotteryRollingEnd_NoFetch()
 }
 
 
+// Function bp_weekend_revelry.bp_weekend_revelry_C.EventWeekendRevelrySuperawardClicked
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_weekend_revelry_C::EventWeekendRevelrySuperawardClicked()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_weekend_revelry_C", "EventWeekendRevelrySuperawardClicked");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_weekend_revelry.bp_weekend_revelry_C.EventWeekendRevelrySuperawardClicked_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_weekend_revelry_C::EventWeekendRevelrySuperawardClicked_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_weekend_revelry_C", "EventWeekendRevelrySuperawardClicked_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_weekend_revelry.bp_weekend_revelry_C.EventWeekendRevelryLottery
 // (BlueprintCallable, BlueprintEvent)
 
@@ -193,6 +165,34 @@ void Abp_weekend_revelry_C::EventWeekendRevelryLottery_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_weekend_revelry_C", "EventWeekendRevelryLottery_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_weekend_revelry.bp_weekend_revelry_C.EventWeekendRevelryAwardClicked
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_weekend_revelry_C::EventWeekendRevelryAwardClicked()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_weekend_revelry_C", "EventWeekendRevelryAwardClicked");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_weekend_revelry.bp_weekend_revelry_C.EventWeekendRevelryAwardClicked_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_weekend_revelry_C::EventWeekendRevelryAwardClicked_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_weekend_revelry_C", "EventWeekendRevelryAwardClicked_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

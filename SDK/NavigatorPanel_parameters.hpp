@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
+#include "TeamPlayerColorStruct_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "BP_VoiceCheckType_structs.hpp"
 #include "Slate_structs.hpp"
-#include "TeamPlayerColorStruct_structs.hpp"
 
 
 namespace SDK::Params

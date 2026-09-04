@@ -30,57 +30,29 @@ void Abp_update_notice_C::UserConstructionScript()
 }
 
 
-// Function bp_update_notice.bp_update_notice_C.EventFetchInfo
+// Function bp_update_notice.bp_update_notice_C.EventUpdateNoticeClickOk
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_update_notice_C::EventFetchInfo()
+void Abp_update_notice_C::EventUpdateNoticeClickOk()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_update_notice_C", "EventFetchInfo");
+		Func = GetClass()->GetFunction("bp_update_notice_C", "EventUpdateNoticeClickOk");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_update_notice.bp_update_notice_C.EventFetchInfo_NoFetch
+// Function bp_update_notice.bp_update_notice_C.EventUpdateNoticeClickOk_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_update_notice_C::EventFetchInfo_NoFetch()
+void Abp_update_notice_C::EventUpdateNoticeClickOk_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_update_notice_C", "EventFetchInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_update_notice.bp_update_notice_C.EventUpdateNoticeClickHelp
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_update_notice_C::EventUpdateNoticeClickHelp()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_update_notice_C", "EventUpdateNoticeClickHelp");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_update_notice.bp_update_notice_C.EventUpdateNoticeClickHelp_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_update_notice_C::EventUpdateNoticeClickHelp_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_update_notice_C", "EventUpdateNoticeClickHelp_NoFetch");
+		Func = GetClass()->GetFunction("bp_update_notice_C", "EventUpdateNoticeClickOk_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,6 +86,34 @@ void Abp_update_notice_C::EventSetInfo_Push_NoFetch()
 }
 
 
+// Function bp_update_notice.bp_update_notice_C.EventUpdateNoticeClickHelp
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_update_notice_C::EventUpdateNoticeClickHelp()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_update_notice_C", "EventUpdateNoticeClickHelp");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_update_notice.bp_update_notice_C.EventUpdateNoticeClickHelp_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_update_notice_C::EventUpdateNoticeClickHelp_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_update_notice_C", "EventUpdateNoticeClickHelp_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_update_notice.bp_update_notice_C.EventUpdateNoticeClickCancel
 // (BlueprintCallable, BlueprintEvent)
 
@@ -142,29 +142,29 @@ void Abp_update_notice_C::EventUpdateNoticeClickCancel_NoFetch()
 }
 
 
-// Function bp_update_notice.bp_update_notice_C.EventUpdateNoticeClickOk
+// Function bp_update_notice.bp_update_notice_C.EventFetchInfo
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_update_notice_C::EventUpdateNoticeClickOk()
+void Abp_update_notice_C::EventFetchInfo()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_update_notice_C", "EventUpdateNoticeClickOk");
+		Func = GetClass()->GetFunction("bp_update_notice_C", "EventFetchInfo");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_update_notice.bp_update_notice_C.EventUpdateNoticeClickOk_NoFetch
+// Function bp_update_notice.bp_update_notice_C.EventFetchInfo_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_update_notice_C::EventUpdateNoticeClickOk_NoFetch()
+void Abp_update_notice_C::EventFetchInfo_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_update_notice_C", "EventUpdateNoticeClickOk_NoFetch");
+		Func = GetClass()->GetFunction("bp_update_notice_C", "EventFetchInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

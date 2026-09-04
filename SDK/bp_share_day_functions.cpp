@@ -30,62 +30,6 @@ void Abp_share_day_C::UserConstructionScript()
 }
 
 
-// Function bp_share_day.bp_share_day_C.EventHideUI
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_day_C::EventHideUI()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_day_C", "EventHideUI");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_day.bp_share_day_C.EventHideUI_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_day_C::EventHideUI_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_day_C", "EventHideUI_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_day.bp_share_day_C.EventClickShareBtn
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_day_C::EventClickShareBtn()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_day_C", "EventClickShareBtn");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_day.bp_share_day_C.EventClickShareBtn_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_day_C::EventClickShareBtn_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_day_C", "EventClickShareBtn_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_share_day.bp_share_day_C.EventShareDayFetchInfo
 // (BlueprintCallable, BlueprintEvent)
 
@@ -114,6 +58,34 @@ void Abp_share_day_C::EventShareDayFetchInfo_NoFetch()
 }
 
 
+// Function bp_share_day.bp_share_day_C.EventHideUI
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_day_C::EventHideUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_day_C", "EventHideUI");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_day.bp_share_day_C.EventHideUI_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_day_C::EventHideUI_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_day_C", "EventHideUI_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_share_day.bp_share_day_C.EventShareDay_Push
 // (BlueprintCallable, BlueprintEvent)
 
@@ -137,6 +109,34 @@ void Abp_share_day_C::EventShareDay_Push_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_share_day_C", "EventShareDay_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_day.bp_share_day_C.EventClickShareBtn
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_day_C::EventClickShareBtn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_day_C", "EventClickShareBtn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_day.bp_share_day_C.EventClickShareBtn_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_day_C::EventClickShareBtn_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_day_C", "EventClickShareBtn_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

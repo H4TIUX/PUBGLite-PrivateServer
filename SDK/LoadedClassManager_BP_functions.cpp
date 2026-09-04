@@ -115,7 +115,7 @@ void ULoadedClassManager_BP_C::LoadArmoryWeaponBPTable()
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = UObject::GetClass()->GetFunction("LoadedClassManager_BP_C", "LoadArmoryWeaponBPTable");
+		Func = GetClass()->GetFunction("LoadedClassManager_BP_C", "LoadArmoryWeaponBPTable");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -7,10 +7,9 @@
 */
 
 // Basic file containing function-implementations from Basic.hpp
-
 #include <Windows.h>
 #include "Basic.hpp"
-
+#include "../dummy.hpp"
 #include "CoreUObject_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_classes.hpp"

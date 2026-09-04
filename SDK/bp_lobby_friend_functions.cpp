@@ -30,6 +30,118 @@ void Abp_lobby_friend_C::UserConstructionScript()
 }
 
 
+// Function bp_lobby_friend.bp_lobby_friend_C.EventShowSendAddFriendRequestTips
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventShowSendAddFriendRequestTips()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventShowSendAddFriendRequestTips");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventShowSendAddFriendRequestTips_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventShowSendAddFriendRequestTips_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventShowSendAddFriendRequestTips_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventSetXYAPIHideRedPoint
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventSetXYAPIHideRedPoint()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventSetXYAPIHideRedPoint");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventSetXYAPIHideRedPoint_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventSetXYAPIHideRedPoint_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventSetXYAPIHideRedPoint_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendAddFriendReqList
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendAddFriendReqList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendAddFriendReqList");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendAddFriendReqList_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendAddFriendReqList_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendAddFriendReqList_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendLabelSearchReq
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendLabelSearchReq()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendLabelSearchReq");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendLabelSearchReq_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendLabelSearchReq_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendLabelSearchReq_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendDeleteRelationReq
 // (BlueprintCallable, BlueprintEvent)
 
@@ -53,6 +165,34 @@ void Abp_lobby_friend_C::EventLobbyFriendDeleteRelationReq_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendDeleteRelationReq_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendChat
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendChat()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendChat");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendChat_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendChat_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendChat_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,34 +226,6 @@ void Abp_lobby_friend_C::EventLobbyFriendReplyRelationReq_NoFetch()
 }
 
 
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendSearchReq
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendSearchReq()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendSearchReq");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendSearchReq_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendSearchReq_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendSearchReq_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendScrollApplyList
 // (BlueprintCallable, BlueprintEvent)
 
@@ -137,230 +249,6 @@ void Abp_lobby_friend_C::EventLobbyFriendScrollApplyList_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendScrollApplyList_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendRespondApply
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendRespondApply()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendRespondApply");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendRespondApply_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendRespondApply_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendRespondApply_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendBuildRelationReq
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendBuildRelationReq()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendBuildRelationReq");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendBuildRelationReq_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendBuildRelationReq_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendBuildRelationReq_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventFetchNewNearByPersonInfoList
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventFetchNewNearByPersonInfoList()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventFetchNewNearByPersonInfoList");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventFetchNewNearByPersonInfoList_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventFetchNewNearByPersonInfoList_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventFetchNewNearByPersonInfoList_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendDeleteReq
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendDeleteReq()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendDeleteReq");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendDeleteReq_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendDeleteReq_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendDeleteReq_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventOpenMyCardPanelInFriendPanel
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventOpenMyCardPanelInFriendPanel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventOpenMyCardPanelInFriendPanel");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventOpenMyCardPanelInFriendPanel_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventOpenMyCardPanelInFriendPanel_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventOpenMyCardPanelInFriendPanel_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendScrollPlatList
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendScrollPlatList()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendScrollPlatList");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendScrollPlatList_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendScrollPlatList_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendScrollPlatList_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendBlackListScroll
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendBlackListScroll()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendBlackListScroll");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendBlackListScroll_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendBlackListScroll_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendBlackListScroll_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendApplyReq
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendApplyReq()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendApplyReq");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendApplyReq_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendApplyReq_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendApplyReq_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -394,6 +282,258 @@ void Abp_lobby_friend_C::EventLobbyFriendFetchFriendList_NoFetch()
 }
 
 
+// Function bp_lobby_friend.bp_lobby_friend_C.EventNearByOpenLocation
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventNearByOpenLocation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventNearByOpenLocation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventNearByOpenLocation_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventNearByOpenLocation_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventNearByOpenLocation_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendGetBlackListReq
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendGetBlackListReq()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendGetBlackListReq");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendGetBlackListReq_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendGetBlackListReq_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendGetBlackListReq_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventGetRecentTeammateList
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventGetRecentTeammateList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventGetRecentTeammateList");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventGetRecentTeammateList_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventGetRecentTeammateList_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventGetRecentTeammateList_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventRecentTeammateScrollApplyList
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventRecentTeammateScrollApplyList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventRecentTeammateScrollApplyList");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventRecentTeammateScrollApplyList_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventRecentTeammateScrollApplyList_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventRecentTeammateScrollApplyList_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventOpenMyCardPanelInFriendPanel
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventOpenMyCardPanelInFriendPanel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventOpenMyCardPanelInFriendPanel");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventOpenMyCardPanelInFriendPanel_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventOpenMyCardPanelInFriendPanel_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventOpenMyCardPanelInFriendPanel_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendBlackListScroll
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendBlackListScroll()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendBlackListScroll");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendBlackListScroll_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendBlackListScroll_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendBlackListScroll_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventXYAPISetUrl
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventXYAPISetUrl()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventXYAPISetUrl");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventXYAPISetUrl_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventXYAPISetUrl_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventXYAPISetUrl_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendBuildRelationReq
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendBuildRelationReq()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendBuildRelationReq");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendBuildRelationReq_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendBuildRelationReq_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendBuildRelationReq_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendDeleteReq
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendDeleteReq()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendDeleteReq");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendDeleteReq_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendDeleteReq_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendDeleteReq_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_lobby_friend.bp_lobby_friend_C.EventNearByUpdateFilterArray
 // (BlueprintCallable, BlueprintEvent)
 
@@ -422,29 +562,29 @@ void Abp_lobby_friend_C::EventNearByUpdateFilterArray_NoFetch()
 }
 
 
-// Function bp_lobby_friend.bp_lobby_friend_C.EventFetchInfo
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendApplyReq
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_lobby_friend_C::EventFetchInfo()
+void Abp_lobby_friend_C::EventLobbyFriendApplyReq()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventFetchInfo");
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendApplyReq");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_lobby_friend.bp_lobby_friend_C.EventFetchInfo_NoFetch
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendApplyReq_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_lobby_friend_C::EventFetchInfo_NoFetch()
+void Abp_lobby_friend_C::EventLobbyFriendApplyReq_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventFetchInfo_NoFetch");
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendApplyReq_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -534,57 +674,29 @@ void Abp_lobby_friend_C::EventOpenMasterPanel_NoFetch()
 }
 
 
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendAddFriendReqList
+// Function bp_lobby_friend.bp_lobby_friend_C.EventFetchNewNearByPersonInfoList
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_lobby_friend_C::EventLobbyFriendAddFriendReqList()
+void Abp_lobby_friend_C::EventFetchNewNearByPersonInfoList()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendAddFriendReqList");
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventFetchNewNearByPersonInfoList");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendAddFriendReqList_NoFetch
+// Function bp_lobby_friend.bp_lobby_friend_C.EventFetchNewNearByPersonInfoList_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_lobby_friend_C::EventLobbyFriendAddFriendReqList_NoFetch()
+void Abp_lobby_friend_C::EventFetchNewNearByPersonInfoList_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendAddFriendReqList_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyPresentCoinReq
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyPresentCoinReq()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyPresentCoinReq");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyPresentCoinReq_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyPresentCoinReq_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyPresentCoinReq_NoFetch");
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventFetchNewNearByPersonInfoList_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -618,202 +730,6 @@ void Abp_lobby_friend_C::EventOpenNearByPanel_NoFetch()
 }
 
 
-// Function bp_lobby_friend.bp_lobby_friend_C.EventRecentTeammateScrollApplyList
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventRecentTeammateScrollApplyList()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventRecentTeammateScrollApplyList");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventRecentTeammateScrollApplyList_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventRecentTeammateScrollApplyList_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventRecentTeammateScrollApplyList_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventShowSendAddFriendRequestTips
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventShowSendAddFriendRequestTips()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventShowSendAddFriendRequestTips");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventShowSendAddFriendRequestTips_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventShowSendAddFriendRequestTips_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventShowSendAddFriendRequestTips_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendGetBlackListReq
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendGetBlackListReq()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendGetBlackListReq");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendGetBlackListReq_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendGetBlackListReq_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendGetBlackListReq_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventOpenFriendRuleDescriptionPanel
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventOpenFriendRuleDescriptionPanel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventOpenFriendRuleDescriptionPanel");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventOpenFriendRuleDescriptionPanel_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventOpenFriendRuleDescriptionPanel_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventOpenFriendRuleDescriptionPanel_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendAddQQFriend
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendAddQQFriend()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendAddQQFriend");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendAddQQFriend_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendAddQQFriend_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendAddQQFriend_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendIntimacyReq
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendIntimacyReq()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendIntimacyReq");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendIntimacyReq_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendIntimacyReq_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendIntimacyReq_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventSetXYAPIHideRedPoint
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventSetXYAPIHideRedPoint()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventSetXYAPIHideRedPoint");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventSetXYAPIHideRedPoint_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventSetXYAPIHideRedPoint_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventSetXYAPIHideRedPoint_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_lobby_friend.bp_lobby_friend_C.EventNearByCloseLocation
 // (BlueprintCallable, BlueprintEvent)
 
@@ -837,118 +753,6 @@ void Abp_lobby_friend_C::EventNearByCloseLocation_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventNearByCloseLocation_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendChat
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendChat()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendChat");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendChat_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendChat_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendChat_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventXYAPISetUrl
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventXYAPISetUrl()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventXYAPISetUrl");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventXYAPISetUrl_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventXYAPISetUrl_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventXYAPISetUrl_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendDeleteBlackReq
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendDeleteBlackReq()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendDeleteBlackReq");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendDeleteBlackReq_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendDeleteBlackReq_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendDeleteBlackReq_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendScrollInnerList
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendScrollInnerList()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendScrollInnerList");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendScrollInnerList_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventLobbyFriendScrollInnerList_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendScrollInnerList_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -982,113 +786,85 @@ void Abp_lobby_friend_C::EventOpenIntimacyDescriptionPanel_NoFetch()
 }
 
 
-// Function bp_lobby_friend.bp_lobby_friend_C.EventGetRecentTeammateList
+// Function bp_lobby_friend.bp_lobby_friend_C.EventOpenFriendRuleDescriptionPanel
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_lobby_friend_C::EventGetRecentTeammateList()
+void Abp_lobby_friend_C::EventOpenFriendRuleDescriptionPanel()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventGetRecentTeammateList");
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventOpenFriendRuleDescriptionPanel");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_lobby_friend.bp_lobby_friend_C.EventGetRecentTeammateList_NoFetch
+// Function bp_lobby_friend.bp_lobby_friend_C.EventOpenFriendRuleDescriptionPanel_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_lobby_friend_C::EventGetRecentTeammateList_NoFetch()
+void Abp_lobby_friend_C::EventOpenFriendRuleDescriptionPanel_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventGetRecentTeammateList_NoFetch");
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventOpenFriendRuleDescriptionPanel_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendProfileReq
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendScrollPlatList
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_lobby_friend_C::EventLobbyFriendProfileReq()
+void Abp_lobby_friend_C::EventLobbyFriendScrollPlatList()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendProfileReq");
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendScrollPlatList");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendProfileReq_NoFetch
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendScrollPlatList_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_lobby_friend_C::EventLobbyFriendProfileReq_NoFetch()
+void Abp_lobby_friend_C::EventLobbyFriendScrollPlatList_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendProfileReq_NoFetch");
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendScrollPlatList_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendLabelSearchReq
+// Function bp_lobby_friend.bp_lobby_friend_C.EventFetchInfo
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_lobby_friend_C::EventLobbyFriendLabelSearchReq()
+void Abp_lobby_friend_C::EventFetchInfo()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendLabelSearchReq");
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventFetchInfo");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendLabelSearchReq_NoFetch
+// Function bp_lobby_friend.bp_lobby_friend_C.EventFetchInfo_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_lobby_friend_C::EventLobbyFriendLabelSearchReq_NoFetch()
+void Abp_lobby_friend_C::EventFetchInfo_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendLabelSearchReq_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventSetXYAPIShowRedPoint
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventSetXYAPIShowRedPoint()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventSetXYAPIShowRedPoint");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_friend.bp_lobby_friend_C.EventSetXYAPIShowRedPoint_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_friend_C::EventSetXYAPIShowRedPoint_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventSetXYAPIShowRedPoint_NoFetch");
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventFetchInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1122,29 +898,253 @@ void Abp_lobby_friend_C::EventLobbyFriendScrollSearchList_NoFetch()
 }
 
 
-// Function bp_lobby_friend.bp_lobby_friend_C.EventNearByOpenLocation
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendIntimacyReq
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_lobby_friend_C::EventNearByOpenLocation()
+void Abp_lobby_friend_C::EventLobbyFriendIntimacyReq()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventNearByOpenLocation");
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendIntimacyReq");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_lobby_friend.bp_lobby_friend_C.EventNearByOpenLocation_NoFetch
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendIntimacyReq_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_lobby_friend_C::EventNearByOpenLocation_NoFetch()
+void Abp_lobby_friend_C::EventLobbyFriendIntimacyReq_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventNearByOpenLocation_NoFetch");
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendIntimacyReq_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventSetXYAPIShowRedPoint
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventSetXYAPIShowRedPoint()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventSetXYAPIShowRedPoint");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventSetXYAPIShowRedPoint_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventSetXYAPIShowRedPoint_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventSetXYAPIShowRedPoint_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendRespondApply
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendRespondApply()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendRespondApply");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendRespondApply_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendRespondApply_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendRespondApply_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendDeleteBlackReq
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendDeleteBlackReq()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendDeleteBlackReq");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendDeleteBlackReq_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendDeleteBlackReq_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendDeleteBlackReq_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendAddQQFriend
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendAddQQFriend()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendAddQQFriend");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendAddQQFriend_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendAddQQFriend_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendAddQQFriend_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendSearchReq
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendSearchReq()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendSearchReq");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendSearchReq_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendSearchReq_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendSearchReq_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendScrollInnerList
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendScrollInnerList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendScrollInnerList");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendScrollInnerList_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendScrollInnerList_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendScrollInnerList_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyPresentCoinReq
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyPresentCoinReq()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyPresentCoinReq");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyPresentCoinReq_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyPresentCoinReq_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyPresentCoinReq_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendProfileReq
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendProfileReq()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendProfileReq");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_friend.bp_lobby_friend_C.EventLobbyFriendProfileReq_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_friend_C::EventLobbyFriendProfileReq_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_friend_C", "EventLobbyFriendProfileReq_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

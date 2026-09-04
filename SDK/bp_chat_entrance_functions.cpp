@@ -58,57 +58,29 @@ void Abp_chat_entrance_C::EventClickBtnRecruit_NoFetch()
 }
 
 
-// Function bp_chat_entrance.bp_chat_entrance_C.EventAchieveQuickMsgStr
+// Function bp_chat_entrance.bp_chat_entrance_C.EventSendTeamQuickMsg
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_entrance_C::EventAchieveQuickMsgStr()
+void Abp_chat_entrance_C::EventSendTeamQuickMsg()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventAchieveQuickMsgStr");
+		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventSendTeamQuickMsg");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_chat_entrance.bp_chat_entrance_C.EventAchieveQuickMsgStr_NoFetch
+// Function bp_chat_entrance.bp_chat_entrance_C.EventSendTeamQuickMsg_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_chat_entrance_C::EventAchieveQuickMsgStr_NoFetch()
+void Abp_chat_entrance_C::EventSendTeamQuickMsg_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventAchieveQuickMsgStr_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_entrance.bp_chat_entrance_C.EventTestJoinGameRoom
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_entrance_C::EventTestJoinGameRoom()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventTestJoinGameRoom");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_entrance.bp_chat_entrance_C.EventTestJoinGameRoom_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_entrance_C::EventTestJoinGameRoom_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventTestJoinGameRoom_NoFetch");
+		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventSendTeamQuickMsg_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -142,6 +114,62 @@ void Abp_chat_entrance_C::EventPopMessageBuffer_NoFetch()
 }
 
 
+// Function bp_chat_entrance.bp_chat_entrance_C.EventSetInfo_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_entrance_C::EventSetInfo_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventSetInfo_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_entrance.bp_chat_entrance_C.EventSetInfo_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_entrance_C::EventSetInfo_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventSetInfo_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_entrance.bp_chat_entrance_C.EventOpenFriendNewChat
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_entrance_C::EventOpenFriendNewChat()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventOpenFriendNewChat");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_entrance.bp_chat_entrance_C.EventOpenFriendNewChat_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_entrance_C::EventOpenFriendNewChat_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventOpenFriendNewChat_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_chat_entrance.bp_chat_entrance_C.EventOpenChatWindow
 // (BlueprintCallable, BlueprintEvent)
 
@@ -165,6 +193,90 @@ void Abp_chat_entrance_C::EventOpenChatWindow_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventOpenChatWindow_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_entrance.bp_chat_entrance_C.EventOpenChatUI
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_entrance_C::EventOpenChatUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventOpenChatUI");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_entrance.bp_chat_entrance_C.EventOpenChatUI_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_entrance_C::EventOpenChatUI_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventOpenChatUI_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_entrance.bp_chat_entrance_C.EventTestJoinGameRoom
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_entrance_C::EventTestJoinGameRoom()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventTestJoinGameRoom");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_entrance.bp_chat_entrance_C.EventTestJoinGameRoom_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_entrance_C::EventTestJoinGameRoom_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventTestJoinGameRoom_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_entrance.bp_chat_entrance_C.EventAchieveQuickMsgStr
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_entrance_C::EventAchieveQuickMsgStr()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventAchieveQuickMsgStr");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_chat_entrance.bp_chat_entrance_C.EventAchieveQuickMsgStr_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_chat_entrance_C::EventAchieveQuickMsgStr_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventAchieveQuickMsgStr_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -221,118 +333,6 @@ void Abp_chat_entrance_C::EventFetchInfo_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventFetchInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_entrance.bp_chat_entrance_C.EventOpenFriendNewChat
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_entrance_C::EventOpenFriendNewChat()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventOpenFriendNewChat");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_entrance.bp_chat_entrance_C.EventOpenFriendNewChat_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_entrance_C::EventOpenFriendNewChat_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventOpenFriendNewChat_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_entrance.bp_chat_entrance_C.EventSendTeamQuickMsg
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_entrance_C::EventSendTeamQuickMsg()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventSendTeamQuickMsg");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_entrance.bp_chat_entrance_C.EventSendTeamQuickMsg_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_entrance_C::EventSendTeamQuickMsg_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventSendTeamQuickMsg_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_entrance.bp_chat_entrance_C.EventSetInfo_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_entrance_C::EventSetInfo_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventSetInfo_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_entrance.bp_chat_entrance_C.EventSetInfo_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_entrance_C::EventSetInfo_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventSetInfo_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_entrance.bp_chat_entrance_C.EventOpenChatUI
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_entrance_C::EventOpenChatUI()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventOpenChatUI");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_chat_entrance.bp_chat_entrance_C.EventOpenChatUI_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_chat_entrance_C::EventOpenChatUI_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_chat_entrance_C", "EventOpenChatUI_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

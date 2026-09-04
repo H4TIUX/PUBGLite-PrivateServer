@@ -171,7 +171,7 @@ void UGlobalUIFunctionLibrary_C::UpdateRankName(class UTextBlock* Text, int32 Le
 }
 
 
-// Function GlobalUIFunctionLibrary.GlobalUIFunctionLibrary_C.OpenURL
+// Function GlobalUIFunctionLibrary.GlobalUIFunctionLibrary_C.OpenUrl
 // (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FString&                    URL                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
@@ -179,14 +179,14 @@ void UGlobalUIFunctionLibrary_C::UpdateRankName(class UTextBlock* Text, int32 Le
 // uint8                                   hastoken                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGlobalUIFunctionLibrary_C::OpenURL(const class FString& URL, uint8 Direction, uint8 hastoken, class UObject* __WorldContext)
+void UGlobalUIFunctionLibrary_C::OpenUrl(const class FString& URL, uint8 Direction, uint8 hastoken, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GlobalUIFunctionLibrary_C", "OpenURL");
+		Func = StaticClass()->GetFunction("GlobalUIFunctionLibrary_C", "OpenUrl");
 
-	Params::GlobalUIFunctionLibrary_C_OpenURL Parms{};
+	Params::GlobalUIFunctionLibrary_C_OpenUrl Parms{};
 
 	Parms.URL = std::move(URL);
 	Parms.Direction = Direction;

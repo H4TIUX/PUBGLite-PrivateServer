@@ -17,91 +17,92 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_setting.bp_setting_C
-// 0x0060 (0x0448 - 0x03E8)
+// 0x0068 (0x0440 - 0x03D8)
 class Abp_setting_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	class FString                                 BP_UrlStr1;                                        // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_LoginChannel;                                   // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         BP_CanShowVideoSetting : 1;                        // 0x0404(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         BP_SettingCanShowHistory : 1;                      // 0x0405(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_406[0x2];                                      // 0x0406(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_UrlStr2;                                        // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_DiyLimitLevel;                                  // 0x0418(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         BP_IsInLobby : 1;                                  // 0x041C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         BP_SettingIsDingYueNewVer : 1;                     // 0x041D(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_41E[0x2];                                      // 0x041E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_UrlStr3;                                        // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_CurSettingPage;                                 // 0x0430(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         BP_SettingIsDingYue : 1;                           // 0x0434(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_435[0x3];                                      // 0x0435(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         BP_SettingFresherType;                             // 0x0438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_SettingPlayerLevel;                             // 0x043C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	int32                                         BP_SettingPlayerLevel;                             // 0x03E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E4[0x4];                                      // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_UrlStr3;                                        // 0x03E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_DiyLimitLevel;                                  // 0x03F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_SettingFresherType;                             // 0x03FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_CurSettingPage;                                 // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_404[0x4];                                      // 0x0404(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_UrlStr1;                                        // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_UrlStr2;                                        // 0x0418(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         BP_SettingIsDingYueNewVer : 1;                     // 0x0428(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         BP_SettingCanShowHistory : 1;                      // 0x0429(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_42A[0x2];                                      // 0x042A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BP_LoginChannel;                                   // 0x042C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         BP_CanShowVideoSetting : 1;                        // 0x0430(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         BP_SettingIsDingYue : 1;                           // 0x0431(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         BP_IsInLobby : 1;                                  // 0x0432(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_433[0x5];                                      // 0x0433(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0438(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
 	void EventShowBackToLobbyFromTrainingNotice();
 	void EventShowBackToLobbyFromTrainingNotice_NoFetch();
-	void EventSettingCannotSetHigherFps_Push();
-	void EventSettingCannotSetHigherFps_Push_NoFetch();
-	void EventTurnonManualRecord();
-	void EventTurnonManualRecord_NoFetch();
-	void EventClickSwitchButton();
-	void EventClickSwitchButton_NoFetch();
-	void EventSettingNoticeHighestArtClosed();
-	void EventSettingNoticeHighestArtClosed_NoFetch();
-	void EventSetDingYue();
-	void EventSetDingYue_NoFetch();
+	void EventSettingShowAASettingModifiedNotice();
+	void EventSettingShowAASettingModifiedNotice_NoFetch();
 	void EventShowLogOutNoticce();
 	void EventShowLogOutNoticce_NoFetch();
-	void EventSetDingYueNewVer();
-	void EventSetDingYueNewVer_NoFetch();
-	void EventSettingSendCanShowHistory();
-	void EventSettingSendCanShowHistory_NoFetch();
+	void EventShowNoQuickMsgSelected();
+	void EventShowNoQuickMsgSelected_NoFetch();
+	void EventTurnonMomentRecord();
+	void EventTurnonMomentRecord_NoFetch();
+	void EventClickSwitchButton();
+	void EventClickSwitchButton_NoFetch();
+	void EventShowMyRecordVideos();
+	void EventShowMyRecordVideos_NoFetch();
+	void EventOpenKefuUrl();
+	void EventOpenKefuUrl_NoFetch();
 	void EventShowDuplactedMsgSelected();
 	void EventShowDuplactedMsgSelected_NoFetch();
-	void EventSettingShowConfirmModifyHDR();
-	void EventSettingShowConfirmModifyHDR_NoFetch();
+	void EventShowQuickMsgBackToDefaultMsg();
+	void EventShowQuickMsgBackToDefaultMsg_NoFetch();
 	void EventShowDiyLimitLevelNotice_Push();
 	void EventShowDiyLimitLevelNotice_Push_NoFetch();
 	void EventShowQuickMsgModifiedSuccess();
 	void EventShowQuickMsgModifiedSuccess_NoFetch();
-	void EventCancelDingYue();
-	void EventCancelDingYue_NoFetch();
-	void EventOpenKefuUrl();
-	void EventOpenKefuUrl_NoFetch();
-	void EventTurnonMomentRecord();
-	void EventTurnonMomentRecord_NoFetch();
-	void EventCancelDingYueNewVer();
-	void EventCancelDingYueNewVer_NoFetch();
-	void EventSettingShowAASettingModifiedNotice();
-	void EventSettingShowAASettingModifiedNotice_NoFetch();
-	void EventShowBackToLobbyNotice();
-	void EventShowBackToLobbyNotice_NoFetch();
-	void EventShowNoQuickMsgSelected();
-	void EventShowNoQuickMsgSelected_NoFetch();
 	void EventForceSwitchToManulRecord();
 	void EventForceSwitchToManulRecord_NoFetch();
-	void EventFetchInfo();
-	void EventFetchInfo_NoFetch();
-	void EventShowMyRecordVideos();
-	void EventShowMyRecordVideos_NoFetch();
-	void EventSettingShowConfirmModifyFps();
-	void EventSettingShowConfirmModifyFps_NoFetch();
-	void EventShowQuickMsgBackToDefaultMsg();
-	void EventShowQuickMsgBackToDefaultMsg_NoFetch();
-	void EventSettingCannotSetHigherQuality_Push();
-	void EventSettingCannotSetHigherQuality_Push_NoFetch();
-	void EventSettingConfirmModifyArtQuality_Push();
-	void EventSettingConfirmModifyArtQuality_Push_NoFetch();
 	void EventForceSwitchToMomentRecord();
 	void EventForceSwitchToMomentRecord_NoFetch();
+	void EventTurnonManualRecord();
+	void EventTurnonManualRecord_NoFetch();
+	void EventSettingConfirmModifyArtQuality_Push();
+	void EventSettingConfirmModifyArtQuality_Push_NoFetch();
+	void EventCancelDingYueNewVer();
+	void EventCancelDingYueNewVer_NoFetch();
+	void EventCancelDingYue();
+	void EventCancelDingYue_NoFetch();
+	void EventSetDingYueNewVer();
+	void EventSetDingYueNewVer_NoFetch();
+	void EventSetDingYue();
+	void EventSetDingYue_NoFetch();
+	void EventFetchInfo();
+	void EventFetchInfo_NoFetch();
+	void EventSettingShowConfirmModifyFps();
+	void EventSettingShowConfirmModifyFps_NoFetch();
+	void EventSettingNoticeHighestArtClosed();
+	void EventSettingNoticeHighestArtClosed_NoFetch();
+	void EventSettingShowConfirmModifyHDR();
+	void EventSettingShowConfirmModifyHDR_NoFetch();
+	void EventShowBackToLobbyNotice();
+	void EventShowBackToLobbyNotice_NoFetch();
 	void EventSettingNotSupportHDR();
 	void EventSettingNotSupportHDR_NoFetch();
+	void EventSettingSendCanShowHistory();
+	void EventSettingSendCanShowHistory_NoFetch();
 	void EventSettingCurPicSettingNotSupportThisFps();
 	void EventSettingCurPicSettingNotSupportThisFps_NoFetch();
+	void EventSettingCannotSetHigherFps_Push();
+	void EventSettingCannotSetHigherFps_Push_NoFetch();
+	void EventSettingCannotSetHigherQuality_Push();
+	void EventSettingCannotSetHigherQuality_Push_NoFetch();
 
 public:
 	static class UClass* StaticClass()

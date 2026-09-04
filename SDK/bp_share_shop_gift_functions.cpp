@@ -30,6 +30,34 @@ void Abp_share_shop_gift_C::UserConstructionScript()
 }
 
 
+// Function bp_share_shop_gift.bp_share_shop_gift_C.EventShareShopGiftHide
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_shop_gift_C::EventShareShopGiftHide()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_shop_gift_C", "EventShareShopGiftHide");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_shop_gift.bp_share_shop_gift_C.EventShareShopGiftHide_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_shop_gift_C::EventShareShopGiftHide_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_shop_gift_C", "EventShareShopGiftHide_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_share_shop_gift.bp_share_shop_gift_C.EventFetchInfo
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,34 +109,6 @@ void Abp_share_shop_gift_C::EventSetInfo_Push_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_share_shop_gift_C", "EventSetInfo_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_shop_gift.bp_share_shop_gift_C.EventShareShopGiftHide
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_shop_gift_C::EventShareShopGiftHide()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_shop_gift_C", "EventShareShopGiftHide");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_shop_gift.bp_share_shop_gift_C.EventShareShopGiftHide_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_shop_gift_C::EventShareShopGiftHide_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_shop_gift_C", "EventShareShopGiftHide_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

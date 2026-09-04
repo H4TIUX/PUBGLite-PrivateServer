@@ -11,11 +11,11 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "ShadowTrackerExtra_structs.hpp"
-#include "Basic_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "ESwitchWeaponActionType_structs.hpp"
+#include "Basic_structs.hpp"
+#include "ShadowTrackerExtra_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "UnrealArchExt_classes.hpp"
 
 
@@ -23,7 +23,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass FireMode.FireMode_C
-// 0x0300 (0x05B8 - 0x02B8)
+// 0x0308 (0x05C0 - 0x02B8)
 class UFireMode_C final : public UUAEUserWidget
 {
 public:
@@ -51,9 +51,11 @@ public:
 	struct FItemDefineID                          CurBulletType;                                     // 0x0540(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TArray<class UTexture2D*>                     AnimationQueue;                                    // 0x0558(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TMap<int32, class FString>                    AttachmentImagePath;                               // 0x0568(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	int32                                         BulletNumInWeapon;                                 // 0x05B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_FireMode(int32 EntryPoint);
+	void GameUserSettingChanged();
 	void BndEvt__Button_0_K2Node_ComponentBoundEvent_28_OnButtonPressedEvent__DelegateSignature();
 	void BndEvt__Button_2_K2Node_ComponentBoundEvent_15_OnButtonPressedEvent__DelegateSignature();
 	void ReceivedInitWidget();
@@ -68,6 +70,7 @@ public:
 	void GetAttachmentImage(const struct FItemDefineID& DefineID, class FString* ImagePath);
 	void UpdateBulletCounts(int32 BulletInWeapon, int32 BulletInBackpack, const struct FItemDefineID& BulletType, class USwitchWeaponSlot_Mode2_C* WeaponSlot);
 	void RefreshBulletImage(class UObject* Image);
+	void ChangeCurrentBulletTextColor(uint8 IsGunRunOutOfAmmo);
 
 public:
 	static class UClass* StaticClass()

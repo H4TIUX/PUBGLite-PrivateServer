@@ -30,29 +30,29 @@ void Abp_share_result_C::UserConstructionScript()
 }
 
 
-// Function bp_share_result.bp_share_result_C.EventShareResult_BtnShareQQZone
+// Function bp_share_result.bp_share_result_C.EventShareResult_BtnShareQQTribe
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_share_result_C::EventShareResult_BtnShareQQZone()
+void Abp_share_result_C::EventShareResult_BtnShareQQTribe()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_BtnShareQQZone");
+		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_BtnShareQQTribe");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_share_result.bp_share_result_C.EventShareResult_BtnShareQQZone_NoFetch
+// Function bp_share_result.bp_share_result_C.EventShareResult_BtnShareQQTribe_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_share_result_C::EventShareResult_BtnShareQQZone_NoFetch()
+void Abp_share_result_C::EventShareResult_BtnShareQQTribe_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_BtnShareQQZone_NoFetch");
+		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_BtnShareQQTribe_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,57 +86,29 @@ void Abp_share_result_C::EventShareResult_BtnShareGameZone_NoFetch()
 }
 
 
-// Function bp_share_result.bp_share_result_C.EventShareResult_BtnShareQQTribe
+// Function bp_share_result.bp_share_result_C.EventShareResult_BtnShareQQZone
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_share_result_C::EventShareResult_BtnShareQQTribe()
+void Abp_share_result_C::EventShareResult_BtnShareQQZone()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_BtnShareQQTribe");
+		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_BtnShareQQZone");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_share_result.bp_share_result_C.EventShareResult_BtnShareQQTribe_NoFetch
+// Function bp_share_result.bp_share_result_C.EventShareResult_BtnShareQQZone_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_share_result_C::EventShareResult_BtnShareQQTribe_NoFetch()
+void Abp_share_result_C::EventShareResult_BtnShareQQZone_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_BtnShareQQTribe_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_result.bp_share_result_C.EventShareResult_ShowUI_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_result_C::EventShareResult_ShowUI_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_ShowUI_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_result.bp_share_result_C.EventShareResult_ShowUI_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_result_C::EventShareResult_ShowUI_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_ShowUI_Push_NoFetch");
+		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_BtnShareQQZone_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -198,6 +170,118 @@ void Abp_share_result_C::EventShareResultVariable_Push_NoFetch()
 }
 
 
+// Function bp_share_result.bp_share_result_C.EventShareResult_BtnCaptureScreen
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_result_C::EventShareResult_BtnCaptureScreen()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_BtnCaptureScreen");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_result.bp_share_result_C.EventShareResult_BtnCaptureScreen_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_result_C::EventShareResult_BtnCaptureScreen_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_BtnCaptureScreen_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_result.bp_share_result_C.EventShareResult_BtnShareFriend
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_result_C::EventShareResult_BtnShareFriend()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_BtnShareFriend");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_result.bp_share_result_C.EventShareResult_BtnShareFriend_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_result_C::EventShareResult_BtnShareFriend_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_BtnShareFriend_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_result.bp_share_result_C.EventShareResult_BtnSave
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_result_C::EventShareResult_BtnSave()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_BtnSave");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_result.bp_share_result_C.EventShareResult_BtnSave_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_result_C::EventShareResult_BtnSave_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_BtnSave_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_result.bp_share_result_C.EventShareResult_ShowUI_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_result_C::EventShareResult_ShowUI_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_ShowUI_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_result.bp_share_result_C.EventShareResult_ShowUI_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_result_C::EventShareResult_ShowUI_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_ShowUI_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_share_result.bp_share_result_C.EventShareResult_BtnShareTimeLine
 // (BlueprintCallable, BlueprintEvent)
 
@@ -249,90 +333,6 @@ void Abp_share_result_C::EventShareResultPanelClosed_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResultPanelClosed_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_result.bp_share_result_C.EventShareResult_BtnCaptureScreen
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_result_C::EventShareResult_BtnCaptureScreen()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_BtnCaptureScreen");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_result.bp_share_result_C.EventShareResult_BtnCaptureScreen_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_result_C::EventShareResult_BtnCaptureScreen_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_BtnCaptureScreen_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_result.bp_share_result_C.EventShareResult_BtnSave
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_result_C::EventShareResult_BtnSave()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_BtnSave");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_result.bp_share_result_C.EventShareResult_BtnSave_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_result_C::EventShareResult_BtnSave_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_BtnSave_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_result.bp_share_result_C.EventShareResult_BtnShareFriend
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_result_C::EventShareResult_BtnShareFriend()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_BtnShareFriend");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_result.bp_share_result_C.EventShareResult_BtnShareFriend_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_result_C::EventShareResult_BtnShareFriend_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_result_C", "EventShareResult_BtnShareFriend_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

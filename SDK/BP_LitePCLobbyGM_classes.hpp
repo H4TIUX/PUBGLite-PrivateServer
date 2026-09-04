@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_LitePCLobbyGM.BP_LitePCLobbyGM_C
-// 0x0008 (0x0458 - 0x0450)
+// 0x0008 (0x0448 - 0x0440)
 class ABP_LitePCLobbyGM_C final : public AGameModeBase
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();

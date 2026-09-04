@@ -10,82 +10,81 @@
 
 #include "Basic.hpp"
 
-#include "BP_STRUCT_Shop_GiftSend_structs.hpp"
+#include "BP_STRUCT_Shop_GiftRecv_structs.hpp"
 #include "BP_STRUCT_Shop_GiftThanks_structs.hpp"
 #include "Client_classes.hpp"
+#include "BP_STRUCT_Shop_GiftSend_structs.hpp"
 #include "BP_STRUCT_Shop_GiftBeg_structs.hpp"
-#include "BP_STRUCT_Shop_GiftRecv_structs.hpp"
 
 
 namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C
-// 0x02B8 (0x06A0 - 0x03E8)
+// 0x02B0 (0x0688 - 0x03D8)
 class Abp_shop_gift_msgcenter_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	int32                                         BP_Gift_MsgCenter_Uid;                             // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         BP_Gift_MsgCenter_IsPlatformFriend : 1;            // 0x03F4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_3F5[0x3];                                      // 0x03F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         BP_Gift_MsgCenter_ClickUid;                        // 0x03F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3FC[0x4];                                      // 0x03FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_Shop_GiftSend>       BP_ARRAY_Shop_GiftSendList;                        // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBP_STRUCT_Shop_GiftThanks             BP_STRUCT_Shop_GiftThanks;                         // 0x0410(0x0068)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FBP_STRUCT_Shop_GiftBeg                BP_STRUCT_Shop_GiftBeg;                            // 0x0478(0x0098)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FBP_STRUCT_Shop_GiftRecv               BP_STRUCT_Shop_GiftRecv;                           // 0x0510(0x00A8)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	uint8                                         BP_Gift_MsgCenter_RefuseBeg : 1;                   // 0x05B8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_5B9[0x7];                                      // 0x05B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_Gift_MsgCenter_MyName;                          // 0x05C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_Gift_MsgCenter_TabType;                         // 0x05D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D4[0x4];                                      // 0x05D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_Shop_GiftRecv>       BP_ARRAY_Shop_GiftRecvList;                        // 0x05D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_Gift_MsgCenter_ClickIndex;                      // 0x05E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EC[0x4];                                      // 0x05EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_Shop_GiftSend               BP_STRUCT_Shop_GiftSend;                           // 0x05F0(0x0080)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_Shop_GiftBeg>        BP_ARRAY_Shop_GiftBegList;                         // 0x0670(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_Gift_MsgCenter_MyGender;                        // 0x0680(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_684[0x4];                                      // 0x0684(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_Shop_GiftThanks>     BP_ARRAY_Shop_GiftThanksList;                      // 0x0688(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0698(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_Shop_GiftRecv               BP_STRUCT_Shop_GiftRecv;                           // 0x03E0(0x00A8)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_Gift_MsgCenter_ClickIndex;                      // 0x0488(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_48C[0x4];                                      // 0x048C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_Shop_GiftRecv>       BP_ARRAY_Shop_GiftRecvList;                        // 0x0490(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_Gift_MsgCenter_ClickUid;                        // 0x04A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         BP_Gift_MsgCenter_IsPlatformFriend : 1;            // 0x04A4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_4A5[0x3];                                      // 0x04A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_Shop_GiftThanks>     BP_ARRAY_Shop_GiftThanksList;                      // 0x04A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class FString                                 BP_Gift_MsgCenter_MyName;                          // 0x04B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_Gift_MsgCenter_Uid;                             // 0x04C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4CC[0x4];                                      // 0x04CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_Shop_GiftSend               BP_STRUCT_Shop_GiftSend;                           // 0x04D0(0x0080)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_Gift_MsgCenter_MyGender;                        // 0x0550(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         BP_Gift_MsgCenter_RefuseBeg : 1;                   // 0x0554(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_555[0x3];                                      // 0x0555(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BP_Gift_MsgCenter_TabType;                         // 0x0558(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_55C[0x4];                                      // 0x055C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_Shop_GiftSend>       BP_ARRAY_Shop_GiftSendList;                        // 0x0560(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	struct FBP_STRUCT_Shop_GiftThanks             BP_STRUCT_Shop_GiftThanks;                         // 0x0570(0x0068)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_Shop_GiftBeg>        BP_ARRAY_Shop_GiftBegList;                         // 0x05D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	struct FBP_STRUCT_Shop_GiftBeg                BP_STRUCT_Shop_GiftBeg;                            // 0x05E8(0x0098)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0680(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventGiftMsgCenterClickRemoveRedPoint();
-	void EventGiftMsgCenterClickRemoveRedPoint_NoFetch();
-	void EventGiftMsgCenterClickBeg();
-	void EventGiftMsgCenterClickBeg_NoFetch();
-	void EventGiftMsgCenterOpenGiftAnimation();
-	void EventGiftMsgCenterOpenGiftAnimation_NoFetch();
+	void EventGiftMsgCenterTellFriend();
+	void EventGiftMsgCenterTellFriend_NoFetch();
 	void EventGiftMsgCenterRequestGetGift();
 	void EventGiftMsgCenterRequestGetGift_NoFetch();
-	void EventGiftMsgCenterClickHelpInfo();
-	void EventGiftMsgCenterClickHelpInfo_NoFetch();
+	void EventGiftMsgCenterClickThanks();
+	void EventGiftMsgCenterClickThanks_NoFetch();
 	void EventGiftMsgCenterShare();
 	void EventGiftMsgCenterShare_NoFetch();
 	void EventGiftMsgCenterClickSend();
 	void EventGiftMsgCenterClickSend_NoFetch();
+	void EventGiftMsgCenterClickBeg();
+	void EventGiftMsgCenterClickBeg_NoFetch();
+	void EventGiftMsgCenterClickRemoveRedPoint();
+	void EventGiftMsgCenterClickRemoveRedPoint_NoFetch();
+	void EventGiftMsgCenterClickRecv();
+	void EventGiftMsgCenterClickRecv_NoFetch();
+	void EventGiftMsgCenterClickHelpInfo();
+	void EventGiftMsgCenterClickHelpInfo_NoFetch();
+	void EventGiftMsgCenterClickPlayerInfo();
+	void EventGiftMsgCenterClickPlayerInfo_NoFetch();
 	void EventGiftMsgCenterRequestPlayerInfo();
 	void EventGiftMsgCenterRequestPlayerInfo_NoFetch();
-	void EventGiftMsgCenterClickBegAccept();
-	void EventGiftMsgCenterClickBegAccept_NoFetch();
-	void EventGiftMsgCenterClickThanks();
-	void EventGiftMsgCenterClickThanks_NoFetch();
-	void EventGiftMsgCenterTellFriend();
-	void EventGiftMsgCenterTellFriend_NoFetch();
 	void EventGiftMsgCenterClickBegRefuse();
 	void EventGiftMsgCenterClickBegRefuse_NoFetch();
 	void EventGiftMsgCenterJumpMarket();
 	void EventGiftMsgCenterJumpMarket_NoFetch();
 	void EventGiftMsgCenterOpenGiftGetView();
 	void EventGiftMsgCenterOpenGiftGetView_NoFetch();
+	void EventGiftMsgCenterOpenGiftAnimation();
+	void EventGiftMsgCenterOpenGiftAnimation_NoFetch();
 	void EventFetchInfo();
 	void EventFetchInfo_NoFetch();
-	void EventGiftMsgCenterClickRecv();
-	void EventGiftMsgCenterClickRecv_NoFetch();
-	void EventGiftMsgCenterClickPlayerInfo();
-	void EventGiftMsgCenterClickPlayerInfo_NoFetch();
+	void EventGiftMsgCenterClickBegAccept();
+	void EventGiftMsgCenterClickBegAccept_NoFetch();
 
 public:
 	static class UClass* StaticClass()

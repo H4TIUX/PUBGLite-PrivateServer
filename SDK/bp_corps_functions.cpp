@@ -30,34 +30,6 @@ void Abp_corps_C::UserConstructionScript()
 }
 
 
-// Function bp_corps.bp_corps_C.EventClickToggle_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_C::EventClickToggle_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_C", "EventClickToggle_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps.bp_corps_C.EventClickToggle_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_C::EventClickToggle_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_C", "EventClickToggle_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_corps.bp_corps_C.EventOnCorpsClose
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,6 +53,34 @@ void Abp_corps_C::EventOnCorpsClose_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_corps_C", "EventOnCorpsClose_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps.bp_corps_C.EventClickToggle_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_C::EventClickToggle_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_C", "EventClickToggle_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps.bp_corps_C.EventClickToggle_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_C::EventClickToggle_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_C", "EventClickToggle_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

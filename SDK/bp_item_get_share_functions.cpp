@@ -58,29 +58,29 @@ void Abp_item_get_share_C::EventShowSharePanel_NoFetch()
 }
 
 
-// Function bp_item_get_share.bp_item_get_share_C.EventItemShareHide
+// Function bp_item_get_share.bp_item_get_share_C.EventFetchInfo
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_item_get_share_C::EventItemShareHide()
+void Abp_item_get_share_C::EventFetchInfo()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_item_get_share_C", "EventItemShareHide");
+		Func = GetClass()->GetFunction("bp_item_get_share_C", "EventFetchInfo");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_item_get_share.bp_item_get_share_C.EventItemShareHide_NoFetch
+// Function bp_item_get_share.bp_item_get_share_C.EventFetchInfo_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_item_get_share_C::EventItemShareHide_NoFetch()
+void Abp_item_get_share_C::EventFetchInfo_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_item_get_share_C", "EventItemShareHide_NoFetch");
+		Func = GetClass()->GetFunction("bp_item_get_share_C", "EventFetchInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,29 +114,29 @@ void Abp_item_get_share_C::EventSetInfo_Push_NoFetch()
 }
 
 
-// Function bp_item_get_share.bp_item_get_share_C.EventFetchInfo
+// Function bp_item_get_share.bp_item_get_share_C.EventItemShareHide
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_item_get_share_C::EventFetchInfo()
+void Abp_item_get_share_C::EventItemShareHide()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_item_get_share_C", "EventFetchInfo");
+		Func = GetClass()->GetFunction("bp_item_get_share_C", "EventItemShareHide");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_item_get_share.bp_item_get_share_C.EventFetchInfo_NoFetch
+// Function bp_item_get_share.bp_item_get_share_C.EventItemShareHide_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_item_get_share_C::EventFetchInfo_NoFetch()
+void Abp_item_get_share_C::EventItemShareHide_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_item_get_share_C", "EventFetchInfo_NoFetch");
+		Func = GetClass()->GetFunction("bp_item_get_share_C", "EventItemShareHide_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

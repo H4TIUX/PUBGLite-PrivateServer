@@ -30,34 +30,6 @@ void Abp_master_disciple_C::UserConstructionScript()
 }
 
 
-// Function bp_master_disciple.bp_master_disciple_C.EventClickMasterDiscipleApply
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_master_disciple_C::EventClickMasterDiscipleApply()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_master_disciple_C", "EventClickMasterDiscipleApply");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_master_disciple.bp_master_disciple_C.EventClickMasterDiscipleApply_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_master_disciple_C::EventClickMasterDiscipleApply_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_master_disciple_C", "EventClickMasterDiscipleApply_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_master_disciple.bp_master_disciple_C.EventMasterDiscipleCommentCheck
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,6 +53,34 @@ void Abp_master_disciple_C::EventMasterDiscipleCommentCheck_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_master_disciple_C", "EventMasterDiscipleCommentCheck_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_master_disciple.bp_master_disciple_C.EventClickMasterDiscipleAddFriend
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_master_disciple_C::EventClickMasterDiscipleAddFriend()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_master_disciple_C", "EventClickMasterDiscipleAddFriend");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_master_disciple.bp_master_disciple_C.EventClickMasterDiscipleAddFriend_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_master_disciple_C::EventClickMasterDiscipleAddFriend_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_master_disciple_C", "EventClickMasterDiscipleAddFriend_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,29 +114,57 @@ void Abp_master_disciple_C::EventMasterDiscipleShowSendAddFriendRequestTips_NoFe
 }
 
 
-// Function bp_master_disciple.bp_master_disciple_C.EventClickMasterDiscipleAddFriend
+// Function bp_master_disciple.bp_master_disciple_C.EventClickMasterDiscipleSearch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_master_disciple_C::EventClickMasterDiscipleAddFriend()
+void Abp_master_disciple_C::EventClickMasterDiscipleSearch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_master_disciple_C", "EventClickMasterDiscipleAddFriend");
+		Func = GetClass()->GetFunction("bp_master_disciple_C", "EventClickMasterDiscipleSearch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_master_disciple.bp_master_disciple_C.EventClickMasterDiscipleAddFriend_NoFetch
+// Function bp_master_disciple.bp_master_disciple_C.EventClickMasterDiscipleSearch_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_master_disciple_C::EventClickMasterDiscipleAddFriend_NoFetch()
+void Abp_master_disciple_C::EventClickMasterDiscipleSearch_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_master_disciple_C", "EventClickMasterDiscipleAddFriend_NoFetch");
+		Func = GetClass()->GetFunction("bp_master_disciple_C", "EventClickMasterDiscipleSearch_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_master_disciple.bp_master_disciple_C.EventClickMasterDiscipleApply
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_master_disciple_C::EventClickMasterDiscipleApply()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_master_disciple_C", "EventClickMasterDiscipleApply");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_master_disciple.bp_master_disciple_C.EventClickMasterDiscipleApply_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_master_disciple_C::EventClickMasterDiscipleApply_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_master_disciple_C", "EventClickMasterDiscipleApply_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -193,34 +221,6 @@ void Abp_master_disciple_C::EventClickMasterDiscipleOpenSearch_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_master_disciple_C", "EventClickMasterDiscipleOpenSearch_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_master_disciple.bp_master_disciple_C.EventClickMasterDiscipleSearch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_master_disciple_C::EventClickMasterDiscipleSearch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_master_disciple_C", "EventClickMasterDiscipleSearch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_master_disciple.bp_master_disciple_C.EventClickMasterDiscipleSearch_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_master_disciple_C::EventClickMasterDiscipleSearch_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_master_disciple_C", "EventClickMasterDiscipleSearch_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

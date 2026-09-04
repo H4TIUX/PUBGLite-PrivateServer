@@ -37,6 +37,20 @@ void UBP_BreatheBarWidget_C::ExecuteUbergraph_BP_BreatheBarWidget(int32 EntryPoi
 }
 
 
+// Function BP_BreatheBarWidget.BP_BreatheBarWidget_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UBP_BreatheBarWidget_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BP_BreatheBarWidget_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_BreatheBarWidget.BP_BreatheBarWidget_C.OnAnimationFinished
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:

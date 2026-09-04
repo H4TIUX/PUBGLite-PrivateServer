@@ -57,20 +57,6 @@ void ABP_STExtraPlayerController_C::CallShowTouchInterface(uint8 InShow)
 }
 
 
-// Function BP_STExtraPlayerController.BP_STExtraPlayerController_C.OnSwitchWeaponHandle
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_STExtraPlayerController_C::OnSwitchWeaponHandle()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BP_STExtraPlayerController_C", "OnSwitchWeaponHandle");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_STExtraPlayerController.BP_STExtraPlayerController_C.BP_OceanSideDetected
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -181,6 +167,40 @@ void ABP_STExtraPlayerController_C::MotionControlAndroid(const struct FVector& A
 }
 
 
+// Function BP_STExtraPlayerController.BP_STExtraPlayerController_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_STExtraPlayerController_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BP_STExtraPlayerController_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_STExtraPlayerController.BP_STExtraPlayerController_C.OnSpectatorCameraChange
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// uint8                                   bDie                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_STExtraPlayerController_C::OnSpectatorCameraChange(uint8 bDie)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BP_STExtraPlayerController_C", "OnSpectatorCameraChange");
+
+	Params::BP_STExtraPlayerController_C_OnSpectatorCameraChange Parms{};
+
+	Parms.bDie = bDie;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_STExtraPlayerController.BP_STExtraPlayerController_C.MotionControlAndroidTick
 // (BlueprintCallable, BlueprintEvent)
 
@@ -230,40 +250,6 @@ void ABP_STExtraPlayerController_C::MotionControliOS(const struct FVector& AxisV
 	Params::BP_STExtraPlayerController_C_MotionControliOS Parms{};
 
 	Parms.AxisValue = std::move(AxisValue);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_STExtraPlayerController.BP_STExtraPlayerController_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_STExtraPlayerController_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BP_STExtraPlayerController_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_STExtraPlayerController.BP_STExtraPlayerController_C.OnSpectatorCameraChange
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// uint8                                   bDie                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_STExtraPlayerController_C::OnSpectatorCameraChange(uint8 bDie)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BP_STExtraPlayerController_C", "OnSpectatorCameraChange");
-
-	Params::BP_STExtraPlayerController_C_OnSpectatorCameraChange Parms{};
-
-	Parms.bDie = bDie;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -321,20 +307,6 @@ void ABP_STExtraPlayerController_C::OnStopFireEventHandle()
 }
 
 
-// Function BP_STExtraPlayerController.BP_STExtraPlayerController_C.ReceiveClientRestart
-// (Event, Public, BlueprintEvent)
-
-void ABP_STExtraPlayerController_C::ReceiveClientRestart()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BP_STExtraPlayerController_C", "ReceiveClientRestart");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_STExtraPlayerController.BP_STExtraPlayerController_C.OnSwitchCameraSatrtHandle
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -352,6 +324,20 @@ void ABP_STExtraPlayerController_C::OnSwitchCameraSatrtHandle(EPlayerCameraMode 
 	Parms.CameraMode = CameraMode;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_STExtraPlayerController.BP_STExtraPlayerController_C.ReceiveClientRestart
+// (Event, Public, BlueprintEvent)
+
+void ABP_STExtraPlayerController_C::ReceiveClientRestart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BP_STExtraPlayerController_C", "ReceiveClientRestart");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -581,6 +567,42 @@ void ABP_STExtraPlayerController_C::OnPlane()
 }
 
 
+// Function BP_STExtraPlayerController.BP_STExtraPlayerController_C.OnPlayerPutDownActorHandle
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ASTExtraBaseCharacter*            TargetPlayer                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           TargetActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_STExtraPlayerController_C::OnPlayerPutDownActorHandle(class ASTExtraBaseCharacter* TargetPlayer, class AActor* TargetActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BP_STExtraPlayerController_C", "OnPlayerPutDownActorHandle");
+
+	Params::BP_STExtraPlayerController_C_OnPlayerPutDownActorHandle Parms{};
+
+	Parms.TargetPlayer = TargetPlayer;
+	Parms.TargetActor = TargetActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_STExtraPlayerController.BP_STExtraPlayerController_C.OnSwitchWeaponHandle
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_STExtraPlayerController_C::OnSwitchWeaponHandle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BP_STExtraPlayerController_C", "OnSwitchWeaponHandle");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_STExtraPlayerController.BP_STExtraPlayerController_C.JoystickTriggerSprint
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -684,28 +706,6 @@ void ABP_STExtraPlayerController_C::RefreshTopMostUIPanel(ETopMostUIPanelType Ty
 	Params::BP_STExtraPlayerController_C_RefreshTopMostUIPanel Parms{};
 
 	Parms.Type = Type;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_STExtraPlayerController.BP_STExtraPlayerController_C.OnPlayerPutDownActorHandle
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ASTExtraBaseCharacter*            TargetPlayer                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           TargetActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_STExtraPlayerController_C::OnPlayerPutDownActorHandle(class ASTExtraBaseCharacter* TargetPlayer, class AActor* TargetActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BP_STExtraPlayerController_C", "OnPlayerPutDownActorHandle");
-
-	Params::BP_STExtraPlayerController_C_OnPlayerPutDownActorHandle Parms{};
-
-	Parms.TargetPlayer = TargetPlayer;
-	Parms.TargetActor = TargetActor;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1461,6 +1461,20 @@ class FString ABP_STExtraPlayerController_C::GetNameBySpecificID(int32 TypeSpeci
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function BP_STExtraPlayerController.BP_STExtraPlayerController_C.ShowShooterUI
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_STExtraPlayerController_C::ShowShooterUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BP_STExtraPlayerController_C", "ShowShooterUI");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

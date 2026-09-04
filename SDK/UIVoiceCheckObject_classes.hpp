@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass UIVoiceCheckObject.UIVoiceCheckObject_C
-// 0x0000 (0x0060 - 0x0060)
+// 0x0000 (0x0080 - 0x0080)
 class UUIVoiceCheckObject_C final : public UVoiceCheckObject
 {
 public:

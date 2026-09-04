@@ -37,6 +37,34 @@ void ABP_PlayerPawnPC_C::ExecuteUbergraph_BP_PlayerPawnPC(int32 EntryPoint)
 }
 
 
+// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.OnCharacterWeaponRecoil_Event_0
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_PlayerPawnPC_C::OnCharacterWeaponRecoil_Event_0()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "OnCharacterWeaponRecoil_Event_0");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.OnChangeGrenade
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_PlayerPawnPC_C::OnChangeGrenade()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "OnChangeGrenade");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.PlayerRespawnInvincible
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -179,19 +207,119 @@ void ABP_PlayerPawnPC_C::ReceiveBeginPlay()
 }
 
 
-// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_H_K2Node_InputKeyEvent_9
+// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_Subtract_K2Node_InputKeyEvent_14
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void ABP_PlayerPawnPC_C::InpActEvt_H_K2Node_InputKeyEvent_9(const struct FKey& Key)
+void ABP_PlayerPawnPC_C::InpActEvt_Subtract_K2Node_InputKeyEvent_14(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_H_K2Node_InputKeyEvent_9");
+		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_Subtract_K2Node_InputKeyEvent_14");
 
-	Params::BP_PlayerPawnPC_C_InpActEvt_H_K2Node_InputKeyEvent_9 Parms{};
+	Params::BP_PlayerPawnPC_C_InpActEvt_Subtract_K2Node_InputKeyEvent_14 Parms{};
+
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_Add_K2Node_InputKeyEvent_15
+// (BlueprintEvent)
+// Parameters:
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void ABP_PlayerPawnPC_C::InpActEvt_Add_K2Node_InputKeyEvent_15(const struct FKey& Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_Add_K2Node_InputKeyEvent_15");
+
+	Params::BP_PlayerPawnPC_C_InpActEvt_Add_K2Node_InputKeyEvent_15 Parms{};
+
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_Decimal_K2Node_InputKeyEvent_16
+// (BlueprintEvent)
+// Parameters:
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void ABP_PlayerPawnPC_C::InpActEvt_Decimal_K2Node_InputKeyEvent_16(const struct FKey& Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_Decimal_K2Node_InputKeyEvent_16");
+
+	Params::BP_PlayerPawnPC_C_InpActEvt_Decimal_K2Node_InputKeyEvent_16 Parms{};
+
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_NumPadFive_K2Node_InputKeyEvent_17
+// (BlueprintEvent)
+// Parameters:
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void ABP_PlayerPawnPC_C::InpActEvt_NumPadFive_K2Node_InputKeyEvent_17(const struct FKey& Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_NumPadFive_K2Node_InputKeyEvent_17");
+
+	Params::BP_PlayerPawnPC_C_InpActEvt_NumPadFive_K2Node_InputKeyEvent_17 Parms{};
+
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_NumPadZero_K2Node_InputKeyEvent_18
+// (BlueprintEvent)
+// Parameters:
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void ABP_PlayerPawnPC_C::InpActEvt_NumPadZero_K2Node_InputKeyEvent_18(const struct FKey& Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_NumPadZero_K2Node_InputKeyEvent_18");
+
+	Params::BP_PlayerPawnPC_C_InpActEvt_NumPadZero_K2Node_InputKeyEvent_18 Parms{};
+
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_H_K2Node_InputKeyEvent_19
+// (BlueprintEvent)
+// Parameters:
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void ABP_PlayerPawnPC_C::InpActEvt_H_K2Node_InputKeyEvent_19(const struct FKey& Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_H_K2Node_InputKeyEvent_19");
+
+	Params::BP_PlayerPawnPC_C_InpActEvt_H_K2Node_InputKeyEvent_19 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -319,19 +447,19 @@ void ABP_PlayerPawnPC_C::InpActEvt_ReticleBrightnessUp_K2Node_InputActionEvent_3
 }
 
 
-// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_NumPadFive_K2Node_InputKeyEvent_10
+// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_NumPadFive_K2Node_InputKeyEvent_20
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void ABP_PlayerPawnPC_C::InpActEvt_NumPadFive_K2Node_InputKeyEvent_10(const struct FKey& Key)
+void ABP_PlayerPawnPC_C::InpActEvt_NumPadFive_K2Node_InputKeyEvent_20(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_NumPadFive_K2Node_InputKeyEvent_10");
+		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_NumPadFive_K2Node_InputKeyEvent_20");
 
-	Params::BP_PlayerPawnPC_C_InpActEvt_NumPadFive_K2Node_InputKeyEvent_10 Parms{};
+	Params::BP_PlayerPawnPC_C_InpActEvt_NumPadFive_K2Node_InputKeyEvent_20 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -339,19 +467,19 @@ void ABP_PlayerPawnPC_C::InpActEvt_NumPadFive_K2Node_InputKeyEvent_10(const stru
 }
 
 
-// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_Decimal_K2Node_InputKeyEvent_11
+// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_Decimal_K2Node_InputKeyEvent_21
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void ABP_PlayerPawnPC_C::InpActEvt_Decimal_K2Node_InputKeyEvent_11(const struct FKey& Key)
+void ABP_PlayerPawnPC_C::InpActEvt_Decimal_K2Node_InputKeyEvent_21(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_Decimal_K2Node_InputKeyEvent_11");
+		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_Decimal_K2Node_InputKeyEvent_21");
 
-	Params::BP_PlayerPawnPC_C_InpActEvt_Decimal_K2Node_InputKeyEvent_11 Parms{};
+	Params::BP_PlayerPawnPC_C_InpActEvt_Decimal_K2Node_InputKeyEvent_21 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -359,19 +487,19 @@ void ABP_PlayerPawnPC_C::InpActEvt_Decimal_K2Node_InputKeyEvent_11(const struct 
 }
 
 
-// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_NumPadOne_K2Node_InputKeyEvent_12
+// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_NumPadOne_K2Node_InputKeyEvent_22
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void ABP_PlayerPawnPC_C::InpActEvt_NumPadOne_K2Node_InputKeyEvent_12(const struct FKey& Key)
+void ABP_PlayerPawnPC_C::InpActEvt_NumPadOne_K2Node_InputKeyEvent_22(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_NumPadOne_K2Node_InputKeyEvent_12");
+		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_NumPadOne_K2Node_InputKeyEvent_22");
 
-	Params::BP_PlayerPawnPC_C_InpActEvt_NumPadOne_K2Node_InputKeyEvent_12 Parms{};
+	Params::BP_PlayerPawnPC_C_InpActEvt_NumPadOne_K2Node_InputKeyEvent_22 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -379,19 +507,19 @@ void ABP_PlayerPawnPC_C::InpActEvt_NumPadOne_K2Node_InputKeyEvent_12(const struc
 }
 
 
-// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_NumPadNine_K2Node_InputKeyEvent_13
+// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_NumPadNine_K2Node_InputKeyEvent_23
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void ABP_PlayerPawnPC_C::InpActEvt_NumPadNine_K2Node_InputKeyEvent_13(const struct FKey& Key)
+void ABP_PlayerPawnPC_C::InpActEvt_NumPadNine_K2Node_InputKeyEvent_23(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_NumPadNine_K2Node_InputKeyEvent_13");
+		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_NumPadNine_K2Node_InputKeyEvent_23");
 
-	Params::BP_PlayerPawnPC_C_InpActEvt_NumPadNine_K2Node_InputKeyEvent_13 Parms{};
+	Params::BP_PlayerPawnPC_C_InpActEvt_NumPadNine_K2Node_InputKeyEvent_23 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -399,19 +527,19 @@ void ABP_PlayerPawnPC_C::InpActEvt_NumPadNine_K2Node_InputKeyEvent_13(const stru
 }
 
 
-// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_NumPadSeven_K2Node_InputKeyEvent_14
+// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_NumPadSeven_K2Node_InputKeyEvent_24
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void ABP_PlayerPawnPC_C::InpActEvt_NumPadSeven_K2Node_InputKeyEvent_14(const struct FKey& Key)
+void ABP_PlayerPawnPC_C::InpActEvt_NumPadSeven_K2Node_InputKeyEvent_24(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_NumPadSeven_K2Node_InputKeyEvent_14");
+		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_NumPadSeven_K2Node_InputKeyEvent_24");
 
-	Params::BP_PlayerPawnPC_C_InpActEvt_NumPadSeven_K2Node_InputKeyEvent_14 Parms{};
+	Params::BP_PlayerPawnPC_C_InpActEvt_NumPadSeven_K2Node_InputKeyEvent_24 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -419,19 +547,19 @@ void ABP_PlayerPawnPC_C::InpActEvt_NumPadSeven_K2Node_InputKeyEvent_14(const str
 }
 
 
-// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_NumPadTwo_K2Node_InputKeyEvent_15
+// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_NumPadTwo_K2Node_InputKeyEvent_25
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void ABP_PlayerPawnPC_C::InpActEvt_NumPadTwo_K2Node_InputKeyEvent_15(const struct FKey& Key)
+void ABP_PlayerPawnPC_C::InpActEvt_NumPadTwo_K2Node_InputKeyEvent_25(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_NumPadTwo_K2Node_InputKeyEvent_15");
+		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_NumPadTwo_K2Node_InputKeyEvent_25");
 
-	Params::BP_PlayerPawnPC_C_InpActEvt_NumPadTwo_K2Node_InputKeyEvent_15 Parms{};
+	Params::BP_PlayerPawnPC_C_InpActEvt_NumPadTwo_K2Node_InputKeyEvent_25 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -439,19 +567,19 @@ void ABP_PlayerPawnPC_C::InpActEvt_NumPadTwo_K2Node_InputKeyEvent_15(const struc
 }
 
 
-// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_NumPadEight_K2Node_InputKeyEvent_16
+// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_NumPadEight_K2Node_InputKeyEvent_26
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void ABP_PlayerPawnPC_C::InpActEvt_NumPadEight_K2Node_InputKeyEvent_16(const struct FKey& Key)
+void ABP_PlayerPawnPC_C::InpActEvt_NumPadEight_K2Node_InputKeyEvent_26(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_NumPadEight_K2Node_InputKeyEvent_16");
+		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_NumPadEight_K2Node_InputKeyEvent_26");
 
-	Params::BP_PlayerPawnPC_C_InpActEvt_NumPadEight_K2Node_InputKeyEvent_16 Parms{};
+	Params::BP_PlayerPawnPC_C_InpActEvt_NumPadEight_K2Node_InputKeyEvent_26 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -459,19 +587,19 @@ void ABP_PlayerPawnPC_C::InpActEvt_NumPadEight_K2Node_InputKeyEvent_16(const str
 }
 
 
-// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_NumPadZero_K2Node_InputKeyEvent_17
+// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.InpActEvt_NumPadZero_K2Node_InputKeyEvent_27
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void ABP_PlayerPawnPC_C::InpActEvt_NumPadZero_K2Node_InputKeyEvent_17(const struct FKey& Key)
+void ABP_PlayerPawnPC_C::InpActEvt_NumPadZero_K2Node_InputKeyEvent_27(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_NumPadZero_K2Node_InputKeyEvent_17");
+		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "InpActEvt_NumPadZero_K2Node_InputKeyEvent_27");
 
-	Params::BP_PlayerPawnPC_C_InpActEvt_NumPadZero_K2Node_InputKeyEvent_17 Parms{};
+	Params::BP_PlayerPawnPC_C_InpActEvt_NumPadZero_K2Node_InputKeyEvent_27 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -1555,6 +1683,34 @@ void ABP_PlayerPawnPC_C::SetRespawnInvincibleEffect(const class FString& ParamNa
 	Parms.Value = Value;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.RecoilDebugToggleMouse
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_PlayerPawnPC_C::RecoilDebugToggleMouse()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "RecoilDebugToggleMouse");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PlayerPawnPC.BP_PlayerPawnPC_C.RecoilDebugAddDataRow
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_PlayerPawnPC_C::RecoilDebugAddDataRow()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BP_PlayerPawnPC_C", "RecoilDebugAddDataRow");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

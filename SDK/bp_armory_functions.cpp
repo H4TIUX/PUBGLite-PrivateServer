@@ -30,6 +30,34 @@ void Abp_armory_C::UserConstructionScript()
 }
 
 
+// Function bp_armory.bp_armory_C.EventclickArmoryShorHandMenu
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_armory_C::EventclickArmoryShorHandMenu()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_armory_C", "EventclickArmoryShorHandMenu");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_armory.bp_armory_C.EventclickArmoryShorHandMenu_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_armory_C::EventclickArmoryShorHandMenu_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_armory_C", "EventclickArmoryShorHandMenu_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_armory.bp_armory_C.EventArmoryCloseArmoryMainUIEnter
 // (BlueprintCallable, BlueprintEvent)
 
@@ -58,169 +86,57 @@ void Abp_armory_C::EventArmoryCloseArmoryMainUIEnter_NoFetch()
 }
 
 
-// Function bp_armory.bp_armory_C.EventTestPutonEquipment
+// Function bp_armory.bp_armory_C.EventClickArmoryFirstMenu
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_armory_C::EventTestPutonEquipment()
+void Abp_armory_C::EventClickArmoryFirstMenu()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_armory_C", "EventTestPutonEquipment");
+		Func = GetClass()->GetFunction("bp_armory_C", "EventClickArmoryFirstMenu");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_armory.bp_armory_C.EventTestPutonEquipment_NoFetch
+// Function bp_armory.bp_armory_C.EventClickArmoryFirstMenu_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_armory_C::EventTestPutonEquipment_NoFetch()
+void Abp_armory_C::EventClickArmoryFirstMenu_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_armory_C", "EventTestPutonEquipment_NoFetch");
+		Func = GetClass()->GetFunction("bp_armory_C", "EventClickArmoryFirstMenu_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_armory.bp_armory_C.EventClickArmorySecMenu
+// Function bp_armory.bp_armory_C.EventArmoryOpenArmoryMainUIEnter
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_armory_C::EventClickArmorySecMenu()
+void Abp_armory_C::EventArmoryOpenArmoryMainUIEnter()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_armory_C", "EventClickArmorySecMenu");
+		Func = GetClass()->GetFunction("bp_armory_C", "EventArmoryOpenArmoryMainUIEnter");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_armory.bp_armory_C.EventClickArmorySecMenu_NoFetch
+// Function bp_armory.bp_armory_C.EventArmoryOpenArmoryMainUIEnter_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_armory_C::EventClickArmorySecMenu_NoFetch()
+void Abp_armory_C::EventArmoryOpenArmoryMainUIEnter_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_armory_C", "EventClickArmorySecMenu_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_armory.bp_armory_C.EventTestShowWeapon3
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_armory_C::EventTestShowWeapon3()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_armory_C", "EventTestShowWeapon3");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_armory.bp_armory_C.EventTestShowWeapon3_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_armory_C::EventTestShowWeapon3_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_armory_C", "EventTestShowWeapon3_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_armory.bp_armory_C.EventclickArmoryShortHandItem
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_armory_C::EventclickArmoryShortHandItem()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_armory_C", "EventclickArmoryShortHandItem");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_armory.bp_armory_C.EventclickArmoryShortHandItem_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_armory_C::EventclickArmoryShortHandItem_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_armory_C", "EventclickArmoryShortHandItem_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_armory.bp_armory_C.EventTestShowWeapon
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_armory_C::EventTestShowWeapon()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_armory_C", "EventTestShowWeapon");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_armory.bp_armory_C.EventTestShowWeapon_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_armory_C::EventTestShowWeapon_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_armory_C", "EventTestShowWeapon_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_armory.bp_armory_C.EventTestPutoffEquipment
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_armory_C::EventTestPutoffEquipment()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_armory_C", "EventTestPutoffEquipment");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_armory.bp_armory_C.EventTestPutoffEquipment_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_armory_C::EventTestPutoffEquipment_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_armory_C", "EventTestPutoffEquipment_NoFetch");
+		Func = GetClass()->GetFunction("bp_armory_C", "EventArmoryOpenArmoryMainUIEnter_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -282,6 +198,62 @@ void Abp_armory_C::EventArmoryCloseArmoryMainUI_NoFetch()
 }
 
 
+// Function bp_armory.bp_armory_C.EventTestPutoffEquipment
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_armory_C::EventTestPutoffEquipment()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_armory_C", "EventTestPutoffEquipment");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_armory.bp_armory_C.EventTestPutoffEquipment_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_armory_C::EventTestPutoffEquipment_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_armory_C", "EventTestPutoffEquipment_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_armory.bp_armory_C.EventTestPutonEquipment
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_armory_C::EventTestPutonEquipment()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_armory_C", "EventTestPutonEquipment");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_armory.bp_armory_C.EventTestPutonEquipment_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_armory_C::EventTestPutonEquipment_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_armory_C", "EventTestPutonEquipment_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_armory.bp_armory_C.EventclickClearAllEquipment
 // (BlueprintCallable, BlueprintEvent)
 
@@ -310,85 +282,113 @@ void Abp_armory_C::EventclickClearAllEquipment_NoFetch()
 }
 
 
-// Function bp_armory.bp_armory_C.EventclickArmoryShorHandMenu
+// Function bp_armory.bp_armory_C.EventclickArmoryShortHandItem
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_armory_C::EventclickArmoryShorHandMenu()
+void Abp_armory_C::EventclickArmoryShortHandItem()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_armory_C", "EventclickArmoryShorHandMenu");
+		Func = GetClass()->GetFunction("bp_armory_C", "EventclickArmoryShortHandItem");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_armory.bp_armory_C.EventclickArmoryShorHandMenu_NoFetch
+// Function bp_armory.bp_armory_C.EventclickArmoryShortHandItem_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_armory_C::EventclickArmoryShorHandMenu_NoFetch()
+void Abp_armory_C::EventclickArmoryShortHandItem_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_armory_C", "EventclickArmoryShorHandMenu_NoFetch");
+		Func = GetClass()->GetFunction("bp_armory_C", "EventclickArmoryShortHandItem_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_armory.bp_armory_C.EventClickArmoryFirstMenu
+// Function bp_armory.bp_armory_C.EventClickArmorySecMenu
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_armory_C::EventClickArmoryFirstMenu()
+void Abp_armory_C::EventClickArmorySecMenu()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_armory_C", "EventClickArmoryFirstMenu");
+		Func = GetClass()->GetFunction("bp_armory_C", "EventClickArmorySecMenu");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_armory.bp_armory_C.EventClickArmoryFirstMenu_NoFetch
+// Function bp_armory.bp_armory_C.EventClickArmorySecMenu_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_armory_C::EventClickArmoryFirstMenu_NoFetch()
+void Abp_armory_C::EventClickArmorySecMenu_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_armory_C", "EventClickArmoryFirstMenu_NoFetch");
+		Func = GetClass()->GetFunction("bp_armory_C", "EventClickArmorySecMenu_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_armory.bp_armory_C.EventArmoryOpenArmoryMainUIEnter
+// Function bp_armory.bp_armory_C.EventTestShowWeapon
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_armory_C::EventArmoryOpenArmoryMainUIEnter()
+void Abp_armory_C::EventTestShowWeapon()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_armory_C", "EventArmoryOpenArmoryMainUIEnter");
+		Func = GetClass()->GetFunction("bp_armory_C", "EventTestShowWeapon");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_armory.bp_armory_C.EventArmoryOpenArmoryMainUIEnter_NoFetch
+// Function bp_armory.bp_armory_C.EventTestShowWeapon_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_armory_C::EventArmoryOpenArmoryMainUIEnter_NoFetch()
+void Abp_armory_C::EventTestShowWeapon_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_armory_C", "EventArmoryOpenArmoryMainUIEnter_NoFetch");
+		Func = GetClass()->GetFunction("bp_armory_C", "EventTestShowWeapon_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_armory.bp_armory_C.EventTestShowWeapon3
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_armory_C::EventTestShowWeapon3()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_armory_C", "EventTestShowWeapon3");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_armory.bp_armory_C.EventTestShowWeapon3_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_armory_C::EventTestShowWeapon3_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_armory_C", "EventTestShowWeapon3_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

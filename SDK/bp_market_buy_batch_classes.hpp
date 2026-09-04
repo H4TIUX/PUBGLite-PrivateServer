@@ -18,39 +18,38 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_market_buy_batch.bp_market_buy_batch_C
-// 0x0120 (0x0508 - 0x03E8)
+// 0x0118 (0x04F0 - 0x03D8)
 class Abp_market_buy_batch_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	int32                                         BP_MarketBuyBatch_MoneyPrice1;                     // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F4[0x4];                                      // 0x03F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_MarketBuyBatchItemInfo      BP_STRUCT_MarketBuyBatchItemInfo;                  // 0x03F8(0x00D0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_MarketBuyBatchItemInfo> BP_ARRAY_MarketBuyBatchItemList;                // 0x04C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_MarketBuyBatch_SwitchSelectedItemIndex;         // 0x04D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         BP_MarketBuyBatch_MoneyEnough2 : 1;                // 0x04DC(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_4DD[0x3];                                      // 0x04DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	uint8                                         BP_MarketBuyBatch_MoneyEnough2 : 1;                // 0x03E0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_3E1[0x3];                                      // 0x03E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BP_MarketBuyBatch_SwitchSelectedItemIndex;         // 0x03E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBP_STRUCT_MarketBuyBatchItemInfo      BP_STRUCT_MarketBuyBatchItemInfo;                  // 0x03E8(0x00D0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_MarketBuyBatchItemInfo> BP_ARRAY_MarketBuyBatchItemList;                // 0x04B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_MarketBuyBatch_MoneyPrice1;                     // 0x04C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_MarketBuyBatch_MoneyType1;                      // 0x04CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_MarketBuyBatch_MoneyType2;                      // 0x04D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_MarketBuyBatch_MoneyPrice2;                     // 0x04D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         BP_MarketBuyBatch_BuyBtn_Enable : 1;               // 0x04D8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         BP_MarketBuyBatch_MoneyEnough1 : 1;                // 0x04D9(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_4DA[0x2];                                      // 0x04DA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BP_MarketBuyBatch_CheckBoxClickTimeIndex;          // 0x04DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         BP_MarketBuyBatch_CheckBoxClickItemIndex;          // 0x04E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         BP_MarketBuyBatch_BuyBtn_Enable : 1;               // 0x04E4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_4E5[0x3];                                      // 0x04E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         BP_MarketBuyBatch_MoneyType2;                      // 0x04E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_MarketBuyBatch_MoneyPrice2;                     // 0x04EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_MarketBuyBatch_CheckBoxClickTimeIndex;          // 0x04F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_MarketBuyBatch_MoneyType1;                      // 0x04F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         BP_MarketBuyBatch_MoneyEnough1 : 1;                // 0x04F8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_4F9[0x7];                                      // 0x04F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0500(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4E4[0x4];                                      // 0x04E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04E8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
 	void EventOnSwitchItemSelected();
 	void EventOnSwitchItemSelected_NoFetch();
-	void EventMarketBuyBatchUIOnBuy();
-	void EventMarketBuyBatchUIOnBuy_NoFetch();
-	void EventMarketBuyBatchUIClose();
-	void EventMarketBuyBatchUIClose_NoFetch();
 	void EventOnCheckBoxChecked();
 	void EventOnCheckBoxChecked_NoFetch();
+	void EventMarketBuyBatchUIClose();
+	void EventMarketBuyBatchUIClose_NoFetch();
+	void EventMarketBuyBatchUIOnBuy();
+	void EventMarketBuyBatchUIOnBuy_NoFetch();
 
 public:
 	static class UClass* StaticClass()

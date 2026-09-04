@@ -51,20 +51,6 @@ void ALitePCLobby_C::ReceiveBeginPlay()
 }
 
 
-// Function LitePCLobby.LitePCLobby_C.Event_OnGameUserSettingApplied
-// (BlueprintCallable, BlueprintEvent)
-
-void ALitePCLobby_C::Event_OnGameUserSettingApplied()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("LitePCLobby_C", "Event_OnGameUserSettingApplied");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function LitePCLobby.LitePCLobby_C.OnWardrobe
 // (BlueprintCallable, BlueprintEvent)
 
@@ -79,20 +65,6 @@ void ALitePCLobby_C::OnWardrobe()
 }
 
 
-// Function LitePCLobby.LitePCLobby_C.OnSolo
-// (BlueprintCallable, BlueprintEvent)
-
-void ALitePCLobby_C::OnSolo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("LitePCLobby_C", "OnSolo");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function LitePCLobby.LitePCLobby_C.OnCustomAppearance
 // (BlueprintCallable, BlueprintEvent)
 
@@ -102,6 +74,92 @@ void ALitePCLobby_C::OnCustomAppearance()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("LitePCLobby_C", "OnCustomAppearance");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function LitePCLobby.LitePCLobby_C.Flashing__UpdateFunc
+// (BlueprintEvent)
+
+void ALitePCLobby_C::Flashing__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("LitePCLobby_C", "Flashing__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function LitePCLobby.LitePCLobby_C.Flashing__FinishedFunc
+// (BlueprintEvent)
+
+void ALitePCLobby_C::Flashing__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("LitePCLobby_C", "Flashing__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function LitePCLobby.LitePCLobby_C.Set_ViewTarget
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           NewViewTarget                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ALitePCLobby_C::Set_ViewTarget(class AActor* NewViewTarget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("LitePCLobby_C", "Set_ViewTarget");
+
+	Params::LitePCLobby_C_Set_ViewTarget Parms{};
+
+	Parms.NewViewTarget = NewViewTarget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function LitePCLobby.LitePCLobby_C.Set_SpotColor
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ULightComponent*                  lightTarget                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              NewLightColor                                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   lightIntensity                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ALitePCLobby_C::Set_SpotColor(class ULightComponent* lightTarget, const struct FLinearColor& NewLightColor, float lightIntensity)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("LitePCLobby_C", "Set_SpotColor");
+
+	Params::LitePCLobby_C_Set_SpotColor Parms{};
+
+	Parms.lightTarget = lightTarget;
+	Parms.NewLightColor = std::move(NewLightColor);
+	Parms.lightIntensity = lightIntensity;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function LitePCLobby.LitePCLobby_C.Set_Bom
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ALitePCLobby_C::Set_Bom()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("LitePCLobby_C", "Set_Bom");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

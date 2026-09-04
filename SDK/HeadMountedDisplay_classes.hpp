@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "InputCore_structs.hpp"
 #include "Engine_classes.hpp"
 #include "HeadMountedDisplay_structs.hpp"
-#include "InputCore_structs.hpp"
 
 
 namespace SDK

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
+#include "Basic_structs.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
 #include "ShadowTrackerExtra_classes.hpp"
-#include "Basic_structs.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -62,6 +62,7 @@ public:
 	void GenerateItemDefineIDByItemTableID(int32 ItemTableID, int32* Type, int32* TypeSpecificID) const;
 	struct FBattleWeaponItemDisplayData GetBattleWeaponItemDisplayDataByDefineID(const struct FItemDefineID& DefineID) const;
 	class FString GetBattleItemHandlePath(const struct FItemDefineID& DefineID) const;
+	class FText GetBattleWeaponItemNameTextByDefineID(const struct FItemDefineID& DefineID) const;
 
 public:
 	static class UClass* StaticClass()

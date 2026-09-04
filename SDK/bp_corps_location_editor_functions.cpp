@@ -30,34 +30,6 @@ void Abp_corps_location_editor_C::UserConstructionScript()
 }
 
 
-// Function bp_corps_location_editor.bp_corps_location_editor_C.EventCorpsLocationEditorSelectProvince
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_location_editor_C::EventCorpsLocationEditorSelectProvince()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_location_editor_C", "EventCorpsLocationEditorSelectProvince");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_location_editor.bp_corps_location_editor_C.EventCorpsLocationEditorSelectProvince_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_location_editor_C::EventCorpsLocationEditorSelectProvince_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_location_editor_C", "EventCorpsLocationEditorSelectProvince_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_corps_location_editor.bp_corps_location_editor_C.EventCorpsLocationEditorChange
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,6 +53,34 @@ void Abp_corps_location_editor_C::EventCorpsLocationEditorChange_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_corps_location_editor_C", "EventCorpsLocationEditorChange_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_location_editor.bp_corps_location_editor_C.EventCorpsLocationEditorSelectProvince
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_location_editor_C::EventCorpsLocationEditorSelectProvince()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_location_editor_C", "EventCorpsLocationEditorSelectProvince");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_location_editor.bp_corps_location_editor_C.EventCorpsLocationEditorSelectProvince_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_location_editor_C::EventCorpsLocationEditorSelectProvince_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_location_editor_C", "EventCorpsLocationEditorSelectProvince_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

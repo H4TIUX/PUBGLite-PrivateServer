@@ -30,29 +30,29 @@ void Abp_task_C::UserConstructionScript()
 }
 
 
-// Function bp_task.bp_task_C.EventTaskClickAwarded_Push
+// Function bp_task.bp_task_C.EventLevelTaskGetAward_Push
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_task_C::EventTaskClickAwarded_Push()
+void Abp_task_C::EventLevelTaskGetAward_Push()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_task_C", "EventTaskClickAwarded_Push");
+		Func = GetClass()->GetFunction("bp_task_C", "EventLevelTaskGetAward_Push");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_task.bp_task_C.EventTaskClickAwarded_Push_NoFetch
+// Function bp_task.bp_task_C.EventLevelTaskGetAward_Push_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_task_C::EventTaskClickAwarded_Push_NoFetch()
+void Abp_task_C::EventLevelTaskGetAward_Push_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_task_C", "EventTaskClickAwarded_Push_NoFetch");
+		Func = GetClass()->GetFunction("bp_task_C", "EventLevelTaskGetAward_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,169 +86,29 @@ void Abp_task_C::EventLevelTaskShowRewardDetailPopup_Push_NoFetch()
 }
 
 
-// Function bp_task.bp_task_C.EventTestAddProgress_Push
+// Function bp_task.bp_task_C.EventTaskShowUI
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_task_C::EventTestAddProgress_Push()
+void Abp_task_C::EventTaskShowUI()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_task_C", "EventTestAddProgress_Push");
+		Func = GetClass()->GetFunction("bp_task_C", "EventTaskShowUI");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_task.bp_task_C.EventTestAddProgress_Push_NoFetch
+// Function bp_task.bp_task_C.EventTaskShowUI_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_task_C::EventTestAddProgress_Push_NoFetch()
+void Abp_task_C::EventTaskShowUI_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_task_C", "EventTestAddProgress_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_task.bp_task_C.EventTaskHideUI
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_task_C::EventTaskHideUI()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_task_C", "EventTaskHideUI");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_task.bp_task_C.EventTaskHideUI_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_task_C::EventTaskHideUI_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_task_C", "EventTaskHideUI_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_task.bp_task_C.EventTaskFinishTask_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_task_C::EventTaskFinishTask_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_task_C", "EventTaskFinishTask_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_task.bp_task_C.EventTaskFinishTask_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_task_C::EventTaskFinishTask_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_task_C", "EventTaskFinishTask_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_task.bp_task_C.EventTaskGoTo_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_task_C::EventTaskGoTo_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_task_C", "EventTaskGoTo_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_task.bp_task_C.EventTaskGoTo_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_task_C::EventTaskGoTo_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_task_C", "EventTaskGoTo_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_task.bp_task_C.EventTaskGetReward_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_task_C::EventTaskGetReward_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_task_C", "EventTaskGetReward_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_task.bp_task_C.EventTaskGetReward_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_task_C::EventTaskGetReward_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_task_C", "EventTaskGetReward_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_task.bp_task_C.EventTaskShowRewardDetailPopup_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_task_C::EventTaskShowRewardDetailPopup_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_task_C", "EventTaskShowRewardDetailPopup_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_task.bp_task_C.EventTaskShowRewardDetailPopup_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_task_C::EventTaskShowRewardDetailPopup_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_task_C", "EventTaskShowRewardDetailPopup_Push_NoFetch");
+		Func = GetClass()->GetFunction("bp_task_C", "EventTaskShowUI_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -282,29 +142,141 @@ void Abp_task_C::EventLevelTaskGoto_Push_NoFetch()
 }
 
 
-// Function bp_task.bp_task_C.EventTaskShowUI
+// Function bp_task.bp_task_C.EventTaskFinishTask_Push
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_task_C::EventTaskShowUI()
+void Abp_task_C::EventTaskFinishTask_Push()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_task_C", "EventTaskShowUI");
+		Func = GetClass()->GetFunction("bp_task_C", "EventTaskFinishTask_Push");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_task.bp_task_C.EventTaskShowUI_NoFetch
+// Function bp_task.bp_task_C.EventTaskFinishTask_Push_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_task_C::EventTaskShowUI_NoFetch()
+void Abp_task_C::EventTaskFinishTask_Push_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_task_C", "EventTaskShowUI_NoFetch");
+		Func = GetClass()->GetFunction("bp_task_C", "EventTaskFinishTask_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_task.bp_task_C.EventTaskHideUI
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_task_C::EventTaskHideUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_task_C", "EventTaskHideUI");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_task.bp_task_C.EventTaskHideUI_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_task_C::EventTaskHideUI_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_task_C", "EventTaskHideUI_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_task.bp_task_C.EventTestAddProgress_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_task_C::EventTestAddProgress_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_task_C", "EventTestAddProgress_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_task.bp_task_C.EventTestAddProgress_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_task_C::EventTestAddProgress_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_task_C", "EventTestAddProgress_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_task.bp_task_C.EventTaskShowRewardDetailPopup_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_task_C::EventTaskShowRewardDetailPopup_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_task_C", "EventTaskShowRewardDetailPopup_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_task.bp_task_C.EventTaskShowRewardDetailPopup_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_task_C::EventTaskShowRewardDetailPopup_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_task_C", "EventTaskShowRewardDetailPopup_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_task.bp_task_C.EventTaskClickAwarded_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_task_C::EventTaskClickAwarded_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_task_C", "EventTaskClickAwarded_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_task.bp_task_C.EventTaskClickAwarded_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_task_C::EventTaskClickAwarded_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_task_C", "EventTaskClickAwarded_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -366,29 +338,57 @@ void Abp_task_C::EventTaskGetTaskReward_Push_NoFetch()
 }
 
 
-// Function bp_task.bp_task_C.EventLevelTaskGetAward_Push
+// Function bp_task.bp_task_C.EventTaskGetReward_Push
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_task_C::EventLevelTaskGetAward_Push()
+void Abp_task_C::EventTaskGetReward_Push()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_task_C", "EventLevelTaskGetAward_Push");
+		Func = GetClass()->GetFunction("bp_task_C", "EventTaskGetReward_Push");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_task.bp_task_C.EventLevelTaskGetAward_Push_NoFetch
+// Function bp_task.bp_task_C.EventTaskGetReward_Push_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_task_C::EventLevelTaskGetAward_Push_NoFetch()
+void Abp_task_C::EventTaskGetReward_Push_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_task_C", "EventLevelTaskGetAward_Push_NoFetch");
+		Func = GetClass()->GetFunction("bp_task_C", "EventTaskGetReward_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_task.bp_task_C.EventTaskGoTo_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_task_C::EventTaskGoTo_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_task_C", "EventTaskGoTo_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_task.bp_task_C.EventTaskGoTo_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_task_C::EventTaskGoTo_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_task_C", "EventTaskGoTo_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

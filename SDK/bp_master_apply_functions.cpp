@@ -30,34 +30,6 @@ void Abp_master_apply_C::UserConstructionScript()
 }
 
 
-// Function bp_master_apply.bp_master_apply_C.EventMasterApplyCommentCheck
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_master_apply_C::EventMasterApplyCommentCheck()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_master_apply_C", "EventMasterApplyCommentCheck");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_master_apply.bp_master_apply_C.EventMasterApplyCommentCheck_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_master_apply_C::EventMasterApplyCommentCheck_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_master_apply_C", "EventMasterApplyCommentCheck_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_master_apply.bp_master_apply_C.EventClickMasterApplyConfirm
 // (BlueprintCallable, BlueprintEvent)
 
@@ -109,6 +81,34 @@ void Abp_master_apply_C::EventFetchInfo_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_master_apply_C", "EventFetchInfo_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_master_apply.bp_master_apply_C.EventMasterApplyCommentCheck
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_master_apply_C::EventMasterApplyCommentCheck()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_master_apply_C", "EventMasterApplyCommentCheck");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_master_apply.bp_master_apply_C.EventMasterApplyCommentCheck_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_master_apply_C::EventMasterApplyCommentCheck_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_master_apply_C", "EventMasterApplyCommentCheck_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

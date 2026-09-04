@@ -12,10 +12,10 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "UMG_classes.hpp"
 #include "CoherentUIGTPlugin_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "UMG_classes.hpp"
 
 
 namespace SDK
@@ -196,12 +196,12 @@ public:
 };
 
 // Class CoherentUIGTPlugin.CoherentUIGTGameHUD
-// 0x0088 (0x0530 - 0x04A8)
+// 0x0088 (0x0520 - 0x0498)
 class ACoherentUIGTGameHUD final : public AHUD
 {
 public:
-	class UCoherentUIGTHUD*                       CoherentUIGTHUD;                                   // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4B0[0x80];                                     // 0x04B0(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UCoherentUIGTHUD*                       CoherentUIGTHUD;                                   // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4A0[0x80];                                     // 0x04A0(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetupUIGTView(const class FString& PageUrl, uint8 bIsTransparent, float ClickThroughAlphaThreshold, float AnimationFrameDefer, uint8 bDelayedUpdate);
@@ -247,15 +247,15 @@ public:
 };
 
 // Class CoherentUIGTPlugin.CoherentUIGTInputActor
-// 0x0058 (0x0418 - 0x03C0)
+// 0x0058 (0x0408 - 0x03B0)
 class ACoherentUIGTInputActor final : public AActor
 {
 public:
-	UMulticastDelegateProperty_                   OnCoherentUIGTInputActorMouseButtonDown;           // 0x03C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	UMulticastDelegateProperty_                   OnCoherentUIGTInputActorMouseButtonUp;             // 0x03D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	UMulticastDelegateProperty_                   OnCoherentUIGTInputActorKeyDown;                   // 0x03E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	UMulticastDelegateProperty_                   OnCoherentUIGTInputActorKeyUp;                     // 0x03F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_400[0x18];                                     // 0x0400(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	UMulticastDelegateProperty_                   OnCoherentUIGTInputActorMouseButtonDown;           // 0x03B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	UMulticastDelegateProperty_                   OnCoherentUIGTInputActorMouseButtonUp;             // 0x03C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	UMulticastDelegateProperty_                   OnCoherentUIGTInputActorKeyDown;                   // 0x03D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	UMulticastDelegateProperty_                   OnCoherentUIGTInputActorKeyUp;                     // 0x03E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3F0[0x18];                                     // 0x03F0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AllowJoystickInputWhileUIGTIsFocused_DEPRECATED(uint8 bAllow);
@@ -300,7 +300,7 @@ public:
 	void AddFloat(float FL);
 	void AddInt32(int32 integer);
 	void AddObject(class UObject* Object);
-	void AddString(const class FString& str);
+	void AddString(const class FString& Str);
 	void AddStructArg(const class UStructProperty* Arg);
 
 public:
@@ -416,11 +416,11 @@ public:
 };
 
 // Class CoherentUIGTPlugin.CoherentUIGTSystem
-// 0x0040 (0x0400 - 0x03C0)
+// 0x0040 (0x03F0 - 0x03B0)
 class ACoherentUIGTSystem final : public AActor
 {
 public:
-	uint8                                         Pad_3C0[0x40];                                     // 0x03C0(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3B0[0x40];                                     // 0x03B0(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

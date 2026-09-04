@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UnrealArchExt_classes.hpp"
 
 
@@ -30,6 +30,7 @@ public:
 
 public:
 	void ExecuteUbergraph_BP_BreatheBarWidgetADS(int32 EntryPoint);
+	void Destruct();
 	void OnChangeBreatheRatio();
 	void Construct();
 	void PlayOutOfBreath();

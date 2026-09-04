@@ -17,311 +17,6 @@
 namespace SDK
 {
 
-// Function UnrealArchExt.FrontendHUD.GetLogicManager
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int32                                   LogicManagerIndex                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class ULogicManagerBase*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class ULogicManagerBase* UFrontendHUD::GetLogicManager(int32 LogicManagerIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("FrontendHUD", "GetLogicManager");
-
-	Params::FrontendHUD_GetLogicManager Parms{};
-
-	Parms.LogicManagerIndex = LogicManagerIndex;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function UnrealArchExt.FrontendHUD.GetLogicManagerByName
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             LogicManagerTagName                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class ULogicManagerBase*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class ULogicManagerBase* UFrontendHUD::GetLogicManagerByName(class FName LogicManagerTagName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("FrontendHUD", "GetLogicManagerByName");
-
-	Params::FrontendHUD_GetLogicManagerByName Parms{};
-
-	Parms.LogicManagerTagName = LogicManagerTagName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function UnrealArchExt.FrontendHUD.OnGameViewportClientCreated
-// (Final, Native, Protected)
-
-void UFrontendHUD::OnGameViewportClientCreated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("FrontendHUD", "OnGameViewportClientCreated");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function UnrealArchExt.FrontendHUD.OnPostLoadMapWithWorld
-// (Native, Protected)
-// Parameters:
-// class UWorld*                           World                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFrontendHUD::OnPostLoadMapWithWorld(class UWorld* World)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("FrontendHUD", "OnPostLoadMapWithWorld");
-
-	Params::FrontendHUD_OnPostLoadMapWithWorld Parms{};
-
-	Parms.World = World;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function UnrealArchExt.FrontendHUD.OnPreLoadMap
-// (Native, Protected)
-// Parameters:
-// const class FString&                    MapName                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFrontendHUD::OnPreLoadMap(const class FString& MapName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("FrontendHUD", "OnPreLoadMap");
-
-	Params::FrontendHUD_OnPreLoadMap Parms{};
-
-	Parms.MapName = std::move(MapName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function UnrealArchExt.FrontendHUD.SwitchGameStatus
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             GameStatus                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Options                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFrontendHUD::SwitchGameStatus(class FName GameStatus, const class FString& Options)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("FrontendHUD", "SwitchGameStatus");
-
-	Params::FrontendHUD_SwitchGameStatus Parms{};
-
-	Parms.GameStatus = GameStatus;
-	Parms.Options = std::move(Options);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function UnrealArchExt.FrontendHUD.GetGameMode
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class AGameMode*                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class AGameMode* UFrontendHUD::GetGameMode() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("FrontendHUD", "GetGameMode");
-
-	Params::FrontendHUD_GetGameMode Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function UnrealArchExt.FrontendHUD.GetGameViewportClient
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UGameViewportClient*              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UGameViewportClient* UFrontendHUD::GetGameViewportClient() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("FrontendHUD", "GetGameViewportClient");
-
-	Params::FrontendHUD_GetGameViewportClient Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function UnrealArchExt.FrontendHUD.GetPlayerController
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class APlayerController*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class APlayerController* UFrontendHUD::GetPlayerController() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("FrontendHUD", "GetPlayerController");
-
-	Params::FrontendHUD_GetPlayerController Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function UnrealArchExt.FrontendHUD.GetUtils
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UFrontendUtils*                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UFrontendUtils* UFrontendHUD::GetUtils() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("FrontendHUD", "GetUtils");
-
-	Params::FrontendHUD_GetUtils Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function UnrealArchExt.FrontendHUD.GetWorld
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UWorld*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UWorld* UFrontendHUD::GetWorld() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("FrontendHUD", "GetWorld");
-
-	Params::FrontendHUD_GetWorld Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function UnrealArchExt.BackendHUD.GetFrontendHUD
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32                                   FrontendHUDIndex                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UFrontendHUD*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UFrontendHUD* UBackendHUD::GetFrontendHUD(int32 FrontendHUDIndex) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BackendHUD", "GetFrontendHUD");
-
-	Params::BackendHUD_GetFrontendHUD Parms{};
-
-	Parms.FrontendHUDIndex = FrontendHUDIndex;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function UnrealArchExt.UAEUserWidget.FindChild
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -858,6 +553,283 @@ void UUAEWidgetContainer::RemoveWidgetInternal(class UUAEUserWidget* Widget)
 }
 
 
+// Function UnrealArchExt.FrontendHUD.GetLogicManager
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   LogicManagerIndex                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class ULogicManagerBase*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class ULogicManagerBase* UFrontendHUD::GetLogicManager(int32 LogicManagerIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("FrontendHUD", "GetLogicManager");
+
+	Params::FrontendHUD_GetLogicManager Parms{};
+
+	Parms.LogicManagerIndex = LogicManagerIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function UnrealArchExt.FrontendHUD.GetLogicManagerByName
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             LogicManagerTagName                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class ULogicManagerBase*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class ULogicManagerBase* UFrontendHUD::GetLogicManagerByName(class FName LogicManagerTagName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("FrontendHUD", "GetLogicManagerByName");
+
+	Params::FrontendHUD_GetLogicManagerByName Parms{};
+
+	Parms.LogicManagerTagName = LogicManagerTagName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function UnrealArchExt.FrontendHUD.OnGameViewportClientCreated
+// (Final, Native, Protected)
+
+void UFrontendHUD::OnGameViewportClientCreated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("FrontendHUD", "OnGameViewportClientCreated");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function UnrealArchExt.FrontendHUD.OnPostLoadMapWithWorld
+// (Native, Protected)
+// Parameters:
+// class UWorld*                           World                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UFrontendHUD::OnPostLoadMapWithWorld(class UWorld* World)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("FrontendHUD", "OnPostLoadMapWithWorld");
+
+	Params::FrontendHUD_OnPostLoadMapWithWorld Parms{};
+
+	Parms.World = World;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function UnrealArchExt.FrontendHUD.OnPreLoadMap
+// (Native, Protected)
+// Parameters:
+// const class FString&                    MapName                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UFrontendHUD::OnPreLoadMap(const class FString& MapName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("FrontendHUD", "OnPreLoadMap");
+
+	Params::FrontendHUD_OnPreLoadMap Parms{};
+
+	Parms.MapName = std::move(MapName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function UnrealArchExt.FrontendHUD.SwitchGameStatus
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             GameStatus                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Options                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UFrontendHUD::SwitchGameStatus(class FName GameStatus, const class FString& Options)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("FrontendHUD", "SwitchGameStatus");
+
+	Params::FrontendHUD_SwitchGameStatus Parms{};
+
+	Parms.GameStatus = GameStatus;
+	Parms.Options = std::move(Options);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function UnrealArchExt.FrontendHUD.GetGameMode
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class AGameMode*                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class AGameMode* UFrontendHUD::GetGameMode() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("FrontendHUD", "GetGameMode");
+
+	Params::FrontendHUD_GetGameMode Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function UnrealArchExt.FrontendHUD.GetGameViewportClient
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UGameViewportClient*              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UGameViewportClient* UFrontendHUD::GetGameViewportClient() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("FrontendHUD", "GetGameViewportClient");
+
+	Params::FrontendHUD_GetGameViewportClient Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function UnrealArchExt.FrontendHUD.GetPlayerController
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class APlayerController*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class APlayerController* UFrontendHUD::GetPlayerController() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("FrontendHUD", "GetPlayerController");
+
+	Params::FrontendHUD_GetPlayerController Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function UnrealArchExt.FrontendHUD.GetUtils
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UFrontendUtils*                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UFrontendUtils* UFrontendHUD::GetUtils() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("FrontendHUD", "GetUtils");
+
+	Params::FrontendHUD_GetUtils Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function UnrealArchExt.FrontendHUD.GetWorld
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UWorld*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UWorld* UFrontendHUD::GetWorld() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("FrontendHUD", "GetWorld");
+
+	Params::FrontendHUD_GetWorld Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function UnrealArchExt.LogicManagerBase.DispatchUIMessage
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -1264,6 +1236,34 @@ uint8 UFrontendUtils::GlobalUIEventDispatcher_GetDelegateIsBound(const class FSt
 	Params::FrontendUtils_GlobalUIEventDispatcher_GetDelegateIsBound Parms{};
 
 	Parms.DelegateNum = std::move(DelegateNum);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function UnrealArchExt.BackendHUD.GetFrontendHUD
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   FrontendHUDIndex                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UFrontendHUD*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UFrontendHUD* UBackendHUD::GetFrontendHUD(int32 FrontendHUDIndex) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BackendHUD", "GetFrontendHUD");
+
+	Params::BackendHUD_GetFrontendHUD Parms{};
+
+	Parms.FrontendHUDIndex = FrontendHUDIndex;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

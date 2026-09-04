@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
 #include "Engine_classes.hpp"
 #include "BP_UIENUM_UIElemTypes_structs.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK

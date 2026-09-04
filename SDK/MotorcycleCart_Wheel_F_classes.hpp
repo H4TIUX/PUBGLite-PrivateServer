@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass MotorcycleCart_Wheel_F.MotorcycleCart_Wheel_F_C
-// 0x0000 (0x0128 - 0x0128)
+// 0x0000 (0x0140 - 0x0140)
 class UMotorcycleCart_Wheel_F_C final : public UMotorcycleCart_Wheel_C
 {
 public:

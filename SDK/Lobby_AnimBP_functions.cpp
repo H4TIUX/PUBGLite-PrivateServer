@@ -37,17 +37,23 @@ void ULobby_AnimBP_C::ExecuteUbergraph_Lobby_AnimBP(int32 EntryPoint)
 }
 
 
-// Function Lobby_AnimBP.Lobby_AnimBP_C.BlueprintInitializeAnimation
+// Function Lobby_AnimBP.Lobby_AnimBP_C.BlueprintUpdateAnimation
 // (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaTimeX                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULobby_AnimBP_C::BlueprintInitializeAnimation()
+void ULobby_AnimBP_C::BlueprintUpdateAnimation(float DeltaTimeX)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("Lobby_AnimBP_C", "BlueprintInitializeAnimation");
+		Func = GetClass()->GetFunction("Lobby_AnimBP_C", "BlueprintUpdateAnimation");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::Lobby_AnimBP_C_BlueprintUpdateAnimation Parms{};
+
+	Parms.DeltaTimeX = DeltaTimeX;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -122,26 +128,6 @@ void ULobby_AnimBP_C::SetAnimWeaponPose(EAnimWeaponType WeaponType_0)
 	Params::Lobby_AnimBP_C_SetAnimWeaponPose Parms{};
 
 	Parms.WeaponType_0 = WeaponType_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Lobby_AnimBP.Lobby_AnimBP_C.SetCharacter
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ALobbyCharacter*                  Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ULobby_AnimBP_C::SetCharacter(class ALobbyCharacter* Character)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("Lobby_AnimBP_C", "SetCharacter");
-
-	Params::Lobby_AnimBP_C_SetCharacter Parms{};
-
-	Parms.Character = Character;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

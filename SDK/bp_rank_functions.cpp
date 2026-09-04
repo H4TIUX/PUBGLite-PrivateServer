@@ -30,57 +30,29 @@ void Abp_rank_C::UserConstructionScript()
 }
 
 
-// Function bp_rank.bp_rank_C.EventRankScrollPos
+// Function bp_rank.bp_rank_C.EventRankShowRole
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_rank_C::EventRankScrollPos()
+void Abp_rank_C::EventRankShowRole()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_rank_C", "EventRankScrollPos");
+		Func = GetClass()->GetFunction("bp_rank_C", "EventRankShowRole");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_rank.bp_rank_C.EventRankScrollPos_NoFetch
+// Function bp_rank.bp_rank_C.EventRankShowRole_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_rank_C::EventRankScrollPos_NoFetch()
+void Abp_rank_C::EventRankShowRole_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_rank_C", "EventRankScrollPos_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_rank.bp_rank_C.EventTestRank
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_rank_C::EventTestRank()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_rank_C", "EventTestRank");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_rank.bp_rank_C.EventTestRank_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_rank_C::EventTestRank_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_rank_C", "EventTestRank_NoFetch");
+		Func = GetClass()->GetFunction("bp_rank_C", "EventRankShowRole_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,57 +86,57 @@ void Abp_rank_C::EventRankShowHelp_NoFetch()
 }
 
 
-// Function bp_rank.bp_rank_C.EventRankShowRole
+// Function bp_rank.bp_rank_C.EventTestRank
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_rank_C::EventRankShowRole()
+void Abp_rank_C::EventTestRank()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_rank_C", "EventRankShowRole");
+		Func = GetClass()->GetFunction("bp_rank_C", "EventTestRank");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_rank.bp_rank_C.EventRankShowRole_NoFetch
+// Function bp_rank.bp_rank_C.EventTestRank_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_rank_C::EventRankShowRole_NoFetch()
+void Abp_rank_C::EventTestRank_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_rank_C", "EventRankShowRole_NoFetch");
+		Func = GetClass()->GetFunction("bp_rank_C", "EventTestRank_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_rank.bp_rank_C.EventRankClose
+// Function bp_rank.bp_rank_C.EventRankScrollPos
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_rank_C::EventRankClose()
+void Abp_rank_C::EventRankScrollPos()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_rank_C", "EventRankClose");
+		Func = GetClass()->GetFunction("bp_rank_C", "EventRankScrollPos");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_rank.bp_rank_C.EventRankClose_NoFetch
+// Function bp_rank.bp_rank_C.EventRankScrollPos_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_rank_C::EventRankClose_NoFetch()
+void Abp_rank_C::EventRankScrollPos_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_rank_C", "EventRankClose_NoFetch");
+		Func = GetClass()->GetFunction("bp_rank_C", "EventRankScrollPos_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -193,6 +165,34 @@ void Abp_rank_C::EventQueryRank_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_rank_C", "EventQueryRank_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_rank.bp_rank_C.EventRankClose
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_rank_C::EventRankClose()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_rank_C", "EventRankClose");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_rank.bp_rank_C.EventRankClose_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_rank_C::EventRankClose_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_rank_C", "EventRankClose_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

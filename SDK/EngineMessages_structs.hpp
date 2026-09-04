@@ -16,6 +16,15 @@
 namespace SDK
 {
 
+// ScriptStruct EngineMessages.EngineServiceAuthGrant
+// 0x0020 (0x0020 - 0x0000)
+struct FEngineServiceAuthGrant final
+{
+public:
+	class FString                                 UserName;                                          // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UserToGrant;                                       // 0x0010(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
 // ScriptStruct EngineMessages.EngineServiceNotification
 // 0x0018 (0x0018 - 0x0000)
 struct FEngineServiceNotification final
@@ -49,15 +58,6 @@ struct FEngineServiceExecuteCommand final
 public:
 	class FString                                 Command;                                           // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 UserName;                                          // 0x0010(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct EngineMessages.EngineServiceAuthGrant
-// 0x0020 (0x0020 - 0x0000)
-struct FEngineServiceAuthGrant final
-{
-public:
-	class FString                                 UserName;                                          // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserToGrant;                                       // 0x0010(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 // ScriptStruct EngineMessages.EngineServicePing

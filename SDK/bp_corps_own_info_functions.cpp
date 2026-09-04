@@ -30,57 +30,85 @@ void Abp_corps_own_info_C::UserConstructionScript()
 }
 
 
-// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsOpClickManage
+// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsOpClickAddFriend
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_own_info_C::EventCorpsOpClickManage()
+void Abp_corps_own_info_C::EventCorpsOpClickAddFriend()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsOpClickManage");
+		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsOpClickAddFriend");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsOpClickManage_NoFetch
+// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsOpClickAddFriend_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_own_info_C::EventCorpsOpClickManage_NoFetch()
+void Abp_corps_own_info_C::EventCorpsOpClickAddFriend_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsOpClickManage_NoFetch");
+		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsOpClickAddFriend_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsManageShow
+// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsOwnExit
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_own_info_C::EventCorpsManageShow()
+void Abp_corps_own_info_C::EventCorpsOwnExit()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsManageShow");
+		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsOwnExit");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsManageShow_NoFetch
+// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsOwnExit_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_own_info_C::EventCorpsManageShow_NoFetch()
+void Abp_corps_own_info_C::EventCorpsOwnExit_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsManageShow_NoFetch");
+		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsOwnExit_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_own_info.bp_corps_own_info_C.EventGetPartMember
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_own_info_C::EventGetPartMember()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventGetPartMember");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_own_info.bp_corps_own_info_C.EventGetPartMember_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_own_info_C::EventGetPartMember_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventGetPartMember_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,57 +142,57 @@ void Abp_corps_own_info_C::EventCorpsOpClickChat_NoFetch()
 }
 
 
-// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsClickInfoHelp
+// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsApplyListShow
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_own_info_C::EventCorpsClickInfoHelp()
+void Abp_corps_own_info_C::EventCorpsApplyListShow()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsClickInfoHelp");
+		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsApplyListShow");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsClickInfoHelp_NoFetch
+// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsApplyListShow_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_own_info_C::EventCorpsClickInfoHelp_NoFetch()
+void Abp_corps_own_info_C::EventCorpsApplyListShow_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsClickInfoHelp_NoFetch");
+		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsApplyListShow_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsLogShow
+// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsShowMemberOp_Push
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_own_info_C::EventCorpsLogShow()
+void Abp_corps_own_info_C::EventCorpsShowMemberOp_Push()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsLogShow");
+		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsShowMemberOp_Push");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsLogShow_NoFetch
+// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsShowMemberOp_Push_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_own_info_C::EventCorpsLogShow_NoFetch()
+void Abp_corps_own_info_C::EventCorpsShowMemberOp_Push_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsLogShow_NoFetch");
+		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsShowMemberOp_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -226,29 +254,29 @@ void Abp_corps_own_info_C::EventCorpsOpClickRecruit_NoFetch()
 }
 
 
-// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsOpClickPlayerInfo
+// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsClickInfoHelp
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_own_info_C::EventCorpsOpClickPlayerInfo()
+void Abp_corps_own_info_C::EventCorpsClickInfoHelp()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsOpClickPlayerInfo");
+		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsClickInfoHelp");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsOpClickPlayerInfo_NoFetch
+// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsClickInfoHelp_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_own_info_C::EventCorpsOpClickPlayerInfo_NoFetch()
+void Abp_corps_own_info_C::EventCorpsClickInfoHelp_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsOpClickPlayerInfo_NoFetch");
+		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsClickInfoHelp_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -282,141 +310,113 @@ void Abp_corps_own_info_C::EventCorpsOpClickRemove_NoFetch()
 }
 
 
-// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsShowMemberOp_Push
+// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsOpClickManage
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_own_info_C::EventCorpsShowMemberOp_Push()
+void Abp_corps_own_info_C::EventCorpsOpClickManage()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsShowMemberOp_Push");
+		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsOpClickManage");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsShowMemberOp_Push_NoFetch
+// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsOpClickManage_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_own_info_C::EventCorpsShowMemberOp_Push_NoFetch()
+void Abp_corps_own_info_C::EventCorpsOpClickManage_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsShowMemberOp_Push_NoFetch");
+		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsOpClickManage_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsOpClickAddFriend
+// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsOpClickPlayerInfo
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_own_info_C::EventCorpsOpClickAddFriend()
+void Abp_corps_own_info_C::EventCorpsOpClickPlayerInfo()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsOpClickAddFriend");
+		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsOpClickPlayerInfo");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsOpClickAddFriend_NoFetch
+// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsOpClickPlayerInfo_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_own_info_C::EventCorpsOpClickAddFriend_NoFetch()
+void Abp_corps_own_info_C::EventCorpsOpClickPlayerInfo_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsOpClickAddFriend_NoFetch");
+		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsOpClickPlayerInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsOwnExit
+// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsManageShow
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_own_info_C::EventCorpsOwnExit()
+void Abp_corps_own_info_C::EventCorpsManageShow()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsOwnExit");
+		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsManageShow");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsOwnExit_NoFetch
+// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsManageShow_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_own_info_C::EventCorpsOwnExit_NoFetch()
+void Abp_corps_own_info_C::EventCorpsManageShow_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsOwnExit_NoFetch");
+		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsManageShow_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsApplyListShow
+// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsLogShow
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_own_info_C::EventCorpsApplyListShow()
+void Abp_corps_own_info_C::EventCorpsLogShow()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsApplyListShow");
+		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsLogShow");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsApplyListShow_NoFetch
+// Function bp_corps_own_info.bp_corps_own_info_C.EventCorpsLogShow_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_own_info_C::EventCorpsApplyListShow_NoFetch()
+void Abp_corps_own_info_C::EventCorpsLogShow_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsApplyListShow_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_own_info.bp_corps_own_info_C.EventGetPartMember
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_own_info_C::EventGetPartMember()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventGetPartMember");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_own_info.bp_corps_own_info_C.EventGetPartMember_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_own_info_C::EventGetPartMember_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventGetPartMember_NoFetch");
+		Func = GetClass()->GetFunction("bp_corps_own_info_C", "EventCorpsLogShow_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

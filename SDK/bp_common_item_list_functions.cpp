@@ -30,34 +30,6 @@ void Abp_common_item_list_C::UserConstructionScript()
 }
 
 
-// Function bp_common_item_list.bp_common_item_list_C.EventCommonItemListOnClickItem
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_common_item_list_C::EventCommonItemListOnClickItem()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_common_item_list_C", "EventCommonItemListOnClickItem");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_common_item_list.bp_common_item_list_C.EventCommonItemListOnClickItem_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_common_item_list_C::EventCommonItemListOnClickItem_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_common_item_list_C", "EventCommonItemListOnClickItem_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_common_item_list.bp_common_item_list_C.EventCommonItemListClickClose
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,6 +53,34 @@ void Abp_common_item_list_C::EventCommonItemListClickClose_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_common_item_list_C", "EventCommonItemListClickClose_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_common_item_list.bp_common_item_list_C.EventCommonItemListOnClickItem
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_common_item_list_C::EventCommonItemListOnClickItem()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_common_item_list_C", "EventCommonItemListOnClickItem");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_common_item_list.bp_common_item_list_C.EventCommonItemListOnClickItem_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_common_item_list_C::EventCommonItemListOnClickItem_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_common_item_list_C", "EventCommonItemListOnClickItem_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

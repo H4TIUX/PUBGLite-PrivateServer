@@ -30,57 +30,29 @@ void Abp_roleinfo_corps_C::UserConstructionScript()
 }
 
 
-// Function bp_roleinfo_corps.bp_roleinfo_corps_C.EventRoleInfoCorpsRefresh
+// Function bp_roleinfo_corps.bp_roleinfo_corps_C.EventRoleInfoCorpsShow
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_roleinfo_corps_C::EventRoleInfoCorpsRefresh()
+void Abp_roleinfo_corps_C::EventRoleInfoCorpsShow()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_corps_C", "EventRoleInfoCorpsRefresh");
+		Func = GetClass()->GetFunction("bp_roleinfo_corps_C", "EventRoleInfoCorpsShow");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_roleinfo_corps.bp_roleinfo_corps_C.EventRoleInfoCorpsRefresh_NoFetch
+// Function bp_roleinfo_corps.bp_roleinfo_corps_C.EventRoleInfoCorpsShow_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_roleinfo_corps_C::EventRoleInfoCorpsRefresh_NoFetch()
+void Abp_roleinfo_corps_C::EventRoleInfoCorpsShow_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_corps_C", "EventRoleInfoCorpsRefresh_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo_corps.bp_roleinfo_corps_C.EventRoleInfoCorpsApplyJoinCorps
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_corps_C::EventRoleInfoCorpsApplyJoinCorps()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_corps_C", "EventRoleInfoCorpsApplyJoinCorps");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo_corps.bp_roleinfo_corps_C.EventRoleInfoCorpsApplyJoinCorps_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_corps_C::EventRoleInfoCorpsApplyJoinCorps_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_corps_C", "EventRoleInfoCorpsApplyJoinCorps_NoFetch");
+		Func = GetClass()->GetFunction("bp_roleinfo_corps_C", "EventRoleInfoCorpsShow_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,29 +86,29 @@ void Abp_roleinfo_corps_C::EventRoleInfoCorpsClose_NoFetch()
 }
 
 
-// Function bp_roleinfo_corps.bp_roleinfo_corps_C.EventRoleInfoCorpsShow
+// Function bp_roleinfo_corps.bp_roleinfo_corps_C.EventRoleInfoCorpsRefresh
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_roleinfo_corps_C::EventRoleInfoCorpsShow()
+void Abp_roleinfo_corps_C::EventRoleInfoCorpsRefresh()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_corps_C", "EventRoleInfoCorpsShow");
+		Func = GetClass()->GetFunction("bp_roleinfo_corps_C", "EventRoleInfoCorpsRefresh");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_roleinfo_corps.bp_roleinfo_corps_C.EventRoleInfoCorpsShow_NoFetch
+// Function bp_roleinfo_corps.bp_roleinfo_corps_C.EventRoleInfoCorpsRefresh_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_roleinfo_corps_C::EventRoleInfoCorpsShow_NoFetch()
+void Abp_roleinfo_corps_C::EventRoleInfoCorpsRefresh_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_corps_C", "EventRoleInfoCorpsShow_NoFetch");
+		Func = GetClass()->GetFunction("bp_roleinfo_corps_C", "EventRoleInfoCorpsRefresh_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -165,6 +137,34 @@ void Abp_roleinfo_corps_C::EventRoleInfoCorpsReport_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_roleinfo_corps_C", "EventRoleInfoCorpsReport_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo_corps.bp_roleinfo_corps_C.EventRoleInfoCorpsApplyJoinCorps
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_corps_C::EventRoleInfoCorpsApplyJoinCorps()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_corps_C", "EventRoleInfoCorpsApplyJoinCorps");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo_corps.bp_roleinfo_corps_C.EventRoleInfoCorpsApplyJoinCorps_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_corps_C::EventRoleInfoCorpsApplyJoinCorps_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_corps_C", "EventRoleInfoCorpsApplyJoinCorps_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -161,7 +161,7 @@ struct BP_GrenadePredictLine_C_SetSplineMeshMatParams final
 {
 public:
 	TArray<struct FVector>                        PredictTailPoints;                                 // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	struct FLinearColor                           CallFunc_MakeColor_ReturnValue;                    // 0x0010(0x0010)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_GetPredictLineColor_ReturnValue;          // 0x0010(0x0010)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_LastIndex_ReturnValue;              // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue;     // 0x0024(0x0010)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue2;    // 0x0034(0x0010)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)

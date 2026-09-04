@@ -16,62 +16,6 @@
 namespace SDK::Params
 {
 
-// Function Basic.AttrModifyComponent.DisableAllAttrModifier
-// 0x0001 (0x0001 - 0x0000)
-struct AttrModifyComponent_DisableAllAttrModifier final
-{
-public:
-	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Basic.AttrModifyComponent.DisableAttrModifier
-// 0x0018 (0x0018 - 0x0000)
-struct AttrModifyComponent_DisableAttrModifier final
-{
-public:
-	class FString                                 AttrModifyItemName;                                // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         ReturnValue : 1;                                   // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function Basic.AttrModifyComponent.DisableModifierToActor
-// 0x0010 (0x0010 - 0x0000)
-struct AttrModifyComponent_DisableModifierToActor final
-{
-public:
-	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         ReturnValue : 1;                                   // 0x0008(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function Basic.AttrModifyComponent.EnableAllAttrModifier
-// 0x0001 (0x0001 - 0x0000)
-struct AttrModifyComponent_EnableAllAttrModifier final
-{
-public:
-	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Basic.AttrModifyComponent.EnableAttrModifier
-// 0x0018 (0x0018 - 0x0000)
-struct AttrModifyComponent_EnableAttrModifier final
-{
-public:
-	class FString                                 AttrModifyItemName;                                // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         ReturnValue : 1;                                   // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function Basic.AttrModifyComponent.RegisterModifyAbleAttr
-// 0x0018 (0x0018 - 0x0000)
-struct AttrModifyComponent_RegisterModifyAbleAttr final
-{
-public:
-	TArray<struct FAttrRegisterItem>              AttrRegists;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	uint8                                         ReturnValue : 1;                                   // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
 // Function Basic.ItemHandleBase.AddAssociation
 // 0x0030 (0x0030 - 0x0000)
 struct ItemHandleBase_AddAssociation final
@@ -150,52 +94,123 @@ public:
 	struct FItemDefineID                          ReturnValue;                                       // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function Basic.UAEGameInstance.GetDeviceLevel
-// 0x0004 (0x0004 - 0x0000)
-struct UAEGameInstance_GetDeviceLevel final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Basic.UAEGameInstance.GetWeatherID
-// 0x0004 (0x0004 - 0x0000)
-struct UAEGameInstance_GetWeatherID final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Basic.UAEGameInstance.GetAssociatedFrontendHUD
+// Function Basic.BPClassManager.Get
 // 0x0008 (0x0008 - 0x0000)
-struct UAEGameInstance_GetAssociatedFrontendHUD final
+struct BPClassManager_Get final
 {
 public:
-	class UFrontendHUD*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UBPClassManager*                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function Basic.UAEGameInstance.GetLocalPlayerNetId
+// Function Basic.BPClassManager.GetBPClassOverride
 // 0x0010 (0x0010 - 0x0000)
-struct UAEGameInstance_GetLocalPlayerNetId final
+struct BPClassManager_GetBPClassOverride final
 {
 public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UClass*                                 InNativeClass;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UClass*                                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function Basic.AttrModifyInterface.GetAttrModifyComponent
+// Function Basic.BPClassManager.GetBPClassOverrideByName
+// 0x0018 (0x0018 - 0x0000)
+struct BPClassManager_GetBPClassOverrideByName final
+{
+public:
+	class FString                                 ClassTagName;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UClass*                                 ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Basic.BPClassManager.GetUClass
+// 0x0010 (0x0010 - 0x0000)
+struct BPClassManager_GetUClass final
+{
+public:
+	int32                                         KeyIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Basic.UAELoadedClassManager.Get
 // 0x0008 (0x0008 - 0x0000)
-struct AttrModifyInterface_GetAttrModifyComponent final
+struct UAELoadedClassManager_Get final
 {
 public:
-	class UAttrModifyComponent*                   ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUAELoadedClassManager*                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function Basic.AttrModifyInterface.GetRelevantActors
-// 0x0010 (0x0010 - 0x0000)
-struct AttrModifyInterface_GetRelevantActors final
+// Function Basic.UAELoadedClassManager.CreateAndAddBPTable
+// 0x0018 (0x0018 - 0x0000)
+struct UAELoadedClassManager_CreateAndAddBPTable final
 {
 public:
-	TArray<class AActor*>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	class FString                                 BPTableName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UBPTable*                               ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Basic.UAELoadedClassManager.GetClass
+// 0x0020 (0x0020 - 0x0000)
+struct UAELoadedClassManager_GetClass final
+{
+public:
+	class FString                                 BPTableName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ID;                                                // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Basic.UAELoadedClassManager.GetMeshPath
+// 0x0028 (0x0028 - 0x0000)
+struct UAELoadedClassManager_GetMeshPath final
+{
+public:
+	class FString                                 BPTableName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ID;                                                // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Basic.UAELoadedClassManager.GetParentID
+// 0x0028 (0x0028 - 0x0000)
+struct UAELoadedClassManager_GetParentID final
+{
+public:
+	class FString                                 BPTableName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ID;                                                // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Basic.UAELoadedClassManager.GetPath
+// 0x0028 (0x0028 - 0x0000)
+struct UAELoadedClassManager_GetPath final
+{
+public:
+	class FString                                 BPTableName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ID;                                                // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Basic.UAELoadedClassManager.GetSkinPath
+// 0x0028 (0x0028 - 0x0000)
+struct UAELoadedClassManager_GetSkinPath final
+{
+public:
+	class FString                                 BPTableName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ID;                                                // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Basic.UAELoadedClassManager.GetWrapperPath
+// 0x0028 (0x0028 - 0x0000)
+struct UAELoadedClassManager_GetWrapperPath final
+{
+public:
+	class FString                                 BPTableName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ID;                                                // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 // Function Basic.BattleItemHandleBase.GetWeaponSlotNameGun1
@@ -266,11 +281,11 @@ public:
 };
 
 // Function Basic.BattleItemHandleBase.ExtractItemData
-// 0x00A0 (0x00A0 - 0x0000)
+// 0x0098 (0x0098 - 0x0000)
 struct BattleItemHandleBase_ExtractItemData final
 {
 public:
-	struct FBattleItemData                        ReturnValue;                                       // 0x0000(0x00A0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FBattleItemData                        ReturnValue;                                       // 0x0000(0x0098)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 
 // Function Basic.BattleItemHandleBase.GetWorldInternal
@@ -281,82 +296,20 @@ public:
 	class UWorld*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function Basic.BPClassManager.Get
+// Function Basic.AttrModifyInterface.GetAttrModifyComponent
 // 0x0008 (0x0008 - 0x0000)
-struct BPClassManager_Get final
+struct AttrModifyInterface_GetAttrModifyComponent final
 {
 public:
-	class UBPClassManager*                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAttrModifyComponent*                   ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function Basic.BPClassManager.GetBPClassOverride
+// Function Basic.AttrModifyInterface.GetRelevantActors
 // 0x0010 (0x0010 - 0x0000)
-struct BPClassManager_GetBPClassOverride final
+struct AttrModifyInterface_GetRelevantActors final
 {
 public:
-	class UClass*                                 InNativeClass;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UClass*                                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Basic.BPClassManager.GetBPClassOverrideByName
-// 0x0018 (0x0018 - 0x0000)
-struct BPClassManager_GetBPClassOverrideByName final
-{
-public:
-	class FString                                 ClassTagName;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UClass*                                 ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Basic.BPClassManager.GetUClass
-// 0x0010 (0x0010 - 0x0000)
-struct BPClassManager_GetUClass final
-{
-public:
-	int32                                         KeyIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Basic.ItemContainerInterface.GetItemDefineIDList
-// 0x0010 (0x0010 - 0x0000)
-struct ItemContainerInterface_GetItemDefineIDList final
-{
-public:
-	TArray<struct FItemDefineID>                  ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function Basic.ItemContainerInterface.GetItemHandleByDefineID
-// 0x0020 (0x0020 - 0x0000)
-struct ItemContainerInterface_GetItemHandleByDefineID final
-{
-public:
-	struct FItemDefineID                          DefineID;                                          // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UItemHandleBase*                        ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Basic.ItemContainerInterface.GetItemHandleListByDefineID
-// 0x0028 (0x0028 - 0x0000)
-struct ItemContainerInterface_GetItemHandleListByDefineID final
-{
-public:
-	struct FItemDefineID                          DefineID;                                          // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UItemHandleBase*>                ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function Basic.ItemContainerInterface.GetOwningObject
-// 0x0008 (0x0008 - 0x0000)
-struct ItemContainerInterface_GetOwningObject final
-{
-public:
-	class UObject*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Basic.STBaseBuff.GetBuffPassPercentage
-// 0x0004 (0x0004 - 0x0000)
-struct STBaseBuff_GetBuffPassPercentage final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class AActor*>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 
 // Function Basic.STBaseBuffCarrierInterface.AddBuff
@@ -439,6 +392,104 @@ struct STBaseBuffCarrierInterface_SyncInvincibleData final
 {
 public:
 	float                                         TotalTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Basic.AttrModifyComponent.DisableAllAttrModifier
+// 0x0001 (0x0001 - 0x0000)
+struct AttrModifyComponent_DisableAllAttrModifier final
+{
+public:
+	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Basic.AttrModifyComponent.DisableAttrModifier
+// 0x0018 (0x0018 - 0x0000)
+struct AttrModifyComponent_DisableAttrModifier final
+{
+public:
+	class FString                                 AttrModifyItemName;                                // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         ReturnValue : 1;                                   // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Basic.AttrModifyComponent.DisableModifierToActor
+// 0x0010 (0x0010 - 0x0000)
+struct AttrModifyComponent_DisableModifierToActor final
+{
+public:
+	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         ReturnValue : 1;                                   // 0x0008(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Basic.AttrModifyComponent.EnableAllAttrModifier
+// 0x0001 (0x0001 - 0x0000)
+struct AttrModifyComponent_EnableAllAttrModifier final
+{
+public:
+	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Basic.AttrModifyComponent.EnableAttrModifier
+// 0x0018 (0x0018 - 0x0000)
+struct AttrModifyComponent_EnableAttrModifier final
+{
+public:
+	class FString                                 AttrModifyItemName;                                // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         ReturnValue : 1;                                   // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Basic.AttrModifyComponent.RegisterModifyAbleAttr
+// 0x0018 (0x0018 - 0x0000)
+struct AttrModifyComponent_RegisterModifyAbleAttr final
+{
+public:
+	TArray<struct FAttrRegisterItem>              AttrRegists;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	uint8                                         ReturnValue : 1;                                   // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Basic.STBaseBuff.GetBuffPassPercentage
+// 0x0004 (0x0004 - 0x0000)
+struct STBaseBuff_GetBuffPassPercentage final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Basic.ItemContainerInterface.GetItemDefineIDList
+// 0x0010 (0x0010 - 0x0000)
+struct ItemContainerInterface_GetItemDefineIDList final
+{
+public:
+	TArray<struct FItemDefineID>                  ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+
+// Function Basic.ItemContainerInterface.GetItemHandleByDefineID
+// 0x0020 (0x0020 - 0x0000)
+struct ItemContainerInterface_GetItemHandleByDefineID final
+{
+public:
+	struct FItemDefineID                          DefineID;                                          // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UItemHandleBase*                        ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Basic.ItemContainerInterface.GetItemHandleListByDefineID
+// 0x0028 (0x0028 - 0x0000)
+struct ItemContainerInterface_GetItemHandleListByDefineID final
+{
+public:
+	struct FItemDefineID                          DefineID;                                          // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UItemHandleBase*>                ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+
+// Function Basic.ItemContainerInterface.GetOwningObject
+// 0x0008 (0x0008 - 0x0000)
+struct ItemContainerInterface_GetOwningObject final
+{
+public:
+	class UObject*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 // Function Basic.STBaseBuffSystemComponent.AddBuff
@@ -648,6 +699,38 @@ public:
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 
+// Function Basic.UAEGameInstance.GetDeviceLevel
+// 0x0004 (0x0004 - 0x0000)
+struct UAEGameInstance_GetDeviceLevel final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Basic.UAEGameInstance.GetWeatherID
+// 0x0004 (0x0004 - 0x0000)
+struct UAEGameInstance_GetWeatherID final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Basic.UAEGameInstance.GetAssociatedFrontendHUD
+// 0x0008 (0x0008 - 0x0000)
+struct UAEGameInstance_GetAssociatedFrontendHUD final
+{
+public:
+	class UFrontendHUD*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Basic.UAEGameInstance.GetLocalPlayerNetId
+// 0x0010 (0x0010 - 0x0000)
+struct UAEGameInstance_GetLocalPlayerNetId final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
 // Function Basic.BPTable.GetClass
 // 0x0010 (0x0010 - 0x0000)
 struct BPTable_GetClass final
@@ -706,89 +789,6 @@ public:
 	int32                                         ID;                                                // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Basic.UAELoadedClassManager.Get
-// 0x0008 (0x0008 - 0x0000)
-struct UAELoadedClassManager_Get final
-{
-public:
-	class UUAELoadedClassManager*                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Basic.UAELoadedClassManager.CreateAndAddBPTable
-// 0x0018 (0x0018 - 0x0000)
-struct UAELoadedClassManager_CreateAndAddBPTable final
-{
-public:
-	class FString                                 BPTableName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UBPTable*                               ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Basic.UAELoadedClassManager.GetClass
-// 0x0020 (0x0020 - 0x0000)
-struct UAELoadedClassManager_GetClass final
-{
-public:
-	class FString                                 BPTableName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ID;                                                // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Basic.UAELoadedClassManager.GetMeshPath
-// 0x0028 (0x0028 - 0x0000)
-struct UAELoadedClassManager_GetMeshPath final
-{
-public:
-	class FString                                 BPTableName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ID;                                                // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Basic.UAELoadedClassManager.GetParentID
-// 0x0028 (0x0028 - 0x0000)
-struct UAELoadedClassManager_GetParentID final
-{
-public:
-	class FString                                 BPTableName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ID;                                                // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Basic.UAELoadedClassManager.GetPath
-// 0x0028 (0x0028 - 0x0000)
-struct UAELoadedClassManager_GetPath final
-{
-public:
-	class FString                                 BPTableName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ID;                                                // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Basic.UAELoadedClassManager.GetSkinPath
-// 0x0028 (0x0028 - 0x0000)
-struct UAELoadedClassManager_GetSkinPath final
-{
-public:
-	class FString                                 BPTableName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ID;                                                // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Basic.UAELoadedClassManager.GetWrapperPath
-// 0x0028 (0x0028 - 0x0000)
-struct UAELoadedClassManager_GetWrapperPath final
-{
-public:
-	class FString                                 BPTableName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ID;                                                // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 // Function Basic.UAETableManager.GetTablePtr

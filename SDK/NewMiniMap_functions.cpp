@@ -37,6 +37,34 @@ void UNewMiniMap_C::ExecuteUbergraph_NewMiniMap(int32 EntryPoint)
 }
 
 
+// Function NewMiniMap.NewMiniMap_C.GameUserSettingChanged
+// (BlueprintCallable, BlueprintEvent)
+
+void UNewMiniMap_C::GameUserSettingChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("NewMiniMap_C", "GameUserSettingChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function NewMiniMap.NewMiniMap_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UNewMiniMap_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("NewMiniMap_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function NewMiniMap.NewMiniMap_C.HideSelfDeadIcon
 // (BlueprintCallable, BlueprintEvent)
 
@@ -1188,6 +1216,34 @@ void UNewMiniMap_C::SetMinimapTexture(class AMiniMapStandardPoint* MapInfoObj)
 	Parms.MapInfoObj = MapInfoObj;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function NewMiniMap.NewMiniMap_C.SetBlueZoneColor
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UNewMiniMap_C::SetBlueZoneColor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("NewMiniMap_C", "SetBlueZoneColor");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function NewMiniMap.NewMiniMap_C.SetRedZoneColor
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UNewMiniMap_C::SetRedZoneColor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("NewMiniMap_C", "SetRedZoneColor");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

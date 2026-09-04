@@ -30,6 +30,34 @@ void Abp_share_history_ranking_C::UserConstructionScript()
 }
 
 
+// Function bp_share_history_ranking.bp_share_history_ranking_C.EventSetInfo_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_history_ranking_C::EventSetInfo_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_history_ranking_C", "EventSetInfo_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_history_ranking.bp_share_history_ranking_C.EventSetInfo_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_history_ranking_C::EventSetInfo_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_history_ranking_C", "EventSetInfo_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_share_history_ranking.bp_share_history_ranking_C.EventShareHistoryRankingHide
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,34 +109,6 @@ void Abp_share_history_ranking_C::EventFetchInfo_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_share_history_ranking_C", "EventFetchInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_history_ranking.bp_share_history_ranking_C.EventSetInfo_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_history_ranking_C::EventSetInfo_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_history_ranking_C", "EventSetInfo_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_history_ranking.bp_share_history_ranking_C.EventSetInfo_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_history_ranking_C::EventSetInfo_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_history_ranking_C", "EventSetInfo_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "UMG_structs.hpp"
-#include "UIAdaptationStructure_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "UnrealArchExt_classes.hpp"
 #include "EOperation_structs.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
+#include "UIAdaptationStructure_structs.hpp"
 
 
 namespace SDK
@@ -70,19 +70,37 @@ public:
 
 public:
 	void ExecuteUbergraph_MainControlPanelTochButton(int32 EntryPoint);
+	void OnFPPModeChange();
+	void OnSwitchOperationByPlayerControllerState();
+	void OnReadyToRetriveBeginnerFinishedGuide();
+	void OnBindOrUnBindJoyStickSprint();
+	void OnUpdateStandCrouchAndSprint();
+	void OnSwitchCameraSatrtHandle();
+	void OnShowHideKeyHintWidget();
+	void OnUpdatePickUpList();
+	void OnNotifyPickup();
+	void OnWeaponEquipAttachment();
+	void OnShowShooterUI();
+	void OnSetAutoNavigateTranslation();
+	void OnMakeFireModeEffect();
+	void OnScopeChanged();
+	void OnSwitchCameraModeScope_Aim();
+	void OnHightLightAimBtn();
+	void OnNormalAimBtn();
+	void Destruct();
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void GameStartCountDown(float CountDownTime);
 	void ApplyCustomUIPosition();
+	void SetSettingControlUI();
 	void UpdateTeamMemberUI();
 	void ResetUIStateAfterRespawn();
 	void ChangeFireMode(int32 IntValue);
 	void OnEnterSpectatinStatus();
 	void SetCustomizeUIInfo(class UBP_SAVEGAME_UIElemLayout_C* SaveGame, int32 LayoutIndex);
-	void Construct();
 	void OnRankChange(int32 Kills, int32 Rank);
-	void SetSettingControlUI();
-	void ReceivedInitWidget();
 	void OnHideUIAfterPlayerDeadDelegate();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void ReceivedInitWidget();
+	void Construct();
 	void ShowAirborneUI();
 	void ShowFreeFallUI();
 	void ShowShooterUI();
@@ -135,8 +153,8 @@ public:
 	void UIMsg_UpdatePickUpList();
 	void UIMsg_NotifyPickup();
 	void HideSelf();
-	void UIMsg_SetAutoNavigateTranslation();
-	void UIMsg_MakeFireModeEffect();
+	void SetAutoNavigateTranslation();
+	void MakeFireModeEffect();
 	void UIMsg_UpdateStandCrouchAndSprint();
 	void UIMsg_CloseChatHistoryList();
 	void UIMsg_AddFriendChat();

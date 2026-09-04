@@ -30,6 +30,34 @@ void Abp_roleinfo_tag_C::UserConstructionScript()
 }
 
 
+// Function bp_roleinfo_tag.bp_roleinfo_tag_C.EventRoleInfoTagSelect
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_tag_C::EventRoleInfoTagSelect()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_tag_C", "EventRoleInfoTagSelect");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo_tag.bp_roleinfo_tag_C.EventRoleInfoTagSelect_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_tag_C::EventRoleInfoTagSelect_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_tag_C", "EventRoleInfoTagSelect_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_roleinfo_tag.bp_roleinfo_tag_C.EventRoleInfoTagUIChg
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,34 +109,6 @@ void Abp_roleinfo_tag_C::EventRoleInfoTagClose_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_roleinfo_tag_C", "EventRoleInfoTagClose_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo_tag.bp_roleinfo_tag_C.EventRoleInfoTagSelect
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_tag_C::EventRoleInfoTagSelect()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_tag_C", "EventRoleInfoTagSelect");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo_tag.bp_roleinfo_tag_C.EventRoleInfoTagSelect_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_tag_C::EventRoleInfoTagSelect_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_tag_C", "EventRoleInfoTagSelect_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

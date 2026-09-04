@@ -30,29 +30,29 @@ void Abp_recruit_C::UserConstructionScript()
 }
 
 
-// Function bp_recruit.bp_recruit_C.EventRecruit_Push
+// Function bp_recruit.bp_recruit_C.EventHideUI
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_recruit_C::EventRecruit_Push()
+void Abp_recruit_C::EventHideUI()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_recruit_C", "EventRecruit_Push");
+		Func = GetClass()->GetFunction("bp_recruit_C", "EventHideUI");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_recruit.bp_recruit_C.EventRecruit_Push_NoFetch
+// Function bp_recruit.bp_recruit_C.EventHideUI_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_recruit_C::EventRecruit_Push_NoFetch()
+void Abp_recruit_C::EventHideUI_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_recruit_C", "EventRecruit_Push_NoFetch");
+		Func = GetClass()->GetFunction("bp_recruit_C", "EventHideUI_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,6 +86,34 @@ void Abp_recruit_C::EventFetchInfo_NoFetch()
 }
 
 
+// Function bp_recruit.bp_recruit_C.EventRecruit_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_recruit_C::EventRecruit_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_recruit_C", "EventRecruit_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_recruit.bp_recruit_C.EventRecruit_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_recruit_C::EventRecruit_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_recruit_C", "EventRecruit_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_recruit.bp_recruit_C.EventSendMessage
 // (BlueprintCallable, BlueprintEvent)
 
@@ -109,34 +137,6 @@ void Abp_recruit_C::EventSendMessage_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_recruit_C", "EventSendMessage_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_recruit.bp_recruit_C.EventHideUI
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_recruit_C::EventHideUI()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_recruit_C", "EventHideUI");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_recruit.bp_recruit_C.EventHideUI_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_recruit_C::EventHideUI_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_recruit_C", "EventHideUI_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

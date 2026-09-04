@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "ClothingSystemRuntime_structs.hpp"
-#include "CoreUObject_classes.hpp"
 #include "ClothingSystemRuntimeInterface_classes.hpp"
+#include "CoreUObject_classes.hpp"
+#include "ClothingSystemRuntime_structs.hpp"
 
 
 namespace SDK
@@ -45,7 +45,7 @@ public:
 	class UPhysicsAsset*                          PhysicsAsset;                                      // 0x0048(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FClothConfig                           ClothConfig;                                       // 0x0050(0x00BC)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FClothLODData>                  LODData;                                           // 0x0110(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FClothLODData>                  LodData;                                           // 0x0110(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<int32>                                 LodMap;                                            // 0x0120(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<class FName>                           UsedBoneNames;                                     // 0x0130(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<int32>                                 UsedBoneIndices;                                   // 0x0140(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)

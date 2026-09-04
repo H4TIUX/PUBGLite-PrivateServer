@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UnrealArchExt_classes.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK
@@ -58,15 +58,18 @@ public:
 
 public:
 	void ExecuteUbergraph_ParachutingControl(int32 EntryPoint);
-	void BndEvt__Button_LeavePlane_K2Node_ComponentBoundEvent_169_OnButtonClickedEvent__DelegateSignature();
+	void OnParachutingLeaderChange();
+	void Destruct();
+	void Construct();
 	void BndEvt__Out_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void BndEvt__Button_Parachute_K2Node_ComponentBoundEvent_23_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__IN_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
 	void BndEvt__ParachutingButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__Button_OutOfFollow_K2Node_ComponentBoundEvent_37_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__Button_LeavePlane_K2Node_ComponentBoundEvent_169_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__Button_Agree_K2Node_ComponentBoundEvent_42_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__Button_Refuse_K2Node_ComponentBoundEvent_21_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__Button_OutOfFollow_K2Node_ComponentBoundEvent_37_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__Button_Parachute_K2Node_ComponentBoundEvent_23_OnButtonClickedEvent__DelegateSignature();
 	void Reconnect_ResetUIByPlayerControllerState();
 	void RefreshParachuteFollowState();
 	void ReceiveFollowRequst();

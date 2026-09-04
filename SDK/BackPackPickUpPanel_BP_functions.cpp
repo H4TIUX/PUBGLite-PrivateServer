@@ -37,6 +37,20 @@ void UBackPackPickUpPanel_BP_C::ExecuteUbergraph_BackPackPickUpPanel_BP(int32 En
 }
 
 
+// Function BackPackPickUpPanel_BP.BackPackPickUpPanel_BP_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UBackPackPickUpPanel_BP_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BackPackPickUpPanel_BP_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BackPackPickUpPanel_BP.BackPackPickUpPanel_BP_C.Tick
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -59,6 +73,20 @@ void UBackPackPickUpPanel_BP_C::Tick(const struct FGeometry& MyGeometry, float I
 }
 
 
+// Function BackPackPickUpPanel_BP.BackPackPickUpPanel_BP_C.OnCloseBackPack
+// (BlueprintCallable, BlueprintEvent)
+
+void UBackPackPickUpPanel_BP_C::OnCloseBackPack()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BackPackPickUpPanel_BP_C", "OnCloseBackPack");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BackPackPickUpPanel_BP.BackPackPickUpPanel_BP_C.ReceivedInitWidget
 // (Event, Public, BlueprintEvent)
 
@@ -73,15 +101,15 @@ void UBackPackPickUpPanel_BP_C::ReceivedInitWidget()
 }
 
 
-// Function BackPackPickUpPanel_BP.BackPackPickUpPanel_BP_C.OnCloseBackPack
-// (BlueprintCallable, BlueprintEvent)
+// Function BackPackPickUpPanel_BP.BackPackPickUpPanel_BP_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UBackPackPickUpPanel_BP_C::OnCloseBackPack()
+void UBackPackPickUpPanel_BP_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BackPackPickUpPanel_BP_C", "OnCloseBackPack");
+		Func = GetClass()->GetFunction("BackPackPickUpPanel_BP_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -128,10 +156,10 @@ void UBackPackPickUpPanel_BP_C::GetWeaponAttachPosByResID(int32 resID, EWeaponAt
 // Function BackPackPickUpPanel_BP.BackPackPickUpPanel_BP_C.GetWeaponSupportAttachResID
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   WeaponID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   WeaponId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // TArray<int32>*                          attachID                                               (Parm, OutParm, ZeroConstructor)
 
-void UBackPackPickUpPanel_BP_C::GetWeaponSupportAttachResID(int32 WeaponID, TArray<int32>* attachID)
+void UBackPackPickUpPanel_BP_C::GetWeaponSupportAttachResID(int32 WeaponId, TArray<int32>* attachID)
 {
 	static class UFunction* Func = nullptr;
 
@@ -140,7 +168,7 @@ void UBackPackPickUpPanel_BP_C::GetWeaponSupportAttachResID(int32 WeaponID, TArr
 
 	Params::BackPackPickUpPanel_BP_C_GetWeaponSupportAttachResID Parms{};
 
-	Parms.WeaponID = WeaponID;
+	Parms.WeaponId = WeaponId;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -152,10 +180,10 @@ void UBackPackPickUpPanel_BP_C::GetWeaponSupportAttachResID(int32 WeaponID, TArr
 // Function BackPackPickUpPanel_BP.BackPackPickUpPanel_BP_C.GetWeaponSupportSocket
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   WeaponID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   WeaponId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // TArray<EWeaponAttachmentSocketType>*    socketList                                             (Parm, OutParm, ZeroConstructor)
 
-void UBackPackPickUpPanel_BP_C::GetWeaponSupportSocket(int32 WeaponID, TArray<EWeaponAttachmentSocketType>* socketList)
+void UBackPackPickUpPanel_BP_C::GetWeaponSupportSocket(int32 WeaponId, TArray<EWeaponAttachmentSocketType>* socketList)
 {
 	static class UFunction* Func = nullptr;
 
@@ -164,7 +192,7 @@ void UBackPackPickUpPanel_BP_C::GetWeaponSupportSocket(int32 WeaponID, TArray<EW
 
 	Params::BackPackPickUpPanel_BP_C_GetWeaponSupportSocket Parms{};
 
-	Parms.WeaponID = WeaponID;
+	Parms.WeaponId = WeaponId;
 
 	UObject::ProcessEvent(Func, &Parms);
 

@@ -134,10 +134,10 @@ void ABP_LitePCLobbyHUD_C::SpawnViewModeParachute(const class FString& Parachute
 // Function BP_LitePCLobbyHUD.BP_LitePCLobbyHUD_C.SpawnViewModeWeapon
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// const class FString&                    WeaponID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    WeaponId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // const class FString&                    SkinItemId_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void ABP_LitePCLobbyHUD_C::SpawnViewModeWeapon(const class FString& WeaponID, const class FString& SkinItemId_0)
+void ABP_LitePCLobbyHUD_C::SpawnViewModeWeapon(const class FString& WeaponId, const class FString& SkinItemId_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -146,7 +146,7 @@ void ABP_LitePCLobbyHUD_C::SpawnViewModeWeapon(const class FString& WeaponID, co
 
 	Params::BP_LitePCLobbyHUD_C_SpawnViewModeWeapon Parms{};
 
-	Parms.WeaponID = std::move(WeaponID);
+	Parms.WeaponId = std::move(WeaponId);
 	Parms.SkinItemId_0 = std::move(SkinItemId_0);
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -334,9 +334,9 @@ void ABP_LitePCLobbyHUD_C::CreateWidgetAndAddToContainer(class UClass* InputPin,
 // Function BP_LitePCLobbyHUD.BP_LitePCLobbyHUD_C.SpawnWeapon
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    WeaponID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    WeaponId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void ABP_LitePCLobbyHUD_C::SpawnWeapon(const class FString& WeaponID)
+void ABP_LitePCLobbyHUD_C::SpawnWeapon(const class FString& WeaponId)
 {
 	static class UFunction* Func = nullptr;
 
@@ -345,7 +345,7 @@ void ABP_LitePCLobbyHUD_C::SpawnWeapon(const class FString& WeaponID)
 
 	Params::BP_LitePCLobbyHUD_C_SpawnWeapon Parms{};
 
-	Parms.WeaponID = std::move(WeaponID);
+	Parms.WeaponId = std::move(WeaponId);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -577,6 +577,58 @@ void ABP_LitePCLobbyHUD_C::OnKey_LobbySystemMenu()
 		Func = GetClass()->GetFunction("BP_LitePCLobbyHUD_C", "OnKey_LobbySystemMenu");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_LitePCLobbyHUD.BP_LitePCLobbyHUD_C.FindAkEventName
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InActorID                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InVoiceID                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+
+class FString ABP_LitePCLobbyHUD_C::FindAkEventName(int32 InActorID, int32 InVoiceID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BP_LitePCLobbyHUD_C", "FindAkEventName");
+
+	Params::BP_LitePCLobbyHUD_C_FindAkEventName Parms{};
+
+	Parms.InActorID = InActorID;
+	Parms.InVoiceID = InVoiceID;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_LitePCLobbyHUD.BP_LitePCLobbyHUD_C.ChangeNameTagPosition
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   slotID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             CameraTag                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Translation                                            (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+uint8 ABP_LitePCLobbyHUD_C::ChangeNameTagPosition(int32 slotID, class FName CameraTag, const struct FVector& Translation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BP_LitePCLobbyHUD_C", "ChangeNameTagPosition");
+
+	Params::BP_LitePCLobbyHUD_C_ChangeNameTagPosition Parms{};
+
+	Parms.slotID = slotID;
+	Parms.CameraTag = CameraTag;
+	Parms.Translation = std::move(Translation);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 

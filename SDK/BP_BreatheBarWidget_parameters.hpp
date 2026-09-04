@@ -15,13 +15,18 @@ namespace SDK::Params
 {
 
 // Function BP_BreatheBarWidget.BP_BreatheBarWidget_C.ExecuteUbergraph_BP_BreatheBarWidget
-// 0x0010 (0x0010 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct BP_BreatheBarWidget_C_ExecuteUbergraph_BP_BreatheBarWidget final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidgetAnimation*                       K2Node_Event_Animation;                            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0008(0x0010)(ZeroConstructor, NoDestructor)
+	class UWidgetAnimation*                       K2Node_Event_Animation;                            // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USTExtraGameEvents*                     CallFunc_GetGameEvents_ReturnValue;                // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USTExtraGameEvents*                     CallFunc_GetGameEvents_ReturnValue2;               // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x0030(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsValid_ReturnValue2 : 1;                 // 0x0031(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 };
 
 // Function BP_BreatheBarWidget.BP_BreatheBarWidget_C.OnAnimationFinished

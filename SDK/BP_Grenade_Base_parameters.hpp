@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
-#include "ShadowTrackerExtra_structs.hpp"
 #include "Skill_structs.hpp"
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "ShadowTrackerExtra_structs.hpp"
 
 
 namespace SDK::Params

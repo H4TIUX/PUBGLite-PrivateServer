@@ -17,41 +17,42 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_recruit.bp_recruit_C
-// 0x0080 (0x0468 - 0x03E8)
+// 0x0088 (0x0460 - 0x03D8)
 class Abp_recruit_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	uint8                                         BP_WorldRecruit : 1;                               // 0x03F0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         BP_IsUIShow : 1;                                   // 0x03F1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         BP_CorpsRecruit : 1;                               // 0x03F2(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_3F3[0x5];                                      // 0x03F3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class FString                                 BP_ModelStr;                                       // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         BP_IsFinalFightMode : 1;                           // 0x03F0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_3F1[0x7];                                      // 0x03F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 BP_ModelPLayCountStr;                              // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 MySelfUID;                                         // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_ChatannelRoomID;                                // 0x0418(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         BP_HasJoinCorps : 1;                               // 0x041C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         BP_FrientRecruit : 1;                              // 0x041D(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         BP_ChannelRecruit : 1;                             // 0x041E(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_41F[0x1];                                      // 0x041F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_ModelStr;                                       // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         BP_WorldRecruit : 1;                               // 0x0408(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         BP_FrientRecruit : 1;                              // 0x0409(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_40A[0x2];                                      // 0x040A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BP_ChatannelRoomID;                                // 0x040C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         BP_CorpsRecruit : 1;                               // 0x0410(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_411[0x7];                                      // 0x0411(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_SendMessage;                                    // 0x0418(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         BP_ChannelRecruit : 1;                             // 0x0428(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         BP_IsUIShow : 1;                                   // 0x0429(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         IsFull : 1;                                        // 0x042A(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_42B[0x5];                                      // 0x042B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 BP_ChannelName;                                    // 0x0430(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	uint8                                         BP_IsFinalFightMode : 1;                           // 0x0440(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         BP_HasJoinCorps : 1;                               // 0x0440(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
 	uint8                                         Pad_441[0x7];                                      // 0x0441(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_SendMessage;                                    // 0x0448(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	uint8                                         IsFull : 1;                                        // 0x0458(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_459[0x7];                                      // 0x0459(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0460(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class FString                                 MySelfUID;                                         // 0x0448(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0458(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventRecruit_Push();
-	void EventRecruit_Push_NoFetch();
-	void EventFetchInfo();
-	void EventFetchInfo_NoFetch();
-	void EventSendMessage();
-	void EventSendMessage_NoFetch();
 	void EventHideUI();
 	void EventHideUI_NoFetch();
+	void EventFetchInfo();
+	void EventFetchInfo_NoFetch();
+	void EventRecruit_Push();
+	void EventRecruit_Push_NoFetch();
+	void EventSendMessage();
+	void EventSendMessage_NoFetch();
 
 public:
 	static class UClass* StaticClass()

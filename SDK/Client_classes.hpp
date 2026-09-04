@@ -10,40 +10,296 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
-#include "ScriptPlugin_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Slate_structs.hpp"
 #include "Client_structs.hpp"
+#include "ScriptPlugin_classes.hpp"
 #include "UnrealArchExt_classes.hpp"
-#include "SlateCore_structs.hpp"
 #include "UMG_classes.hpp"
+#include "Engine_classes.hpp"
+#include "SlateCore_structs.hpp"
+#include "Slate_structs.hpp"
 
 
 namespace SDK
 {
 
-// Class Client.TssManager
-// 0x0000 (0x0028 - 0x0028)
-class UTssManager final : public UObject
+// Class Client.HotUpdater
+// 0x0128 (0x0150 - 0x0028)
+class UHotUpdater final : public UObject
 {
 public:
-	int32 OnRecvData_LuaState();
-	int32 SendSkdData_LuaState();
+	uint8                                         Pad_28[0x128];                                     // 0x0028(0x0128)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnDownloadedOneFile(uint8 Successful, const class FString& FileURL, const TArray<uint8>& Data);
+	void OnGetVersionData(uint8 Successful, const class FString& FileURL, const TArray<uint8>& Data);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("TssManager")
+		STATIC_CLASS_IMPL("HotUpdater")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"TssManager")
+		STATIC_NAME_IMPL(L"HotUpdater")
 	}
-	static class UTssManager* GetDefaultObj()
+	static class UHotUpdater* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UTssManager>();
+		return GetDefaultObjImpl<UHotUpdater>();
+	}
+};
+
+// Class Client.PlatformAppraise
+// 0x0000 (0x0028 - 0x0028)
+class UPlatformAppraise final : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlatformAppraise")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlatformAppraise")
+	}
+	static class UPlatformAppraise* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlatformAppraise>();
+	}
+};
+
+// Class Client.GVoiceInterface
+// 0x00F8 (0x0120 - 0x0028)
+class UGVoiceInterface final : public UObject
+{
+public:
+	uint8                                         Pad_28[0xC];                                       // 0x0028(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bEnableWithRegionInLobby : 1;                      // 0x0034(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_35[0x13];                                      // 0x0035(0x0013)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameFrontendHUD*                       GameFrontendHUD;                                   // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_50[0xD0];                                      // 0x0050(0x00D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void CloseAllMicAndSpeaker();
+	void CloseAllMicphone(uint8 showTips);
+	void CloseAllSpeaker(uint8 showTips);
+	void CloseMic();
+	void CloseMicPtt();
+	void CloseSpeaker();
+	void DownloadRecordFile();
+	void ForbidTeammateVoiceById(int32 memberID, uint8 IsEnable);
+	void GetAuthKey();
+	EGVoiceServer GetRegionFromSessionID(const class FString& SessionID);
+	class FString GetTeammateUserIDByMemberID(int32 InMemberID);
+	int32 GetVadSensitive();
+	float GetVoiceLength();
+	void InitGVoiceComponent(const class FString& userId);
+	void JoinRangeRoom(const class FString& RangeRoom, const class FString& userId);
+	void JoinTeamRoom(const class FString& TeamRoom, const class FString& userId);
+	void OpenAllMicAndSpeaker();
+	int32 OpenAllMicphone(uint8 showTips);
+	void OpenAllSpeaker(uint8 showTips);
+	int32 OpenMic();
+	void OpenMicPtt();
+	int32 OpenSpeaker();
+	void OpenTeamMicAndSpeaker();
+	int32 OpenTeamMicphoneOnly(uint8 showTips);
+	void OpenTeamSpeakerOnly(uint8 showTips);
+	void PlayRecordFile();
+	void QuitTeamRoom();
+	void ReactiveLbsStatus();
+	void ResetWhenLogOut();
+	void SetLbsRoomEnableStatus(uint8 Flag);
+	void SetMicphoneStatus(uint8 Flag);
+	void SetMicphoneVolume(float Value);
+	void SetSpeakerStatus(uint8 Flag);
+	void SetSpeakerVolume(float Value);
+	void SetVadSensitive(int32 VadSensitive);
+	void SetVoiceServer(EGVoiceServer InType);
+	void ShowOpenSpeakerAtFirstMsg();
+	void SpeechToText();
+	void StartRecord();
+	void StopPlayRecordFile();
+	void StopRecord();
+	void UploadRecordFile();
+
+	uint8 HaveRangeRoom() const;
+	uint8 HaveTeamRoom() const;
+	uint8 LbsMicphoneEnable() const;
+	uint8 LbsSpeakerEnable() const;
+	uint8 TeamMicphoneEnable() const;
+	uint8 TeamSpeakerEnable() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GVoiceInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GVoiceInterface")
+	}
+	static class UGVoiceInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGVoiceInterface>();
+	}
+};
+
+// Class Client.GameBackendHUD
+// 0x0000 (0x0060 - 0x0060)
+class UGameBackendHUD final : public UBackendHUD
+{
+public:
+	static class UGameBackendHUD* GetInstance();
+
+	class UGameFrontendHUD* GetFirstGameFrontendHUD() const;
+	class UGameBackendUtils* GetUtils() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GameBackendHUD")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameBackendHUD")
+	}
+	static class UGameBackendHUD* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGameBackendHUD>();
+	}
+};
+
+// Class Client.GameBusinessManager
+// 0x0078 (0x0130 - 0x00B8)
+class UGameBusinessManager : public ULogicManagerBase
+{
+public:
+	TArray<struct FGameWidgetConfig>              WidgetConfigList;                                  // 0x00B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C8[0x50];                                      // 0x00C8(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	class AUAEPlayerController*                   OwningController;                                  // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_120[0x8];                                      // 0x0120(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class ALuaClassObj*                           LuaObject;                                         // 0x0128(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	class UGameFrontendHUD* GetGameFrontendHUD() const;
+	class ALuaClassObj* GetLuaObject() const;
+	class UUAEUserWidget* GetWidget(int32 Index_0) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GameBusinessManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameBusinessManager")
+	}
+	static class UGameBusinessManager* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGameBusinessManager>();
+	}
+};
+
+// Class Client.InGameUIManager
+// 0x0028 (0x0158 - 0x0130)
+class UInGameUIManager final : public UGameBusinessManager
+{
+public:
+	TArray<class UClass*>                         InGameUIList;                                      // 0x0130(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_140[0x18];                                     // 0x0140(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void HandleDynamicCreation();
+	void HandleUIMessage(const class FString& UIMessage);
+	void SubUIWidgetList(const TArray<struct FGameWidgetConfig>& InWidgetConfigList, const TArray<class FString>& GameStatusStrList, uint8 InPersistentUI, uint8 InUsedByControler, uint8 InOberverOnly);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InGameUIManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InGameUIManager")
+	}
+	static class UInGameUIManager* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInGameUIManager>();
+	}
+};
+
+// Class Client.GameBackendUtils
+// 0x0008 (0x0038 - 0x0030)
+class UGameBackendUtils final : public UBackendUtils
+{
+public:
+	class UUAETableManager*                       TableManager;                                      // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	class UUAELoadedClassManager* GetLoadedClassManager() const;
+	class UUAETableManager* GetTableManager() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GameBackendUtils")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameBackendUtils")
+	}
+	static class UGameBackendUtils* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGameBackendUtils>();
+	}
+};
+
+// Class Client.ClientNetInterface
+// 0x0000 (0x0000 - 0x0000)
+class IClientNetInterface final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ClientNetInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ClientNetInterface")
+	}
+	static class IClientNetInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IClientNetInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+
+// Class Client.UAELobbyPlayerController
+// 0x0000 (0x0730 - 0x0730)
+class AUAELobbyPlayerController final : public APlayerController
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UAELobbyPlayerController")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UAELobbyPlayerController")
+	}
+	static class AUAELobbyPlayerController* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AUAELobbyPlayerController>();
 	}
 };
 
@@ -82,57 +338,134 @@ public:
 	}
 };
 
-// Class Client.HotUpdater
-// 0x0128 (0x0150 - 0x0028)
-class UHotUpdater final : public UObject
+// Class Client.UTRichTextBlock
+// 0x0760 (0x0870 - 0x0110)
+class UUTRichTextBlock final : public UWidget
 {
 public:
-	uint8                                         Pad_28[0x128];                                     // 0x0028(0x0128)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 ContentText;                                       // 0x0110(0x0010)(Edit, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_120[0x10];                                     // 0x0120(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateFontInfo                         Font;                                              // 0x0130(0x0058)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         bSupportHyLink : 1;                                // 0x0188(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bSupportImage : 1;                                 // 0x0189(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_18A[0x2];                                      // 0x018A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           TextColor;                                         // 0x018C(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	ETextJustify                                  Justification;                                     // 0x019C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         AutoWrapText : 1;                                  // 0x019D(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_19E[0x2];                                      // 0x019E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FScrollBarStyle                        ScrollBarStyle;                                    // 0x01A0(0x0440)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	struct FMargin                                HScrollBarPadding;                                 // 0x05E0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FMargin                                VScrollBarPadding;                                 // 0x05F0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	float                                         WrapTextAt;                                        // 0x0600(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FMargin                                Margin;                                            // 0x0604(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, Protected, NativeAccessSpecifierProtected)
+	float                                         LineHeightPercentage;                              // 0x0614(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FString                                 HyperlinkDecoratorTag;                             // 0x0618(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FString                                 HyperlinkCallBackFunctionName;                     // 0x0628(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FString                                 HyperlinkCallBackTableName;                        // 0x0638(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_648[0x218];                                    // 0x0648(0x0218)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameFrontendHUD*                       GameFrontendHUD;                                   // 0x0860(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_868[0x8];                                      // 0x0868(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void OnDownloadedOneFile(uint8 Successful, const class FString& FileURL, const TArray<uint8>& Data);
-	void OnGetVersionData(uint8 Successful, const class FString& FileURL, const TArray<uint8>& Data);
+	class FText GetText();
+	void SetGameFrontendHUD(class UGameFrontendHUD* InHUD);
+	void SetText(const class FText& InText);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("HotUpdater")
+		STATIC_CLASS_IMPL("UTRichTextBlock")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"HotUpdater")
+		STATIC_NAME_IMPL(L"UTRichTextBlock")
 	}
-	static class UHotUpdater* GetDefaultObj()
+	static class UUTRichTextBlock* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UHotUpdater>();
+		return GetDefaultObjImpl<UUTRichTextBlock>();
 	}
 };
 
-// Class Client.ClientNetInterface
-// 0x0000 (0x0000 - 0x0000)
-class IClientNetInterface final
+// Class Client.LuaClassObj
+// 0x0010 (0x03D8 - 0x03C8)
+class ALuaClassObj : public ALuaContext
 {
+public:
+	class UGameBusinessManager*                   pManager;                                          // 0x03C8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3D0[0x8];                                      // 0x03D0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	class FString GetGameStatus();
+	void HandleDynamicCreation();
+	void HandleUIMessage(const class FString& UIMessage);
+	void HandleUIMessageNoFetch(const class FString& UIMessage);
+	void SubCollapseWidgetList(const class FString& RootWidgetName, TArray<class FString>* ChildWidgetNames);
+	void SubShowHideEvent(const TArray<class FString>& WidgetPathList);
+	void SubUIWidgetList(const TArray<struct FGameWidgetConfig>& InWidgetConfigList, const TArray<class FString>& GameStatusStrList, uint8 bPersistentUI, uint8 InStatusConcern, uint8 bDynamicWidget);
+
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ClientNetInterface")
+		STATIC_CLASS_IMPL("LuaClassObj")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ClientNetInterface")
+		STATIC_NAME_IMPL(L"LuaClassObj")
 	}
-	static class IClientNetInterface* GetDefaultObj()
+	static class ALuaClassObj* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<IClientNetInterface>();
+		return GetDefaultObjImpl<ALuaClassObj>();
 	}
+};
 
-	class UObject* AsUObject()
+// Class Client.ScreenshotMaker
+// 0x0000 (0x0028 - 0x0028)
+class UScreenshotMaker final : public UObject
+{
+public:
+	static int32 GetSaveStatus();
+	static uint8 HasCaptured(const class FString& pathStr);
+	static class FString MakeBugReprotPic(uint8 isShowUI);
+	static class FString MakePicture(uint8 isShowUI);
+	static void ReMakePicture(const class FString& pathStr, const struct FVector4& Vector4);
+	static uint8 SaveToPhotosAlbum(const class FString& pathStr);
+	static uint8 SaveToPhotosAlbumEx(const class FString& pathStr);
+
+public:
+	static class UClass* StaticClass()
 	{
-		return reinterpret_cast<UObject*>(this);
+		STATIC_CLASS_IMPL("ScreenshotMaker")
 	}
-	const class UObject* AsUObject() const
+	static const class FName& StaticName()
 	{
-		return reinterpret_cast<const UObject*>(this);
+		STATIC_NAME_IMPL(L"ScreenshotMaker")
+	}
+	static class UScreenshotMaker* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UScreenshotMaker>();
+	}
+};
+
+// Class Client.TssManager
+// 0x0000 (0x0028 - 0x0028)
+class UTssManager final : public UObject
+{
+public:
+	int32 OnRecvData_LuaState();
+	int32 SendSkdData_LuaState();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TssManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TssManager")
+	}
+	static class UTssManager* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTssManager>();
 	}
 };
 
@@ -233,13 +566,13 @@ public:
 	static void LoadLuaFile(class UGameFrontendHUD* GameFrontendHUD, const class FString& Filename);
 	static void Login(TScriptInterface<class IClientNetInterface>* ClientNetInterface, uint32 Channel);
 	static void Logout(TScriptInterface<class IClientNetInterface>* ClientNetInterface);
-	static class FString MD5HashAnsiString(const class FString& str);
+	static class FString MD5HashAnsiString(const class FString& Str);
 	static void NotifyBeginnerFinishedGuideUpdated(class UGameFrontendHUD* GameFrontendHUD, uint8 GuideSwitch, const TArray<struct FPlayerFinishedGuide>& finished_guide, int32 player_level, int32 player_exp_type);
 	static void OnBattleResult(class UGameFrontendHUD* GameFrontendHUD, const struct FBattleResultData& BattleResultData);
 	static void OnFilterFinish(class UGameFrontendHUD* GameFrontendHUD, const class FString& filterText);
 	static void OnInviteNextBattle(class UGameFrontendHUD* GameFrontendHUD, const class FString& gid, const class FString& Name_0);
 	static void OnNotifyFightFriendChat(class UGameFrontendHUD* GameFrontendHUD, const struct FFightFriendChat& Data);
-	static void OpenURL(const class FString& URL, int32 Dir);
+	static void OpenUrl(const class FString& URL, int32 Dir);
 	static void QQAddFriend(TScriptInterface<class IClientNetInterface>* ClientNetInterface, const class FString& OpenID, const class FString& Desc, const class FString& Message);
 	static void QQShare(TScriptInterface<class IClientNetInterface>* ClientNetInterface, const class FString& _descShare, const class FString& _titleShare, const class FString& _imgPath, const class FString& _imgUrl, const class FString& _url, int32 _shareScene);
 	static void QQShareToFriend(TScriptInterface<class IClientNetInterface>* ClientNetInterface, int32 act, const class FString& OpenID, const class FString& Title, const class FString& Desc, const class FString& targetUrl, const class FString& imgUrl, const class FString& previewText, const class FString& gameTag, const class FString& msdkExtInfo);
@@ -295,33 +628,8 @@ public:
 	}
 };
 
-// Class Client.GameBackendHUD
-// 0x0000 (0x0060 - 0x0060)
-class UGameBackendHUD final : public UBackendHUD
-{
-public:
-	static class UGameBackendHUD* GetInstance();
-
-	class UGameFrontendHUD* GetFirstGameFrontendHUD() const;
-	class UGameBackendUtils* GetUtils() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GameBackendHUD")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GameBackendHUD")
-	}
-	static class UGameBackendHUD* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGameBackendHUD>();
-	}
-};
-
 // Class Client.UAEClientGameMode
-// 0x0000 (0x0490 - 0x0490)
+// 0x0000 (0x0480 - 0x0480)
 class AUAEClientGameMode : public AGameMode
 {
 public:
@@ -339,85 +647,8 @@ public:
 	}
 };
 
-// Class Client.GVoiceInterface
-// 0x00F8 (0x0120 - 0x0028)
-class UGVoiceInterface final : public UObject
-{
-public:
-	uint8                                         Pad_28[0xC];                                       // 0x0028(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bEnableWithRegionInLobby : 1;                      // 0x0034(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_35[0x13];                                      // 0x0035(0x0013)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameFrontendHUD*                       GameFrontendHUD;                                   // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_50[0xD0];                                      // 0x0050(0x00D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void CloseAllMicAndSpeaker();
-	void CloseAllMicphone(uint8 showTips);
-	void CloseAllSpeaker(uint8 showTips);
-	void CloseMic();
-	void CloseMicPtt();
-	void CloseSpeaker();
-	void DownloadRecordFile();
-	void ForbidTeammateVoiceById(int32 memberID, uint8 IsEnable);
-	void GetAuthKey();
-	EGVoiceServer GetRegionFromSessionID(const class FString& SessionID);
-	class FString GetTeammateUserIDByMemberID(int32 InMemberID);
-	int32 GetVadSensitive();
-	float GetVoiceLength();
-	void InitGVoiceComponent(const class FString& userId);
-	void JoinRangeRoom(const class FString& RangeRoom, const class FString& userId);
-	void JoinTeamRoom(const class FString& TeamRoom, const class FString& userId);
-	void OpenAllMicAndSpeaker();
-	int32 OpenAllMicphone(uint8 showTips);
-	void OpenAllSpeaker(uint8 showTips);
-	int32 OpenMic();
-	void OpenMicPtt();
-	int32 OpenSpeaker();
-	void OpenTeamMicAndSpeaker();
-	int32 OpenTeamMicphoneOnly(uint8 showTips);
-	void OpenTeamSpeakerOnly(uint8 showTips);
-	void PlayRecordFile();
-	void QuitTeamRoom();
-	void ReactiveLbsStatus();
-	void ResetWhenLogOut();
-	void SetLbsRoomEnableStatus(uint8 Flag);
-	void SetMicphoneStatus(uint8 Flag);
-	void SetMicphoneVolume(float Value);
-	void SetSpeakerStatus(uint8 Flag);
-	void SetSpeakerVolume(float Value);
-	void SetVadSensitive(int32 VadSensitive);
-	void SetVoiceServer(EGVoiceServer InType);
-	void ShowOpenSpeakerAtFirstMsg();
-	void SpeechToText();
-	void StartRecord();
-	void StopPlayRecordFile();
-	void StopRecord();
-	void UploadRecordFile();
-
-	uint8 HaveRangeRoom() const;
-	uint8 HaveTeamRoom() const;
-	uint8 LbsMicphoneEnable() const;
-	uint8 LbsSpeakerEnable() const;
-	uint8 TeamMicphoneEnable() const;
-	uint8 TeamSpeakerEnable() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GVoiceInterface")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GVoiceInterface")
-	}
-	static class UGVoiceInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGVoiceInterface>();
-	}
-};
-
 // Class Client.UAELobbyGameMode
-// 0x0000 (0x0490 - 0x0490)
+// 0x0000 (0x0480 - 0x0480)
 class AUAELobbyGameMode final : public AUAEClientGameMode
 {
 public:
@@ -432,53 +663,6 @@ public:
 	static class AUAELobbyGameMode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AUAELobbyGameMode>();
-	}
-};
-
-// Class Client.UAELobbyPlayerController
-// 0x0000 (0x0738 - 0x0738)
-class AUAELobbyPlayerController final : public APlayerController
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UAELobbyPlayerController")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UAELobbyPlayerController")
-	}
-	static class AUAELobbyPlayerController* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AUAELobbyPlayerController>();
-	}
-};
-
-// Class Client.ScreenshotMaker
-// 0x0000 (0x0028 - 0x0028)
-class UScreenshotMaker final : public UObject
-{
-public:
-	static int32 GetSaveStatus();
-	static uint8 HasCaptured(const class FString& pathStr);
-	static class FString MakeBugReprotPic(uint8 isShowUI);
-	static class FString MakePicture(uint8 isShowUI);
-	static void ReMakePicture(const class FString& pathStr, const struct FVector4& Vector4);
-	static uint8 SaveToPhotosAlbum(const class FString& pathStr);
-	static uint8 SaveToPhotosAlbumEx(const class FString& pathStr);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ScreenshotMaker")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ScreenshotMaker")
-	}
-	static class UScreenshotMaker* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UScreenshotMaker>();
 	}
 };
 
@@ -601,190 +785,6 @@ public:
 	}
 };
 
-// Class Client.GameBusinessManager
-// 0x0078 (0x0130 - 0x00B8)
-class UGameBusinessManager : public ULogicManagerBase
-{
-public:
-	TArray<struct FGameWidgetConfig>              WidgetConfigList;                                  // 0x00B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C8[0x50];                                      // 0x00C8(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	class AUAEPlayerController*                   OwningController;                                  // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_120[0x8];                                      // 0x0120(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class ALuaClassObj*                           LuaObject;                                         // 0x0128(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	class UGameFrontendHUD* GetGameFrontendHUD() const;
-	class ALuaClassObj* GetLuaObject() const;
-	class UUAEUserWidget* GetWidget(int32 Index_0) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GameBusinessManager")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GameBusinessManager")
-	}
-	static class UGameBusinessManager* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGameBusinessManager>();
-	}
-};
-
-// Class Client.InGameUIManager
-// 0x0028 (0x0158 - 0x0130)
-class UInGameUIManager final : public UGameBusinessManager
-{
-public:
-	TArray<class UClass*>                         InGameUIList;                                      // 0x0130(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_140[0x18];                                     // 0x0140(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void HandleDynamicCreation();
-	void HandleUIMessage(const class FString& UIMessage);
-	void SubUIWidgetList(const TArray<struct FGameWidgetConfig>& InWidgetConfigList, const TArray<class FString>& GameStatusStrList, uint8 InPersistentUI, uint8 InUsedByControler, uint8 InOberverOnly);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InGameUIManager")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InGameUIManager")
-	}
-	static class UInGameUIManager* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInGameUIManager>();
-	}
-};
-
-// Class Client.PlatformAppraise
-// 0x0000 (0x0028 - 0x0028)
-class UPlatformAppraise final : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PlatformAppraise")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PlatformAppraise")
-	}
-	static class UPlatformAppraise* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlatformAppraise>();
-	}
-};
-
-// Class Client.GameBackendUtils
-// 0x0008 (0x0038 - 0x0030)
-class UGameBackendUtils final : public UBackendUtils
-{
-public:
-	class UUAETableManager*                       TableManager;                                      // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	class UUAELoadedClassManager* GetLoadedClassManager() const;
-	class UUAETableManager* GetTableManager() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GameBackendUtils")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GameBackendUtils")
-	}
-	static class UGameBackendUtils* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGameBackendUtils>();
-	}
-};
-
-// Class Client.LuaClassObj
-// 0x0010 (0x03E8 - 0x03D8)
-class ALuaClassObj : public ALuaContext
-{
-public:
-	class UGameBusinessManager*                   pManager;                                          // 0x03D8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_3E0[0x8];                                      // 0x03E0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class FString GetGameStatus();
-	void HandleDynamicCreation();
-	void HandleUIMessage(const class FString& UIMessage);
-	void HandleUIMessageNoFetch(const class FString& UIMessage);
-	void SubCollapseWidgetList(const class FString& RootWidgetName, TArray<class FString>* ChildWidgetNames);
-	void SubShowHideEvent(const TArray<class FString>& WidgetPathList);
-	void SubUIWidgetList(const TArray<struct FGameWidgetConfig>& InWidgetConfigList, const TArray<class FString>& GameStatusStrList, uint8 bPersistentUI, uint8 InStatusConcern, uint8 bDynamicWidget);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("LuaClassObj")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"LuaClassObj")
-	}
-	static class ALuaClassObj* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ALuaClassObj>();
-	}
-};
-
-// Class Client.UTRichTextBlock
-// 0x0760 (0x0870 - 0x0110)
-class UUTRichTextBlock final : public UWidget
-{
-public:
-	class FString                                 ContentText;                                       // 0x0110(0x0010)(Edit, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_120[0x10];                                     // 0x0120(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateFontInfo                         Font;                                              // 0x0130(0x0058)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         bSupportHyLink : 1;                                // 0x0188(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bSupportImage : 1;                                 // 0x0189(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_18A[0x2];                                      // 0x018A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           TextColor;                                         // 0x018C(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	ETextJustify                                  Justification;                                     // 0x019C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         AutoWrapText : 1;                                  // 0x019D(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_19E[0x2];                                      // 0x019E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FScrollBarStyle                        ScrollBarStyle;                                    // 0x01A0(0x0440)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	struct FMargin                                HScrollBarPadding;                                 // 0x05E0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	struct FMargin                                VScrollBarPadding;                                 // 0x05F0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	float                                         WrapTextAt;                                        // 0x0600(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FMargin                                Margin;                                            // 0x0604(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, Protected, NativeAccessSpecifierProtected)
-	float                                         LineHeightPercentage;                              // 0x0614(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FString                                 HyperlinkDecoratorTag;                             // 0x0618(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FString                                 HyperlinkCallBackFunctionName;                     // 0x0628(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FString                                 HyperlinkCallBackTableName;                        // 0x0638(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_648[0x218];                                    // 0x0648(0x0218)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameFrontendHUD*                       GameFrontendHUD;                                   // 0x0860(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_868[0x8];                                      // 0x0868(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class FText GetText();
-	void SetGameFrontendHUD(class UGameFrontendHUD* InHUD);
-	void SetText(const class FText& InText);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UTRichTextBlock")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UTRichTextBlock")
-	}
-	static class UUTRichTextBlock* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUTRichTextBlock>();
-	}
-};
-
 // Class Client.BusinessHelper
 // 0x0000 (0x0028 - 0x0028)
 class UBusinessHelper final : public UBlueprintFunctionLibrary
@@ -817,7 +817,7 @@ public:
 };
 
 // Class Client.TestHUD
-// 0x0000 (0x03C0 - 0x03C0)
+// 0x0000 (0x03B0 - 0x03B0)
 class ATestHUD final : public AActor
 {
 public:

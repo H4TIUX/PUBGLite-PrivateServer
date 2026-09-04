@@ -30,34 +30,6 @@ void Abp_wardrobe_C::UserConstructionScript()
 }
 
 
-// Function bp_wardrobe.bp_wardrobe_C.EventWardrobeClickDecomposeItem
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_wardrobe_C::EventWardrobeClickDecomposeItem()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_wardrobe_C", "EventWardrobeClickDecomposeItem");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_wardrobe.bp_wardrobe_C.EventWardrobeClickDecomposeItem_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_wardrobe_C::EventWardrobeClickDecomposeItem_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_wardrobe_C", "EventWardrobeClickDecomposeItem_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_wardrobe.bp_wardrobe_C.EventWardrobeClickJump
 // (BlueprintCallable, BlueprintEvent)
 
@@ -86,34 +58,6 @@ void Abp_wardrobe_C::EventWardrobeClickJump_NoFetch()
 }
 
 
-// Function bp_wardrobe.bp_wardrobe_C.EventChangeWardrodbeTab
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_wardrobe_C::EventChangeWardrodbeTab()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_wardrobe_C", "EventChangeWardrodbeTab");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_wardrobe.bp_wardrobe_C.EventChangeWardrodbeTab_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_wardrobe_C::EventChangeWardrodbeTab_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_wardrobe_C", "EventChangeWardrodbeTab_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_wardrobe.bp_wardrobe_C.EventWardrobeClickJumpToExchange
 // (BlueprintCallable, BlueprintEvent)
 
@@ -137,6 +81,62 @@ void Abp_wardrobe_C::EventWardrobeClickJumpToExchange_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_wardrobe_C", "EventWardrobeClickJumpToExchange_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_wardrobe.bp_wardrobe_C.EventWardrobeClickDecomposeItem
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_wardrobe_C::EventWardrobeClickDecomposeItem()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_wardrobe_C", "EventWardrobeClickDecomposeItem");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_wardrobe.bp_wardrobe_C.EventWardrobeClickDecomposeItem_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_wardrobe_C::EventWardrobeClickDecomposeItem_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_wardrobe_C", "EventWardrobeClickDecomposeItem_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_wardrobe.bp_wardrobe_C.EventChangeWardrodbeTab
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_wardrobe_C::EventChangeWardrodbeTab()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_wardrobe_C", "EventChangeWardrodbeTab");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_wardrobe.bp_wardrobe_C.EventChangeWardrodbeTab_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_wardrobe_C::EventChangeWardrodbeTab_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_wardrobe_C", "EventChangeWardrodbeTab_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

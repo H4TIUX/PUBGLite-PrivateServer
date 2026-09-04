@@ -16,6 +16,14 @@
 namespace SDK::Params
 {
 
+// Function ScriptPlugin.ScriptContext.CallScriptFunction
+// 0x0010 (0x0010 - 0x0000)
+struct ScriptContext_CallScriptFunction final
+{
+public:
+	class FString                                 FunctionName;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
 // Function ScriptPlugin.ScriptContextComponent.CallScriptFunction
 // 0x0010 (0x0010 - 0x0000)
 struct ScriptContextComponent_CallScriptFunction final
@@ -46,14 +54,6 @@ struct ScriptContextComponent_PushOneScriptPropertyValues final
 {
 public:
 	class FString                                 ParamName;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function ScriptPlugin.ScriptContext.CallScriptFunction
-// 0x0010 (0x0010 - 0x0000)
-struct ScriptContext_CallScriptFunction final
-{
-public:
-	class FString                                 FunctionName;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 // Function ScriptPlugin.ScriptHelperNetInterface.Connect

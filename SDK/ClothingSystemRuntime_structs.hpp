@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "ClothingSystemRuntimeInterface_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -35,6 +35,16 @@ enum class EMaskTarget_PhysMesh : uint8
 	BackstopDistance                         = 2,
 	BackstopRadius                           = 3,
 	MaskTarget_MAX                           = 4,
+};
+
+// ScriptStruct ClothingSystemRuntime.ClothVertBoneData
+// 0x0034 (0x0034 - 0x0000)
+struct FClothVertBoneData final
+{
+public:
+	int32                                         NumInfluences;                                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint16                                        BoneIndices[0x8];                                  // 0x0004(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoneWeights[0x8];                                  // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 // ScriptStruct ClothingSystemRuntime.ClothConstraintSetup
@@ -77,16 +87,6 @@ public:
 	float                                         TetherStiffness;                                   // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TetherLimit;                                       // 0x00B4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CollisionThickness;                                // 0x00B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct ClothingSystemRuntime.ClothVertBoneData
-// 0x0034 (0x0034 - 0x0000)
-struct FClothVertBoneData final
-{
-public:
-	int32                                         NumInfluences;                                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint16                                        BoneIndices[0x8];                                  // 0x0004(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BoneWeights[0x8];                                  // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 // ScriptStruct ClothingSystemRuntime.ClothPhysicalMeshData

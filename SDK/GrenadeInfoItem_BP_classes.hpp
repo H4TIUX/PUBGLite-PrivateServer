@@ -10,20 +10,20 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "BP_STRUCT_Item_type_structs.hpp"
 #include "Basic_structs.hpp"
-#include "ShadowTrackerExtra_structs.hpp"
-#include "UnrealArchExt_classes.hpp"
 #include "EBackPackDragOrigin_structs.hpp"
+#include "Engine_structs.hpp"
+#include "UnrealArchExt_classes.hpp"
+#include "BP_STRUCT_Item_type_structs.hpp"
+#include "ShadowTrackerExtra_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass GrenadeInfoItem_BP.GrenadeInfoItem_BP_C
-// 0x0418 (0x06D0 - 0x02B8)
+// 0x0410 (0x06C8 - 0x02B8)
 class UGrenadeInfoItem_BP_C final : public UUAEUserWidget
 {
 public:
@@ -43,16 +43,16 @@ public:
 	struct FSlateBrush                            SmallIconBrush;                                    // 0x0550(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
 	uint8                                         bHasStartedTouchIn : 1;                            // 0x05C8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
 	uint8                                         Pad_5C9[0x7];                                      // 0x05C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBattleItemData                        battleData;                                        // 0x05D0(0x00A0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	UMulticastDelegateProperty_                   ItemBeDragBegin;                                   // 0x0670(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	UMulticastDelegateProperty_                   ItemBeDragCancelled;                               // 0x0680(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	UMulticastDelegateProperty_                   ShowToolTip;                                       // 0x0690(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class FString                                 InputKeyActionName;                                // 0x06A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class UTextureRenderTarget2D*                 RenderTargetTexture;                               // 0x06B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_GrenadeWeaponStudio_C*              ItemStudio;                                        // 0x06B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               WeaponCaptureMaterial;                             // 0x06C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESurviveWeaponPropSlot                        WeaponSlot;                                        // 0x06C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGrenadeType                                  grenadeType;                                       // 0x06C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBattleItemData                        battleData;                                        // 0x05D0(0x0098)(Edit, BlueprintVisible, DisableEditOnInstance)
+	UMulticastDelegateProperty_                   ItemBeDragBegin;                                   // 0x0668(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	UMulticastDelegateProperty_                   ItemBeDragCancelled;                               // 0x0678(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	UMulticastDelegateProperty_                   ShowToolTip;                                       // 0x0688(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class FString                                 InputKeyActionName;                                // 0x0698(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class UTextureRenderTarget2D*                 RenderTargetTexture;                               // 0x06A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_GrenadeWeaponStudio_C*              ItemStudio;                                        // 0x06B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               WeaponCaptureMaterial;                             // 0x06B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESurviveWeaponPropSlot                        WeaponSlot;                                        // 0x06C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGrenadeType                                  grenadeType;                                       // 0x06C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GrenadeInfoItem_BP(int32 EntryPoint);

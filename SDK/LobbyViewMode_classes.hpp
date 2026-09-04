@@ -19,18 +19,18 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass LobbyViewMode.LobbyViewMode_C
-// 0x00C0 (0x04E0 - 0x0420)
+// 0x00C0 (0x04D0 - 0x0410)
 class ALobbyViewMode_C final : public AViewModeStudio
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0420(0x0008)(Transient, DuplicateTransient)
-	class USceneComponent*                        Scene;                                             // 0x0428(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               Target;                                            // 0x0430(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FRotator                               Rollback;                                          // 0x043C(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_448[0x8];                                      // 0x0448(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CurrentTM;                                         // 0x0450(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FTransform                             NextTM;                                            // 0x0480(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FTransform                             Temp;                                              // 0x04B0(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0008)(Transient, DuplicateTransient)
+	class USceneComponent*                        Scene;                                             // 0x0418(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               Target;                                            // 0x0420(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FRotator                               Rollback;                                          // 0x042C(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_438[0x8];                                      // 0x0438(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CurrentTM;                                         // 0x0440(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FTransform                             NextTM;                                            // 0x0470(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FTransform                             Temp;                                              // 0x04A0(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_LobbyViewMode(int32 EntryPoint);

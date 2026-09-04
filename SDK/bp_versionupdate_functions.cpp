@@ -30,57 +30,29 @@ void Abp_versionupdate_C::UserConstructionScript()
 }
 
 
-// Function bp_versionupdate.bp_versionupdate_C.EventWindowsAppUpdate
+// Function bp_versionupdate.bp_versionupdate_C.EventWifiNotifyIOSAppUpdate_Push
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_versionupdate_C::EventWindowsAppUpdate()
+void Abp_versionupdate_C::EventWifiNotifyIOSAppUpdate_Push()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_versionupdate_C", "EventWindowsAppUpdate");
+		Func = GetClass()->GetFunction("bp_versionupdate_C", "EventWifiNotifyIOSAppUpdate_Push");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_versionupdate.bp_versionupdate_C.EventWindowsAppUpdate_NoFetch
+// Function bp_versionupdate.bp_versionupdate_C.EventWifiNotifyIOSAppUpdate_Push_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_versionupdate_C::EventWindowsAppUpdate_NoFetch()
+void Abp_versionupdate_C::EventWifiNotifyIOSAppUpdate_Push_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_versionupdate_C", "EventWindowsAppUpdate_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_versionupdate.bp_versionupdate_C.EventWifiNotifyAndroidAppUpdate_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_versionupdate_C::EventWifiNotifyAndroidAppUpdate_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_versionupdate_C", "EventWifiNotifyAndroidAppUpdate_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_versionupdate.bp_versionupdate_C.EventWifiNotifyAndroidAppUpdate_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_versionupdate_C::EventWifiNotifyAndroidAppUpdate_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_versionupdate_C", "EventWifiNotifyAndroidAppUpdate_Push_NoFetch");
+		Func = GetClass()->GetFunction("bp_versionupdate_C", "EventWifiNotifyIOSAppUpdate_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,62 +86,6 @@ void Abp_versionupdate_C::EventShaderCompileProgress_NoFetch()
 }
 
 
-// Function bp_versionupdate.bp_versionupdate_C.EventNoWifiNotifyIOSAppUpdate_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_versionupdate_C::EventNoWifiNotifyIOSAppUpdate_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_versionupdate_C", "EventNoWifiNotifyIOSAppUpdate_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_versionupdate.bp_versionupdate_C.EventNoWifiNotifyIOSAppUpdate_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_versionupdate_C::EventNoWifiNotifyIOSAppUpdate_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_versionupdate_C", "EventNoWifiNotifyIOSAppUpdate_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_versionupdate.bp_versionupdate_C.EventWifiNotifyIOSAppUpdate_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_versionupdate_C::EventWifiNotifyIOSAppUpdate_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_versionupdate_C", "EventWifiNotifyIOSAppUpdate_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_versionupdate.bp_versionupdate_C.EventWifiNotifyIOSAppUpdate_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_versionupdate_C::EventWifiNotifyIOSAppUpdate_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_versionupdate_C", "EventWifiNotifyIOSAppUpdate_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_versionupdate.bp_versionupdate_C.EventNoConnectionStartUpdate_Push
 // (BlueprintCallable, BlueprintEvent)
 
@@ -198,6 +114,62 @@ void Abp_versionupdate_C::EventNoConnectionStartUpdate_Push_NoFetch()
 }
 
 
+// Function bp_versionupdate.bp_versionupdate_C.EventNoWifiNotifyIOSAppUpdate_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_versionupdate_C::EventNoWifiNotifyIOSAppUpdate_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_versionupdate_C", "EventNoWifiNotifyIOSAppUpdate_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_versionupdate.bp_versionupdate_C.EventNoWifiNotifyIOSAppUpdate_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_versionupdate_C::EventNoWifiNotifyIOSAppUpdate_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_versionupdate_C", "EventNoWifiNotifyIOSAppUpdate_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_versionupdate.bp_versionupdate_C.EventWindowsAppUpdate
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_versionupdate_C::EventWindowsAppUpdate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_versionupdate_C", "EventWindowsAppUpdate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_versionupdate.bp_versionupdate_C.EventWindowsAppUpdate_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_versionupdate_C::EventWindowsAppUpdate_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_versionupdate_C", "EventWindowsAppUpdate_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_versionupdate.bp_versionupdate_C.EventFetchInfo
 // (BlueprintCallable, BlueprintEvent)
 
@@ -221,6 +193,34 @@ void Abp_versionupdate_C::EventFetchInfo_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_versionupdate_C", "EventFetchInfo_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_versionupdate.bp_versionupdate_C.EventWifiNotifyAndroidAppUpdate_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_versionupdate_C::EventWifiNotifyAndroidAppUpdate_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_versionupdate_C", "EventWifiNotifyAndroidAppUpdate_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_versionupdate.bp_versionupdate_C.EventWifiNotifyAndroidAppUpdate_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_versionupdate_C::EventWifiNotifyAndroidAppUpdate_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_versionupdate_C", "EventWifiNotifyAndroidAppUpdate_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

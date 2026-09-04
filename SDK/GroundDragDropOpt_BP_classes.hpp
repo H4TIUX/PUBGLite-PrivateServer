@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "ShadowTrackerExtra_structs.hpp"
-#include "EBackPackDragOrigin_structs.hpp"
 #include "UMG_classes.hpp"
+#include "EBackPackDragOrigin_structs.hpp"
 
 
 namespace SDK

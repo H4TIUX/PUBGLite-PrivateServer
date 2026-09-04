@@ -10,20 +10,20 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "BP_STRUCT_Item_type_structs.hpp"
 #include "Basic_structs.hpp"
-#include "ShadowTrackerExtra_structs.hpp"
-#include "UnrealArchExt_classes.hpp"
 #include "EBackPackDragOrigin_structs.hpp"
+#include "Engine_structs.hpp"
+#include "UnrealArchExt_classes.hpp"
+#include "BP_STRUCT_Item_type_structs.hpp"
+#include "ShadowTrackerExtra_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass PistolInfoItem_BP.PistolInfoItem_BP_C
-// 0x0500 (0x07B8 - 0x02B8)
+// 0x04F8 (0x07B0 - 0x02B8)
 class UPistolInfoItem_BP_C final : public UUAEUserWidget
 {
 public:
@@ -59,16 +59,16 @@ public:
 	uint8                                         Pad_639[0x7];                                      // 0x0639(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastDelegateProperty_                   ItemBeDragBegin;                                   // 0x0640(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	UMulticastDelegateProperty_                   ItemBeDragCancelled;                               // 0x0650(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FBattleItemData                        battleData;                                        // 0x0660(0x00A0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class UFitingSlotItem_BP_C*>           SlotItemArray;                                     // 0x0700(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<int32>                                 AttachNameArray;                                   // 0x0710(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TMap<EWeaponAttachmentSocketType, int32>      Slot2Index;                                        // 0x0720(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	UMulticastDelegateProperty_                   ShowToolTip;                                       // 0x0770(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class FString                                 InputKeyActionName;                                // 0x0780(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class UTextureRenderTarget2D*                 RenderTargetTexture;                               // 0x0790(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AItemStudio*                            ItemStudio;                                        // 0x0798(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               WeaponCaptureMaterial;                             // 0x07A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	UMulticastDelegateProperty_                   UpdateAvatar;                                      // 0x07A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FBattleItemData                        battleData;                                        // 0x0660(0x0098)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class UFitingSlotItem_BP_C*>           SlotItemArray;                                     // 0x06F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<int32>                                 AttachNameArray;                                   // 0x0708(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TMap<EWeaponAttachmentSocketType, int32>      Slot2Index;                                        // 0x0718(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	UMulticastDelegateProperty_                   ShowToolTip;                                       // 0x0768(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class FString                                 InputKeyActionName;                                // 0x0778(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class UTextureRenderTarget2D*                 RenderTargetTexture;                               // 0x0788(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AItemStudio*                            ItemStudio;                                        // 0x0790(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               WeaponCaptureMaterial;                             // 0x0798(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	UMulticastDelegateProperty_                   UpdateAvatar;                                      // 0x07A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void ExecuteUbergraph_PistolInfoItem_BP(int32 EntryPoint);

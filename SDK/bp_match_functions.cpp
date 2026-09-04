@@ -30,57 +30,29 @@ void Abp_match_C::UserConstructionScript()
 }
 
 
-// Function bp_match.bp_match_C.EventShowMatchFailedNotice
+// Function bp_match.bp_match_C.EventFetchInfo
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_match_C::EventShowMatchFailedNotice()
+void Abp_match_C::EventFetchInfo()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_match_C", "EventShowMatchFailedNotice");
+		Func = GetClass()->GetFunction("bp_match_C", "EventFetchInfo");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_match.bp_match_C.EventShowMatchFailedNotice_NoFetch
+// Function bp_match.bp_match_C.EventFetchInfo_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_match_C::EventShowMatchFailedNotice_NoFetch()
+void Abp_match_C::EventFetchInfo_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_match_C", "EventShowMatchFailedNotice_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_match.bp_match_C.EventCancelMatch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_match_C::EventCancelMatch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_match_C", "EventCancelMatch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_match.bp_match_C.EventCancelMatch_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_match_C::EventCancelMatch_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_match_C", "EventCancelMatch_NoFetch");
+		Func = GetClass()->GetFunction("bp_match_C", "EventFetchInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,57 +86,57 @@ void Abp_match_C::EventCancelReady_NoFetch()
 }
 
 
-// Function bp_match.bp_match_C.EventFetchInfo
+// Function bp_match.bp_match_C.EventCancelMatch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_match_C::EventFetchInfo()
+void Abp_match_C::EventCancelMatch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_match_C", "EventFetchInfo");
+		Func = GetClass()->GetFunction("bp_match_C", "EventCancelMatch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_match.bp_match_C.EventFetchInfo_NoFetch
+// Function bp_match.bp_match_C.EventCancelMatch_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_match_C::EventFetchInfo_NoFetch()
+void Abp_match_C::EventCancelMatch_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_match_C", "EventFetchInfo_NoFetch");
+		Func = GetClass()->GetFunction("bp_match_C", "EventCancelMatch_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_match.bp_match_C.EventMatchPopupUITick
+// Function bp_match.bp_match_C.EventShowMatchFailedNotice
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_match_C::EventMatchPopupUITick()
+void Abp_match_C::EventShowMatchFailedNotice()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_match_C", "EventMatchPopupUITick");
+		Func = GetClass()->GetFunction("bp_match_C", "EventShowMatchFailedNotice");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_match.bp_match_C.EventMatchPopupUITick_NoFetch
+// Function bp_match.bp_match_C.EventShowMatchFailedNotice_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_match_C::EventMatchPopupUITick_NoFetch()
+void Abp_match_C::EventShowMatchFailedNotice_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_match_C", "EventMatchPopupUITick_NoFetch");
+		Func = GetClass()->GetFunction("bp_match_C", "EventShowMatchFailedNotice_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -193,6 +165,34 @@ void Abp_match_C::EventStartMatch_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_match_C", "EventStartMatch_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_match.bp_match_C.EventMatchPopupUITick
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_match_C::EventMatchPopupUITick()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_match_C", "EventMatchPopupUITick");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_match.bp_match_C.EventMatchPopupUITick_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_match_C::EventMatchPopupUITick_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_match_C", "EventMatchPopupUITick_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

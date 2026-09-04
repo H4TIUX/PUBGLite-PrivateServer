@@ -10,17 +10,17 @@
 
 #include "Basic.hpp"
 
+#include "Basic_structs.hpp"
 #include "EBackPackDragOrigin_structs.hpp"
 #include "Engine_structs.hpp"
-#include "EBackpackTab_structs.hpp"
 #include "BP_STRUCT_Item_type_structs.hpp"
-#include "Basic_structs.hpp"
-#include "ShadowTrackerExtra_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "Gameplay_structs.hpp"
 #include "UnrealArchExt_classes.hpp"
+#include "ShadowTrackerExtra_structs.hpp"
+#include "EBackpackTab_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "UMG_structs.hpp"
 #include "EBackpackClothArmorType_structs.hpp"
+#include "Gameplay_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 
@@ -28,7 +28,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass MainBackPackPanel_BP.MainBackPackPanel_BP_C
-// 0x0580 (0x0838 - 0x02B8)
+// 0x0570 (0x0828 - 0x02B8)
 class UMainBackPackPanel_BP_C final : public UUAEUserWidget
 {
 public:
@@ -84,7 +84,7 @@ public:
 	class UButton*                                MaxButton;                                         // 0x0440(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UMeleeInfoItem_BP_C*                    MeleeInfoItem_BP;                                  // 0x0448(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UButton*                                MinButton;                                         // 0x0450(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Nickname;                                          // 0x0458(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             NickName;                                          // 0x0458(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UPickUpAndDropCountPopUpWidget_BP_C*    PickUpAndDropCountPopUpWidget_BP;                  // 0x0460(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UPickUpItemTips_BP_C*                   PickUpItemTips_BP;                                 // 0x0468(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWeakRefImage*                          PickUpLine;                                        // 0x0470(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -119,52 +119,52 @@ public:
 	int32                                         MaxThrowCount;                                     // 0x054C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FItemAssociation>               CacheAssociation;                                  // 0x0550(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	class UBackPackItem_BP_C*                     CrtClickItem;                                      // 0x0560(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FBattleItemData                        ItemBeDragged;                                     // 0x0568(0x00A0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<int32>                                 WeaponAmmoUtilizableList;                          // 0x0608(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	struct FBattleItemData                        ChosenToDropStuff;                                 // 0x0618(0x00A0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         CrtThrowCount;                                     // 0x06B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6BC[0x4];                                      // 0x06BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMainBackPackDiscardPanel_BP_C*         SelectDeletePanel;                                 // 0x06C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         isBindWeaponMsg : 1;                               // 0x06C8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_6C9[0x7];                                      // 0x06C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           BindDelHandle;                                     // 0x06D0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	TArray<class UMainWeaponInfoItem_BP_C*>       WeaponInfoItemArray;                               // 0x06D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UBackPackClothSlot_BP_C*>        ClothPlotItemArray;                                // 0x06E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UBackPackArmorSlot_BP_C*>        ArmorPlotItemArray;                                // 0x06F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	EBackPackDragOrigin                           DragItemOrigin;                                    // 0x0708(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_709[0x7];                                      // 0x0709(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	UMulticastDelegateProperty_                   CloseBackPack;                                     // 0x0710(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	uint8                                         IsItemBeClicked : 1;                               // 0x0720(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_721[0x7];                                      // 0x0721(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Player1NameValue;                                  // 0x0728(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	uint8                                         IsSortPriority : 1;                                // 0x0738(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_739[0x3];                                      // 0x0739(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              HalfViewport;                                      // 0x073C(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_744[0x4];                                      // 0x0744(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSearchedPickUpItemResult              PickUpItemDragged;                                 // 0x0748(0x0040)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FName                                   MainWeaponSlot1;                                   // 0x0788(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   MainWeaponSlot2;                                   // 0x0790(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         IsItemDrop : 1;                                    // 0x0798(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_799[0x7];                                      // 0x0799(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTextureRenderTarget2D*                 RenderTargetTexture;                               // 0x07A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_CharacterStudio_C*                  CharacterStudio;                                   // 0x07A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               WeaponCaptureMaterial;                             // 0x07B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         IsShowRT : 1;                                      // 0x07B8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_7B9[0x7];                                      // 0x07B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   subSlot;                                           // 0x07C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPickUpItem_S_BP_C*                     CrtClickItemGround;                                // 0x07C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         IsPressCtrl : 1;                                   // 0x07D0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         IsDragInsideClothingGroup : 1;                     // 0x07D1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         IsDragInsideClothingGroupSaved : 1;                // 0x07D2(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_7D3[0x5];                                      // 0x07D3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSearchedPickUpItemResult              ChosenToPickStuff;                                 // 0x07D8(0x0040)(Edit, BlueprintVisible, DisableEditOnInstance)
-	uint8                                         IsPressAlt : 1;                                    // 0x0818(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_819[0x3];                                      // 0x0819(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CurTime;                                           // 0x081C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         AvatarRTOpacity;                                   // 0x0820(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_824[0x4];                                      // 0x0824(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CurTimerHandle;                                    // 0x0828(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	class FName                                   GrenadeWeaponSlot;                                 // 0x0830(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBattleItemData                        ItemBeDragged;                                     // 0x0568(0x0098)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<int32>                                 WeaponAmmoUtilizableList;                          // 0x0600(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	struct FBattleItemData                        ChosenToDropStuff;                                 // 0x0610(0x0098)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         CrtThrowCount;                                     // 0x06A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6AC[0x4];                                      // 0x06AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMainBackPackDiscardPanel_BP_C*         SelectDeletePanel;                                 // 0x06B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         isBindWeaponMsg : 1;                               // 0x06B8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_6B9[0x7];                                      // 0x06B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           BindDelHandle;                                     // 0x06C0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	TArray<class UMainWeaponInfoItem_BP_C*>       WeaponInfoItemArray;                               // 0x06C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UBackPackClothSlot_BP_C*>        ClothPlotItemArray;                                // 0x06D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UBackPackArmorSlot_BP_C*>        ArmorPlotItemArray;                                // 0x06E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	EBackPackDragOrigin                           DragItemOrigin;                                    // 0x06F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6F9[0x7];                                      // 0x06F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	UMulticastDelegateProperty_                   CloseBackPack;                                     // 0x0700(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	uint8                                         IsItemBeClicked : 1;                               // 0x0710(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_711[0x7];                                      // 0x0711(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Player1NameValue;                                  // 0x0718(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	uint8                                         IsSortPriority : 1;                                // 0x0728(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_729[0x3];                                      // 0x0729(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              HalfViewport;                                      // 0x072C(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_734[0x4];                                      // 0x0734(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSearchedPickUpItemResult              PickUpItemDragged;                                 // 0x0738(0x0040)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FName                                   MainWeaponSlot1;                                   // 0x0778(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   MainWeaponSlot2;                                   // 0x0780(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         IsItemDrop : 1;                                    // 0x0788(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_789[0x7];                                      // 0x0789(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextureRenderTarget2D*                 RenderTargetTexture;                               // 0x0790(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_CharacterStudio_C*                  CharacterStudio;                                   // 0x0798(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               WeaponCaptureMaterial;                             // 0x07A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         IsShowRT : 1;                                      // 0x07A8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_7A9[0x7];                                      // 0x07A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   subSlot;                                           // 0x07B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPickUpItem_S_BP_C*                     CrtClickItemGround;                                // 0x07B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         IsPressCtrl : 1;                                   // 0x07C0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         IsDragInsideClothingGroup : 1;                     // 0x07C1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         IsDragInsideClothingGroupSaved : 1;                // 0x07C2(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_7C3[0x5];                                      // 0x07C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSearchedPickUpItemResult              ChosenToPickStuff;                                 // 0x07C8(0x0040)(Edit, BlueprintVisible, DisableEditOnInstance)
+	uint8                                         IsPressAlt : 1;                                    // 0x0808(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_809[0x3];                                      // 0x0809(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CurTime;                                           // 0x080C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         AvatarRTOpacity;                                   // 0x0810(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_814[0x4];                                      // 0x0814(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CurTimerHandle;                                    // 0x0818(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	class FName                                   GrenadeWeaponSlot;                                 // 0x0820(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_MainBackPackPanel_BP(int32 EntryPoint);

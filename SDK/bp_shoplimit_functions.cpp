@@ -30,34 +30,6 @@ void Abp_shoplimit_C::UserConstructionScript()
 }
 
 
-// Function bp_shoplimit.bp_shoplimit_C.EventShopLimitShowUI
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shoplimit_C::EventShopLimitShowUI()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shoplimit_C", "EventShopLimitShowUI");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shoplimit.bp_shoplimit_C.EventShopLimitShowUI_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shoplimit_C::EventShopLimitShowUI_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shoplimit_C", "EventShopLimitShowUI_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_shoplimit.bp_shoplimit_C.EventShopLimitBuy_Push
 // (BlueprintCallable, BlueprintEvent)
 
@@ -109,6 +81,34 @@ void Abp_shoplimit_C::EventShopLimitInitData_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_shoplimit_C", "EventShopLimitInitData_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_shoplimit.bp_shoplimit_C.EventShopLimitShowUI
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shoplimit_C::EventShopLimitShowUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shoplimit_C", "EventShopLimitShowUI");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_shoplimit.bp_shoplimit_C.EventShopLimitShowUI_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shoplimit_C::EventShopLimitShowUI_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shoplimit_C", "EventShopLimitShowUI_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

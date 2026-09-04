@@ -18,25 +18,25 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_shoplimit.bp_shoplimit_C
-// 0x00A0 (0x0488 - 0x03E8)
+// 0x00A0 (0x0478 - 0x03D8)
 class Abp_shoplimit_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FBP_STRUCT_ShopLimitInfo               BP_STRUCT_ShopLimitInfo;                           // 0x03F0(0x0078)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_ShopLimitBuyId;                                 // 0x0468(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46C[0x4];                                      // 0x046C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_ShopLimitInfo>       BP_ARRAY_ShopLimitList;                            // 0x0470(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0480(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_ShopLimitInfo>       BP_ARRAY_ShopLimitList;                            // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_ShopLimitBuyId;                                 // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3F4[0x4];                                      // 0x03F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_ShopLimitInfo               BP_STRUCT_ShopLimitInfo;                           // 0x03F8(0x0078)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0470(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventShopLimitShowUI();
-	void EventShopLimitShowUI_NoFetch();
 	void EventShopLimitBuy_Push();
 	void EventShopLimitBuy_Push_NoFetch();
 	void EventShopLimitInitData();
 	void EventShopLimitInitData_NoFetch();
+	void EventShopLimitShowUI();
+	void EventShopLimitShowUI_NoFetch();
 
 public:
 	static class UClass* StaticClass()

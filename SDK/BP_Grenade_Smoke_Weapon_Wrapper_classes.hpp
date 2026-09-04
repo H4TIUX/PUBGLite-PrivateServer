@@ -17,10 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Grenade_Smoke_Weapon_Wrapper.BP_Grenade_Smoke_Weapon_Wrapper_C
-// 0x0008 (0x0568 - 0x0560)
+// 0x0010 (0x0568 - 0x0558)
 class ABP_Grenade_Smoke_Weapon_Wrapper_C final : public APickUpWrapperActor
 {
 public:
+	uint8                                         Pad_558[0x8];                                      // 0x0558(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStaticMeshComponent*                   M18;                                               // 0x0560(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:

@@ -30,34 +30,6 @@ void Abp_revise_name_C::UserConstructionScript()
 }
 
 
-// Function bp_revise_name.bp_revise_name_C.EventReviseNameFilterName
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_revise_name_C::EventReviseNameFilterName()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_revise_name_C", "EventReviseNameFilterName");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_revise_name.bp_revise_name_C.EventReviseNameFilterName_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_revise_name_C::EventReviseNameFilterName_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_revise_name_C", "EventReviseNameFilterName_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_revise_name.bp_revise_name_C.EventReviseNameConfirmModify
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,6 +53,34 @@ void Abp_revise_name_C::EventReviseNameConfirmModify_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_revise_name_C", "EventReviseNameConfirmModify_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_revise_name.bp_revise_name_C.EventReviseNameFilterName
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_revise_name_C::EventReviseNameFilterName()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_revise_name_C", "EventReviseNameFilterName");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_revise_name.bp_revise_name_C.EventReviseNameFilterName_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_revise_name_C::EventReviseNameFilterName_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_revise_name_C", "EventReviseNameFilterName_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -37,23 +37,6 @@ public:
 	uint8                                         bDoNotCrumble : 1;                                 // 0x0003(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 };
 
-// ScriptStruct ApexDestruction.DestructibleParametersFlag
-// 0x0004 (0x0004 - 0x0000)
-struct alignas(0x04) FDestructibleParametersFlag final
-{
-public:
-	uint8                                         bAccumulateDamage : 1;                             // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bAssetDefinedSupport : 1;                          // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bWorldSupport : 1;                                 // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bDebrisTimeout : 1;                                // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bDebrisMaxSeparation : 1;                          // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bCrumbleSmallestChunks : 1;                        // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bAccurateRaycasts : 1;                             // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bUseValidBounds : 1;                               // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bFormExtendedStructures : 1;                       // 0x0001(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
 // ScriptStruct ApexDestruction.FractureMaterial
 // 0x0024 (0x0024 - 0x0000)
 struct FFractureMaterial final
@@ -124,6 +107,23 @@ public:
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         DebrisDepth;                                       // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         EssentialDepth;                                    // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// ScriptStruct ApexDestruction.DestructibleParametersFlag
+// 0x0004 (0x0004 - 0x0000)
+struct alignas(0x04) FDestructibleParametersFlag final
+{
+public:
+	uint8                                         bAccumulateDamage : 1;                             // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bAssetDefinedSupport : 1;                          // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bWorldSupport : 1;                                 // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bDebrisTimeout : 1;                                // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bDebrisMaxSeparation : 1;                          // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bCrumbleSmallestChunks : 1;                        // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bAccurateRaycasts : 1;                             // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bUseValidBounds : 1;                               // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bFormExtendedStructures : 1;                       // 0x0001(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 
 // ScriptStruct ApexDestruction.DestructibleParameters

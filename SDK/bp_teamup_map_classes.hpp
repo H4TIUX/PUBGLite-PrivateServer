@@ -18,26 +18,24 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_teamup_map.bp_teamup_map_C
-// 0x0100 (0x04E8 - 0x03E8)
+// 0x00F0 (0x04C8 - 0x03D8)
 class Abp_teamup_map_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_TeamUpMapInfo>       BP_ARRAY_TeamUpMapInfoList;                        // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_TeamUpMapInfo>       BP_ARRAY_TeamUpMapInfoList;                        // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class FString                                 BP_TeamUpMap_Model;                                // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	struct FBP_STRUCT_TeamUpMapInfo               BP_STRUCT_TeamUpMapInfo;                           // 0x0400(0x0090)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	uint8                                         BP_TeamUpMap_CurClickMapSelected : 1;              // 0x0490(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_491[0x7];                                      // 0x0491(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_TeamUpMap_CurMapSelectedHelpInfo;               // 0x0498(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_TeamUpMap_CurClickMapId;                        // 0x04A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         BP_TeamUpMap_LockSelectMap : 1;                    // 0x04AC(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_4AD[0x3];                                      // 0x04AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         BP_TeamUpMap_CurModelPerspective;                  // 0x04B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B4[0x4];                                      // 0x04B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_TeamUpMap_Model;                                // 0x04B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	uint8                                         BP_TeamUpMap_CanSelectMap : 1;                     // 0x04C8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_4C9[0x7];                                      // 0x04C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_TeamUpMap_Title;                                // 0x04D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04E0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class FString                                 BP_TeamUpMap_Title;                                // 0x0490(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_TeamUpMap_CurClickMapId;                        // 0x04A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         BP_TeamUpMap_CurClickMapSelected : 1;              // 0x04A4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_4A5[0x3];                                      // 0x04A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_TeamUpMap_CurMapSelectedHelpInfo;               // 0x04A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_TeamUpMap_CurModelPerspective;                  // 0x04B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         BP_TeamUpMap_CanSelectMap : 1;                     // 0x04BC(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         BP_TeamUpMap_LockSelectMap : 1;                    // 0x04BD(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_4BE[0x2];                                      // 0x04BE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04C0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();

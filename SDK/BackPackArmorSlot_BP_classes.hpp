@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "ShadowTrackerExtra_structs.hpp"
 #include "Basic_structs.hpp"
+#include "EBackPackDragOrigin_structs.hpp"
+#include "Engine_structs.hpp"
 #include "EBackpackClothArmorType_structs.hpp"
 #include "UnrealArchExt_classes.hpp"
-#include "EBackPackDragOrigin_structs.hpp"
+#include "ShadowTrackerExtra_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass BackPackArmorSlot_BP.BackPackArmorSlot_BP_C
-// 0x0130 (0x03E8 - 0x02B8)
+// 0x0128 (0x03E0 - 0x02B8)
 class UBackPackArmorSlot_BP_C final : public UUAEUserWidget
 {
 public:
@@ -36,16 +36,16 @@ public:
 	class UTextBlock*                             TextBlock_ShieldNum;                               // 0x02F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	EBackpackClothArmorType                       ClothArmorType;                                    // 0x02F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_2F9[0x7];                                      // 0x02F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBattleItemData                        ItemData;                                          // 0x0300(0x00A0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	uint8                                         IsDataNull : 1;                                    // 0x03A0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_3A1[0x3];                                      // 0x03A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         TimeRecorder;                                      // 0x03A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	UMulticastDelegateProperty_                   ItemBeDragBegin;                                   // 0x03A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	UMulticastDelegateProperty_                   ItemBeDragCancelled;                               // 0x03B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	uint8                                         IsDetectDrag : 1;                                  // 0x03C8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_3C9[0x7];                                      // 0x03C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	UMulticastDelegateProperty_                   ShowToolTip;                                       // 0x03D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class ABP_CharacterStudio_C*                  CharacterStudio;                                   // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBattleItemData                        ItemData;                                          // 0x0300(0x0098)(Edit, BlueprintVisible, DisableEditOnInstance)
+	uint8                                         IsDataNull : 1;                                    // 0x0398(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_399[0x3];                                      // 0x0399(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TimeRecorder;                                      // 0x039C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	UMulticastDelegateProperty_                   ItemBeDragBegin;                                   // 0x03A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	UMulticastDelegateProperty_                   ItemBeDragCancelled;                               // 0x03B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	uint8                                         IsDetectDrag : 1;                                  // 0x03C0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_3C1[0x7];                                      // 0x03C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	UMulticastDelegateProperty_                   ShowToolTip;                                       // 0x03C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class ABP_CharacterStudio_C*                  CharacterStudio;                                   // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BackPackArmorSlot_BP(int32 EntryPoint);

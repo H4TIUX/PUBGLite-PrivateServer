@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
 #include "Engine_structs.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
 #include "ShadowTrackerExtra_classes.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK
@@ -62,6 +62,9 @@ public:
 
 public:
 	void ExecuteUbergraph_Ingame_TeamPanel_BP(int32 EntryPoint);
+	void OnUpdateTeamPFList();
+	void Destruct();
+	void Construct();
 	void UpdateTeamUIPosition(float DeltaTime);
 	void SetCustomizeUIInfo(class UBP_SAVEGAME_UIElemLayout_C* SaveGame, int32 LayoutIndex);
 	void Event_PlayerOutPlane();

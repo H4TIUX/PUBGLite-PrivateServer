@@ -30,146 +30,6 @@ void Abp_alliance_C::UserConstructionScript()
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventAllianceQueryWxGroupTest2
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceQueryWxGroupTest2()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceQueryWxGroupTest2");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceQueryWxGroupTest2_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceQueryWxGroupTest2_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceQueryWxGroupTest2_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceClickJoinQQGroup
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceClickJoinQQGroup()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickJoinQQGroup");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceClickJoinQQGroup_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceClickJoinQQGroup_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickJoinQQGroup_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceClickChat
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceClickChat()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickChat");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceClickChat_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceClickChat_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickChat_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceClickBuildWxGroup
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceClickBuildWxGroup()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickBuildWxGroup");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceClickBuildWxGroup_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceClickBuildWxGroup_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickBuildWxGroup_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceClickJoinWxGroup
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceClickJoinWxGroup()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickJoinWxGroup");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceClickJoinWxGroup_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceClickJoinWxGroup_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickJoinWxGroup_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_alliance.bp_alliance_C.EventAllianceChangeTeamName
 // (BlueprintCallable, BlueprintEvent)
 
@@ -198,29 +58,169 @@ void Abp_alliance_C::EventAllianceChangeTeamName_NoFetch()
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventClickAllianceSelectIcon
+// Function bp_alliance.bp_alliance_C.EventAllianceQueryWxGroupTest
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_C::EventClickAllianceSelectIcon()
+void Abp_alliance_C::EventAllianceQueryWxGroupTest()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventClickAllianceSelectIcon");
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceQueryWxGroupTest");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventClickAllianceSelectIcon_NoFetch
+// Function bp_alliance.bp_alliance_C.EventAllianceQueryWxGroupTest_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_C::EventClickAllianceSelectIcon_NoFetch()
+void Abp_alliance_C::EventAllianceQueryWxGroupTest_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventClickAllianceSelectIcon_NoFetch");
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceQueryWxGroupTest_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventAllianceRecommendListReport
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventAllianceRecommendListReport()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceRecommendListReport");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventAllianceRecommendListReport_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventAllianceRecommendListReport_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceRecommendListReport_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventAllianceCreateTeamFilterName
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventAllianceCreateTeamFilterName()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceCreateTeamFilterName");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventAllianceCreateTeamFilterName_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventAllianceCreateTeamFilterName_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceCreateTeamFilterName_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventAllianceClickBuildWxGroupTest2
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventAllianceClickBuildWxGroupTest2()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickBuildWxGroupTest2");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventAllianceClickBuildWxGroupTest2_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventAllianceClickBuildWxGroupTest2_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickBuildWxGroupTest2_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventClickAllianceRandomNameBtn
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventClickAllianceRandomNameBtn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventClickAllianceRandomNameBtn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventClickAllianceRandomNameBtn_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventClickAllianceRandomNameBtn_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventClickAllianceRandomNameBtn_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventAllianceChangeTeamNotice
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventAllianceChangeTeamNotice()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceChangeTeamNotice");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventAllianceChangeTeamNotice_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventAllianceChangeTeamNotice_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceChangeTeamNotice_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -254,29 +254,57 @@ void Abp_alliance_C::EventAllianceClickBuildQQGroup_NoFetch()
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventClickAllianceCloseMainPanel
+// Function bp_alliance.bp_alliance_C.EventAllianceChangeTeamIcon
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_C::EventClickAllianceCloseMainPanel()
+void Abp_alliance_C::EventAllianceChangeTeamIcon()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventClickAllianceCloseMainPanel");
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceChangeTeamIcon");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventClickAllianceCloseMainPanel_NoFetch
+// Function bp_alliance.bp_alliance_C.EventAllianceChangeTeamIcon_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_C::EventClickAllianceCloseMainPanel_NoFetch()
+void Abp_alliance_C::EventAllianceChangeTeamIcon_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventClickAllianceCloseMainPanel_NoFetch");
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceChangeTeamIcon_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventClickAllianceCreateTeamBtn
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventClickAllianceCreateTeamBtn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventClickAllianceCreateTeamBtn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventClickAllianceCreateTeamBtn_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventClickAllianceCreateTeamBtn_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventClickAllianceCreateTeamBtn_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -310,90 +338,6 @@ void Abp_alliance_C::EventAllianceSelfTeamReport_NoFetch()
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventAllianceClickRecruitApplyList
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceClickRecruitApplyList()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickRecruitApplyList");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceClickRecruitApplyList_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceClickRecruitApplyList_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickRecruitApplyList_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceFinishCreation
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceFinishCreation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceFinishCreation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceFinishCreation_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceFinishCreation_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceFinishCreation_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventClickShowSelectIconMainPanel_FromCreatePanel
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventClickShowSelectIconMainPanel_FromCreatePanel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventClickShowSelectIconMainPanel_FromCreatePanel");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventClickShowSelectIconMainPanel_FromCreatePanel_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventClickShowSelectIconMainPanel_FromCreatePanel_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventClickShowSelectIconMainPanel_FromCreatePanel_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_alliance.bp_alliance_C.EventAllianceClickRecommendList
 // (BlueprintCallable, BlueprintEvent)
 
@@ -422,29 +366,29 @@ void Abp_alliance_C::EventAllianceClickRecommendList_NoFetch()
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventAllianceClickRecruit
+// Function bp_alliance.bp_alliance_C.EventAllianceClickApplyedList
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_C::EventAllianceClickRecruit()
+void Abp_alliance_C::EventAllianceClickApplyedList()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickRecruit");
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickApplyedList");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventAllianceClickRecruit_NoFetch
+// Function bp_alliance.bp_alliance_C.EventAllianceClickApplyedList_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_C::EventAllianceClickRecruit_NoFetch()
+void Abp_alliance_C::EventAllianceClickApplyedList_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickRecruit_NoFetch");
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickApplyedList_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -506,34 +450,6 @@ void Abp_alliance_C::EventAllianceClickRules_NoFetch()
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventAllianceChangeTeamIcon
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceChangeTeamIcon()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceChangeTeamIcon");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceChangeTeamIcon_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceChangeTeamIcon_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceChangeTeamIcon_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_alliance.bp_alliance_C.EventAllianceClickJoinTeam
 // (BlueprintCallable, BlueprintEvent)
 
@@ -590,29 +506,57 @@ void Abp_alliance_C::EventAllianceClickRecommendTeam_NoFetch()
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventSetInfo_Push
+// Function bp_alliance.bp_alliance_C.EventAllianceClickUnbindQQGroup
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_C::EventSetInfo_Push()
+void Abp_alliance_C::EventAllianceClickUnbindQQGroup()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventSetInfo_Push");
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickUnbindQQGroup");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventSetInfo_Push_NoFetch
+// Function bp_alliance.bp_alliance_C.EventAllianceClickUnbindQQGroup_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_C::EventSetInfo_Push_NoFetch()
+void Abp_alliance_C::EventAllianceClickUnbindQQGroup_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventSetInfo_Push_NoFetch");
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickUnbindQQGroup_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventAllianceClickJoinQQGroup
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventAllianceClickJoinQQGroup()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickJoinQQGroup");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventAllianceClickJoinQQGroup_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventAllianceClickJoinQQGroup_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickJoinQQGroup_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -646,253 +590,57 @@ void Abp_alliance_C::EventAllianceClickUnbindWxGroup_NoFetch()
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventClickAllianceRandomNameBtn
+// Function bp_alliance.bp_alliance_C.EventAllianceClickJoinWxGroup
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_C::EventClickAllianceRandomNameBtn()
+void Abp_alliance_C::EventAllianceClickJoinWxGroup()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventClickAllianceRandomNameBtn");
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickJoinWxGroup");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventClickAllianceRandomNameBtn_NoFetch
+// Function bp_alliance.bp_alliance_C.EventAllianceClickJoinWxGroup_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_C::EventClickAllianceRandomNameBtn_NoFetch()
+void Abp_alliance_C::EventAllianceClickJoinWxGroup_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventClickAllianceRandomNameBtn_NoFetch");
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickJoinWxGroup_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventAllianceClickBuildWxGroupTest2
+// Function bp_alliance.bp_alliance_C.EventAllianceQueryWxGroupTest2
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_C::EventAllianceClickBuildWxGroupTest2()
+void Abp_alliance_C::EventAllianceQueryWxGroupTest2()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickBuildWxGroupTest2");
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceQueryWxGroupTest2");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventAllianceClickBuildWxGroupTest2_NoFetch
+// Function bp_alliance.bp_alliance_C.EventAllianceQueryWxGroupTest2_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_C::EventAllianceClickBuildWxGroupTest2_NoFetch()
+void Abp_alliance_C::EventAllianceQueryWxGroupTest2_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickBuildWxGroupTest2_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceChangeTeamNotice
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceChangeTeamNotice()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceChangeTeamNotice");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceChangeTeamNotice_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceChangeTeamNotice_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceChangeTeamNotice_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceClickAppointment
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceClickAppointment()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickAppointment");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceClickAppointment_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceClickAppointment_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickAppointment_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceClickKickout
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceClickKickout()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickKickout");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceClickKickout_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceClickKickout_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickKickout_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceClickAddFriend
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceClickAddFriend()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickAddFriend");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceClickAddFriend_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceClickAddFriend_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickAddFriend_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceCreateTeamFilterName
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceCreateTeamFilterName()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceCreateTeamFilterName");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceCreateTeamFilterName_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceCreateTeamFilterName_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceCreateTeamFilterName_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceClickOpenView
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceClickOpenView()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickOpenView");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceClickOpenView_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceClickOpenView_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickOpenView_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceClickExitTeam
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceClickExitTeam()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickExitTeam");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceClickExitTeam_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceClickExitTeam_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickExitTeam_NoFetch");
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceQueryWxGroupTest2_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -926,57 +674,169 @@ void Abp_alliance_C::EventFetchInfo_NoFetch()
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventAllianceClickApplyedList
+// Function bp_alliance.bp_alliance_C.EventAllianceClickRecruitApplyList
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_C::EventAllianceClickApplyedList()
+void Abp_alliance_C::EventAllianceClickRecruitApplyList()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickApplyedList");
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickRecruitApplyList");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventAllianceClickApplyedList_NoFetch
+// Function bp_alliance.bp_alliance_C.EventAllianceClickRecruitApplyList_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_C::EventAllianceClickApplyedList_NoFetch()
+void Abp_alliance_C::EventAllianceClickRecruitApplyList_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickApplyedList_NoFetch");
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickRecruitApplyList_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventAllianceRecommendListReport
+// Function bp_alliance.bp_alliance_C.EventAllianceClickBuildWxGroup
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_C::EventAllianceRecommendListReport()
+void Abp_alliance_C::EventAllianceClickBuildWxGroup()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceRecommendListReport");
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickBuildWxGroup");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventAllianceRecommendListReport_NoFetch
+// Function bp_alliance.bp_alliance_C.EventAllianceClickBuildWxGroup_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_C::EventAllianceRecommendListReport_NoFetch()
+void Abp_alliance_C::EventAllianceClickBuildWxGroup_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceRecommendListReport_NoFetch");
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickBuildWxGroup_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventClickAllianceCloseMainPanel
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventClickAllianceCloseMainPanel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventClickAllianceCloseMainPanel");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventClickAllianceCloseMainPanel_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventClickAllianceCloseMainPanel_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventClickAllianceCloseMainPanel_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventAllianceClickChat
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventAllianceClickChat()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickChat");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventAllianceClickChat_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventAllianceClickChat_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickChat_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventAllianceClickAppointment
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventAllianceClickAppointment()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickAppointment");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventAllianceClickAppointment_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventAllianceClickAppointment_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickAppointment_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventAllianceFinishCreation
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventAllianceFinishCreation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceFinishCreation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventAllianceFinishCreation_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventAllianceFinishCreation_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceFinishCreation_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1010,6 +870,174 @@ void Abp_alliance_C::EventClickShowSelectIconMainPanel_FromMainPanel_NoFetch()
 }
 
 
+// Function bp_alliance.bp_alliance_C.EventSetInfo_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventSetInfo_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventSetInfo_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventSetInfo_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventSetInfo_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventSetInfo_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventAllianceClickRecruit
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventAllianceClickRecruit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickRecruit");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventAllianceClickRecruit_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventAllianceClickRecruit_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickRecruit_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventAllianceClickExitTeam
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventAllianceClickExitTeam()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickExitTeam");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventAllianceClickExitTeam_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventAllianceClickExitTeam_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickExitTeam_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventClickShowSelectIconMainPanel_FromCreatePanel
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventClickShowSelectIconMainPanel_FromCreatePanel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventClickShowSelectIconMainPanel_FromCreatePanel");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventClickShowSelectIconMainPanel_FromCreatePanel_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventClickShowSelectIconMainPanel_FromCreatePanel_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventClickShowSelectIconMainPanel_FromCreatePanel_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventAllianceClickKickout
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventAllianceClickKickout()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickKickout");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventAllianceClickKickout_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventAllianceClickKickout_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickKickout_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventClickAllianceSelectIcon
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventClickAllianceSelectIcon()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventClickAllianceSelectIcon");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance.bp_alliance_C.EventClickAllianceSelectIcon_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_C::EventClickAllianceSelectIcon_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventClickAllianceSelectIcon_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_alliance.bp_alliance_C.EventAllianceClickBuildWxGroupTest
 // (BlueprintCallable, BlueprintEvent)
 
@@ -1038,85 +1066,57 @@ void Abp_alliance_C::EventAllianceClickBuildWxGroupTest_NoFetch()
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventAllianceQueryWxGroupTest
+// Function bp_alliance.bp_alliance_C.EventAllianceClickAddFriend
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_C::EventAllianceQueryWxGroupTest()
+void Abp_alliance_C::EventAllianceClickAddFriend()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceQueryWxGroupTest");
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickAddFriend");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventAllianceQueryWxGroupTest_NoFetch
+// Function bp_alliance.bp_alliance_C.EventAllianceClickAddFriend_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_C::EventAllianceQueryWxGroupTest_NoFetch()
+void Abp_alliance_C::EventAllianceClickAddFriend_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceQueryWxGroupTest_NoFetch");
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickAddFriend_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventClickAllianceCreateTeamBtn
+// Function bp_alliance.bp_alliance_C.EventAllianceClickOpenView
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_C::EventClickAllianceCreateTeamBtn()
+void Abp_alliance_C::EventAllianceClickOpenView()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventClickAllianceCreateTeamBtn");
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickOpenView");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_alliance.bp_alliance_C.EventClickAllianceCreateTeamBtn_NoFetch
+// Function bp_alliance.bp_alliance_C.EventAllianceClickOpenView_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_C::EventClickAllianceCreateTeamBtn_NoFetch()
+void Abp_alliance_C::EventAllianceClickOpenView_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventClickAllianceCreateTeamBtn_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceClickUnbindQQGroup
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceClickUnbindQQGroup()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickUnbindQQGroup");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance.bp_alliance_C.EventAllianceClickUnbindQQGroup_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_C::EventAllianceClickUnbindQQGroup_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickUnbindQQGroup_NoFetch");
+		Func = GetClass()->GetFunction("bp_alliance_C", "EventAllianceClickOpenView_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

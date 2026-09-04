@@ -12,43 +12,50 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass LitePCLobby.LitePCLobby_C
-// 0x0090 (0x0458 - 0x03C8)
+// 0x00B0 (0x0468 - 0x03B8)
 class ALitePCLobby_C final : public ALevelScriptActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C8(0x0008)(Transient, DuplicateTransient)
-	class FName                                   lastSceneCamera;                                   // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFrontendUtils*                         frontUtils;                                        // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         blockBackScene : 1;                                // 0x03E0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_3E1[0x7];                                      // 0x03E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_LitePCLobbyPC_C*                    PC;                                                // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_LitePCLobbyHUD_C*                   HUD;                                               // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CloseUpPosition_ExecuteUbergraph_LitePCLobby_RefProperty; // 0x03F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ALevelSequenceActor*                    Sanhok_LevelSequence_ExecuteUbergraph_LitePCLobby_RefProperty; // 0x0400(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ACameraActor*                           MainCamera_ExecuteUbergraph_LitePCLobby_RefProperty; // 0x0408(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AEmitter*                               P_BG_WaterFallRefraction_Ultra_9_ExecuteUbergraph_LitePCLobby_RefProperty; // 0x0410(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AEmitter*                               P_BG_SlimFallingWater_Ultra_7_ExecuteUbergraph_LitePCLobby_RefProperty; // 0x0418(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AEmitter*                               P_BG_BigFallingWater_Ultra_5_ExecuteUbergraph_LitePCLobby_RefProperty; // 0x0420(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AEmitter*                               P_BG_BigFallingSplash_All_11_ExecuteUbergraph_LitePCLobby_RefProperty; // 0x0428(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AEmitter*                               P_BG_BigFallingWater_High_14_ExecuteUbergraph_LitePCLobby_RefProperty; // 0x0430(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Position_3_EdGraph_2_RefProperty;                  // 0x0438(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Position_2_EdGraph_2_RefProperty;                  // 0x0440(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Position_1_EdGraph_2_RefProperty;                  // 0x0448(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Position_0_EdGraph_2_RefProperty;                  // 0x0450(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B8(0x0008)(Transient, DuplicateTransient)
+	struct FLinearColor                           Flashing______0_368B65414F716B1EE09FA09090979995;  // 0x03C0(0x0010)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Flashing__Direction_368B65414F716B1EE09FA09090979995; // 0x03D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D1[0x7];                                      // 0x03D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Flashing;                                          // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_LitePCLobbyPC_C*                    PC;                                                // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_LitePCLobbyHUD_C*                   HUD;                                               // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CloseUpPosition_ExecuteUbergraph_LitePCLobby_RefProperty; // 0x03F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ASpotLight*                             SpotLight_Window_ExecuteUbergraph_LitePCLobby_RefProperty; // 0x03F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ACameraActor*                           close_up_ExecuteUbergraph_LitePCLobby_RefProperty; // 0x0400(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AEmitter*                               P_LB_VikendiSpark3_EdGraph_10_RefProperty;         // 0x0408(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AEmitter*                               P_LB_VikendiSpark2_EdGraph_10_RefProperty;         // 0x0410(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AEmitter*                               P_LB_VikendiSpark1_EdGraph_10_RefProperty;         // 0x0418(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AEmitter*                               P_LB_VikendiSpark0_EdGraph_10_RefProperty;         // 0x0420(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AEmitter*                               P_LB_RedzoneLight_EdGraph_10_RefProperty;          // 0x0428(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AEmitter*                               P_LB_Redzone0_EdGraph_10_RefProperty;              // 0x0430(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AEmitter*                               P_LB_Redzone2_EdGraph_10_RefProperty;              // 0x0438(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AEmitter*                               P_LB_Redzone1_EdGraph_10_RefProperty;              // 0x0440(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Position_3_EdGraph_11_RefProperty;                 // 0x0448(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Position_2_EdGraph_11_RefProperty;                 // 0x0450(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Position_1_EdGraph_11_RefProperty;                 // 0x0458(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Position_0_EdGraph_11_RefProperty;                 // 0x0460(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_LitePCLobby(int32 EntryPoint);
 	void ReceiveBeginPlay();
-	void Event_OnGameUserSettingApplied();
 	void OnWardrobe();
-	void OnSolo();
 	void OnCustomAppearance();
+	void Flashing__UpdateFunc();
+	void Flashing__FinishedFunc();
+	void Set_ViewTarget(class AActor* NewViewTarget);
+	void Set_SpotColor(class ULightComponent* lightTarget, const struct FLinearColor& NewLightColor, float lightIntensity);
+	void Set_Bom();
 	void GetPlayerSlot(TArray<class AActor*>* Slots);
 
 public:

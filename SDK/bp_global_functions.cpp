@@ -30,29 +30,57 @@ void Abp_global_C::UserConstructionScript()
 }
 
 
-// Function bp_global.bp_global_C.EventShowPlatIconTips
+// Function bp_global.bp_global_C.EventCheckIfMenuOpen
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_global_C::EventShowPlatIconTips()
+void Abp_global_C::EventCheckIfMenuOpen()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventShowPlatIconTips");
+		Func = GetClass()->GetFunction("bp_global_C", "EventCheckIfMenuOpen");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_global.bp_global_C.EventShowPlatIconTips_NoFetch
+// Function bp_global.bp_global_C.EventCheckIfMenuOpen_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_global_C::EventShowPlatIconTips_NoFetch()
+void Abp_global_C::EventCheckIfMenuOpen_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventShowPlatIconTips_NoFetch");
+		Func = GetClass()->GetFunction("bp_global_C", "EventCheckIfMenuOpen_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_global.bp_global_C.EventJumpUrl
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_global_C::EventJumpUrl()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_global_C", "EventJumpUrl");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_global.bp_global_C.EventJumpUrl_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_global_C::EventJumpUrl_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_global_C", "EventJumpUrl_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -81,118 +109,6 @@ void Abp_global_C::EventGlobalShowItemTips_Push_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_global_C", "EventGlobalShowItemTips_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_global.bp_global_C.EventGlobalShowHelpTips
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_global_C::EventGlobalShowHelpTips()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventGlobalShowHelpTips");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_global.bp_global_C.EventGlobalShowHelpTips_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_global_C::EventGlobalShowHelpTips_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventGlobalShowHelpTips_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_global.bp_global_C.EventSetLobbyMenuOpenStatus
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_global_C::EventSetLobbyMenuOpenStatus()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventSetLobbyMenuOpenStatus");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_global.bp_global_C.EventSetLobbyMenuOpenStatus_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_global_C::EventSetLobbyMenuOpenStatus_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventSetLobbyMenuOpenStatus_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_global.bp_global_C.EventGetItemLimitTimeInfo
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_global_C::EventGetItemLimitTimeInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventGetItemLimitTimeInfo");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_global.bp_global_C.EventGetItemLimitTimeInfo_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_global_C::EventGetItemLimitTimeInfo_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventGetItemLimitTimeInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_global.bp_global_C.EventChatBanInfo
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_global_C::EventChatBanInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventChatBanInfo");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_global.bp_global_C.EventChatBanInfo_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_global_C::EventChatBanInfo_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventChatBanInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -282,29 +198,85 @@ void Abp_global_C::EventGlobalUseItem_NoFetch()
 }
 
 
-// Function bp_global.bp_global_C.EventChatCheckBan
+// Function bp_global.bp_global_C.EventSetLobbyMenuOpenStatus
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_global_C::EventChatCheckBan()
+void Abp_global_C::EventSetLobbyMenuOpenStatus()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventChatCheckBan");
+		Func = GetClass()->GetFunction("bp_global_C", "EventSetLobbyMenuOpenStatus");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_global.bp_global_C.EventChatCheckBan_NoFetch
+// Function bp_global.bp_global_C.EventSetLobbyMenuOpenStatus_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_global_C::EventChatCheckBan_NoFetch()
+void Abp_global_C::EventSetLobbyMenuOpenStatus_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventChatCheckBan_NoFetch");
+		Func = GetClass()->GetFunction("bp_global_C", "EventSetLobbyMenuOpenStatus_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_global.bp_global_C.EventChatBanInfo
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_global_C::EventChatBanInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_global_C", "EventChatBanInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_global.bp_global_C.EventChatBanInfo_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_global_C::EventChatBanInfo_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_global_C", "EventChatBanInfo_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_global.bp_global_C.EventShowPlatIconTips
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_global_C::EventShowPlatIconTips()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_global_C", "EventShowPlatIconTips");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_global.bp_global_C.EventShowPlatIconTips_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_global_C::EventShowPlatIconTips_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_global_C", "EventShowPlatIconTips_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -366,57 +338,29 @@ void Abp_global_C::EventShowPlatQQVip_NoFetch()
 }
 
 
-// Function bp_global.bp_global_C.EventGlobalCloseHelpTips
+// Function bp_global.bp_global_C.EventSetPlayedCG
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_global_C::EventGlobalCloseHelpTips()
+void Abp_global_C::EventSetPlayedCG()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventGlobalCloseHelpTips");
+		Func = GetClass()->GetFunction("bp_global_C", "EventSetPlayedCG");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_global.bp_global_C.EventGlobalCloseHelpTips_NoFetch
+// Function bp_global.bp_global_C.EventSetPlayedCG_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_global_C::EventGlobalCloseHelpTips_NoFetch()
+void Abp_global_C::EventSetPlayedCG_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventGlobalCloseHelpTips_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_global.bp_global_C.EventShowPlatQQStartup
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_global_C::EventShowPlatQQStartup()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventShowPlatQQStartup");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_global.bp_global_C.EventShowPlatQQStartup_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_global_C::EventShowPlatQQStartup_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventShowPlatQQStartup_NoFetch");
+		Func = GetClass()->GetFunction("bp_global_C", "EventSetPlayedCG_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -450,6 +394,34 @@ void Abp_global_C::EventGlobalCloseItemTips_NoFetch()
 }
 
 
+// Function bp_global.bp_global_C.EventAndroidQuitGame
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_global_C::EventAndroidQuitGame()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_global_C", "EventAndroidQuitGame");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_global.bp_global_C.EventAndroidQuitGame_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_global_C::EventAndroidQuitGame_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_global_C", "EventAndroidQuitGame_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_global.bp_global_C.EventSendBAReport
 // (BlueprintCallable, BlueprintEvent)
 
@@ -478,113 +450,29 @@ void Abp_global_C::EventSendBAReport_NoFetch()
 }
 
 
-// Function bp_global.bp_global_C.EventCheckIfMenuOpen
+// Function bp_global.bp_global_C.EventShowPlatQQStartup
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_global_C::EventCheckIfMenuOpen()
+void Abp_global_C::EventShowPlatQQStartup()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventCheckIfMenuOpen");
+		Func = GetClass()->GetFunction("bp_global_C", "EventShowPlatQQStartup");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_global.bp_global_C.EventCheckIfMenuOpen_NoFetch
+// Function bp_global.bp_global_C.EventShowPlatQQStartup_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_global_C::EventCheckIfMenuOpen_NoFetch()
+void Abp_global_C::EventShowPlatQQStartup_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventCheckIfMenuOpen_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_global.bp_global_C.EventSetPlayedCG
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_global_C::EventSetPlayedCG()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventSetPlayedCG");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_global.bp_global_C.EventSetPlayedCG_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_global_C::EventSetPlayedCG_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventSetPlayedCG_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_global.bp_global_C.EventUpdateServerTime
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_global_C::EventUpdateServerTime()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventUpdateServerTime");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_global.bp_global_C.EventUpdateServerTime_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_global_C::EventUpdateServerTime_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventUpdateServerTime_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_global.bp_global_C.EventSetInfo_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_global_C::EventSetInfo_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventSetInfo_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_global.bp_global_C.EventSetInfo_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_global_C::EventSetInfo_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventSetInfo_Push_NoFetch");
+		Func = GetClass()->GetFunction("bp_global_C", "EventShowPlatQQStartup_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -618,57 +506,169 @@ void Abp_global_C::EventFetchInfo_NoFetch()
 }
 
 
-// Function bp_global.bp_global_C.EventAndroidQuitGame
+// Function bp_global.bp_global_C.EventGlobalCloseHelpTips
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_global_C::EventAndroidQuitGame()
+void Abp_global_C::EventGlobalCloseHelpTips()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventAndroidQuitGame");
+		Func = GetClass()->GetFunction("bp_global_C", "EventGlobalCloseHelpTips");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_global.bp_global_C.EventAndroidQuitGame_NoFetch
+// Function bp_global.bp_global_C.EventGlobalCloseHelpTips_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_global_C::EventAndroidQuitGame_NoFetch()
+void Abp_global_C::EventGlobalCloseHelpTips_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventAndroidQuitGame_NoFetch");
+		Func = GetClass()->GetFunction("bp_global_C", "EventGlobalCloseHelpTips_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_global.bp_global_C.EventJumpUrl
+// Function bp_global.bp_global_C.EventGetItemLimitTimeInfo
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_global_C::EventJumpUrl()
+void Abp_global_C::EventGetItemLimitTimeInfo()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventJumpUrl");
+		Func = GetClass()->GetFunction("bp_global_C", "EventGetItemLimitTimeInfo");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_global.bp_global_C.EventJumpUrl_NoFetch
+// Function bp_global.bp_global_C.EventGetItemLimitTimeInfo_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_global_C::EventJumpUrl_NoFetch()
+void Abp_global_C::EventGetItemLimitTimeInfo_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_global_C", "EventJumpUrl_NoFetch");
+		Func = GetClass()->GetFunction("bp_global_C", "EventGetItemLimitTimeInfo_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_global.bp_global_C.EventSetInfo_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_global_C::EventSetInfo_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_global_C", "EventSetInfo_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_global.bp_global_C.EventSetInfo_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_global_C::EventSetInfo_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_global_C", "EventSetInfo_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_global.bp_global_C.EventChatCheckBan
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_global_C::EventChatCheckBan()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_global_C", "EventChatCheckBan");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_global.bp_global_C.EventChatCheckBan_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_global_C::EventChatCheckBan_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_global_C", "EventChatCheckBan_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_global.bp_global_C.EventGlobalShowHelpTips
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_global_C::EventGlobalShowHelpTips()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_global_C", "EventGlobalShowHelpTips");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_global.bp_global_C.EventGlobalShowHelpTips_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_global_C::EventGlobalShowHelpTips_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_global_C", "EventGlobalShowHelpTips_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_global.bp_global_C.EventUpdateServerTime
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_global_C::EventUpdateServerTime()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_global_C", "EventUpdateServerTime");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_global.bp_global_C.EventUpdateServerTime_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_global_C::EventUpdateServerTime_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_global_C", "EventUpdateServerTime_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

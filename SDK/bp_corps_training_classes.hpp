@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_STRUCT_CorpsTrainCorpsTask_structs.hpp"
 #include "BP_STRUCT_CorpsTrainRankItemSelf_structs.hpp"
+#include "BP_STRUCT_CorpsTrainCorpsTask_structs.hpp"
 #include "BP_STRUCT_CorpsTrainRankItem_structs.hpp"
 #include "BP_STRUCT_CorpsTrainAwardItem_structs.hpp"
 #include "Client_classes.hpp"
@@ -21,55 +21,59 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_corps_training.bp_corps_training_C
-// 0x0160 (0x0548 - 0x03E8)
+// 0x0178 (0x0550 - 0x03D8)
 class Abp_corps_training_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_CorpsTrainCorpsTask> BP_ARRAY_CorpsTrainCorpsTask;                      // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBP_STRUCT_CorpsTrainRankItemSelf      BP_STRUCT_CorpsTrainRankItemSelf;                  // 0x0400(0x0068)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_CorpsTrainRankItem>  BP_ARRAY_CorpsTrainRankList;                       // 0x0468(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_Train_CorpsScore;                               // 0x0478(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_Train_SelfTarget;                               // 0x047C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_CorpsTrainAwardItem> BP_ARRAY_CorpsTrainAward;                          // 0x0480(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	uint8                                         BP_Train_SelectIsFriend : 1;                       // 0x0490(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_491[0x3];                                      // 0x0491(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         BP_Train_TodayID;                                  // 0x0494(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_CorpsTrainAwardItem         BP_STRUCT_CorpsTrainAwardItem;                     // 0x0498(0x0008)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_Train_CorpsProgress;                            // 0x04A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_Train_GetCorpsAwardIndex;                       // 0x04A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_Train_SelfScore;                                // 0x04A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_Train_SelfTaskID;                               // 0x04AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_CorpsTrainRankItem          BP_STRUCT_CorpsTrainRankItem;                      // 0x04B0(0x0068)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class FString                                 BP_Train_SelectRankUid;                            // 0x0518(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_Train_SelfStatus;                               // 0x0528(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         BP_Train_isReLoadRankList : 1;                     // 0x052C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_52D[0x3];                                      // 0x052D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_CorpsTrainCorpsTask         BP_STRUCT_CorpsTrainCorpsTask;                     // 0x0530(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0540(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	int32                                         BP_Train_SelfTarget;                               // 0x03E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E4[0x4];                                      // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_CorpsTrainRankItemSelf      BP_STRUCT_CorpsTrainRankItemSelf;                  // 0x03E8(0x0068)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_Train_TodayID;                                  // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_Train_GetCorpsAwardIndex;                       // 0x0454(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBP_STRUCT_CorpsTrainCorpsTask         BP_STRUCT_CorpsTrainCorpsTask;                     // 0x0458(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_Train_CorpsScore;                               // 0x0468(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46C[0x4];                                      // 0x046C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_CorpsTrainRankItem          BP_STRUCT_CorpsTrainRankItem;                      // 0x0470(0x0068)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_CorpsTrainCorpsTask> BP_ARRAY_CorpsTrainCorpsTask;                      // 0x04D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_Train_SelfStatus;                               // 0x04E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4EC[0x4];                                      // 0x04EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_CorpsTrainRankItem>  BP_ARRAY_CorpsTrainRankList;                       // 0x04F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_Train_CorpsProgress;                            // 0x0500(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_504[0x4];                                      // 0x0504(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_Train_SelectRankUid;                            // 0x0508(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_Train_SelfTaskID;                               // 0x0518(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBP_STRUCT_CorpsTrainAwardItem         BP_STRUCT_CorpsTrainAwardItem;                     // 0x051C(0x0008)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_Train_SelfScore;                                // 0x0524(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         BP_Train_SelectIsFriend : 1;                       // 0x0528(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_529[0x7];                                      // 0x0529(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_CorpsTrainAwardItem> BP_ARRAY_CorpsTrainAward;                          // 0x0530(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	uint8                                         BP_Train_isReLoadRankList : 1;                     // 0x0540(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_541[0x7];                                      // 0x0541(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0548(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventCorpsTrainingUIAddFriend();
-	void EventCorpsTrainingUIAddFriend_NoFetch();
 	void EventCorpsTrainingUIGetCorpsAward();
 	void EventCorpsTrainingUIGetCorpsAward_NoFetch();
-	void EventCorpsTrainingUIHelp();
-	void EventCorpsTrainingUIHelp_NoFetch();
-	void EventCorpsTrainingUIGetSelfAward();
-	void EventCorpsTrainingUIGetSelfAward_NoFetch();
-	void EventCorpsTrainingUIShowRoleInfo();
-	void EventCorpsTrainingUIShowRoleInfo_NoFetch();
-	void EventCorpsTrainingUIItemMenu();
-	void EventCorpsTrainingUIItemMenu_NoFetch();
 	void EventCorpsTrainingUIOpenHisRank();
 	void EventCorpsTrainingUIOpenHisRank_NoFetch();
 	void EventCorpsTrainingUIUpdate();
 	void EventCorpsTrainingUIUpdate_NoFetch();
-	void EventCorpsTrainingUIHide();
-	void EventCorpsTrainingUIHide_NoFetch();
 	void EventCorpsTrainingUIChat();
 	void EventCorpsTrainingUIChat_NoFetch();
+	void EventCorpsTrainingUIGetSelfAward();
+	void EventCorpsTrainingUIGetSelfAward_NoFetch();
+	void EventCorpsTrainingUIHelp();
+	void EventCorpsTrainingUIHelp_NoFetch();
+	void EventCorpsTrainingUIAddFriend();
+	void EventCorpsTrainingUIAddFriend_NoFetch();
+	void EventCorpsTrainingUIShowRoleInfo();
+	void EventCorpsTrainingUIShowRoleInfo_NoFetch();
+	void EventCorpsTrainingUIItemMenu();
+	void EventCorpsTrainingUIItemMenu_NoFetch();
+	void EventCorpsTrainingUIHide();
+	void EventCorpsTrainingUIHide_NoFetch();
 
 public:
 	static class UClass* StaticClass()

@@ -30,29 +30,29 @@ void Abp_festival_share_award_C::UserConstructionScript()
 }
 
 
-// Function bp_festival_share_award.bp_festival_share_award_C.EventFestivalShareActAwardReq
+// Function bp_festival_share_award.bp_festival_share_award_C.EventFestivalShareActUIHide
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_festival_share_award_C::EventFestivalShareActAwardReq()
+void Abp_festival_share_award_C::EventFestivalShareActUIHide()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_festival_share_award_C", "EventFestivalShareActAwardReq");
+		Func = GetClass()->GetFunction("bp_festival_share_award_C", "EventFestivalShareActUIHide");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_festival_share_award.bp_festival_share_award_C.EventFestivalShareActAwardReq_NoFetch
+// Function bp_festival_share_award.bp_festival_share_award_C.EventFestivalShareActUIHide_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_festival_share_award_C::EventFestivalShareActAwardReq_NoFetch()
+void Abp_festival_share_award_C::EventFestivalShareActUIHide_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_festival_share_award_C", "EventFestivalShareActAwardReq_NoFetch");
+		Func = GetClass()->GetFunction("bp_festival_share_award_C", "EventFestivalShareActUIHide_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,29 +86,29 @@ void Abp_festival_share_award_C::EventFestivalShareActBtnShare_NoFetch()
 }
 
 
-// Function bp_festival_share_award.bp_festival_share_award_C.EventFestivalShareActUIHide
+// Function bp_festival_share_award.bp_festival_share_award_C.EventFestivalShareActAwardReq
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_festival_share_award_C::EventFestivalShareActUIHide()
+void Abp_festival_share_award_C::EventFestivalShareActAwardReq()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_festival_share_award_C", "EventFestivalShareActUIHide");
+		Func = GetClass()->GetFunction("bp_festival_share_award_C", "EventFestivalShareActAwardReq");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_festival_share_award.bp_festival_share_award_C.EventFestivalShareActUIHide_NoFetch
+// Function bp_festival_share_award.bp_festival_share_award_C.EventFestivalShareActAwardReq_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_festival_share_award_C::EventFestivalShareActUIHide_NoFetch()
+void Abp_festival_share_award_C::EventFestivalShareActAwardReq_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_festival_share_award_C", "EventFestivalShareActUIHide_NoFetch");
+		Func = GetClass()->GetFunction("bp_festival_share_award_C", "EventFestivalShareActAwardReq_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

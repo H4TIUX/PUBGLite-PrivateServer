@@ -37,6 +37,280 @@ void UMainControlPanelTochButton_C::ExecuteUbergraph_MainControlPanelTochButton(
 }
 
 
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.OnFPPModeChange
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlPanelTochButton_C::OnFPPModeChange()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "OnFPPModeChange");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.OnSwitchOperationByPlayerControllerState
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlPanelTochButton_C::OnSwitchOperationByPlayerControllerState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "OnSwitchOperationByPlayerControllerState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.OnReadyToRetriveBeginnerFinishedGuide
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlPanelTochButton_C::OnReadyToRetriveBeginnerFinishedGuide()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "OnReadyToRetriveBeginnerFinishedGuide");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.OnBindOrUnBindJoyStickSprint
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlPanelTochButton_C::OnBindOrUnBindJoyStickSprint()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "OnBindOrUnBindJoyStickSprint");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.OnUpdateStandCrouchAndSprint
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlPanelTochButton_C::OnUpdateStandCrouchAndSprint()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "OnUpdateStandCrouchAndSprint");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.OnSwitchCameraSatrtHandle
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlPanelTochButton_C::OnSwitchCameraSatrtHandle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "OnSwitchCameraSatrtHandle");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.OnShowHideKeyHintWidget
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlPanelTochButton_C::OnShowHideKeyHintWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "OnShowHideKeyHintWidget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.OnUpdatePickUpList
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlPanelTochButton_C::OnUpdatePickUpList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "OnUpdatePickUpList");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.OnNotifyPickup
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlPanelTochButton_C::OnNotifyPickup()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "OnNotifyPickup");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.OnWeaponEquipAttachment
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlPanelTochButton_C::OnWeaponEquipAttachment()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "OnWeaponEquipAttachment");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.OnShowShooterUI
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlPanelTochButton_C::OnShowShooterUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "OnShowShooterUI");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.OnSetAutoNavigateTranslation
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlPanelTochButton_C::OnSetAutoNavigateTranslation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "OnSetAutoNavigateTranslation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.OnMakeFireModeEffect
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlPanelTochButton_C::OnMakeFireModeEffect()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "OnMakeFireModeEffect");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.OnScopeChanged
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlPanelTochButton_C::OnScopeChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "OnScopeChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.OnSwitchCameraModeScope_Aim
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlPanelTochButton_C::OnSwitchCameraModeScope_Aim()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "OnSwitchCameraModeScope_Aim");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.OnHightLightAimBtn
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlPanelTochButton_C::OnHightLightAimBtn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "OnHightLightAimBtn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.OnNormalAimBtn
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlPanelTochButton_C::OnNormalAimBtn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "OnNormalAimBtn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UMainControlPanelTochButton_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UMainControlPanelTochButton_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "Tick");
+
+	Params::MainControlPanelTochButton_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function MainControlPanelTochButton.MainControlPanelTochButton_C.GameStartCountDown
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -66,6 +340,20 @@ void UMainControlPanelTochButton_C::ApplyCustomUIPosition()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "ApplyCustomUIPosition");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.SetSettingControlUI
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UMainControlPanelTochButton_C::SetSettingControlUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "SetSettingControlUI");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -155,20 +443,6 @@ void UMainControlPanelTochButton_C::SetCustomizeUIInfo(class UBP_SAVEGAME_UIElem
 }
 
 
-// Function MainControlPanelTochButton.MainControlPanelTochButton_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UMainControlPanelTochButton_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function MainControlPanelTochButton.MainControlPanelTochButton_C.OnRankChange
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -191,15 +465,15 @@ void UMainControlPanelTochButton_C::OnRankChange(int32 Kills, int32 Rank)
 }
 
 
-// Function MainControlPanelTochButton.MainControlPanelTochButton_C.SetSettingControlUI
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.OnHideUIAfterPlayerDeadDelegate
+// (BlueprintCallable, BlueprintEvent)
 
-void UMainControlPanelTochButton_C::SetSettingControlUI()
+void UMainControlPanelTochButton_C::OnHideUIAfterPlayerDeadDelegate()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "SetSettingControlUI");
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "OnHideUIAfterPlayerDeadDelegate");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -219,39 +493,17 @@ void UMainControlPanelTochButton_C::ReceivedInitWidget()
 }
 
 
-// Function MainControlPanelTochButton.MainControlPanelTochButton_C.OnHideUIAfterPlayerDeadDelegate
-// (BlueprintCallable, BlueprintEvent)
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UMainControlPanelTochButton_C::OnHideUIAfterPlayerDeadDelegate()
+void UMainControlPanelTochButton_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "OnHideUIAfterPlayerDeadDelegate");
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MainControlPanelTochButton.MainControlPanelTochButton_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UMainControlPanelTochButton_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "Tick");
-
-	Params::MainControlPanelTochButton_C_Tick Parms{};
-
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InDeltaTime = InDeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -1021,29 +1273,29 @@ void UMainControlPanelTochButton_C::HideSelf()
 }
 
 
-// Function MainControlPanelTochButton.MainControlPanelTochButton_C.UIMsg_SetAutoNavigateTranslation
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.SetAutoNavigateTranslation
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UMainControlPanelTochButton_C::UIMsg_SetAutoNavigateTranslation()
+void UMainControlPanelTochButton_C::SetAutoNavigateTranslation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "UIMsg_SetAutoNavigateTranslation");
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "SetAutoNavigateTranslation");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MainControlPanelTochButton.MainControlPanelTochButton_C.UIMsg_MakeFireModeEffect
+// Function MainControlPanelTochButton.MainControlPanelTochButton_C.MakeFireModeEffect
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UMainControlPanelTochButton_C::UIMsg_MakeFireModeEffect()
+void UMainControlPanelTochButton_C::MakeFireModeEffect()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "UIMsg_MakeFireModeEffect");
+		Func = GetClass()->GetFunction("MainControlPanelTochButton_C", "MakeFireModeEffect");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

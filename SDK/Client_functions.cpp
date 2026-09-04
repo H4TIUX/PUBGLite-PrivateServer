@@ -17,19 +17,271 @@
 namespace SDK
 {
 
-// Function Client.TssManager.OnRecvData_LuaState
-// (Final, Native, Public)
+// Function Client.HotUpdater.OnDownloadedOneFile
+// (Final, Native, Private, HasOutParams)
 // Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   Successful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    FileURL                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<uint8>&                    Data                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
-int32 UTssManager::OnRecvData_LuaState()
+void UHotUpdater::OnDownloadedOneFile(uint8 Successful, const class FString& FileURL, const TArray<uint8>& Data)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("TssManager", "OnRecvData_LuaState");
+		Func = GetClass()->GetFunction("HotUpdater", "OnDownloadedOneFile");
 
-	Params::TssManager_OnRecvData_LuaState Parms{};
+	Params::HotUpdater_OnDownloadedOneFile Parms{};
+
+	Parms.Successful = Successful;
+	Parms.FileURL = std::move(FileURL);
+	Parms.Data = std::move(Data);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.HotUpdater.OnGetVersionData
+// (Final, Native, Private, HasOutParams)
+// Parameters:
+// uint8                                   Successful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    FileURL                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<uint8>&                    Data                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UHotUpdater::OnGetVersionData(uint8 Successful, const class FString& FileURL, const TArray<uint8>& Data)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("HotUpdater", "OnGetVersionData");
+
+	Params::HotUpdater_OnGetVersionData Parms{};
+
+	Parms.Successful = Successful;
+	Parms.FileURL = std::move(FileURL);
+	Parms.Data = std::move(Data);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.CloseAllMicAndSpeaker
+// (Final, Native, Public, BlueprintCallable)
+
+void UGVoiceInterface::CloseAllMicAndSpeaker()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "CloseAllMicAndSpeaker");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.CloseAllMicphone
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// uint8                                   showTips                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGVoiceInterface::CloseAllMicphone(uint8 showTips)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "CloseAllMicphone");
+
+	Params::GVoiceInterface_CloseAllMicphone Parms{};
+
+	Parms.showTips = showTips;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.CloseAllSpeaker
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// uint8                                   showTips                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGVoiceInterface::CloseAllSpeaker(uint8 showTips)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "CloseAllSpeaker");
+
+	Params::GVoiceInterface_CloseAllSpeaker Parms{};
+
+	Parms.showTips = showTips;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.CloseMic
+// (Final, Native, Public, BlueprintCallable)
+
+void UGVoiceInterface::CloseMic()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "CloseMic");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.CloseMicPtt
+// (Final, Native, Public, BlueprintCallable)
+
+void UGVoiceInterface::CloseMicPtt()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "CloseMicPtt");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.CloseSpeaker
+// (Final, Native, Public, BlueprintCallable)
+
+void UGVoiceInterface::CloseSpeaker()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "CloseSpeaker");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.DownloadRecordFile
+// (Final, Native, Public, BlueprintCallable)
+
+void UGVoiceInterface::DownloadRecordFile()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "DownloadRecordFile");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.ForbidTeammateVoiceById
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   memberID                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   IsEnable                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGVoiceInterface::ForbidTeammateVoiceById(int32 memberID, uint8 IsEnable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "ForbidTeammateVoiceById");
+
+	Params::GVoiceInterface_ForbidTeammateVoiceById Parms{};
+
+	Parms.memberID = memberID;
+	Parms.IsEnable = IsEnable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.GetAuthKey
+// (Final, Native, Public, BlueprintCallable)
+
+void UGVoiceInterface::GetAuthKey()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "GetAuthKey");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.GetRegionFromSessionID
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    SessionID                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EGVoiceServer                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EGVoiceServer UGVoiceInterface::GetRegionFromSessionID(const class FString& SessionID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "GetRegionFromSessionID");
+
+	Params::GVoiceInterface_GetRegionFromSessionID Parms{};
+
+	Parms.SessionID = std::move(SessionID);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -42,19 +294,1159 @@ int32 UTssManager::OnRecvData_LuaState()
 }
 
 
-// Function Client.TssManager.SendSkdData_LuaState
-// (Final, Native, Public)
+// Function Client.GVoiceInterface.GetTeammateUserIDByMemberID
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InMemberID                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int32 UTssManager::SendSkdData_LuaState()
+class FString UGVoiceInterface::GetTeammateUserIDByMemberID(int32 InMemberID)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("TssManager", "SendSkdData_LuaState");
+		Func = GetClass()->GetFunction("GVoiceInterface", "GetTeammateUserIDByMemberID");
 
-	Params::TssManager_SendSkdData_LuaState Parms{};
+	Params::GVoiceInterface_GetTeammateUserIDByMemberID Parms{};
+
+	Parms.InMemberID = InMemberID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.GVoiceInterface.GetVadSensitive
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UGVoiceInterface::GetVadSensitive()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "GetVadSensitive");
+
+	Params::GVoiceInterface_GetVadSensitive Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.GVoiceInterface.GetVoiceLength
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UGVoiceInterface::GetVoiceLength()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "GetVoiceLength");
+
+	Params::GVoiceInterface_GetVoiceLength Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.GVoiceInterface.InitGVoiceComponent
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    userId                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGVoiceInterface::InitGVoiceComponent(const class FString& userId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "InitGVoiceComponent");
+
+	Params::GVoiceInterface_InitGVoiceComponent Parms{};
+
+	Parms.userId = std::move(userId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.JoinRangeRoom
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    RangeRoom                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    userId                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGVoiceInterface::JoinRangeRoom(const class FString& RangeRoom, const class FString& userId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "JoinRangeRoom");
+
+	Params::GVoiceInterface_JoinRangeRoom Parms{};
+
+	Parms.RangeRoom = std::move(RangeRoom);
+	Parms.userId = std::move(userId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.JoinTeamRoom
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    TeamRoom                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    userId                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGVoiceInterface::JoinTeamRoom(const class FString& TeamRoom, const class FString& userId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "JoinTeamRoom");
+
+	Params::GVoiceInterface_JoinTeamRoom Parms{};
+
+	Parms.TeamRoom = std::move(TeamRoom);
+	Parms.userId = std::move(userId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.OpenAllMicAndSpeaker
+// (Final, Native, Public, BlueprintCallable)
+
+void UGVoiceInterface::OpenAllMicAndSpeaker()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "OpenAllMicAndSpeaker");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.OpenAllMicphone
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// uint8                                   showTips                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UGVoiceInterface::OpenAllMicphone(uint8 showTips)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "OpenAllMicphone");
+
+	Params::GVoiceInterface_OpenAllMicphone Parms{};
+
+	Parms.showTips = showTips;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.GVoiceInterface.OpenAllSpeaker
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// uint8                                   showTips                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGVoiceInterface::OpenAllSpeaker(uint8 showTips)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "OpenAllSpeaker");
+
+	Params::GVoiceInterface_OpenAllSpeaker Parms{};
+
+	Parms.showTips = showTips;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.OpenMic
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UGVoiceInterface::OpenMic()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "OpenMic");
+
+	Params::GVoiceInterface_OpenMic Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.GVoiceInterface.OpenMicPtt
+// (Final, Native, Public, BlueprintCallable)
+
+void UGVoiceInterface::OpenMicPtt()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "OpenMicPtt");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.OpenSpeaker
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UGVoiceInterface::OpenSpeaker()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "OpenSpeaker");
+
+	Params::GVoiceInterface_OpenSpeaker Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.GVoiceInterface.OpenTeamMicAndSpeaker
+// (Final, Native, Public, BlueprintCallable)
+
+void UGVoiceInterface::OpenTeamMicAndSpeaker()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "OpenTeamMicAndSpeaker");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.OpenTeamMicphoneOnly
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// uint8                                   showTips                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UGVoiceInterface::OpenTeamMicphoneOnly(uint8 showTips)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "OpenTeamMicphoneOnly");
+
+	Params::GVoiceInterface_OpenTeamMicphoneOnly Parms{};
+
+	Parms.showTips = showTips;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.GVoiceInterface.OpenTeamSpeakerOnly
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// uint8                                   showTips                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGVoiceInterface::OpenTeamSpeakerOnly(uint8 showTips)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "OpenTeamSpeakerOnly");
+
+	Params::GVoiceInterface_OpenTeamSpeakerOnly Parms{};
+
+	Parms.showTips = showTips;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.PlayRecordFile
+// (Final, Native, Public, BlueprintCallable)
+
+void UGVoiceInterface::PlayRecordFile()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "PlayRecordFile");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.QuitTeamRoom
+// (Final, Native, Public, BlueprintCallable)
+
+void UGVoiceInterface::QuitTeamRoom()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "QuitTeamRoom");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.ReactiveLbsStatus
+// (Final, Native, Public, BlueprintCallable)
+
+void UGVoiceInterface::ReactiveLbsStatus()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "ReactiveLbsStatus");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.ResetWhenLogOut
+// (Final, Native, Public, BlueprintCallable)
+
+void UGVoiceInterface::ResetWhenLogOut()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "ResetWhenLogOut");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.SetLbsRoomEnableStatus
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// uint8                                   Flag                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGVoiceInterface::SetLbsRoomEnableStatus(uint8 Flag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "SetLbsRoomEnableStatus");
+
+	Params::GVoiceInterface_SetLbsRoomEnableStatus Parms{};
+
+	Parms.Flag = Flag;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.SetMicphoneStatus
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// uint8                                   Flag                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGVoiceInterface::SetMicphoneStatus(uint8 Flag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "SetMicphoneStatus");
+
+	Params::GVoiceInterface_SetMicphoneStatus Parms{};
+
+	Parms.Flag = Flag;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.SetMicphoneVolume
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGVoiceInterface::SetMicphoneVolume(float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "SetMicphoneVolume");
+
+	Params::GVoiceInterface_SetMicphoneVolume Parms{};
+
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.SetSpeakerStatus
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// uint8                                   Flag                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGVoiceInterface::SetSpeakerStatus(uint8 Flag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "SetSpeakerStatus");
+
+	Params::GVoiceInterface_SetSpeakerStatus Parms{};
+
+	Parms.Flag = Flag;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.SetSpeakerVolume
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGVoiceInterface::SetSpeakerVolume(float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "SetSpeakerVolume");
+
+	Params::GVoiceInterface_SetSpeakerVolume Parms{};
+
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.SetVadSensitive
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   VadSensitive                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGVoiceInterface::SetVadSensitive(int32 VadSensitive)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "SetVadSensitive");
+
+	Params::GVoiceInterface_SetVadSensitive Parms{};
+
+	Parms.VadSensitive = VadSensitive;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.SetVoiceServer
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// EGVoiceServer                           InType                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGVoiceInterface::SetVoiceServer(EGVoiceServer InType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "SetVoiceServer");
+
+	Params::GVoiceInterface_SetVoiceServer Parms{};
+
+	Parms.InType = InType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.ShowOpenSpeakerAtFirstMsg
+// (Final, Native, Public, BlueprintCallable)
+
+void UGVoiceInterface::ShowOpenSpeakerAtFirstMsg()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "ShowOpenSpeakerAtFirstMsg");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.SpeechToText
+// (Final, Native, Public, BlueprintCallable)
+
+void UGVoiceInterface::SpeechToText()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "SpeechToText");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.StartRecord
+// (Final, Native, Public, BlueprintCallable)
+
+void UGVoiceInterface::StartRecord()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "StartRecord");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.StopPlayRecordFile
+// (Final, Native, Public, BlueprintCallable)
+
+void UGVoiceInterface::StopPlayRecordFile()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "StopPlayRecordFile");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.StopRecord
+// (Final, Native, Public, BlueprintCallable)
+
+void UGVoiceInterface::StopRecord()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "StopRecord");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.UploadRecordFile
+// (Final, Native, Public, BlueprintCallable)
+
+void UGVoiceInterface::UploadRecordFile()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "UploadRecordFile");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GVoiceInterface.HaveRangeRoom
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 UGVoiceInterface::HaveRangeRoom() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "HaveRangeRoom");
+
+	Params::GVoiceInterface_HaveRangeRoom Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.GVoiceInterface.HaveTeamRoom
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 UGVoiceInterface::HaveTeamRoom() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "HaveTeamRoom");
+
+	Params::GVoiceInterface_HaveTeamRoom Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.GVoiceInterface.LbsMicphoneEnable
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 UGVoiceInterface::LbsMicphoneEnable() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "LbsMicphoneEnable");
+
+	Params::GVoiceInterface_LbsMicphoneEnable Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.GVoiceInterface.LbsSpeakerEnable
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 UGVoiceInterface::LbsSpeakerEnable() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "LbsSpeakerEnable");
+
+	Params::GVoiceInterface_LbsSpeakerEnable Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.GVoiceInterface.TeamMicphoneEnable
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 UGVoiceInterface::TeamMicphoneEnable() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "TeamMicphoneEnable");
+
+	Params::GVoiceInterface_TeamMicphoneEnable Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.GVoiceInterface.TeamSpeakerEnable
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 UGVoiceInterface::TeamSpeakerEnable() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GVoiceInterface", "TeamSpeakerEnable");
+
+	Params::GVoiceInterface_TeamSpeakerEnable Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.GameBackendHUD.GetInstance
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UGameBackendHUD*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UGameBackendHUD* UGameBackendHUD::GetInstance()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GameBackendHUD", "GetInstance");
+
+	Params::GameBackendHUD_GetInstance Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.GameBackendHUD.GetFirstGameFrontendHUD
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UGameFrontendHUD*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UGameFrontendHUD* UGameBackendHUD::GetFirstGameFrontendHUD() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GameBackendHUD", "GetFirstGameFrontendHUD");
+
+	Params::GameBackendHUD_GetFirstGameFrontendHUD Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.GameBackendHUD.GetUtils
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UGameBackendUtils*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UGameBackendUtils* UGameBackendHUD::GetUtils() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GameBackendHUD", "GetUtils");
+
+	Params::GameBackendHUD_GetUtils Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.GameBusinessManager.GetGameFrontendHUD
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UGameFrontendHUD*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UGameFrontendHUD* UGameBusinessManager::GetGameFrontendHUD() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GameBusinessManager", "GetGameFrontendHUD");
+
+	Params::GameBusinessManager_GetGameFrontendHUD Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.GameBusinessManager.GetLuaObject
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class ALuaClassObj*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class ALuaClassObj* UGameBusinessManager::GetLuaObject() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GameBusinessManager", "GetLuaObject");
+
+	Params::GameBusinessManager_GetLuaObject Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.GameBusinessManager.GetWidget
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UUAEUserWidget*                   ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UUAEUserWidget* UGameBusinessManager::GetWidget(int32 Index_0) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GameBusinessManager", "GetWidget");
+
+	Params::GameBusinessManager_GetWidget Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.InGameUIManager.HandleDynamicCreation
+// (Final, Native, Public, BlueprintCallable)
+
+void UInGameUIManager::HandleDynamicCreation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("InGameUIManager", "HandleDynamicCreation");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.InGameUIManager.HandleUIMessage
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    UIMessage                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UInGameUIManager::HandleUIMessage(const class FString& UIMessage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("InGameUIManager", "HandleUIMessage");
+
+	Params::InGameUIManager_HandleUIMessage Parms{};
+
+	Parms.UIMessage = std::move(UIMessage);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.InGameUIManager.SubUIWidgetList
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<struct FGameWidgetConfig>& InWidgetConfigList                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<class FString>&            GameStatusStrList                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// uint8                                   InPersistentUI                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   InUsedByControler                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   InOberverOnly                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UInGameUIManager::SubUIWidgetList(const TArray<struct FGameWidgetConfig>& InWidgetConfigList, const TArray<class FString>& GameStatusStrList, uint8 InPersistentUI, uint8 InUsedByControler, uint8 InOberverOnly)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("InGameUIManager", "SubUIWidgetList");
+
+	Params::InGameUIManager_SubUIWidgetList Parms{};
+
+	Parms.InWidgetConfigList = std::move(InWidgetConfigList);
+	Parms.GameStatusStrList = std::move(GameStatusStrList);
+	Parms.InPersistentUI = InPersistentUI;
+	Parms.InUsedByControler = InUsedByControler;
+	Parms.InOberverOnly = InOberverOnly;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.GameBackendUtils.GetLoadedClassManager
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UUAELoadedClassManager*           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UUAELoadedClassManager* UGameBackendUtils::GetLoadedClassManager() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GameBackendUtils", "GetLoadedClassManager");
+
+	Params::GameBackendUtils_GetLoadedClassManager Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.GameBackendUtils.GetTableManager
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UUAETableManager*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UUAETableManager* UGameBackendUtils::GetTableManager() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("GameBackendUtils", "GetTableManager");
+
+	Params::GameBackendUtils_GetTableManager Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -142,25 +1534,46 @@ void UImageDownloader::Start(const class FString& URL)
 }
 
 
-// Function Client.HotUpdater.OnDownloadedOneFile
-// (Final, Native, Private, HasOutParams)
+// Function Client.UTRichTextBlock.GetText
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// uint8                                   Successful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    FileURL                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<uint8>&                    Data                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 
-void UHotUpdater::OnDownloadedOneFile(uint8 Successful, const class FString& FileURL, const TArray<uint8>& Data)
+class FText UUTRichTextBlock::GetText()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("HotUpdater", "OnDownloadedOneFile");
+		Func = GetClass()->GetFunction("UTRichTextBlock", "GetText");
 
-	Params::HotUpdater_OnDownloadedOneFile Parms{};
+	Params::UTRichTextBlock_GetText Parms{};
 
-	Parms.Successful = Successful;
-	Parms.FileURL = std::move(FileURL);
-	Parms.Data = std::move(Data);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.UTRichTextBlock.SetGameFrontendHUD
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UGameFrontendHUD*                 InHUD                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UUTRichTextBlock::SetGameFrontendHUD(class UGameFrontendHUD* InHUD)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UTRichTextBlock", "SetGameFrontendHUD");
+
+	Params::UTRichTextBlock_SetGameFrontendHUD Parms{};
+
+	Parms.InHUD = InHUD;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -171,25 +1584,21 @@ void UHotUpdater::OnDownloadedOneFile(uint8 Successful, const class FString& Fil
 }
 
 
-// Function Client.HotUpdater.OnGetVersionData
-// (Final, Native, Private, HasOutParams)
+// Function Client.UTRichTextBlock.SetText
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// uint8                                   Successful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    FileURL                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<uint8>&                    Data                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FText&                      InText                                                 (Parm, NativeAccessSpecifierPublic)
 
-void UHotUpdater::OnGetVersionData(uint8 Successful, const class FString& FileURL, const TArray<uint8>& Data)
+void UUTRichTextBlock::SetText(const class FText& InText)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("HotUpdater", "OnGetVersionData");
+		Func = GetClass()->GetFunction("UTRichTextBlock", "SetText");
 
-	Params::HotUpdater_OnGetVersionData Parms{};
+	Params::UTRichTextBlock_SetText Parms{};
 
-	Parms.Successful = Successful;
-	Parms.FileURL = std::move(FileURL);
-	Parms.Data = std::move(Data);
+	Parms.InText = std::move(InText);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -197,6 +1606,429 @@ void UHotUpdater::OnGetVersionData(uint8 Successful, const class FString& FileUR
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.LuaClassObj.GetGameStatus
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString ALuaClassObj::GetGameStatus()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("LuaClassObj", "GetGameStatus");
+
+	Params::LuaClassObj_GetGameStatus Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.LuaClassObj.HandleDynamicCreation
+// (Final, Native, Public, BlueprintCallable)
+
+void ALuaClassObj::HandleDynamicCreation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("LuaClassObj", "HandleDynamicCreation");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.LuaClassObj.HandleUIMessage
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    UIMessage                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ALuaClassObj::HandleUIMessage(const class FString& UIMessage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("LuaClassObj", "HandleUIMessage");
+
+	Params::LuaClassObj_HandleUIMessage Parms{};
+
+	Parms.UIMessage = std::move(UIMessage);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.LuaClassObj.HandleUIMessageNoFetch
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    UIMessage                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ALuaClassObj::HandleUIMessageNoFetch(const class FString& UIMessage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("LuaClassObj", "HandleUIMessageNoFetch");
+
+	Params::LuaClassObj_HandleUIMessageNoFetch Parms{};
+
+	Parms.UIMessage = std::move(UIMessage);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.LuaClassObj.SubCollapseWidgetList
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FString&                    RootWidgetName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FString>*                  ChildWidgetNames                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void ALuaClassObj::SubCollapseWidgetList(const class FString& RootWidgetName, TArray<class FString>* ChildWidgetNames)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("LuaClassObj", "SubCollapseWidgetList");
+
+	Params::LuaClassObj_SubCollapseWidgetList Parms{};
+
+	Parms.RootWidgetName = std::move(RootWidgetName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (ChildWidgetNames != nullptr)
+		*ChildWidgetNames = std::move(Parms.ChildWidgetNames);
+}
+
+
+// Function Client.LuaClassObj.SubShowHideEvent
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<class FString>&            WidgetPathList                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void ALuaClassObj::SubShowHideEvent(const TArray<class FString>& WidgetPathList)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("LuaClassObj", "SubShowHideEvent");
+
+	Params::LuaClassObj_SubShowHideEvent Parms{};
+
+	Parms.WidgetPathList = std::move(WidgetPathList);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.LuaClassObj.SubUIWidgetList
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<struct FGameWidgetConfig>& InWidgetConfigList                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<class FString>&            GameStatusStrList                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// uint8                                   bPersistentUI                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   InStatusConcern                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   bDynamicWidget                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ALuaClassObj::SubUIWidgetList(const TArray<struct FGameWidgetConfig>& InWidgetConfigList, const TArray<class FString>& GameStatusStrList, uint8 bPersistentUI, uint8 InStatusConcern, uint8 bDynamicWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("LuaClassObj", "SubUIWidgetList");
+
+	Params::LuaClassObj_SubUIWidgetList Parms{};
+
+	Parms.InWidgetConfigList = std::move(InWidgetConfigList);
+	Parms.GameStatusStrList = std::move(GameStatusStrList);
+	Parms.bPersistentUI = bPersistentUI;
+	Parms.InStatusConcern = InStatusConcern;
+	Parms.bDynamicWidget = bDynamicWidget;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.ScreenshotMaker.GetSaveStatus
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UScreenshotMaker::GetSaveStatus()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ScreenshotMaker", "GetSaveStatus");
+
+	Params::ScreenshotMaker_GetSaveStatus Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.ScreenshotMaker.HasCaptured
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    pathStr                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 UScreenshotMaker::HasCaptured(const class FString& pathStr)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ScreenshotMaker", "HasCaptured");
+
+	Params::ScreenshotMaker_HasCaptured Parms{};
+
+	Parms.pathStr = std::move(pathStr);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.ScreenshotMaker.MakeBugReprotPic
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// uint8                                   isShowUI                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UScreenshotMaker::MakeBugReprotPic(uint8 isShowUI)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ScreenshotMaker", "MakeBugReprotPic");
+
+	Params::ScreenshotMaker_MakeBugReprotPic Parms{};
+
+	Parms.isShowUI = isShowUI;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.ScreenshotMaker.MakePicture
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// uint8                                   isShowUI                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UScreenshotMaker::MakePicture(uint8 isShowUI)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ScreenshotMaker", "MakePicture");
+
+	Params::ScreenshotMaker_MakePicture Parms{};
+
+	Parms.isShowUI = isShowUI;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.ScreenshotMaker.ReMakePicture
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const class FString&                    pathStr                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector4&                  Vector4                                                (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UScreenshotMaker::ReMakePicture(const class FString& pathStr, const struct FVector4& Vector4)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ScreenshotMaker", "ReMakePicture");
+
+	Params::ScreenshotMaker_ReMakePicture Parms{};
+
+	Parms.pathStr = std::move(pathStr);
+	Parms.Vector4 = std::move(Vector4);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Client.ScreenshotMaker.SaveToPhotosAlbum
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    pathStr                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 UScreenshotMaker::SaveToPhotosAlbum(const class FString& pathStr)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ScreenshotMaker", "SaveToPhotosAlbum");
+
+	Params::ScreenshotMaker_SaveToPhotosAlbum Parms{};
+
+	Parms.pathStr = std::move(pathStr);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.ScreenshotMaker.SaveToPhotosAlbumEx
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    pathStr                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 UScreenshotMaker::SaveToPhotosAlbumEx(const class FString& pathStr)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ScreenshotMaker", "SaveToPhotosAlbumEx");
+
+	Params::ScreenshotMaker_SaveToPhotosAlbumEx Parms{};
+
+	Parms.pathStr = std::move(pathStr);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.TssManager.OnRecvData_LuaState
+// (Final, Native, Public)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UTssManager::OnRecvData_LuaState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("TssManager", "OnRecvData_LuaState");
+
+	Params::TssManager_OnRecvData_LuaState Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Client.TssManager.SendSkdData_LuaState
+// (Final, Native, Public)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UTssManager::SendSkdData_LuaState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("TssManager", "SendSkdData_LuaState");
+
+	Params::TssManager_SendSkdData_LuaState Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -2146,10 +3978,10 @@ void UScriptHelperClient::Logout(TScriptInterface<class IClientNetInterface>* Cl
 // Function Client.ScriptHelperClient.MD5HashAnsiString
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// const class FString&                    str                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Str                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class FString UScriptHelperClient::MD5HashAnsiString(const class FString& str)
+class FString UScriptHelperClient::MD5HashAnsiString(const class FString& Str)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2158,7 +3990,7 @@ class FString UScriptHelperClient::MD5HashAnsiString(const class FString& str)
 
 	Params::ScriptHelperClient_MD5HashAnsiString Parms{};
 
-	Parms.str = std::move(str);
+	Parms.Str = std::move(Str);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2314,20 +4146,20 @@ void UScriptHelperClient::OnNotifyFightFriendChat(class UGameFrontendHUD* GameFr
 }
 
 
-// Function Client.ScriptHelperClient.OpenURL
+// Function Client.ScriptHelperClient.OpenUrl
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    URL                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   Dir                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UScriptHelperClient::OpenURL(const class FString& URL, int32 Dir)
+void UScriptHelperClient::OpenUrl(const class FString& URL, int32 Dir)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ScriptHelperClient", "OpenURL");
+		Func = StaticClass()->GetFunction("ScriptHelperClient", "OpenUrl");
 
-	Params::ScriptHelperClient_OpenURL Parms{};
+	Params::ScriptHelperClient_OpenUrl Parms{};
 
 	Parms.URL = std::move(URL);
 	Parms.Dir = Dir;
@@ -3533,1377 +5365,6 @@ void UScriptHelperClient::WechatShareWithUrlInfo(TScriptInterface<class IClientN
 }
 
 
-// Function Client.GameBackendHUD.GetInstance
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class UGameBackendHUD*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UGameBackendHUD* UGameBackendHUD::GetInstance()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameBackendHUD", "GetInstance");
-
-	Params::GameBackendHUD_GetInstance Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.GameBackendHUD.GetFirstGameFrontendHUD
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UGameFrontendHUD*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UGameFrontendHUD* UGameBackendHUD::GetFirstGameFrontendHUD() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GameBackendHUD", "GetFirstGameFrontendHUD");
-
-	Params::GameBackendHUD_GetFirstGameFrontendHUD Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.GameBackendHUD.GetUtils
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UGameBackendUtils*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UGameBackendUtils* UGameBackendHUD::GetUtils() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GameBackendHUD", "GetUtils");
-
-	Params::GameBackendHUD_GetUtils Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.GVoiceInterface.CloseAllMicAndSpeaker
-// (Final, Native, Public, BlueprintCallable)
-
-void UGVoiceInterface::CloseAllMicAndSpeaker()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "CloseAllMicAndSpeaker");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.CloseAllMicphone
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// uint8                                   showTips                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGVoiceInterface::CloseAllMicphone(uint8 showTips)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "CloseAllMicphone");
-
-	Params::GVoiceInterface_CloseAllMicphone Parms{};
-
-	Parms.showTips = showTips;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.CloseAllSpeaker
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// uint8                                   showTips                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGVoiceInterface::CloseAllSpeaker(uint8 showTips)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "CloseAllSpeaker");
-
-	Params::GVoiceInterface_CloseAllSpeaker Parms{};
-
-	Parms.showTips = showTips;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.CloseMic
-// (Final, Native, Public, BlueprintCallable)
-
-void UGVoiceInterface::CloseMic()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "CloseMic");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.CloseMicPtt
-// (Final, Native, Public, BlueprintCallable)
-
-void UGVoiceInterface::CloseMicPtt()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "CloseMicPtt");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.CloseSpeaker
-// (Final, Native, Public, BlueprintCallable)
-
-void UGVoiceInterface::CloseSpeaker()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "CloseSpeaker");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.DownloadRecordFile
-// (Final, Native, Public, BlueprintCallable)
-
-void UGVoiceInterface::DownloadRecordFile()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "DownloadRecordFile");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.ForbidTeammateVoiceById
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int32                                   memberID                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   IsEnable                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGVoiceInterface::ForbidTeammateVoiceById(int32 memberID, uint8 IsEnable)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "ForbidTeammateVoiceById");
-
-	Params::GVoiceInterface_ForbidTeammateVoiceById Parms{};
-
-	Parms.memberID = memberID;
-	Parms.IsEnable = IsEnable;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.GetAuthKey
-// (Final, Native, Public, BlueprintCallable)
-
-void UGVoiceInterface::GetAuthKey()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "GetAuthKey");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.GetRegionFromSessionID
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    SessionID                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EGVoiceServer                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-EGVoiceServer UGVoiceInterface::GetRegionFromSessionID(const class FString& SessionID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "GetRegionFromSessionID");
-
-	Params::GVoiceInterface_GetRegionFromSessionID Parms{};
-
-	Parms.SessionID = std::move(SessionID);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.GVoiceInterface.GetTeammateUserIDByMemberID
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int32                                   InMemberID                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString UGVoiceInterface::GetTeammateUserIDByMemberID(int32 InMemberID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "GetTeammateUserIDByMemberID");
-
-	Params::GVoiceInterface_GetTeammateUserIDByMemberID Parms{};
-
-	Parms.InMemberID = InMemberID;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.GVoiceInterface.GetVadSensitive
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UGVoiceInterface::GetVadSensitive()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "GetVadSensitive");
-
-	Params::GVoiceInterface_GetVadSensitive Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.GVoiceInterface.GetVoiceLength
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UGVoiceInterface::GetVoiceLength()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "GetVoiceLength");
-
-	Params::GVoiceInterface_GetVoiceLength Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.GVoiceInterface.InitGVoiceComponent
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    userId                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGVoiceInterface::InitGVoiceComponent(const class FString& userId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "InitGVoiceComponent");
-
-	Params::GVoiceInterface_InitGVoiceComponent Parms{};
-
-	Parms.userId = std::move(userId);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.JoinRangeRoom
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    RangeRoom                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    userId                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGVoiceInterface::JoinRangeRoom(const class FString& RangeRoom, const class FString& userId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "JoinRangeRoom");
-
-	Params::GVoiceInterface_JoinRangeRoom Parms{};
-
-	Parms.RangeRoom = std::move(RangeRoom);
-	Parms.userId = std::move(userId);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.JoinTeamRoom
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    TeamRoom                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    userId                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGVoiceInterface::JoinTeamRoom(const class FString& TeamRoom, const class FString& userId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "JoinTeamRoom");
-
-	Params::GVoiceInterface_JoinTeamRoom Parms{};
-
-	Parms.TeamRoom = std::move(TeamRoom);
-	Parms.userId = std::move(userId);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.OpenAllMicAndSpeaker
-// (Final, Native, Public, BlueprintCallable)
-
-void UGVoiceInterface::OpenAllMicAndSpeaker()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "OpenAllMicAndSpeaker");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.OpenAllMicphone
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// uint8                                   showTips                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UGVoiceInterface::OpenAllMicphone(uint8 showTips)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "OpenAllMicphone");
-
-	Params::GVoiceInterface_OpenAllMicphone Parms{};
-
-	Parms.showTips = showTips;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.GVoiceInterface.OpenAllSpeaker
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// uint8                                   showTips                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGVoiceInterface::OpenAllSpeaker(uint8 showTips)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "OpenAllSpeaker");
-
-	Params::GVoiceInterface_OpenAllSpeaker Parms{};
-
-	Parms.showTips = showTips;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.OpenMic
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UGVoiceInterface::OpenMic()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "OpenMic");
-
-	Params::GVoiceInterface_OpenMic Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.GVoiceInterface.OpenMicPtt
-// (Final, Native, Public, BlueprintCallable)
-
-void UGVoiceInterface::OpenMicPtt()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "OpenMicPtt");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.OpenSpeaker
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UGVoiceInterface::OpenSpeaker()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "OpenSpeaker");
-
-	Params::GVoiceInterface_OpenSpeaker Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.GVoiceInterface.OpenTeamMicAndSpeaker
-// (Final, Native, Public, BlueprintCallable)
-
-void UGVoiceInterface::OpenTeamMicAndSpeaker()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "OpenTeamMicAndSpeaker");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.OpenTeamMicphoneOnly
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// uint8                                   showTips                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UGVoiceInterface::OpenTeamMicphoneOnly(uint8 showTips)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "OpenTeamMicphoneOnly");
-
-	Params::GVoiceInterface_OpenTeamMicphoneOnly Parms{};
-
-	Parms.showTips = showTips;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.GVoiceInterface.OpenTeamSpeakerOnly
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// uint8                                   showTips                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGVoiceInterface::OpenTeamSpeakerOnly(uint8 showTips)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "OpenTeamSpeakerOnly");
-
-	Params::GVoiceInterface_OpenTeamSpeakerOnly Parms{};
-
-	Parms.showTips = showTips;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.PlayRecordFile
-// (Final, Native, Public, BlueprintCallable)
-
-void UGVoiceInterface::PlayRecordFile()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "PlayRecordFile");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.QuitTeamRoom
-// (Final, Native, Public, BlueprintCallable)
-
-void UGVoiceInterface::QuitTeamRoom()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "QuitTeamRoom");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.ReactiveLbsStatus
-// (Final, Native, Public, BlueprintCallable)
-
-void UGVoiceInterface::ReactiveLbsStatus()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "ReactiveLbsStatus");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.ResetWhenLogOut
-// (Final, Native, Public, BlueprintCallable)
-
-void UGVoiceInterface::ResetWhenLogOut()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "ResetWhenLogOut");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.SetLbsRoomEnableStatus
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// uint8                                   Flag                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGVoiceInterface::SetLbsRoomEnableStatus(uint8 Flag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "SetLbsRoomEnableStatus");
-
-	Params::GVoiceInterface_SetLbsRoomEnableStatus Parms{};
-
-	Parms.Flag = Flag;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.SetMicphoneStatus
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// uint8                                   Flag                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGVoiceInterface::SetMicphoneStatus(uint8 Flag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "SetMicphoneStatus");
-
-	Params::GVoiceInterface_SetMicphoneStatus Parms{};
-
-	Parms.Flag = Flag;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.SetMicphoneVolume
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGVoiceInterface::SetMicphoneVolume(float Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "SetMicphoneVolume");
-
-	Params::GVoiceInterface_SetMicphoneVolume Parms{};
-
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.SetSpeakerStatus
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// uint8                                   Flag                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGVoiceInterface::SetSpeakerStatus(uint8 Flag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "SetSpeakerStatus");
-
-	Params::GVoiceInterface_SetSpeakerStatus Parms{};
-
-	Parms.Flag = Flag;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.SetSpeakerVolume
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGVoiceInterface::SetSpeakerVolume(float Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "SetSpeakerVolume");
-
-	Params::GVoiceInterface_SetSpeakerVolume Parms{};
-
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.SetVadSensitive
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int32                                   VadSensitive                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGVoiceInterface::SetVadSensitive(int32 VadSensitive)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "SetVadSensitive");
-
-	Params::GVoiceInterface_SetVadSensitive Parms{};
-
-	Parms.VadSensitive = VadSensitive;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.SetVoiceServer
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// EGVoiceServer                           InType                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGVoiceInterface::SetVoiceServer(EGVoiceServer InType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "SetVoiceServer");
-
-	Params::GVoiceInterface_SetVoiceServer Parms{};
-
-	Parms.InType = InType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.ShowOpenSpeakerAtFirstMsg
-// (Final, Native, Public, BlueprintCallable)
-
-void UGVoiceInterface::ShowOpenSpeakerAtFirstMsg()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "ShowOpenSpeakerAtFirstMsg");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.SpeechToText
-// (Final, Native, Public, BlueprintCallable)
-
-void UGVoiceInterface::SpeechToText()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "SpeechToText");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.StartRecord
-// (Final, Native, Public, BlueprintCallable)
-
-void UGVoiceInterface::StartRecord()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "StartRecord");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.StopPlayRecordFile
-// (Final, Native, Public, BlueprintCallable)
-
-void UGVoiceInterface::StopPlayRecordFile()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "StopPlayRecordFile");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.StopRecord
-// (Final, Native, Public, BlueprintCallable)
-
-void UGVoiceInterface::StopRecord()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "StopRecord");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.UploadRecordFile
-// (Final, Native, Public, BlueprintCallable)
-
-void UGVoiceInterface::UploadRecordFile()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "UploadRecordFile");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GVoiceInterface.HaveRangeRoom
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 UGVoiceInterface::HaveRangeRoom() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "HaveRangeRoom");
-
-	Params::GVoiceInterface_HaveRangeRoom Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.GVoiceInterface.HaveTeamRoom
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 UGVoiceInterface::HaveTeamRoom() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "HaveTeamRoom");
-
-	Params::GVoiceInterface_HaveTeamRoom Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.GVoiceInterface.LbsMicphoneEnable
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 UGVoiceInterface::LbsMicphoneEnable() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "LbsMicphoneEnable");
-
-	Params::GVoiceInterface_LbsMicphoneEnable Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.GVoiceInterface.LbsSpeakerEnable
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 UGVoiceInterface::LbsSpeakerEnable() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "LbsSpeakerEnable");
-
-	Params::GVoiceInterface_LbsSpeakerEnable Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.GVoiceInterface.TeamMicphoneEnable
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 UGVoiceInterface::TeamMicphoneEnable() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "TeamMicphoneEnable");
-
-	Params::GVoiceInterface_TeamMicphoneEnable Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.GVoiceInterface.TeamSpeakerEnable
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 UGVoiceInterface::TeamSpeakerEnable() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GVoiceInterface", "TeamSpeakerEnable");
-
-	Params::GVoiceInterface_TeamSpeakerEnable Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.ScreenshotMaker.GetSaveStatus
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UScreenshotMaker::GetSaveStatus()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ScreenshotMaker", "GetSaveStatus");
-
-	Params::ScreenshotMaker_GetSaveStatus Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.ScreenshotMaker.HasCaptured
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    pathStr                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 UScreenshotMaker::HasCaptured(const class FString& pathStr)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ScreenshotMaker", "HasCaptured");
-
-	Params::ScreenshotMaker_HasCaptured Parms{};
-
-	Parms.pathStr = std::move(pathStr);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.ScreenshotMaker.MakeBugReprotPic
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// uint8                                   isShowUI                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString UScreenshotMaker::MakeBugReprotPic(uint8 isShowUI)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ScreenshotMaker", "MakeBugReprotPic");
-
-	Params::ScreenshotMaker_MakeBugReprotPic Parms{};
-
-	Parms.isShowUI = isShowUI;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.ScreenshotMaker.MakePicture
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// uint8                                   isShowUI                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString UScreenshotMaker::MakePicture(uint8 isShowUI)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ScreenshotMaker", "MakePicture");
-
-	Params::ScreenshotMaker_MakePicture Parms{};
-
-	Parms.isShowUI = isShowUI;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.ScreenshotMaker.ReMakePicture
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// const class FString&                    pathStr                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector4&                  Vector4                                                (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UScreenshotMaker::ReMakePicture(const class FString& pathStr, const struct FVector4& Vector4)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ScreenshotMaker", "ReMakePicture");
-
-	Params::ScreenshotMaker_ReMakePicture Parms{};
-
-	Parms.pathStr = std::move(pathStr);
-	Parms.Vector4 = std::move(Vector4);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.ScreenshotMaker.SaveToPhotosAlbum
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    pathStr                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 UScreenshotMaker::SaveToPhotosAlbum(const class FString& pathStr)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ScreenshotMaker", "SaveToPhotosAlbum");
-
-	Params::ScreenshotMaker_SaveToPhotosAlbum Parms{};
-
-	Parms.pathStr = std::move(pathStr);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.ScreenshotMaker.SaveToPhotosAlbumEx
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    pathStr                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 UScreenshotMaker::SaveToPhotosAlbumEx(const class FString& pathStr)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ScreenshotMaker", "SaveToPhotosAlbumEx");
-
-	Params::ScreenshotMaker_SaveToPhotosAlbumEx Parms{};
-
-	Parms.pathStr = std::move(pathStr);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function Client.GameFrontendHUD.BeginModifyUserSettings
 // (Final, Native, Public, BlueprintCallable)
 
@@ -5454,467 +5915,6 @@ class ULuaStateWrapper* UGameFrontendHUD::GetLuaStateWrapper() const
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
-}
-
-
-// Function Client.GameBusinessManager.GetGameFrontendHUD
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UGameFrontendHUD*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UGameFrontendHUD* UGameBusinessManager::GetGameFrontendHUD() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GameBusinessManager", "GetGameFrontendHUD");
-
-	Params::GameBusinessManager_GetGameFrontendHUD Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.GameBusinessManager.GetLuaObject
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class ALuaClassObj*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class ALuaClassObj* UGameBusinessManager::GetLuaObject() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GameBusinessManager", "GetLuaObject");
-
-	Params::GameBusinessManager_GetLuaObject Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.GameBusinessManager.GetWidget
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UUAEUserWidget*                   ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UUAEUserWidget* UGameBusinessManager::GetWidget(int32 Index_0) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GameBusinessManager", "GetWidget");
-
-	Params::GameBusinessManager_GetWidget Parms{};
-
-	Parms.Index_0 = Index_0;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.InGameUIManager.HandleDynamicCreation
-// (Final, Native, Public, BlueprintCallable)
-
-void UInGameUIManager::HandleDynamicCreation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("InGameUIManager", "HandleDynamicCreation");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.InGameUIManager.HandleUIMessage
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    UIMessage                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UInGameUIManager::HandleUIMessage(const class FString& UIMessage)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("InGameUIManager", "HandleUIMessage");
-
-	Params::InGameUIManager_HandleUIMessage Parms{};
-
-	Parms.UIMessage = std::move(UIMessage);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.InGameUIManager.SubUIWidgetList
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<struct FGameWidgetConfig>& InWidgetConfigList                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// const TArray<class FString>&            GameStatusStrList                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// uint8                                   InPersistentUI                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   InUsedByControler                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   InOberverOnly                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UInGameUIManager::SubUIWidgetList(const TArray<struct FGameWidgetConfig>& InWidgetConfigList, const TArray<class FString>& GameStatusStrList, uint8 InPersistentUI, uint8 InUsedByControler, uint8 InOberverOnly)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("InGameUIManager", "SubUIWidgetList");
-
-	Params::InGameUIManager_SubUIWidgetList Parms{};
-
-	Parms.InWidgetConfigList = std::move(InWidgetConfigList);
-	Parms.GameStatusStrList = std::move(GameStatusStrList);
-	Parms.InPersistentUI = InPersistentUI;
-	Parms.InUsedByControler = InUsedByControler;
-	Parms.InOberverOnly = InOberverOnly;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.GameBackendUtils.GetLoadedClassManager
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UUAELoadedClassManager*           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UUAELoadedClassManager* UGameBackendUtils::GetLoadedClassManager() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GameBackendUtils", "GetLoadedClassManager");
-
-	Params::GameBackendUtils_GetLoadedClassManager Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.GameBackendUtils.GetTableManager
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UUAETableManager*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UUAETableManager* UGameBackendUtils::GetTableManager() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("GameBackendUtils", "GetTableManager");
-
-	Params::GameBackendUtils_GetTableManager Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.LuaClassObj.GetGameStatus
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString ALuaClassObj::GetGameStatus()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("LuaClassObj", "GetGameStatus");
-
-	Params::LuaClassObj_GetGameStatus Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.LuaClassObj.HandleDynamicCreation
-// (Final, Native, Public, BlueprintCallable)
-
-void ALuaClassObj::HandleDynamicCreation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("LuaClassObj", "HandleDynamicCreation");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.LuaClassObj.HandleUIMessage
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    UIMessage                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ALuaClassObj::HandleUIMessage(const class FString& UIMessage)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("LuaClassObj", "HandleUIMessage");
-
-	Params::LuaClassObj_HandleUIMessage Parms{};
-
-	Parms.UIMessage = std::move(UIMessage);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.LuaClassObj.HandleUIMessageNoFetch
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    UIMessage                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ALuaClassObj::HandleUIMessageNoFetch(const class FString& UIMessage)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("LuaClassObj", "HandleUIMessageNoFetch");
-
-	Params::LuaClassObj_HandleUIMessageNoFetch Parms{};
-
-	Parms.UIMessage = std::move(UIMessage);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.LuaClassObj.SubCollapseWidgetList
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FString&                    RootWidgetName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class FString>*                  ChildWidgetNames                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void ALuaClassObj::SubCollapseWidgetList(const class FString& RootWidgetName, TArray<class FString>* ChildWidgetNames)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("LuaClassObj", "SubCollapseWidgetList");
-
-	Params::LuaClassObj_SubCollapseWidgetList Parms{};
-
-	Parms.RootWidgetName = std::move(RootWidgetName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (ChildWidgetNames != nullptr)
-		*ChildWidgetNames = std::move(Parms.ChildWidgetNames);
-}
-
-
-// Function Client.LuaClassObj.SubShowHideEvent
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<class FString>&            WidgetPathList                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void ALuaClassObj::SubShowHideEvent(const TArray<class FString>& WidgetPathList)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("LuaClassObj", "SubShowHideEvent");
-
-	Params::LuaClassObj_SubShowHideEvent Parms{};
-
-	Parms.WidgetPathList = std::move(WidgetPathList);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.LuaClassObj.SubUIWidgetList
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<struct FGameWidgetConfig>& InWidgetConfigList                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// const TArray<class FString>&            GameStatusStrList                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// uint8                                   bPersistentUI                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   InStatusConcern                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   bDynamicWidget                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ALuaClassObj::SubUIWidgetList(const TArray<struct FGameWidgetConfig>& InWidgetConfigList, const TArray<class FString>& GameStatusStrList, uint8 bPersistentUI, uint8 InStatusConcern, uint8 bDynamicWidget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("LuaClassObj", "SubUIWidgetList");
-
-	Params::LuaClassObj_SubUIWidgetList Parms{};
-
-	Parms.InWidgetConfigList = std::move(InWidgetConfigList);
-	Parms.GameStatusStrList = std::move(GameStatusStrList);
-	Parms.bPersistentUI = bPersistentUI;
-	Parms.InStatusConcern = InStatusConcern;
-	Parms.bDynamicWidget = bDynamicWidget;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.UTRichTextBlock.GetText
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-class FText UUTRichTextBlock::GetText()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UTRichTextBlock", "GetText");
-
-	Params::UTRichTextBlock_GetText Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Client.UTRichTextBlock.SetGameFrontendHUD
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UGameFrontendHUD*                 InHUD                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UUTRichTextBlock::SetGameFrontendHUD(class UGameFrontendHUD* InHUD)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UTRichTextBlock", "SetGameFrontendHUD");
-
-	Params::UTRichTextBlock_SetGameFrontendHUD Parms{};
-
-	Parms.InHUD = InHUD;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Client.UTRichTextBlock.SetText
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FText&                      InText                                                 (Parm, NativeAccessSpecifierPublic)
-
-void UUTRichTextBlock::SetText(const class FText& InText)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UTRichTextBlock", "SetText");
-
-	Params::UTRichTextBlock_SetText Parms{};
-
-	Parms.InText = std::move(InText);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
 }
 
 

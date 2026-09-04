@@ -37,6 +37,20 @@ void UPlayerInfoPanel_C::ExecuteUbergraph_PlayerInfoPanel(int32 EntryPoint)
 }
 
 
+// Function PlayerInfoPanel.PlayerInfoPanel_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UPlayerInfoPanel_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("PlayerInfoPanel_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function PlayerInfoPanel.PlayerInfoPanel_C.OnMatchSessionChange
 // (BlueprintCallable, BlueprintEvent)
 

@@ -30,6 +30,34 @@ void Abp_share_award_C::UserConstructionScript()
 }
 
 
+// Function bp_share_award.bp_share_award_C.EventShareAwardGetOnAward_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_award_C::EventShareAwardGetOnAward_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_award_C", "EventShareAwardGetOnAward_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_award.bp_share_award_C.EventShareAwardGetOnAward_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_award_C::EventShareAwardGetOnAward_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_award_C", "EventShareAwardGetOnAward_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_share_award.bp_share_award_C.EventShareAwardSelPanelHide_Push
 // (BlueprintCallable, BlueprintEvent)
 
@@ -53,6 +81,34 @@ void Abp_share_award_C::EventShareAwardSelPanelHide_Push_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_share_award_C", "EventShareAwardSelPanelHide_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_award.bp_share_award_C.EventShareAwardShare_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_award_C::EventShareAwardShare_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_award_C", "EventShareAwardShare_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_award.bp_share_award_C.EventShareAwardShare_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_award_C::EventShareAwardShare_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_award_C", "EventShareAwardShare_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,34 +142,6 @@ void Abp_share_award_C::EventShareAwardSelAward_Push_NoFetch()
 }
 
 
-// Function bp_share_award.bp_share_award_C.EventShareAwardGetOnAward_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_award_C::EventShareAwardGetOnAward_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_award_C", "EventShareAwardGetOnAward_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_award.bp_share_award_C.EventShareAwardGetOnAward_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_award_C::EventShareAwardGetOnAward_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_award_C", "EventShareAwardGetOnAward_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_share_award.bp_share_award_C.EventShareAwardUIHide_Push
 // (BlueprintCallable, BlueprintEvent)
 
@@ -137,34 +165,6 @@ void Abp_share_award_C::EventShareAwardUIHide_Push_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_share_award_C", "EventShareAwardUIHide_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_award.bp_share_award_C.EventShareAwardShare_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_award_C::EventShareAwardShare_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_award_C", "EventShareAwardShare_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_award.bp_share_award_C.EventShareAwardShare_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_award_C::EventShareAwardShare_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_award_C", "EventShareAwardShare_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

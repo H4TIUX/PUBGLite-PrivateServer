@@ -10,57 +10,266 @@
 
 #include "Basic.hpp"
 
+#include "Basic_structs.hpp"
 #include "OnlineSubsystemUtils_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Basic_structs.hpp"
 #include "Engine_classes.hpp"
 
 
 namespace SDK
 {
 
-// Class Basic.STBaseBuffList
-// 0x0010 (0x0038 - 0x0028)
-class USTBaseBuffList final : public UObject
+// Class Basic.ItemHandleBase
+// 0x0080 (0x00A8 - 0x0028)
+class UItemHandleBase : public UObject
 {
 public:
-	TArray<struct FSTBaseBuffTemplateItem>        BuffList;                                          // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	int32                                         Count;                                             // 0x0028(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxCount;                                          // 0x002C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bUnique : 1;                                       // 0x0030(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bStackable : 1;                                    // 0x0031(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, struct FItemAssociation>    AssociationMap;                                    // 0x0038(0x0050)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	struct FItemDefineID                          DefineID;                                          // 0x0088(0x0018)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_A0[0x8];                                       // 0x00A0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void AddAssociation(class FName Name_0, const struct FItemAssociation& Association);
+	void Init(const struct FItemDefineID& InDefineID);
+	void RemoveAssociation(class FName Name_0);
+	void SetAssociation(class FName Name_0, const struct FItemAssociation& Association);
+
+	struct FItemAssociation GetAssociation(class FName Name_0) const;
+	struct FItemAssociation GetAssociationByTargetDefineID(const struct FItemDefineID& TargetDefineID) const;
+	TArray<struct FItemAssociation> GetAssociationListByTargetType(int32 Type) const;
+	TMap<class FName, struct FItemAssociation> GetAssociationMap() const;
+	const struct FItemDefineID GetDefineID() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("STBaseBuffList")
+		STATIC_CLASS_IMPL("ItemHandleBase")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"STBaseBuffList")
+		STATIC_NAME_IMPL(L"ItemHandleBase")
 	}
-	static class USTBaseBuffList* GetDefaultObj()
+	static class UItemHandleBase* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<USTBaseBuffList>();
+		return GetDefaultObjImpl<UItemHandleBase>();
 	}
 };
 
-// Class Basic.UAENetActor
-// 0x0010 (0x03D0 - 0x03C0)
-class AUAENetActor : public AActor
+// Class Basic.BPClassManager
+// 0x00C0 (0x00F0 - 0x0030)
+class UBPClassManager final : public UDataAsset
 {
 public:
-	uint8                                         Pad_3C0[0x10];                                     // 0x03C0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FBPClassItem>                   BPClassList;                                       // 0x0030(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	TMap<class UClass*, TSoftClassPtr<class UClass>> BPClassLookUp;                                  // 0x0040(0x0050)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TMap<class FString, TSoftClassPtr<class UClass>> BPClassNameLookUp;                              // 0x0090(0x0050)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	class FString                                 BPClassManagerPath;                                // 0x00E0(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UBPClassManager* Get();
+
+	class UClass* GetBPClassOverride(class UClass* InNativeClass);
+	class UClass* GetBPClassOverrideByName(const class FString& ClassTagName);
+	class UClass* GetUClass(int32 KeyIndex);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("UAENetActor")
+		STATIC_CLASS_IMPL("BPClassManager")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"UAENetActor")
+		STATIC_NAME_IMPL(L"BPClassManager")
 	}
-	static class AUAENetActor* GetDefaultObj()
+	static class UBPClassManager* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<AUAENetActor>();
+		return GetDefaultObjImpl<UBPClassManager>();
+	}
+};
+
+// Class Basic.UAELoadedClassManager
+// 0x0238 (0x0260 - 0x0028)
+class UUAELoadedClassManager : public UObject
+{
+public:
+	TArray<class UClass*>                         m_CachClass;                                       // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TMap<uint32, class UClass*>                   m_CookClass;                                       // 0x0038(0x0050)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_88[0x8];                                       // 0x0088(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<int32, struct FUAEResList>               m_ResTableData;                                    // 0x0090(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TMap<class FString, class UBPTable*>          BPTableMap;                                        // 0x00E0(0x0050)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	class FString                                 LoadedClassManagerClassName;                       // 0x0130(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_140[0xD0];                                     // 0x0140(0x00D0)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class UObject*, struct FSoftObjectPath>  AsyncLoadDict;                                     // 0x0210(0x0050)(ZeroConstructor, NativeAccessSpecifierPrivate)
+
+public:
+	static class UUAELoadedClassManager* Get();
+
+	void ClearAllData();
+	class UBPTable* CreateAndAddBPTable(const class FString& BPTableName);
+	class UClass* GetClass(const class FString& BPTableName, int32 ID);
+	class FString GetMeshPath(const class FString& BPTableName, int32 ID);
+	class FString GetParentID(const class FString& BPTableName, int32 ID);
+	class FString GetPath(const class FString& BPTableName, int32 ID);
+	class FString GetSkinPath(const class FString& BPTableName, int32 ID);
+	class FString GetWrapperPath(const class FString& BPTableName, int32 ID);
+	void Init();
+	void InitBPTableMap();
+	void InitTableData();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UAELoadedClassManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UAELoadedClassManager")
+	}
+	static class UUAELoadedClassManager* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUAELoadedClassManager>();
+	}
+};
+
+// Class Basic.UAEAnimListComponentBase
+// 0x00A8 (0x01B0 - 0x0108)
+class UUAEAnimListComponentBase : public UActorComponent
+{
+public:
+	TMap<int32, struct FAnimListMapValueData>     AnimListMap;                                       // 0x0108(0x0050)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+	TMap<uint8, struct FAnimInfoMapValue>         AnimInfoMap;                                       // 0x0158(0x0050)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A8[0x8];                                      // 0x01A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UAEAnimListComponentBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UAEAnimListComponentBase")
+	}
+	static class UUAEAnimListComponentBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUAEAnimListComponentBase>();
+	}
+};
+
+// Class Basic.BattleItemHandleBase
+// 0x0020 (0x00C8 - 0x00A8)
+class UBattleItemHandleBase : public UItemHandleBase
+{
+public:
+	uint8                                         bEquippable : 1;                                   // 0x00A8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bConsumable : 1;                                   // 0x00A9(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_AA[0x2];                                       // 0x00AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         UnitWeight;                                        // 0x00AC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bAutoEquipAndDrop : 1;                             // 0x00B0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bEquipping : 1;                                    // 0x00B1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_B2[0x6];                                       // 0x00B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBattleItemAdditionalData>      AdditionalData;                                    // 0x00B8(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+
+public:
+	class FName GetWeaponSlotNameGun1();
+	class FName GetWeaponSlotNameGun2();
+	class FName GetWeaponSlotNameSubGun();
+	uint8 HandleDisuse(EBattleItemDisuseReason Reason);
+	uint8 HandleDrop(int32 InCount, EBattleItemDropReason Reason);
+	uint8 HandlePickup(const TScriptInterface<class IItemContainerInterface>& ItemContainer, const struct FBattleItemPickupInfo& PickupInfo, EBattleItemPickupReason Reason);
+	uint8 HandleUse(const struct FBattleItemUseTarget& Target, EBattleItemUseReason Reason);
+	void UpdateItemHandle();
+
+	struct FBattleItemData ExtractItemData() const;
+	class UWorld* GetWorldInternal() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BattleItemHandleBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BattleItemHandleBase")
+	}
+	static class UBattleItemHandleBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBattleItemHandleBase>();
+	}
+};
+
+// Class Basic.AttrModifyInterface
+// 0x0000 (0x0000 - 0x0000)
+class IAttrModifyInterface final
+{
+public:
+	class UAttrModifyComponent* GetAttrModifyComponent();
+	TArray<class AActor*> GetRelevantActors();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AttrModifyInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AttrModifyInterface")
+	}
+	static class IAttrModifyInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IAttrModifyInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+
+// Class Basic.STBaseBuffCarrierInterface
+// 0x0000 (0x0000 - 0x0000)
+class ISTBaseBuffCarrierInterface final
+{
+public:
+	int32 AddBuff(class FName BuffName, class AController* SkillActor, int32 LayerCount, class AActor* BuffApplierActor);
+	uint8 AddBuffExpiry(class FName BuffName, float ExpirySeconds);
+	uint8 AddBuffLayer(class FName BuffName, int32 layerNum);
+	class USTBaseBuff* GetBuffByName(class FName BuffName);
+	uint8 HasBuff(class FName BuffName);
+	uint8 IsSameTeamWithFirstPC();
+	uint8 RemoveBuff(class FName BuffName, uint8 RemoveLayerOnly);
+	void SyncInvincibleData(float TotalTime);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("STBaseBuffCarrierInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"STBaseBuffCarrierInterface")
+	}
+	static class ISTBaseBuffCarrierInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ISTBaseBuffCarrierInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
 	}
 };
 
@@ -120,232 +329,86 @@ public:
 	}
 };
 
-// Class Basic.ItemHandleBase
-// 0x0080 (0x00A8 - 0x0028)
-class UItemHandleBase : public UObject
+// Class Basic.STBaseBuff
+// 0x00F0 (0x0118 - 0x0028)
+class USTBaseBuff final : public UObject
 {
 public:
-	int32                                         Count;                                             // 0x0028(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxCount;                                          // 0x002C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bUnique : 1;                                       // 0x0030(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bStackable : 1;                                    // 0x0031(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, struct FItemAssociation>    AssociationMap;                                    // 0x0038(0x0050)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	struct FItemDefineID                          DefineID;                                          // 0x0088(0x0018)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_A0[0x8];                                       // 0x00A0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 BuffName;                                          // 0x0028(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DisplayName;                                       // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Message;                                           // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture2D*                             Icon;                                              // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundBase*                             SoundData;                                         // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         IsDeBuff : 1;                                      // 0x0068(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         IgnoreMagicalImmunity : 1;                         // 0x0069(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Layerable : 1;                                     // 0x006A(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         ReplaceExsist : 1;                                 // 0x006B(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         DetachIfReplace : 1;                               // 0x006C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         StaysOnDeath : 1;                                  // 0x006D(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_6E[0x2];                                       // 0x006E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         LayerMax;                                          // 0x0070(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InitialLayerCount;                                 // 0x0074(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LayerCount;                                        // 0x0078(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ValidityTime;                                      // 0x007C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Internal;                                          // 0x0080(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UUTSkillCondition*>              BuffConditions;                                    // 0x0088(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	float                                         Expiry;                                            // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FStatusChange>                  StatusChanges;                                     // 0x00A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         NeedSimulateToClientMulticast : 1;                 // 0x00B0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         NeedSimulateToClient : 1;                          // 0x00B1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	ESimulateAddBuffRole                          SimulateAddBuffRole;                               // 0x00B2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B3[0x5];                                       // 0x00B3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           MutexBuffers;                                      // 0x00B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FBuffActionItem>                BuffActions;                                       // 0x00C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<struct FBuffEventActionItem>           EventBuffActions;                                  // 0x00D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	float                                         fADScale;                                          // 0x00E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         fAPScale;                                          // 0x00EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         IsAlwaysExists : 1;                                // 0x00F0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AController*                            CauserPawnController;                              // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class APawn*                                  Target;                                            // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_108[0x8];                                      // 0x0108(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 BuffApplier;                                       // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
-	void AddAssociation(class FName Name_0, const struct FItemAssociation& Association);
-	void Init(const struct FItemDefineID& InDefineID);
-	void RemoveAssociation(class FName Name_0);
-	void SetAssociation(class FName Name_0, const struct FItemAssociation& Association);
-
-	struct FItemAssociation GetAssociation(class FName Name_0) const;
-	struct FItemAssociation GetAssociationByTargetDefineID(const struct FItemDefineID& TargetDefineID) const;
-	TArray<struct FItemAssociation> GetAssociationListByTargetType(int32 Type) const;
-	TMap<class FName, struct FItemAssociation> GetAssociationMap() const;
-	const struct FItemDefineID GetDefineID() const;
+	float GetBuffPassPercentage();
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ItemHandleBase")
+		STATIC_CLASS_IMPL("STBaseBuff")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ItemHandleBase")
+		STATIC_NAME_IMPL(L"STBaseBuff")
 	}
-	static class UItemHandleBase* GetDefaultObj()
+	static class USTBaseBuff* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UItemHandleBase>();
+		return GetDefaultObjImpl<USTBaseBuff>();
 	}
 };
 
-// Class Basic.UAEGameInstance
-// 0x0100 (0x0330 - 0x0230)
-class UUAEGameInstance : public UGameInstance
+// Class Basic.UAENetActor
+// 0x0010 (0x03C0 - 0x03B0)
+class AUAENetActor : public AActor
 {
 public:
-	struct FClientBaseInfo                        ClientBaseInfo;                                    // 0x0230(0x00C8)(NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F8[0x20];                                     // 0x02F8(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFrontendHUD*                           AssociatedFrontendHUD;                             // 0x0318(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_320[0x10];                                     // 0x0320(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	int32 GetDeviceLevel();
-	int32 GetWeatherID();
-
-	class UFrontendHUD* GetAssociatedFrontendHUD() const;
-	class FString GetLocalPlayerNetId() const;
+	uint8                                         Pad_3B0[0x10];                                     // 0x03B0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("UAEGameInstance")
+		STATIC_CLASS_IMPL("UAENetActor")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"UAEGameInstance")
+		STATIC_NAME_IMPL(L"UAENetActor")
 	}
-	static class UUAEGameInstance* GetDefaultObj()
+	static class AUAENetActor* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UUAEGameInstance>();
-	}
-};
-
-// Class Basic.AttrModifyInterface
-// 0x0000 (0x0000 - 0x0000)
-class IAttrModifyInterface final
-{
-public:
-	class UAttrModifyComponent* GetAttrModifyComponent();
-	TArray<class AActor*> GetRelevantActors();
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AttrModifyInterface")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AttrModifyInterface")
-	}
-	static class IAttrModifyInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IAttrModifyInterface>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-
-// Class Basic.BattleItemHandleBase
-// 0x0018 (0x00C0 - 0x00A8)
-class UBattleItemHandleBase : public UItemHandleBase
-{
-public:
-	TArray<struct FBattleItemAdditionalData>      AdditionalData;                                    // 0x00A8(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         bAutoEquipAndDrop : 1;                             // 0x00B8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bEquipping : 1;                                    // 0x00B9(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bEquippable : 1;                                   // 0x00BA(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bConsumable : 1;                                   // 0x00BB(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	float                                         UnitWeight;                                        // 0x00BC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	class FName GetWeaponSlotNameGun1();
-	class FName GetWeaponSlotNameGun2();
-	class FName GetWeaponSlotNameSubGun();
-	uint8 HandleDisuse(EBattleItemDisuseReason Reason);
-	uint8 HandleDrop(int32 InCount, EBattleItemDropReason Reason);
-	uint8 HandlePickup(const TScriptInterface<class IItemContainerInterface>& ItemContainer, const struct FBattleItemPickupInfo& PickupInfo, EBattleItemPickupReason Reason);
-	uint8 HandleUse(const struct FBattleItemUseTarget& Target, EBattleItemUseReason Reason);
-	void UpdateItemHandle();
-
-	struct FBattleItemData ExtractItemData() const;
-	class UWorld* GetWorldInternal() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BattleItemHandleBase")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BattleItemHandleBase")
-	}
-	static class UBattleItemHandleBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBattleItemHandleBase>();
-	}
-};
-
-// Class Basic.OwnerRelevancyDependencyInterface
-// 0x0000 (0x0000 - 0x0000)
-class IOwnerRelevancyDependencyInterface final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OwnerRelevancyDependencyInterface")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OwnerRelevancyDependencyInterface")
-	}
-	static class IOwnerRelevancyDependencyInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IOwnerRelevancyDependencyInterface>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-
-// Class Basic.UAEAnimListComponentBase
-// 0x00A8 (0x01B0 - 0x0108)
-class UUAEAnimListComponentBase : public UActorComponent
-{
-public:
-	TMap<int32, struct FAnimListMapValueData>     AnimListMap;                                       // 0x0108(0x0050)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-	TMap<uint8, struct FAnimInfoMapValue>         AnimInfoMap;                                       // 0x0158(0x0050)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A8[0x8];                                      // 0x01A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UAEAnimListComponentBase")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UAEAnimListComponentBase")
-	}
-	static class UUAEAnimListComponentBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUAEAnimListComponentBase>();
-	}
-};
-
-// Class Basic.BPClassManager
-// 0x00C0 (0x00F0 - 0x0030)
-class UBPClassManager final : public UDataAsset
-{
-public:
-	TArray<struct FBPClassItem>                   BPClassList;                                       // 0x0030(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	TMap<class UClass*, TSoftClassPtr<class UClass>> BPClassLookUp;                                  // 0x0040(0x0050)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
-	TMap<class FString, TSoftClassPtr<class UClass>> BPClassNameLookUp;                              // 0x0090(0x0050)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
-	class FString                                 BPClassManagerPath;                                // 0x00E0(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UBPClassManager* Get();
-
-	class UClass* GetBPClassOverride(class UClass* InNativeClass);
-	class UClass* GetBPClassOverrideByName(const class FString& ClassTagName);
-	class UClass* GetUClass(int32 KeyIndex);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BPClassManager")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BPClassManager")
-	}
-	static class UBPClassManager* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBPClassManager>();
+		return GetDefaultObjImpl<AUAENetActor>();
 	}
 };
 
@@ -437,6 +500,34 @@ public:
 	}
 };
 
+// Class Basic.OwnerRelevancyDependencyInterface
+// 0x0000 (0x0000 - 0x0000)
+class IOwnerRelevancyDependencyInterface final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OwnerRelevancyDependencyInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OwnerRelevancyDependencyInterface")
+	}
+	static class IOwnerRelevancyDependencyInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IOwnerRelevancyDependencyInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+
 // Class Basic.PackTool
 // 0x0010 (0x0038 - 0x0028)
 class UPackTool final : public UObject
@@ -459,105 +550,6 @@ public:
 	static class UPackTool* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPackTool>();
-	}
-};
-
-// Class Basic.STBaseBuff
-// 0x00F0 (0x0118 - 0x0028)
-class USTBaseBuff final : public UObject
-{
-public:
-	class FString                                 BuffName;                                          // 0x0028(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DisplayName;                                       // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Message;                                           // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture2D*                             Icon;                                              // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USoundBase*                             SoundData;                                         // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         IsDeBuff : 1;                                      // 0x0068(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         IgnoreMagicalImmunity : 1;                         // 0x0069(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Layerable : 1;                                     // 0x006A(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         ReplaceExsist : 1;                                 // 0x006B(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         DetachIfReplace : 1;                               // 0x006C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         StaysOnDeath : 1;                                  // 0x006D(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_6E[0x2];                                       // 0x006E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         LayerMax;                                          // 0x0070(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InitialLayerCount;                                 // 0x0074(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LayerCount;                                        // 0x0078(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ValidityTime;                                      // 0x007C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Internal;                                          // 0x0080(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UUTSkillCondition*>              BuffConditions;                                    // 0x0088(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	float                                         Expiry;                                            // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FStatusChange>                  StatusChanges;                                     // 0x00A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         NeedSimulateToClientMulticast : 1;                 // 0x00B0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         NeedSimulateToClient : 1;                          // 0x00B1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	ESimulateAddBuffRole                          SimulateAddBuffRole;                               // 0x00B2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B3[0x5];                                       // 0x00B3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           MutexBuffers;                                      // 0x00B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FBuffActionItem>                BuffActions;                                       // 0x00C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TArray<struct FBuffEventActionItem>           EventBuffActions;                                  // 0x00D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	float                                         fADScale;                                          // 0x00E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         fAPScale;                                          // 0x00EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         IsAlwaysExists : 1;                                // 0x00F0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AController*                            CauserPawnController;                              // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APawn*                                  Target;                                            // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_108[0x8];                                      // 0x0108(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 BuffApplier;                                       // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	float GetBuffPassPercentage();
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("STBaseBuff")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"STBaseBuff")
-	}
-	static class USTBaseBuff* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USTBaseBuff>();
-	}
-};
-
-// Class Basic.STBaseBuffCarrierInterface
-// 0x0000 (0x0000 - 0x0000)
-class ISTBaseBuffCarrierInterface final
-{
-public:
-	int32 AddBuff(class FName BuffName, class AController* SkillActor, int32 LayerCount, class AActor* BuffApplierActor);
-	uint8 AddBuffExpiry(class FName BuffName, float ExpirySeconds);
-	uint8 AddBuffLayer(class FName BuffName, int32 layerNum);
-	class USTBaseBuff* GetBuffByName(class FName BuffName);
-	uint8 HasBuff(class FName BuffName);
-	uint8 IsSameTeamWithFirstPC();
-	uint8 RemoveBuff(class FName BuffName, uint8 RemoveLayerOnly);
-	void SyncInvincibleData(float TotalTime);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("STBaseBuffCarrierInterface")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"STBaseBuffCarrierInterface")
-	}
-	static class ISTBaseBuffCarrierInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ISTBaseBuffCarrierInterface>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
 	}
 };
 
@@ -723,12 +715,34 @@ public:
 	}
 };
 
+// Class Basic.STBaseBuffList
+// 0x0010 (0x0038 - 0x0028)
+class USTBaseBuffList final : public UObject
+{
+public:
+	TArray<struct FSTBaseBuffTemplateItem>        BuffList;                                          // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("STBaseBuffList")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"STBaseBuffList")
+	}
+	static class USTBaseBuffList* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USTBaseBuffList>();
+	}
+};
+
 // Class Basic.BuffManagerPathClass
-// 0x0010 (0x03D0 - 0x03C0)
+// 0x0010 (0x03C0 - 0x03B0)
 class ABuffManagerPathClass final : public AActor
 {
 public:
-	class FString                                 BuffManagerBlueprintPath;                          // 0x03C0(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BuffManagerBlueprintPath;                          // 0x03B0(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -835,13 +849,13 @@ public:
 };
 
 // Class Basic.UAEGameEngine
-// 0x0020 (0x0F40 - 0x0F20)
+// 0x0020 (0x0F20 - 0x0F00)
 class UUAEGameEngine : public UGameEngine
 {
 public:
-	uint8                                         Pad_F20[0x8];                                      // 0x0F20(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBackendHUD*                            AssociatedBackendHUD;                              // 0x0F28(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_F30[0x10];                                     // 0x0F30(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F00[0x8];                                      // 0x0F00(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBackendHUD*                            AssociatedBackendHUD;                              // 0x0F08(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_F10[0x10];                                     // 0x0F10(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -858,6 +872,38 @@ public:
 	}
 };
 
+// Class Basic.UAEGameInstance
+// 0x0100 (0x0340 - 0x0240)
+class UUAEGameInstance : public UGameInstance
+{
+public:
+	struct FClientBaseInfo                        ClientBaseInfo;                                    // 0x0240(0x00C8)(NativeAccessSpecifierPublic)
+	uint8                                         Pad_308[0x20];                                     // 0x0308(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFrontendHUD*                           AssociatedFrontendHUD;                             // 0x0328(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_330[0x10];                                     // 0x0330(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	int32 GetDeviceLevel();
+	int32 GetWeatherID();
+
+	class UFrontendHUD* GetAssociatedFrontendHUD() const;
+	class FString GetLocalPlayerNetId() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UAEGameInstance")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UAEGameInstance")
+	}
+	static class UUAEGameInstance* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUAEGameInstance>();
+	}
+};
+
 // Class Basic.BPTable
 // 0x0060 (0x0088 - 0x0028)
 class UBPTable final : public UObject
@@ -867,7 +913,7 @@ public:
 	TMap<int32, struct FBPTableItem>              BPTableItemMap;                                    // 0x0038(0x0050)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
-	class UClass* GetBPTableClass(int32 ID);
+	class UClass* GetClass(int32 ID);
 	class FString GetMeshPath(int32 ID);
 	class FString GetParentID(int32 ID);
 	class FString GetPath(int32 ID);
@@ -886,50 +932,6 @@ public:
 	static class UBPTable* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBPTable>();
-	}
-};
-
-// Class Basic.UAELoadedClassManager
-// 0x0238 (0x0260 - 0x0028)
-class UUAELoadedClassManager : public UObject
-{
-public:
-	TArray<class UClass*>                         m_CachClass;                                       // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TMap<uint32, class UClass*>                   m_CookClass;                                       // 0x0038(0x0050)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_88[0x8];                                       // 0x0088(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int32, struct FUAEResList>               m_ResTableData;                                    // 0x0090(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TMap<class FString, class UBPTable*>          BPTableMap;                                        // 0x00E0(0x0050)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	class FString                                 LoadedClassManagerClassName;                       // 0x0130(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_140[0xD0];                                     // 0x0140(0x00D0)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class UObject*, struct FSoftObjectPath>  AsyncLoadDict;                                     // 0x0210(0x0050)(ZeroConstructor, NativeAccessSpecifierPrivate)
-
-public:
-	static class UUAELoadedClassManager* Get();
-
-	void ClearAllData();
-	class UBPTable* CreateAndAddBPTable(const class FString& BPTableName);
-	class UClass* GetLoadedClassManagerClass(const class FString& BPTableName, int32 ID);
-	class FString GetMeshPath(const class FString& BPTableName, int32 ID);
-	class FString GetParentID(const class FString& BPTableName, int32 ID);
-	class FString GetPath(const class FString& BPTableName, int32 ID);
-	class FString GetSkinPath(const class FString& BPTableName, int32 ID);
-	class FString GetWrapperPath(const class FString& BPTableName, int32 ID);
-	void Init();
-	void InitBPTableMap();
-	void InitTableData();
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UAELoadedClassManager")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UAELoadedClassManager")
-	}
-	static class UUAELoadedClassManager* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUAELoadedClassManager>();
 	}
 };
 

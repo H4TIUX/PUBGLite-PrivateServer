@@ -30,29 +30,29 @@ void Abp_corps_base_C::UserConstructionScript()
 }
 
 
-// Function bp_corps_base.bp_corps_base_C.EventOnAfterHide
+// Function bp_corps_base.bp_corps_base_C.EventCorpsClose
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_base_C::EventOnAfterHide()
+void Abp_corps_base_C::EventCorpsClose()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_base_C", "EventOnAfterHide");
+		Func = GetClass()->GetFunction("bp_corps_base_C", "EventCorpsClose");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_corps_base.bp_corps_base_C.EventOnAfterHide_NoFetch
+// Function bp_corps_base.bp_corps_base_C.EventCorpsClose_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_base_C::EventOnAfterHide_NoFetch()
+void Abp_corps_base_C::EventCorpsClose_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_base_C", "EventOnAfterHide_NoFetch");
+		Func = GetClass()->GetFunction("bp_corps_base_C", "EventCorpsClose_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,6 +86,34 @@ void Abp_corps_base_C::EventOnSelectIndex_NoFetch()
 }
 
 
+// Function bp_corps_base.bp_corps_base_C.EventOnAfterHide
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_base_C::EventOnAfterHide()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_base_C", "EventOnAfterHide");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_base.bp_corps_base_C.EventOnAfterHide_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_base_C::EventOnAfterHide_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_base_C", "EventOnAfterHide_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_corps_base.bp_corps_base_C.EventOnAfterShow
 // (BlueprintCallable, BlueprintEvent)
 
@@ -109,34 +137,6 @@ void Abp_corps_base_C::EventOnAfterShow_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_corps_base_C", "EventOnAfterShow_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_base.bp_corps_base_C.EventCorpsClose
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_base_C::EventCorpsClose()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_base_C", "EventCorpsClose");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_base.bp_corps_base_C.EventCorpsClose_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_base_C::EventCorpsClose_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_base_C", "EventCorpsClose_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

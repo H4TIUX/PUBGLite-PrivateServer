@@ -31,13 +31,15 @@ public:
 
 public:
 	void ExecuteUbergraph_BackPackPickUpPanel_BP(int32 EntryPoint);
+	void Destruct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void ReceivedInitWidget();
 	void OnCloseBackPack();
+	void ReceivedInitWidget();
+	void Construct();
 	void HideBackpackPanel();
 	void GetWeaponAttachPosByResID(int32 resID, EWeaponAttachmentSocketType* socket);
-	void GetWeaponSupportAttachResID(int32 WeaponID, TArray<int32>* attachID);
-	void GetWeaponSupportSocket(int32 WeaponID, TArray<EWeaponAttachmentSocketType>* socketList);
+	void GetWeaponSupportAttachResID(int32 WeaponId, TArray<int32>* attachID);
+	void GetWeaponSupportSocket(int32 WeaponId, TArray<EWeaponAttachmentSocketType>* socketList);
 	void IsGunSupportAttachByDefine(const struct FItemDefineID& gunDefine, const struct FItemDefineID& attachDefine, uint8* support);
 	void IsGunSupportAttachByRes(int32 gunResID, int32 attachResID, uint8* support);
 	void AddToWeaponAttachPos(int32& attachID, EWeaponAttachmentSocketType socket);

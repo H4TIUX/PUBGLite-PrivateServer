@@ -30,6 +30,62 @@ void Abp_alliance_recruit_C::UserConstructionScript()
 }
 
 
+// Function bp_alliance_recruit.bp_alliance_recruit_C.EventClickHeadRecruit
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_recruit_C::EventClickHeadRecruit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventClickHeadRecruit");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance_recruit.bp_alliance_recruit_C.EventClickHeadRecruit_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_recruit_C::EventClickHeadRecruit_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventClickHeadRecruit_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance_recruit.bp_alliance_recruit_C.EventClickHeadApply
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_recruit_C::EventClickHeadApply()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventClickHeadApply");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance_recruit.bp_alliance_recruit_C.EventClickHeadApply_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_recruit_C::EventClickHeadApply_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventClickHeadApply_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_alliance_recruit.bp_alliance_recruit_C.EventHideUI
 // (BlueprintCallable, BlueprintEvent)
 
@@ -58,29 +114,29 @@ void Abp_alliance_recruit_C::EventHideUI_NoFetch()
 }
 
 
-// Function bp_alliance_recruit.bp_alliance_recruit_C.EventAllianceRecruitFetchInfo
+// Function bp_alliance_recruit.bp_alliance_recruit_C.EventShowApplyList
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_recruit_C::EventAllianceRecruitFetchInfo()
+void Abp_alliance_recruit_C::EventShowApplyList()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventAllianceRecruitFetchInfo");
+		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventShowApplyList");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_alliance_recruit.bp_alliance_recruit_C.EventAllianceRecruitFetchInfo_NoFetch
+// Function bp_alliance_recruit.bp_alliance_recruit_C.EventShowApplyList_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_recruit_C::EventAllianceRecruitFetchInfo_NoFetch()
+void Abp_alliance_recruit_C::EventShowApplyList_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventAllianceRecruitFetchInfo_NoFetch");
+		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventShowApplyList_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,29 +170,57 @@ void Abp_alliance_recruit_C::EventClickApplyRefuse_NoFetch()
 }
 
 
-// Function bp_alliance_recruit.bp_alliance_recruit_C.EventClickHeadRecruit
+// Function bp_alliance_recruit.bp_alliance_recruit_C.EventAllianceRecruit_Push
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_recruit_C::EventClickHeadRecruit()
+void Abp_alliance_recruit_C::EventAllianceRecruit_Push()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventClickHeadRecruit");
+		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventAllianceRecruit_Push");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_alliance_recruit.bp_alliance_recruit_C.EventClickHeadRecruit_NoFetch
+// Function bp_alliance_recruit.bp_alliance_recruit_C.EventAllianceRecruit_Push_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_recruit_C::EventClickHeadRecruit_NoFetch()
+void Abp_alliance_recruit_C::EventAllianceRecruit_Push_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventClickHeadRecruit_NoFetch");
+		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventAllianceRecruit_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance_recruit.bp_alliance_recruit_C.EventAllianceRecruitScrollChanged
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_recruit_C::EventAllianceRecruitScrollChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventAllianceRecruitScrollChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_alliance_recruit.bp_alliance_recruit_C.EventAllianceRecruitScrollChanged_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_alliance_recruit_C::EventAllianceRecruitScrollChanged_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventAllianceRecruitScrollChanged_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -198,113 +282,29 @@ void Abp_alliance_recruit_C::EventClickRecruit_NoFetch()
 }
 
 
-// Function bp_alliance_recruit.bp_alliance_recruit_C.EventAllianceRecruitScrollChanged
+// Function bp_alliance_recruit.bp_alliance_recruit_C.EventAllianceRecruitFetchInfo
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_recruit_C::EventAllianceRecruitScrollChanged()
+void Abp_alliance_recruit_C::EventAllianceRecruitFetchInfo()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventAllianceRecruitScrollChanged");
+		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventAllianceRecruitFetchInfo");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_alliance_recruit.bp_alliance_recruit_C.EventAllianceRecruitScrollChanged_NoFetch
+// Function bp_alliance_recruit.bp_alliance_recruit_C.EventAllianceRecruitFetchInfo_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_alliance_recruit_C::EventAllianceRecruitScrollChanged_NoFetch()
+void Abp_alliance_recruit_C::EventAllianceRecruitFetchInfo_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventAllianceRecruitScrollChanged_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance_recruit.bp_alliance_recruit_C.EventShowApplyList
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_recruit_C::EventShowApplyList()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventShowApplyList");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance_recruit.bp_alliance_recruit_C.EventShowApplyList_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_recruit_C::EventShowApplyList_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventShowApplyList_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance_recruit.bp_alliance_recruit_C.EventClickHeadApply
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_recruit_C::EventClickHeadApply()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventClickHeadApply");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance_recruit.bp_alliance_recruit_C.EventClickHeadApply_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_recruit_C::EventClickHeadApply_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventClickHeadApply_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance_recruit.bp_alliance_recruit_C.EventAllianceRecruit_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_recruit_C::EventAllianceRecruit_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventAllianceRecruit_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_alliance_recruit.bp_alliance_recruit_C.EventAllianceRecruit_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_alliance_recruit_C::EventAllianceRecruit_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventAllianceRecruit_Push_NoFetch");
+		Func = GetClass()->GetFunction("bp_alliance_recruit_C", "EventAllianceRecruitFetchInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

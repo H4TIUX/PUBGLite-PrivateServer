@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "EGroudStuffType_structs.hpp"
-#include "ShadowTrackerExtra_structs.hpp"
-#include "Gameplay_structs.hpp"
-#include "UnrealArchExt_classes.hpp"
 #include "UMG_structs.hpp"
+#include "Engine_structs.hpp"
+#include "ShadowTrackerExtra_structs.hpp"
+#include "EGroudStuffType_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "UnrealArchExt_classes.hpp"
+#include "Gameplay_structs.hpp"
 
 
 namespace SDK
@@ -68,6 +68,8 @@ public:
 
 public:
 	void ExecuteUbergraph_PickUpListPanel_BP(int32 EntryPoint);
+	void OnBackpackClose();
+	void Destruct();
 	void ItemBePickUpEvent(const struct FSearchedPickUpItemResult& PickUpItemData, uint8 ForceDrop);
 	void ToolTipUpdateEvent(class UPickUpItem_S_BP_C* ItemBP);
 	void ItemDragStartEvent(const struct FSearchedPickUpItemResult& ItemData);
@@ -85,6 +87,7 @@ public:
 	void AutoPickOne(const struct FSearchedPickUpItemResult& pickUpResult);
 	void ReceivedInitWidget();
 	void BndEvt__Button_ClosePickUpListUI_K2Node_ComponentBoundEvent_35_OnButtonClickedEvent__DelegateSignature();
+	void Construct();
 	void UpdateListData(float DeltaTime);
 	void ShowToolTips(const struct FSlateBrush& Image, const class FString& ItemName, const class FString& ItemDesc);
 	void HideToolTips();

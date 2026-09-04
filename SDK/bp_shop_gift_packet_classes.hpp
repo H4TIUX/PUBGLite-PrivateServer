@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_STRUCT_Shop_GiftPack_Item_Info_structs.hpp"
 #include "BP_STRUCT_Shop_GiftPack_Data_structs.hpp"
+#include "BP_STRUCT_Shop_GiftPack_Item_Info_structs.hpp"
 #include "Client_classes.hpp"
 
 
@@ -19,35 +19,35 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_shop_gift_packet.bp_shop_gift_packet_C
-// 0x0140 (0x0528 - 0x03E8)
+// 0x0140 (0x0518 - 0x03D8)
 class Abp_shop_gift_packet_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_Shop_GiftPack_Data>  BP_ARRAY_GiftPack_PackStyle;                       // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_SHOPGIFT_UITYPE;                                // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_404[0x4];                                      // 0x0404(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_Shop_GiftPack_Item_Info     BP_STRUCT_Shop_GiftPack_Item_Info;                 // 0x0408(0x00D0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	uint8                                         BP_SHOPGIFTPACK_UI_SHOW : 1;                       // 0x04D8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_4D9[0x7];                                      // 0x04D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_Shop_GiftPack_Data          BP_STRUCT_Shop_GiftPack_Data;                      // 0x04E0(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class FString                                 BP_SHOPGIFT_CHECKBOX_NAME;                         // 0x0510(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0520(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class FString                                 BP_SHOPGIFT_CHECKBOX_NAME;                         // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         BP_SHOPGIFTPACK_UI_SHOW : 1;                       // 0x03F0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_3F1[0x7];                                      // 0x03F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_Shop_GiftPack_Data          BP_STRUCT_Shop_GiftPack_Data;                      // 0x03F8(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_Shop_GiftPack_Data>  BP_ARRAY_GiftPack_PackStyle;                       // 0x0428(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	struct FBP_STRUCT_Shop_GiftPack_Item_Info     BP_STRUCT_Shop_GiftPack_Item_Info;                 // 0x0438(0x00D0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_SHOPGIFT_UITYPE;                                // 0x0508(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_50C[0x4];                                      // 0x050C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0510(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventUpdateCheckIdx();
-	void EventUpdateCheckIdx_NoFetch();
-	void EventGiftPacketWaiting();
-	void EventGiftPacketWaiting_NoFetch();
-	void EventPushValue();
-	void EventPushValue_NoFetch();
-	void EventGiftPacketUIRequireGift();
-	void EventGiftPacketUIRequireGift_NoFetch();
-	void EventGiftPacketUISendGift();
-	void EventGiftPacketUISendGift_NoFetch();
 	void EventOpenSendGiftPanel();
 	void EventOpenSendGiftPanel_NoFetch();
+	void EventGiftPacketUIRequireGift();
+	void EventGiftPacketUIRequireGift_NoFetch();
+	void EventPushValue();
+	void EventPushValue_NoFetch();
+	void EventGiftPacketWaiting();
+	void EventGiftPacketWaiting_NoFetch();
+	void EventUpdateCheckIdx();
+	void EventUpdateCheckIdx_NoFetch();
+	void EventGiftPacketUISendGift();
+	void EventGiftPacketUISendGift_NoFetch();
 	void EventAnimationCallBack();
 	void EventAnimationCallBack_NoFetch();
 

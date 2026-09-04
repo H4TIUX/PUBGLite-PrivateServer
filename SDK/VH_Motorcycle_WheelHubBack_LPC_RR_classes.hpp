@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass VH_Motorcycle_WheelHubBack_LPC_RR.VH_Motorcycle_WheelHubBack_LPC_RR_C
-// 0x0000 (0x0128 - 0x0128)
+// 0x0000 (0x0140 - 0x0140)
 class UVH_Motorcycle_WheelHubBack_LPC_RR_C final : public USTExtraVehicleWheel
 {
 public:

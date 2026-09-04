@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "BP_STRUCT_CorpsSnapInfo_structs.hpp"
 #include "BP_STRUCT_CorpsSuggestion_InviteCorpsInfo_structs.hpp"
 #include "BP_STRUCT_CorpsFriendInfo_structs.hpp"
 #include "BP_STRUCT_Corps_SelectedCommanderInfo_structs.hpp"
+#include "BP_STRUCT_CorpsSnapInfo_structs.hpp"
 #include "BP_STRUCT_CORPS_Suggestion_DetailPanelData_structs.hpp"
 #include "Client_classes.hpp"
 
@@ -22,73 +22,72 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_corps_suggestion.bp_corps_suggestion_C
-// 0x0300 (0x06E8 - 0x03E8)
+// 0x02F8 (0x06D0 - 0x03D8)
 class Abp_corps_suggestion_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_CorpsSnapInfo>       BP_ARRAY_Corps_SuggestionList;                     // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBP_STRUCT_CorpsFriendInfo             BP_STRUCT_CorpsFriendInfo;                         // 0x0400(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_Corps_Suggestion_OldSelectedIndex;              // 0x0418(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_CorpsFriendInfo             BP_STRUCT_CorpsFriendInfo;                         // 0x03E0(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FBP_STRUCT_Corps_SelectedCommanderInfo BP_STRUCT_Corps_SelectedCommanderInfo;             // 0x03F8(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_Corps_Suggestion_Toggle;                        // 0x0418(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_41C[0x4];                                      // 0x041C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         BP_ARRAY_Corps_ApplicationTempIDList;              // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBP_STRUCT_Corps_SelectedCommanderInfo BP_STRUCT_Corps_SelectedCommanderInfo;             // 0x0430(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_Corps_Suggestion_CurSelectedIndex;              // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_Corps_Suggestion_CityID;                        // 0x0454(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_CorpsSnapInfo>       BP_ARRAY_Corps_ApplicationList;                    // 0x0458(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class FString                                 BP_Corps_Suggestion_SearchName;                    // 0x0468(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_CorpsSuggestion_InviteCorpsInfo> BP_ARRAY_Corps_InvitedCorpsList;       // 0x0478(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBP_STRUCT_CorpsSuggestion_InviteCorpsInfo BP_STRUCT_CorpsSuggestion_InviteCorpsInfo;     // 0x0488(0x0088)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	uint8                                         BP_Corps_Suggestion_NotNeedApproval : 1;           // 0x0510(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_511[0x7];                                      // 0x0511(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_CorpsFriendInfo>     BP_ARRAY_Corps_SelectedFriends;                    // 0x0518(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	uint8                                         BP_Corps_Suggestion_AccordRequirement : 1;         // 0x0528(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_529[0x7];                                      // 0x0529(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_Corps_MemberID;                                 // 0x0530(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_CORPS_Suggestion_DetailPanelData BP_STRUCT_CORPS_Suggestion_DetailPanelData;   // 0x0540(0x00C0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	uint8                                         BP_Corps_Suggestion_SearchResult : 1;              // 0x0600(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         BP_CorpsSuggestionShowAnimation : 1;               // 0x0601(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_602[0x6];                                      // 0x0602(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_CorpsSnapInfo>       BP_ARRAY_Corps_SearchList;                         // 0x0608(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_Corps_Suggestion_Toggle;                        // 0x0618(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_61C[0x4];                                      // 0x061C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_CorpsSnapInfo               BP_STRUCT_CorpsSnapInfo;                           // 0x0620(0x00C0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x06E0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_CorpsSnapInfo>       BP_ARRAY_Corps_SearchList;                         // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_Corps_Suggestion_CurSelectedIndex;              // 0x0430(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_Corps_Suggestion_CityID;                        // 0x0434(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBP_STRUCT_CorpsSnapInfo               BP_STRUCT_CorpsSnapInfo;                           // 0x0438(0x00C0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FBP_STRUCT_CORPS_Suggestion_DetailPanelData BP_STRUCT_CORPS_Suggestion_DetailPanelData;   // 0x04F8(0x00C0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	uint8                                         BP_Corps_Suggestion_AccordRequirement : 1;         // 0x05B8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         BP_Corps_Suggestion_SearchResult : 1;              // 0x05B9(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_5BA[0x6];                                      // 0x05BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_Corps_Suggestion_SearchName;                    // 0x05C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_Corps_Suggestion_OldSelectedIndex;              // 0x05D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5D4[0x4];                                      // 0x05D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_CorpsFriendInfo>     BP_ARRAY_Corps_SelectedFriends;                    // 0x05D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FBP_STRUCT_CorpsSnapInfo>       BP_ARRAY_Corps_SuggestionList;                     // 0x05E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class FString                                 BP_Corps_MemberID;                                 // 0x05F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FString>                         BP_ARRAY_Corps_ApplicationTempIDList;              // 0x0608(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	uint8                                         BP_Corps_Suggestion_NotNeedApproval : 1;           // 0x0618(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         BP_CorpsSuggestionShowAnimation : 1;               // 0x0619(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_61A[0x6];                                      // 0x061A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_CorpsSuggestion_InviteCorpsInfo BP_STRUCT_CorpsSuggestion_InviteCorpsInfo;     // 0x0620(0x0088)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_CorpsSnapInfo>       BP_ARRAY_Corps_ApplicationList;                    // 0x06A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FBP_STRUCT_CorpsSuggestion_InviteCorpsInfo> BP_ARRAY_Corps_InvitedCorpsList;       // 0x06B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x06C8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventCorpsSuggestionClickSearch();
-	void EventCorpsSuggestionClickSearch_NoFetch();
-	void EventCorpsSuggestionClickApply();
-	void EventCorpsSuggestionClickApply_NoFetch();
-	void EventCorpsSuggestionOnTabChange();
-	void EventCorpsSuggestionOnTabChange_NoFetch();
-	void EventCorpsSuggestionClickAccept();
-	void EventCorpsSuggestionClickAccept_NoFetch();
-	void EventCorpsRecommendListReport();
-	void EventCorpsRecommendListReport_NoFetch();
-	void EventCorpsSuggestionClickIgnor();
-	void EventCorpsSuggestionClickIgnor_NoFetch();
 	void EventCorpsSuggestionOnSelectItemChange();
 	void EventCorpsSuggestionOnSelectItemChange_NoFetch();
-	void EventSetCorpsSuggestionInfo_Push();
-	void EventSetCorpsSuggestionInfo_Push_NoFetch();
 	void EventCorpsSuggestionClickRefresh();
 	void EventCorpsSuggestionClickRefresh_NoFetch();
-	void EventCorpsSuggestionOnFilterStateChange();
-	void EventCorpsSuggestionOnFilterStateChange_NoFetch();
-	void EventFetchCorpsSuggestionInfo();
-	void EventFetchCorpsSuggestionInfo_NoFetch();
-	void EventCorpsSuggestionShowUI();
-	void EventCorpsSuggestionShowUI_NoFetch();
-	void EventCorpsSuggestionHideUI();
-	void EventCorpsSuggestionHideUI_NoFetch();
-	void EventCorpsSuggestionClickCleanSearch();
-	void EventCorpsSuggestionClickCleanSearch_NoFetch();
 	void EventCorpsSuggestionHelpShow();
 	void EventCorpsSuggestionHelpShow_NoFetch();
+	void EventCorpsSuggestionClickIgnor();
+	void EventCorpsSuggestionClickIgnor_NoFetch();
 	void EventCorpsSuggestionShowRole();
 	void EventCorpsSuggestionShowRole_NoFetch();
+	void EventCorpsSuggestionOnTabChange();
+	void EventCorpsSuggestionOnTabChange_NoFetch();
+	void EventCorpsSuggestionClickApply();
+	void EventCorpsSuggestionClickApply_NoFetch();
+	void EventCorpsRecommendListReport();
+	void EventCorpsRecommendListReport_NoFetch();
+	void EventCorpsSuggestionShowUI();
+	void EventCorpsSuggestionShowUI_NoFetch();
+	void EventFetchCorpsSuggestionInfo();
+	void EventFetchCorpsSuggestionInfo_NoFetch();
+	void EventCorpsSuggestionHideUI();
+	void EventCorpsSuggestionHideUI_NoFetch();
+	void EventSetCorpsSuggestionInfo_Push();
+	void EventSetCorpsSuggestionInfo_Push_NoFetch();
+	void EventCorpsSuggestionClickCleanSearch();
+	void EventCorpsSuggestionClickCleanSearch_NoFetch();
+	void EventCorpsSuggestionOnFilterStateChange();
+	void EventCorpsSuggestionOnFilterStateChange_NoFetch();
+	void EventCorpsSuggestionClickSearch();
+	void EventCorpsSuggestionClickSearch_NoFetch();
+	void EventCorpsSuggestionClickAccept();
+	void EventCorpsSuggestionClickAccept_NoFetch();
 
 public:
 	static class UClass* StaticClass()

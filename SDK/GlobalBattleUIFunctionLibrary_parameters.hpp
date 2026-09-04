@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "BP_STRUCT_LocalizeRes_type_structs.hpp"
-#include "BP_STRUCT_UIElemLayoutDetail_structs.hpp"
 #include "BP_UIENUM_UIElemTypes_structs.hpp"
+#include "BP_STRUCT_UIElemLayoutDetail_structs.hpp"
+#include "BP_STRUCT_LocalizeRes_type_structs.hpp"
 #include "UMG_structs.hpp"
 
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_WarGameMode_2.BP_WarGameMode_2_C
-// 0x0000 (0x17C8 - 0x17C8)
+// 0x0000 (0x17D8 - 0x17D8)
 class ABP_WarGameMode_2_C final : public ABP_WarGameMode_C
 {
 public:

@@ -37,6 +37,20 @@ void UCircleChasingProgress_C::ExecuteUbergraph_CircleChasingProgress(int32 Entr
 }
 
 
+// Function CircleChasingProgress.CircleChasingProgress_C.GameUserSettingChanged
+// (BlueprintCallable, BlueprintEvent)
+
+void UCircleChasingProgress_C::GameUserSettingChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("CircleChasingProgress_C", "GameUserSettingChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function CircleChasingProgress.CircleChasingProgress_C.ReceivedInitWidget
 // (Event, Public, BlueprintEvent)
 
@@ -138,6 +152,20 @@ void UCircleChasingProgress_C::PlayerEscapePercent()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("CircleChasingProgress_C", "PlayerEscapePercent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CircleChasingProgress.CircleChasingProgress_C.SetChasingBarColor
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UCircleChasingProgress_C::SetChasingBarColor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("CircleChasingProgress_C", "SetChasingBarColor");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

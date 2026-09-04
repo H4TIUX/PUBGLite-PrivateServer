@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_TracerManager.BP_TracerManager_C
-// 0x0000 (0x04F0 - 0x04F0)
+// 0x0000 (0x04E0 - 0x04E0)
 class ABP_TracerManager_C final : public ATslTracerManager
 {
 public:

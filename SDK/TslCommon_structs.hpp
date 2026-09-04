@@ -14,6 +14,16 @@
 namespace SDK
 {
 
+// ScriptStruct TslCommon.GameEventBase
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FGameEventBase
+{
+public:
+	int32                                         _V;                                                // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   _T;                                                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
 // ScriptStruct TslCommon.LogCommon
 // 0x0028 (0x0028 - 0x0000)
 struct FLogCommon final
@@ -37,16 +47,6 @@ public:
 	class FString                                 _T;                                                // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         _U : 1;                                            // 0x0050(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct TslCommon.GameEventBase
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FGameEventBase
-{
-public:
-	int32                                         _V;                                                // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   _T;                                                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 }

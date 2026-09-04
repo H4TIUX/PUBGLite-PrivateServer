@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "ECommonBtn_structs.hpp"
+#include "Basic_structs.hpp"
+#include "UMG_structs.hpp"
 #include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "BP_STRUCT_Item_type_structs.hpp"
-#include "UMG_structs.hpp"
-#include "ECommonBtn_structs.hpp"
-#include "Basic_structs.hpp"
-#include "MainUIRemingTips_structs.hpp"
 #include "UnrealArchExt_classes.hpp"
+#include "MainUIRemingTips_structs.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
 #include "ESignalStatus_structs.hpp"
 
@@ -26,7 +26,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass MainControlBaseUI.MainControlBaseUI_C
-// 0x1510 (0x17C8 - 0x02B8)
+// 0x14F8 (0x17B0 - 0x02B8)
 class UMainControlBaseUI_C final : public UUAEUserWidget
 {
 public:
@@ -355,59 +355,70 @@ public:
 	int32                                         helmetSubType;                                     // 0x0DCC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         armorSubType;                                      // 0x0DD0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_DD4[0x4];                                      // 0x0DD4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBattleItemData                        BagItemInBag;                                      // 0x0DD8(0x00A0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FBattleItemData                        HelmetItemInBag;                                   // 0x0E78(0x00A0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FBattleItemData                        ArmorItemInBag;                                    // 0x0F18(0x00A0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FSlateBrush                            Level1Image;                                       // 0x0FB8(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FSlateBrush                            Level2Image;                                       // 0x1030(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FSlateBrush                            HelmetLevel1Image;                                 // 0x10A8(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FSlateBrush                            Level3Image;                                       // 0x1120(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
-	float                                         CacheCapacity;                                     // 0x1198(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_119C[0x4];                                     // 0x119C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FItemDefineID                          CacheHelmetDefineID;                               // 0x11A0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FItemDefineID                          CacheArmorDefineID;                                // 0x11B8(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         CacheHelmetDurability;                             // 0x11D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CacheArmorDurability;                              // 0x11D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateBrush                            HelmetLevel2Image;                                 // 0x11D8(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FSlateBrush                            HelmetLevel3Image;                                 // 0x1250(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FSlateBrush                            ArmorLevel1Image;                                  // 0x12C8(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FSlateBrush                            ArmorLevel2Image;                                  // 0x1340(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FSlateBrush                            ArmorLevel3Image;                                  // 0x13B8(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UUIVoiceCheckObject_C*                  VoiceCheckObject;                                  // 0x1430(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateBrush                            BackpackLevel1Image;                               // 0x1438(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FSlateBrush                            BackpackLevel2Image;                               // 0x14B0(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FSlateBrush                            BackpackLevel3Image;                               // 0x1528(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FSlateBrush                            BackpackDefaultImage;                              // 0x15A0(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
-	uint8                                         bReminding : 1;                                    // 0x1618(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_1619[0x7];                                     // 0x1619(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FMainUIRemingTips>              RemindList;                                        // 0x1620(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	struct FMainUIRemingTips                      currRemind;                                        // 0x1630(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	float                                         ChatOpenTime;                                      // 0x1658(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         UpdateSignalElapsedTime;                           // 0x165C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         SpeakerFlag : 1;                                   // 0x1660(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         MicphoneFlag : 1;                                  // 0x1661(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_1662[0x6];                                     // 0x1662(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 PlayerIdList;                                      // 0x1668(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UTextBlock*>                     TextMemberIndexList;                               // 0x1678(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UImage*>                         MemberForbidMarkList;                              // 0x1688(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UHorizontalBox*>                 teammateVoiceItemList;                             // 0x1698(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	uint8                                         MicphoneFxHided : 1;                               // 0x16A8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_16A9[0x7];                                     // 0x16A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int32, uint8>                            teammateVoiceStateList;                            // 0x16B0(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TMap<int32, class UKillInfoItem_BP_C*>        KillLogWidgetCache;                                // 0x1700(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
-	int32                                         KillLogWidgetCacheIndex;                           // 0x1750(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         NewVar_0;                                          // 0x1754(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TSoftObjectPtr<class UWmodeUI_BP_C>           WarModeUI;                                         // 0x1758(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FTimerHandle                           FeedBackTimerHandle;                               // 0x1780(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FItemDefineID                          CacheBagpackDefineID;                              // 0x1788(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	uint8                                         IsExtendMinimapSize : 1;                           // 0x17A0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_17A1[0x7];                                     // 0x17A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   FireMode;                                          // 0x17A8(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	float                                         ZeroNum;                                           // 0x17C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         bIsKillLogWidgetCreate_ : 1;                       // 0x17C4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	struct FBattleItemData                        BagItemInBag;                                      // 0x0DD8(0x0098)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FBattleItemData                        HelmetItemInBag;                                   // 0x0E70(0x0098)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FBattleItemData                        ArmorItemInBag;                                    // 0x0F08(0x0098)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSlateBrush                            Level1Image;                                       // 0x0FA0(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSlateBrush                            Level2Image;                                       // 0x1018(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSlateBrush                            HelmetLevel1Image;                                 // 0x1090(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSlateBrush                            Level3Image;                                       // 0x1108(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
+	float                                         CacheCapacity;                                     // 0x1180(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1184[0x4];                                     // 0x1184(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FItemDefineID                          CacheHelmetDefineID;                               // 0x1188(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FItemDefineID                          CacheArmorDefineID;                                // 0x11A0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         CacheHelmetDurability;                             // 0x11B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CacheArmorDurability;                              // 0x11BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateBrush                            HelmetLevel2Image;                                 // 0x11C0(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSlateBrush                            HelmetLevel3Image;                                 // 0x1238(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSlateBrush                            ArmorLevel1Image;                                  // 0x12B0(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSlateBrush                            ArmorLevel2Image;                                  // 0x1328(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSlateBrush                            ArmorLevel3Image;                                  // 0x13A0(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UUIVoiceCheckObject_C*                  VoiceCheckObject;                                  // 0x1418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateBrush                            BackpackLevel1Image;                               // 0x1420(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSlateBrush                            BackpackLevel2Image;                               // 0x1498(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSlateBrush                            BackpackLevel3Image;                               // 0x1510(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSlateBrush                            BackpackDefaultImage;                              // 0x1588(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
+	uint8                                         bReminding : 1;                                    // 0x1600(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_1601[0x7];                                     // 0x1601(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FMainUIRemingTips>              RemindList;                                        // 0x1608(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	struct FMainUIRemingTips                      currRemind;                                        // 0x1618(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	float                                         ChatOpenTime;                                      // 0x1640(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         UpdateSignalElapsedTime;                           // 0x1644(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         SpeakerFlag : 1;                                   // 0x1648(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         MicphoneFlag : 1;                                  // 0x1649(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_164A[0x6];                                     // 0x164A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 PlayerIdList;                                      // 0x1650(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UTextBlock*>                     TextMemberIndexList;                               // 0x1660(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UImage*>                         MemberForbidMarkList;                              // 0x1670(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UHorizontalBox*>                 teammateVoiceItemList;                             // 0x1680(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	uint8                                         MicphoneFxHided : 1;                               // 0x1690(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_1691[0x7];                                     // 0x1691(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<int32, uint8>                            teammateVoiceStateList;                            // 0x1698(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TMap<int32, class UKillInfoItem_BP_C*>        KillLogWidgetCache;                                // 0x16E8(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
+	int32                                         KillLogWidgetCacheIndex;                           // 0x1738(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         NewVar_0;                                          // 0x173C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UWmodeUI_BP_C>           WarModeUI;                                         // 0x1740(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FTimerHandle                           FeedBackTimerHandle;                               // 0x1768(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FItemDefineID                          CacheBagpackDefineID;                              // 0x1770(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	uint8                                         IsExtendMinimapSize : 1;                           // 0x1788(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_1789[0x7];                                     // 0x1789(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   FireMode;                                          // 0x1790(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
+	float                                         ZeroNum;                                           // 0x17A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         bIsKillLogWidgetCreate_ : 1;                       // 0x17AC(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
 
 public:
 	void ExecuteUbergraph_MainControlBaseUI(int32 EntryPoint);
+	void OnDeath_이벤트_0(class ASTExtraBaseCharacter* DeadCharacter, class AController* Killer, class AActor* DamageCauser, const struct FHitResult& KillingHitInfo, const struct FVector& KillingHitImpulseDir, class UClass* KillingHitDamageType);
+	void OnMapUIDrawAirplaneRoute();
+	void OnForceEndConsumeItemUI();
+	void OnRefreshFlyNum();
+	void OnShowAirplane();
+	void OnHideQuickChatMenu();
+	void OnGamemodeStateChangedEvent();
+	void OnMapUIHideAirplaneRoute();
+	void OnHideAirplane();
+	void OnNoAmmunition();
+	void OnPlayerControllerStateChanged();
 	void OnChangeGameModeStateEvent(class FName GameModeState);
 	void InitDeathMatch();
 	void ParachuteEvent();
@@ -441,8 +452,6 @@ public:
 	void BndEvt__button_micphoneallchannel_K2Node_ComponentBoundEvent_1576_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__button_speakerclose_K2Node_ComponentBoundEvent_1431_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__button_speakerteamonly_K2Node_ComponentBoundEvent_1402_OnButtonClickedEvent__DelegateSignature();
-	void SetSettingControlUI();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void BndEvt__Button_Microphone_K2Node_ComponentBoundEvent_101_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__Button_Voice_K2Node_ComponentBoundEvent_78_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__button_speakerAll_K2Node_ComponentBoundEvent_1349_OnButtonClickedEvent__DelegateSignature();
@@ -451,12 +460,13 @@ public:
 	void BndEvt__Button_tipsRefuse_K2Node_ComponentBoundEvent_18_OnButtonClickedEvent__DelegateSignature();
 	void DelayHideChatCD(float CDTime);
 	void DisplayNextTips();
+	void SetSettingControlUI();
 	void ItemUpdated(const struct FItemDefineID& DefineID);
-	void Destruct();
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void BndEvt__Button_Border_close_K2Node_ComponentBoundEvent_137_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__Button_B_Sigh_yellow_K2Node_ComponentBoundEvent_113_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__Button_0_K2Node_ComponentBoundEvent_81_OnButtonClickedEvent__DelegateSignature();
-	void ShowCircleInfoTips();
+	void Destruct();
 	void BndEvt__EntireMapTrigger_K2Node_ComponentBoundEvent_78_OnButtonClickedEvent__DelegateSignature();
 	void OnBindEventToBackpackComponent();
 	void ForceUpdateHelmetAndArmorState();
@@ -465,13 +475,15 @@ public:
 	void SetCustomizeUIInfo(class UBP_SAVEGAME_UIElemLayout_C* SaveGame, int32 LayoutIndex);
 	void BndEvt__Button_ReportBug_K2Node_ComponentBoundEvent_51_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__Button_21_K2Node_ComponentBoundEvent_210_OnButtonClickedEvent__DelegateSignature();
+	void ShowCircleInfoTips();
+	void OnReceiveAirAttackBroadcast(EAirAttackInfo airattacktype, int32 waveindex);
 	void CustomEvent_0(uint8 IsShowPrompt, float LastTime, const class FString& PromptText, float TotalTime);
 	void SprintAnimFinished();
-	void OnDamageToOther(float damageToOther);
 	void EnterJumping();
+	void OnDamageToOther(float damageToOther);
 	void ClearCurFatalDamagetWidget();
-	void GameStartCountDown(float CountDownTime);
 	void AddOneNewItem();
+	void GameStartCountDown(float CountDownTime);
 	void UpdateFatalDamageUI(float Delta);
 	void ReUpdateJoinPlayer();
 	void UpdateBackPackCapacity();
@@ -479,7 +491,6 @@ public:
 	void HideParachuteUI();
 	void OnTakeDamage(float DamageAngel);
 	void OnPlayerNumChange();
-	void OnReceiveAirAttackBroadcast(EAirAttackInfo airattacktype, int32 waveindex);
 	void Construct();
 	void ReceivedInitWidget();
 	void AutoSprintActive();
@@ -526,7 +537,7 @@ public:
 	void UpdateSignal(float DeltaTime);
 	void DisplayGameTipWithMsgID();
 	struct FEventReply On_Image_SettingConsoleBtn_MouseButtonDown_0(const struct FGeometry& MyGeometry, struct FPointerEvent& MouseEvent);
-	void onplayercontrollerstatechanged();
+	void ControllerStateChanged();
 	void MessageBoxCencel();
 	void MessageBoxBackToLobby();
 	void AlivePlayerNumForMainUI();
@@ -541,7 +552,6 @@ public:
 	void OnGameModeStateChanged();
 	void UpdateInspectatTargetHealth();
 	void DisplayGameTipWithMsgIDAndParam();
-	void GetEquipItemDataTableRowMap(TMap<int32, struct FBP_STRUCT_Item_type>* DataMap);
 	void UpdateBagLevel(class UBackpackComponent* BackpackComponent);
 	void UpdateHelmetAndArmorLevel(class UBackpackComponent* BackpackComponent);
 	void UpdateEquipmentDurability(float CurHP, float ratioHP);
@@ -607,6 +617,8 @@ public:
 	void UpdateFlaregunUIVisible();
 	void HideWorldMap();
 	void SetHiddenHitNav();
+	void SetHitNavColor();
+	void CheckEquipItemData();
 	void IsCustomUIDataValid(class UWidget* Widget, const struct FVector2D& SaveDataSize, uint8* IsValid);
 
 public:

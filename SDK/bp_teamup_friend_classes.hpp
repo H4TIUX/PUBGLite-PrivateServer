@@ -12,104 +12,104 @@
 
 #include "BP_STRUCT_InviteFriendProfile_structs.hpp"
 #include "BP_STRUCT_TeamupCorpsLiteProfile_structs.hpp"
-#include "BP_STRUCT_TeamupFriendLiteProfile_structs.hpp"
 #include "Client_classes.hpp"
+#include "BP_STRUCT_TeamupFriendLiteProfile_structs.hpp"
 
 
 namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_teamup_friend.bp_teamup_friend_C
-// 0x0228 (0x0610 - 0x03E8)
+// 0x0228 (0x0600 - 0x03D8)
 class Abp_teamup_friend_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FBP_STRUCT_InviteFriendProfile         BP_STRUCT_InviteFriendProfile;                     // 0x03F0(0x00E8)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_InviteFriendProfile> BP_ARRAY_TeamUp_Near_By_Friend;                    // 0x04D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_TeamUp_Corps_Scroll_Start;                      // 0x04E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EC[0x4];                                      // 0x04EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_FriendHeadClickGid;                             // 0x04F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_TeamUp_Friend_Online_Num;                       // 0x0500(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_504[0x4];                                      // 0x0504(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_TeamupCorpsLiteProfile      BP_STRUCT_TeamupCorpsLiteProfile;                  // 0x0508(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_TeamUp_Friend_Menu_Type;                        // 0x0518(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51C[0x4];                                      // 0x051C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_InviteFriendID;                                 // 0x0520(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_InviteFriendName;                               // 0x0530(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_TeamUp_Corps_Scroll_End;                        // 0x0540(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_ReservationState;                               // 0x0544(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_InviteFriendProfile> BP_ARRAY_TeamUp_Corps_Friend;                      // 0x0548(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	uint8                                         BP_TeamUPFriendIsShow : 1;                         // 0x0558(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_559[0x3];                                      // 0x0559(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         BP_TeamUp_Friend_Scroll_End;                       // 0x055C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_TeamUp_Friend_Scroll_Start;                     // 0x0560(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_564[0x4];                                      // 0x0564(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_InviteFriendProfile> BP_ARRAY_Recent_Friend;                            // 0x0568(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FBP_STRUCT_TeamupFriendLiteProfile> BP_ARRAY_Teamup_Friend_Lite_Profile;           // 0x0578(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FBP_STRUCT_InviteFriendProfile> BP_ARRAY_Teamuup_Friend_Profile;                   // 0x0588(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class FString                                 BP_TeamUPFriend_Alliance_Team_Bonus_String;        // 0x0598(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_InviteFriendProfile> BP_ARRAY_CarTeam_Friend;                           // 0x05A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_MyPlyerCount;                                   // 0x05B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5BC[0x4];                                      // 0x05BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_InviteFriendProfile> BP_ARRAY_Corps_Friend_Detail_Profile;              // 0x05C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FBP_STRUCT_InviteFriendProfile> BP_ARRAY_Teamup_Friend_Detail_Profile;             // 0x05D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBP_STRUCT_TeamupFriendLiteProfile     BP_STRUCT_TeamupFriendLiteProfile;                 // 0x05E0(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_TeamupCorpsLiteProfile> BP_ARRAY_Corps_Lite_Profile;                    // 0x05F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	uint8                                         BP_TargetHeadIsFriend : 1;                         // 0x0600(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_601[0x7];                                      // 0x0601(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0608(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	int32                                         BP_TeamUp_Friend_Scroll_End;                       // 0x03E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E4[0x4];                                      // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_InviteFriendProfile> BP_ARRAY_Recent_Friend;                            // 0x03E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_TeamUp_Corps_Scroll_Start;                      // 0x03F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3FC[0x4];                                      // 0x03FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_InviteFriendProfile> BP_ARRAY_Teamup_Friend_Detail_Profile;             // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_ReservationState;                               // 0x0410(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_414[0x4];                                      // 0x0414(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_InviteFriendID;                                 // 0x0418(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_TeamUp_Friend_Menu_Type;                        // 0x0428(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_TeamUp_Friend_Online_Num;                       // 0x042C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_MyPlyerCount;                                   // 0x0430(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_434[0x4];                                      // 0x0434(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_FriendHeadClickGid;                             // 0x0438(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_TeamUp_Friend_Scroll_Start;                     // 0x0448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44C[0x4];                                      // 0x044C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_TeamUPFriend_Alliance_Team_Bonus_String;        // 0x0450(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_InviteFriendProfile> BP_ARRAY_Teamuup_Friend_Profile;                   // 0x0460(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	struct FBP_STRUCT_InviteFriendProfile         BP_STRUCT_InviteFriendProfile;                     // 0x0470(0x00E8)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_TeamUp_Corps_Scroll_End;                        // 0x0558(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_55C[0x4];                                      // 0x055C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_InviteFriendName;                               // 0x0560(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_TeamupCorpsLiteProfile> BP_ARRAY_Corps_Lite_Profile;                    // 0x0570(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	struct FBP_STRUCT_TeamupFriendLiteProfile     BP_STRUCT_TeamupFriendLiteProfile;                 // 0x0580(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_InviteFriendProfile> BP_ARRAY_TeamUp_Near_By_Friend;                    // 0x0590(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	struct FBP_STRUCT_TeamupCorpsLiteProfile      BP_STRUCT_TeamupCorpsLiteProfile;                  // 0x05A0(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_InviteFriendProfile> BP_ARRAY_Corps_Friend_Detail_Profile;              // 0x05B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	uint8                                         BP_TargetHeadIsFriend : 1;                         // 0x05C0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         BP_TeamUPFriendIsShow : 1;                         // 0x05C1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_5C2[0x6];                                      // 0x05C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_InviteFriendProfile> BP_ARRAY_TeamUp_Corps_Friend;                      // 0x05C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FBP_STRUCT_InviteFriendProfile> BP_ARRAY_CarTeam_Friend;                           // 0x05D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FBP_STRUCT_TeamupFriendLiteProfile> BP_ARRAY_Teamup_Friend_Lite_Profile;           // 0x05E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x05F8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventTeamupFriendCheckIsFriend();
-	void EventTeamupFriendCheckIsFriend_NoFetch();
-	void EventSwitchFriend();
-	void EventSwitchFriend_NoFetch();
-	void EventClickPlatformInviteQRCode();
-	void EventClickPlatformInviteQRCode_NoFetch();
-	void EventCheckReservationState();
-	void EventCheckReservationState_NoFetch();
-	void EventTeamupFriendSwitchMenu();
-	void EventTeamupFriendSwitchMenu_NoFetch();
+	void EventClickAddFriendBtn();
+	void EventClickAddFriendBtn_NoFetch();
+	void EventClickJoinBtn();
+	void EventClickJoinBtn_NoFetch();
+	void EventFetchTeamupFriendInfo();
+	void EventFetchTeamupFriendInfo_NoFetch();
+	void EventTeamupFriendScrollChanged();
+	void EventTeamupFriendScrollChanged_NoFetch();
 	void EventSetInfo_Push();
 	void EventSetInfo_Push_NoFetch();
-	void EventClickInviteFriendBtn();
-	void EventClickInviteFriendBtn_NoFetch();
-	void EventShowListCallBack();
-	void EventShowListCallBack_NoFetch();
-	void EventTeamUpFriendClickNearBy();
-	void EventTeamUpFriendClickNearBy_NoFetch();
-	void EventSwitchRecent();
-	void EventSwitchRecent_NoFetch();
 	void EventSwitchCorps();
 	void EventSwitchCorps_NoFetch();
-	void EventClickPlatformInviteWXMiniApp();
-	void EventClickPlatformInviteWXMiniApp_NoFetch();
+	void EventTeamupFriendCheckIsFriend();
+	void EventTeamupFriendCheckIsFriend_NoFetch();
+	void EventTeamUpFriendClickNearBy();
+	void EventTeamUpFriendClickNearBy_NoFetch();
+	void EventTeamupFriendSwitchMenu();
+	void EventTeamupFriendSwitchMenu_NoFetch();
 	void EventSwitchCarTeam();
 	void EventSwitchCarTeam_NoFetch();
+	void EventClickPlatformInviteQRCode();
+	void EventClickPlatformInviteQRCode_NoFetch();
+	void EventClickPlatformInviteWXMiniApp();
+	void EventClickPlatformInviteWXMiniApp_NoFetch();
 	void EventClickPlatformInvite();
 	void EventClickPlatformInvite_NoFetch();
-	void EventClickStartChat();
-	void EventClickStartChat_NoFetch();
 	void EventTeamupFriendClickAddFriend();
 	void EventTeamupFriendClickAddFriend_NoFetch();
 	void EventClickHeadBtn();
 	void EventClickHeadBtn_NoFetch();
+	void EventSwitchRecent();
+	void EventSwitchRecent_NoFetch();
 	void EventClickReserveFriend();
 	void EventClickReserveFriend_NoFetch();
 	void EventClickOfflineShare();
 	void EventClickOfflineShare_NoFetch();
-	void EventClickJoinBtn();
-	void EventClickJoinBtn_NoFetch();
-	void EventTeamupFriendScrollChanged();
-	void EventTeamupFriendScrollChanged_NoFetch();
-	void EventFetchTeamupFriendInfo();
-	void EventFetchTeamupFriendInfo_NoFetch();
-	void EventClickAddFriendBtn();
-	void EventClickAddFriendBtn_NoFetch();
+	void EventClickInviteFriendBtn();
+	void EventClickInviteFriendBtn_NoFetch();
+	void EventShowListCallBack();
+	void EventShowListCallBack_NoFetch();
+	void EventSwitchFriend();
+	void EventSwitchFriend_NoFetch();
 	void EventCorpsFriendScrollChanged();
 	void EventCorpsFriendScrollChanged_NoFetch();
+	void EventCheckReservationState();
+	void EventCheckReservationState_NoFetch();
+	void EventClickStartChat();
+	void EventClickStartChat_NoFetch();
 
 public:
 	static class UClass* StaticClass()

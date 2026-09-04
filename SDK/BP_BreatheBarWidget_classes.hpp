@@ -30,6 +30,7 @@ public:
 
 public:
 	void ExecuteUbergraph_BP_BreatheBarWidget(int32 EntryPoint);
+	void Destruct();
 	void OnAnimationFinished(const class UWidgetAnimation* Animation);
 	void OnChangeBreatheRatio();
 	void Construct();

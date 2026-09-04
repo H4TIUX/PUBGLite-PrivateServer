@@ -49,13 +49,15 @@ public:
 	uint8                                         Pad_70[0x18];                                      // 0x0070(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 
-// ScriptStruct PhysXVehicles.VehicleInputRate
-// 0x0008 (0x0008 - 0x0000)
-struct FVehicleInputRate final
+// ScriptStruct PhysXVehicles.WheelSetup
+// 0x0020 (0x0020 - 0x0000)
+struct FWheelSetup final
 {
 public:
-	float                                         RiseRate;                                          // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FallRate;                                          // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UVehicleWheel>              WheelClass;                                        // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   BoneName;                                          // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                AdditionalOffset;                                  // 0x0010(0x000C)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 
 // ScriptStruct PhysXVehicles.TireConfigMaterialFriction
@@ -81,11 +83,11 @@ public:
 };
 
 // ScriptStruct PhysXVehicles.VehicleAnimInstanceProxy
-// 0x0010 (0x04D0 - 0x04C0)
+// 0x0020 (0x04E0 - 0x04C0)
 struct FVehicleAnimInstanceProxy final : public FAnimInstanceProxy
 {
 public:
-	uint8                                         Pad_4C0[0x10];                                     // 0x04C0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C0[0x20];                                     // 0x04C0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 
 // ScriptStruct PhysXVehicles.PhysXWheelState
@@ -109,15 +111,13 @@ public:
 	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 
-// ScriptStruct PhysXVehicles.WheelSetup
-// 0x0020 (0x0020 - 0x0000)
-struct FWheelSetup final
+// ScriptStruct PhysXVehicles.VehicleInputRate
+// 0x0008 (0x0008 - 0x0000)
+struct FVehicleInputRate final
 {
 public:
-	TSubclassOf<class UVehicleWheel>              WheelClass;                                        // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   BoneName;                                          // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                AdditionalOffset;                                  // 0x0010(0x000C)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         RiseRate;                                          // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FallRate;                                          // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 // ScriptStruct PhysXVehicles.VehicleGearData

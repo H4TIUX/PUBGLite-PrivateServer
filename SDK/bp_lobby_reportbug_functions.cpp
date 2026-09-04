@@ -30,34 +30,6 @@ void Abp_lobby_reportbug_C::UserConstructionScript()
 }
 
 
-// Function bp_lobby_reportbug.bp_lobby_reportbug_C.EventShowLobbyBugReportPanel
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_reportbug_C::EventShowLobbyBugReportPanel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_reportbug_C", "EventShowLobbyBugReportPanel");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_lobby_reportbug.bp_lobby_reportbug_C.EventShowLobbyBugReportPanel_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_lobby_reportbug_C::EventShowLobbyBugReportPanel_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_lobby_reportbug_C", "EventShowLobbyBugReportPanel_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_lobby_reportbug.bp_lobby_reportbug_C.EventShowLobbyBugReportSuccessMsg
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,6 +53,34 @@ void Abp_lobby_reportbug_C::EventShowLobbyBugReportSuccessMsg_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_lobby_reportbug_C", "EventShowLobbyBugReportSuccessMsg_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_reportbug.bp_lobby_reportbug_C.EventShowLobbyBugReportPanel
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_reportbug_C::EventShowLobbyBugReportPanel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_reportbug_C", "EventShowLobbyBugReportPanel");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_lobby_reportbug.bp_lobby_reportbug_C.EventShowLobbyBugReportPanel_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_lobby_reportbug_C::EventShowLobbyBugReportPanel_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_lobby_reportbug_C", "EventShowLobbyBugReportPanel_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

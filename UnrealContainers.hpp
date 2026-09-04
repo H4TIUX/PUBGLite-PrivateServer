@@ -285,15 +285,6 @@ namespace UC
 			return true;
 		}
 
-		inline bool Add_NoResize(const ArrayElementType& Element)
-		{
-			if (!Data || NumElements >= MaxElements)
-				return false;
-
-			Data[NumElements++] = Element;
-			return true;
-		}
-
 		inline bool Remove(int32 Index)
 		{
 			if (!IsValidIndex(Index))

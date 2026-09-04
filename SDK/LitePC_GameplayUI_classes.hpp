@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
 #include "Engine_structs.hpp"
 #include "BaseOptionWidget_classes.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK

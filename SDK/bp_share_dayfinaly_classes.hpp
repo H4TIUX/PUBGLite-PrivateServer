@@ -17,33 +17,33 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_share_dayfinaly.bp_share_dayfinaly_C
-// 0x0050 (0x0438 - 0x03E8)
+// 0x0050 (0x0428 - 0x03D8)
 class Abp_share_dayfinaly_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	class FString                                 BP_ShareDayFinalyNick;                             // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class FString                                 BP_ShareDayFinalyNick;                             // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_ShareDayFinalyUrl;                              // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 BP_ShareDayFinalyPath;                             // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 BP_ShareDayFinalySologan;                          // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_ShareDayFinalyUrl;                              // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0430(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0420(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventShareDayFinaly_Push();
-	void EventShareDayFinaly_Push_NoFetch();
-	void EventClickBtnSave();
-	void EventClickBtnSave_NoFetch();
-	void EventDayWXFrientBtn();
-	void EventDayWXFrientBtn_NoFetch();
 	void EventShareDayFinalyFetchInfo();
 	void EventShareDayFinalyFetchInfo_NoFetch();
+	void EventClickBtnSave();
+	void EventClickBtnSave_NoFetch();
+	void EventShareDayFinaly_Push();
+	void EventShareDayFinaly_Push_NoFetch();
+	void EventDayWXFrientBtn();
+	void EventDayWXFrientBtn_NoFetch();
 	void EventDayWXZoneBtn();
 	void EventDayWXZoneBtn_NoFetch();
-	void EventDayQQZoneBtn();
-	void EventDayQQZoneBtn_NoFetch();
 	void EventDayQQFrientBtn();
 	void EventDayQQFrientBtn_NoFetch();
+	void EventDayQQZoneBtn();
+	void EventDayQQZoneBtn_NoFetch();
 
 public:
 	static class UClass* StaticClass()

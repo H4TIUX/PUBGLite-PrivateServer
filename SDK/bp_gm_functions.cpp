@@ -30,62 +30,6 @@ void Abp_gm_C::UserConstructionScript()
 }
 
 
-// Function bp_gm.bp_gm_C.EventGmSendShowTeamUpUI
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_gm_C::EventGmSendShowTeamUpUI()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_gm_C", "EventGmSendShowTeamUpUI");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_gm.bp_gm_C.EventGmSendShowTeamUpUI_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_gm_C::EventGmSendShowTeamUpUI_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_gm_C", "EventGmSendShowTeamUpUI_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_gm.bp_gm_C.EventGmSend_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_gm_C::EventGmSend_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_gm_C", "EventGmSend_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_gm.bp_gm_C.EventGmSend_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_gm_C::EventGmSend_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_gm_C", "EventGmSend_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_gm.bp_gm_C.EventGmOpenPromotor
 // (BlueprintCallable, BlueprintEvent)
 
@@ -109,6 +53,34 @@ void Abp_gm_C::EventGmOpenPromotor_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_gm_C", "EventGmOpenPromotor_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_gm.bp_gm_C.EventGmSendShowTeamUpUI
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_gm_C::EventGmSendShowTeamUpUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_gm_C", "EventGmSendShowTeamUpUI");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_gm.bp_gm_C.EventGmSendShowTeamUpUI_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_gm_C::EventGmSendShowTeamUpUI_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_gm_C", "EventGmSendShowTeamUpUI_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -165,6 +137,34 @@ void Abp_gm_C::EventGmShowChatEntrance_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_gm_C", "EventGmShowChatEntrance_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_gm.bp_gm_C.EventGmSend_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_gm_C::EventGmSend_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_gm_C", "EventGmSend_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_gm.bp_gm_C.EventGmSend_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_gm_C::EventGmSend_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_gm_C", "EventGmSend_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

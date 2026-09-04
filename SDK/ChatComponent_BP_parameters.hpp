@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
 #include "Engine_structs.hpp"
-#include "BP_STRUCT_BattleText_type_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "BP_STRUCT_Item_type_structs.hpp"
+#include "BP_STRUCT_BattleText_type_structs.hpp"
 
 
 namespace SDK::Params

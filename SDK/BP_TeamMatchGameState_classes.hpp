@@ -18,13 +18,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_TeamMatchGameState.BP_TeamMatchGameState_C
-// 0x0018 (0x0990 - 0x0978)
+// 0x0018 (0x0968 - 0x0950)
 class ABP_TeamMatchGameState_C final : public ATeamMatchGameState
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0978(0x0008)(Transient, DuplicateTransient)
-	class UBP_SceneManagerComponent_C*            BP_SceneManagerComponent;                          // 0x0980(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0988(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0950(0x0008)(Transient, DuplicateTransient)
+	class UBP_SceneManagerComponent_C*            BP_SceneManagerComponent;                          // 0x0958(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0960(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_TeamMatchGameState(int32 EntryPoint);

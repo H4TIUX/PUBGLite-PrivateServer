@@ -30,34 +30,6 @@ void Abp_live_broadcast_C::UserConstructionScript()
 }
 
 
-// Function bp_live_broadcast.bp_live_broadcast_C.EventFetchInfo
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_live_broadcast_C::EventFetchInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_live_broadcast_C", "EventFetchInfo");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_live_broadcast.bp_live_broadcast_C.EventFetchInfo_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_live_broadcast_C::EventFetchInfo_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_live_broadcast_C", "EventFetchInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_live_broadcast.bp_live_broadcast_C.EventSetInfo_Push
 // (BlueprintCallable, BlueprintEvent)
 
@@ -109,6 +81,34 @@ void Abp_live_broadcast_C::EventGetUrl_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_live_broadcast_C", "EventGetUrl_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_live_broadcast.bp_live_broadcast_C.EventFetchInfo
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_live_broadcast_C::EventFetchInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_live_broadcast_C", "EventFetchInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_live_broadcast.bp_live_broadcast_C.EventFetchInfo_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_live_broadcast_C::EventFetchInfo_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_live_broadcast_C", "EventFetchInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

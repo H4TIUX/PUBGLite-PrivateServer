@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Gameplay_structs.hpp"
 #include "BP_STRUCT_VehicleSpawn_type_structs.hpp"
+#include "Gameplay_structs.hpp"
 
 
 namespace SDK::Params

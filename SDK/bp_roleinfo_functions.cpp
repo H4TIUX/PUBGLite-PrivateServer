@@ -30,337 +30,29 @@ void Abp_roleinfo_C::UserConstructionScript()
 }
 
 
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectCity1
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectTime
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_roleinfo_C::EventRoleInfoCardSelectCity1()
+void Abp_roleinfo_C::EventRoleInfoCardSelectTime()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectCity1");
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectTime");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectCity1_NoFetch
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectTime_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_roleinfo_C::EventRoleInfoCardSelectCity1_NoFetch()
+void Abp_roleinfo_C::EventRoleInfoCardSelectTime_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectCity1_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickApplyToMaster
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoClickApplyToMaster()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickApplyToMaster");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickApplyToMaster_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoClickApplyToMaster_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickApplyToMaster_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventCopyName
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventCopyName()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventCopyName");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventCopyName_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventCopyName_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventCopyName_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoSelectSeason
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoSelectSeason()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoSelectSeason");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoSelectSeason_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoSelectSeason_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoSelectSeason_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickEditCardTag
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoClickEditCardTag()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickEditCardTag");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickEditCardTag_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoClickEditCardTag_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickEditCardTag_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventShareCombatBtnClicked
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventShareCombatBtnClicked()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventShareCombatBtnClicked");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventShareCombatBtnClicked_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventShareCombatBtnClicked_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventShareCombatBtnClicked_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventCopyID
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventCopyID()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventCopyID");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventCopyID_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventCopyID_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventCopyID_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoSendInviteCorps
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoSendInviteCorps()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoSendInviteCorps");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoSendInviteCorps_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoSendInviteCorps_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoSendInviteCorps_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickSaveCard
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoClickSaveCard()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickSaveCard");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickSaveCard_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoClickSaveCard_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickSaveCard_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectExpertArea
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoCardSelectExpertArea()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectExpertArea");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectExpertArea_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoCardSelectExpertArea_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectExpertArea_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickHonorWall
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoClickHonorWall()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickHonorWall");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickHonorWall_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoClickHonorWall_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickHonorWall_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoSetShootType
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoSetShootType()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoSetShootType");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoSetShootType_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoSetShootType_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoSetShootType_NoFetch");
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectTime_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -394,421 +86,29 @@ void Abp_roleinfo_C::EventRoleInfoClickEditCard_NoFetch()
 }
 
 
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectCity2
+// Function bp_roleinfo.bp_roleinfo_C.EventRankDetailBtnClicked
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_roleinfo_C::EventRoleInfoCardSelectCity2()
+void Abp_roleinfo_C::EventRankDetailBtnClicked()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectCity2");
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRankDetailBtnClicked");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectCity2_NoFetch
+// Function bp_roleinfo.bp_roleinfo_C.EventRankDetailBtnClicked_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_roleinfo_C::EventRoleInfoCardSelectCity2_NoFetch()
+void Abp_roleinfo_C::EventRankDetailBtnClicked_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectCity2_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventCorpsOverRoleInfo
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventCorpsOverRoleInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventCorpsOverRoleInfo");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventCorpsOverRoleInfo_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventCorpsOverRoleInfo_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventCorpsOverRoleInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickHistory
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoClickHistory()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickHistory");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickHistory_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoClickHistory_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickHistory_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCombatInfoShootType
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoCombatInfoShootType()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCombatInfoShootType");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCombatInfoShootType_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoCombatInfoShootType_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCombatInfoShootType_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickApplyToDisciple
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoClickApplyToDisciple()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickApplyToDisciple");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickApplyToDisciple_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoClickApplyToDisciple_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickApplyToDisciple_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoBaseInfoShootType
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoBaseInfoShootType()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoBaseInfoShootType");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoBaseInfoShootType_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoBaseInfoShootType_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoBaseInfoShootType_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickAvatar
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoClickAvatar()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickAvatar");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickAvatar_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoClickAvatar_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickAvatar_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickComplaint
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoClickComplaint()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickComplaint");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickComplaint_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoClickComplaint_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickComplaint_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickCancelCard
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoClickCancelCard()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickCancelCard");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickCancelCard_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoClickCancelCard_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickCancelCard_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectTime
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoCardSelectTime()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectTime");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectTime_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoCardSelectTime_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectTime_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectDate
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoCardSelectDate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectDate");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectDate_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoCardSelectDate_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectDate_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectTendency
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoCardSelectTendency()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectTendency");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectTendency_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoCardSelectTendency_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectTendency_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventSetCombatModelType
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventSetCombatModelType()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventSetCombatModelType");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventSetCombatModelType_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventSetCombatModelType_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventSetCombatModelType_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventCheckCardTab
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventCheckCardTab()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventCheckCardTab");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventCheckCardTab_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventCheckCardTab_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventCheckCardTab_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoAvatarClicked
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoAvatarClicked()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoAvatarClicked");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoAvatarClicked_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_C::EventRoleInfoAvatarClicked_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoAvatarClicked_NoFetch");
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRankDetailBtnClicked_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -842,6 +142,258 @@ void Abp_roleinfo_C::EventRoleInfoRelease_NoFetch()
 }
 
 
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickEditCardTag
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoClickEditCardTag()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickEditCardTag");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickEditCardTag_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoClickEditCardTag_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickEditCardTag_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCombatInfoShootType
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoCombatInfoShootType()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCombatInfoShootType");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCombatInfoShootType_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoCombatInfoShootType_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCombatInfoShootType_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickHonorWall
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoClickHonorWall()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickHonorWall");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickHonorWall_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoClickHonorWall_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickHonorWall_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectDate
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoCardSelectDate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectDate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectDate_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoCardSelectDate_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectDate_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickCancelCard
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoClickCancelCard()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickCancelCard");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickCancelCard_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoClickCancelCard_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickCancelCard_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventCopyName
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventCopyName()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventCopyName");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventCopyName_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventCopyName_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventCopyName_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventShareCombatBtnClicked
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventShareCombatBtnClicked()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventShareCombatBtnClicked");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventShareCombatBtnClicked_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventShareCombatBtnClicked_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventShareCombatBtnClicked_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectCity1
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoCardSelectCity1()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectCity1");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectCity1_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoCardSelectCity1_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectCity1_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickSaveCard
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoClickSaveCard()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickSaveCard");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickSaveCard_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoClickSaveCard_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickSaveCard_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_roleinfo.bp_roleinfo_C.EventSetInfoForOpenCorpsWnd
 // (BlueprintCallable, BlueprintEvent)
 
@@ -865,6 +417,118 @@ void Abp_roleinfo_C::EventSetInfoForOpenCorpsWnd_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventSetInfoForOpenCorpsWnd_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickComplaint
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoClickComplaint()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickComplaint");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickComplaint_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoClickComplaint_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickComplaint_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickApplyToMaster
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoClickApplyToMaster()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickApplyToMaster");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickApplyToMaster_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoClickApplyToMaster_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickApplyToMaster_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoSelectSeason
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoSelectSeason()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoSelectSeason");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoSelectSeason_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoSelectSeason_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoSelectSeason_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoSendInviteCorps
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoSendInviteCorps()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoSendInviteCorps");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoSendInviteCorps_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoSendInviteCorps_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoSendInviteCorps_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -898,29 +562,309 @@ void Abp_roleinfo_C::EventCheckIntimateTab_NoFetch()
 }
 
 
-// Function bp_roleinfo.bp_roleinfo_C.EventRankDetailBtnClicked
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickAvatar
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_roleinfo_C::EventRankDetailBtnClicked()
+void Abp_roleinfo_C::EventRoleInfoClickAvatar()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRankDetailBtnClicked");
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickAvatar");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_roleinfo.bp_roleinfo_C.EventRankDetailBtnClicked_NoFetch
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickAvatar_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_roleinfo_C::EventRankDetailBtnClicked_NoFetch()
+void Abp_roleinfo_C::EventRoleInfoClickAvatar_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRankDetailBtnClicked_NoFetch");
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickAvatar_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoAvatarClicked
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoAvatarClicked()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoAvatarClicked");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoAvatarClicked_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoAvatarClicked_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoAvatarClicked_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoSetShootType
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoSetShootType()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoSetShootType");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoSetShootType_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoSetShootType_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoSetShootType_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectCity2
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoCardSelectCity2()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectCity2");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectCity2_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoCardSelectCity2_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectCity2_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoBaseInfoShootType
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoBaseInfoShootType()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoBaseInfoShootType");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoBaseInfoShootType_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoBaseInfoShootType_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoBaseInfoShootType_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickApplyToDisciple
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoClickApplyToDisciple()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickApplyToDisciple");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickApplyToDisciple_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoClickApplyToDisciple_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickApplyToDisciple_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickHistory
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoClickHistory()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickHistory");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoClickHistory_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoClickHistory_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoClickHistory_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectExpertArea
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoCardSelectExpertArea()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectExpertArea");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectExpertArea_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoCardSelectExpertArea_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectExpertArea_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectTendency
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoCardSelectTendency()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectTendency");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventRoleInfoCardSelectTendency_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventRoleInfoCardSelectTendency_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventRoleInfoCardSelectTendency_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventCheckCardTab
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventCheckCardTab()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventCheckCardTab");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventCheckCardTab_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventCheckCardTab_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventCheckCardTab_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventSetCombatModelType
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventSetCombatModelType()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventSetCombatModelType");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventSetCombatModelType_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventSetCombatModelType_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventSetCombatModelType_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -949,6 +893,62 @@ void Abp_roleinfo_C::EventAddFriend_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventAddFriend_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventCopyID
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventCopyID()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventCopyID");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventCopyID_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventCopyID_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventCopyID_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventCorpsOverRoleInfo
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventCorpsOverRoleInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventCorpsOverRoleInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo.bp_roleinfo_C.EventCorpsOverRoleInfo_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_C::EventCorpsOverRoleInfo_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_C", "EventCorpsOverRoleInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

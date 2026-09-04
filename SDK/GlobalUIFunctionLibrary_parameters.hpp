@@ -11,18 +11,18 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
+#include "BP_STRUCT_CorpsConfig_type_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "BP_STRUCT_GlobalHelpTips_Pos_structs.hpp"
-#include "UMG_structs.hpp"
 #include "BP_STRUCT_LobbyCameraInfo_type_structs.hpp"
 #include "BP_STRUCT_RankIntegralLevel_type_structs.hpp"
+#include "UMG_structs.hpp"
 #include "BP_STRUCT_MilitaryRankLevel_type_structs.hpp"
-#include "BP_STRUCT_CorpsConfig_type_structs.hpp"
-#include "Engine_structs.hpp"
-#include "BP_STRUCT_GlobalTips_TimeInfo_structs.hpp"
 #include "BP_STRUCT_CommonItemData_structs.hpp"
-#include "BP_STRUCT_GlobalTips_Pos_structs.hpp"
+#include "BP_STRUCT_GlobalHelpTips_Pos_structs.hpp"
 #include "BP_STRUCT_LocalizeRes_type_structs.hpp"
+#include "Engine_structs.hpp"
+#include "BP_STRUCT_GlobalTips_Pos_structs.hpp"
+#include "BP_STRUCT_GlobalTips_TimeInfo_structs.hpp"
 
 
 namespace SDK::Params
@@ -164,9 +164,9 @@ public:
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00A8(0x0018)()
 };
 
-// Function GlobalUIFunctionLibrary.GlobalUIFunctionLibrary_C.OpenURL
+// Function GlobalUIFunctionLibrary.GlobalUIFunctionLibrary_C.OpenUrl
 // 0x0030 (0x0030 - 0x0000)
-struct GlobalUIFunctionLibrary_C_OpenURL final
+struct GlobalUIFunctionLibrary_C_OpenUrl final
 {
 public:
 	class FString                                 URL;                                               // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)

@@ -30,34 +30,6 @@ void Abp_signin_C::UserConstructionScript()
 }
 
 
-// Function bp_signin.bp_signin_C.EventRelease
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_signin_C::EventRelease()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_signin_C", "EventRelease");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_signin.bp_signin_C.EventRelease_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_signin_C::EventRelease_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_signin_C", "EventRelease_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_signin.bp_signin_C.EventGetAwardBtnClick
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,6 +53,34 @@ void Abp_signin_C::EventGetAwardBtnClick_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_signin_C", "EventGetAwardBtnClick_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_signin.bp_signin_C.EventRelease
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_signin_C::EventRelease()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_signin_C", "EventRelease");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_signin.bp_signin_C.EventRelease_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_signin_C::EventRelease_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_signin_C", "EventRelease_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

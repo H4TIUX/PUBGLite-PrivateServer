@@ -30,29 +30,29 @@ void Abp_noticebox_panel_C::UserConstructionScript()
 }
 
 
-// Function bp_noticebox_panel.bp_noticebox_panel_C.EventCommonNoticeBoxClickOK
+// Function bp_noticebox_panel.bp_noticebox_panel_C.EventFetchInfo
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_noticebox_panel_C::EventCommonNoticeBoxClickOK()
+void Abp_noticebox_panel_C::EventFetchInfo()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_noticebox_panel_C", "EventCommonNoticeBoxClickOK");
+		Func = GetClass()->GetFunction("bp_noticebox_panel_C", "EventFetchInfo");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_noticebox_panel.bp_noticebox_panel_C.EventCommonNoticeBoxClickOK_NoFetch
+// Function bp_noticebox_panel.bp_noticebox_panel_C.EventFetchInfo_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_noticebox_panel_C::EventCommonNoticeBoxClickOK_NoFetch()
+void Abp_noticebox_panel_C::EventFetchInfo_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_noticebox_panel_C", "EventCommonNoticeBoxClickOK_NoFetch");
+		Func = GetClass()->GetFunction("bp_noticebox_panel_C", "EventFetchInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,29 +86,29 @@ void Abp_noticebox_panel_C::EventCommonNoticeBoxClickClose_NoFetch()
 }
 
 
-// Function bp_noticebox_panel.bp_noticebox_panel_C.EventFetchInfo
+// Function bp_noticebox_panel.bp_noticebox_panel_C.EventCommonNoticeBoxClickOK
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_noticebox_panel_C::EventFetchInfo()
+void Abp_noticebox_panel_C::EventCommonNoticeBoxClickOK()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_noticebox_panel_C", "EventFetchInfo");
+		Func = GetClass()->GetFunction("bp_noticebox_panel_C", "EventCommonNoticeBoxClickOK");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_noticebox_panel.bp_noticebox_panel_C.EventFetchInfo_NoFetch
+// Function bp_noticebox_panel.bp_noticebox_panel_C.EventCommonNoticeBoxClickOK_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_noticebox_panel_C::EventFetchInfo_NoFetch()
+void Abp_noticebox_panel_C::EventCommonNoticeBoxClickOK_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_noticebox_panel_C", "EventFetchInfo_NoFetch");
+		Func = GetClass()->GetFunction("bp_noticebox_panel_C", "EventCommonNoticeBoxClickOK_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -30,29 +30,29 @@ void Abp_scrollnotice_C::UserConstructionScript()
 }
 
 
-// Function bp_scrollnotice.bp_scrollnotice_C.EventOneMsgRollEnd
+// Function bp_scrollnotice.bp_scrollnotice_C.EventFetchInfo
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_scrollnotice_C::EventOneMsgRollEnd()
+void Abp_scrollnotice_C::EventFetchInfo()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_scrollnotice_C", "EventOneMsgRollEnd");
+		Func = GetClass()->GetFunction("bp_scrollnotice_C", "EventFetchInfo");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_scrollnotice.bp_scrollnotice_C.EventOneMsgRollEnd_NoFetch
+// Function bp_scrollnotice.bp_scrollnotice_C.EventFetchInfo_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_scrollnotice_C::EventOneMsgRollEnd_NoFetch()
+void Abp_scrollnotice_C::EventFetchInfo_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_scrollnotice_C", "EventOneMsgRollEnd_NoFetch");
+		Func = GetClass()->GetFunction("bp_scrollnotice_C", "EventFetchInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,29 +86,29 @@ void Abp_scrollnotice_C::EventShowNextMsg_NoFetch()
 }
 
 
-// Function bp_scrollnotice.bp_scrollnotice_C.EventFetchInfo
+// Function bp_scrollnotice.bp_scrollnotice_C.EventOneMsgRollEnd
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_scrollnotice_C::EventFetchInfo()
+void Abp_scrollnotice_C::EventOneMsgRollEnd()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_scrollnotice_C", "EventFetchInfo");
+		Func = GetClass()->GetFunction("bp_scrollnotice_C", "EventOneMsgRollEnd");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_scrollnotice.bp_scrollnotice_C.EventFetchInfo_NoFetch
+// Function bp_scrollnotice.bp_scrollnotice_C.EventOneMsgRollEnd_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_scrollnotice_C::EventFetchInfo_NoFetch()
+void Abp_scrollnotice_C::EventOneMsgRollEnd_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_scrollnotice_C", "EventFetchInfo_NoFetch");
+		Func = GetClass()->GetFunction("bp_scrollnotice_C", "EventOneMsgRollEnd_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

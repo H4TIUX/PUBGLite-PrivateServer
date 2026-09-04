@@ -15,11 +15,17 @@ namespace SDK::Params
 {
 
 // Function BP_BreatheBarWidgetADS.BP_BreatheBarWidgetADS_C.ExecuteUbergraph_BP_BreatheBarWidgetADS
-// 0x0004 (0x0004 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct BP_BreatheBarWidgetADS_C_ExecuteUbergraph_BP_BreatheBarWidgetADS final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0008(0x0010)(ZeroConstructor, NoDestructor)
+	class USTExtraGameEvents*                     CallFunc_GetGameEvents_ReturnValue;                // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USTExtraGameEvents*                     CallFunc_GetGameEvents_ReturnValue2;               // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x0028(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsValid_ReturnValue2 : 1;                 // 0x0029(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 };
 
 // Function BP_BreatheBarWidgetADS.BP_BreatheBarWidgetADS_C.PlayOutOfBreath

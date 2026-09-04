@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Basic_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "BP_STRUCT_Item_type_structs.hpp"
-#include "UMG_structs.hpp"
+#include "Basic_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
@@ -123,7 +123,7 @@ public:
 };
 
 // Function PickUpItem_BP.PickUpItem_BP_C.GetUseless
-// 0x0200 (0x0200 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct PickUpItem_BP_C_GetUseless final
 {
 public:
@@ -155,40 +155,40 @@ public:
 	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBackpackComponent*                     CallFunc_GetBackpackComponentFromCharacter_ReturnValue; // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FBattleItemData>                CallFunc_GetWeaponsInBackpack_ReturnValue;         // 0x0090(0x0010)(ZeroConstructor, ReferenceParm)
-	struct FBattleItemData                        CallFunc_Array_Get_Item;                           // 0x00A0(0x00A0)()
-	ESurviveWeaponPropSlot                        CallFunc_Array_Get_Item2;                          // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_141[0x3];                                      // 0x0141(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_IsSameInstance_ReturnValue : 1;           // 0x0148(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_Less_IntInt_ReturnValue : 1;              // 0x0149(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_14A[0x6];                                      // 0x014A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FItemAssociation                       CallFunc_Array_Get_Item3;                          // 0x0150(0x0028)(NoDestructor)
-	int32                                         CallFunc_Array_Length_ReturnValue2;                // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Less_IntInt_ReturnValue2 : 1;             // 0x017C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	EWeaponAttachmentSocketType                   CallFunc_GetWeaponAttachPosByResID_socket2;        // 0x017D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_NotEqual_NameName_ReturnValue : 1;        // 0x017E(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_EqualEqual_ByteByte_ReturnValue : 1;      // 0x017F(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	int32                                         CallFunc_Array_Length_ReturnValue3;                // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Less_IntInt_ReturnValue3 : 1;             // 0x0184(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	ESurviveWeaponPropSlot                        CallFunc_Array_Get_Item4;                          // 0x0185(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_186[0x2];                                      // 0x0186(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue4;                // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_18C[0x4];                                      // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<ESurviveWeaponPropSlot>                K2Node_MakeArray_Array;                            // 0x0190(0x0010)(ZeroConstructor, ReferenceParm)
-	uint8                                         CallFunc_Less_IntInt_ReturnValue4 : 1;             // 0x01A0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_1A1[0x7];                                      // 0x01A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_GetOwningPlayerPawn_ReturnValue;          // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ASTExtraWeapon*                         CallFunc_GetInventoryWeaponByPropSlot_ReturnValue; // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_PlayerPawn_C*                       K2Node_DynamicCast_AsBP_Player_Pawn;               // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         K2Node_DynamicCast_bSuccess : 1;                   // 0x01C0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_IsGunSupportBullet_isSupport : 1;         // 0x01C1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_1C2[0x6];                                      // 0x01C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWeaponManagerComponent*                CallFunc_GetWeaponManager_ReturnValue;             // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_IsGunSupportAttachByDefineID_support : 1; // 0x01D0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_1D1[0x7];                                      // 0x01D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ASTExtraWeapon*                         CallFunc_GetInventoryWeaponByPropSlot_ReturnValue2; // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FItemDefineID                          CallFunc_GetItemDefineID_ReturnValue;              // 0x01E0(0x0018)(NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x01F8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	struct FBattleItemData                        CallFunc_Array_Get_Item;                           // 0x00A0(0x0098)()
+	ESurviveWeaponPropSlot                        CallFunc_Array_Get_Item2;                          // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_139[0x3];                                      // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_IsSameInstance_ReturnValue : 1;           // 0x0140(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_Less_IntInt_ReturnValue : 1;              // 0x0141(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_142[0x6];                                      // 0x0142(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FItemAssociation                       CallFunc_Array_Get_Item3;                          // 0x0148(0x0028)(NoDestructor)
+	int32                                         CallFunc_Array_Length_ReturnValue2;                // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Less_IntInt_ReturnValue2 : 1;             // 0x0174(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	EWeaponAttachmentSocketType                   CallFunc_GetWeaponAttachPosByResID_socket2;        // 0x0175(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_NotEqual_NameName_ReturnValue : 1;        // 0x0176(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_EqualEqual_ByteByte_ReturnValue : 1;      // 0x0177(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	int32                                         CallFunc_Array_Length_ReturnValue3;                // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Less_IntInt_ReturnValue3 : 1;             // 0x017C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	ESurviveWeaponPropSlot                        CallFunc_Array_Get_Item4;                          // 0x017D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17E[0x2];                                      // 0x017E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue4;                // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_184[0x4];                                      // 0x0184(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<ESurviveWeaponPropSlot>                K2Node_MakeArray_Array;                            // 0x0188(0x0010)(ZeroConstructor, ReferenceParm)
+	uint8                                         CallFunc_Less_IntInt_ReturnValue4 : 1;             // 0x0198(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_199[0x7];                                      // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_GetOwningPlayerPawn_ReturnValue;          // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ASTExtraWeapon*                         CallFunc_GetInventoryWeaponByPropSlot_ReturnValue; // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_PlayerPawn_C*                       K2Node_DynamicCast_AsBP_Player_Pawn;               // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         K2Node_DynamicCast_bSuccess : 1;                   // 0x01B8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsGunSupportBullet_isSupport : 1;         // 0x01B9(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_1BA[0x6];                                      // 0x01BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWeaponManagerComponent*                CallFunc_GetWeaponManager_ReturnValue;             // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_IsGunSupportAttachByDefineID_support : 1; // 0x01C8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_1C9[0x7];                                      // 0x01C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ASTExtraWeapon*                         CallFunc_GetInventoryWeaponByPropSlot_ReturnValue2; // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FItemDefineID                          CallFunc_GetItemDefineID_ReturnValue;              // 0x01D8(0x0018)(NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x01F0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 };
 
 // Function PickUpItem_BP.PickUpItem_BP_C.UpdateUseless

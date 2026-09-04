@@ -423,7 +423,7 @@ public:
 struct CoherentUIGTJSEvent_AddString final
 {
 public:
-	class FString                                 str;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Str;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 // Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddStructArg

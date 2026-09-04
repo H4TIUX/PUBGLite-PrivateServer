@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "BP_STRUCT_Item_type_structs.hpp"
 #include "ShadowTrackerExtra_classes.hpp"
 
 
@@ -19,29 +18,20 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass EmoteComponent_BP.EmoteComponent_BP_C
-// 0x01C0 (0x0350 - 0x0190)
+// 0x0060 (0x01F0 - 0x0190)
 class UEmoteComponent_BP_C final : public UTslEmoteComponent
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0190(0x0008)(Transient, DuplicateTransient)
-	TArray<struct FBP_STRUCT_Item_type>           EmoteDataRow;                                      // 0x0198(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TMap<int32, int32>                            EmoteItemIDToBPIDMap;                              // 0x01A8(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TMap<int32, class FString>                    EmoteItemIDToImagePathMap;                         // 0x01F8(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	int32                                         EmoteItemType;                                     // 0x0248(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24C[0x4];                                      // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int32, class FText>                      EmoteItemIDToItemName;                             // 0x0250(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TMap<int32, class FString>                    EmoteBPIDToHandlePath;                             // 0x02A0(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class UUAEDataTable*                          EmoteBPTable;                                      // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ID;                                                // 0x02F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2FC[0x4];                                      // 0x02FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int32, class UBackpackEmoteHandle*>      EmoteBPIDToAnimHandleMap;                          // 0x0300(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	int32                                         ID;                                                // 0x0198(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19C[0x4];                                      // 0x019C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<int32, class UBackpackEmoteHandle*>      EmoteBPIDToAnimHandleMap;                          // 0x01A0(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_EmoteComponent_BP(int32 EntryPoint);
 	void ReceiveBeginPlay();
 	struct FEmoteDBDataRow GetEmoteDataByName(class FName EmoteName);
 	uint8 IsAbleGetEmoteDataByName(class FName EmoteName);
-	void ReadEmoteDataRowPC();
 	class UBackpackEmoteHandle* GetEmoteHandle(int32 ItemID);
 
 public:

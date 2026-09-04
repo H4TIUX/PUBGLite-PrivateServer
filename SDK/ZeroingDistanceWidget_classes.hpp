@@ -29,6 +29,9 @@ public:
 
 public:
 	void ExecuteUbergraph_ZeroingDistanceWidget(int32 EntryPoint);
+	void OnChangeZeroingDistanceEvent();
+	void Destruct();
+	void Construct();
 	void OnChangeZeroingDistance();
 	void HideZeroingDistance();
 	void ShowZeroingDistance();

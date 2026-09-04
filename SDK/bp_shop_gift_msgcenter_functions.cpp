@@ -30,85 +30,29 @@ void Abp_shop_gift_msgcenter_C::UserConstructionScript()
 }
 
 
-// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickRemoveRedPoint
+// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterTellFriend
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickRemoveRedPoint()
+void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterTellFriend()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickRemoveRedPoint");
+		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterTellFriend");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickRemoveRedPoint_NoFetch
+// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterTellFriend_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickRemoveRedPoint_NoFetch()
+void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterTellFriend_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickRemoveRedPoint_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickBeg
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickBeg()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickBeg");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickBeg_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickBeg_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickBeg_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterOpenGiftAnimation
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterOpenGiftAnimation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterOpenGiftAnimation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterOpenGiftAnimation_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterOpenGiftAnimation_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterOpenGiftAnimation_NoFetch");
+		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterTellFriend_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -142,29 +86,29 @@ void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterRequestGetGift_NoFetch()
 }
 
 
-// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickHelpInfo
+// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickThanks
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickHelpInfo()
+void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickThanks()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickHelpInfo");
+		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickThanks");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickHelpInfo_NoFetch
+// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickThanks_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickHelpInfo_NoFetch()
+void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickThanks_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickHelpInfo_NoFetch");
+		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickThanks_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -226,6 +170,146 @@ void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickSend_NoFetch()
 }
 
 
+// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickBeg
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickBeg()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickBeg");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickBeg_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickBeg_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickBeg_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickRemoveRedPoint
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickRemoveRedPoint()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickRemoveRedPoint");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickRemoveRedPoint_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickRemoveRedPoint_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickRemoveRedPoint_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickRecv
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickRecv()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickRecv");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickRecv_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickRecv_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickRecv_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickHelpInfo
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickHelpInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickHelpInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickHelpInfo_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickHelpInfo_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickHelpInfo_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickPlayerInfo
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickPlayerInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickPlayerInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickPlayerInfo_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickPlayerInfo_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickPlayerInfo_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterRequestPlayerInfo
 // (BlueprintCallable, BlueprintEvent)
 
@@ -249,90 +333,6 @@ void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterRequestPlayerInfo_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterRequestPlayerInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickBegAccept
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickBegAccept()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickBegAccept");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickBegAccept_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickBegAccept_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickBegAccept_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickThanks
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickThanks()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickThanks");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickThanks_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickThanks_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickThanks_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterTellFriend
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterTellFriend()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterTellFriend");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterTellFriend_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterTellFriend_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterTellFriend_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -422,6 +422,34 @@ void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterOpenGiftGetView_NoFetch()
 }
 
 
+// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterOpenGiftAnimation
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterOpenGiftAnimation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterOpenGiftAnimation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterOpenGiftAnimation_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterOpenGiftAnimation_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterOpenGiftAnimation_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventFetchInfo
 // (BlueprintCallable, BlueprintEvent)
 
@@ -450,57 +478,29 @@ void Abp_shop_gift_msgcenter_C::EventFetchInfo_NoFetch()
 }
 
 
-// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickRecv
+// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickBegAccept
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickRecv()
+void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickBegAccept()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickRecv");
+		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickBegAccept");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickRecv_NoFetch
+// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickBegAccept_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickRecv_NoFetch()
+void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickBegAccept_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickRecv_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickPlayerInfo
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickPlayerInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickPlayerInfo");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shop_gift_msgcenter.bp_shop_gift_msgcenter_C.EventGiftMsgCenterClickPlayerInfo_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shop_gift_msgcenter_C::EventGiftMsgCenterClickPlayerInfo_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickPlayerInfo_NoFetch");
+		Func = GetClass()->GetFunction("bp_shop_gift_msgcenter_C", "EventGiftMsgCenterClickBegAccept_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -10,27 +10,27 @@
 
 #include "Basic.hpp"
 
-#include "Client_classes.hpp"
 #include "BP_STRUCT_ActivityGroupInfo_structs.hpp"
+#include "Client_classes.hpp"
 
 
 namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_activity_group.bp_activity_group_C
-// 0x00B0 (0x0498 - 0x03E8)
+// 0x00B0 (0x0488 - 0x03D8)
 class Abp_activity_group_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_ActivityGroupInfo>   BP_ARRAY_ActivityInfoSortList;                     // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class FString                                 BP_CurrentAcitvityTimeStr;                         // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_ActivityGroupInfo           BP_STRUCT_ActivityGroupInfo;                       // 0x0410(0x0068)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	uint8                                         BP_CurrentActivityRedPoint : 1;                    // 0x0478(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_479[0x3];                                      // 0x0479(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         BP_CurrentOperateActivityID;                       // 0x047C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 BP_CurrentAcitvityState;                           // 0x0480(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_ActivityGroupInfo           BP_STRUCT_ActivityGroupInfo;                       // 0x03E0(0x0068)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class FString                                 BP_CurrentAcitvityTimeStr;                         // 0x0448(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_CurrentOperateActivityID;                       // 0x0458(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         BP_CurrentActivityRedPoint : 1;                    // 0x045C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_45D[0x3];                                      // 0x045D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_CurrentAcitvityState;                           // 0x0460(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_ActivityGroupInfo>   BP_ARRAY_ActivityInfoSortList;                     // 0x0470(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0480(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();

@@ -10,18 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "BP_STRUCT_MemBTResultData_structs.hpp"
-#include "BP_STRUCT_OBTeamResult_structs.hpp"
-#include "BP_STRUCT_EXP_DETAIL_structs.hpp"
-#include "BP_STRUCT_TeammateProfile_structs.hpp"
-#include "BP_STRUCT_GOLD_DETAIL_structs.hpp"
 #include "BP_STRUCT_BTRating_structs.hpp"
+#include "BP_STRUCT_TeammateProfile_structs.hpp"
+#include "BP_STRUCT_EXP_DETAIL_structs.hpp"
+#include "BP_STRUCT_MemBTResultData_structs.hpp"
+#include "BP_STRUCT_RADAR_structs.hpp"
+#include "BP_STRUCT_OBTeamResult_structs.hpp"
+#include "BP_STRUCT_GOLD_DETAIL_structs.hpp"
+#include "BP_STRUCT_RecordDataTLogUpload_structs.hpp"
 #include "BP_STRUCT_RecordingUpload_structs.hpp"
+#include "BP_STRUCT_BattleResultData_structs.hpp"
 #include "BP_STRUCT_OBPersonalResult_structs.hpp"
 #include "BP_STRUCT_BattleResultMyInfo_structs.hpp"
-#include "BP_STRUCT_RecordDataTLogUpload_structs.hpp"
-#include "BP_STRUCT_RADAR_structs.hpp"
-#include "BP_STRUCT_BattleResultData_structs.hpp"
 #include "Client_classes.hpp"
 
 
@@ -29,89 +29,86 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_battleresult.bp_battleresult_C
-// 0x04E0 (0x08C8 - 0x03E8)
+// 0x04C0 (0x0898 - 0x03D8)
 class Abp_battleresult_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_TeammateProfile>     BP_ARRAY_TeammateProfile;                          // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBP_STRUCT_GOLD_DETAIL                 BP_STRUCT_GOLD_DETAIL;                             // 0x0400(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	uint8                                         BP_BattleResultIsClickReplay : 1;                  // 0x0428(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_429[0x7];                                      // 0x0429(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_TeamModeName;                                   // 0x0430(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BPRecordAddFriendIndex;                            // 0x0440(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_444[0x4];                                      // 0x0444(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_TeammateProfile             BP_STRUCT_TeammateProfile;                         // 0x0448(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_OBTeamResult>        BP_ARRAY_OBBattleResult;                           // 0x0470(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	uint8                                         BP_IsShowOBGender : 1;                             // 0x0480(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_481[0x7];                                      // 0x0481(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_RecordingUpload             BP_STRUCT_RecordingUpload;                         // 0x0488(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FBP_STRUCT_EXP_DETAIL                  BP_STRUCT_EXP_DETAIL;                              // 0x04D8(0x0034)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_mykill;                                         // 0x050C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_BTRating                    BP_STRUCT_BTRating;                                // 0x0510(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	uint8                                         BP_IsReportComplaintShow : 1;                      // 0x0528(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         BP_DirectShow : 1;                                 // 0x0529(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_52A[0x6];                                      // 0x052A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_BattleResultMurderName;                         // 0x0530(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_MemBTResultData             BP_STRUCT_MemBTResultData;                         // 0x0540(0x0090)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	uint8                                         BP_BattleResultCanShowStrategyBtn : 1;             // 0x05D0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         BP_IsDroiyanMode : 1;                              // 0x05D1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         BP_BattleResultIsAI : 1;                           // 0x05D2(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_5D3[0x5];                                      // 0x05D3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_myname;                                         // 0x05D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_OBPersonalResult            BP_STRUCT_OBPersonalResult;                        // 0x05E8(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	uint8                                         BP_IsTodayShareDone : 1;                           // 0x0608(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_609[0x7];                                      // 0x0609(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_BattleResultMyInfo          BP_STRUCT_BattleResultMyInfo;                      // 0x0610(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_LoginChannel;                                   // 0x0650(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_654[0x4];                                      // 0x0654(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_RecordDataTLogUpload        BP_STRUCT_RecordDataTLogUpload;                    // 0x0658(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_ServerTimeSecNow;                               // 0x0678(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_67C[0x4];                                      // 0x067C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_OBTeamResult                BP_STRUCT_OBTeamResult;                            // 0x0680(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	uint8                                         BP_EnterSpectateMode : 1;                          // 0x0690(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_691[0x7];                                      // 0x0691(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_RADAR                       BP_STRUCT_RADAR;                                   // 0x0698(0x0078)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	uint8                                         Retry : 1;                                         // 0x0710(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         testResult : 1;                                    // 0x0711(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_712[0x6];                                      // 0x0712(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_mystate;                                        // 0x0718(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	uint8                                         BP_IsReceiveResult : 1;                            // 0x0728(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_729[0x7];                                      // 0x0729(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_BattleResultData            BP_STRUCT_BattleResultData;                        // 0x0730(0x0188)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	uint8                                         BP_IsShareAwardGold : 1;                           // 0x08B8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         BP_BattleResultIsIOSCheck : 1;                     // 0x08B9(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_8BA[0x6];                                      // 0x08BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x08C0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_BTRating                    BP_STRUCT_BTRating;                                // 0x03E0(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FBP_STRUCT_EXP_DETAIL                  BP_STRUCT_EXP_DETAIL;                              // 0x03F8(0x0034)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	uint8                                         Pad_42C[0x4];                                      // 0x042C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_TeammateProfile>     BP_ARRAY_TeammateProfile;                          // 0x0430(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FBP_STRUCT_OBTeamResult>        BP_ARRAY_OBBattleResult;                           // 0x0440(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	struct FBP_STRUCT_RADAR                       BP_STRUCT_RADAR;                                   // 0x0450(0x0078)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	uint8                                         BP_IsShowOBGender : 1;                             // 0x04C8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_4C9[0x3];                                      // 0x04C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BP_mykill;                                         // 0x04CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         BP_IsShareAwardGold : 1;                           // 0x04D0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         BP_EnterSpectateMode : 1;                          // 0x04D1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_4D2[0x6];                                      // 0x04D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_myname;                                         // 0x04D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         testResult : 1;                                    // 0x04E8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_4E9[0x3];                                      // 0x04E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_GOLD_DETAIL                 BP_STRUCT_GOLD_DETAIL;                             // 0x04EC(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	uint8                                         BP_IsDroiyanMode : 1;                              // 0x0514(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         BP_BattleResultIsClickReplay : 1;                  // 0x0515(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         BP_IsTodayShareDone : 1;                           // 0x0516(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         BP_BattleResultIsIOSCheck : 1;                     // 0x0517(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         BP_BattleResultIsAI : 1;                           // 0x0518(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         BP_BattleResultCanShowStrategyBtn : 1;             // 0x0519(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_51A[0x2];                                      // 0x051A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BP_ServerTimeSecNow;                               // 0x051C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBP_STRUCT_RecordDataTLogUpload        BP_STRUCT_RecordDataTLogUpload;                    // 0x0520(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	uint8                                         BP_IsReceiveResult : 1;                            // 0x0540(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Retry : 1;                                         // 0x0541(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_542[0x6];                                      // 0x0542(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_TeammateProfile             BP_STRUCT_TeammateProfile;                         // 0x0548(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FBP_STRUCT_OBTeamResult                BP_STRUCT_OBTeamResult;                            // 0x0570(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class FString                                 BP_BattleResultMurderName;                         // 0x0580(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	struct FBP_STRUCT_MemBTResultData             BP_STRUCT_MemBTResultData;                         // 0x0590(0x0090)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class FString                                 BP_mystate;                                        // 0x0620(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_TeamModeName;                                   // 0x0630(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         BP_DirectShow : 1;                                 // 0x0640(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_641[0x3];                                      // 0x0641(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BP_LoginChannel;                                   // 0x0644(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BPRecordAddFriendIndex;                            // 0x0648(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_64C[0x4];                                      // 0x064C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_RecordingUpload             BP_STRUCT_RecordingUpload;                         // 0x0650(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FBP_STRUCT_BattleResultData            BP_STRUCT_BattleResultData;                        // 0x06A0(0x0188)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FBP_STRUCT_OBPersonalResult            BP_STRUCT_OBPersonalResult;                        // 0x0828(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	uint8                                         BP_IsReportComplaintShow : 1;                      // 0x0848(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_849[0x7];                                      // 0x0849(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_BattleResultMyInfo          BP_STRUCT_BattleResultMyInfo;                      // 0x0850(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0890(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventClientGetIsClickReply();
-	void EventClientGetIsClickReply_NoFetch();
-	void EventAddFriendRequest_Push();
-	void EventAddFriendRequest_Push_NoFetch();
-	void EventShowGameJoyNoRecordsNotice();
-	void EventShowGameJoyNoRecordsNotice_NoFetch();
-	void EventGameJoyVideoShareSuccess();
-	void EventGameJoyVideoShareSuccess_NoFetch();
-	void EventCloseBattleResult();
-	void EventCloseBattleResult_NoFetch();
+	void EventBattleResult_BackToLobby();
+	void EventBattleResult_BackToLobby_NoFetch();
 	void EventClientFreshToComplaint();
 	void EventClientFreshToComplaint_NoFetch();
+	void EventAddFriendRequest_Push();
+	void EventAddFriendRequest_Push_NoFetch();
+	void EventCloseBattleResult();
+	void EventCloseBattleResult_NoFetch();
+	void EventGameJoyVideoShareSuccess();
+	void EventGameJoyVideoShareSuccess_NoFetch();
+	void EventShowGameJoyNoRecordsNotice();
+	void EventShowGameJoyNoRecordsNotice_NoFetch();
+	void EventClientFreshData();
+	void EventClientFreshData_NoFetch();
+	void EventShowGameJoyRecordFailNotice();
+	void EventShowGameJoyRecordFailNotice_NoFetch();
+	void EventClientExitTraining();
+	void EventClientExitTraining_NoFetch();
+	void EventClientGetIsClickReply();
+	void EventClientGetIsClickReply_NoFetch();
 	void EventClientExitGame();
 	void EventClientExitGame_NoFetch();
 	void EventDelayCall();
 	void EventDelayCall_NoFetch();
 	void EventDoIgnoreDSError_Push();
 	void EventDoIgnoreDSError_Push_NoFetch();
-	void EventClientExitTraining();
-	void EventClientExitTraining_NoFetch();
-	void EventBattleResult_BackToLobby();
-	void EventBattleResult_BackToLobby_NoFetch();
-	void EventShowGameJoyRecordFailNotice();
-	void EventShowGameJoyRecordFailNotice_NoFetch();
-	void EventClientFreshData();
-	void EventClientFreshData_NoFetch();
 
 public:
 	static class UClass* StaticClass()

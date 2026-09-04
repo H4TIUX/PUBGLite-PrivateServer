@@ -30,85 +30,29 @@ void Abp_shop_gift_packet_C::UserConstructionScript()
 }
 
 
-// Function bp_shop_gift_packet.bp_shop_gift_packet_C.EventUpdateCheckIdx
+// Function bp_shop_gift_packet.bp_shop_gift_packet_C.EventOpenSendGiftPanel
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_shop_gift_packet_C::EventUpdateCheckIdx()
+void Abp_shop_gift_packet_C::EventOpenSendGiftPanel()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_packet_C", "EventUpdateCheckIdx");
+		Func = GetClass()->GetFunction("bp_shop_gift_packet_C", "EventOpenSendGiftPanel");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_shop_gift_packet.bp_shop_gift_packet_C.EventUpdateCheckIdx_NoFetch
+// Function bp_shop_gift_packet.bp_shop_gift_packet_C.EventOpenSendGiftPanel_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_shop_gift_packet_C::EventUpdateCheckIdx_NoFetch()
+void Abp_shop_gift_packet_C::EventOpenSendGiftPanel_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_packet_C", "EventUpdateCheckIdx_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shop_gift_packet.bp_shop_gift_packet_C.EventGiftPacketWaiting
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shop_gift_packet_C::EventGiftPacketWaiting()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_packet_C", "EventGiftPacketWaiting");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shop_gift_packet.bp_shop_gift_packet_C.EventGiftPacketWaiting_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shop_gift_packet_C::EventGiftPacketWaiting_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_packet_C", "EventGiftPacketWaiting_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shop_gift_packet.bp_shop_gift_packet_C.EventPushValue
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shop_gift_packet_C::EventPushValue()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_packet_C", "EventPushValue");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shop_gift_packet.bp_shop_gift_packet_C.EventPushValue_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shop_gift_packet_C::EventPushValue_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_packet_C", "EventPushValue_NoFetch");
+		Func = GetClass()->GetFunction("bp_shop_gift_packet_C", "EventOpenSendGiftPanel_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -142,6 +86,90 @@ void Abp_shop_gift_packet_C::EventGiftPacketUIRequireGift_NoFetch()
 }
 
 
+// Function bp_shop_gift_packet.bp_shop_gift_packet_C.EventPushValue
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shop_gift_packet_C::EventPushValue()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shop_gift_packet_C", "EventPushValue");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_shop_gift_packet.bp_shop_gift_packet_C.EventPushValue_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shop_gift_packet_C::EventPushValue_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shop_gift_packet_C", "EventPushValue_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_shop_gift_packet.bp_shop_gift_packet_C.EventGiftPacketWaiting
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shop_gift_packet_C::EventGiftPacketWaiting()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shop_gift_packet_C", "EventGiftPacketWaiting");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_shop_gift_packet.bp_shop_gift_packet_C.EventGiftPacketWaiting_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shop_gift_packet_C::EventGiftPacketWaiting_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shop_gift_packet_C", "EventGiftPacketWaiting_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_shop_gift_packet.bp_shop_gift_packet_C.EventUpdateCheckIdx
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shop_gift_packet_C::EventUpdateCheckIdx()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shop_gift_packet_C", "EventUpdateCheckIdx");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_shop_gift_packet.bp_shop_gift_packet_C.EventUpdateCheckIdx_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shop_gift_packet_C::EventUpdateCheckIdx_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shop_gift_packet_C", "EventUpdateCheckIdx_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_shop_gift_packet.bp_shop_gift_packet_C.EventGiftPacketUISendGift
 // (BlueprintCallable, BlueprintEvent)
 
@@ -165,34 +193,6 @@ void Abp_shop_gift_packet_C::EventGiftPacketUISendGift_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_shop_gift_packet_C", "EventGiftPacketUISendGift_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shop_gift_packet.bp_shop_gift_packet_C.EventOpenSendGiftPanel
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shop_gift_packet_C::EventOpenSendGiftPanel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_packet_C", "EventOpenSendGiftPanel");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shop_gift_packet.bp_shop_gift_packet_C.EventOpenSendGiftPanel_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shop_gift_packet_C::EventOpenSendGiftPanel_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_packet_C", "EventOpenSendGiftPanel_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

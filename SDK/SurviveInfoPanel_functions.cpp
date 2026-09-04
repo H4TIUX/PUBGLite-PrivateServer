@@ -37,6 +37,34 @@ void USurviveInfoPanel_C::ExecuteUbergraph_SurviveInfoPanel(int32 EntryPoint)
 }
 
 
+// Function SurviveInfoPanel.SurviveInfoPanel_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USurviveInfoPanel_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("SurviveInfoPanel_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SurviveInfoPanel.SurviveInfoPanel_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USurviveInfoPanel_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("SurviveInfoPanel_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function SurviveInfoPanel.SurviveInfoPanel_C.OnTeamNumChanged
 // (BlueprintCallable, BlueprintEvent)
 

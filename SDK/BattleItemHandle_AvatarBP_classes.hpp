@@ -11,22 +11,21 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Basic_structs.hpp"
 #include "ShadowTrackerExtra_classes.hpp"
+#include "Basic_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BattleItemHandle_AvatarBP.BattleItemHandle_AvatarBP_C
-// 0x00B0 (0x04F0 - 0x0440)
+// 0x00A8 (0x04F0 - 0x0448)
 class UBattleItemHandle_AvatarBP_C : public UBackpackAvatarHandle
 {
 public:
-	class ASTExtraPlayerController*               OwningPlayerController;                            // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ASTExtraBaseCharacter*                  OwningCharacter;                                   // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBackpackComponent*                     OwningBackpackComponent;                           // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_458[0x8];                                      // 0x0458(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class ASTExtraPlayerController*               OwningPlayerController;                            // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ASTExtraBaseCharacter*                  OwningCharacter;                                   // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBackpackComponent*                     OwningBackpackComponent;                           // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             SourceWrapperTrans;                                // 0x0460(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	struct FTransform                             WrapperPutdownTrans;                               // 0x0490(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	class UClass*                                 WrapperClass;                                      // 0x04C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

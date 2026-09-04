@@ -30,6 +30,34 @@ void Abp_common_rightnotify_tips_panel_C::UserConstructionScript()
 }
 
 
+// Function bp_common_rightnotify_tips_panel.bp_common_rightnotify_tips_panel_C.EventRightNotifyOnAfterHide
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_common_rightnotify_tips_panel_C::EventRightNotifyOnAfterHide()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_common_rightnotify_tips_panel_C", "EventRightNotifyOnAfterHide");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_common_rightnotify_tips_panel.bp_common_rightnotify_tips_panel_C.EventRightNotifyOnAfterHide_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_common_rightnotify_tips_panel_C::EventRightNotifyOnAfterHide_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_common_rightnotify_tips_panel_C", "EventRightNotifyOnAfterHide_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_common_rightnotify_tips_panel.bp_common_rightnotify_tips_panel_C.EventRightNotifyOnAfterShow
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,34 +109,6 @@ void Abp_common_rightnotify_tips_panel_C::EventFetchInfo_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_common_rightnotify_tips_panel_C", "EventFetchInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_common_rightnotify_tips_panel.bp_common_rightnotify_tips_panel_C.EventRightNotifyOnAfterHide
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_common_rightnotify_tips_panel_C::EventRightNotifyOnAfterHide()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_common_rightnotify_tips_panel_C", "EventRightNotifyOnAfterHide");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_common_rightnotify_tips_panel.bp_common_rightnotify_tips_panel_C.EventRightNotifyOnAfterHide_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_common_rightnotify_tips_panel_C::EventRightNotifyOnAfterHide_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_common_rightnotify_tips_panel_C", "EventRightNotifyOnAfterHide_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

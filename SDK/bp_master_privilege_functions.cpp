@@ -30,6 +30,34 @@ void Abp_master_privilege_C::UserConstructionScript()
 }
 
 
+// Function bp_master_privilege.bp_master_privilege_C.EventMasterPrivilegeUIHide
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_master_privilege_C::EventMasterPrivilegeUIHide()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_master_privilege_C", "EventMasterPrivilegeUIHide");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_master_privilege.bp_master_privilege_C.EventMasterPrivilegeUIHide_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_master_privilege_C::EventMasterPrivilegeUIHide_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_master_privilege_C", "EventMasterPrivilegeUIHide_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_master_privilege.bp_master_privilege_C.EventMasterPrivilegeGetGift
 // (BlueprintCallable, BlueprintEvent)
 
@@ -53,6 +81,34 @@ void Abp_master_privilege_C::EventMasterPrivilegeGetGift_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_master_privilege_C", "EventMasterPrivilegeGetGift_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_master_privilege.bp_master_privilege_C.EventFetchMasterPrivilegeInfo
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_master_privilege_C::EventFetchMasterPrivilegeInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_master_privilege_C", "EventFetchMasterPrivilegeInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_master_privilege.bp_master_privilege_C.EventFetchMasterPrivilegeInfo_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_master_privilege_C::EventFetchMasterPrivilegeInfo_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_master_privilege_C", "EventFetchMasterPrivilegeInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,62 +142,6 @@ void Abp_master_privilege_C::EventMasterPrivilegePageNext_NoFetch()
 }
 
 
-// Function bp_master_privilege.bp_master_privilege_C.EventMasterPrivilegePagePre
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_master_privilege_C::EventMasterPrivilegePagePre()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_master_privilege_C", "EventMasterPrivilegePagePre");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_master_privilege.bp_master_privilege_C.EventMasterPrivilegePagePre_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_master_privilege_C::EventMasterPrivilegePagePre_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_master_privilege_C", "EventMasterPrivilegePagePre_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_master_privilege.bp_master_privilege_C.EventMasterPrivilegeUIHide
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_master_privilege_C::EventMasterPrivilegeUIHide()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_master_privilege_C", "EventMasterPrivilegeUIHide");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_master_privilege.bp_master_privilege_C.EventMasterPrivilegeUIHide_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_master_privilege_C::EventMasterPrivilegeUIHide_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_master_privilege_C", "EventMasterPrivilegeUIHide_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_master_privilege.bp_master_privilege_C.EventMasterPrivilege_Push
 // (BlueprintCallable, BlueprintEvent)
 
@@ -170,29 +170,29 @@ void Abp_master_privilege_C::EventMasterPrivilege_Push_NoFetch()
 }
 
 
-// Function bp_master_privilege.bp_master_privilege_C.EventFetchMasterPrivilegeInfo
+// Function bp_master_privilege.bp_master_privilege_C.EventMasterPrivilegePagePre
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_master_privilege_C::EventFetchMasterPrivilegeInfo()
+void Abp_master_privilege_C::EventMasterPrivilegePagePre()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_master_privilege_C", "EventFetchMasterPrivilegeInfo");
+		Func = GetClass()->GetFunction("bp_master_privilege_C", "EventMasterPrivilegePagePre");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_master_privilege.bp_master_privilege_C.EventFetchMasterPrivilegeInfo_NoFetch
+// Function bp_master_privilege.bp_master_privilege_C.EventMasterPrivilegePagePre_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_master_privilege_C::EventFetchMasterPrivilegeInfo_NoFetch()
+void Abp_master_privilege_C::EventMasterPrivilegePagePre_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_master_privilege_C", "EventFetchMasterPrivilegeInfo_NoFetch");
+		Func = GetClass()->GetFunction("bp_master_privilege_C", "EventMasterPrivilegePagePre_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

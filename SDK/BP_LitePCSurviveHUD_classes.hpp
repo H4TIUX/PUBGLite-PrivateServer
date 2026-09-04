@@ -10,26 +10,27 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
 #include "Engine_structs.hpp"
 #include "BP_BattleRoyaleHUD_classes.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_LitePCSurviveHUD.BP_LitePCSurviveHUD_C
-// 0x0070 (0x08D0 - 0x0860)
+// 0x0070 (0x08C0 - 0x0850)
 class ABP_LitePCSurviveHUD_C final : public ABP_BattleRoyaleHUD_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_LitePCSurviveHUD_C;              // 0x0860(0x0008)(Transient, DuplicateTransient)
-	TMap<class FString, class UUserWidget*>       WidgetContainer;                                   // 0x0868(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	UMulticastDelegateProperty_                   SettingChangedDispatcher;                          // 0x08B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class UUserWidget*                            EmoteWheelRef;                                     // 0x08C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_LitePCSurviveHUD_C;              // 0x0850(0x0008)(Transient, DuplicateTransient)
+	TMap<class FString, class UUserWidget*>       WidgetContainer;                                   // 0x0858(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	UMulticastDelegateProperty_                   SettingChangedDispatcher;                          // 0x08A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UUserWidget*                            EmoteWheelRef;                                     // 0x08B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_LitePCSurviveHUD(int32 EntryPoint);
+	void ReceiveDestroyed();
 	void OnSettingChanged();
 	void RegisterWidgetList();
 	void CreateWidgetAndAddToContainer(class UClass* Widget, int32 ZOrder, ESlateVisibility InVisibility, class UUserWidget** Widget_Pin);

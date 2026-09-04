@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Basic_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UnrealArchExt_classes.hpp"
 #include "SlateCore_structs.hpp"
 
@@ -20,7 +20,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass BackPackBigItem_BP.BackPackBigItem_BP_C
-// 0x00F8 (0x03B0 - 0x02B8)
+// 0x00F0 (0x03A8 - 0x02B8)
 class UBackPackBigItem_BP_C final : public UUAEUserWidget
 {
 public:
@@ -31,11 +31,11 @@ public:
 	class UMultiLineEditableText*                 ItemContent1;                                      // 0x02D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             ItemContent2;                                      // 0x02E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             TextBlock_ItemNum;                                 // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FBattleItemData                        ItemDataStructure;                                 // 0x02F0(0x00A0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	uint8                                         bHasTipsShow : 1;                                  // 0x0390(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_391[0x7];                                      // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	UMulticastDelegateProperty_                   ItemBeClicked;                                     // 0x0398(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	uint8                                         IsSelected : 1;                                    // 0x03A8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	struct FBattleItemData                        ItemDataStructure;                                 // 0x02F0(0x0098)(Edit, BlueprintVisible, DisableEditOnInstance)
+	uint8                                         bHasTipsShow : 1;                                  // 0x0388(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_389[0x7];                                      // 0x0389(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	UMulticastDelegateProperty_                   ItemBeClicked;                                     // 0x0390(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	uint8                                         IsSelected : 1;                                    // 0x03A0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
 
 public:
 	void ExecuteUbergraph_BackPackBigItem_BP(int32 EntryPoint);

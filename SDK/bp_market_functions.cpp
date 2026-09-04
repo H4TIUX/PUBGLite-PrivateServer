@@ -30,34 +30,6 @@ void Abp_market_C::UserConstructionScript()
 }
 
 
-// Function bp_market.bp_market_C.EventMarketOnClosePage
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_market_C::EventMarketOnClosePage()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_C", "EventMarketOnClosePage");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_market.bp_market_C.EventMarketOnClosePage_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_market_C::EventMarketOnClosePage_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_C", "EventMarketOnClosePage_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_market.bp_market_C.EventMarketCloseMarketMainUI
 // (BlueprintCallable, BlueprintEvent)
 
@@ -86,29 +58,57 @@ void Abp_market_C::EventMarketCloseMarketMainUI_NoFetch()
 }
 
 
-// Function bp_market.bp_market_C.EventMarketOnClose
+// Function bp_market.bp_market_C.EventMarketOnRecharge
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_market_C::EventMarketOnClose()
+void Abp_market_C::EventMarketOnRecharge()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_C", "EventMarketOnClose");
+		Func = GetClass()->GetFunction("bp_market_C", "EventMarketOnRecharge");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_market.bp_market_C.EventMarketOnClose_NoFetch
+// Function bp_market.bp_market_C.EventMarketOnRecharge_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_market_C::EventMarketOnClose_NoFetch()
+void Abp_market_C::EventMarketOnRecharge_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_C", "EventMarketOnClose_NoFetch");
+		Func = GetClass()->GetFunction("bp_market_C", "EventMarketOnRecharge_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_market.bp_market_C.EventMarketOnClosePage
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_market_C::EventMarketOnClosePage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_market_C", "EventMarketOnClosePage");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_market.bp_market_C.EventMarketOnClosePage_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_market_C::EventMarketOnClosePage_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_market_C", "EventMarketOnClosePage_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -198,29 +198,29 @@ void Abp_market_C::EventMarketOpenMarketMainUIEnter_NoFetch()
 }
 
 
-// Function bp_market.bp_market_C.EventMarketOnRecharge
+// Function bp_market.bp_market_C.EventMarketOnClose
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_market_C::EventMarketOnRecharge()
+void Abp_market_C::EventMarketOnClose()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_C", "EventMarketOnRecharge");
+		Func = GetClass()->GetFunction("bp_market_C", "EventMarketOnClose");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_market.bp_market_C.EventMarketOnRecharge_NoFetch
+// Function bp_market.bp_market_C.EventMarketOnClose_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_market_C::EventMarketOnRecharge_NoFetch()
+void Abp_market_C::EventMarketOnClose_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_C", "EventMarketOnRecharge_NoFetch");
+		Func = GetClass()->GetFunction("bp_market_C", "EventMarketOnClose_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

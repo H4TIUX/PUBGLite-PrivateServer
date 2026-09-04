@@ -97,20 +97,6 @@ uint8 UEmoteComponent_BP_C::IsAbleGetEmoteDataByName(class FName EmoteName)
 }
 
 
-// Function EmoteComponent_BP.EmoteComponent_BP_C.ReadEmoteDataRowPC
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UEmoteComponent_BP_C::ReadEmoteDataRowPC()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("EmoteComponent_BP_C", "ReadEmoteDataRowPC");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function EmoteComponent_BP.EmoteComponent_BP_C.GetEmoteHandle
 // (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:

@@ -18,31 +18,31 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_share_person.bp_share_person_C
-// 0x00E8 (0x04D0 - 0x03E8)
+// 0x00E8 (0x04C0 - 0x03D8)
 class Abp_share_person_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	class FString                                 BP_SharePersonPath;                                // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_SharePersonInfo             BP_STRUCT_SharePersonInfo;                         // 0x0400(0x00C8)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04C8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class FString                                 BP_SharePersonPath;                                // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	struct FBP_STRUCT_SharePersonInfo             BP_STRUCT_SharePersonInfo;                         // 0x03F0(0x00C8)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04B8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventPersonWXZoneBtn();
-	void EventPersonWXZoneBtn_NoFetch();
 	void EventPersonQQFrientBtn();
 	void EventPersonQQFrientBtn_NoFetch();
-	void EventPersonWXFrientBtn();
-	void EventPersonWXFrientBtn_NoFetch();
-	void EventPersonQQZoneBtn();
-	void EventPersonQQZoneBtn_NoFetch();
-	void EventHideUI();
-	void EventHideUI_NoFetch();
 	void EventSharePerson_Push();
 	void EventSharePerson_Push_NoFetch();
+	void EventPersonWXFrientBtn();
+	void EventPersonWXFrientBtn_NoFetch();
 	void EventSharePersonFetchInfo();
 	void EventSharePersonFetchInfo_NoFetch();
+	void EventHideUI();
+	void EventHideUI_NoFetch();
+	void EventPersonWXZoneBtn();
+	void EventPersonWXZoneBtn_NoFetch();
+	void EventPersonQQZoneBtn();
+	void EventPersonQQZoneBtn_NoFetch();
 
 public:
 	static class UClass* StaticClass()

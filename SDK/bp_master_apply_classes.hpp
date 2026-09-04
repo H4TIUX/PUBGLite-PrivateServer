@@ -17,28 +17,28 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_master_apply.bp_master_apply_C
-// 0x0068 (0x0450 - 0x03E8)
+// 0x0068 (0x0440 - 0x03D8)
 class Abp_master_apply_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	class FString                                 BP_MasterApply_ApplyToTeacherDefaultMsg;           // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_MasterApply_ApplyToDiscipleDefaultMsg;          // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_MasterApply_TargetType;                         // 0x0410(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_414[0x4];                                      // 0x0414(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_MasterApply_ClickPlayerId;                      // 0x0418(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class FString                                 BP_MasterApply_ClickPlayerMsg;                     // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_MasterApply_ApplyToDiscipleDefaultMsg;          // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_MasterApply_TargetType;                         // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_404[0x4];                                      // 0x0404(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_MasterApply_ClickPlayerId;                      // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_MasterApply_ApplyToTeacherDefaultMsg;           // 0x0418(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 BP_MasterApply_InputString;                        // 0x0428(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_MasterApply_ClickPlayerMsg;                     // 0x0438(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0438(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventMasterApplyCommentCheck();
-	void EventMasterApplyCommentCheck_NoFetch();
 	void EventClickMasterApplyConfirm();
 	void EventClickMasterApplyConfirm_NoFetch();
 	void EventFetchInfo();
 	void EventFetchInfo_NoFetch();
+	void EventMasterApplyCommentCheck();
+	void EventMasterApplyCommentCheck_NoFetch();
 
 public:
 	static class UClass* StaticClass()

@@ -11,35 +11,35 @@
 #include "Basic.hpp"
 
 #include "BP_STRUCT_ShareHistoryRanking_TeammateInfo_structs.hpp"
-#include "Client_classes.hpp"
 #include "BP_STRUCT_ShareHistoryRanking_DetailInfo_structs.hpp"
+#include "Client_classes.hpp"
 
 
 namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_share_history_ranking.bp_share_history_ranking_C
-// 0x0170 (0x0558 - 0x03E8)
+// 0x0170 (0x0548 - 0x03D8)
 class Abp_share_history_ranking_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	TArray<int32>                                 BP_ARRAY_ShareHistoryRanking_MyTitleIDList;        // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBP_STRUCT_ShareHistoryRanking_TeammateInfo BP_STRUCT_ShareHistoryRanking_TeammateInfo;   // 0x0400(0x0090)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FBP_STRUCT_ShareHistoryRanking_DetailInfo BP_STRUCT_ShareHistoryRanking_DetailInfo;       // 0x0490(0x00A8)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_ShareHistoryRanking_MyKillNum;                  // 0x0538(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53C[0x4];                                      // 0x053C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_ShareHistoryRanking_TeammateInfo> BP_ARRAY_ShareHistoryRanking_TeammateInfoList; // 0x0540(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0550(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	int32                                         BP_ShareHistoryRanking_MyKillNum;                  // 0x03E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E4[0x4];                                      // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 BP_ARRAY_ShareHistoryRanking_MyTitleIDList;        // 0x03E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	struct FBP_STRUCT_ShareHistoryRanking_TeammateInfo BP_STRUCT_ShareHistoryRanking_TeammateInfo;   // 0x03F8(0x0090)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_ShareHistoryRanking_TeammateInfo> BP_ARRAY_ShareHistoryRanking_TeammateInfoList; // 0x0488(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	struct FBP_STRUCT_ShareHistoryRanking_DetailInfo BP_STRUCT_ShareHistoryRanking_DetailInfo;       // 0x0498(0x00A8)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0540(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
+	void EventSetInfo_Push();
+	void EventSetInfo_Push_NoFetch();
 	void EventShareHistoryRankingHide();
 	void EventShareHistoryRankingHide_NoFetch();
 	void EventFetchInfo();
 	void EventFetchInfo_NoFetch();
-	void EventSetInfo_Push();
-	void EventSetInfo_Push_NoFetch();
 
 public:
 	static class UClass* StaticClass()

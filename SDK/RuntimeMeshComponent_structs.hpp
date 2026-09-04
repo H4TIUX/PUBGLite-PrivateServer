@@ -10,22 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
-
-// Enum RuntimeMeshComponent.EUpdateFrequency
-// NumValues: 0x0004
-enum class EUpdateFrequency : uint8
-{
-	Average                                  = 0,
-	Frequent                                 = 1,
-	Infrequent                               = 2,
-	EUpdateFrequency_MAX                     = 3,
-};
 
 // Enum RuntimeMeshComponent.ERuntimeMeshCollisionCookingMode
 // NumValues: 0x0003
@@ -36,14 +26,14 @@ enum class ERuntimeMeshCollisionCookingMode : uint8
 	ERuntimeMeshCollisionCookingMode_MAX     = 2,
 };
 
-// ScriptStruct RuntimeMeshComponent.RuntimeMeshTangent
-// 0x0010 (0x0010 - 0x0000)
-struct FRuntimeMeshTangent final
+// Enum RuntimeMeshComponent.EUpdateFrequency
+// NumValues: 0x0004
+enum class EUpdateFrequency : uint8
 {
-public:
-	struct FVector                                TangentX;                                          // 0x0000(0x000C)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bFlipTangentY : 1;                                 // 0x000C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	Average                                  = 0,
+	Frequent                                 = 1,
+	Infrequent                               = 2,
+	EUpdateFrequency_MAX                     = 3,
 };
 
 // ScriptStruct RuntimeMeshComponent.RuntimeMeshComponentPrePhysicsTickFunction
@@ -71,6 +61,16 @@ struct FRuntimeMeshCollisionSection final
 public:
 	TArray<struct FVector>                        VertexBuffer;                                      // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<int32>                                 IndexBuffer;                                       // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+
+// ScriptStruct RuntimeMeshComponent.RuntimeMeshTangent
+// 0x0010 (0x0010 - 0x0000)
+struct FRuntimeMeshTangent final
+{
+public:
+	struct FVector                                TangentX;                                          // 0x0000(0x000C)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bFlipTangentY : 1;                                 // 0x000C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 
 }

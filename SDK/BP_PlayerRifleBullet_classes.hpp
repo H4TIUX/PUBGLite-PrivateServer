@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PlayerRifleBullet.BP_PlayerRifleBullet_C
-// 0x0008 (0x04D8 - 0x04D0)
+// 0x0008 (0x04C8 - 0x04C0)
 class ABP_PlayerRifleBullet_C final : public ASTExtraShootWeaponBulletBase
 {
 public:
-	class UStaticMeshComponent*                   BulletMesh;                                        // 0x04D0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   BulletMesh;                                        // 0x04C0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();

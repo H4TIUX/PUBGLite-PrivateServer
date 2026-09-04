@@ -17,58 +17,6 @@
 namespace SDK::Params
 {
 
-// Function Skill.UTSkillInterface.HandleSkillEnd
-// 0x0008 (0x0008 - 0x0000)
-struct UTSkillInterface_HandleSkillEnd final
-{
-public:
-	int32                                         SkillID;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUTSkillStopReason                            Reason;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function Skill.UTSkillInterface.HandleSkillStart
-// 0x0004 (0x0004 - 0x0000)
-struct UTSkillInterface_HandleSkillStart final
-{
-public:
-	int32                                         SkillID;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Skill.UTSkillInterface.TriggerEvent
-// 0x0008 (0x0008 - 0x0000)
-struct UTSkillInterface_TriggerEvent final
-{
-public:
-	int32                                         SkillID;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUTSkillEventType                             EventType;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function Skill.UTSkillEffect.DoAction
-// 0x0001 (0x0001 - 0x0000)
-struct UTSkillEffect_DoAction final
-{
-public:
-	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Skill.UTSkillEffect.DoHurtAppearance
-// 0x0008 (0x0008 - 0x0000)
-struct UTSkillEffect_DoHurtAppearance final
-{
-public:
-	class APawn*                                  Victim;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Skill.UTSkillEffect.UpdateAction
-// 0x0004 (0x0004 - 0x0000)
-struct UTSkillEffect_UpdateAction final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
 // Function Skill.UTSkillManagerComponent.OnSameTeam
 // 0x0018 (0x0018 - 0x0000)
 struct UTSkillManagerComponent_OnSameTeam final
@@ -254,6 +202,30 @@ public:
 	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 };
 
+// Function Skill.UTSkillEffect.DoAction
+// 0x0001 (0x0001 - 0x0000)
+struct UTSkillEffect_DoAction final
+{
+public:
+	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Skill.UTSkillEffect.DoHurtAppearance
+// 0x0008 (0x0008 - 0x0000)
+struct UTSkillEffect_DoHurtAppearance final
+{
+public:
+	class APawn*                                  Victim;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Skill.UTSkillEffect.UpdateAction
+// 0x0004 (0x0004 - 0x0000)
+struct UTSkillEffect_UpdateAction final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
 // Function Skill.UTSkillAction.DoAction
 // 0x0001 (0x0001 - 0x0000)
 struct UTSkillAction_DoAction final
@@ -286,6 +258,34 @@ public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
+// Function Skill.UTSkillInterface.HandleSkillEnd
+// 0x0008 (0x0008 - 0x0000)
+struct UTSkillInterface_HandleSkillEnd final
+{
+public:
+	int32                                         SkillID;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUTSkillStopReason                            Reason;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Skill.UTSkillInterface.HandleSkillStart
+// 0x0004 (0x0004 - 0x0000)
+struct UTSkillInterface_HandleSkillStart final
+{
+public:
+	int32                                         SkillID;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Skill.UTSkillInterface.TriggerEvent
+// 0x0008 (0x0008 - 0x0000)
+struct UTSkillInterface_TriggerEvent final
+{
+public:
+	int32                                         SkillID;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUTSkillEventType                             EventType;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
 // Function Skill.UTSkillCondition.IsOK
 // 0x0001 (0x0001 - 0x0000)
 struct UTSkillCondition_IsOK final
@@ -302,50 +302,6 @@ public:
 	class APawn*                                  Target;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         ReturnValue : 1;                                   // 0x0008(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function Skill.UTSkill.CanBePlayed
-// 0x0002 (0x0002 - 0x0000)
-struct UTSkill_CanBePlayed final
-{
-public:
-	uint8                                         bShowErrorMsg : 1;                                 // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         ReturnValue : 1;                                   // 0x0001(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Skill.UTSkill.GetSkillPhase
-// 0x0010 (0x0010 - 0x0000)
-struct UTSkill_GetSkillPhase final
-{
-public:
-	int32                                         PhaseIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUTSkillPhase*                          ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Skill.UTSkill.GetSkillPhasePercentage
-// 0x0004 (0x0004 - 0x0000)
-struct UTSkill_GetSkillPhasePercentage final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Skill.UTSkill.OnEvent
-// 0x0002 (0x0002 - 0x0000)
-struct UTSkill_OnEvent final
-{
-public:
-	EUTSkillEventType                             TheEventType;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         ReturnValue : 1;                                   // 0x0001(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Skill.UTSkill.SetSkillPhasePercentage
-// 0x0004 (0x0004 - 0x0000)
-struct UTSkill_SetSkillPhasePercentage final
-{
-public:
-	float                                         Percentage;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 // Function Skill.UTSkillPhase.ClearAttachments
@@ -418,6 +374,50 @@ public:
 	int32                                         PhaseID;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         ReturnValue : 1;                                   // 0x0004(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Skill.UTSkill.CanBePlayed
+// 0x0002 (0x0002 - 0x0000)
+struct UTSkill_CanBePlayed final
+{
+public:
+	uint8                                         bShowErrorMsg : 1;                                 // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         ReturnValue : 1;                                   // 0x0001(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Skill.UTSkill.GetSkillPhase
+// 0x0010 (0x0010 - 0x0000)
+struct UTSkill_GetSkillPhase final
+{
+public:
+	int32                                         PhaseIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUTSkillPhase*                          ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Skill.UTSkill.GetSkillPhasePercentage
+// 0x0004 (0x0004 - 0x0000)
+struct UTSkill_GetSkillPhasePercentage final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Skill.UTSkill.OnEvent
+// 0x0002 (0x0002 - 0x0000)
+struct UTSkill_OnEvent final
+{
+public:
+	EUTSkillEventType                             TheEventType;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         ReturnValue : 1;                                   // 0x0001(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Skill.UTSkill.SetSkillPhasePercentage
+// 0x0004 (0x0004 - 0x0000)
+struct UTSkill_SetSkillPhasePercentage final
+{
+public:
+	float                                         Percentage;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 }

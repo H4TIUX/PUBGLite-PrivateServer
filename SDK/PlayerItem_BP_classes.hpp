@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UnrealArchExt_classes.hpp"
 #include "Gameplay_structs.hpp"
+#include "UnrealArchExt_classes.hpp"
 
 
 namespace SDK

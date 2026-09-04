@@ -30,118 +30,6 @@ void Abp_corps_own_homepage_C::UserConstructionScript()
 }
 
 
-// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsSelfTeamReport
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_own_homepage_C::EventCorpsSelfTeamReport()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsSelfTeamReport");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsSelfTeamReport_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_own_homepage_C::EventCorpsSelfTeamReport_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsSelfTeamReport_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsGroupWXCreate
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_own_homepage_C::EventCorpsGroupWXCreate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsGroupWXCreate");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsGroupWXCreate_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_own_homepage_C::EventCorpsGroupWXCreate_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsGroupWXCreate_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsHomepageChangeLocation
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_own_homepage_C::EventCorpsHomepageChangeLocation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsHomepageChangeLocation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsHomepageChangeLocation_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_own_homepage_C::EventCorpsHomepageChangeLocation_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsHomepageChangeLocation_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsGroupWXJoin
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_own_homepage_C::EventCorpsGroupWXJoin()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsGroupWXJoin");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsGroupWXJoin_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_own_homepage_C::EventCorpsGroupWXJoin_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsGroupWXJoin_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventNoticeChange_Push
 // (BlueprintCallable, BlueprintEvent)
 
@@ -165,34 +53,6 @@ void Abp_corps_own_homepage_C::EventNoticeChange_Push_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventNoticeChange_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsGroupWXDismiss
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_own_homepage_C::EventCorpsGroupWXDismiss()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsGroupWXDismiss");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsGroupWXDismiss_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_own_homepage_C::EventCorpsGroupWXDismiss_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsGroupWXDismiss_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -226,29 +86,85 @@ void Abp_corps_own_homepage_C::EventCorpsGroupQQRemind_NoFetch()
 }
 
 
-// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsGroupQQJoin
+// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventClickCorpsHelp
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_own_homepage_C::EventCorpsGroupQQJoin()
+void Abp_corps_own_homepage_C::EventClickCorpsHelp()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsGroupQQJoin");
+		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventClickCorpsHelp");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsGroupQQJoin_NoFetch
+// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventClickCorpsHelp_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_own_homepage_C::EventCorpsGroupQQJoin_NoFetch()
+void Abp_corps_own_homepage_C::EventClickCorpsHelp_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsGroupQQJoin_NoFetch");
+		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventClickCorpsHelp_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsHomepageChangeLocation
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_own_homepage_C::EventCorpsHomepageChangeLocation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsHomepageChangeLocation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsHomepageChangeLocation_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_own_homepage_C::EventCorpsHomepageChangeLocation_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsHomepageChangeLocation_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventClickCorpsTrain
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_own_homepage_C::EventClickCorpsTrain()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventClickCorpsTrain");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventClickCorpsTrain_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_own_homepage_C::EventClickCorpsTrain_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventClickCorpsTrain_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -310,6 +226,146 @@ void Abp_corps_own_homepage_C::EventCorpsGroupQQCreate_NoFetch()
 }
 
 
+// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventShowInviteUI
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_own_homepage_C::EventShowInviteUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventShowInviteUI");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventShowInviteUI_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_own_homepage_C::EventShowInviteUI_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventShowInviteUI_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsGroupQQJoin
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_own_homepage_C::EventCorpsGroupQQJoin()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsGroupQQJoin");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsGroupQQJoin_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_own_homepage_C::EventCorpsGroupQQJoin_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsGroupQQJoin_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsGroupWXJoin
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_own_homepage_C::EventCorpsGroupWXJoin()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsGroupWXJoin");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsGroupWXJoin_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_own_homepage_C::EventCorpsGroupWXJoin_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsGroupWXJoin_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsGroupWXDismiss
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_own_homepage_C::EventCorpsGroupWXDismiss()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsGroupWXDismiss");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsGroupWXDismiss_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_own_homepage_C::EventCorpsGroupWXDismiss_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsGroupWXDismiss_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsGroupWXCreate
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_own_homepage_C::EventCorpsGroupWXCreate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsGroupWXCreate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsGroupWXCreate_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_own_homepage_C::EventCorpsGroupWXCreate_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsGroupWXCreate_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsGroupWXRemind
 // (BlueprintCallable, BlueprintEvent)
 
@@ -333,6 +389,34 @@ void Abp_corps_own_homepage_C::EventCorpsGroupWXRemind_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsGroupWXRemind_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventClickCorpsExercise
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_own_homepage_C::EventClickCorpsExercise()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventClickCorpsExercise");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventClickCorpsExercise_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_own_homepage_C::EventClickCorpsExercise_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventClickCorpsExercise_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -366,29 +450,29 @@ void Abp_corps_own_homepage_C::EventCorpsActiveHelp_NoFetch()
 }
 
 
-// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventClickCorpsHelp
+// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsSelfTeamReport
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_own_homepage_C::EventClickCorpsHelp()
+void Abp_corps_own_homepage_C::EventCorpsSelfTeamReport()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventClickCorpsHelp");
+		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsSelfTeamReport");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventClickCorpsHelp_NoFetch
+// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventCorpsSelfTeamReport_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_own_homepage_C::EventClickCorpsHelp_NoFetch()
+void Abp_corps_own_homepage_C::EventCorpsSelfTeamReport_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventClickCorpsHelp_NoFetch");
+		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsSelfTeamReport_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -417,90 +501,6 @@ void Abp_corps_own_homepage_C::EventCorpsHomepageChangeIcon_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventCorpsHomepageChangeIcon_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventShowInviteUI
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_own_homepage_C::EventShowInviteUI()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventShowInviteUI");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventShowInviteUI_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_own_homepage_C::EventShowInviteUI_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventShowInviteUI_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventClickCorpsTrain
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_own_homepage_C::EventClickCorpsTrain()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventClickCorpsTrain");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventClickCorpsTrain_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_own_homepage_C::EventClickCorpsTrain_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventClickCorpsTrain_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventClickCorpsExercise
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_own_homepage_C::EventClickCorpsExercise()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventClickCorpsExercise");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_own_homepage.bp_corps_own_homepage_C.EventClickCorpsExercise_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_own_homepage_C::EventClickCorpsExercise_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_own_homepage_C", "EventClickCorpsExercise_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

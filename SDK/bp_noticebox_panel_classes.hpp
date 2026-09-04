@@ -17,26 +17,26 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_noticebox_panel.bp_noticebox_panel_C
-// 0x0048 (0x0430 - 0x03E8)
+// 0x0048 (0x0420 - 0x03D8)
 class Abp_noticebox_panel_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class FString                                 BP_CommonNoticeBox_Title;                          // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 BP_CommonNoticeBox_Msg;                            // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_CommonNoticeBox_BtnOKTxt;                       // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_CommonNoticeBox_Title;                          // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_CommonNoticeBox_style;                          // 0x0420(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_424[0x4];                                      // 0x0424(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0428(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_CommonNoticeBox_style;                          // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_404[0x4];                                      // 0x0404(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_CommonNoticeBox_BtnOKTxt;                       // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0418(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventCommonNoticeBoxClickOK();
-	void EventCommonNoticeBoxClickOK_NoFetch();
-	void EventCommonNoticeBoxClickClose();
-	void EventCommonNoticeBoxClickClose_NoFetch();
 	void EventFetchInfo();
 	void EventFetchInfo_NoFetch();
+	void EventCommonNoticeBoxClickClose();
+	void EventCommonNoticeBoxClickClose_NoFetch();
+	void EventCommonNoticeBoxClickOK();
+	void EventCommonNoticeBoxClickOK_NoFetch();
 
 public:
 	static class UClass* StaticClass()

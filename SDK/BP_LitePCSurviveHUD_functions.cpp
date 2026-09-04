@@ -37,6 +37,20 @@ void ABP_LitePCSurviveHUD_C::ExecuteUbergraph_BP_LitePCSurviveHUD(int32 EntryPoi
 }
 
 
+// Function BP_LitePCSurviveHUD.BP_LitePCSurviveHUD_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void ABP_LitePCSurviveHUD_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BP_LitePCSurviveHUD_C", "ReceiveDestroyed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_LitePCSurviveHUD.BP_LitePCSurviveHUD_C.OnSettingChanged
 // (Public, BlueprintCallable, BlueprintEvent)
 

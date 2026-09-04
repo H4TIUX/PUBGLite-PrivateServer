@@ -30,6 +30,34 @@ void Abp_share_pddhb_C::UserConstructionScript()
 }
 
 
+// Function bp_share_pddhb.bp_share_pddhb_C.EventSharePDD_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_pddhb_C::EventSharePDD_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_pddhb_C", "EventSharePDD_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_pddhb.bp_share_pddhb_C.EventSharePDD_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_pddhb_C::EventSharePDD_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_pddhb_C", "EventSharePDD_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_share_pddhb.bp_share_pddhb_C.EventSharePDDFetchInfo
 // (BlueprintCallable, BlueprintEvent)
 
@@ -109,34 +137,6 @@ void Abp_share_pddhb_C::EventHidePDDHBUI_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_share_pddhb_C", "EventHidePDDHBUI_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_pddhb.bp_share_pddhb_C.EventSharePDD_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_pddhb_C::EventSharePDD_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_pddhb_C", "EventSharePDD_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_pddhb.bp_share_pddhb_C.EventSharePDD_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_pddhb_C::EventSharePDD_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_pddhb_C", "EventSharePDD_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

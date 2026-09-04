@@ -19,28 +19,28 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_corps_apply_list.bp_corps_apply_list_C
-// 0x00F8 (0x04E0 - 0x03E8)
+// 0x00F8 (0x04D0 - 0x03D8)
 class Abp_corps_apply_list_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	int32                                         BP_Corps_ApplyList_ShowType;                       // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F4[0x4];                                      // 0x03F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_CorpsApplyList_ItemData     BP_STRUCT_CorpsApplyList_ItemData;                 // 0x03F8(0x0060)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class FString                                 BP_CorpsApplyList_PlayerDetailUID;                 // 0x0458(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_CorpsApplyList_ItemData> BP_ARRAY_Corps_ApplyList;                      // 0x0468(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBP_STRUCT_BASE_INFO                   BP_STRUCT_BASE_INFO;                               // 0x0478(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class FString                                 BP_Corps_ApplyList_OptionID;                       // 0x04C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04D8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class FString                                 BP_Corps_ApplyList_OptionID;                       // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_CorpsApplyList_ItemData> BP_ARRAY_Corps_ApplyList;                      // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	struct FBP_STRUCT_BASE_INFO                   BP_STRUCT_BASE_INFO;                               // 0x0400(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class FString                                 BP_CorpsApplyList_PlayerDetailUID;                 // 0x0450(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_Corps_ApplyList_ShowType;                       // 0x0460(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_464[0x4];                                      // 0x0464(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_CorpsApplyList_ItemData     BP_STRUCT_CorpsApplyList_ItemData;                 // 0x0468(0x0060)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04C8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventCorpsOnClickAgreeMemberJoin();
-	void EventCorpsOnClickAgreeMemberJoin_NoFetch();
-	void EventCorpsOnClickPlayerDetail();
-	void EventCorpsOnClickPlayerDetail_NoFetch();
 	void EventCorpsOnClickRefuseMemberJoin();
 	void EventCorpsOnClickRefuseMemberJoin_NoFetch();
+	void EventCorpsOnClickPlayerDetail();
+	void EventCorpsOnClickPlayerDetail_NoFetch();
+	void EventCorpsOnClickAgreeMemberJoin();
+	void EventCorpsOnClickAgreeMemberJoin_NoFetch();
 	void EventCorpsApplyListClose();
 	void EventCorpsApplyListClose_NoFetch();
 

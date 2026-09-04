@@ -17,74 +17,74 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_authorization.bp_authorization_C
-// 0x0078 (0x0460 - 0x03E8)
+// 0x0078 (0x0450 - 0x03D8)
 class Abp_authorization_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	int32                                         BP_AutoAuthLogin;                                  // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class FString                                 BP_QQID;                                           // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_LoginTime;                                      // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         HasShowDeviceLimit : 1;                            // 0x03F4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
 	uint8                                         Pad_3F5[0x3];                                      // 0x03F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         BP_DeviceLimit;                                    // 0x03F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_LoginTime;                                      // 0x03FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 BP_QQID;                                           // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_QQPasswd;                                       // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_TokenIsValid;                                   // 0x0420(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_424[0x4];                                      // 0x0424(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_GameVersion;                                    // 0x0428(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_LoginCheck;                                     // 0x0438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_LoginCount;                                     // 0x043C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 BP_DeviceNameBeforeAuthLogin;                      // 0x0440(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_WECHAT_INSTALL;                                 // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_454[0x4];                                      // 0x0454(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0458(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class FString                                 BP_DeviceNameBeforeAuthLogin;                      // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_WECHAT_INSTALL;                                 // 0x0408(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_40C[0x4];                                      // 0x040C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_GameVersion;                                    // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_LoginCheck;                                     // 0x0420(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_DeviceLimit;                                    // 0x0424(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_TokenIsValid;                                   // 0x0428(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_AutoAuthLogin;                                  // 0x042C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 BP_QQPasswd;                                       // 0x0430(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_LoginCount;                                     // 0x0440(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_444[0x4];                                      // 0x0444(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventAutoAuthLogin();
-	void EventAutoAuthLogin_NoFetch();
+	void EventWXLogin();
+	void EventWXLogin_NoFetch();
+	void EventShowRefuse();
+	void EventShowRefuse_NoFetch();
 	void EventGuestLogin();
 	void EventGuestLogin_NoFetch();
+	void EventAutoAuthLogin();
+	void EventAutoAuthLogin_NoFetch();
+	void EventFetchInfo();
+	void EventFetchInfo_NoFetch();
+	void EventClearLoginLimit();
+	void EventClearLoginLimit_NoFetch();
 	void EventLoginCheck();
 	void EventLoginCheck_NoFetch();
-	void EventClickKefu();
-	void EventClickKefu_NoFetch();
+	void EventGameVersion();
+	void EventGameVersion_NoFetch();
+	void EventAuthHideButtons();
+	void EventAuthHideButtons_NoFetch();
 	void EventStartAuthorization();
 	void EventStartAuthorization_NoFetch();
+	void EventLogout();
+	void EventLogout_NoFetch();
+	void EventQQLogin();
+	void EventQQLogin_NoFetch();
+	void EventCheckWeChatInstalled();
+	void EventCheckWeChatInstalled_NoFetch();
+	void EventAddLoginCount();
+	void EventAddLoginCount_NoFetch();
+	void EventClickKefu();
+	void EventClickKefu_NoFetch();
+	void EventDeleteSavedDir();
+	void EventDeleteSavedDir_NoFetch();
+	void EventUpdateLoginTime();
+	void EventUpdateLoginTime_NoFetch();
+	void EventAuthShowButtons();
+	void EventAuthShowButtons_NoFetch();
+	void EventShowService();
+	void EventShowService_NoFetch();
 	void EventBeforeAuthLogin();
 	void EventBeforeAuthLogin_NoFetch();
 	void EventRedoAutoAuthorization();
 	void EventRedoAutoAuthorization_NoFetch();
-	void EventDeleteSavedDir();
-	void EventDeleteSavedDir_NoFetch();
-	void EventGameVersion();
-	void EventGameVersion_NoFetch();
-	void EventClearLoginLimit();
-	void EventClearLoginLimit_NoFetch();
-	void EventWXLogin();
-	void EventWXLogin_NoFetch();
-	void EventQQLogin();
-	void EventQQLogin_NoFetch();
-	void EventLogout();
-	void EventLogout_NoFetch();
-	void EventAuthShowButtons();
-	void EventAuthShowButtons_NoFetch();
-	void EventUpdateLoginTime();
-	void EventUpdateLoginTime_NoFetch();
-	void EventAuthHideButtons();
-	void EventAuthHideButtons_NoFetch();
-	void EventCheckWeChatInstalled();
-	void EventCheckWeChatInstalled_NoFetch();
 	void EventShowTouristNotice();
 	void EventShowTouristNotice_NoFetch();
-	void EventShowRefuse();
-	void EventShowRefuse_NoFetch();
-	void EventShowService();
-	void EventShowService_NoFetch();
-	void EventFetchInfo();
-	void EventFetchInfo_NoFetch();
-	void EventAddLoginCount();
-	void EventAddLoginCount_NoFetch();
 
 public:
 	static class UClass* StaticClass()

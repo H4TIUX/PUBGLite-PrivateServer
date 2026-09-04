@@ -37,6 +37,48 @@ void UZeroingDistanceWidget_C::ExecuteUbergraph_ZeroingDistanceWidget(int32 Entr
 }
 
 
+// Function ZeroingDistanceWidget.ZeroingDistanceWidget_C.OnChangeZeroingDistanceEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UZeroingDistanceWidget_C::OnChangeZeroingDistanceEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ZeroingDistanceWidget_C", "OnChangeZeroingDistanceEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ZeroingDistanceWidget.ZeroingDistanceWidget_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UZeroingDistanceWidget_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ZeroingDistanceWidget_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ZeroingDistanceWidget.ZeroingDistanceWidget_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UZeroingDistanceWidget_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ZeroingDistanceWidget_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ZeroingDistanceWidget.ZeroingDistanceWidget_C.OnChangeZeroingDistance
 // (BlueprintCallable, BlueprintEvent)
 

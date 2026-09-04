@@ -30,6 +30,34 @@ void Abp_officer_training_C::UserConstructionScript()
 }
 
 
+// Function bp_officer_training.bp_officer_training_C.EventOfficerTrainingOnGotAward
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_officer_training_C::EventOfficerTrainingOnGotAward()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_officer_training_C", "EventOfficerTrainingOnGotAward");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_officer_training.bp_officer_training_C.EventOfficerTrainingOnGotAward_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_officer_training_C::EventOfficerTrainingOnGotAward_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_officer_training_C", "EventOfficerTrainingOnGotAward_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_officer_training.bp_officer_training_C.EventOfficerTrainingOnRuleBtnClicked
 // (BlueprintCallable, BlueprintEvent)
 
@@ -53,34 +81,6 @@ void Abp_officer_training_C::EventOfficerTrainingOnRuleBtnClicked_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_officer_training_C", "EventOfficerTrainingOnRuleBtnClicked_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_officer_training.bp_officer_training_C.EventOfficerTrainingOnGetAward
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_officer_training_C::EventOfficerTrainingOnGetAward()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_officer_training_C", "EventOfficerTrainingOnGetAward");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_officer_training.bp_officer_training_C.EventOfficerTrainingOnGetAward_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_officer_training_C::EventOfficerTrainingOnGetAward_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_officer_training_C", "EventOfficerTrainingOnGetAward_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,29 +114,29 @@ void Abp_officer_training_C::EventOfficerTrainingOnShowAward_NoFetch()
 }
 
 
-// Function bp_officer_training.bp_officer_training_C.EventOfficerTrainingOnGotAward
+// Function bp_officer_training.bp_officer_training_C.EventOfficerTrainingOnGetAward
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_officer_training_C::EventOfficerTrainingOnGotAward()
+void Abp_officer_training_C::EventOfficerTrainingOnGetAward()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_officer_training_C", "EventOfficerTrainingOnGotAward");
+		Func = GetClass()->GetFunction("bp_officer_training_C", "EventOfficerTrainingOnGetAward");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_officer_training.bp_officer_training_C.EventOfficerTrainingOnGotAward_NoFetch
+// Function bp_officer_training.bp_officer_training_C.EventOfficerTrainingOnGetAward_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_officer_training_C::EventOfficerTrainingOnGotAward_NoFetch()
+void Abp_officer_training_C::EventOfficerTrainingOnGetAward_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_officer_training_C", "EventOfficerTrainingOnGotAward_NoFetch");
+		Func = GetClass()->GetFunction("bp_officer_training_C", "EventOfficerTrainingOnGetAward_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

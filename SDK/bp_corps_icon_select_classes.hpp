@@ -18,16 +18,16 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_corps_icon_select.bp_corps_icon_select_C
-// 0x0040 (0x0428 - 0x03E8)
+// 0x0040 (0x0418 - 0x03D8)
 class Abp_corps_icon_select_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_CorpsIconData>       BP_ARRAY_CorpsIconList;                            // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBP_STRUCT_CorpsIconData               BP_STRUCT_CorpsIconData;                           // 0x0400(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_CorpsIconCurUseId;                              // 0x0418(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41C[0x4];                                      // 0x041C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0420(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_CorpsIconData               BP_STRUCT_CorpsIconData;                           // 0x03E0(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_CorpsIconCurUseId;                              // 0x03F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3FC[0x4];                                      // 0x03FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_CorpsIconData>       BP_ARRAY_CorpsIconList;                            // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0410(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();

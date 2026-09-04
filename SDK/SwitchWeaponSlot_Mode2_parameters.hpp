@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "ShadowTrackerExtra_structs.hpp"
-#include "Basic_structs.hpp"
-#include "BP_STRUCT_GuideText_type_structs.hpp"
 #include "UMG_structs.hpp"
+#include "Engine_structs.hpp"
+#include "BP_STRUCT_GuideText_type_structs.hpp"
+#include "Basic_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "BP_STRUCT_Item_type_structs.hpp"
+#include "ShadowTrackerExtra_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 
@@ -24,39 +23,25 @@ namespace SDK::Params
 {
 
 // Function SwitchWeaponSlot_Mode2.SwitchWeaponSlot_Mode2_C.ExecuteUbergraph_SwitchWeaponSlot_Mode2
-// 0x02B8 (0x02B8 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct SwitchWeaponSlot_Mode2_C_ExecuteUbergraph_SwitchWeaponSlot_Mode2 final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x0008(0x0010)(ZeroConstructor, ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ACharacter*                             CallFunc_GetPlayerCharacter_ReturnValue;           // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ___int_Array_Index_Variable;                       // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x002C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_Item_type                   CallFunc_GetDataTableRowFromName_OutRow;           // 0x0038(0x0240)(HasGetValueTypeHash)
-	uint8                                         CallFunc_GetDataTableRowFromName_ReturnValue : 1;  // 0x0278(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_279[0x7];                                      // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_PlayerPawn_C*                       K2Node_DynamicCast_AsBP_Player_Pawn;               // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         K2Node_DynamicCast_bSuccess : 1;                   // 0x0288(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue : 1;        // 0x0289(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_IsValid_ReturnValue2 : 1;                 // 0x028A(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_SwitchPoseState_ReturnValue : 1;          // 0x028B(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_SwitchPoseState_ReturnValue2 : 1;         // 0x028C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_EqualEqual_ByteByte_ReturnValue : 1;      // 0x028D(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_EqualEqual_ByteByte_ReturnValue2 : 1;     // 0x028E(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         K2Node_SwitchEnum_CmpSuccess : 1;                  // 0x028F(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_BooleanOR_ReturnValue : 1;                // 0x0290(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_291[0x7];                                      // 0x0291(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0298(0x0010)(ZeroConstructor, NoDestructor)
-	int32                                         ___int_Loop_Counter_Variable;                      // 0x02A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Less_IntInt_ReturnValue : 1;              // 0x02AC(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_2AD[0x3];                                      // 0x02AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x02B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ACharacter*                             CallFunc_GetPlayerCharacter_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_PlayerPawn_C*                       K2Node_DynamicCast_AsBP_Player_Pawn;               // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         K2Node_DynamicCast_bSuccess : 1;                   // 0x0020(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsValid_ReturnValue2 : 1;                 // 0x0021(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_SwitchPoseState_ReturnValue : 1;          // 0x0022(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_SwitchPoseState_ReturnValue2 : 1;         // 0x0023(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_EqualEqual_ByteByte_ReturnValue : 1;      // 0x0024(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_EqualEqual_ByteByte_ReturnValue2 : 1;     // 0x0025(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         K2Node_SwitchEnum_CmpSuccess : 1;                  // 0x0026(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_BooleanOR_ReturnValue : 1;                // 0x0027(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0028(0x0010)(ZeroConstructor, NoDestructor)
 };
 
 // Function SwitchWeaponSlot_Mode2.SwitchWeaponSlot_Mode2_C.UpdateImage
@@ -185,21 +170,28 @@ public:
 };
 
 // Function SwitchWeaponSlot_Mode2.SwitchWeaponSlot_Mode2_C.ChangeImageAndTextColor
-// 0x00F8 (0x00F8 - 0x0000)
+// 0x0120 (0x0120 - 0x0000)
 struct SwitchWeaponSlot_Mode2_C_ChangeImageAndTextColor final
 {
 public:
 	uint8                                         IsGunRunOutOfAmmo : 1;                             // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_BooleanAND_ReturnValue : 1;               // 0x0001(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_Not_PreBool_ReturnValue : 1;              // 0x0002(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_BooleanAND_ReturnValue2 : 1;              // 0x0003(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0008(0x0028)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor2;                     // 0x0030(0x0028)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor3;                     // 0x0058(0x0028)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor4;                     // 0x0080(0x0028)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor5;                     // 0x00A8(0x0028)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor6;                     // 0x00D0(0x0028)()
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUAEUserWidget*                         CallFunc_GetParentWidget_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UShootingUIPanel_C*                     K2Node_DynamicCast_AsShooting_UIPanel;             // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         K2Node_DynamicCast_bSuccess : 1;                   // 0x0018(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_Not_PreBool_ReturnValue : 1;              // 0x0019(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x001A(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_1B[0x1];                                       // 0x001B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           CallFunc_GetWeaponSlotColor_ReturnValue;           // 0x001C(0x0010)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_BooleanAND_ReturnValue : 1;               // 0x002C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_BooleanAND_ReturnValue2 : 1;              // 0x002D(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_2E[0x2];                                       // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0030(0x0028)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor2;                     // 0x0058(0x0028)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor3;                     // 0x0080(0x0028)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor4;                     // 0x00A8(0x0028)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor5;                     // 0x00D0(0x0028)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor6;                     // 0x00F8(0x0028)()
 };
 
 // Function SwitchWeaponSlot_Mode2.SwitchWeaponSlot_Mode2_C.UnSelected

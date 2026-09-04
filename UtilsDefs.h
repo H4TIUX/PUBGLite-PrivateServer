@@ -87,29 +87,40 @@ public:
 	static uint64 objobjects(uint64 v7)
 	{
 		uint64 v17;
-		LODWORD(v17) = __ROL4__(__ROL4__(v7 - 829357123, 16) - 1835374268, 16) ^ 0x29096587;
-		HIDWORD(v17) = __ROR4__(__ROR4__(HIDWORD(v7) + 868271848, 8) + 1994878927, 8) ^ 0x57D95719;
+		LODWORD(v17) = __ROL4__(__ROL4__(v7, 16) - 597889948, 16) ^ 0xDC5CEC64;
+		HIDWORD(v17) = __ROR4__(__ROR4__(HIDWORD(v7), 8) - 605824028, 8) ^ 0x241C241C;
 		return v17;
 	}
 	static int32 internal_id(uint32 v2)
 	{
-		return __ROR4__(v2 ^ 0x6FB32963, 15) ^ (__ROR4__(v2 ^ 0x6FB32963, 15) << 16) ^ 0xD046116B;
+		int v49 = __ROR4__(v2 ^ 0xC6B2B218, 14);
+		int decrypted = v49 ^ (v49 << 16) ^ 0xAA740C37;
+
+		return decrypted;
 	}
 	static uint64 uclass(uint64 v6)
 	{
-		return __ROL8__(v6 ^ 0xFD3D77B830EFBB79ui64, 7) ^ (__ROL8__(v6 ^ 0xFD3D77B830EFBB79ui64, 7) << 32) ^ 0x79B88A6A72CF924Ci64;
+		uint64 v21 = __ROR8__(v6 ^ 0x470898FB6D10C7ACLL, 28);
+		uint64 DecryptedClass = v21 ^ (v21 << 32) ^ 0x5DE5A22A6289A4FLL;
+
+		return DecryptedClass;
 	}
 	static uint64 outer(uint64 v18)
 	{
-		return __ROR8__(v18 ^ 0xE792E9D2E2F6655i64, 16) ^ (__ROR8__(v18 ^ 0xE792E9D2E2F6655i64, 16) << 32) ^ 0x74CF2AD3CCA793E3i64;
+		uint64 v62 = __ROL8__(v18 ^ 0x94426FF1A564B5E8uLL, 19);
+		uint64 decrypted = v62 ^ (v62 << 32) ^ 0x72BCED0738B42294LL;
+
+		return decrypted;
 	}
 	//FName
 	static int32 comparison_id(uint32 v10)
 	{
-		return __ROL4__(v10 ^ 0x179C8BC9, 12) ^ (__ROL4__(v10 ^ 0x179C8BC9, 12) << 16) ^ 0x6BC4F232;
+		int v15 = __ROL4__(v10 ^ 0xED10C7AF, 4);
+		return v15 ^ (v15 << 16) ^ 0x3C659A4D;
 	}
 	static int32 number(uint32 v6)
 	{
-		return __ROL4__(v6 ^ 0x8B6B3E42, 8) ^ (__ROL4__(v6 ^ 0x8B6B3E42, 8) << 16) ^ 0x877DA5AD;
+		int v16 = __ROL4__(v6 ^ 0xF7B20EA6, 14);
+		return v16 ^ (v16 << 16) ^ 0xF914F7B2;
 	}
 };

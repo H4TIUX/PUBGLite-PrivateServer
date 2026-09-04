@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "UMG_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Gameplay_structs.hpp"
-#include "UMG_classes.hpp"
 
 
 namespace SDK

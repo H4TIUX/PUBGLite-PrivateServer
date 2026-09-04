@@ -30,34 +30,6 @@ void Abp_activty_C::UserConstructionScript()
 }
 
 
-// Function bp_activty.bp_activty_C.EventActivtyUIOnClickJumpBtn
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_activty_C::EventActivtyUIOnClickJumpBtn()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_activty_C", "EventActivtyUIOnClickJumpBtn");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_activty.bp_activty_C.EventActivtyUIOnClickJumpBtn_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_activty_C::EventActivtyUIOnClickJumpBtn_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_activty_C", "EventActivtyUIOnClickJumpBtn_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_activty.bp_activty_C.EventActivtyUpdateLobbyRedPoint
 // (BlueprintCallable, BlueprintEvent)
 
@@ -86,57 +58,29 @@ void Abp_activty_C::EventActivtyUpdateLobbyRedPoint_NoFetch()
 }
 
 
-// Function bp_activty.bp_activty_C.EventActivtyUIOnClickCheckExchange
+// Function bp_activty.bp_activty_C.EventActivtyUIOnClickJumpBtn
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_activty_C::EventActivtyUIOnClickCheckExchange()
+void Abp_activty_C::EventActivtyUIOnClickJumpBtn()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_activty_C", "EventActivtyUIOnClickCheckExchange");
+		Func = GetClass()->GetFunction("bp_activty_C", "EventActivtyUIOnClickJumpBtn");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_activty.bp_activty_C.EventActivtyUIOnClickCheckExchange_NoFetch
+// Function bp_activty.bp_activty_C.EventActivtyUIOnClickJumpBtn_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_activty_C::EventActivtyUIOnClickCheckExchange_NoFetch()
+void Abp_activty_C::EventActivtyUIOnClickJumpBtn_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_activty_C", "EventActivtyUIOnClickCheckExchange_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_activty.bp_activty_C.EventActivtyUIOnNoticeJump
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_activty_C::EventActivtyUIOnNoticeJump()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_activty_C", "EventActivtyUIOnNoticeJump");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_activty.bp_activty_C.EventActivtyUIOnNoticeJump_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_activty_C::EventActivtyUIOnNoticeJump_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_activty_C", "EventActivtyUIOnNoticeJump_NoFetch");
+		Func = GetClass()->GetFunction("bp_activty_C", "EventActivtyUIOnClickJumpBtn_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -170,6 +114,34 @@ void Abp_activty_C::EventActivtyClickOneBtn_NoFetch()
 }
 
 
+// Function bp_activty.bp_activty_C.EventActivtyUIOnClickCheckExchange
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_activty_C::EventActivtyUIOnClickCheckExchange()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_activty_C", "EventActivtyUIOnClickCheckExchange");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_activty.bp_activty_C.EventActivtyUIOnClickCheckExchange_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_activty_C::EventActivtyUIOnClickCheckExchange_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_activty_C", "EventActivtyUIOnClickCheckExchange_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_activty.bp_activty_C.EventActivtyUIOnClickGetBtn
 // (BlueprintCallable, BlueprintEvent)
 
@@ -193,6 +165,34 @@ void Abp_activty_C::EventActivtyUIOnClickGetBtn_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_activty_C", "EventActivtyUIOnClickGetBtn_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_activty.bp_activty_C.EventActivtyUIOnNoticeJump
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_activty_C::EventActivtyUIOnNoticeJump()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_activty_C", "EventActivtyUIOnNoticeJump");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_activty.bp_activty_C.EventActivtyUIOnNoticeJump_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_activty_C::EventActivtyUIOnNoticeJump_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_activty_C", "EventActivtyUIOnNoticeJump_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

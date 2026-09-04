@@ -18,36 +18,36 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_versionupdate.bp_versionupdate_C
-// 0x0098 (0x0480 - 0x03E8)
+// 0x0098 (0x0470 - 0x03D8)
 class Abp_versionupdate_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	class FString                                 BP_CurStage;                                       // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_CurPercent;                                     // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_404[0x4];                                      // 0x0404(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_VersionUpdateInfo           BP_STRUCT_VersionUpdateInfo;                       // 0x0408(0x0068)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_ShaderCompileCurPercent;                        // 0x0470(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         BP_IsExamin : 1;                                   // 0x0474(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_475[0x3];                                      // 0x0475(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0478(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class FString                                 BP_CurStage;                                       // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_ShaderCompileCurPercent;                        // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         BP_IsExamin : 1;                                   // 0x03F4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_3F5[0x3];                                      // 0x03F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_VersionUpdateInfo           BP_STRUCT_VersionUpdateInfo;                       // 0x03F8(0x0068)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_CurPercent;                                     // 0x0460(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_464[0x4];                                      // 0x0464(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventWindowsAppUpdate();
-	void EventWindowsAppUpdate_NoFetch();
-	void EventWifiNotifyAndroidAppUpdate_Push();
-	void EventWifiNotifyAndroidAppUpdate_Push_NoFetch();
-	void EventShaderCompileProgress();
-	void EventShaderCompileProgress_NoFetch();
-	void EventNoWifiNotifyIOSAppUpdate_Push();
-	void EventNoWifiNotifyIOSAppUpdate_Push_NoFetch();
 	void EventWifiNotifyIOSAppUpdate_Push();
 	void EventWifiNotifyIOSAppUpdate_Push_NoFetch();
+	void EventShaderCompileProgress();
+	void EventShaderCompileProgress_NoFetch();
 	void EventNoConnectionStartUpdate_Push();
 	void EventNoConnectionStartUpdate_Push_NoFetch();
+	void EventNoWifiNotifyIOSAppUpdate_Push();
+	void EventNoWifiNotifyIOSAppUpdate_Push_NoFetch();
+	void EventWindowsAppUpdate();
+	void EventWindowsAppUpdate_NoFetch();
 	void EventFetchInfo();
 	void EventFetchInfo_NoFetch();
+	void EventWifiNotifyAndroidAppUpdate_Push();
+	void EventWifiNotifyAndroidAppUpdate_Push_NoFetch();
 
 public:
 	static class UClass* StaticClass()

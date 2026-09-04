@@ -17,20 +17,20 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_revise_name.bp_revise_name_C
-// 0x0020 (0x0408 - 0x03E8)
+// 0x0020 (0x03F8 - 0x03D8)
 class Abp_revise_name_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	class FString                                 BP_ReviseRole_Name;                                // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0400(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class FString                                 BP_ReviseRole_Name;                                // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03F0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventReviseNameFilterName();
-	void EventReviseNameFilterName_NoFetch();
 	void EventReviseNameConfirmModify();
 	void EventReviseNameConfirmModify_NoFetch();
+	void EventReviseNameFilterName();
+	void EventReviseNameFilterName_NoFetch();
 	void EventReviseNameUIHide();
 	void EventReviseNameUIHide_NoFetch();
 

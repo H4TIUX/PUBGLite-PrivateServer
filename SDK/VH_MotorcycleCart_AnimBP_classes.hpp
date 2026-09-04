@@ -21,31 +21,31 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass VH_MotorcycleCart_AnimBP.VH_MotorcycleCart_AnimBP_C
-// 0x08A8 (0x1150 - 0x08A8)
+// 0x08A8 (0x1170 - 0x08C8)
 class UVH_MotorcycleCart_AnimBP_C final : public UVehicleAnimInstance
 {
 public:
-	uint8                                         Pad_8A8[0x8];                                      // 0x08A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x08B0(0x0008)(Transient, DuplicateTransient)
-	struct FAnimNode_WheelHandler                 AnimGraphNode_WheelHandler_32881ED14533782D98E278A22B4DE9BB; // 0x08B8(0x0088)()
-	struct FAnimNode_CopyBone                     AnimGraphNode_CopyBone_A54AE5FD40433541B2B5D795486F014F; // 0x0940(0x00A8)()
-	struct FAnimNode_BoneDrivenController         AnimGraphNode_BoneDrivenController_0CC7D0B449A6598211A4F4870ABB3768; // 0x09E8(0x00E8)()
-	struct FAnimNode_LookAt                       AnimGraphNode_LookAt_08DEAB27480692EAEB2F8FABB803B340; // 0x0AD0(0x01A0)()
-	struct FAnimNode_RotationMultiplier           AnimGraphNode_RotationMultiplier_3A0739814938595447ECD5A5A4CE61AF; // 0x0C70(0x00A8)()
-	struct FAnimNode_RotationMultiplier           AnimGraphNode_RotationMultiplier_D934A4604C67BA07C1F273BF398C3F1D; // 0x0D18(0x00A8)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_5F9393D24D62362344EA1488EC6A5B30; // 0x0DC0(0x0048)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_37C93E644899E686F27A44A05BCBDEE1; // 0x0E08(0x0048)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_680729AC40DA6E5FD48BC0AF82418A58; // 0x0E50(0x00B8)()
-	struct FAnimNode_RotationMultiplier           AnimGraphNode_RotationMultiplier_A5E0AA12477BB3D4661148BF9B5D111C; // 0x0F08(0x00A8)()
-	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose_3352CEE4430ABB49041BE69CB38CFEBF; // 0x0FB0(0x0038)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_872928F44636E9893D5FCBB5B663AF30; // 0x0FE8(0x0048)()
-	struct FAnimNode_BoneDrivenController         AnimGraphNode_BoneDrivenController_2B26394649D119CA62C435997CEBD75B; // 0x1030(0x00E8)()
-	class AVH_MotorcycleCart_C*                   BikeRef;                                           // 0x1118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SteerRoll;                                         // 0x1120(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               BodyRot;                                           // 0x1124(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	float                                         AD_Alpha;                                          // 0x1130(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                LastVelocity;                                      // 0x1134(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                EF;                                                // 0x1140(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8C8[0x8];                                      // 0x08C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x08D0(0x0008)(Transient, DuplicateTransient)
+	struct FAnimNode_WheelHandler                 AnimGraphNode_WheelHandler_32881ED14533782D98E278A22B4DE9BB; // 0x08D8(0x0088)()
+	struct FAnimNode_CopyBone                     AnimGraphNode_CopyBone_A54AE5FD40433541B2B5D795486F014F; // 0x0960(0x00A8)()
+	struct FAnimNode_BoneDrivenController         AnimGraphNode_BoneDrivenController_0CC7D0B449A6598211A4F4870ABB3768; // 0x0A08(0x00E8)()
+	struct FAnimNode_LookAt                       AnimGraphNode_LookAt_08DEAB27480692EAEB2F8FABB803B340; // 0x0AF0(0x01A0)()
+	struct FAnimNode_RotationMultiplier           AnimGraphNode_RotationMultiplier_3A0739814938595447ECD5A5A4CE61AF; // 0x0C90(0x00A8)()
+	struct FAnimNode_RotationMultiplier           AnimGraphNode_RotationMultiplier_D934A4604C67BA07C1F273BF398C3F1D; // 0x0D38(0x00A8)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_5F9393D24D62362344EA1488EC6A5B30; // 0x0DE0(0x0048)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_37C93E644899E686F27A44A05BCBDEE1; // 0x0E28(0x0048)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_680729AC40DA6E5FD48BC0AF82418A58; // 0x0E70(0x00B8)()
+	struct FAnimNode_RotationMultiplier           AnimGraphNode_RotationMultiplier_A5E0AA12477BB3D4661148BF9B5D111C; // 0x0F28(0x00A8)()
+	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose_3352CEE4430ABB49041BE69CB38CFEBF; // 0x0FD0(0x0038)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_872928F44636E9893D5FCBB5B663AF30; // 0x1008(0x0048)()
+	struct FAnimNode_BoneDrivenController         AnimGraphNode_BoneDrivenController_2B26394649D119CA62C435997CEBD75B; // 0x1050(0x00E8)()
+	class AVH_MotorcycleCart_C*                   BikeRef;                                           // 0x1138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SteerRoll;                                         // 0x1140(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               BodyRot;                                           // 0x1144(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	float                                         AD_Alpha;                                          // 0x1150(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                LastVelocity;                                      // 0x1154(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                EF;                                                // 0x1160(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_VH_MotorcycleCart_AnimBP_AnimGraphNode_ModifyBone_680729AC40DA6E5FD48BC0AF82418A58();

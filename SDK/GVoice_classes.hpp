@@ -30,6 +30,7 @@ public:
 
 public:
 	void ExecuteUbergraph_GVoice(int32 EntryPoint);
+	void Construct();
 	void ReceiveHide();
 	void Destruct();
 	void ReceivedInitWidget();

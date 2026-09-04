@@ -11,27 +11,364 @@
 #include "Basic.hpp"
 
 #include "Client_structs.hpp"
-#include "Gameplay_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Gameplay_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function Client.TssManager.OnRecvData_LuaState
+// Function Client.HotUpdater.OnDownloadedOneFile
+// 0x0028 (0x0028 - 0x0000)
+struct HotUpdater_OnDownloadedOneFile final
+{
+public:
+	uint8                                         Successful : 1;                                    // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 FileURL;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<uint8>                                 Data;                                              // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+
+// Function Client.HotUpdater.OnGetVersionData
+// 0x0028 (0x0028 - 0x0000)
+struct HotUpdater_OnGetVersionData final
+{
+public:
+	uint8                                         Successful : 1;                                    // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 FileURL;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<uint8>                                 Data;                                              // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+
+// Function Client.GVoiceInterface.CloseAllMicphone
+// 0x0001 (0x0001 - 0x0000)
+struct GVoiceInterface_CloseAllMicphone final
+{
+public:
+	uint8                                         showTips : 1;                                      // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Client.GVoiceInterface.CloseAllSpeaker
+// 0x0001 (0x0001 - 0x0000)
+struct GVoiceInterface_CloseAllSpeaker final
+{
+public:
+	uint8                                         showTips : 1;                                      // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Client.GVoiceInterface.ForbidTeammateVoiceById
+// 0x0008 (0x0008 - 0x0000)
+struct GVoiceInterface_ForbidTeammateVoiceById final
+{
+public:
+	int32                                         memberID;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         IsEnable : 1;                                      // 0x0004(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Client.GVoiceInterface.GetRegionFromSessionID
+// 0x0018 (0x0018 - 0x0000)
+struct GVoiceInterface_GetRegionFromSessionID final
+{
+public:
+	class FString                                 SessionID;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGVoiceServer                                 ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Client.GVoiceInterface.GetTeammateUserIDByMemberID
+// 0x0018 (0x0018 - 0x0000)
+struct GVoiceInterface_GetTeammateUserIDByMemberID final
+{
+public:
+	int32                                         InMemberID;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.GVoiceInterface.GetVadSensitive
 // 0x0004 (0x0004 - 0x0000)
-struct TssManager_OnRecvData_LuaState final
+struct GVoiceInterface_GetVadSensitive final
 {
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function Client.TssManager.SendSkdData_LuaState
+// Function Client.GVoiceInterface.GetVoiceLength
 // 0x0004 (0x0004 - 0x0000)
-struct TssManager_SendSkdData_LuaState final
+struct GVoiceInterface_GetVoiceLength final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.GVoiceInterface.InitGVoiceComponent
+// 0x0010 (0x0010 - 0x0000)
+struct GVoiceInterface_InitGVoiceComponent final
+{
+public:
+	class FString                                 userId;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.GVoiceInterface.JoinRangeRoom
+// 0x0020 (0x0020 - 0x0000)
+struct GVoiceInterface_JoinRangeRoom final
+{
+public:
+	class FString                                 RangeRoom;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 userId;                                            // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.GVoiceInterface.JoinTeamRoom
+// 0x0020 (0x0020 - 0x0000)
+struct GVoiceInterface_JoinTeamRoom final
+{
+public:
+	class FString                                 TeamRoom;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 userId;                                            // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.GVoiceInterface.OpenAllMicphone
+// 0x0008 (0x0008 - 0x0000)
+struct GVoiceInterface_OpenAllMicphone final
+{
+public:
+	uint8                                         showTips : 1;                                      // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.GVoiceInterface.OpenAllSpeaker
+// 0x0001 (0x0001 - 0x0000)
+struct GVoiceInterface_OpenAllSpeaker final
+{
+public:
+	uint8                                         showTips : 1;                                      // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Client.GVoiceInterface.OpenMic
+// 0x0004 (0x0004 - 0x0000)
+struct GVoiceInterface_OpenMic final
 {
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.GVoiceInterface.OpenSpeaker
+// 0x0004 (0x0004 - 0x0000)
+struct GVoiceInterface_OpenSpeaker final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.GVoiceInterface.OpenTeamMicphoneOnly
+// 0x0008 (0x0008 - 0x0000)
+struct GVoiceInterface_OpenTeamMicphoneOnly final
+{
+public:
+	uint8                                         showTips : 1;                                      // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.GVoiceInterface.OpenTeamSpeakerOnly
+// 0x0001 (0x0001 - 0x0000)
+struct GVoiceInterface_OpenTeamSpeakerOnly final
+{
+public:
+	uint8                                         showTips : 1;                                      // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Client.GVoiceInterface.SetLbsRoomEnableStatus
+// 0x0001 (0x0001 - 0x0000)
+struct GVoiceInterface_SetLbsRoomEnableStatus final
+{
+public:
+	uint8                                         Flag : 1;                                          // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Client.GVoiceInterface.SetMicphoneStatus
+// 0x0001 (0x0001 - 0x0000)
+struct GVoiceInterface_SetMicphoneStatus final
+{
+public:
+	uint8                                         Flag : 1;                                          // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Client.GVoiceInterface.SetMicphoneVolume
+// 0x0004 (0x0004 - 0x0000)
+struct GVoiceInterface_SetMicphoneVolume final
+{
+public:
+	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.GVoiceInterface.SetSpeakerStatus
+// 0x0001 (0x0001 - 0x0000)
+struct GVoiceInterface_SetSpeakerStatus final
+{
+public:
+	uint8                                         Flag : 1;                                          // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Client.GVoiceInterface.SetSpeakerVolume
+// 0x0004 (0x0004 - 0x0000)
+struct GVoiceInterface_SetSpeakerVolume final
+{
+public:
+	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.GVoiceInterface.SetVadSensitive
+// 0x0004 (0x0004 - 0x0000)
+struct GVoiceInterface_SetVadSensitive final
+{
+public:
+	int32                                         VadSensitive;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.GVoiceInterface.SetVoiceServer
+// 0x0001 (0x0001 - 0x0000)
+struct GVoiceInterface_SetVoiceServer final
+{
+public:
+	EGVoiceServer                                 InType;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.GVoiceInterface.HaveRangeRoom
+// 0x0001 (0x0001 - 0x0000)
+struct GVoiceInterface_HaveRangeRoom final
+{
+public:
+	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Client.GVoiceInterface.HaveTeamRoom
+// 0x0001 (0x0001 - 0x0000)
+struct GVoiceInterface_HaveTeamRoom final
+{
+public:
+	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Client.GVoiceInterface.LbsMicphoneEnable
+// 0x0001 (0x0001 - 0x0000)
+struct GVoiceInterface_LbsMicphoneEnable final
+{
+public:
+	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Client.GVoiceInterface.LbsSpeakerEnable
+// 0x0001 (0x0001 - 0x0000)
+struct GVoiceInterface_LbsSpeakerEnable final
+{
+public:
+	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Client.GVoiceInterface.TeamMicphoneEnable
+// 0x0001 (0x0001 - 0x0000)
+struct GVoiceInterface_TeamMicphoneEnable final
+{
+public:
+	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Client.GVoiceInterface.TeamSpeakerEnable
+// 0x0001 (0x0001 - 0x0000)
+struct GVoiceInterface_TeamSpeakerEnable final
+{
+public:
+	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Client.GameBackendHUD.GetInstance
+// 0x0008 (0x0008 - 0x0000)
+struct GameBackendHUD_GetInstance final
+{
+public:
+	class UGameBackendHUD*                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.GameBackendHUD.GetFirstGameFrontendHUD
+// 0x0008 (0x0008 - 0x0000)
+struct GameBackendHUD_GetFirstGameFrontendHUD final
+{
+public:
+	class UGameFrontendHUD*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.GameBackendHUD.GetUtils
+// 0x0008 (0x0008 - 0x0000)
+struct GameBackendHUD_GetUtils final
+{
+public:
+	class UGameBackendUtils*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.GameBusinessManager.GetGameFrontendHUD
+// 0x0008 (0x0008 - 0x0000)
+struct GameBusinessManager_GetGameFrontendHUD final
+{
+public:
+	class UGameFrontendHUD*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.GameBusinessManager.GetLuaObject
+// 0x0008 (0x0008 - 0x0000)
+struct GameBusinessManager_GetLuaObject final
+{
+public:
+	class ALuaClassObj*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.GameBusinessManager.GetWidget
+// 0x0010 (0x0010 - 0x0000)
+struct GameBusinessManager_GetWidget final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUAEUserWidget*                         ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.InGameUIManager.HandleUIMessage
+// 0x0010 (0x0010 - 0x0000)
+struct InGameUIManager_HandleUIMessage final
+{
+public:
+	class FString                                 UIMessage;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.InGameUIManager.SubUIWidgetList
+// 0x0028 (0x0028 - 0x0000)
+struct InGameUIManager_SubUIWidgetList final
+{
+public:
+	TArray<struct FGameWidgetConfig>              InWidgetConfigList;                                // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class FString>                         GameStatusStrList;                                 // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	uint8                                         InPersistentUI : 1;                                // 0x0020(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         InUsedByControler : 1;                             // 0x0021(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         InOberverOnly : 1;                                 // 0x0022(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Client.GameBackendUtils.GetLoadedClassManager
+// 0x0008 (0x0008 - 0x0000)
+struct GameBackendUtils_GetLoadedClassManager final
+{
+public:
+	class UUAELoadedClassManager*                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.GameBackendUtils.GetTableManager
+// 0x0008 (0x0008 - 0x0000)
+struct GameBackendUtils_GetTableManager final
+{
+public:
+	class UUAETableManager*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 // Function Client.ImageDownloader.MakeDownloader
@@ -58,26 +395,165 @@ public:
 	class FString                                 URL;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function Client.HotUpdater.OnDownloadedOneFile
-// 0x0028 (0x0028 - 0x0000)
-struct HotUpdater_OnDownloadedOneFile final
+// Function Client.UTRichTextBlock.GetText
+// 0x0018 (0x0018 - 0x0000)
+struct UTRichTextBlock_GetText final
 {
 public:
-	uint8                                         Successful : 1;                                    // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 FileURL;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<uint8>                                 Data;                                              // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 
-// Function Client.HotUpdater.OnGetVersionData
-// 0x0028 (0x0028 - 0x0000)
-struct HotUpdater_OnGetVersionData final
+// Function Client.UTRichTextBlock.SetGameFrontendHUD
+// 0x0008 (0x0008 - 0x0000)
+struct UTRichTextBlock_SetGameFrontendHUD final
 {
 public:
-	uint8                                         Successful : 1;                                    // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	class UGameFrontendHUD*                       InHUD;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.UTRichTextBlock.SetText
+// 0x0018 (0x0018 - 0x0000)
+struct UTRichTextBlock_SetText final
+{
+public:
+	class FText                                   InText;                                            // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+};
+
+// Function Client.LuaClassObj.GetGameStatus
+// 0x0010 (0x0010 - 0x0000)
+struct LuaClassObj_GetGameStatus final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.LuaClassObj.HandleUIMessage
+// 0x0010 (0x0010 - 0x0000)
+struct LuaClassObj_HandleUIMessage final
+{
+public:
+	class FString                                 UIMessage;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.LuaClassObj.HandleUIMessageNoFetch
+// 0x0010 (0x0010 - 0x0000)
+struct LuaClassObj_HandleUIMessageNoFetch final
+{
+public:
+	class FString                                 UIMessage;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.LuaClassObj.SubCollapseWidgetList
+// 0x0020 (0x0020 - 0x0000)
+struct LuaClassObj_SubCollapseWidgetList final
+{
+public:
+	class FString                                 RootWidgetName;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         ChildWidgetNames;                                  // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+
+// Function Client.LuaClassObj.SubShowHideEvent
+// 0x0010 (0x0010 - 0x0000)
+struct LuaClassObj_SubShowHideEvent final
+{
+public:
+	TArray<class FString>                         WidgetPathList;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+
+// Function Client.LuaClassObj.SubUIWidgetList
+// 0x0028 (0x0028 - 0x0000)
+struct LuaClassObj_SubUIWidgetList final
+{
+public:
+	TArray<struct FGameWidgetConfig>              InWidgetConfigList;                                // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class FString>                         GameStatusStrList;                                 // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	uint8                                         bPersistentUI : 1;                                 // 0x0020(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         InStatusConcern : 1;                               // 0x0021(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bDynamicWidget : 1;                                // 0x0022(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Client.ScreenshotMaker.GetSaveStatus
+// 0x0004 (0x0004 - 0x0000)
+struct ScreenshotMaker_GetSaveStatus final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.ScreenshotMaker.HasCaptured
+// 0x0018 (0x0018 - 0x0000)
+struct ScreenshotMaker_HasCaptured final
+{
+public:
+	class FString                                 pathStr;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         ReturnValue : 1;                                   // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Client.ScreenshotMaker.MakeBugReprotPic
+// 0x0018 (0x0018 - 0x0000)
+struct ScreenshotMaker_MakeBugReprotPic final
+{
+public:
+	uint8                                         isShowUI : 1;                                      // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 FileURL;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<uint8>                                 Data;                                              // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.ScreenshotMaker.MakePicture
+// 0x0018 (0x0018 - 0x0000)
+struct ScreenshotMaker_MakePicture final
+{
+public:
+	uint8                                         isShowUI : 1;                                      // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.ScreenshotMaker.ReMakePicture
+// 0x0020 (0x0020 - 0x0000)
+struct ScreenshotMaker_ReMakePicture final
+{
+public:
+	class FString                                 pathStr;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector4                               Vector4;                                           // 0x0010(0x0010)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.ScreenshotMaker.SaveToPhotosAlbum
+// 0x0018 (0x0018 - 0x0000)
+struct ScreenshotMaker_SaveToPhotosAlbum final
+{
+public:
+	class FString                                 pathStr;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         ReturnValue : 1;                                   // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Client.ScreenshotMaker.SaveToPhotosAlbumEx
+// 0x0018 (0x0018 - 0x0000)
+struct ScreenshotMaker_SaveToPhotosAlbumEx final
+{
+public:
+	class FString                                 pathStr;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         ReturnValue : 1;                                   // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Client.TssManager.OnRecvData_LuaState
+// 0x0004 (0x0004 - 0x0000)
+struct TssManager_OnRecvData_LuaState final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Client.TssManager.SendSkdData_LuaState
+// 0x0004 (0x0004 - 0x0000)
+struct TssManager_SendSkdData_LuaState final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 // Function Client.LoadTexture.GetTexture2DFromDiskFile
@@ -711,7 +1187,7 @@ public:
 struct ScriptHelperClient_MD5HashAnsiString final
 {
 public:
-	class FString                                 str;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Str;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
@@ -765,9 +1241,9 @@ public:
 	struct FFightFriendChat                       Data;                                              // 0x0008(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 
-// Function Client.ScriptHelperClient.OpenURL
+// Function Client.ScriptHelperClient.OpenUrl
 // 0x0018 (0x0018 - 0x0000)
-struct ScriptHelperClient_OpenURL final
+struct ScriptHelperClient_OpenUrl final
 {
 public:
 	class FString                                 URL;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1189,341 +1665,6 @@ public:
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 
-// Function Client.GameBackendHUD.GetInstance
-// 0x0008 (0x0008 - 0x0000)
-struct GameBackendHUD_GetInstance final
-{
-public:
-	class UGameBackendHUD*                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.GameBackendHUD.GetFirstGameFrontendHUD
-// 0x0008 (0x0008 - 0x0000)
-struct GameBackendHUD_GetFirstGameFrontendHUD final
-{
-public:
-	class UGameFrontendHUD*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.GameBackendHUD.GetUtils
-// 0x0008 (0x0008 - 0x0000)
-struct GameBackendHUD_GetUtils final
-{
-public:
-	class UGameBackendUtils*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.GVoiceInterface.CloseAllMicphone
-// 0x0001 (0x0001 - 0x0000)
-struct GVoiceInterface_CloseAllMicphone final
-{
-public:
-	uint8                                         showTips : 1;                                      // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Client.GVoiceInterface.CloseAllSpeaker
-// 0x0001 (0x0001 - 0x0000)
-struct GVoiceInterface_CloseAllSpeaker final
-{
-public:
-	uint8                                         showTips : 1;                                      // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Client.GVoiceInterface.ForbidTeammateVoiceById
-// 0x0008 (0x0008 - 0x0000)
-struct GVoiceInterface_ForbidTeammateVoiceById final
-{
-public:
-	int32                                         memberID;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         IsEnable : 1;                                      // 0x0004(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function Client.GVoiceInterface.GetRegionFromSessionID
-// 0x0018 (0x0018 - 0x0000)
-struct GVoiceInterface_GetRegionFromSessionID final
-{
-public:
-	class FString                                 SessionID;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGVoiceServer                                 ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function Client.GVoiceInterface.GetTeammateUserIDByMemberID
-// 0x0018 (0x0018 - 0x0000)
-struct GVoiceInterface_GetTeammateUserIDByMemberID final
-{
-public:
-	int32                                         InMemberID;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.GVoiceInterface.GetVadSensitive
-// 0x0004 (0x0004 - 0x0000)
-struct GVoiceInterface_GetVadSensitive final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.GVoiceInterface.GetVoiceLength
-// 0x0004 (0x0004 - 0x0000)
-struct GVoiceInterface_GetVoiceLength final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.GVoiceInterface.InitGVoiceComponent
-// 0x0010 (0x0010 - 0x0000)
-struct GVoiceInterface_InitGVoiceComponent final
-{
-public:
-	class FString                                 userId;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.GVoiceInterface.JoinRangeRoom
-// 0x0020 (0x0020 - 0x0000)
-struct GVoiceInterface_JoinRangeRoom final
-{
-public:
-	class FString                                 RangeRoom;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 userId;                                            // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.GVoiceInterface.JoinTeamRoom
-// 0x0020 (0x0020 - 0x0000)
-struct GVoiceInterface_JoinTeamRoom final
-{
-public:
-	class FString                                 TeamRoom;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 userId;                                            // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.GVoiceInterface.OpenAllMicphone
-// 0x0008 (0x0008 - 0x0000)
-struct GVoiceInterface_OpenAllMicphone final
-{
-public:
-	uint8                                         showTips : 1;                                      // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.GVoiceInterface.OpenAllSpeaker
-// 0x0001 (0x0001 - 0x0000)
-struct GVoiceInterface_OpenAllSpeaker final
-{
-public:
-	uint8                                         showTips : 1;                                      // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Client.GVoiceInterface.OpenMic
-// 0x0004 (0x0004 - 0x0000)
-struct GVoiceInterface_OpenMic final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.GVoiceInterface.OpenSpeaker
-// 0x0004 (0x0004 - 0x0000)
-struct GVoiceInterface_OpenSpeaker final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.GVoiceInterface.OpenTeamMicphoneOnly
-// 0x0008 (0x0008 - 0x0000)
-struct GVoiceInterface_OpenTeamMicphoneOnly final
-{
-public:
-	uint8                                         showTips : 1;                                      // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.GVoiceInterface.OpenTeamSpeakerOnly
-// 0x0001 (0x0001 - 0x0000)
-struct GVoiceInterface_OpenTeamSpeakerOnly final
-{
-public:
-	uint8                                         showTips : 1;                                      // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Client.GVoiceInterface.SetLbsRoomEnableStatus
-// 0x0001 (0x0001 - 0x0000)
-struct GVoiceInterface_SetLbsRoomEnableStatus final
-{
-public:
-	uint8                                         Flag : 1;                                          // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Client.GVoiceInterface.SetMicphoneStatus
-// 0x0001 (0x0001 - 0x0000)
-struct GVoiceInterface_SetMicphoneStatus final
-{
-public:
-	uint8                                         Flag : 1;                                          // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Client.GVoiceInterface.SetMicphoneVolume
-// 0x0004 (0x0004 - 0x0000)
-struct GVoiceInterface_SetMicphoneVolume final
-{
-public:
-	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.GVoiceInterface.SetSpeakerStatus
-// 0x0001 (0x0001 - 0x0000)
-struct GVoiceInterface_SetSpeakerStatus final
-{
-public:
-	uint8                                         Flag : 1;                                          // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Client.GVoiceInterface.SetSpeakerVolume
-// 0x0004 (0x0004 - 0x0000)
-struct GVoiceInterface_SetSpeakerVolume final
-{
-public:
-	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.GVoiceInterface.SetVadSensitive
-// 0x0004 (0x0004 - 0x0000)
-struct GVoiceInterface_SetVadSensitive final
-{
-public:
-	int32                                         VadSensitive;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.GVoiceInterface.SetVoiceServer
-// 0x0001 (0x0001 - 0x0000)
-struct GVoiceInterface_SetVoiceServer final
-{
-public:
-	EGVoiceServer                                 InType;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.GVoiceInterface.HaveRangeRoom
-// 0x0001 (0x0001 - 0x0000)
-struct GVoiceInterface_HaveRangeRoom final
-{
-public:
-	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Client.GVoiceInterface.HaveTeamRoom
-// 0x0001 (0x0001 - 0x0000)
-struct GVoiceInterface_HaveTeamRoom final
-{
-public:
-	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Client.GVoiceInterface.LbsMicphoneEnable
-// 0x0001 (0x0001 - 0x0000)
-struct GVoiceInterface_LbsMicphoneEnable final
-{
-public:
-	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Client.GVoiceInterface.LbsSpeakerEnable
-// 0x0001 (0x0001 - 0x0000)
-struct GVoiceInterface_LbsSpeakerEnable final
-{
-public:
-	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Client.GVoiceInterface.TeamMicphoneEnable
-// 0x0001 (0x0001 - 0x0000)
-struct GVoiceInterface_TeamMicphoneEnable final
-{
-public:
-	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Client.GVoiceInterface.TeamSpeakerEnable
-// 0x0001 (0x0001 - 0x0000)
-struct GVoiceInterface_TeamSpeakerEnable final
-{
-public:
-	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Client.ScreenshotMaker.GetSaveStatus
-// 0x0004 (0x0004 - 0x0000)
-struct ScreenshotMaker_GetSaveStatus final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.ScreenshotMaker.HasCaptured
-// 0x0018 (0x0018 - 0x0000)
-struct ScreenshotMaker_HasCaptured final
-{
-public:
-	class FString                                 pathStr;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         ReturnValue : 1;                                   // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function Client.ScreenshotMaker.MakeBugReprotPic
-// 0x0018 (0x0018 - 0x0000)
-struct ScreenshotMaker_MakeBugReprotPic final
-{
-public:
-	uint8                                         isShowUI : 1;                                      // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.ScreenshotMaker.MakePicture
-// 0x0018 (0x0018 - 0x0000)
-struct ScreenshotMaker_MakePicture final
-{
-public:
-	uint8                                         isShowUI : 1;                                      // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.ScreenshotMaker.ReMakePicture
-// 0x0020 (0x0020 - 0x0000)
-struct ScreenshotMaker_ReMakePicture final
-{
-public:
-	class FString                                 pathStr;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector4                               Vector4;                                           // 0x0010(0x0010)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.ScreenshotMaker.SaveToPhotosAlbum
-// 0x0018 (0x0018 - 0x0000)
-struct ScreenshotMaker_SaveToPhotosAlbum final
-{
-public:
-	class FString                                 pathStr;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         ReturnValue : 1;                                   // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function Client.ScreenshotMaker.SaveToPhotosAlbumEx
-// 0x0018 (0x0018 - 0x0000)
-struct ScreenshotMaker_SaveToPhotosAlbumEx final
-{
-public:
-	class FString                                 pathStr;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         ReturnValue : 1;                                   // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
 // Function Client.GameFrontendHUD.CallGlobalScriptFunction
 // 0x0010 (0x0010 - 0x0000)
 struct GameFrontendHUD_CallGlobalScriptFunction final
@@ -1665,147 +1806,6 @@ struct GameFrontendHUD_GetLuaStateWrapper final
 {
 public:
 	class ULuaStateWrapper*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.GameBusinessManager.GetGameFrontendHUD
-// 0x0008 (0x0008 - 0x0000)
-struct GameBusinessManager_GetGameFrontendHUD final
-{
-public:
-	class UGameFrontendHUD*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.GameBusinessManager.GetLuaObject
-// 0x0008 (0x0008 - 0x0000)
-struct GameBusinessManager_GetLuaObject final
-{
-public:
-	class ALuaClassObj*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.GameBusinessManager.GetWidget
-// 0x0010 (0x0010 - 0x0000)
-struct GameBusinessManager_GetWidget final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUAEUserWidget*                         ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.InGameUIManager.HandleUIMessage
-// 0x0010 (0x0010 - 0x0000)
-struct InGameUIManager_HandleUIMessage final
-{
-public:
-	class FString                                 UIMessage;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.InGameUIManager.SubUIWidgetList
-// 0x0028 (0x0028 - 0x0000)
-struct InGameUIManager_SubUIWidgetList final
-{
-public:
-	TArray<struct FGameWidgetConfig>              InWidgetConfigList;                                // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<class FString>                         GameStatusStrList;                                 // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	uint8                                         InPersistentUI : 1;                                // 0x0020(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         InUsedByControler : 1;                             // 0x0021(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         InOberverOnly : 1;                                 // 0x0022(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function Client.GameBackendUtils.GetLoadedClassManager
-// 0x0008 (0x0008 - 0x0000)
-struct GameBackendUtils_GetLoadedClassManager final
-{
-public:
-	class UUAELoadedClassManager*                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.GameBackendUtils.GetTableManager
-// 0x0008 (0x0008 - 0x0000)
-struct GameBackendUtils_GetTableManager final
-{
-public:
-	class UUAETableManager*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.LuaClassObj.GetGameStatus
-// 0x0010 (0x0010 - 0x0000)
-struct LuaClassObj_GetGameStatus final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.LuaClassObj.HandleUIMessage
-// 0x0010 (0x0010 - 0x0000)
-struct LuaClassObj_HandleUIMessage final
-{
-public:
-	class FString                                 UIMessage;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.LuaClassObj.HandleUIMessageNoFetch
-// 0x0010 (0x0010 - 0x0000)
-struct LuaClassObj_HandleUIMessageNoFetch final
-{
-public:
-	class FString                                 UIMessage;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.LuaClassObj.SubCollapseWidgetList
-// 0x0020 (0x0020 - 0x0000)
-struct LuaClassObj_SubCollapseWidgetList final
-{
-public:
-	class FString                                 RootWidgetName;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         ChildWidgetNames;                                  // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-
-// Function Client.LuaClassObj.SubShowHideEvent
-// 0x0010 (0x0010 - 0x0000)
-struct LuaClassObj_SubShowHideEvent final
-{
-public:
-	TArray<class FString>                         WidgetPathList;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function Client.LuaClassObj.SubUIWidgetList
-// 0x0028 (0x0028 - 0x0000)
-struct LuaClassObj_SubUIWidgetList final
-{
-public:
-	TArray<struct FGameWidgetConfig>              InWidgetConfigList;                                // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<class FString>                         GameStatusStrList;                                 // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	uint8                                         bPersistentUI : 1;                                 // 0x0020(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         InStatusConcern : 1;                               // 0x0021(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bDynamicWidget : 1;                                // 0x0022(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function Client.UTRichTextBlock.GetText
-// 0x0018 (0x0018 - 0x0000)
-struct UTRichTextBlock_GetText final
-{
-public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function Client.UTRichTextBlock.SetGameFrontendHUD
-// 0x0008 (0x0008 - 0x0000)
-struct UTRichTextBlock_SetGameFrontendHUD final
-{
-public:
-	class UGameFrontendHUD*                       InHUD;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Client.UTRichTextBlock.SetText
-// 0x0018 (0x0018 - 0x0000)
-struct UTRichTextBlock_SetText final
-{
-public:
-	class FText                                   InText;                                            // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
 };
 
 // Function Client.BusinessHelper.BroadCastMSG

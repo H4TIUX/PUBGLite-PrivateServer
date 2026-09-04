@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Basic_structs.hpp"
-#include "ShadowTrackerExtra_structs.hpp"
-#include "BP_STRUCT_Item_type_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "ShadowTrackerExtra_structs.hpp"
+#include "Basic_structs.hpp"
+#include "BP_STRUCT_Item_type_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -271,7 +271,7 @@ public:
 };
 
 // Function GrenadeList.GrenadeList_C.GetGrenadeAndMeleeWeaponDataArray
-// 0x0A10 (0x0A10 - 0x0000)
+// 0x09D8 (0x09D8 - 0x0000)
 struct GrenadeList_C_GetGrenadeAndMeleeWeaponDataArray final
 {
 public:
@@ -279,54 +279,54 @@ public:
 	EGrenadeType                                  CurFirstType;                                      // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FComparableGrenadeItemType>     ComparableGrenadeList;                             // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBattleItemData                        CurUseWeaponBattleItemData;                        // 0x0028(0x00A0)(Edit, BlueprintVisible)
-	int32                                         CurUseWeaponSpecificID;                            // 0x00C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         bHasMelee : 1;                                     // 0x00CC(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_CD[0x3];                                       // 0x00CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBattleItemData                        CurBattleItemData;                                 // 0x00D0(0x00A0)(Edit, BlueprintVisible)
-	struct FBattleItemData                        MeleeAsLastWeaponData;                             // 0x0170(0x00A0)(Edit, BlueprintVisible)
-	struct FBP_STRUCT_Item_type                   CurItemDataTableRow;                               // 0x0210(0x0240)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TMap<int32, struct FBP_STRUCT_Item_type>      CallFunc_GetGrenadeAndMeleeWeaponDataTableMap_DataTableRowMap; // 0x0450(0x0050)(ZeroConstructor)
-	int32                                         CallFunc_GetGrenadePriorityByType_Priority;        // 0x04A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A4[0x4];                                      // 0x04A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUIDataProcessingFunctionLibrary*       CallFunc_UILibraryInstance_ReturnValue;            // 0x04A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FComparableGrenadeItemType             K2Node_MakeStruct_ComparableGrenadeItemType;       // 0x04B0(0x00A8)()
-	class ASTExtraPlayerCharacter*                CallFunc_GetOwningPlayerPawnOrVehicleDriver_ReturnValue; // 0x0558(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x0560(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_561[0x3];                                      // 0x0561(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ___int_Array_Index_Variable;                       // 0x0564(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0568(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ___int_Array_Index_Variable2;                      // 0x056C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FComparableGrenadeItemType>     CallFunc_SortGrenadeItemArray_ReturnValue;         // 0x0570(0x0010)(ZeroConstructor, ReferenceParm)
-	struct FComparableGrenadeItemType             CallFunc_Array_Get_Item;                           // 0x0580(0x00A8)()
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0628(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ___int_Loop_Counter_Variable;                      // 0x062C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue2;                   // 0x0630(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Less_IntInt_ReturnValue : 1;              // 0x0634(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_635[0x3];                                      // 0x0635(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0638(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ___int_Loop_Counter_Variable2;                     // 0x063C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue2;                  // 0x0640(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGrenadeType                                  CallFunc_GetGrenadeTypeByItemID_Type;              // 0x0644(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Array_IsValidIndex_ReturnValue : 1;       // 0x0645(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue : 1;        // 0x0646(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_647[0x1];                                      // 0x0647(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_Item_type                   CallFunc_Map_Find_Value;                           // 0x0648(0x0240)(HasGetValueTypeHash)
-	uint8                                         CallFunc_Map_Find_ReturnValue : 1;                 // 0x0888(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue2 : 1;       // 0x0889(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	EGrenadeType                                  CallFunc_GetGrenadeTypeByItemID_Type2;             // 0x088A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_88B[0x5];                                      // 0x088B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class ASTExtraPlayerCharacter*                CallFunc_GetPlayerCharacter_PlayerCharacter;       // 0x0890(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetGrenadePriorityByType_Priority2;       // 0x0898(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_89C[0x4];                                      // 0x089C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBackpackComponent*                     CallFunc_GetBackpackComponentFromCharacter_ReturnValue; // 0x08A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FComparableGrenadeItemType             K2Node_MakeStruct_ComparableGrenadeItemType2;      // 0x08A8(0x00A8)()
-	TArray<struct FBattleItemData>                CallFunc_GetAllItemsInBackpack_ReturnValue;        // 0x0950(0x0010)(ZeroConstructor, ReferenceParm)
-	int32                                         CallFunc_Array_Add_ReturnValue3;                   // 0x0960(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_964[0x4];                                      // 0x0964(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBattleItemData                        CallFunc_Array_Get_Item2;                          // 0x0968(0x00A0)()
-	int32                                         CallFunc_Array_Length_ReturnValue2;                // 0x0A08(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Less_IntInt_ReturnValue2 : 1;             // 0x0A0C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	struct FBattleItemData                        CurUseWeaponBattleItemData;                        // 0x0028(0x0098)(Edit, BlueprintVisible)
+	int32                                         CurUseWeaponSpecificID;                            // 0x00C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         bHasMelee : 1;                                     // 0x00C4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_C5[0x3];                                       // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBattleItemData                        CurBattleItemData;                                 // 0x00C8(0x0098)(Edit, BlueprintVisible)
+	struct FBattleItemData                        MeleeAsLastWeaponData;                             // 0x0160(0x0098)(Edit, BlueprintVisible)
+	struct FBP_STRUCT_Item_type                   CurItemDataTableRow;                               // 0x01F8(0x0240)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TMap<int32, struct FBP_STRUCT_Item_type>      CallFunc_GetGrenadeAndMeleeWeaponDataTableMap_DataTableRowMap; // 0x0438(0x0050)(ZeroConstructor)
+	int32                                         CallFunc_GetGrenadePriorityByType_Priority;        // 0x0488(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_48C[0x4];                                      // 0x048C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUIDataProcessingFunctionLibrary*       CallFunc_UILibraryInstance_ReturnValue;            // 0x0490(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FComparableGrenadeItemType             K2Node_MakeStruct_ComparableGrenadeItemType;       // 0x0498(0x00A0)()
+	class ASTExtraPlayerCharacter*                CallFunc_GetOwningPlayerPawnOrVehicleDriver_ReturnValue; // 0x0538(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x0540(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_541[0x3];                                      // 0x0541(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ___int_Array_Index_Variable;                       // 0x0544(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0548(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ___int_Array_Index_Variable2;                      // 0x054C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FComparableGrenadeItemType>     CallFunc_SortGrenadeItemArray_ReturnValue;         // 0x0550(0x0010)(ZeroConstructor, ReferenceParm)
+	struct FComparableGrenadeItemType             CallFunc_Array_Get_Item;                           // 0x0560(0x00A0)()
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0600(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ___int_Loop_Counter_Variable;                      // 0x0604(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue2;                   // 0x0608(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Less_IntInt_ReturnValue : 1;              // 0x060C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_60D[0x3];                                      // 0x060D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0610(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ___int_Loop_Counter_Variable2;                     // 0x0614(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue2;                  // 0x0618(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGrenadeType                                  CallFunc_GetGrenadeTypeByItemID_Type;              // 0x061C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Array_IsValidIndex_ReturnValue : 1;       // 0x061D(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue : 1;        // 0x061E(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_61F[0x1];                                      // 0x061F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_Item_type                   CallFunc_Map_Find_Value;                           // 0x0620(0x0240)(HasGetValueTypeHash)
+	uint8                                         CallFunc_Map_Find_ReturnValue : 1;                 // 0x0860(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue2 : 1;       // 0x0861(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	EGrenadeType                                  CallFunc_GetGrenadeTypeByItemID_Type2;             // 0x0862(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_863[0x5];                                      // 0x0863(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class ASTExtraPlayerCharacter*                CallFunc_GetPlayerCharacter_PlayerCharacter;       // 0x0868(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetGrenadePriorityByType_Priority2;       // 0x0870(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_874[0x4];                                      // 0x0874(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBackpackComponent*                     CallFunc_GetBackpackComponentFromCharacter_ReturnValue; // 0x0878(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FComparableGrenadeItemType             K2Node_MakeStruct_ComparableGrenadeItemType2;      // 0x0880(0x00A0)()
+	TArray<struct FBattleItemData>                CallFunc_GetAllItemsInBackpack_ReturnValue;        // 0x0920(0x0010)(ZeroConstructor, ReferenceParm)
+	int32                                         CallFunc_Array_Add_ReturnValue3;                   // 0x0930(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_934[0x4];                                      // 0x0934(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBattleItemData                        CallFunc_Array_Get_Item2;                          // 0x0938(0x0098)()
+	int32                                         CallFunc_Array_Length_ReturnValue2;                // 0x09D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Less_IntInt_ReturnValue2 : 1;             // 0x09D4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 };
 
 // Function GrenadeList.GrenadeList_C.GetGrenadeAndMeleeWeaponDataTableMap
@@ -378,39 +378,39 @@ public:
 };
 
 // Function GrenadeList.GrenadeList_C.UpdateDataToSlot
-// 0x0318 (0x0318 - 0x0000)
+// 0x0310 (0x0310 - 0x0000)
 struct GrenadeList_C_UpdateDataToSlot final
 {
 public:
 	int32                                         CurIndex;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBattleItemData                        CurBattleItemData;                                 // 0x0008(0x00A0)(Edit, BlueprintVisible)
-	class UImage*                                 CallFunc_GetBtnIncludeWidgetByIndex_BG;            // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 CallFunc_GetBtnIncludeWidgetByIndex_GrenadeImage;  // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UButton*                                CallFunc_GetBtnIncludeWidgetByIndex_GrenadeBtn;    // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTextBlock*                             CallFunc_GetBtnIncludeWidgetByIndex_Text;          // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGridPanel*                             CallFunc_GetBtnIncludeWidgetByIndex_Grid;          // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBorder*                                CallFunc_GetBtnIncludeWidgetByIndex_Border;        // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 CallFunc_GetBtnIncludeWidgetByIndex_BG2;           // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 CallFunc_GetBtnIncludeWidgetByIndex_GrenadeImage2; // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UButton*                                CallFunc_GetBtnIncludeWidgetByIndex_GrenadeBtn2;   // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTextBlock*                             CallFunc_GetBtnIncludeWidgetByIndex_Text2;         // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGridPanel*                             CallFunc_GetBtnIncludeWidgetByIndex_Grid2;         // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBorder*                                CallFunc_GetBtnIncludeWidgetByIndex_Border2;       // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ___int_Variable;                                   // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0110(0x0018)()
-	struct FSlateBrush                            CallFunc_GetSlateBrushByItemID_WeaponSlateBrushNormal; // 0x0128(0x0078)()
-	struct FSlateBrush                            CallFunc_GetSlateBrushByItemID_WeaponSlateBrushHightLight; // 0x01A0(0x0078)()
-	struct FSlateBrush                            CallFunc_GetSlateBrushByItemID_WeaponSlateBrushNormal2; // 0x0218(0x0078)()
-	struct FSlateBrush                            CallFunc_GetSlateBrushByItemID_WeaponSlateBrushHightLight2; // 0x0290(0x0078)()
-	uint8                                         CallFunc_GetIsAGrenadeByItemID_IsAGrenade : 1;     // 0x0308(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_Array_IsValidIndex_ReturnValue : 1;       // 0x0309(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_LessEqual_IntInt_ReturnValue : 1;         // 0x030A(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_30B[0x1];                                      // 0x030B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x030C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0310(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Greater_IntInt_ReturnValue : 1;           // 0x0314(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	struct FBattleItemData                        CurBattleItemData;                                 // 0x0008(0x0098)(Edit, BlueprintVisible)
+	class UImage*                                 CallFunc_GetBtnIncludeWidgetByIndex_BG;            // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 CallFunc_GetBtnIncludeWidgetByIndex_GrenadeImage;  // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UButton*                                CallFunc_GetBtnIncludeWidgetByIndex_GrenadeBtn;    // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTextBlock*                             CallFunc_GetBtnIncludeWidgetByIndex_Text;          // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGridPanel*                             CallFunc_GetBtnIncludeWidgetByIndex_Grid;          // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBorder*                                CallFunc_GetBtnIncludeWidgetByIndex_Border;        // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 CallFunc_GetBtnIncludeWidgetByIndex_BG2;           // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 CallFunc_GetBtnIncludeWidgetByIndex_GrenadeImage2; // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UButton*                                CallFunc_GetBtnIncludeWidgetByIndex_GrenadeBtn2;   // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTextBlock*                             CallFunc_GetBtnIncludeWidgetByIndex_Text2;         // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGridPanel*                             CallFunc_GetBtnIncludeWidgetByIndex_Grid2;         // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBorder*                                CallFunc_GetBtnIncludeWidgetByIndex_Border2;       // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ___int_Variable;                                   // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_104[0x4];                                      // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0108(0x0018)()
+	struct FSlateBrush                            CallFunc_GetSlateBrushByItemID_WeaponSlateBrushNormal; // 0x0120(0x0078)()
+	struct FSlateBrush                            CallFunc_GetSlateBrushByItemID_WeaponSlateBrushHightLight; // 0x0198(0x0078)()
+	struct FSlateBrush                            CallFunc_GetSlateBrushByItemID_WeaponSlateBrushNormal2; // 0x0210(0x0078)()
+	struct FSlateBrush                            CallFunc_GetSlateBrushByItemID_WeaponSlateBrushHightLight2; // 0x0288(0x0078)()
+	uint8                                         CallFunc_GetIsAGrenadeByItemID_IsAGrenade : 1;     // 0x0300(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_Array_IsValidIndex_ReturnValue : 1;       // 0x0301(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_LessEqual_IntInt_ReturnValue : 1;         // 0x0302(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_303[0x1];                                      // 0x0303(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0304(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0308(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Greater_IntInt_ReturnValue : 1;           // 0x030C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 };
 
 // Function GrenadeList.GrenadeList_C.GetSlateBrushByItemID
@@ -447,7 +447,7 @@ public:
 };
 
 // Function GrenadeList.GrenadeList_C.GetIsArrayHasGrenade
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x00C8 (0x00C8 - 0x0000)
 struct GrenadeList_C_GetIsArrayHasGrenade final
 {
 public:
@@ -461,20 +461,20 @@ public:
 	int32                                         ___int_Loop_Counter_Variable;                      // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBattleItemData                        CallFunc_Array_Get_Item;                           // 0x0018(0x00A0)()
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Greater_IntInt_ReturnValue : 1;           // 0x00BC(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue : 1;        // 0x00BD(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue2 : 1;       // 0x00BE(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue3 : 1;       // 0x00BF(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue4 : 1;       // 0x00C0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue2;                // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_BooleanOR_ReturnValue : 1;                // 0x00C8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_Less_IntInt_ReturnValue : 1;              // 0x00C9(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_BooleanOR_ReturnValue2 : 1;               // 0x00CA(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_BooleanAND_ReturnValue : 1;               // 0x00CB(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_BooleanOR_ReturnValue3 : 1;               // 0x00CC(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	struct FBattleItemData                        CallFunc_Array_Get_Item;                           // 0x0018(0x0098)()
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Greater_IntInt_ReturnValue : 1;           // 0x00B4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue : 1;        // 0x00B5(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue2 : 1;       // 0x00B6(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue3 : 1;       // 0x00B7(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue4 : 1;       // 0x00B8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue2;                // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_BooleanOR_ReturnValue : 1;                // 0x00C0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_Less_IntInt_ReturnValue : 1;              // 0x00C1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_BooleanOR_ReturnValue2 : 1;               // 0x00C2(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_BooleanAND_ReturnValue : 1;               // 0x00C3(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_BooleanOR_ReturnValue3 : 1;               // 0x00C4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 };
 
 // Function GrenadeList.GrenadeList_C.MarkDownUsingStatus
@@ -496,7 +496,7 @@ public:
 };
 
 // Function GrenadeList.GrenadeList_C.SwitchToFistIfCurGrenadeCountIsZero
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x00C0 (0x00C0 - 0x0000)
 struct GrenadeList_C_SwitchToFistIfCurGrenadeCountIsZero final
 {
 public:
@@ -509,20 +509,20 @@ public:
 	int32                                         ___int_Loop_Counter_Variable;                      // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBattleItemData                        CallFunc_Array_Get_Item;                           // 0x0018(0x00A0)()
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Less_IntInt_ReturnValue : 1;              // 0x00BC(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_BooleanAND_ReturnValue : 1;               // 0x00BD(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	EGrenadeType                                  CallFunc_GetGrenadeTypeByItemID_Type;              // 0x00BE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_EqualEqual_ByteByte_ReturnValue : 1;      // 0x00BF(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_GetIsAGrenadeByItemID_IsAGrenade : 1;     // 0x00C0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_Greater_IntInt_ReturnValue : 1;           // 0x00C1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_BooleanAND_ReturnValue2 : 1;              // 0x00C2(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_BooleanAND_ReturnValue3 : 1;              // 0x00C3(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	struct FBattleItemData                        CallFunc_Array_Get_Item;                           // 0x0018(0x0098)()
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Less_IntInt_ReturnValue : 1;              // 0x00B4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_BooleanAND_ReturnValue : 1;               // 0x00B5(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	EGrenadeType                                  CallFunc_GetGrenadeTypeByItemID_Type;              // 0x00B6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_EqualEqual_ByteByte_ReturnValue : 1;      // 0x00B7(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_GetIsAGrenadeByItemID_IsAGrenade : 1;     // 0x00B8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_Greater_IntInt_ReturnValue : 1;           // 0x00B9(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_BooleanAND_ReturnValue2 : 1;              // 0x00BA(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_BooleanAND_ReturnValue3 : 1;              // 0x00BB(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 };
 
 // Function GrenadeList.GrenadeList_C.SetGrenadeOrder
-// 0x0128 (0x0128 - 0x0000)
+// 0x0120 (0x0120 - 0x0000)
 struct GrenadeList_C_SetGrenadeOrder final
 {
 public:
@@ -535,23 +535,23 @@ public:
 	TArray<EGrenadeType>                          GrenadeTypeOrderArray;                             // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
 	int32                                         ___int_Array_Index_Variable;                       // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FBattleItemData                        CallFunc_Array_Get_Item;                           // 0x0038(0x00A0)()
-	class ASTExtraPlayerCharacter*                CallFunc_GetOwningPlayerPawnOrVehicleDriver_ReturnValue; // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGrenadeType                                  CallFunc_GetGrenadeTypeByItemID_Type;              // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ASTExtraWeapon*                         CallFunc_GetCurrentWeapon_ReturnValue;             // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ASTExtraPlayerController*               CallFunc_GetController_ReturnValue;                // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FItemDefineID                          CallFunc_GetItemDefineID_ReturnValue;              // 0x00F8(0x0018)(NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x0110(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_IsValid_ReturnValue2 : 1;                 // 0x0111(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_IsValid_ReturnValue3 : 1;                 // 0x0112(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_GetIsAGrenadeByItemID_IsAGrenade : 1;     // 0x0113(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue : 1;        // 0x0114(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	struct FBattleItemData                        CallFunc_Array_Get_Item;                           // 0x0038(0x0098)()
+	class ASTExtraPlayerCharacter*                CallFunc_GetOwningPlayerPawnOrVehicleDriver_ReturnValue; // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGrenadeType                                  CallFunc_GetGrenadeTypeByItemID_Type;              // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ASTExtraWeapon*                         CallFunc_GetCurrentWeapon_ReturnValue;             // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ASTExtraPlayerController*               CallFunc_GetController_ReturnValue;                // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FItemDefineID                          CallFunc_GetItemDefineID_ReturnValue;              // 0x00F0(0x0018)(NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x0108(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsValid_ReturnValue2 : 1;                 // 0x0109(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsValid_ReturnValue3 : 1;                 // 0x010A(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_GetIsAGrenadeByItemID_IsAGrenade : 1;     // 0x010B(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue : 1;        // 0x010C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_10D[0x3];                                      // 0x010D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ___int_Loop_Counter_Variable;                      // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Less_IntInt_ReturnValue : 1;              // 0x0114(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 	uint8                                         Pad_115[0x3];                                      // 0x0115(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ___int_Loop_Counter_Variable;                      // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Less_IntInt_ReturnValue : 1;              // 0x011C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_11D[0x3];                                      // 0x011D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 // Function GrenadeList.GrenadeList_C.GetGrenadePriorityByType

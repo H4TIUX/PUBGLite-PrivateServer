@@ -640,5 +640,28 @@ class FString UBackpackBlueprintUtils_BP_C::GetBattleItemHandlePath(const struct
 	return Parms.ReturnValue;
 }
 
+
+// Function BackpackBlueprintUtils_BP.BackpackBlueprintUtils_BP_C.GetBattleWeaponItemNameTextByDefineID
+// (Event, Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// const struct FItemDefineID&             DefineID                                               (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+class FText UBackpackBlueprintUtils_BP_C::GetBattleWeaponItemNameTextByDefineID(const struct FItemDefineID& DefineID) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BackpackBlueprintUtils_BP_C", "GetBattleWeaponItemNameTextByDefineID");
+
+	Params::BackpackBlueprintUtils_BP_C_GetBattleWeaponItemNameTextByDefineID Parms{};
+
+	Parms.DefineID = std::move(DefineID);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
 }
 

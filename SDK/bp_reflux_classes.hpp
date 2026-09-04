@@ -19,27 +19,27 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_reflux.bp_reflux_C
-// 0x0128 (0x0510 - 0x03E8)
+// 0x0128 (0x0500 - 0x03D8)
 class Abp_reflux_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	class FString                                 BP_Reflux_Help_Content;                            // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_Reflux_Friend_Info>  BP_ARRAY_Reflux_Friend_Infos;                      // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBP_STRUCT_Reflux_Award_Info           BP_STRUCT_Reflux_Award_Info;                       // 0x0410(0x0038)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_Reflux_Friend_Count;                            // 0x0448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44C[0x4];                                      // 0x044C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_Reflux_Call_Friend_UID;                         // 0x0450(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_Reflux_Open_Time;                               // 0x0460(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_Reflux_Friend_Info>  BP_ARRAY_Reflux_Register_Friend_Infos;             // 0x0470(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_Reflux_Friend_Page_Idx;                         // 0x0480(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_484[0x4];                                      // 0x0484(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_Reflux_Award_Info>   BP_ARRAY_Reflux_Award_Infos;                       // 0x0488(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class FString                                 BP_Reflux_Call_Friend_OpenID;                      // 0x0498(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_Reflux_Award_Index_Get;                         // 0x04A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_Reflux_Total_Back_Count;                        // 0x04AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_Reflux_Friend_Info          BP_STRUCT_Reflux_Friend_Info;                      // 0x04B0(0x0058)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0508(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_Reflux_Friend_Info>  BP_ARRAY_Reflux_Friend_Infos;                      // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	struct FBP_STRUCT_Reflux_Award_Info           BP_STRUCT_Reflux_Award_Info;                       // 0x03F0(0x0038)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FBP_STRUCT_Reflux_Friend_Info          BP_STRUCT_Reflux_Friend_Info;                      // 0x0428(0x0058)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_Reflux_Friend_Info>  BP_ARRAY_Reflux_Register_Friend_Infos;             // 0x0480(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class FString                                 BP_Reflux_Call_Friend_UID;                         // 0x0490(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_Reflux_Help_Content;                            // 0x04A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_Reflux_Award_Index_Get;                         // 0x04B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4B4[0x4];                                      // 0x04B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_Reflux_Open_Time;                               // 0x04B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_Reflux_Award_Info>   BP_ARRAY_Reflux_Award_Infos;                       // 0x04C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_Reflux_Friend_Count;                            // 0x04D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4DC[0x4];                                      // 0x04DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_Reflux_Call_Friend_OpenID;                      // 0x04E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_Reflux_Total_Back_Count;                        // 0x04F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_Reflux_Friend_Page_Idx;                         // 0x04F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04F8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
@@ -49,22 +49,22 @@ public:
 	void EventFetchInfo_NoFetch();
 	void EventRefluxViewBox();
 	void EventRefluxViewBox_NoFetch();
-	void EventRefluxRule();
-	void EventRefluxRule_NoFetch();
-	void EventRefluxViewRegisterFriend();
-	void EventRefluxViewRegisterFriend_NoFetch();
-	void EventRefluxGetAward();
-	void EventRefluxGetAward_NoFetch();
-	void EventRefluxShare();
-	void EventRefluxShare_NoFetch();
-	void EventRefluxPrePage();
-	void EventRefluxPrePage_NoFetch();
 	void EventRefluxCloseUI();
 	void EventRefluxCloseUI_NoFetch();
-	void EventRefluxFriendInvite();
-	void EventRefluxFriendInvite_NoFetch();
+	void EventRefluxViewRegisterFriend();
+	void EventRefluxViewRegisterFriend_NoFetch();
+	void EventRefluxRule();
+	void EventRefluxRule_NoFetch();
+	void EventRefluxPrePage();
+	void EventRefluxPrePage_NoFetch();
 	void EventRefluxNextPage();
 	void EventRefluxNextPage_NoFetch();
+	void EventRefluxShare();
+	void EventRefluxShare_NoFetch();
+	void EventRefluxGetAward();
+	void EventRefluxGetAward_NoFetch();
+	void EventRefluxFriendInvite();
+	void EventRefluxFriendInvite_NoFetch();
 
 public:
 	static class UClass* StaticClass()

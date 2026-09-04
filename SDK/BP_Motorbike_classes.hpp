@@ -19,23 +19,23 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Motorbike.BP_Motorbike_C
-// 0x0068 (0x0CE8 - 0x0C80)
+// 0x0068 (0x0D08 - 0x0CA0)
 class ABP_Motorbike_C final : public ATslMotorbikeVehicle_Standalone
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C80(0x0008)(Transient, DuplicateTransient)
-	class UVehicleAvatarComponent_BP_C*           VehicleAvatarComponent_BP;                         // 0x0C88(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       Sphere1;                                           // 0x0C90(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       Sphere;                                            // 0x0C98(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UVehicleSeatInteractionComponent*       PassengerSeat;                                     // 0x0CA0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UVehicleSeatInteractionComponent*       DriverSeat;                                        // 0x0CA8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCameraComponent*                       FPPCamera;                                         // 0x0CB0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UVehicleSpringArmComponent*             FPPCameraSpringArm;                                // 0x0CB8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCameraComponent*                       TPPCamera;                                         // 0x0CC0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               PSCExhaust;                                        // 0x0CC8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UVehicleSpringArmComponent*             TPPCameraSpringArm;                                // 0x0CD0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               PSCFire;                                           // 0x0CD8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               PSCSmoke;                                          // 0x0CE0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0CA0(0x0008)(Transient, DuplicateTransient)
+	class UVehicleAvatarComponent_BP_C*           VehicleAvatarComponent_BP;                         // 0x0CA8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       Sphere1;                                           // 0x0CB0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       Sphere;                                            // 0x0CB8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UVehicleSeatInteractionComponent*       PassengerSeat;                                     // 0x0CC0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UVehicleSeatInteractionComponent*       DriverSeat;                                        // 0x0CC8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCameraComponent*                       FPPCamera;                                         // 0x0CD0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UVehicleSpringArmComponent*             FPPCameraSpringArm;                                // 0x0CD8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCameraComponent*                       TPPCamera;                                         // 0x0CE0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               PSCExhaust;                                        // 0x0CE8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UVehicleSpringArmComponent*             TPPCameraSpringArm;                                // 0x0CF0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               PSCFire;                                           // 0x0CF8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               PSCSmoke;                                          // 0x0D00(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_Motorbike(int32 EntryPoint);

@@ -10,92 +10,102 @@
 
 #include "Basic.hpp"
 
+#include "BP_STRUCT_ChatRoomLitePlayer_structs.hpp"
+#include "BP_STRUCT_ChatRoomPlayer_structs.hpp"
 #include "BP_STRUCT_ChatRoomInfo_structs.hpp"
 #include "BP_STRUCT_ChatRoomLabel_structs.hpp"
-#include "BP_STRUCT_ChatRoomLitePlayer_structs.hpp"
 #include "Client_classes.hpp"
-#include "BP_STRUCT_ChatRoomPlayer_structs.hpp"
 
 
 namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_chat_room.bp_chat_room_C
-// 0x0348 (0x0730 - 0x03E8)
+// 0x0348 (0x0720 - 0x03D8)
 class Abp_chat_room_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	uint8                                         BP_ChatRoom_MyRoomIsSelfCreate : 1;                // 0x03F0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         BP_ChatRoom_ClickMenuPlayerIsPullBlack : 1;        // 0x03F1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_3F2[0x6];                                      // 0x03F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_ChatRoomInfo>        BP_ARRAY_ChatRoomInfoList;                         // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	uint8                                         BP_ChatRoom_ClickMenuPlayerIsFriend : 1;           // 0x0408(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_409[0x7];                                      // 0x0409(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_ChatRoom_MyRoomAnnouncement;                    // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_ChatRoom_CreatePassword;                        // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_ChatRoom_MyRoomName;                            // 0x0430(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_ChatRoom_SearchRoomID;                          // 0x0440(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_ChatRoom_ClickMenuPlayerID;                     // 0x0450(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_ChatRoom_EmptyRoomAnnouncement;                 // 0x0460(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_ChatRoomInfo>        BP_ARRAY_ChatRoomRecommendList;                    // 0x0470(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class FString                                 BP_ChatRoom_CreateWindowTitle;                     // 0x0480(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	uint8                                         BP_ChatRoom_WillMarkRoomState : 1;                 // 0x0490(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_491[0x7];                                      // 0x0491(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_ChatRoom_MyChatRoomPassword;                    // 0x0498(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_ChatRoom_RecommendTypeHot;                      // 0x04A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AC[0x4];                                      // 0x04AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_ChatRoom_Announcement;                          // 0x04B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_ChatRoom_RecommendTypeOfficial;                 // 0x04C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C4[0x4];                                      // 0x04C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_ChatRoom_InputString;                           // 0x04C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_ChatRoomLabel               BP_STRUCT_ChatRoomLabel;                           // 0x04D8(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	uint8                                         BP_ChatRoom_MyRoomIsMarked : 1;                    // 0x04F8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_4F9[0x3];                                      // 0x04F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         BP_ChatRoom_UpdateMemberIndex;                     // 0x04FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_ChatRoom_RecommendTypeRandom;                   // 0x0500(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_ChatRoom_ScrollEnd;                             // 0x0504(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_ChatRoomPlayer              BP_STRUCT_ChatRoomPlayer;                          // 0x0508(0x0080)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_ChatRoomPlayer>      BP_ARRAY_ChatRoomPlayerDetailList;                 // 0x0588(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_ChatRoom_UpdateOnePlayerIndex;                  // 0x0598(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59C[0x4];                                      // 0x059C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_ChatRoomLitePlayer          BP_STRUCT_ChatRoomLitePlayer;                      // 0x05A0(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_ChatRoom_MyRoomPlayerCount;                     // 0x05B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B4[0x4];                                      // 0x05B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_ChatRoom_SetWindowTitle;                        // 0x05B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_ChatRoom_MyRoomID;                              // 0x05C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_ChatRoom_CreateName;                            // 0x05D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_ChatRoomPlayer>      BP_ARRAY_ChatRoomPlayerList;                       // 0x05E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_ChatRoom_RecommendTypeFriend;                   // 0x05F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         BP_ChatRoom_ClickMenuPlayerInMyTeam : 1;           // 0x05FC(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_5FD[0x3];                                      // 0x05FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         BP_ChatRoom_ScrollStart;                           // 0x0600(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_604[0x4];                                      // 0x0604(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_ChatRoom_WillMarkRoomID;                        // 0x0608(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_ChatRoom_ClickLabelId;                          // 0x0618(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_ChatRoom_MaxLabelNum;                           // 0x061C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_ChatRoomLabel>       BP_ARRAY_ChatRoomLabelSelectedList;                // 0x0620(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	uint8                                         BP_ChatRoom_MyRoomNeedKey : 1;                     // 0x0630(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_631[0x7];                                      // 0x0631(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_ChatRoom_SearchRoomPassword;                    // 0x0638(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_ChatRoom_DefaultCreateName;                     // 0x0648(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_ChatRoom_ClickMenuPlayerGender;                 // 0x0658(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_65C[0x4];                                      // 0x065C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_ChatRoomLitePlayer>  BP_ARRAY_ChatRoomPlayerLiteList;                   // 0x0660(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FBP_STRUCT_ChatRoomLabel>       BP_ARRAY_ChatRoomLabelList;                        // 0x0670(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBP_STRUCT_ChatRoomInfo                BP_STRUCT_ChatRoomInfo;                            // 0x0680(0x0088)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class FString                                 BP_ChatRoom_LabelIntroduce;                        // 0x0708(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_ChatShowHelpContent;                            // 0x0718(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0728(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class FString                                 BP_ChatRoom_DefaultCreateName;                     // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         BP_ChatRoom_WillMarkRoomState : 1;                 // 0x03F0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_3F1[0x3];                                      // 0x03F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BP_ChatRoom_UpdateOnePlayerIndex;                  // 0x03F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_ChatRoom_ScrollEnd;                             // 0x03F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3FC[0x4];                                      // 0x03FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_ChatRoom_LabelIntroduce;                        // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_ChatRoomPlayer>      BP_ARRAY_ChatRoomPlayerList;                       // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	uint8                                         BP_ChatRoom_MyRoomNeedKey : 1;                     // 0x0420(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_421[0x7];                                      // 0x0421(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_ChatRoom_MyRoomAnnouncement;                    // 0x0428(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_ChatRoom_MyRoomName;                            // 0x0438(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_ChatRoom_RecommendTypeRandom;                   // 0x0448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44C[0x4];                                      // 0x044C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_ChatRoom_SetWindowTitle;                        // 0x0450(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_ChatRoom_MyRoomID;                              // 0x0460(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_ChatShowHelpContent;                            // 0x0470(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_ChatRoom_InputString;                           // 0x0480(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_ChatRoom_Announcement;                          // 0x0490(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_ChatRoomInfo>        BP_ARRAY_ChatRoomInfoList;                         // 0x04A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	struct FBP_STRUCT_ChatRoomLabel               BP_STRUCT_ChatRoomLabel;                           // 0x04B0(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FBP_STRUCT_ChatRoomInfo                BP_STRUCT_ChatRoomInfo;                            // 0x04D0(0x0088)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_ChatRoom_MaxLabelNum;                           // 0x0558(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_55C[0x4];                                      // 0x055C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_ChatRoomLabel>       BP_ARRAY_ChatRoomLabelList;                        // 0x0560(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	uint8                                         BP_ChatRoom_MyRoomIsMarked : 1;                    // 0x0570(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_571[0x3];                                      // 0x0571(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BP_ChatRoom_ClickLabelId;                          // 0x0574(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_ChatRoomLabel>       BP_ARRAY_ChatRoomLabelSelectedList;                // 0x0578(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	struct FBP_STRUCT_ChatRoomPlayer              BP_STRUCT_ChatRoomPlayer;                          // 0x0588(0x0080)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class FString                                 BP_ChatRoom_CreateName;                            // 0x0608(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_ChatRoom_SearchRoomPassword;                    // 0x0618(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_ChatRoomLitePlayer>  BP_ARRAY_ChatRoomPlayerLiteList;                   // 0x0628(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class FString                                 BP_ChatRoom_CreateWindowTitle;                     // 0x0638(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_ChatRoom_WillMarkRoomID;                        // 0x0648(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         BP_ChatRoom_ClickMenuPlayerIsPullBlack : 1;        // 0x0658(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_659[0x7];                                      // 0x0659(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_ChatRoomLitePlayer          BP_STRUCT_ChatRoomLitePlayer;                      // 0x0660(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_ChatRoomPlayer>      BP_ARRAY_ChatRoomPlayerDetailList;                 // 0x0670(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	uint8                                         BP_ChatRoom_ClickMenuPlayerIsFriend : 1;           // 0x0680(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_681[0x7];                                      // 0x0681(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_ChatRoom_EmptyRoomAnnouncement;                 // 0x0688(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_ChatRoom_ClickMenuPlayerGender;                 // 0x0698(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_ChatRoom_RecommendTypeHot;                      // 0x069C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         BP_ChatRoom_MyRoomIsSelfCreate : 1;                // 0x06A0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_6A1[0x7];                                      // 0x06A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_ChatRoom_ClickMenuPlayerID;                     // 0x06A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_ChatRoomInfo>        BP_ARRAY_ChatRoomRecommendList;                    // 0x06B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class FString                                 BP_ChatRoom_SearchRoomID;                          // 0x06C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         BP_ChatRoom_ClickMenuPlayerInMyTeam : 1;           // 0x06D8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_6D9[0x3];                                      // 0x06D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BP_ChatRoom_ScrollStart;                           // 0x06DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_ChatRoom_RecommendTypeFriend;                   // 0x06E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_ChatRoom_UpdateMemberIndex;                     // 0x06E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_ChatRoom_MyRoomPlayerCount;                     // 0x06E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6EC[0x4];                                      // 0x06EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_ChatRoom_CreatePassword;                        // 0x06F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_ChatRoom_MyChatRoomPassword;                    // 0x0700(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_ChatRoom_RecommendTypeOfficial;                 // 0x0710(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_714[0x4];                                      // 0x0714(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0718(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventChatRoomScrollMemberList();
-	void EventChatRoomScrollMemberList_NoFetch();
-	void EventClickSearchAndJoinRoom();
-	void EventClickSearchAndJoinRoom_NoFetch();
-	void EventChatRoomRefreshRecommend();
-	void EventChatRoomRefreshRecommend_NoFetch();
+	void EventChatRoomInviteTeam();
+	void EventChatRoomInviteTeam_NoFetch();
+	void EventChatRoomOnShowList();
+	void EventChatRoomOnShowList_NoFetch();
+	void EventCreateChatRoom();
+	void EventCreateChatRoom_NoFetch();
+	void EventAlertNeedPassword();
+	void EventAlertNeedPassword_NoFetch();
+	void EventJoinChatRoom();
+	void EventJoinChatRoom_NoFetch();
+	void EventOpenCreateChatRoomPanel();
+	void EventOpenCreateChatRoomPanel_NoFetch();
+	void EventChatRoomClickLabel();
+	void EventChatRoomClickLabel_NoFetch();
+	void EventChatRoomReplaceSpace();
+	void EventChatRoomReplaceSpace_NoFetch();
 	void EventChatRoomCheckName();
 	void EventChatRoomCheckName_NoFetch();
 	void EventChatRoomCheckAnnouncement();
@@ -104,56 +114,46 @@ public:
 	void EventChatRoomMenuOpen_NoFetch();
 	void EventChatRoomOnMyRoom();
 	void EventChatRoomOnMyRoom_NoFetch();
-	void EventChatRoomOnShowList();
-	void EventChatRoomOnShowList_NoFetch();
-	void EventChatRoomInviteTeam();
-	void EventChatRoomInviteTeam_NoFetch();
-	void EventChatRoomPullBlack();
-	void EventChatRoomPullBlack_NoFetch();
 	void EventChatRoomJoinTeam();
 	void EventChatRoomJoinTeam_NoFetch();
+	void EventChatRoomPullBlack();
+	void EventChatRoomPullBlack_NoFetch();
+	void EventChatRoomUpdateClickMenuPlayer();
+	void EventChatRoomUpdateClickMenuPlayer_NoFetch();
 	void EventChatRoomAddFriend();
 	void EventChatRoomAddFriend_NoFetch();
 	void EventChatRoomPlayerInfo();
 	void EventChatRoomPlayerInfo_NoFetch();
 	void EventAlertNeedRoomName();
 	void EventAlertNeedRoomName_NoFetch();
-	void EventOpenCreateChatRoomPanel();
-	void EventOpenCreateChatRoomPanel_NoFetch();
-	void EventCreateChatRoom();
-	void EventCreateChatRoom_NoFetch();
-	void EventAlertNeedRoomID();
-	void EventAlertNeedRoomID_NoFetch();
-	void EventAlertNeedPassword();
-	void EventAlertNeedPassword_NoFetch();
 	void EventOpenChatRoomPassword();
 	void EventOpenChatRoomPassword_NoFetch();
+	void EventClickSearchAndJoinRoom();
+	void EventClickSearchAndJoinRoom_NoFetch();
 	void EventClickRemoveRoom();
 	void EventClickRemoveRoom_NoFetch();
-	void EventClickChatRoomPlayerInfo();
-	void EventClickChatRoomPlayerInfo_NoFetch();
 	void EventQuitChatRoom();
 	void EventQuitChatRoom_NoFetch();
-	void EventOpenSetChatRoomPanel();
-	void EventOpenSetChatRoomPanel_NoFetch();
-	void EventFetchInfo();
-	void EventFetchInfo_NoFetch();
-	void EventSaveChatRoom();
-	void EventSaveChatRoom_NoFetch();
-	void EventJoinChatRoom();
-	void EventJoinChatRoom_NoFetch();
-	void EventChatRoomUpdateOnMemberAddOrRemove();
-	void EventChatRoomUpdateOnMemberAddOrRemove_NoFetch();
-	void EventChatRoomChangeScroll();
-	void EventChatRoomChangeScroll_NoFetch();
-	void EventChatRoomClickLabel();
-	void EventChatRoomClickLabel_NoFetch();
-	void EventChatRoomReplaceSpace();
-	void EventChatRoomReplaceSpace_NoFetch();
 	void EventClickMarkState();
 	void EventClickMarkState_NoFetch();
-	void EventChatRoomUpdateClickMenuPlayer();
-	void EventChatRoomUpdateClickMenuPlayer_NoFetch();
+	void EventOpenSetChatRoomPanel();
+	void EventOpenSetChatRoomPanel_NoFetch();
+	void EventClickChatRoomPlayerInfo();
+	void EventClickChatRoomPlayerInfo_NoFetch();
+	void EventChatRoomScrollMemberList();
+	void EventChatRoomScrollMemberList_NoFetch();
+	void EventSaveChatRoom();
+	void EventSaveChatRoom_NoFetch();
+	void EventChatRoomChangeScroll();
+	void EventChatRoomChangeScroll_NoFetch();
+	void EventFetchInfo();
+	void EventFetchInfo_NoFetch();
+	void EventChatRoomUpdateOnMemberAddOrRemove();
+	void EventChatRoomUpdateOnMemberAddOrRemove_NoFetch();
+	void EventChatRoomRefreshRecommend();
+	void EventChatRoomRefreshRecommend_NoFetch();
+	void EventAlertNeedRoomID();
+	void EventAlertNeedRoomID_NoFetch();
 
 public:
 	static class UClass* StaticClass()

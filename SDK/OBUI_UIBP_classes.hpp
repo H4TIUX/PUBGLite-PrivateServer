@@ -54,15 +54,18 @@ public:
 
 public:
 	void ExecuteUbergraph_OBUI_UIBP(int32 EntryPoint);
+	void OnFreeCameraChangeEvent();
+	void Destruct();
+	void Construct();
 	void BndEvt__Button_Down_K2Node_ComponentBoundEvent_103_OnButtonReleasedEvent__DelegateSignature();
 	void BndEvt__Button_Down_K2Node_ComponentBoundEvent_84_OnButtonPressedEvent__DelegateSignature();
 	void BndEvt__Button_UP_K2Node_ComponentBoundEvent_66_OnButtonReleasedEvent__DelegateSignature();
 	void BndEvt__Button_UP_K2Node_ComponentBoundEvent_33_OnButtonPressedEvent__DelegateSignature();
-	void BndEvt__Button_FreeCam_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature();
 	void ReceivedInitWidget();
+	void BndEvt__Button_BackToLobby_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__Button_FreeCam_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__Button_MiniMap_K2Node_ComponentBoundEvent_86_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__Button_SwitchPlayer_K2Node_ComponentBoundEvent_19_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__Button_BackToLobby_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
 	void ReceiveShow();
 	void RefreshData();
 	void OnEntireMapCloseEvenHandle();

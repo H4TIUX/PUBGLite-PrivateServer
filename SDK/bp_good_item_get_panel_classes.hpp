@@ -18,26 +18,26 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_good_item_get_panel.bp_good_item_get_panel_C
-// 0x0040 (0x0428 - 0x03E8)
+// 0x0040 (0x0418 - 0x03D8)
 class Abp_good_item_get_panel_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FBP_STRUCT_GoodItemGet_ToShow          BP_STRUCT_GoodItemGet_ToShow;                      // 0x03F0(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_GoodItemGet_ToShow          BP_STRUCT_GoodItemGet_ToShow;                      // 0x03E0(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_GoodItemGet_ToShow>  BP_Array_GoodItemGet_ToShow;                       // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
 	int32                                         BP_HasShareNum;                                    // 0x0408(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         BP_IsShareAwardGold : 1;                           // 0x040C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
 	uint8                                         Pad_40D[0x3];                                      // 0x040D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_GoodItemGet_ToShow>  BP_Array_GoodItemGet_ToShow;                       // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0420(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0410(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
+	void EventShowGetPanel();
+	void EventShowGetPanel_NoFetch();
 	void EventFetchInfo();
 	void EventFetchInfo_NoFetch();
 	void EventSetInfo_Push();
 	void EventSetInfo_Push_NoFetch();
-	void EventShowGetPanel();
-	void EventShowGetPanel_NoFetch();
 
 public:
 	static class UClass* StaticClass()

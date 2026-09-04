@@ -17,21 +17,21 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_corps_create.bp_corps_create_C
-// 0x0088 (0x0470 - 0x03E8)
+// 0x0088 (0x0460 - 0x03D8)
 class Abp_corps_create_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	TArray<class FString>                         BP_ARRAY_CorpsCreate_ProvinceList;                 // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class FString                                 BP_CorpsCreate_Province_Current;                   // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class FString                                 BP_CorpsCreate_Province_Current;                   // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_CorpsCreate_Currency_Own;                       // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FString>                         BP_ARRAY_CorpsCreate_CityList;                     // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
 	class FString                                 BP_CorpsCreate_Name;                               // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 BP_CorpsCreate_Announcement;                       // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_CorpsCreate_Currency_Own;                       // 0x0430(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FString>                         BP_ARRAY_CorpsCreate_ProvinceList;                 // 0x0430(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
 	int32                                         BP_CorpsCreate_Currency_Price;                     // 0x0440(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         BP_CorpsCreate_Currency_Icon_ID;                   // 0x0444(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class FString>                         BP_ARRAY_CorpsCreate_CityList;                     // 0x0448(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class FString                                 BP_CorpsCreate_City_Current;                       // 0x0458(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class FString                                 BP_CorpsCreate_City_Current;                       // 0x0448(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0458(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
@@ -39,18 +39,18 @@ public:
 	void EventOpenCorpsIconSelectPanel_NoFetch();
 	void EventCorpsTaskHelpShow();
 	void EventCorpsTaskHelpShow_NoFetch();
-	void EventCorpsCreateHideUI();
-	void EventCorpsCreateHideUI_NoFetch();
 	void EventCorpsCreateUIFilterName();
 	void EventCorpsCreateUIFilterName_NoFetch();
-	void EventCorpsCreateFetchInfo();
-	void EventCorpsCreateFetchInfo_NoFetch();
 	void EventFilerCitys_Push();
 	void EventFilerCitys_Push_NoFetch();
 	void EventCorpsCreateShowUI();
 	void EventCorpsCreateShowUI_NoFetch();
 	void EventOnCorpsCreateButtonClicked_Push();
 	void EventOnCorpsCreateButtonClicked_Push_NoFetch();
+	void EventCorpsCreateFetchInfo();
+	void EventCorpsCreateFetchInfo_NoFetch();
+	void EventCorpsCreateHideUI();
+	void EventCorpsCreateHideUI_NoFetch();
 
 public:
 	static class UClass* StaticClass()

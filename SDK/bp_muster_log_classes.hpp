@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_muster_log.bp_muster_log_C
-// 0x0050 (0x0438 - 0x03E8)
+// 0x0050 (0x0428 - 0x03D8)
 class Abp_muster_log_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_MusterLogInfo>       BP_ARRAY_MusterLogList;                            // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
 	struct FBP_STRUCT_MusterLogInfo               BP_STRUCT_MusterLogInfo;                           // 0x03F0(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_MusterLogInfo>       BP_ARRAY_MusterLogList;                            // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0430(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0420(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();

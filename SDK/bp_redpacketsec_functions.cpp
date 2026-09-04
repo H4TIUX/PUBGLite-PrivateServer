@@ -58,6 +58,34 @@ void Abp_redpacketsec_C::EventRedPacketSecFetchInfo_NoFetch()
 }
 
 
+// Function bp_redpacketsec.bp_redpacketsec_C.EventHideRedPacketSecUI
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_redpacketsec_C::EventHideRedPacketSecUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_redpacketsec_C", "EventHideRedPacketSecUI");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_redpacketsec.bp_redpacketsec_C.EventHideRedPacketSecUI_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_redpacketsec_C::EventHideRedPacketSecUI_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_redpacketsec_C", "EventHideRedPacketSecUI_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_redpacketsec.bp_redpacketsec_C.EventRedPacketSec_Push
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,34 +109,6 @@ void Abp_redpacketsec_C::EventRedPacketSec_Push_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_redpacketsec_C", "EventRedPacketSec_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_redpacketsec.bp_redpacketsec_C.EventClickRedPacketSecShareBtn
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_redpacketsec_C::EventClickRedPacketSecShareBtn()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_redpacketsec_C", "EventClickRedPacketSecShareBtn");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_redpacketsec.bp_redpacketsec_C.EventClickRedPacketSecShareBtn_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_redpacketsec_C::EventClickRedPacketSecShareBtn_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_redpacketsec_C", "EventClickRedPacketSecShareBtn_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -142,29 +142,29 @@ void Abp_redpacketsec_C::EventClickRedPacketSecRuleBtn_NoFetch()
 }
 
 
-// Function bp_redpacketsec.bp_redpacketsec_C.EventHideRedPacketSecUI
+// Function bp_redpacketsec.bp_redpacketsec_C.EventClickRedPacketSecShareBtn
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_redpacketsec_C::EventHideRedPacketSecUI()
+void Abp_redpacketsec_C::EventClickRedPacketSecShareBtn()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_redpacketsec_C", "EventHideRedPacketSecUI");
+		Func = GetClass()->GetFunction("bp_redpacketsec_C", "EventClickRedPacketSecShareBtn");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_redpacketsec.bp_redpacketsec_C.EventHideRedPacketSecUI_NoFetch
+// Function bp_redpacketsec.bp_redpacketsec_C.EventClickRedPacketSecShareBtn_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_redpacketsec_C::EventHideRedPacketSecUI_NoFetch()
+void Abp_redpacketsec_C::EventClickRedPacketSecShareBtn_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_redpacketsec_C", "EventHideRedPacketSecUI_NoFetch");
+		Func = GetClass()->GetFunction("bp_redpacketsec_C", "EventClickRedPacketSecShareBtn_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

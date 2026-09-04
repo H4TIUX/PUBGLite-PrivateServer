@@ -11,32 +11,32 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "Gameplay_structs.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
 #include "ShadowTrackerExtra_classes.hpp"
-#include "Gameplay_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_CharacterStudio.BP_CharacterStudio_C
-// 0x0140 (0x0570 - 0x0430)
+// 0x0140 (0x0560 - 0x0420)
 class ABP_CharacterStudio_C final : public ACharacterStudio
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0430(0x0008)(Transient, DuplicateTransient)
-	class USceneComponent*                        Scene;                                             // 0x0438(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class ABP_PlayerSceneCapturePawn_LPC_C*       SceneCapturePawn;                                  // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_PlayerPawn_C*                       PlayerPawn;                                        // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWeaponManagerComponent*                WeaponManager;                                     // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<ESurviveWeaponPropSlot, class ASceneCaptureCharacterWeapon_C*> WeaponSlotMap;               // 0x0458(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	uint8                                         IsShow : 1;                                        // 0x04A8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_4A9[0x7];                                      // 0x04A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int32, int32>                            EquipmentID2Level_Map;                             // 0x04B0(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TMap<int32, EAvatarSlotType>                  EquipmentID2SlotID_Map;                            // 0x0500(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	struct FGameModePlayerEquipmentAvatar         EquipmentAvatarType;                               // 0x0550(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	uint8                                         Pad_55C[0x4];                                      // 0x055C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ASTExtraPlayerController*               PlayerController;                                  // 0x0560(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0420(0x0008)(Transient, DuplicateTransient)
+	class USceneComponent*                        Scene;                                             // 0x0428(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class ABP_PlayerSceneCapturePawn_LPC_C*       SceneCapturePawn;                                  // 0x0430(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_PlayerPawn_C*                       PlayerPawn;                                        // 0x0438(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWeaponManagerComponent*                WeaponManager;                                     // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<ESurviveWeaponPropSlot, class ASceneCaptureCharacterWeapon_C*> WeaponSlotMap;               // 0x0448(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	uint8                                         IsShow : 1;                                        // 0x0498(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_499[0x7];                                      // 0x0499(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<int32, int32>                            EquipmentID2Level_Map;                             // 0x04A0(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TMap<int32, EAvatarSlotType>                  EquipmentID2SlotID_Map;                            // 0x04F0(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	struct FGameModePlayerEquipmentAvatar         EquipmentAvatarType;                               // 0x0540(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	uint8                                         Pad_54C[0x4];                                      // 0x054C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ASTExtraPlayerController*               PlayerController;                                  // 0x0550(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_CharacterStudio(int32 EntryPoint);

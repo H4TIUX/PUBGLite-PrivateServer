@@ -30,6 +30,34 @@ void Abp_good_item_get_panel_C::UserConstructionScript()
 }
 
 
+// Function bp_good_item_get_panel.bp_good_item_get_panel_C.EventShowGetPanel
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_good_item_get_panel_C::EventShowGetPanel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_good_item_get_panel_C", "EventShowGetPanel");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_good_item_get_panel.bp_good_item_get_panel_C.EventShowGetPanel_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_good_item_get_panel_C::EventShowGetPanel_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_good_item_get_panel_C", "EventShowGetPanel_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_good_item_get_panel.bp_good_item_get_panel_C.EventFetchInfo
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,34 +109,6 @@ void Abp_good_item_get_panel_C::EventSetInfo_Push_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_good_item_get_panel_C", "EventSetInfo_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_good_item_get_panel.bp_good_item_get_panel_C.EventShowGetPanel
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_good_item_get_panel_C::EventShowGetPanel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_good_item_get_panel_C", "EventShowGetPanel");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_good_item_get_panel.bp_good_item_get_panel_C.EventShowGetPanel_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_good_item_get_panel_C::EventShowGetPanel_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_good_item_get_panel_C", "EventShowGetPanel_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

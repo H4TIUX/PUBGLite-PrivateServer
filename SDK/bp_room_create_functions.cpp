@@ -30,6 +30,34 @@ void Abp_room_create_C::UserConstructionScript()
 }
 
 
+// Function bp_room_create.bp_room_create_C.EventRoomCreateRelease
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_create_C::EventRoomCreateRelease()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_create_C", "EventRoomCreateRelease");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_create.bp_room_create_C.EventRoomCreateRelease_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_create_C::EventRoomCreateRelease_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_create_C", "EventRoomCreateRelease_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_room_create.bp_room_create_C.EventCloseRoomModeChatUI
 // (BlueprintCallable, BlueprintEvent)
 
@@ -165,34 +193,6 @@ void Abp_room_create_C::EventCreateRoom_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_room_create_C", "EventCreateRoom_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_create.bp_room_create_C.EventRoomCreateRelease
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_create_C::EventRoomCreateRelease()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_create_C", "EventRoomCreateRelease");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_create.bp_room_create_C.EventRoomCreateRelease_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_create_C::EventRoomCreateRelease_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_create_C", "EventRoomCreateRelease_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

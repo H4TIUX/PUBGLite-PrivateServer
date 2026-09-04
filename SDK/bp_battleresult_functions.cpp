@@ -30,29 +30,57 @@ void Abp_battleresult_C::UserConstructionScript()
 }
 
 
-// Function bp_battleresult.bp_battleresult_C.EventClientGetIsClickReply
+// Function bp_battleresult.bp_battleresult_C.EventBattleResult_BackToLobby
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_battleresult_C::EventClientGetIsClickReply()
+void Abp_battleresult_C::EventBattleResult_BackToLobby()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_battleresult_C", "EventClientGetIsClickReply");
+		Func = GetClass()->GetFunction("bp_battleresult_C", "EventBattleResult_BackToLobby");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_battleresult.bp_battleresult_C.EventClientGetIsClickReply_NoFetch
+// Function bp_battleresult.bp_battleresult_C.EventBattleResult_BackToLobby_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_battleresult_C::EventClientGetIsClickReply_NoFetch()
+void Abp_battleresult_C::EventBattleResult_BackToLobby_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_battleresult_C", "EventClientGetIsClickReply_NoFetch");
+		Func = GetClass()->GetFunction("bp_battleresult_C", "EventBattleResult_BackToLobby_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_battleresult.bp_battleresult_C.EventClientFreshToComplaint
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_battleresult_C::EventClientFreshToComplaint()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_battleresult_C", "EventClientFreshToComplaint");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_battleresult.bp_battleresult_C.EventClientFreshToComplaint_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_battleresult_C::EventClientFreshToComplaint_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_battleresult_C", "EventClientFreshToComplaint_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,29 +114,29 @@ void Abp_battleresult_C::EventAddFriendRequest_Push_NoFetch()
 }
 
 
-// Function bp_battleresult.bp_battleresult_C.EventShowGameJoyNoRecordsNotice
+// Function bp_battleresult.bp_battleresult_C.EventCloseBattleResult
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_battleresult_C::EventShowGameJoyNoRecordsNotice()
+void Abp_battleresult_C::EventCloseBattleResult()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_battleresult_C", "EventShowGameJoyNoRecordsNotice");
+		Func = GetClass()->GetFunction("bp_battleresult_C", "EventCloseBattleResult");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_battleresult.bp_battleresult_C.EventShowGameJoyNoRecordsNotice_NoFetch
+// Function bp_battleresult.bp_battleresult_C.EventCloseBattleResult_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_battleresult_C::EventShowGameJoyNoRecordsNotice_NoFetch()
+void Abp_battleresult_C::EventCloseBattleResult_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_battleresult_C", "EventShowGameJoyNoRecordsNotice_NoFetch");
+		Func = GetClass()->GetFunction("bp_battleresult_C", "EventCloseBattleResult_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -142,57 +170,141 @@ void Abp_battleresult_C::EventGameJoyVideoShareSuccess_NoFetch()
 }
 
 
-// Function bp_battleresult.bp_battleresult_C.EventCloseBattleResult
+// Function bp_battleresult.bp_battleresult_C.EventShowGameJoyNoRecordsNotice
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_battleresult_C::EventCloseBattleResult()
+void Abp_battleresult_C::EventShowGameJoyNoRecordsNotice()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_battleresult_C", "EventCloseBattleResult");
+		Func = GetClass()->GetFunction("bp_battleresult_C", "EventShowGameJoyNoRecordsNotice");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_battleresult.bp_battleresult_C.EventCloseBattleResult_NoFetch
+// Function bp_battleresult.bp_battleresult_C.EventShowGameJoyNoRecordsNotice_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_battleresult_C::EventCloseBattleResult_NoFetch()
+void Abp_battleresult_C::EventShowGameJoyNoRecordsNotice_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_battleresult_C", "EventCloseBattleResult_NoFetch");
+		Func = GetClass()->GetFunction("bp_battleresult_C", "EventShowGameJoyNoRecordsNotice_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_battleresult.bp_battleresult_C.EventClientFreshToComplaint
+// Function bp_battleresult.bp_battleresult_C.EventClientFreshData
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_battleresult_C::EventClientFreshToComplaint()
+void Abp_battleresult_C::EventClientFreshData()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_battleresult_C", "EventClientFreshToComplaint");
+		Func = GetClass()->GetFunction("bp_battleresult_C", "EventClientFreshData");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_battleresult.bp_battleresult_C.EventClientFreshToComplaint_NoFetch
+// Function bp_battleresult.bp_battleresult_C.EventClientFreshData_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_battleresult_C::EventClientFreshToComplaint_NoFetch()
+void Abp_battleresult_C::EventClientFreshData_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_battleresult_C", "EventClientFreshToComplaint_NoFetch");
+		Func = GetClass()->GetFunction("bp_battleresult_C", "EventClientFreshData_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_battleresult.bp_battleresult_C.EventShowGameJoyRecordFailNotice
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_battleresult_C::EventShowGameJoyRecordFailNotice()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_battleresult_C", "EventShowGameJoyRecordFailNotice");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_battleresult.bp_battleresult_C.EventShowGameJoyRecordFailNotice_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_battleresult_C::EventShowGameJoyRecordFailNotice_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_battleresult_C", "EventShowGameJoyRecordFailNotice_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_battleresult.bp_battleresult_C.EventClientExitTraining
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_battleresult_C::EventClientExitTraining()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_battleresult_C", "EventClientExitTraining");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_battleresult.bp_battleresult_C.EventClientExitTraining_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_battleresult_C::EventClientExitTraining_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_battleresult_C", "EventClientExitTraining_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_battleresult.bp_battleresult_C.EventClientGetIsClickReply
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_battleresult_C::EventClientGetIsClickReply()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_battleresult_C", "EventClientGetIsClickReply");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_battleresult.bp_battleresult_C.EventClientGetIsClickReply_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_battleresult_C::EventClientGetIsClickReply_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_battleresult_C", "EventClientGetIsClickReply_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -277,118 +389,6 @@ void Abp_battleresult_C::EventDoIgnoreDSError_Push_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_battleresult_C", "EventDoIgnoreDSError_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_battleresult.bp_battleresult_C.EventClientExitTraining
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_battleresult_C::EventClientExitTraining()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_battleresult_C", "EventClientExitTraining");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_battleresult.bp_battleresult_C.EventClientExitTraining_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_battleresult_C::EventClientExitTraining_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_battleresult_C", "EventClientExitTraining_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_battleresult.bp_battleresult_C.EventBattleResult_BackToLobby
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_battleresult_C::EventBattleResult_BackToLobby()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_battleresult_C", "EventBattleResult_BackToLobby");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_battleresult.bp_battleresult_C.EventBattleResult_BackToLobby_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_battleresult_C::EventBattleResult_BackToLobby_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_battleresult_C", "EventBattleResult_BackToLobby_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_battleresult.bp_battleresult_C.EventShowGameJoyRecordFailNotice
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_battleresult_C::EventShowGameJoyRecordFailNotice()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_battleresult_C", "EventShowGameJoyRecordFailNotice");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_battleresult.bp_battleresult_C.EventShowGameJoyRecordFailNotice_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_battleresult_C::EventShowGameJoyRecordFailNotice_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_battleresult_C", "EventShowGameJoyRecordFailNotice_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_battleresult.bp_battleresult_C.EventClientFreshData
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_battleresult_C::EventClientFreshData()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_battleresult_C", "EventClientFreshData");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_battleresult.bp_battleresult_C.EventClientFreshData_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_battleresult_C::EventClientFreshData_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_battleresult_C", "EventClientFreshData_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

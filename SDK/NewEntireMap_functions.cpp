@@ -93,6 +93,62 @@ void UNewEntireMap_C::OnPlayer04MarkerRightClicked()
 }
 
 
+// Function NewEntireMap.NewEntireMap_C.GameUserSettingChanged
+// (BlueprintCallable, BlueprintEvent)
+
+void UNewEntireMap_C::GameUserSettingChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("NewEntireMap_C", "GameUserSettingChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function NewEntireMap.NewEntireMap_C.OnHideAirplane
+// (BlueprintCallable, BlueprintEvent)
+
+void UNewEntireMap_C::OnHideAirplane()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("NewEntireMap_C", "OnHideAirplane");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function NewEntireMap.NewEntireMap_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UNewEntireMap_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("NewEntireMap_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function NewEntireMap.NewEntireMap_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UNewEntireMap_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("NewEntireMap_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function NewEntireMap.NewEntireMap_C.NullEvent
 // (BlueprintCallable, BlueprintEvent)
 
@@ -2084,6 +2140,34 @@ void UNewEntireMap_C::CheckMapInitSize()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("NewEntireMap_C", "CheckMapInitSize");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function NewEntireMap.NewEntireMap_C.SetBlueZoneColor
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UNewEntireMap_C::SetBlueZoneColor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("NewEntireMap_C", "SetBlueZoneColor");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function NewEntireMap.NewEntireMap_C.SetRedZoneColor
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UNewEntireMap_C::SetRedZoneColor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("NewEntireMap_C", "SetRedZoneColor");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

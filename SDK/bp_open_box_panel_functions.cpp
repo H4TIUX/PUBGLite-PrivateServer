@@ -30,34 +30,6 @@ void Abp_open_box_panel_C::UserConstructionScript()
 }
 
 
-// Function bp_open_box_panel.bp_open_box_panel_C.EventSetInfo_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_open_box_panel_C::EventSetInfo_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_open_box_panel_C", "EventSetInfo_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_open_box_panel.bp_open_box_panel_C.EventSetInfo_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_open_box_panel_C::EventSetInfo_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_open_box_panel_C", "EventSetInfo_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_open_box_panel.bp_open_box_panel_C.EventAfterHideOpenBox
 // (BlueprintCallable, BlueprintEvent)
 
@@ -86,29 +58,29 @@ void Abp_open_box_panel_C::EventAfterHideOpenBox_NoFetch()
 }
 
 
-// Function bp_open_box_panel.bp_open_box_panel_C.EventOpenBoxBuyAgain
+// Function bp_open_box_panel.bp_open_box_panel_C.EventFetchInfo
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_open_box_panel_C::EventOpenBoxBuyAgain()
+void Abp_open_box_panel_C::EventFetchInfo()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_open_box_panel_C", "EventOpenBoxBuyAgain");
+		Func = GetClass()->GetFunction("bp_open_box_panel_C", "EventFetchInfo");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_open_box_panel.bp_open_box_panel_C.EventOpenBoxBuyAgain_NoFetch
+// Function bp_open_box_panel.bp_open_box_panel_C.EventFetchInfo_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_open_box_panel_C::EventOpenBoxBuyAgain_NoFetch()
+void Abp_open_box_panel_C::EventFetchInfo_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_open_box_panel_C", "EventOpenBoxBuyAgain_NoFetch");
+		Func = GetClass()->GetFunction("bp_open_box_panel_C", "EventFetchInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -142,29 +114,57 @@ void Abp_open_box_panel_C::EventCheckOpenBox_NoFetch()
 }
 
 
-// Function bp_open_box_panel.bp_open_box_panel_C.EventFetchInfo
+// Function bp_open_box_panel.bp_open_box_panel_C.EventOpenBoxBuyAgain
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_open_box_panel_C::EventFetchInfo()
+void Abp_open_box_panel_C::EventOpenBoxBuyAgain()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_open_box_panel_C", "EventFetchInfo");
+		Func = GetClass()->GetFunction("bp_open_box_panel_C", "EventOpenBoxBuyAgain");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_open_box_panel.bp_open_box_panel_C.EventFetchInfo_NoFetch
+// Function bp_open_box_panel.bp_open_box_panel_C.EventOpenBoxBuyAgain_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_open_box_panel_C::EventFetchInfo_NoFetch()
+void Abp_open_box_panel_C::EventOpenBoxBuyAgain_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_open_box_panel_C", "EventFetchInfo_NoFetch");
+		Func = GetClass()->GetFunction("bp_open_box_panel_C", "EventOpenBoxBuyAgain_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_open_box_panel.bp_open_box_panel_C.EventSetInfo_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_open_box_panel_C::EventSetInfo_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_open_box_panel_C", "EventSetInfo_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_open_box_panel.bp_open_box_panel_C.EventSetInfo_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_open_box_panel_C::EventSetInfo_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_open_box_panel_C", "EventSetInfo_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

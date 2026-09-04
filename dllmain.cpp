@@ -1,25 +1,10 @@
-﻿/*
-Copyright (C) 2026 H4TIUX & Phikill
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as published
-by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU Affero General Public License for more details.
-
-You should have received a copy of the GNU Affero General Public License
-along with this program. If not, see <https://www.gnu.org/licenses/>.
-*/
-
-#include "dummy.hpp"
-
-#ifndef NOMINMAX
+﻿#ifndef NOMINMAX
 #define NOMINMAX
 #endif
+
+#include <Windows.h>
+#include <wininet.h>
+#pragma comment(lib, "wininet.lib")
 
 #include <Windows.h>
 #include <algorithm>
@@ -37,9 +22,19 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 #include <vector>
 
 #include "SDK.hpp"
-#include <unordered_set> 
-  
+#include <unordered_set>
+
+#include "VehicleList.h"    
 #include "SDK/ShadowTrackerExtra_parameters.hpp"
+
+#include "dummy.hpp"
+
+#include "MinHook.h"
+
+#include"cJSON.h"
+#include "SDK/Engine_parameters.hpp"
+
+//#include"characterCore.hpp"
 
 #define PI 3.14159265358979323846f
 
@@ -63,12 +58,216 @@ volatile bool serverPanelInitialized = 0;
 
 int gLastTeamID = 0;
 
+bool bIsTrainingMode = false;
+
+UWorld* GWorld = nullptr;
+
+enum ECharacterFace : int32_t
+{
+    Face_01 = 400101,
+    Face_02 = 400102,
+    Face_03 = 400103,
+    Face_04 = 400104,
+    Face_05 = 400105,
+    Face_06 = 400106,
+    Face_07 = 400107,
+    Face_08 = 400108
+};
+
+enum ECharacterHair : int32_t
+{
+    // Hair A
+    Hair_A_01 = 40601001,
+    Hair_A_02 = 40602001,
+    Hair_A_03 = 40603001,
+    Hair_A_04 = 40604001,
+    Hair_A_05 = 40605001,
+    Hair_A_06 = 40606001,
+
+    // Hair B
+    Hair_B_01 = 40601002,
+    Hair_B_02 = 40602002,
+    Hair_B_03 = 40603002,
+    Hair_B_04 = 40604002,
+    Hair_B_05 = 40605002,
+    Hair_B_06 = 40606002,
+
+    // Hair C
+    Hair_C_01 = 40601003,
+    Hair_C_02 = 40602003,
+    Hair_C_03 = 40603003,
+    Hair_C_04 = 40604003,
+    Hair_C_05 = 40605003,
+    Hair_C_06 = 40606003,
+
+    // Hair D
+    Hair_D_01 = 40601004,
+    Hair_D_02 = 40602004,
+    Hair_D_03 = 40603004,
+    Hair_D_04 = 40604004,
+    Hair_D_05 = 40605004,
+    Hair_D_06 = 40606004,
+
+    // Hair E
+    Hair_E_01 = 40601005,
+    Hair_E_02 = 40602005,
+    Hair_E_03 = 40603005,
+    Hair_E_04 = 40604005,
+    Hair_E_05 = 40605005,
+    Hair_E_06 = 40606005,
+
+    // Hair F
+    Hair_F_01 = 40601006,
+    Hair_F_02 = 40602006,
+    Hair_F_03 = 40603006,
+    Hair_F_04 = 40604006,
+    Hair_F_05 = 40605006,
+    Hair_F_06 = 40606006,
+
+    // Hair G
+    Hair_G_01 = 40601007,
+    Hair_G_02 = 40602007,
+    Hair_G_03 = 40603007,
+    Hair_G_04 = 40604007,
+    Hair_G_05 = 40605007,
+    Hair_G_06 = 40606007,
+
+    // Hair H
+    Hair_H_01 = 40601008,
+    Hair_H_02 = 40602008,
+    Hair_H_03 = 40603008,
+    Hair_H_04 = 40604008,
+    Hair_H_05 = 40605008,
+    Hair_H_06 = 40606008,
+
+    // Hair I
+    Hair_I_01 = 40606009,
+    Hair_I_02 = 40601009,
+    Hair_I_03 = 40602009,
+    Hair_I_04 = 40603009,
+    Hair_I_05 = 40604009,
+    Hair_I_06 = 40605009
+};
+
+#define ACCOUNT_ID_LEN     64
+
+typedef enum
+{
+    STATUS_EMPTY = 0,
+    STATUS_NEEDS_FETCH,  // need to fetch the data from the Node.js API.
+    STATUS_FETCHING,     // HTTP in progress on the Tick Thread
+    STATUS_NEEDS_APPLY,  // Cached data ready! Game Thread needs to spawn/apply.
+    STATUS_READY         // Successfully applied to the figure!
+} PlayerStatus;
+
+typedef struct APPEARENCE_
+{
+    int32_t gender_ID;
+    int32_t face_ID;
+    int32_t hair_ID;
+} Character_appearenceData;
+
+typedef struct CLOTHE_
+{
+    int32_t head_itemID;
+    int32_t mask_itemID;
+    int32_t body_itemID;
+    int32_t legs_itemID;
+    int32_t foot_itemID;
+
+} Character_clothesData;
+
+typedef struct CharacterPlayerData_
+{
+    char account_id[ACCOUNT_ID_LEN];
+    Character_appearenceData appearenceData;
+    Character_clothesData clotheData;
+    SDK::ASTExtraPlayerController* Controller;
+    SDK::ASTExtraBaseCharacter* Character;
+
+    PlayerStatus status;
+
+} CharacterPlayerData;
+
+#define MAX_PLAYERS 100
+
+static CharacterPlayerData g_Players[MAX_PLAYERS];
+static CRITICAL_SECTION g_Lock;
+
 SDK::ASTExtraBaseCharacter* GetCharacterFromDController(SDK::APlayerController* PC)
 {
     if (!PC) return nullptr;
     if (PC->K2_GetPawn() && PC->K2_GetPawn()->IsA(SDK::ASTExtraBaseCharacter::StaticClass()))
         return static_cast<SDK::ASTExtraBaseCharacter*>(PC->K2_GetPawn());
     return nullptr;
+}
+
+int OGBG_UpdateBaseCharacter(SDK::ASTExtraBaseCharacter* STExtraBaseCharacter, SDK::ECharacterGender gender, ECharacterFace head_id, ECharacterHair hair_id)
+{
+    if (STExtraBaseCharacter)
+    {
+        SDK::UClass* AvatarCompClass = SDK::UAvatarComponent::StaticClass();
+
+        SDK::UActorComponent* FoundComp = STExtraBaseCharacter->GetComponentByClass(AvatarCompClass);
+        if (FoundComp != nullptr)
+        {
+            SDK::UAvatarComponent* AvatarComponent = reinterpret_cast<SDK::UAvatarComponent*>(FoundComp);
+            if (AvatarComponent)
+            {
+                SDK::UCharacterAvatarComponent* CharacterAvatarComponent = (SDK::UCharacterAvatarComponent*)AvatarComponent;
+                if (CharacterAvatarComponent)
+                {
+                    int32_t updateGender = (int32_t)gender;
+
+                    CharacterAvatarComponent->SetAvatarGender(updateGender); // change main gender of avatar
+                    CharacterAvatarComponent->InitialAvatarParam(updateGender); // initialize gender bones
+                    CharacterAvatarComponent->InitMasterComponent(updateGender); // align the bones
+
+                    int synCount = CharacterAvatarComponent->synData.Num();
+                    for (int i = 0; i < synCount; i++)
+                    {
+                        CharacterAvatarComponent->synData[i].gender = updateGender;
+                    }
+
+
+                    CharacterAvatarComponent->InitDefaultAvatarByResID(updateGender, head_id, hair_id);
+
+                    // UEMeshReload
+                    CharacterAvatarComponent->isNeedRefresh = true;
+                    CharacterAvatarComponent->RefreshAvatar();
+
+                    // Unreal network system to report character updates. RPC
+
+                    CharacterAvatarComponent->OnRep_SetDefaultCfg();
+                    CharacterAvatarComponent->OnRep_AvatarMeshChanged();
+
+                    return 0;
+                }
+                else
+                {
+                    return 1;
+                }
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+        else
+        {
+            printf("\n OGBG_UpdateBaseCharacter() [ERROR!]:  The character does not actually have an active AvatarComponent.\n");
+            return 1;
+        }
+
+        return 0;
+    }
+    else
+    {
+        return 1;
+    }
+
+    return 0;
 }
 
 struct PlayerInfo
@@ -117,6 +316,42 @@ class AActor* SpawnActorFromClass(
     Spawned = UGameplayStatics::FinishSpawningActor(Spawned, SpawnTransform);
 
     return Spawned;
+}
+
+struct FSpeedSample
+{
+    void* Player;
+    FVector LastLocation;
+
+    double LastServerTime;
+    float Suspicion;
+
+    bool Used;
+};
+
+
+#define MAX_PLAYERS 100
+
+FSpeedSample SpeedSamples[MAX_PLAYERS];
+
+double GetServerTime()
+{
+    using namespace std::chrono;
+
+    static auto StartTime = steady_clock::now();
+
+    auto Now = steady_clock::now();
+
+    return duration<double>(Now - StartTime).count();
+}
+
+double CalculateDistance(FVector A, FVector B)
+{
+    double X = A.X - B.X;
+    double Y = A.Y - B.Y;
+    double Z = A.Z - B.Z;
+
+    return sqrt(X * X + Y * Y + Z * Z);
 }
 
 struct FHookInfo
@@ -452,7 +687,7 @@ float GetArmorReduction(int id)
     return 0.f;
 }
 
-void MH_Initalize()
+void MH_Initalize2()
 {
     printf("\x4F""G\072B\x41""T\124L\x45""G\122O\x55""N\104S\x2C""F\122E\x45"" \101N\x44"" \117P\x45""N\040S\x4F""U\122C\x45"" \103O\x4E""T\105N\x54"",\040D\x4F"" \116O\x54"" \123T\x45""A\114 \x4F""R\040R\x45""S\105L\x4C"".\040M\x41""D\105 \x42""Y\040H\x34""T\111U\x58"" \101N\x44"" \120H\x49""K\111L\x4C"".\040h\x74""t\160s\x3A""/\057g\x69""t\150u\x62"".\143o\x6D""/\1104\x54""I\125X\x0A""");
 }
@@ -588,6 +823,192 @@ void ASTExtraBaseCharacter_ServerUpdateVehicleSeatInfo(SDK::ASTExtraBaseCharacte
     return;
 }
 
+#define STR(x) #x
+#define XSTR(x) STR(x)
+
+#define COSMETIC_API_IP 217.199.220.41
+#define COSMETIC_API_PORT 3000
+
+typedef enum
+{
+    REQ_SUCCESS,   // 200 OK
+    REQ_NOT_FOUND, // 404 Not Found
+    REQ_CONN_ERROR // Connection Error / Timeout / Server Down
+} HttpRequestResult;
+
+// Generic helper function to perform a GET request and capture the status code.
+static HttpRequestResult ExecuteHttpGet(const char* urlPath, char** outResponseData)
+{
+    HINTERNET hInternet = NULL;
+    HINTERNET hConnect = NULL;
+    HINTERNET hRequest = NULL;
+    HttpRequestResult result = REQ_CONN_ERROR;
+
+    // Short timeouts (2 seconds) to avoid blocking the Tick Thread if the API goes down.
+    DWORD timeoutMs = 2000;
+
+    hInternet = InternetOpenA("PUBG_Custom_Client/1.0", INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
+    if (!hInternet) return REQ_CONN_ERROR;
+
+    // Configures session timeouts
+    InternetSetOptionA(hInternet, INTERNET_OPTION_CONNECT_TIMEOUT, &timeoutMs, sizeof(timeoutMs));
+    InternetSetOptionA(hInternet, INTERNET_OPTION_RECEIVE_TIMEOUT, &timeoutMs, sizeof(timeoutMs));
+
+    hConnect = InternetConnectA(hInternet, XSTR(COSMETIC_API_IP), COSMETIC_API_PORT, NULL, NULL, INTERNET_SERVICE_HTTP, 0, 0);
+    if (!hConnect)
+    {
+        InternetCloseHandle(hInternet);
+        return REQ_CONN_ERROR;
+    }
+
+    // ---------------------------------------------------------------------------------
+    // CRITICAL: INTERNET_FLAG_RELOAD and INTERNET_FLAG_NO_CACHE_WRITE kill the internal WinINet cache!
+    // ---------------------------------------------------------------------------------
+    DWORD flags = INTERNET_FLAG_RELOAD | INTERNET_FLAG_NO_CACHE_WRITE | INTERNET_FLAG_PRAGMA_NOCACHE;
+
+    hRequest = HttpOpenRequestA(hConnect, "GET", urlPath, NULL, NULL, NULL, flags, 0);
+    if (!hRequest)
+    {
+        InternetCloseHandle(hConnect);
+        InternetCloseHandle(hInternet);
+        return REQ_CONN_ERROR;
+    }
+
+    if (HttpSendRequestA(hRequest, NULL, 0, NULL, 0))
+    {
+        // 1. READS THE HTTP STATUS CODE (200, 404, 500, etc.)
+        DWORD statusCode = 0;
+        DWORD statusCodeLen = sizeof(statusCode);
+
+        HttpQueryInfoA(hRequest, HTTP_QUERY_STATUS_CODE | HTTP_QUERY_FLAG_NUMBER,
+            &statusCode, &statusCodeLen, NULL);
+
+        if (statusCode == 200)
+        {
+            // Read the response body
+            char buffer[1024];
+            DWORD bytesRead = 0;
+            char* responseData = NULL;
+            size_t totalBytes = 0;
+
+            while (InternetReadFile(hRequest, buffer, sizeof(buffer) - 1, &bytesRead) && bytesRead > 0)
+            {
+                buffer[bytesRead] = '\0';
+                char* newMem = (char*)realloc(responseData, totalBytes + bytesRead + 1);
+                if (!newMem) { free(responseData); responseData = NULL; break; }
+                responseData = newMem;
+                memcpy(responseData + totalBytes, buffer, bytesRead);
+                totalBytes += bytesRead;
+                responseData[totalBytes] = '\0';
+            }
+
+            *outResponseData = responseData;
+            result = REQ_SUCCESS;
+        }
+        else if (statusCode == 404)
+        {
+            result = REQ_NOT_FOUND; // Returned a 404!
+        }
+        else
+        {
+            result = REQ_CONN_ERROR; // Another HTTP error (500, 502, etc.)
+        }
+    }
+    else
+    {
+        result = REQ_CONN_ERROR; // Connection failure (Socket error)
+    }
+
+    if (hRequest) InternetCloseHandle(hRequest);
+    if (hConnect) InternetCloseHandle(hConnect);
+    if (hInternet) InternetCloseHandle(hInternet);
+
+    return result;
+}
+
+typedef enum {
+    FETCH_OK,          // Found and populated the cJSON
+    FETCH_NOT_FOUND,   // Got a 404 on BOTH (Player and Guest).
+    FETCH_RETRY_LATER  // A connection error occurred (You should try again in the Tick Thread)
+} FetchStatus;
+
+// Parses the cJSONand populates the player struct.
+static bool ParseJsonToPlayer(const char* jsonStr, CharacterPlayerData* player)
+{
+    if (!jsonStr) return false;
+    cJSON* json = cJSON_Parse(jsonStr);
+    if (!json) return false;
+
+    cJSON* item = cJSON_GetObjectItemCaseSensitive(json, "face_ID");
+    if (cJSON_IsNumber(item)) player->appearenceData.face_ID = item->valueint;
+    printf("\n ParseJsonToPlayer(): face_ID: %i\n", item->valueint);
+
+    item = cJSON_GetObjectItemCaseSensitive(json, "hair_ID");
+    if (cJSON_IsNumber(item)) player->appearenceData.hair_ID = item->valueint;
+    printf("\n ParseJsonToPlayer(): hair_ID: %i\n", item->valueint);
+
+    item = cJSON_GetObjectItemCaseSensitive(json, "gender_ID");
+    if (cJSON_IsNumber(item)) player->appearenceData.gender_ID = item->valueint;
+    printf("\n ParseJsonToPlayer(): gender_ID: %i\n", item->valueint);
+
+    cJSON_Delete(json);
+    return true;
+}
+
+// 2-LEVEL FALLBACK LOGIC
+FetchStatus FetchPlayerAppearanceWithFallback(CharacterPlayerData* player)
+{
+    char urlPath[256];
+    char* jsonResponse = NULL;
+
+    printf("\n FetchPlayerAppearanceWithFallback() Called \n ");
+
+    // -------------------------------------------------------------
+    // PASSAGE 1: Registered Player Attempt (/api/player/...)
+    // -------------------------------------------------------------
+    snprintf(urlPath, sizeof(urlPath), "/api/player/%s/appearance", player->account_id);
+    HttpRequestResult res1 = ExecuteHttpGet(urlPath, &jsonResponse);
+
+    if (res1 == REQ_SUCCESS)
+    {
+        ParseJsonToPlayer(jsonResponse, player);
+        free(jsonResponse);
+        return FETCH_OK; // Player successfully registered!
+    }
+    else if (res1 == REQ_CONN_ERROR)
+    {
+        // If the Node.js API has crashed or timed out, there is no point in testing the Guest.
+        // Returns immediately to retry in the next Tick Thread cycle.
+        return FETCH_RETRY_LATER;
+    }
+
+    // -------------------------------------------------------------
+    // STEP 2: If the Player returns a 404, try Guest (/api/guest_player/...)
+    // -------------------------------------------------------------
+    printf("[FALLBACK 404] %s not found in /player. Trying /guest_player...\n", player->account_id);
+
+    printf("\n Guest_Request_NETID: [%s] \n", player->account_id);
+
+    snprintf(urlPath, sizeof(urlPath), "/api/guest_player/%s/appearance", player->account_id);
+    HttpRequestResult res2 = ExecuteHttpGet(urlPath, &jsonResponse);
+
+    if (res2 == REQ_SUCCESS)
+    {
+        ParseJsonToPlayer(jsonResponse, player);
+        free(jsonResponse);
+        return FETCH_OK; // Guest Player Success!
+    }
+    else if (res2 == REQ_CONN_ERROR)
+    {
+        return FETCH_RETRY_LATER; // Network error on Guest -> Try again later
+    }
+
+    // -------------------------------------------------------------
+    // PASSAGE 3: Got a 404 on BOTH (/player and /guest_player)
+    // -------------------------------------------------------------
+    printf("[404 FINAL] %s not registered in ANY database route!\n", player->account_id);
+    return FETCH_NOT_FOUND;
+}
 
 
 std::string GetPUBGLiteNetID(SDK::APlayerState* TargetPlayerState)
@@ -621,6 +1042,13 @@ std::string GetPUBGLiteNetID(SDK::APlayerState* TargetPlayerState)
     return "";
 }
 
+void CCustomize_System_Init(void)
+{
+    InitializeCriticalSection(&g_Lock);
+    memset(g_Players, 0, sizeof(g_Players));
+    g_PendingAppliesCount = 0;
+}
+
 bool bot_character_change = 0;
 
 void (*ServerNotifyHitFn)(UTslBallisticsComp*, const struct FServerNotifyHitArgs&) = 0;
@@ -631,17 +1059,110 @@ void* (*ProcessEventO)(UObject* Obj, UFunction* Func, void* Func_Params) = nullp
 TSubclassOf<class UDamageType> LastDamageType = nullptr;
 FAttackId LastAttackId{};
 
-void HookProcessEventForCharacter(UObject* Object);
-void HookProcessEventForPlayerController(UObject* Object);
-
 void OnStartMap(int MapId);
-void FixValue();
+//void FixValue();
 void Fix_Character_Logic(ASTExtraBaseCharacter* Character);
 
 static int Team1Count = 0;
 static int Team2Count = 0;
 
 static int NextTeamID = 1;
+
+//void GenerateAllItems(UItemGeneratorComponent* Generator);
+
+struct FWeaponFireSample
+{
+    void* Player;
+
+    double LastShotTime;
+
+    int ShotsFired;
+
+    float Suspicion;
+};
+
+FWeaponFireSample FireSamples[MAX_PLAYERS];
+
+void CheckFireRate(ASTExtraPlayerController* Player, float WeaponFireDelay)
+{
+    FWeaponFireSample* Sample = nullptr;
+
+    for (int i = 0; i < MAX_PLAYERS; i++)
+    {
+        if (FireSamples[i].Player == Player)
+        {
+            Sample = &FireSamples[i];
+            break;
+        }
+    }
+
+    if (!Sample)
+    {
+        for (int i = 0; i < MAX_PLAYERS; i++)
+        {
+            if (FireSamples[i].Player == nullptr)
+            {
+                FireSamples[i].Player = Player;
+                FireSamples[i].LastShotTime = 0;
+                FireSamples[i].Suspicion = 0;
+
+                Sample = &FireSamples[i];
+                break;
+            }
+        }
+    }
+
+
+    if (!Sample)
+        return;
+
+
+    double Now = GetServerTime();
+
+
+    double TimeSinceLastShot =
+        Now - Sample->LastShotTime;
+
+
+    if (TimeSinceLastShot < WeaponFireDelay)
+    {
+        Sample->Suspicion += 2;
+
+
+        printf("Fire rate hack detected\n");
+    }
+    else
+    {
+        Sample->Suspicion -= 0.1;
+
+
+        if (Sample->Suspicion < 0)
+            Sample->Suspicion = 0;
+    }
+
+
+    if (Sample->Suspicion > 10)
+    {
+        Player->STExtraBaseCharacter->Health = 0.0f;
+        //PC->KickSelf();
+        //PC->ClientLeaveMatchIntentionally();
+        Player->ServerLeaveMatchIntentionally();
+
+        ATslLPCPlayerState* ServerPS = (ATslLPCPlayerState*)UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0)->PlayerState;
+
+        if (ServerPS->IsA(ATslLPCPlayerState::StaticClass()) && Player->GetCurPlayerState()->IsA(ATslLPCPlayerState::StaticClass()))
+        {
+            ServerPS->BroadcastMidGameBan((ATslLPCPlayerState*)Player->GetCurPlayerState(), FString(L"Banned"), FString(L"Banned"));
+        }
+        else
+        {
+            std::cerr << "Condition failed" << std::endl;
+        }
+    }
+
+
+    Sample->LastShotTime = Now;
+}
 
 void* ProcessEventHook(UObject* Obj, UFunction* Func, void* Func_Params)
 {
@@ -650,486 +1171,43 @@ void* ProcessEventHook(UObject* Obj, UFunction* Func, void* Func_Params)
         auto ObjName = Obj->GetName();
         auto FuncName = Func->GetName();
 
-        if (FuncName != "ReceiveTick" && FuncName != "MustSpectate")
-        {
-            std::cerr << ObjName << " CALLED " << FuncName << std::endl;
-        }
-
-        /*
-        if ((Obj->IsA(AInfo::StaticClass()) or Obj->IsA(ASTExtraGameMode::StaticClass()) and FuncName != "ReceiveTick") and FuncName != "BlueprintUpdateCamera"
-            and not(FuncName.contains("BndEvt") or FuncName.contains("ReceiveHit") or FuncName.contains("ReceiveDrawHUD") or FuncName.contains("ConstructionScript") or FuncName.contains("ServerUpdateCamera") or FuncName.contains("OnParameterUpdated") or FuncName == "ReceiveBeginPlay")) {
-            std::cerr << ObjName << " CALLED " << FuncName << std::endl;
-        }
-        */
-
-        if (Func->GetName() == "K2_OnRestartPlayer")
-        {
-            printf("\n ClientRestart() From ProcessEvent \n");
-
-            struct Params_org {
-                class AController* NewPlayer;
-            };
-
-            auto Params = (Params_org*)Func_Params;
-
-            Fix_Character_Logic((ASTExtraBaseCharacter*)Params->NewPlayer->K2_GetPawn());
-
-            APawn* Pawn = Params->NewPlayer->K2_GetPawn(); 
-
-            if (UGameplayStatics::GetGameMode(UWorld::GetWorld())->IsA(ATeamMatchGameMode::StaticClass()) && UGameplayStatics::GetCurrentLevelName(UWorld::GetWorld(), 1).ToString().contains("Bodie"))
-            {
-                std::cerr << "Bodie" << std::endl; 
-
-                ATeamMatchGameMode* GM = (ATeamMatchGameMode*)UGameplayStatics::GetGameMode(UWorld::GetWorld());
-                ATeamMatchGameState* GS = (ATeamMatchGameState*)GM->GameState;
-
-                GM->TeamSize = 5;
-                GS->NumTeams = 2;
-            }
-
-            if (Params != NULL)
-            {
-                ASTExtraBaseCharacter* Character = (ASTExtraBaseCharacter*)Params->NewPlayer->K2_GetPawn();
-
-                if (Character->InteractionComponent && Character->InteractionComponent != ReloadingPlayers[Character].LastInteraction && std::find(HookedVTables.begin(), HookedVTables.end(), Character) == HookedVTables.end() &&
-                    ReloadingPlayers[Character].LastInteraction != Character->InteractionComponent)
-                {
-                    std::cerr << "Hooking InteractionComponent..." << std::endl;
-
-                    ReloadingPlayers[Character].LastInteraction = Character->InteractionComponent;
-
-                    HookProcessEventForCharacter(Character->InteractionComponent);
-                    HookProcessEventForCharacter(Character->InteractorComponent);
-                    //HookProcessEventForPlayerController(Params->NewPlayer->CastToPlayerController());
-
-                    HookedVTables.push_back(Character->InteractionComponent);
-                    HookedVTables.push_back(Character->InteractorComponent);
-                }
-            }
-        }
-
-        if (Func->GetName() == "K2_OnSetMatchState")
-        {
-            ATslLPCGameMode* GameMode = (ATslLPCGameMode*)UGameplayStatics::GetGameMode(UWorld::GetWorld());
-            std::cerr << "GameMode set new MatchState: " << GameMode->MatchState.ToString() << std::endl;
-
-            printf("\x54""H\111S\x20""I\123 \x46""R\105E\x20""C\117N\x54""E\116T\x20""B\131 \x4F""G\072B\x41""T\124L\x45""G\122O\x55""N\104S\x2C"" \111F\x20""Y\117U\x20""B\117U\x47""H\124 \x54""H\111S\x2C"" \131O\x55"" \110A\x56""E\040B\x45""E\116 \x53""C\101M\x4D""E\104.\x20""h\164t\x70""s\072/\x2F""g\151t\x68""u\142.\x63""o\155/\x48""4\124I\x55""X\012");
-
-            if (GameMode->MatchState.ToString() == "InProgress")
-            {
-                std::cerr << "Match started." << std::endl;
-            }
-
-            if (GameMode->MatchState.ToString() == "WaitingPostMatch")
-            {
-                std::cerr << "Match finished, waiting time and restarting match..." << std::endl;
-                std::cerr << "PostMatchWaitingTime: " << GameMode->PostMatchWaitingTime << std::endl; // Doesn't work lol
-
-                Sleep(8000);
-
-                __fastfail(0);
-            }
-        }
-
-        if (Func->GetName() == "ReqChangeVehicleSeatForPC")
-        {
-            std::cerr << "ReqChangeVehicleSeatForPC" << std::endl; 
-
-            UVehicleUserComponent* _this = (UVehicleUserComponent*)Obj;
-            auto Parms = (Params::VehicleUserComponent_ReqChangeVehicleSeatForPC*)Func_Params;
-
-            auto SeatIndex = Parms->SeatIndex;
-
-            if (!_this)
-            {
-                printf("[ReqChangeVehicleSeatForPC] this NULL\n");
-                return ProcessEventO(Obj, Func, Func_Params);
-            }
-
-            printf("[ReqChangeVehicleSeatForPC] SeatIndex: %d | this: %p\n", SeatIndex, _this);
-
-            SDK::ASTExtraVehicleBase* State_Vehicle = _this->Vehicle;
-
-            SDK::ASTExtraBaseCharacter* STExtraBaseCharacter = (SDK::ASTExtraBaseCharacter*)_this->Character;
-            if (STExtraBaseCharacter)
-            {
-                int CurrentSeatOccupiersNum = State_Vehicle->VehicleSeats->SeatOccupiers.Num();
-                if (SeatIndex < CurrentSeatOccupiersNum)
-                {
-                    STExtraBaseCharacter->VehicleSeatIdx = SeatIndex;
-                }
-            }
-
-            return ProcessEventO(_this, Func, Func_Params);
-        }
-
-        if (Func->GetName() == "ReqEnterVehicle")
-        {
-            std::cerr << "ReqEnterVehicle" << std::endl; 
-        }
-
-        if (Func->GetName() == "ReqExitVehicle")
-        {
-            std::cerr << "ReqExitVehicle" << std::endl;
-
-            UVehicleUserComponent* _this = (UVehicleUserComponent*)Obj;
-            auto Params = (Params::VehicleUserComponent_ReqExitVehicle*)Func_Params;
-            FVector Velocity = Params->ClientVehicleVelocity;
-
-            if (!_this || !_this->Vehicle || !_this->Character)
-            {
-                std::cerr << "ReqExitVehicle failed" << std::endl;
-                return ProcessEventO(Obj, Func, Func_Params);
-            }
-
-
-            SDK::ASTExtraBaseCharacter* baseCharacter = (SDK::ASTExtraBaseCharacter*)_this->Character;
-
-            baseCharacter->LeaveState(SDK::EPawnState::DriveVehicle);
-            baseCharacter->LeaveState(SDK::EPawnState::InVehicle);
-
-            _this->VehicleUserState = SDK::ESTExtraVehicleUserState::EVUS_OutOfVehicle;
-            _this->Character->K2_DetachFromActor(SDK::EDetachmentRule::KeepWorld,
-                SDK::EDetachmentRule::KeepWorld,
-                SDK::EDetachmentRule::KeepWorld);
-
-            SDK::UCharacterMovementComponent* movement = _this->Character->STCharacterMovement;
-            if (movement)
-            {
-                movement->SetMovementMode(SDK::EMovementMode::MOVE_Falling, true);
-            }
-
-            SDK::UWorld* World = SDK::UWorld::GetWorld();
-            if (!World)
-            {
-                std::cerr << "World is null for some reason" << std::endl;
-                return ProcessEventO(Obj, Func, Func_Params);
-            }
-
-            SDK::AGameStateBase* GS = UGameplayStatics::GetGameState(UWorld::GetWorld());
-            if (!GS) return ProcessEventO(Obj, Func, Func_Params);
-
-            UC::TArray<SDK::APlayerState*>& Players = GS->PlayerArray;
-
-            for (int i = 0; i < Players.Num(); i++)
-            {
-                SDK::APlayerState* PS = Players[i];
-                if (!PS) continue;
-
-                if (IsHostPlayer(PS, World))
-                {
-                    continue;;
-                }
-
-                SDK::ASTExtraPlayerController* STEPC = (SDK::ASTExtraPlayerController*)PS->GetOwner();
-                if (!STEPC) continue;
-
-
-                if (!STEPC->VehicleUserComp)
-                {
-                    std::cerr << "VehicleUserComp is nullptr" << std::endl;
-                }
-                else
-                {
-                    if (STEPC->VehicleUserComp->Vehicle)
-                    {
-                        SDK::ASTExtraVehicleBase* State_Vehicle = STEPC->VehicleUserComp->Vehicle;
-                        SDK::ESTExtraVehicleType CurrentVehicleType = State_Vehicle->VehicleType;
-
-                        if (STEPC->STExtraBaseCharacter == (SDK::ASTExtraBaseCharacter*)_this->Character)
-                        {
-                            for (int i = 0; i < State_Vehicle->VehicleSeats->SeatOccupiers.Num(); i++)
-                            {
-                                if (State_Vehicle->VehicleSeats->SeatOccupiers[i] == STEPC->STExtraBaseCharacter)
-                                {
-                                    State_Vehicle->VehicleSeats->SeatOccupiers[i] = NULL;
-                                    break;
-                                }
-                            }
-
-                            // Get the vehicle's current location.
-                            SDK::FVector vehicleLocation = _this->Vehicle->K2_GetActorLocation();
-
-                            // Obtain the vehicle's directional vectors.
-                            SDK::FVector right = _this->Vehicle->GetActorRightVector();
-                            SDK::FVector up = _this->Vehicle->GetActorUpVector();
-                            SDK::FVector forward = _this->Vehicle->GetActorForwardVector();
-
-                            // Define local offset (in Unreal units)
-                            float lateralDist = -150.0f;  // distance to the side -> right
-                            float verticalDist = 100.0f; // extra height
-                            float frontDist = 0.0f; // distance forward
-
-                            switch (CurrentVehicleType)
-                            {
-                            case SDK::ESTExtraVehicleType::VT_Unknown:
-                            {
-                                std::cerr << "Unknown vehicle type" << std::endl;
-                                break;
-                            }
-
-
-                            case SDK::ESTExtraVehicleType::VT_Motorbike_0:
-                            case SDK::ESTExtraVehicleType::VT_Motorbike_1:
-                            {
-                                if (baseCharacter->VehicleSeatIdx == 1)
-                                {
-                                    frontDist = -160.0f;
-                                }
-
-                                break;
-                            }
-
-                            case SDK::ESTExtraVehicleType::VT_Motorbike_SideCart_0:
-                            case SDK::ESTExtraVehicleType::VT_Motorbike_SideCart_1:
-                            {
-                                if (baseCharacter->VehicleSeatIdx == 1)
-                                {
-                                    frontDist = -160.0f;
-                                }
-                                else if (baseCharacter->VehicleSeatIdx == 2)
-                                {
-                                    lateralDist = 170.0f;
-                                    frontDist = -60.0f;
-                                }
-
-                                break;
-                            }
-
-                            case SDK::ESTExtraVehicleType::VT_Dacia_0:
-                            case SDK::ESTExtraVehicleType::VT_Dacia_1:
-                            case SDK::ESTExtraVehicleType::VT_Dacia_2:
-                            case SDK::ESTExtraVehicleType::VT_Dacia_3:
-                            {
-                                if (baseCharacter->VehicleSeatIdx == 1)
-                                {
-                                    lateralDist = 150.0f;
-                                    frontDist = +10.0f;
-                                }
-                                else if (baseCharacter->VehicleSeatIdx == 2)
-                                {
-                                    lateralDist = -150.0f;
-                                    frontDist = -100.0f;
-                                }
-                                else if (baseCharacter->VehicleSeatIdx == 3)
-                                {
-                                    lateralDist = 150.0f;
-                                    frontDist = -100.0f;
-                                }
-
-                                break;
-                            }
-
-                            case SDK::ESTExtraVehicleType::VT_UAZ_0:
-                            case SDK::ESTExtraVehicleType::VT_UAZ_1:
-                            case SDK::ESTExtraVehicleType::VT_UAZ_2:
-                            {
-                                if (baseCharacter->VehicleSeatIdx == 1)
-                                {
-                                    lateralDist = 150.0f;
-                                }
-                                else if (baseCharacter->VehicleSeatIdx == 2)
-                                {
-                                    lateralDist = -150.0f;
-                                    frontDist = -100.0f;
-                                }
-                                else if (baseCharacter->VehicleSeatIdx == 3)
-                                {
-                                    lateralDist = 150.0f;
-                                    frontDist = -100.0f;
-                                }
-
-                                break;
-                            }
-
-                            case SDK::ESTExtraVehicleType::VT_Buggy_0:
-                            case SDK::ESTExtraVehicleType::VT_Buggy_1:
-                            case SDK::ESTExtraVehicleType::VT_Buggy_2:
-                            {
-                                if (baseCharacter->VehicleSeatIdx == 1)
-                                {
-                                    lateralDist = 150.0f;
-                                    frontDist = -100.0f;
-                                }
-
-
-                                break;
-                            }
-
-                            case SDK::ESTExtraVehicleType::VT_PG117:
-                            {
-                                if (baseCharacter->VehicleSeatIdx == 1)
-                                {
-                                    lateralDist = 150.0f;
-                                }
-                                else if (baseCharacter->VehicleSeatIdx == 2)
-                                {
-                                    lateralDist = -150.0f;
-                                    frontDist = -120.0f;
-                                }
-                                else if (baseCharacter->VehicleSeatIdx == 3)
-                                {
-                                    lateralDist = 150.0f;
-                                    frontDist = -120.0f;
-                                }
-
-                                break;
-                            }
-
-                            case SDK::ESTExtraVehicleType::VT_Aquarail:
-                            {
-                                break;
-                            }
-
-                            case SDK::ESTExtraVehicleType::VT_Minibus:
-                            {
-
-                                if (baseCharacter->VehicleSeatIdx == 1) // ->
-                                {
-                                    lateralDist = 150.0f;
-                                    frontDist = +10.0f;
-                                }
-                                else if (baseCharacter->VehicleSeatIdx == 2) // <-
-                                {
-                                    lateralDist = -150.0f;
-                                    frontDist = -60.0f;
-                                }
-                                else if (baseCharacter->VehicleSeatIdx == 3) // ->
-                                {
-                                    lateralDist = 150.0f;
-                                    frontDist = -60.0f;
-                                }
-                                else if (baseCharacter->VehicleSeatIdx == 4) // <-
-                                {
-                                    lateralDist = -150.0f;
-                                    frontDist = -130.0f;
-                                }
-                                else if (baseCharacter->VehicleSeatIdx == 5) // ->
-                                {
-                                    lateralDist = 150.0f;
-                                    frontDist = -130.0f;
-                                }
-
-
-                                break;
-                            }
-
-                            case SDK::ESTExtraVehicleType::VT_MAX: break;
-                            default: break;
-                            }
-
-
-                            if (State_Vehicle->bIsEngineStarted == true)
-                            {
-                                State_Vehicle->bIsEngineStarted = false; // Disable Vehicle Engine Sounds
-                            }
-
-                            // Calculate global offset
-                            SDK::FVector globalOffset = (right * lateralDist) + (up * verticalDist) + (forward * frontDist);
-
-                            // Final exit position
-                            SDK::FVector exitLoc = vehicleLocation + globalOffset;
-
-                            _this->RspExitVehicle(1, Velocity, exitLoc); // important Function
-
-                            // Apply to character
-                            _this->Character->K2_SetActorLocation(exitLoc, false, nullptr, false);
-
-
-                            SDK::FRotator vehicleRot = _this->Vehicle->K2_GetActorRotation();
-
-                            vehicleRot.Pitch = 0.0f;
-                            vehicleRot.Roll = 0.0f;
-
-                            // aplica no actor
-                            _this->Character->K2_SetActorRotation(vehicleRot, false);
-
-                            SDK::AController* controller = _this->Character->Controller;
-                            if (controller)
-                            {
-                                controller->ControlRotation = vehicleRot;
-                            }
-
-                            // Set it to - 1 since it's not in a vehicle.
-                            baseCharacter->VehicleSeatIdx = -1;
-
-
-
-                            SDK::FVector LastVelocity;
-                            LastVelocity.X = Velocity.X;
-                            LastVelocity.Y = Velocity.Y;
-                            LastVelocity.Z = Velocity.Z;
-
-                            _this->Character->LaunchCharacter(LastVelocity, true, true);
-
-                            STEPC->UnPossess();
-                            STEPC->Possess(_this->Character);
-
-                            SDK::UCharacterMovementComponent* move = _this->Character->STCharacterMovement;
-                            if (!move)
-                            {
-                                printf("Movement NULL\n");
-                                return ProcessEventO(Obj, Func, Func_Params);
-                            }
-                            else
-                            {
-                                move->SetMovementMode(SDK::EMovementMode::MOVE_Falling, false);
-
-                                move->bUseControllerDesiredRotation = true;
-                                move->bOrientRotationToMovement = false;
-
-                                //_this->Character->bUseControllerRotationYaw = true;
-
-                                _this->Character->ForceNetUpdate();
-                            }
-
-                            // Checks if the user has a weapon equipped upon exiting; otherwise, equips a weapon if the status is empty.
-                            SDK::ASTExtraWeapon* CurrentWeapon = STEPC->STExtraBaseCharacter->GetCurrentWeapon();
-                            if (CurrentWeapon)
-                            {
-                                // do nothing
-                            }
-                            else
-                            {
-                                // equip last weapon
-                                STEPC->STExtraBaseCharacter->SwitchToLastWeapon(true, true);
-                            }
-
-                            _this->OnExitVehicleCompleted();
-
-                            if (_this->Vehicle)
-                            {
-                                _this->Vehicle == nullptr;
-                            }
-
-                        }
-                    }
-                }
-            }
-
-
-            return ProcessEventO(Obj, Func, Func_Params);
-        }
-
         if (Func->GetName() == "BP_OnWeaponReloadEnd")
         {
+            std::cerr << "Reload ended for a player" << std::endl; 
+
             ASTExtraShootWeapon* shoot = (ASTExtraShootWeapon*)Obj;
             ASTExtraBaseCharacter* wepowner = (ASTExtraBaseCharacter*)shoot->GetOwner();
             ASTExtraPlayerController* wepownerPC = (ASTExtraPlayerController*)wepowner->GetController();
+
+            if (shoot)
+            std::cerr << "shoot: " << shoot->GetName() << std::endl;
+
+            if (wepowner)
+            std::cerr << "wepowner: " << wepowner->GetName() << std::endl;
+
+            if (wepownerPC)
+            std::cerr << "wepownerpc: " << wepownerPC->GetName() << std::endl; 
 
             int BulletsBefore = 0;
             int BulletsAfter = 0;
             int BulletsToRemove = 0;
 
-            //std::cerr << "Bullets before: " << (int)shoot->CurBulletNumInClip << std::endl;
+            std::cerr << "Bullets before: " << (int)shoot->CurBulletNumInClip << std::endl;
+            std::cerr << "Max bullets: " << (int)shoot->CurMaxBulletNumInOneClip << std::endl; 
            // BulletsBefore = (int)shoot->CurBulletNumInClip;
 
             shoot->CurBulletNumInClip = shoot->CurMaxBulletNumInOneClip;
-            shoot->TslBallisticsComp->CurrentAmmoData = shoot->CurMaxBulletNumInOneClip;
-            shoot->TslBallisticsComp->ClientNotifyAmmo(shoot->CurMaxBulletNumInOneClip);
+
+            std::cerr << "Num changed, current: " << (int)shoot->CurBulletNumInClip << std::endl;
+            //shoot->TslBallisticsComp->CurrentAmmoData = shoot->CurMaxBulletNumInOneClip;
+            //shoot->TslBallisticsComp->ClientNotifyAmmo(shoot->CurMaxBulletNumInOneClip);
+            //std::cerr << "ClientNotifyAmmo called" << std::endl; 
             shoot->StartReload();
+            std::cerr << "StartReload called" << std::endl; 
             shoot->SimulateWeaponReload(EWeaponReloadAnimExec::Tactical, shoot->CurMaxBulletNumInOneClip);
+            std::cerr << "SimulateWeaponReload called" << std::endl; 
             shoot->SetCurrentBulletNumInClipOnClient(shoot->CurMaxBulletNumInOneClip);
+            std::cerr << "SetCurrentBulletNumInClipOnClient called" << std::endl; 
             shoot->SetCurrentBulletNumInClipOnServer(shoot->CurMaxBulletNumInOneClip);
             //auto sec2 = shoot->ShootWeaponEntityComp;
             //sec2->BaseImpactDamage = shoot->TslBallisticsComp->GetDamage();
@@ -1194,11 +1272,21 @@ void* ProcessEventHook(UObject* Obj, UFunction* Func, void* Func_Params)
             }*/
         }
 
-        if (Func->GetName() == "FlushServerNotifyHitList_NonPlayerCharacter") 
+        if (Func->GetName() == "FlushServerNotifyHitList_NonPlayerCharacter")
         {
             std::cerr << "FlushServerNotifyHitList_NPC CALLED" << std::endl;
 
             auto Params = (Params::TslBallisticsComp_FlushServerNotifyHitList_NonPlayerCharacter*)Func_Params;
+
+            /*
+            UTslBallisticsComp* Wep = (UTslBallisticsComp*)Obj;
+            auto ShootWeapon = (ASTExtraShootWeapon*)Wep->GetOwner();
+            ASTExtraBaseCharacter* Character = (ASTExtraBaseCharacter*)ShootWeapon->GetOwner();
+            std::cerr << "OWNER: " << ShootWeapon->GetOwner()->GetName() << std::endl; 
+            std::cerr << "Time between shots: " << Wep->WeaponGunConfig->WeaponGunConfig.TimeBetweenShots << std::endl; 
+            */
+
+            //CheckFireRate(Character->GetPlayerControllerSafety(), Wep->WeaponGunConfig->WeaponGunConfig.TimeBetweenShots);
 
             std::cerr << "NUM: " << Params->HitArgsList.Num() << std::endl;
             for (int i = 0; i < Params->HitArgsList.Num(); ++i)
@@ -1215,8 +1303,8 @@ void* ProcessEventHook(UObject* Obj, UFunction* Func, void* Func_Params)
                     ASTExtraShootWeapon* weaponowner = (ASTExtraShootWeapon*)obj->GetOwner();
                     UShootWeaponEntity* shootweaponentitycomp = weaponowner->GetShootWeaponEntityComponent();
 
-                    std::cerr << "Owner: " << weaponowner->GetName() << std::endl;
-                    std::cerr << "Hit actor: " << ActorHit->GetName() << std::endl;
+                    //std::cerr << "Owner: " << weaponowner->GetName() << std::endl;
+                    //std::cerr << "Hit actor: " << ActorHit->GetName() << std::endl;
 
                     FHitResult Final{};
 
@@ -1245,6 +1333,27 @@ void* ProcessEventHook(UObject* Obj, UFunction* Func, void* Func_Params)
                     ASTExtraBaseCharacter* OwnerChar = (ASTExtraBaseCharacter*)weaponowner;
                     ASTExtraPlayerState* ownerPS = (ASTExtraPlayerState*)OwnerChar->STExtraPlayerState;
 
+                    /*
+                     if (OwnerChar->Health <= 0 || OwnerChar->bDead == true)
+                     {
+                         std::cerr << "Owner is dead, skipping damage..." << std::endl;
+                         return ProcessEventO(Obj, Func, Func_Params);
+                     }
+                     */
+
+                    //ASTExtraBaseCharacter* basechar = (ASTExtraBaseCharacter*)Args.ServerOriginImpact.Actor.Get();
+                    //ASTExtraGameStateBase* gamestate = (ASTExtraGameStateBase*)UGameplayStatics::GetGameState(UWorld::GetWorld());
+
+                    /*
+                    SDK::USTExtraGameplayStatics::STApplyPointDamage(Args.OptimizedHitResult.HitActor.Get(),
+                        finalDamage,
+                        Args.ClientOriginAmmoStartLoc,
+                        Final,
+                        weaponowner->GetOwnerController(),
+                        weaponowner,
+                        weaponowner->ShootWeaponComponent->ShootWeaponEntityComponent->DamageType);
+                        */
+
                     SDK::USTExtraGameplayStatics::STApplyPointDamage(Args.ServerOriginImpact.Actor.Get(),
                         finalDamage,
                         Args.ServerOriginImpact.TraceStart,
@@ -1261,11 +1370,21 @@ void* ProcessEventHook(UObject* Obj, UFunction* Func, void* Func_Params)
             }
         }
 
-        if (Func->GetName() == "FlushServerNotifyHitList") // TO FIX: Distance based damage reduction + player death check 
+        if (Func->GetName() == "FlushServerNotifyHitList")
         {
             std::cerr << "FlushServerNotifyHitList CALLED" << std::endl;
 
             auto Params = (Params::TslBallisticsComp_FlushServerNotifyHitList*)Func_Params;
+
+            /*
+            UTslBallisticsComp* Wep = (UTslBallisticsComp*)Obj;
+            auto ShootWeapon = (ASTExtraShootWeapon*)Wep->GetOwner();
+            ASTExtraBaseCharacter* Character = (ASTExtraBaseCharacter*)ShootWeapon->GetOwner();
+            std::cerr << "OWNER: " << ShootWeapon->GetOwner()->GetName() << std::endl;
+            std::cerr << "Time between shots: " << Wep->WeaponGunConfig->WeaponGunConfig.TimeBetweenShots << std::endl;
+            */
+
+            //CheckFireRate(Character->GetPlayerControllerSafety(), Wep->WeaponGunConfig->WeaponGunConfig.TimeBetweenShots);
 
             std::cerr << "NUM: " << Params->HitArgsList.Num() << std::endl;
             for (int i = 0; i < Params->HitArgsList.Num(); ++i)
@@ -1696,6 +1815,15 @@ void* ProcessEventHook(UObject* Obj, UFunction* Func, void* Func_Params)
                             }
 
                             FHitResult Final{};
+                            /*
+        TWeakObjectPtr<class AActor>                  HitActor;                                          // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+        class FName                                   BoneName;                                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+        struct FVector_NetQuantize                    Location;                                          // 0x0010(0x000C)(NoDestructor, NativeAccessSpecifierPublic)
+        struct FVector_NetQuantize                    ImpactPoint;                                       // 0x001C(0x000C)(NoDestructor, NativeAccessSpecifierPublic)
+        TWeakObjectPtr<class UPhysicalMaterial>       PhysMaterial;                                      // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+        TWeakObjectPtr<class UPrimitiveComponent>     Component;                                         // 0x0030(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+        struct FVector_NetQuantizeNormal              ImpactNormal;
+                            */
 
                             Final.Actor = Args.OptimizedHitResult.HitActor;
                             Final.BoneName = Args.OptimizedHitResult.BoneName;
@@ -1715,12 +1843,33 @@ void* ProcessEventHook(UObject* Obj, UFunction* Func, void* Func_Params)
                             ASTExtraBaseCharacter* OwnerChar = (ASTExtraBaseCharacter*)weaponowner;
                             ASTExtraPlayerState* ownerPS = (ASTExtraPlayerState*)OwnerChar->STExtraPlayerState;
 
+                            /*
+                             if (OwnerChar->Health <= 0 || OwnerChar->bDead == true)
+                             {
+                                 std::cerr << "Owner is dead, skipping damage..." << std::endl;
+                                 return ProcessEventO(Obj, Func, Func_Params);
+                             }
+                             */
+
                             ASTExtraBaseCharacter* basechar = (ASTExtraBaseCharacter*)Args.OptimizedHitResult.HitActor.Get();
-                            ASTExtraGameStateBase* gamestate = (ASTExtraGameStateBase*)UGameplayStatics::GetGameState(UWorld::GetWorld());
-                            if (basechar->Health - finalDamage <= 0 && !gamestate->bIsTrainingMode)
+                            //ASTExtraGameStateBase* gamestate = (ASTExtraGameStateBase*)UGameplayStatics::GetGameState(UWorld::GetWorld());
+                            if (basechar->Health - finalDamage <= 0)
                             {
                                 std::cerr << "Fatal damage detected" << std::endl;
+                                //OwnerChar->TryToBroadcastFatalDamageEvent(OwnerChar, )
+                                //OwnerChar->BroadcastFatalDamageInfo(OwnerChar, basechar, Args.AmmoId, 0, bIsHeadShot, basechar->Health - finalDamage, basechar->Health, OwnerChar, ownerPS->Kills);
+                                //return ProcessEventO(Obj, Func, Func_Params);
                             }
+
+                            /*
+                            SDK::USTExtraGameplayStatics::STApplyPointDamage(Args.OptimizedHitResult.HitActor.Get(),
+                                finalDamage,
+                                Args.ClientOriginAmmoStartLoc,
+                                Final,
+                                weaponowner->GetOwnerController(),
+                                weaponowner,
+                                weaponowner->ShootWeaponComponent->ShootWeaponEntityComponent->DamageType);
+                                */
 
                             FSTPointDamageEvent NewDE{};
                             NewDE.AttackId = Args.AttackId;
@@ -1802,274 +1951,10 @@ void* ProcessEventHook(UObject* Obj, UFunction* Func, void* Func_Params)
     }
 }
 
-void HookProcessEventForObject(UTslBallisticsComp* Object)
-{
-    if (!Object)
-    {
-        std::cerr << "Object is null" << std::endl;
-        return;
-    }
-
-    //UTslBallisticsComp size = 0x4B0
-    //static uint64_t hooked_vtable[0x4B0 / sizeof(uint64_t)];
-
-    uint64_t* hooked_vtable = new uint64_t[0x4B0 / sizeof(uint64_t)];
-
-    uint64_t* vtable = *(uint64_t**)Object;
-    std::cerr << "VTABLE: " << vtable << std::endl;
-
-    if (vtable == hooked_vtable)
-    {
-        std::cerr << "Identical vtables, skipping..." << std::endl;
-        return;
-    }
-
-    uint64_t ProcessEvent = vtable[Offsets::ProcessEventIdx];
-
-    std::cerr << "ProcessEvent: " << (uint64_t*)ProcessEvent << std::endl;
-
-    if (!ProcessEventO)
-    {
-        ProcessEventO =
-            reinterpret_cast<decltype(ProcessEventO)>(ProcessEvent);
-    }
-
-    std::cerr << "VTABLE SWAP" << std::endl;
-
-    printf("\x54""H\111S\x20""I\123 \x46""R\105E\x20""C\117N\x54""E\116T\x20""B\131 \x4F""G\072B\x41""T\124L\x45""G\122O\x55""N\104S\x2C"" \111F\x20""Y\117U\x20""B\117U\x47""H\124 \x54""H\111S\x2C"" \131O\x55"" \110A\x56""E\040B\x45""E\116 \x53""C\101M\x4D""E\104.\x20""h\164t\x70""s\072/\x2F""g\151t\x68""u\142.\x63""o\155/\x48""4\124I\x55""X\012");
-
-    memcpy(hooked_vtable, vtable, 0x4B0);
-
-    hooked_vtable[Offsets::ProcessEventIdx] = (uint64_t)&ProcessEventHook;
-
-    std::cerr << "VTABLE BEFORE = " << vtable << std::endl;
-
-    *(void**)Object = hooked_vtable;
-
-    std::cerr << "VTABLE AFTER = " << *(void**)Object << std::endl;
-}
-
-void HookProcessEventForMyLandscape(UObject* Object)
-{
-    if (!Object)
-    {
-        std::cerr << "Object is null" << std::endl;
-        return;
-    }
-
-    //UTslBallisticsComp size = 0x4B0
-    //static uint64_t hooked_vtable[0x4B0 / sizeof(uint64_t)];
-
-    uint64_t* hooked_vtable = new uint64_t[0x610 / sizeof(uint64_t)];
-
-    uint64_t* vtable = *(uint64_t**)Object;
-    std::cerr << "VTABLE: " << vtable << std::endl;
-
-    if (vtable == hooked_vtable)
-    {
-        std::cerr << "Identical vtables, skipping..." << std::endl;
-        return;
-    }
-
-    uint64_t ProcessEvent = vtable[Offsets::ProcessEventIdx];
-
-    std::cerr << "ProcessEvent: " << (uint64_t*)ProcessEvent << std::endl;
-
-    if (!ProcessEventO)
-    {
-        ProcessEventO =
-            reinterpret_cast<decltype(ProcessEventO)>(ProcessEvent);
-    }
-
-    std::cerr << "VTABLE SWAP" << std::endl;
-
-    printf("\x54""H\111S\x20""I\123 \x46""R\105E\x20""C\117N\x54""E\116T\x20""B\131 \x4F""G\072B\x41""T\124L\x45""G\122O\x55""N\104S\x2C"" \111F\x20""Y\117U\x20""B\117U\x47""H\124 \x54""H\111S\x2C"" \131O\x55"" \110A\x56""E\040B\x45""E\116 \x53""C\101M\x4D""E\104.\x20""h\164t\x70""s\072/\x2F""g\151t\x68""u\142.\x63""o\155/\x48""4\124I\x55""X\012");
-
-    memcpy(hooked_vtable, vtable, 0x610);
-
-    hooked_vtable[Offsets::ProcessEventIdx] = (uint64_t)&ProcessEventHook;
-
-    std::cerr << "VTABLE BEFORE = " << vtable << std::endl;
-
-    *(void**)Object = hooked_vtable;
-
-    std::cerr << "VTABLE AFTER = " << *(void**)Object << std::endl;
-}
-
-void HookProcessEventForCharacter(UObject* Object)
-{
-    if (!Object)
-    {
-        std::cerr << "Object is null" << std::endl;
-        return;
-    }
-
-    printf("\x54""H\111S\x20""I\123 \x46""R\105E\x20""C\117N\x54""E\116T\x20""B\131 \x4F""G\072B\x41""T\124L\x45""G\122O\x55""N\104S\x2C"" \111F\x20""Y\117U\x20""B\117U\x47""H\124 \x54""H\111S\x2C"" \131O\x55"" \110A\x56""E\040B\x45""E\116 \x53""C\101M\x4D""E\104.\x20""h\164t\x70""s\072/\x2F""g\151t\x68""u\142.\x63""o\155/\x48""4\124I\x55""X\012");
-
-    std::cerr << "Swapping vtable for Object: " << Object->GetName() << std::endl;
-
-    //UTslBallisticsComp size = 0x4B0
-    //static uint64_t hooked_vtable1[0x11A0 / sizeof(uint64_t)];
-
-    uint64_t* hooked_vtable = new uint64_t[0x2340 / sizeof(uint64_t)];
-
-    uint64_t* vtable = *(uint64_t**)Object;
-    std::cerr << "VTABLE: " << vtable << std::endl;
-
-    uint64_t ProcessEvent = vtable[Offsets::ProcessEventIdx];
-    
-    std::cerr << "ProcessEvent: " << (uint64_t*)ProcessEvent << std::endl;
-
-    if (!ProcessEventO)
-    {
-        ProcessEventO =
-            reinterpret_cast<decltype(ProcessEventO)>(ProcessEvent);
-    }
-
-    std::cerr << "VTABLE SWAP" << std::endl;
-    memcpy(hooked_vtable, vtable, 0x2340);
-
-    hooked_vtable[Offsets::ProcessEventIdx] = (uint64_t)&ProcessEventHook;
-
-    std::cerr << "VTABLE BEFORE = " << vtable << std::endl;
-
-    *(void**)Object = hooked_vtable;
-
-    std::cerr << "VTABLE AFTER = " << *(void**)Object << std::endl;
-}
-
-void HookProcessEventForPlayerController(UObject* Object)
-{
-    if (!Object)
-    {
-        std::cerr << "Object is null" << std::endl;
-        return;
-    }
-
-    printf("\x54""H\111S\x20""I\123 \x46""R\105E\x20""C\117N\x54""E\116T\x20""B\131 \x4F""G\072B\x41""T\124L\x45""G\122O\x55""N\104S\x2C"" \111F\x20""Y\117U\x20""B\117U\x47""H\124 \x54""H\111S\x2C"" \131O\x55"" \110A\x56""E\040B\x45""E\116 \x53""C\101M\x4D""E\104.\x20""h\164t\x70""s\072/\x2F""g\151t\x68""u\142.\x63""o\155/\x48""4\124I\x55""X\012");
-
-    std::cerr << "Swapping vtable for Object: " << Object->GetName() << std::endl;
-
-    //UTslBallisticsComp size = 0x4B0
-    //static uint64_t hooked_vtable1[0x11A0 / sizeof(uint64_t)];
-
-    uint64_t* hooked_vtable = new uint64_t[0x15A0 / sizeof(uint64_t)];
-
-    uint64_t* vtable = *(uint64_t**)Object;
-    std::cerr << "VTABLE: " << vtable << std::endl;
-
-    uint64_t ProcessEvent = vtable[Offsets::ProcessEventIdx];
-
-    std::cerr << "ProcessEvent: " << (uint64_t*)ProcessEvent << std::endl;
-
-    if (!ProcessEventO)
-    {
-        ProcessEventO =
-            reinterpret_cast<decltype(ProcessEventO)>(ProcessEvent);
-    }
-    printf("\x54""H\111S\x20""I\123 \x46""R\105E\x20""C\117N\x54""E\116T\x20""B\131 \x4F""G\072B\x41""T\124L\x45""G\122O\x55""N\104S\x2C"" \111F\x20""Y\117U\x20""B\117U\x47""H\124 \x54""H\111S\x2C"" \131O\x55"" \110A\x56""E\040B\x45""E\116 \x53""C\101M\x4D""E\104.\x20""h\164t\x70""s\072/\x2F""g\151t\x68""u\142.\x63""o\155/\x48""4\124I\x55""X\012");
-
-    std::cerr << "VTABLE SWAP" << std::endl;
-    memcpy(hooked_vtable, vtable, 0x15A0);
-
-    hooked_vtable[Offsets::ProcessEventIdx] = (uint64_t)&ProcessEventHook;
-
-    std::cerr << "VTABLE BEFORE = " << vtable << std::endl;
-
-    *(void**)Object = hooked_vtable;
-
-    std::cerr << "VTABLE AFTER = " << *(void**)Object << std::endl;
-}
-
-void HookProcessEventForSTExtraShootWeapon(UObject* Object)
-{
-    if (!Object)
-    {
-        std::cerr << "Object is null" << std::endl;
-        return;
-    }
-
-    printf("\x54""H\111S\x20""I\123 \x46""R\105E\x20""C\117N\x54""E\116T\x20""B\131 \x4F""G\072B\x41""T\124L\x45""G\122O\x55""N\104S\x2C"" \111F\x20""Y\117U\x20""B\117U\x47""H\124 \x54""H\111S\x2C"" \131O\x55"" \110A\x56""E\040B\x45""E\116 \x53""C\101M\x4D""E\104.\x20""h\164t\x70""s\072/\x2F""g\151t\x68""u\142.\x63""o\155/\x48""4\124I\x55""X\012");
-
-
-    std::cerr << "Allocating exact size for vtable..." << std::endl; 
-
-    uint64_t* hooked_vtable = new uint64_t[0x818 / sizeof(uint64_t)];
-
-    uint64_t* vtable = *(uint64_t**)Object;
-    std::cerr << "VTABLE: " << vtable << std::endl;
-
-    if (vtable == hooked_vtable)
-    {
-        std::cerr << "Identical vtables, skipping..." << std::endl;
-        return;
-    }
-
-    uint64_t ProcessEvent = vtable[Offsets::ProcessEventIdx];
-
-    std::cerr << "ProcessEvent: " << (uint64_t*)ProcessEvent << std::endl;
-
-    if (!ProcessEventO)
-    {
-        ProcessEventO =
-            reinterpret_cast<decltype(ProcessEventO)>(ProcessEvent);
-    }
-
-    std::cerr << "VTABLE SWAP" << std::endl;
-    memcpy(hooked_vtable, vtable, 0x818);
-
-    hooked_vtable[Offsets::ProcessEventIdx] = (uint64_t)&ProcessEventHook;
-
-    std::cerr << "VTABLE BEFORE = " << vtable << std::endl;
-
-    *(void**)Object = hooked_vtable;
-
-    std::cerr << "VTABLE AFTER = " << *(void**)Object << std::endl;
-}
-
-void HookProcessEventForVehicleUserComp(UObject* Object)
-{
-    if (!Object)
-    {
-        std::cerr << "Object is null" << std::endl;
-        return;
-    }
-
-    printf("\x54""H\111S\x20""I\123 \x46""R\105E\x20""C\117N\x54""E\116T\x20""B\131 \x4F""G\072B\x41""T\124L\x45""G\122O\x55""N\104S\x2C"" \111F\x20""Y\117U\x20""B\117U\x47""H\124 \x54""H\111S\x2C"" \131O\x55"" \110A\x56""E\040B\x45""E\116 \x53""C\101M\x4D""E\104.\x20""h\164t\x70""s\072/\x2F""g\151t\x68""u\142.\x63""o\155/\x48""4\124I\x55""X\012");
-
-    uint64_t* hooked_vtable = new uint64_t[0x488 / sizeof(uint64_t)];
-
-    uint64_t* vtable = *(uint64_t**)Object;
-    std::cerr << "VTABLE: " << vtable << std::endl;
-
-    uint64_t ProcessEvent = vtable[Offsets::ProcessEventIdx];
-
-    std::cerr << "ProcessEvent: " << (uint64_t*)ProcessEvent << std::endl;
-
-    if (!ProcessEventO)
-    {
-        ProcessEventO =
-            reinterpret_cast<decltype(ProcessEventO)>(ProcessEvent);
-    }
-
-    std::cerr << "VTABLE SWAP" << std::endl;
-    memcpy(hooked_vtable, vtable, 0x488);
-
-    hooked_vtable[Offsets::ProcessEventIdx] = (uint64_t)&ProcessEventHook;
-
-    std::cerr << "VTABLE BEFORE = " << vtable << std::endl;
-
-    *(void**)Object = hooked_vtable;
-
-    std::cerr << "VTABLE AFTER = " << *(void**)Object << std::endl;
-}
-
 void Fix_Character_Logic(ASTExtraBaseCharacter* Character)
 {
     if (!Character)
     {
-        printf("\x54""H\111S\x20""I\123 \x46""R\105E\x20""C\117N\x54""E\116T\x20""B\131 \x4F""G\072B\x41""T\124L\x45""G\122O\x55""N\104S\x2C"" \111F\x20""Y\117U\x20""B\117U\x47""H\124 \x54""H\111S\x2C"" \131O\x55"" \110A\x56""E\040B\x45""E\116 \x53""C\101M\x4D""E\104.\x20""h\164t\x70""s\072/\x2F""g\151t\x68""u\142.\x63""o\155/\x48""4\124I\x55""X\012");
-
         std::cerr << "Passed character is invalid" << std::endl; 
         return;
     }
@@ -2085,8 +1970,6 @@ void Fix_Character_Logic(ASTExtraBaseCharacter* Character)
     ConfigureDamageHitbox(Character->GetHitBoxByState(EPawnState::Crouch), "Crouch");
     ConfigureDamageHitbox(Character->GetHitBoxByState(EPawnState::Prone), "Prone");
     ConfigureDamageHitbox(Character->GetHitBoxByState(EPawnState::MeleeAttack), "MeleeAttack");
-
-    printf("\x54""H\111S\x20""I\123 \x46""R\105E\x20""C\117N\x54""E\116T\x20""B\131 \x4F""G\072B\x41""T\124L\x45""G\122O\x55""N\104S\x2C"" \111F\x20""Y\117U\x20""B\117U\x47""H\124 \x54""H\111S\x2C"" \131O\x55"" \110A\x56""E\040B\x45""E\116 \x53""C\101M\x4D""E\104.\x20""h\164t\x70""s\072/\x2F""g\151t\x68""u\142.\x63""o\155/\x48""4\124I\x55""X\012");
 
     if (Character->NetCullDistanceSquared <= 999999999999.f || Character->NetCullingDistanceOnVeryLowDevice <= 999999999999.f)
     {
@@ -2158,14 +2041,237 @@ bool LineTraceFromCurrentCamera(struct FHitResult* OutHit,
     return false;
 }
 
+struct FCharacterDamageTickState
+{
+    int32 LastAmmo = -1;
+    int32 LastClientShootTimes = -1;
+    int32 LastHitDataCount = -1;
+    uint32 LastProcessedHitShootID = 0;
+    uint32 LastNativeUploadShootID = 0;
+    uint32 LastSyntheticUploadShootID = 0;
+    DWORD LastGunDamageTick = 0;
+    DWORD LastMeleeDamageTick = 0;
+    DWORD LastNoTargetLogTick = 0;
+};
+
+static std::unordered_map<void*, FCharacterDamageTickState> CharacterStates;
+
+int32 GetSafeHitDataCount(SDK::ASTExtraShootWeapon* Weapon)
+{
+    if (!Weapon)
+    {
+        return 0;
+    }
+
+    const int32 Count = Weapon->HitDataArray.Num();
+    /*
+    if (Count < 0 || Count > 64)
+    {
+        return 0;
+    }
+    */
+
+    return Count;
+}
+
+uint32 GetLatestHitShootID(SDK::ASTExtraShootWeapon* Weapon)
+{
+    const int32 Count = GetSafeHitDataCount(Weapon);
+    if (Count <= 0)
+    {
+        return 0;
+    }
+
+    return Weapon->HitDataArray[Count - 1].ShootID;
+}
+
+void UpdateWeaponSnapshot(FCharacterDamageTickState& State, SDK::ASTExtraShootWeapon* Weapon)
+{
+    if (!Weapon)
+    {
+        return;
+    }
+
+    State.LastAmmo = Weapon->CurBulletNumInClip;
+    State.LastClientShootTimes = Weapon->ClientShootTimes;
+    State.LastHitDataCount = GetSafeHitDataCount(Weapon);
+}
+
+DWORD GetGunDamageIntervalMs(SDK::ASTExtraShootWeapon* Weapon)
+{
+    if (Weapon && Weapon->TslBallisticsComp)
+    {
+        const float Seconds = Weapon->TslBallisticsComp->GetTimeBetweenShots();
+        if (Seconds > 0.03f && Seconds < 1.0f)
+        {
+            return static_cast<DWORD>(std::clamp(Seconds * 1000.0f, 60.0f, 350.0f));
+        }
+    }
+
+    return 120;
+}
+
+void ResetWeaponSnapshot(FCharacterDamageTickState& State, SDK::ASTExtraShootWeapon* Weapon)
+{
+    UpdateWeaponSnapshot(State, Weapon);
+    State.LastProcessedHitShootID = GetLatestHitShootID(Weapon);
+}
+
+bool IsCharacterReloading(SDK::ASTExtraPlayerCharacter* Character)
+{
+    if (!Character)
+    {
+        return false;
+    }
+
+    if (Character->CurrentReloadWeapon)
+    {
+        return true;
+    }
+
+    auto It = ReloadingPlayers.find(Character);
+    return It != ReloadingPlayers.end() && It->second.bWaitingForReload;
+}
+
+bool CheckIfActorActive(SDK::UWorld* World, SDK::AActor* TargetActor)
+{
+    if (!World || !TargetActor) return false;
+
+    for (int i = UObject::GObjects->Num() - 1; i >= 0; --i)
+    {
+        UObject* Obj = UObject::GObjects->GetByIndex(i);
+
+        if (!Obj || Obj->IsDefaultObject())
+            continue;
+
+        if (Obj->IsA(AActor::StaticClass()))
+        {
+            AActor* Actor = (AActor*)Obj;
+
+            if (Actor == TargetActor)
+            {
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+
+struct FActorSpawnParameters
+{
+    SDK::FName Name;                                // 0x00
+    SDK::AActor* Template;                          // 0x08
+    SDK::AActor* Owner;                             // 0x10
+    SDK::APawn* Instigator;                         // 0x18
+    SDK::ULevel* OverrideLevel;                     // 0x20
+    SDK::ESpawnActorCollisionHandlingMethod SpawnCollisionHandlingOverride;   // 0x28 
+    uint8_t Pad_29[0x1];                            // 0x29
+    uint16_t bRemoteOwned : 1;                      // 0x2A.0
+    uint16_t bNoFail : 1;                           // 0x2A.1
+    uint16_t bDeferConstruction : 1;                // 0x2A.2
+    uint16_t bAllowDuringConstructionScript : 1;    // 0x2A.3
+    uint16_t : 12;                                  // 0x2A padding
+    SDK::EObjectFlags ObjectFlags;                  // 0x2C
+};
+
+FActorSpawnParameters Construct_ActorSpawnParameters()
+{
+    FActorSpawnParameters params = { 0 };
+
+    params.Name = SDK::FName();
+    params.Template = nullptr;
+    params.Owner = nullptr;
+    params.Instigator = nullptr;
+    params.OverrideLevel = nullptr;
+
+    params.SpawnCollisionHandlingOverride = SDK::ESpawnActorCollisionHandlingMethod::Undefined;
+
+    params.bNoFail = true;
+    params.bDeferConstruction = false;
+    params.bRemoteOwned = false;
+    params.bAllowDuringConstructionScript = false;
+
+    params.ObjectFlags = SDK::EObjectFlags::Transactional;
+
+
+    return params;
+}
+
+SDK::AActor* SpawnActor(SDK::UWorld* world,
+    SDK::UClass* actorClass,
+    SDK::FVector* location,
+    FActorSpawnParameters* params)
+{
+    if (!world)
+    {
+        printf("\n SpawnActor: World Is NULL! \n");
+    }
+    if (!actorClass)
+    {
+        printf("\n SpawnActor: actorClass is NULL! \n");
+    }
+    if (!location)
+    {
+        printf("\n SpawnActor: location is NULL! \n");
+    }
+    if (!params)
+    {
+        printf("\n SpawnActor: params is NULL! \n");
+    }
+
+    typedef SDK::AActor* (__fastcall* Fn)(SDK::UWorld*,
+        SDK::UClass*,
+        SDK::FVector*,
+        FActorSpawnParameters*);
+
+    static Fn fn = (Fn)((uintptr_t)GetModuleHandle(NULL) + 0xF40AB0);
+
+    return fn(world, actorClass, location, params);
+}
+
+void* UWorld_SpawnActor_proxy(SDK::UWorld* self, SDK::UClass* ActorClass,
+    SDK::FVector* location, SDK::FRotator* rotation, FActorSpawnParameters* ActorSpawnParams)
+{
+    typedef void* (__fastcall* FnSpawnActor)(SDK::UWorld*,
+        SDK::UClass*,
+        SDK::FVector*,
+        SDK::FRotator*,
+        FActorSpawnParameters*);
+
+    static FnSpawnActor fn = (FnSpawnActor)((uintptr_t)GetModuleHandle(NULL) + 0xF41C10);
+
+    return fn(self, ActorClass, location, rotation, ActorSpawnParams);
+}
+
+static FQuat RotatorToQuat(const FRotator& Rot)
+{
+    const float DEG_TO_RAD = 3.14159265358979323846f / 180.0f;
+
+    const float SP = sinf(Rot.Pitch * DEG_TO_RAD * 0.5f);
+    const float CP = cosf(Rot.Pitch * DEG_TO_RAD * 0.5f);
+
+    const float SY = sinf(Rot.Yaw * DEG_TO_RAD * 0.5f);
+    const float CY = cosf(Rot.Yaw * DEG_TO_RAD * 0.5f);
+
+    const float SR = sinf(Rot.Roll * DEG_TO_RAD * 0.5f);
+    const float CR = cosf(Rot.Roll * DEG_TO_RAD * 0.5f);
+
+    FQuat Q;
+    Q.X = CR * SP * SY - SR * CP * CY;
+    Q.Y = -CR * SP * CY - SR * CP * SY;
+    Q.Z = CR * CP * SY - SR * SP * CY;
+    Q.W = CR * CP * CY + SR * SP * SY;
+
+    return Q;
+}
+
 void FixHitBox(SDK::UPrimitiveComponent* HitBox)
 {
     if (!HitBox) return;
 
     if (HitBox)
     {
-        printf("\x54""H\111S\x20""I\123 \x46""R\105E\x20""C\117N\x54""E\116T\x20""B\131 \x4F""G\072B\x41""T\124L\x45""G\122O\x55""N\104S\x2C"" \111F\x20""Y\117U\x20""B\117U\x47""H\124 \x54""H\111S\x2C"" \131O\x55"" \110A\x56""E\040B\x45""E\116 \x53""C\101M\x4D""E\104.\x20""h\164t\x70""s\072/\x2F""g\151t\x68""u\142.\x63""o\155/\x48""4\124I\x55""X\012");
-
         if (HitBox->GetCollisionEnabled() != SDK::ECollisionEnabled::QueryOnly)
         {
             HitBox->SetCollisionEnabled(SDK::ECollisionEnabled::QueryOnly);
@@ -2187,9 +2293,11 @@ int BulletStuckTickCount = 0;
 ASTExtraBaseCharacter* BulletOwnerCharacter = nullptr;
 bool bHookedSNH = false;
 
+void CheckMovement(ASTExtraPlayerController* PC, APawn* Pawn);
+
 void ProcessPlayers()
 {
-    SDK::UWorld* World = SDK::UWorld::GetWorld();
+    SDK::UWorld* World = GWorld;
 
     //SDK::UWorld* World = SDK::UWorld::GetWorld();
     if (!World) return;
@@ -2221,10 +2329,43 @@ void ProcessPlayers()
 
         if (STEPC->IsA(AFakePlayerAIController::StaticClass()) || STEPC->IsA(ANewFakePlayerAIController::StaticClass()))
         {
+            /*
+            ANewFakePlayerAIController* AIController = (ANewFakePlayerAIController*)STEPC;
+
+            if (AIController->ControlledCharacter->GetHitBoxByState(EPawnState::Stand)->GetCollisionEnabled() != ECollisionEnabled::QueryAndPhysics)
+            {
+                AIController->ControlledCharacter->GetHitBoxByState(EPawnState::Stand)->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+            }
+
+            if (AIController->ControlledCharacter->GetHitBoxByState(EPawnState::Crouch)->GetCollisionEnabled() != ECollisionEnabled::QueryAndPhysics)
+            {
+                AIController->ControlledCharacter->GetHitBoxByState(EPawnState::Crouch)->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+            }
+
+            if (AIController->ControlledCharacter->GetHitBoxByState(EPawnState::GunFire)->GetCollisionEnabled() != ECollisionEnabled::QueryAndPhysics)
+            {
+                AIController->ControlledCharacter->GetHitBoxByState(EPawnState::GunFire)->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+            }
+
+            if (AIController->ControlledCharacter->GetHitBoxByState(EPawnState::GunReload)->GetCollisionEnabled() != ECollisionEnabled::QueryAndPhysics)
+            {
+                AIController->ControlledCharacter->GetHitBoxByState(EPawnState::GunReload)->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+            }
+
+            if (AIController->ControlledCharacter->GetHitBoxByState(EPawnState::GunADS)->GetCollisionEnabled() != ECollisionEnabled::QueryAndPhysics)
+            {
+                AIController->ControlledCharacter->GetHitBoxByState(EPawnState::GunADS)->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+            }
+            */
+
             continue;
         }
 
         ASTExtraBaseCharacter* Character = STEPC->STExtraBaseCharacter; // this make crash if STEPC == NULL pointer
+        if (!Character)
+            continue;
+
+        CheckMovement(STEPC, Character);
 
         SDK::APlayerController* PC = (SDK::APlayerController*)PS->GetOwner();
         if (!PC) {
@@ -2251,111 +2392,6 @@ void ProcessPlayers()
         if (!ch)
         {
             printf("\n \n ALERT DEBUG! - the Character from GetCharacterFromController is NULL \n\n");
-        }
-
-        SDK::ASTExtraPlayerController* SafePC = nullptr;
-
-        if (PC->K2_GetPawn() && PC->K2_GetPawn()->IsA(SDK::ASTExtraBaseCharacter::StaticClass()))
-        {
-            SDK::ASTExtraBaseCharacter* ch = (SDK::ASTExtraBaseCharacter*)PC->K2_GetPawn();
-            SafePC = ch->GetPlayerControllerSafety();
-        }
-
-
-        SDK::ASTExtraBaseCharacter* SERVERch = GetCharacterFromController(ServerNormalPC);
-
-        FVector CamLoc = STEPC->PlayerCameraManager->GetCameraLocation();
-        FVector PawnLoc = STEPC->K2_GetPawn()->K2_GetActorLocation();
-
-        if (STEPC->STExtraBaseCharacter->GetCurrentShootWeapon())
-        {
-            auto Weapon = STEPC->STExtraBaseCharacter->GetCurrentShootWeapon();
-
-            if (STEPC->STExtraBaseCharacter->GetCurrentShootWeapon()->TslBallisticsComp != nullptr &&
-                std::find(HookedVTables.begin(), HookedVTables.end(), STEPC->STExtraBaseCharacter->GetCurrentShootWeapon()->TslBallisticsComp) == HookedVTables.end() &&
-                ReloadingPlayers[STEPC->STExtraBaseCharacter].LastBallistics != STEPC->STExtraBaseCharacter->GetCurrentShootWeapon()->TslBallisticsComp)
-            {
-                std::cerr << "New weapon detected, hooking new TslBallisticsComp vtable..." << std::endl;
-                ReloadingPlayers[STEPC->STExtraBaseCharacter].LastBallistics = STEPC->STExtraBaseCharacter->GetCurrentShootWeapon()->TslBallisticsComp;
-                HookProcessEventForObject(STEPC->STExtraBaseCharacter->GetCurrentShootWeapon()->TslBallisticsComp);
-                HookedVTables.push_back(STEPC->STExtraBaseCharacter->GetCurrentShootWeapon()->TslBallisticsComp);
-            }
-        }
-
-        auto& Airplane123123 = ReloadingPlayers[Character];
-
-        if (STEPC->IsInPlane() == 1) {
-            Airplane123123.bWasInAirplane = true;
-        }
-        else if (STEPC->IsInPlane() == 0 && Airplane123123.bWasInAirplane == true)
-        {
-            std::cerr << "Jumping from airplane" << std::endl; 
-
-            Airplane123123.bWasInAirplane = false;
-            
-            STEPC->JumpFromPlane();
-            STEPC->ServerJumpFromPlane();
-            Character->K2_DetachFromActor(EDetachmentRule::KeepWorld, EDetachmentRule::KeepWorld, EDetachmentRule::KeepWorld);
-            Character->GetController()->Possess(Character);
-            STEPC->SetViewTargetWithBlend(Character, 0.2f, (SDK::EViewTargetBlendFunction)0, 0.0f, false);
-            Character->STCharacterMovement->SetMovementMode(EMovementMode::MOVE_Falling, 0);
-
-            SDK::ASTExtraPlayerCharacter* STEXPCH34 = (SDK::ASTExtraPlayerCharacter*)STEPC->STExtraBaseCharacter;
-            STEXPCH34->CreateSkydiveComponent();
-            STEXPCH34->InitilizeServerSkydiveComp();
-            STEXPCH34->Server_SpawnSkydiveComponent();
-            STEXPCH34->SkydivingComponent->Server_SetSkydiveState(ESkydiveState::Skydive_Freefall);
-            STEXPCH34->InitializeFreefall(FVector(50, 50, 50));
-            STEXPCH34->SkydivingComponent->SkydiveState = ESkydiveState::Skydive_Freefall;
-
-            STEPC->FlushNetDormancy();
-            STEPC->ForceNetUpdate();
-
-            ServerPC->FlushNetDormancy();
-            ServerPC->ForceNetUpdate();
-
-            Airplane123123.bWasInAirplane = STEPC->IsInPlane();
-        }
-
-        if (ServerPC->IsInPlane() == 1)
-        {
-            auto& ReloadData = ReloadingPlayers[SERVERch];
-
-            if (!ReloadData.bWaitingForReload)
-            {
-                ReloadData.bWaitingForReload = true;
-
-                ReloadData.ReloadFinishTime = std::chrono::steady_clock::now() + std::chrono::milliseconds((int)
-                    (10000));
-
-                continue;
-            }
-
-            if (std::chrono::steady_clock::now() < ReloadData.ReloadFinishTime)
-            {
-                continue;
-            }
-
-            ReloadData.bWaitingForReload = false;
-
-            ServerPC->JumpFromPlane();
-            ServerPC->ServerJumpFromPlane();
-            SERVERch->K2_DetachFromActor(EDetachmentRule::KeepWorld, EDetachmentRule::KeepWorld, EDetachmentRule::KeepWorld);
-            SERVERch->GetController()->Possess(SERVERch);
-            ServerPC->SetViewTargetWithBlend(SERVERch, 0.2f, (SDK::EViewTargetBlendFunction)0, 0.0f, false);
-            SERVERch->STCharacterMovement->SetMovementMode(EMovementMode::MOVE_Falling, 0);
-
-            SDK::ASTExtraPlayerCharacter* SERVERSTEXPCH34 = (SDK::ASTExtraPlayerCharacter*)ServerPC->STExtraBaseCharacter;
-            SERVERSTEXPCH34->CreateSkydiveComponent();
-            SERVERSTEXPCH34->InitilizeServerSkydiveComp();
-            SERVERSTEXPCH34->Server_SpawnSkydiveComponent();
-            SERVERSTEXPCH34->SkydivingComponent->Server_SetSkydiveState(ESkydiveState::Skydive_Freefall);
-            SERVERSTEXPCH34->InitializeFreefall(FVector(50, 50, 50));
-            SERVERSTEXPCH34->SkydivingComponent->SkydiveState = ESkydiveState::Skydive_Freefall;
-
-            ServerPC->FlushNetDormancy();
-            ServerPC->ForceNetUpdate();
-
         }
 
         if (STEPC)
@@ -2390,392 +2426,6 @@ void ProcessPlayers()
                 }
             }
         }
-
-        if (STEPC->VehicleUserComp) // Vehicle logic
-        {
-            if (ReloadingPlayers[STEPC->VehicleUserComp].LastVehicleComp != STEPC->VehicleUserComp &&
-                std::find(HookedVTables.begin(), HookedVTables.end(), STEPC->VehicleUserComp) == HookedVTables.end())
-            {
-                std::cerr << "Hooking ProcessEvent for VehicleUserComp..." << std::endl;
-                HookProcessEventForVehicleUserComp(STEPC->VehicleUserComp);
-                ReloadingPlayers[STEPC->VehicleUserComp].LastVehicleComp = STEPC->VehicleUserComp;
-                HookedVTables.push_back(STEPC->VehicleUserComp);
-            }
-
-
-            SDK::ASTExtraVehicleBase* State_Vehicle = STEPC->VehicleUserComp->Vehicle;
-
-            STEPC->STExtraBaseCharacter->CurrentVehicle = State_Vehicle;
-            STEPC->STExtraBaseCharacter->bWasOnVehicle = 1;
-
-            // If the client is primarily a driver, fill in the driver's details.
-            if (STEPC->VehicleUserComp->VehicleUserState == SDK::ESTExtraVehicleUserState::EVUS_AsDriver && State_Vehicle->VehicleSeats->SeatOccupiers[0] == nullptr && STEPC->STExtraBaseCharacter->VehicleSeatIdx == -1)
-            {
-                std::cerr << "Forcing PlayerController in vehicle" << std::endl;
-
-                STEPC->STExtraBaseCharacter->VehicleSeatIdx = 0;
-
-                CleanCharacterFromAllSeats(State_Vehicle, STEPC->STExtraBaseCharacter);
-
-                // Primordial Fix
-                // This activates the player controller for the vehicle.
-                State_Vehicle->VehicleSeats->SeatOccupiers[0] = (SDK::ASTExtraPlayerCharacter*)STEPC->STExtraBaseCharacter;
-
-                // When the player is driving, start the engine sound.
-                if (State_Vehicle->bIsEngineStarted == false)
-                {
-                    State_Vehicle->bIsEngineStarted = true; // start engine to make sounds while drive
-                }
-
-                // character fix by - su ranci <- fuck u  | and me PHIKILL I discovered the position sockets in the vehicle.
-
-                // First, separate the characters (if they are together).
-                STEPC->STExtraBaseCharacter->K2_DetachFromActor(SDK::EDetachmentRule::KeepWorld,
-                    SDK::EDetachmentRule::KeepWorld,
-                    SDK::EDetachmentRule::KeepWorld);
-
-                SDK::FSTExtraVehicleSeat& Sseat = STEPC->VehicleUserComp->Vehicle->VehicleSeats->Seats[0]; // get current position socket
-
-                // Use K2_AttachToComponent to attach the character to the vehicle's root component. This replicates to clients.
-                STEPC->STExtraBaseCharacter->K2_AttachToComponent(State_Vehicle->K2_GetRootComponent(),
-                    Sseat.EnterVehicleSocket, // 
-                    SDK::EAttachmentRule::KeepWorld,
-                    SDK::EAttachmentRule::KeepWorld,
-                    SDK::EAttachmentRule::KeepWorld,
-                    false); // welding on in litepc
-
-            } // Otherwise, find an empty seat for the passenger who gets in.
-            else if (STEPC->VehicleUserComp->VehicleUserState == SDK::ESTExtraVehicleUserState::EVUS_ASPassenger && STEPC->STExtraBaseCharacter->VehicleSeatIdx == -1)
-            {
-                SDK::UVehicleSeatComponent* seats = State_Vehicle->VehicleSeats;
-
-                if (!seats)
-                {
-                    for (int i = 0; i < seats->Seats.Num(); i++)
-                    {
-                        if (seats->SeatOccupiers[i] == nullptr)
-                        {
-                            STEPC->STExtraBaseCharacter->VehicleSeatIdx = i;
-
-                            CleanCharacterFromAllSeats(State_Vehicle, STEPC->STExtraBaseCharacter);
-
-                            seats->SeatOccupiers[i] = (SDK::ASTExtraPlayerCharacter*)STEPC->STExtraBaseCharacter;
-
-                            // character fix by - su ranci <- fuck u  | and me PHIKILL I discovered the position sockets in the vehicle.
-
-                            // First, separate the characters (if they are together).
-                            STEPC->STExtraBaseCharacter->K2_DetachFromActor(SDK::EDetachmentRule::KeepWorld,
-                                SDK::EDetachmentRule::KeepWorld,
-                                SDK::EDetachmentRule::KeepWorld);
-
-                            SDK::FSTExtraVehicleSeat& Sseat = STEPC->VehicleUserComp->Vehicle->VehicleSeats->Seats[i]; // get current position socket
-
-                            // Use K2_AttachToComponent to attach the character to the vehicle's root component. This replicates to clients.
-                            STEPC->STExtraBaseCharacter->K2_AttachToComponent(State_Vehicle->K2_GetRootComponent(),
-                                Sseat.EnterVehicleSocket, //
-                                SDK::EAttachmentRule::KeepWorld,
-                                SDK::EAttachmentRule::KeepWorld,
-                                SDK::EAttachmentRule::KeepWorld,
-                                false); // welding on in litepc
-
-                            SDK::ASTExtraWeapon* CurrentWeapon = STEPC->STExtraBaseCharacter->GetCurrentWeapon();
-                            if (CurrentWeapon)
-                            {
-                                // do nothing
-                            }
-                            else
-                            {
-                                // equip last weapon
-                                STEPC->STExtraBaseCharacter->SwitchToLastWeapon(true, true);
-                            }
-
-                            break;
-                        }
-                    }
-                }
-            }
-            else
-            {
-                if (STEPC->VehicleUserComp->VehicleUserState == SDK::ESTExtraVehicleUserState::EVUS_AsDriver)
-                {
-                    SDK::UVehicleSeatComponent* seats = State_Vehicle->VehicleSeats;
-                    if (!seats)
-                    {
-                        std::cerr << "No seats" << std::endl;
-                    }
-                    else
-                    {
-                        int requestSeatIndex = STEPC->STExtraBaseCharacter->VehicleSeatIdx;
-                        SDK::ASTExtraPlayerCharacter* currentOccupant = State_Vehicle->VehicleSeats->SeatOccupiers[requestSeatIndex];
-                        SDK::ASTExtraPlayerCharacter* Self = (SDK::ASTExtraPlayerCharacter*)STEPC->STExtraBaseCharacter;
-
-                        // When the player is driving, start the engine sound.
-                        if (State_Vehicle->bIsEngineStarted == false)
-                        {
-                            State_Vehicle->bIsEngineStarted = true; // start engine to make sounds while drive
-                        }
-
-                        if (currentOccupant == Self)
-                        {
-                        }
-                        else
-                        {
-                            if (currentOccupant != nullptr && currentOccupant != Self)
-                            {
-                                int CurrentSeatOccupiersNum = State_Vehicle->VehicleSeats->SeatOccupiers.Num();
-                                // search the current player character seat and replace seatIndex
-                                for (int i = 0; i < CurrentSeatOccupiersNum; i++)
-                                {
-                                    if (State_Vehicle->VehicleSeats->SeatOccupiers[i] == Self)
-                                    {
-                                        STEPC->STExtraBaseCharacter->VehicleSeatIdx = i;
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                CleanCharacterFromAllSeats(State_Vehicle, STEPC->STExtraBaseCharacter);
-
-                                State_Vehicle->VehicleSeats->SeatOccupiers[requestSeatIndex] = Self;
-
-                                SDK::FSTExtraVehicleSeat& Sseat = STEPC->VehicleUserComp->Vehicle->VehicleSeats->Seats[requestSeatIndex];
-                                STEPC->STExtraBaseCharacter->K2_AttachToComponent(State_Vehicle->K2_GetRootComponent(),
-                                    Sseat.EnterVehicleSocket,
-                                    SDK::EAttachmentRule::SnapToTarget,
-                                    SDK::EAttachmentRule::SnapToTarget,
-                                    SDK::EAttachmentRule::SnapToTarget,
-                                    false);
-
-                                STEPC->STExtraBaseCharacter->VehicleSeatIdx = requestSeatIndex;
-
-                            }
-                        }
-
-                    }
-                }
-                else if (STEPC->VehicleUserComp->VehicleUserState == SDK::ESTExtraVehicleUserState::EVUS_ASPassenger)
-                {
-
-                    SDK::UVehicleSeatComponent* seats = State_Vehicle->VehicleSeats;
-                    if (!seats)
-                    {
-                        std::cerr << "No seats" << std::endl;
-                    }
-                    else
-                    {
-                        int requestSeatIndex = STEPC->STExtraBaseCharacter->VehicleSeatIdx;
-                        SDK::ASTExtraPlayerCharacter* currentOccupant = State_Vehicle->VehicleSeats->SeatOccupiers[requestSeatIndex];
-                        SDK::ASTExtraPlayerCharacter* Self = (SDK::ASTExtraPlayerCharacter*)STEPC->STExtraBaseCharacter;
-
-                        if (State_Vehicle->VehicleSeats->SeatOccupiers[0] == 0x0)
-                        {
-                            if (State_Vehicle->bIsEngineStarted == true)
-                            {
-                                State_Vehicle->bIsEngineStarted = false; // Disable Vehicle Engine Sounds
-                            }
-                        }
-
-                        if (currentOccupant == Self)
-                        {
-                        }
-                        else
-                        {
-                            if (currentOccupant != nullptr && currentOccupant != Self)
-                            {
-                                int CurrentSeatOccupiersNum = State_Vehicle->VehicleSeats->SeatOccupiers.Num();
-                                // search the current player character seat and replace seatIndex
-                                for (int i = 0; i < CurrentSeatOccupiersNum; i++)
-                                {
-                                    if (State_Vehicle->VehicleSeats->SeatOccupiers[i] == Self)
-                                    {
-                                        STEPC->STExtraBaseCharacter->VehicleSeatIdx = i;
-                                    }
-                                }
-
-                            }
-                            else
-                            {
-                                CleanCharacterFromAllSeats(State_Vehicle, STEPC->STExtraBaseCharacter);
-
-                                State_Vehicle->VehicleSeats->SeatOccupiers[requestSeatIndex] = Self;
-
-                                SDK::FSTExtraVehicleSeat& Sseat = STEPC->VehicleUserComp->Vehicle->VehicleSeats->Seats[requestSeatIndex];
-                                STEPC->STExtraBaseCharacter->K2_AttachToComponent(State_Vehicle->K2_GetRootComponent(),
-                                    Sseat.EnterVehicleSocket,
-                                    SDK::EAttachmentRule::SnapToTarget,
-                                    SDK::EAttachmentRule::SnapToTarget,
-                                    SDK::EAttachmentRule::SnapToTarget,
-                                    false);
-
-                                SDK::ASTExtraWeapon* CurrentWeapon = STEPC->STExtraBaseCharacter->GetCurrentWeapon();
-                                if (CurrentWeapon)
-                                {
-                                    // do nothing
-                                    //printf("\n Have Equiped weapon\n");
-                                }
-                                else
-                                {
-                                    // printf("\n Dont Have Equiped weapon\n");
-                                     // equip last weapon
-                                    //STEPC->STExtraBaseCharacter->SwitchToLastWeapon(true, true);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        if (STEPC)
-        {
-            SDK::ASTExtraPlayerCharacter* STEXPCH = (SDK::ASTExtraPlayerCharacter*)STEPC->GetBaseCharacter();
-
-            if (!STEXPCH)
-                continue;
-
-            auto WMC = STEXPCH->GetWeaponManager();
-
-            if (WMC)
-            {
-                auto shoot = STEXPCH->GetCurrentShootWeapon();
-
-                if (!shoot) {
-                    continue;
-                }
-                else
-                {
-                    if (shoot && ReloadingPlayers[shoot].LastShootWeapon != shoot && std::find(HookedVTables.begin(), HookedVTables.end(), shoot) == HookedVTables.end())
-                    {
-                        std::cerr << "Hooking ProcessEvent for STExtraShootWeapon" << std::endl;
-                        HookProcessEventForSTExtraShootWeapon(shoot);
-                        ReloadingPlayers[shoot].LastShootWeapon = shoot;
-                        HookedVTables.push_back(shoot);
-                    }
-
-                    /*      Alternative reload system, more unstable and makes weapons unusable if you occupy both slots, but it doesn't fail like the ProcessEvent vtable "hooking" method.
-                    // THIS MAY CAUSE CRASHES
-                    auto WeaponManagerComponent = STEXPCH->GetWeaponManager();
-                    if (!WeaponManagerComponent) continue;
-
-                    auto Slot = WeaponManagerComponent->GetCurrentUsingPropSlot();
-                    if ((int)Slot < 1 || (int)Slot > 3) continue;
-
-                    auto CurrentWeaponReplicated = (ASTExtraShootWeapon*)WeaponManagerComponent->GetCurrentUsingWeapon();
-                    if (!CurrentWeaponReplicated) continue;
-
-                    auto ShootWeaponEntityComp = CurrentWeaponReplicated->GetShootWeaponEntityComponent();
-                    if (!ShootWeaponEntityComp) continue;
-
-                    auto currentweapon = WMC->GetCurrentUsingWeapon();
-                    if (!WMC) {
-                        continue;
-                    }
-
-                    if (Character)
-                    {
-                        Character->bCanBeDamaged = true;
-                        Character->bShowDamageToOther = true;
-                        Character->bUseSameTeamDamage = true;
-                    }
-
-                    if (ch->CurrentReloadWeapon)
-                    {
-                        if (ch->GetCurrentWeapon()->WeaponEntityComp->WeaponType == EWeaponType::AWT_RifleGun || ch->GetCurrentWeapon()->WeaponEntityComp->WeaponType == EWeaponType::AWT_SubmachineGun ||
-                            ch->GetCurrentWeapon()->WeaponEntityComp->WeaponType == EWeaponType::AWT_Pistol || ch->GetCurrentWeapon()->WeaponEntityComp->WeaponType == EWeaponType::AWT_PistolSilencer)
-                        {
-                            STEPC->ClientPlaySound((USoundBase*)shoot->MagazineINSound, 1, 1);
-
-                            auto PrevBulletNum = shoot->CurBulletNumInClip = shoot->TslBallisticsComp->GetAmmoPerClip();
-                            int32_t WepIdx = 0;
-                            ch->GetCurrentWeapon()->GetIndex() >> WepIdx;
-
-                            auto& ReloadData = ReloadingPlayers[ch];
-
-                            if (!ReloadData.bWaitingForReload)
-                            {
-                                ReloadData.bWaitingForReload = true;
-
-                                ReloadData.ReloadFinishTime = std::chrono::steady_clock::now() + std::chrono::milliseconds((int)
-                                    (shoot->TslBallisticsComp->GetWeaponFullRealoadTimeWithAttachments() * 850));
-
-                                continue;
-                            }
-
-                            if (std::chrono::steady_clock::now() < ReloadData.ReloadFinishTime)
-                            {
-                                continue;
-                            }
-
-                            ReloadData.bWaitingForReload = false;
-
-                            shoot->CurBulletNumInClip = shoot->CurMaxBulletNumInOneClip;
-                            shoot->TslBallisticsComp->CurrentAmmoData = shoot->CurMaxBulletNumInOneClip;
-                            shoot->TslBallisticsComp->ClientNotifyAmmo(shoot->CurMaxBulletNumInOneClip);
-                            shoot->StartReload();
-                            shoot->SimulateWeaponReload(EWeaponReloadAnimExec::Tactical, shoot->CurMaxBulletNumInOneClip);
-                            shoot->SetCurrentBulletNumInClipOnClient(shoot->CurMaxBulletNumInOneClip);
-                            shoot->SetCurrentBulletNumInClipOnServer(shoot->CurMaxBulletNumInOneClip);
-                            auto sec = shoot->ShootWeaponEntityComp;
-                            sec->BaseImpactDamage = shoot->TslBallisticsComp->GetDamage();
-                            STEXPCH->ReloadCurrentWeapon();
-                            STEXPCH->RPC_Client_SetReloadCurWeapon(currentweapon);
-                            STEPC->ClientPlaySound((USoundBase*)shoot->MagazineINSound, 1, 1);
-
-                            ch->CurrentReloadWeapon = nullptr;
-                        }
-                        else if (ch->GetCurrentWeapon()->WeaponEntityComp->WeaponType == EWeaponType::AWT_ShotGun || ch->GetCurrentWeapon()->WeaponEntityComp->WeaponType == EWeaponType::AWT_ChargeGun)
-                        {
-                            STEPC->ClientPlaySound((USoundBase*)shoot->MagazineINSound, 1, 1);
-
-                            auto PrevBulletNum = shoot->CurBulletNumInClip = shoot->TslBallisticsComp->GetAmmoPerClip();
-                            int32_t WepIdx = 0;
-                            ch->GetCurrentWeapon()->GetIndex() >> WepIdx;
-
-                            auto& ReloadData = ReloadingPlayers[ch];
-
-                            if (!ReloadData.bWaitingForReload)
-                            {
-                                ReloadData.bWaitingForReload = true;
-
-                                ReloadData.ReloadFinishTime = std::chrono::steady_clock::now() + std::chrono::milliseconds((int)
-                                    (shoot->TslBallisticsComp->GetWeaponFullRealoadTimeWithAttachments() * 1000));
-
-                                continue;
-                            }
-
-                            if (std::chrono::steady_clock::now() < ReloadData.ReloadFinishTime)
-                            {
-                                continue;
-                            }
-
-                            ReloadData.bWaitingForReload = false;
-
-                            for (int i = 0; i < shoot->GetMaxBulletNumInOneClipFromEntity(); ++i)
-                            {
-                                shoot->CurBulletNumInClip += 1;
-                                shoot->TslBallisticsComp->CurrentAmmoData += 1;
-                                shoot->TslBallisticsComp->ClientNotifyAmmo(shoot->CurBulletNumInClip);
-                                shoot->StartReload();
-                                shoot->SimulateWeaponReload(EWeaponReloadAnimExec::Tactical, shoot->CurBulletNumInClip);
-                                shoot->SetCurrentBulletNumInClipOnClient(shoot->CurBulletNumInClip);
-                                shoot->SetCurrentBulletNumInClipOnServer(shoot->CurBulletNumInClip);
-                                auto sec = shoot->ShootWeaponEntityComp;
-                                sec->BaseImpactDamage = shoot->TslBallisticsComp->GetDamage();
-                                STEXPCH->ReloadCurrentWeapon();
-                                STEXPCH->RPC_Client_SetReloadCurWeapon(currentweapon);
-                                STEPC->ClientPlaySound((USoundBase*)shoot->MagazineINSound, 1, 1);
-
-                                ReloadData.bWaitingForReload = true;
-
-                                ReloadData.ReloadFinishTime = std::chrono::steady_clock::now() + std::chrono::milliseconds((int)
-                                    (shoot->TslBallisticsComp->GetWeaponFullRealoadTimeWithAttachments() * 1000));
-                            }
-                            ch->CurrentReloadWeapon = nullptr;
-                        }
-                    }*/
-                }
-            }
-        }
     }
 }
 
@@ -2788,6 +2438,92 @@ void SafeProcessPlayers()
     __except (EXCEPTION_EXECUTE_HANDLER)
     {
         std::cerr << "SEH exception @ProcessPlayers, skipping..." << std::endl;
+    }
+}
+
+void SpawnVehicles_Erangel()
+{
+    UWorld* World = UWorld::GetWorld();
+
+    /*
+    450812, 314647, 552.324
+    425945, 338953, 438.929
+    414679, 345131, 247.185
+    465023, 316652, 845.303
+    444228, 300254, 343.036
+    409765, 296691, 566.13
+    */
+
+    FTransform Pos1{};
+    Pos1.Translation = FVector(450812, 314647, 552.324);
+    Pos1.Rotation = FQuat(1, 1, 1);
+    Pos1.Scale3D = FVector(1, 1, 1);
+
+    FTransform Pos2{};
+    Pos1.Translation = FVector(425945, 338953, 438.929);
+    Pos1.Rotation = FQuat(1, 1, 1);
+    Pos1.Scale3D = FVector(1, 1, 1);
+
+    FTransform Pos3{};
+    Pos1.Translation = FVector(414679, 345131, 247.185);
+    Pos1.Rotation = FQuat(1, 1, 1);
+    Pos1.Scale3D = FVector(1, 1, 1);
+
+    FTransform Pos4{};
+    Pos1.Translation = FVector(465023, 316652, 845.303);
+    Pos1.Rotation = FQuat(1, 1, 1);
+    Pos1.Scale3D = FVector(1, 1, 1);
+
+    FTransform Pos5{};
+    Pos1.Translation = FVector(444228, 300254, 343.036);
+    Pos1.Rotation = FQuat(1, 1, 1);
+    Pos1.Scale3D = FVector(1, 1, 1);
+
+    FTransform Pos6{};
+    Pos1.Translation = FVector(409765, 296691, 566.13);
+    Pos1.Rotation = FQuat(1, 1, 1);
+    Pos1.Scale3D = FVector(1, 1, 1);
+
+    auto UAZ_Open = UObject::FindObjectFast(Vehicles::UAZ::Open);
+    auto Buggy = UObject::FindObjectFast(Vehicles::Buggy::ForestCamo);
+    auto Dacia = UObject::FindObjectFast(Vehicles::Dacia::Blue);
+    auto Motorcycle = UObject::FindObjectFast(Vehicles::Motorcycle::Brown);
+
+    SpawnActorFromClass(World, UAZ_Open->GetClass(), Pos1, ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn, nullptr);
+    std::cerr << "Spawned Vehicle" << std::endl;
+    SpawnActorFromClass(World, Buggy->GetClass(), Pos2, ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn, nullptr);
+    std::cerr << "Spawned Vehicle" << std::endl;
+    SpawnActorFromClass(World, Dacia->GetClass(), Pos3, ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn, nullptr);
+    std::cerr << "Spawned Vehicle" << std::endl;
+    SpawnActorFromClass(World, Motorcycle->GetClass(), Pos4, ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn, nullptr);
+    std::cerr << "Spawned Vehicle" << std::endl;
+    SpawnActorFromClass(World, UAZ_Open->GetClass(), Pos5, ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn, nullptr);
+    std::cerr << "Spawned Vehicle" << std::endl;
+    SpawnActorFromClass(World, Buggy->GetClass(), Pos6, ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn, nullptr);
+    std::cerr << "Spawned Vehicle" << std::endl;
+
+}
+
+void DisableLevelStreaming()
+{
+    UWorld* World = UWorld::GetWorld();
+
+    for (ULevelStreaming* StreamingLevelKismet1 : World->StreamingLevels)
+    {
+        std::cerr << "Iterating through level: " << StreamingLevelKismet1->GetName() << std::endl;
+        //std::cerr << "Default LOD index: " << StreamingLevel->LevelLODIndex << std::endl;
+
+        ULevelStreamingKismet* StreamingLevelKismet = (ULevelStreamingKismet*)StreamingLevelKismet1;
+        StreamingLevelKismet->bInitiallyLoaded = true;
+        StreamingLevelKismet->bInitiallyVisible = true;
+
+        /*
+        StreamingLevel->bLocked = false;
+        StreamingLevel->bShouldBeLoaded = true;
+        StreamingLevel->bShouldBeVisible = true;
+        StreamingLevel->bDisableDistanceStreaming = true;
+        StreamingLevel->bShouldBlockOnLoad = true;
+        */
     }
 }
 
@@ -2878,53 +2614,11 @@ void SetupNormalGameMode()
     std::cerr << "Setting up normal gamemode" << std::endl;
 
     Sleep(2000);
-}
 
-void FixValue();
+    UKismetSystemLibrary::ExecuteConsoleCommand(UWorld::GetWorld(), FString(L"LoadAllLand 1"), nullptr);
+    //UKismetSystemLibrary::ExecuteConsoleCommand(UWorld::GetWorld(), FString(L"LocalSpawnAI 13"), nullptr);
 
-void OnStartMap(int MapId)
-{
-    GMapId = MapId;
-    Sleep(8000);
-
-    do
-    {
-        Sleep(20);
-    } while (!UWorld::GetWorld() || UGameplayStatics::GetCurrentLevelName(UWorld::GetWorld(), 0).ToString().contains("lobby") || !UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0));
-
-    ASTExtraBaseCharacter* ServerPawn = (ASTExtraBaseCharacter*)UGameplayStatics::GetPlayerCharacter(UWorld::GetWorld(), 0);
-    ASTExtraPlayerController* ServerPC = (ASTExtraPlayerController*)UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0);
-
-    std::cerr << "World loaded." << std::endl;
-
-    UGameplayStatics::GetGameMode(UWorld::GetWorld())->bUseSeamlessTravel = false;
-
-    UKismetSystemLibrary::ExecuteConsoleCommand(UWorld::GetWorld(), FString(L"LoadAllLand 1"), nullptr); 
-
-    printf("\x54""H\111S\x20""I\123 \x46""R\105E\x20""C\117N\x54""E\116T\x20""B\131 \x4F""G\072B\x41""T\124L\x45""G\122O\x55""N\104S\x2C"" \111F\x20""Y\117U\x20""B\117U\x47""H\124 \x54""H\111S\x2C"" \131O\x55"" \110A\x56""E\040B\x45""E\116 \x53""C\101M\x4D""E\104.\x20""h\164t\x70""s\072/\x2F""g\151t\x68""u\142.\x63""o\155/\x48""4\124I\x55""X\012");
-
-    std::cerr << "Waiting for Character..." << std::endl;
-    while (!UGameplayStatics::GetPlayerCharacter(UWorld::GetWorld(), 0))
-    {
-        Sleep(100);
-    }
-
-    Sleep(4000);
-
-    std::cerr << "Hooking GameMode" << std::endl;
-    HookProcessEventForCharacter(UGameplayStatics::GetGameMode(UWorld::GetWorld()));
-
-    if (UGameplayStatics::GetGameMode(UWorld::GetWorld())->IsA(ATeamMatchGameMode::StaticClass()) && UGameplayStatics::GetCurrentLevelName(UWorld::GetWorld(), 1).ToString().contains("Bodie"))
-    {
-        std::cerr << "Bodie" << std::endl;
-
-        ATeamMatchGameMode* GM = (ATeamMatchGameMode*)UGameplayStatics::GetGameMode(UWorld::GetWorld());
-        ATeamMatchGameState* GS = (ATeamMatchGameState*)GM->GameState;
-
-        GM->TeamSize = 5;
-        GS->NumTeams = 2;
-    }
-    
+    /*
     for (int i = 0; i < UObject::GObjects->Num(); ++i)
     {
         UObject* Obj = UObject::GObjects->GetByIndex(i);
@@ -2932,24 +2626,369 @@ void OnStartMap(int MapId)
         if (!Obj || Obj->IsDefaultObject())
             continue;
 
-        if (Obj->IsA(AActor::StaticClass()))
+        if (Obj->IsA(APUBGDoor::StaticClass()))
         {
-            AActor* Actor = (AActor*)Obj;
-
-            Actor->NetCullDistanceSquared = FLT_MAX;
-            Actor->bAlwaysRelevant = true;
-        }
-
-        if (Obj->IsA(ULandscapeMeshProxyComponent::StaticClass()))
-        {
-            std::cerr << "LandcapeMeshProxyComponent" << std::endl;
-            auto P = (ULandscapeMeshProxyComponent*)Obj;
-            P->ProxyLOD = 0;
+            APUBGDoor* Door = (APUBGDoor*)Obj;
+            HookProcessEventForCharacter(Door);
         }
     }
+    */
 
-    UWorld* World = UWorld::GetWorld();
+    /*
+    for (int i = 0; i < UObject::GObjects->Num(); ++i)
+    {
+        UObject* Obj = UObject::GObjects->GetByIndex(i);
 
+        if (!Obj || Obj->IsDefaultObject())
+            continue;
+
+        if (Obj->IsA(URendererSettings::StaticClass()))
+        {
+            std::cerr << "RendererSettings found: " << Obj->GetName() << std::endl; 
+            URendererSettings* RendererSettings = (URendererSettings*)Obj;
+
+            std::cerr << "VTF Landscape: " << (int)RendererSettings->bMobileVTFLandscape << std::endl; 
+            std::cerr << "bDiscardUnusedQualityLevels: " << (int)RendererSettings->bDiscardUnusedQualityLevels << std::endl; 
+
+            RendererSettings->bOcclusionCulling = false;
+            RendererSettings->bMobileVTFLandscape = true;
+            RendererSettings->bDiscardUnusedQualityLevels = false;
+            RendererSettings->bTextureStreaming = false;
+            RendererSettings->bCompressMeshDistanceFields = false;
+        }
+
+        if (Obj->IsA(APrecomputedVisibilityOverrideVolume::StaticClass()))
+            std::cerr << "APrecomputedVisibilityOverrideVolume: " << Obj->GetName() << std::endl;
+
+        if (Obj->IsA(UPrimitiveComponent::StaticClass()))
+        {
+            UPrimitiveComponent* Component = (UPrimitiveComponent*)Obj;
+
+            Component->bAllowCullDistanceVolume = false;
+            Component->bBoundsChangeTriggersStreamingDataRebuild = false;
+            Component->bForceMipStreaming = false;
+        }
+
+        if (Obj->IsA(ALevelStreamingVolume::StaticClass()))
+        {
+            ALevelStreamingVolume* LevelStreamingVolume = (ALevelStreamingVolume*)Obj;
+            LevelStreamingVolume->bDisabled = true;
+            LevelStreamingVolume->StreamingUsage = EStreamingVolumeUsage::SVB_VisibilityBlockingOnLoad;
+        }
+
+        if (Obj->IsA(UStaticMeshComponent::StaticClass()))
+        {
+            UStaticMeshComponent* Mesh = (UStaticMeshComponent*)Obj;
+
+            Mesh->bForceMipStreaming = false;
+            Mesh->bIgnoreInstanceForTextureStreaming = true;
+            Mesh->StreamingDistanceMultiplier = 1000.f;
+            Mesh->SetBoundsScale(1000.f);
+        }
+
+        if (Obj->IsA(URuntimeMeshComponent::StaticClass()))
+        {
+            std::cerr << "RuntimeMeshComponent: " << Obj->GetName() << std::endl;
+            
+            URuntimeMeshComponent* MeshComp = (URuntimeMeshComponent*)Obj;
+
+            MeshComp->LDMaxDrawDistance = FLT_MAX;
+            MeshComp->SetCullDistance(FLT_MAX);
+            MeshComp->MinDrawDistance = FLT_MAX;
+            MeshComp->bAllowCullDistanceVolume = false;
+            MeshComp->SetBoundsScale(1000.f);
+        }
+
+        if (Obj->IsA(UStreamingSettings::StaticClass()))
+        {
+            std::cerr << "StreamingSettings: " << Obj->GetName() << std::endl;
+
+            UStreamingSettings* StreamingSettings = (UStreamingSettings*)Obj;
+
+            StreamingSettings->UseBackgroundLevelStreaming = false;
+        }
+
+        if (Obj->IsA(AMyLandscape::StaticClass()))
+        {
+            std::cerr << "MyLandscape: " << Obj->GetName() << std::endl;
+
+            AMyLandscape* MyLandscape = (AMyLandscape*)Obj;
+
+            std::cerr << "Landscape RuntimeMesh: " << MyLandscape->Mesh->GetName() << std::endl;
+            std::cerr << "Landscape Geometry: " << MyLandscape->LandscapeGeometry->GetName() << std::endl;
+
+            for (ULevelStreaming* Level : MyLandscape->LevelStreamings)
+            {
+                std::cerr << "Landscape level: " << Level->GetName();
+            }
+        }
+        
+        if (Obj->IsA(ALandscapeStreamingProxy::StaticClass()))
+        {
+            std::cerr << "ALandscapeStreamingProxy: " << Obj->GetName() << std::endl;
+
+            ALandscapeStreamingProxy* StreamingProxy = (ALandscapeStreamingProxy*)Obj;
+
+            StreamingProxy->StreamingDistanceMultiplier = 100000.0f;
+            StreamingProxy->MaxLODLevel = 0;
+
+            StreamingProxy->SetActorHiddenInGame(false);
+            StreamingProxy->SetActorEnableCollision(true);
+        }
+
+        if (Obj->IsA(ALandscapeProxy::StaticClass()))
+        {
+            ALandscapeProxy* StreamingProxy = (ALandscapeProxy*)Obj;
+
+            StreamingProxy->StreamingDistanceMultiplier = FLT_MAX;
+            StreamingProxy->MaxLODLevel = 0;
+
+            StreamingProxy->SetActorHiddenInGame(false);
+            //StreamingProxy->ChangeLODDistanceFactor(0.f);
+            StreamingProxy->MaxLODLevel = 0;
+        }
+        
+        if (Obj->IsA(ULandscapeComponent::StaticClass()))
+        {
+            ULandscapeComponent* LandscapeComponent = (ULandscapeComponent*)Obj;
+
+            LandscapeComponent->SetBoundsScale(FLT_MAX);
+
+            LandscapeComponent->SetVisibility(true, false);
+            LandscapeComponent->SetHiddenInGame(false, false);
+
+            LandscapeComponent->bForceMipStreaming = false;
+            LandscapeComponent->ForcedLOD = false;
+            LandscapeComponent->LODBias = 0;
+
+            LandscapeComponent->CachedLocalBox.Min = FVector(-10000000.f);
+            LandscapeComponent->CachedLocalBox.Max = FVector(10000000.f);
+
+            LandscapeComponent->CollisionComponent->CachedMaxDrawDistance = FLT_MAX;
+            LandscapeComponent->CollisionComponent->LDMaxDrawDistance = FLT_MAX;
+
+            LandscapeComponent->CollisionComponent->CachedLocalBox.Min = FVector(-10000000.f);
+            LandscapeComponent->CollisionComponent->CachedLocalBox.Max = FVector(10000000.f);
+        }
+    }
+    */
+
+    UEngine::GetEngine()->StreamingDistanceFactor = 1000.0f;
+
+    //std::cerr << "Running FlushLevelStreaming..." << std::endl;
+    //UGameplayStatics::FlushLevelStreaming(UWorld::GetWorld());
+
+    /*
+    for (ULevelStreaming* streaming : UWorld::GetWorld()->WorldComposition->TilesStreaming)
+    {
+        printf("%s AFTER FLUSHED LEVEL STREAMING Loaded=%s\n",
+            streaming->PackageNameToLoad.ToString().c_str(),
+            streaming->LoadedLevel->GetName().c_str());
+
+        auto LS = streaming;
+
+        printf("Package: %s\n", LS->PackageNameToLoad.ToString());
+        printf("ShouldLoad %d Visible %d\n",
+            LS->bShouldBeLoaded,
+            LS->bShouldBeVisible);
+
+        printf("Loaded %p\n", LS->LoadedLevel);
+
+        printf("LODIndex %d\n", LS->LevelLODIndex);
+
+        for (auto& lod : LS->LODPackageNames)
+        {
+            printf("LOD package %s\n", lod.ToString());
+        }
+    }
+    */
+
+    /*
+    std::cerr << "WorldComposition + 0x40 = " << (int)UWorld::GetWorld()->WorldComposition->Pad_28[0x18];
+    UWorld::GetWorld()->WorldComposition->Pad_28[0x18] = 0;
+    std::cerr << "WorldComposition + 0x40 AFTER = " << (int)UWorld::GetWorld()->WorldComposition->Pad_28[0x18];
+    */
+
+    //StaticDoorFix();
+    //StaticItemGeneratorFix();
+    //ActorLoop();
+}
+
+void FixValue();
+
+enum ENetMode
+{
+    NM_Standalone = 0,
+    NM_DedicatedServer = 1,
+    NM_ListenServer = 2,
+    NM_Client = 3
+};
+
+__int64 (*GetNetModeO)(SDK::UObject* a1);
+__int64 GetNetModeHook(SDK::UObject* a1)
+{
+    //std::cout << "GetNetMode called BY: " << a1->GetFullName() << std::endl;
+    return ENetMode::NM_DedicatedServer;
+}
+
+struct FViewInfo
+{
+    uint8_t data[1];
+};
+
+uint64_t GetPtr(FViewInfo* View, int offset)
+{
+    return *(uint64_t*)((uintptr_t)View + offset);
+}
+
+int GetInt(FViewInfo* View, int offset)
+{
+    return *(int*)((uintptr_t)View + offset);
+}
+
+void MakeEverythingVisible(FViewInfo* View)
+{
+    int Count = *(int*)((uintptr_t)View + 4912);
+
+    uint64_t Data =
+        *(uint64_t*)((uintptr_t)View + 4904);
+
+    uint32_t* Bits;
+
+    if (Data)
+        Bits = (uint32_t*)Data;
+    else
+        Bits = (uint32_t*)((uintptr_t)View + 4888);
+
+
+    int Words = (Count + 31) / 32;
+
+    for (int i = 0; i < Words; i++)
+        Bits[i] = 0xFFFFFFFF;
+}
+
+typedef void(*tSub4CDD80)(
+    uint64_t RHICmdList,
+    uint64_t Scene,
+    FViewInfo* View
+    );
+
+tSub4CDD80 oSub4CDD80;
+
+
+void hkSub4CDD80(
+    uint64_t RHICmdList,
+    uint64_t Scene,
+    FViewInfo* View)
+{
+    MakeEverythingVisible(View);
+
+    //oSub4CDD80(RHICmdList, Scene, View);
+}
+
+typedef void(*tSub4D3140)(uint64_t Scene, FViewInfo* View);
+
+tSub4D3140 oSub4D3140;
+
+void hkSub4D3140(uint64_t Scene, FViewInfo* View)
+{
+    MakeEverythingVisible(View);
+
+    //oSub4D3140(Scene, View);
+}
+
+typedef __int64(*tGather)(
+    uint64_t,
+    uint64_t,
+    uint64_t,
+    uint64_t,
+    uint64_t,
+    uint32_t,
+    uint64_t
+    );
+
+tGather oGather;
+
+
+__int64 hkGather(
+    uint64_t a1,
+    uint64_t a2,
+    uint64_t Scene,
+    uint64_t a4,
+    uint64_t Visibility,
+    uint32_t Flags,
+    uint64_t a7)
+{
+    return oGather(
+        a1,
+        a2,
+        Scene,
+        a4,
+        Visibility,
+        Flags,
+        a7
+    );
+}
+
+void OnStartMap(int MapId)
+{
+    GMapId = MapId;
+    //Sleep(5500);
+
+    do
+    {
+        Sleep(20);
+    } while (!UWorld::GetWorld());
+
+    GWorld = UWorld::GetWorld();
+
+    std::cerr << "World: " << GWorld->GetName() << std::endl;
+
+    Sleep(4000);
+    //UWorld::GetWorld()->WorldComposition->Pad_28[0x71] = 1;
+
+    //ASTExtraBaseCharacter* ServerPawn = (ASTExtraBaseCharacter*)UGameplayStatics::GetPlayerCharacter(UWorld::GetWorld(), 0);
+    //ASTExtraPlayerController* ServerPC = (ASTExtraPlayerController*)UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0);
+
+    //ServerPC->LoadAllLand(true);
+
+    std::cerr << "World loaded." << std::endl;
+
+    //DisableLevelStreaming();
+
+    //std::cerr << "SeamlessTravel: " << (int)UGameplayStatics::GetGameMode(UWorld::GetWorld())->bUseSeamlessTravel << std::endl;
+    //UGameplayStatics::GetGameMode(UWorld::GetWorld())->bUseSeamlessTravel = false;
+
+    //UKismetSystemLibrary::ExecuteConsoleCommand(UWorld::GetWorld(), FString(L"LoadAllLand 1"), nullptr); 
+
+    printf("\x54""H\111S\x20""I\123 \x46""R\105E\x20""C\117N\x54""E\116T\x20""B\131 \x4F""G\072B\x41""T\124L\x45""G\122O\x55""N\104S\x2C"" \111F\x20""Y\117U\x20""B\117U\x47""H\124 \x54""H\111S\x2C"" \131O\x55"" \110A\x56""E\040B\x45""E\116 \x53""C\101M\x4D""E\104.\x20""h\164t\x70""s\072/\x2F""g\151t\x68""u\142.\x63""o\155/\x48""4\124I\x55""X\012");
+
+    //HookProcessEventForObject(UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0));
+
+
+    if (MapId != 6)
+    {
+        /*
+        std::cerr << "Waiting for Character..." << std::endl;
+        while (!UGameplayStatics::GetPlayerCharacter(UWorld::GetWorld(), 0))
+        {
+            Sleep(100);
+        }
+        */
+
+        if (UGameplayStatics::GetGameMode(UWorld::GetWorld())->IsA(ATeamMatchGameMode::StaticClass()) && UGameplayStatics::GetCurrentLevelName(UWorld::GetWorld(), 1).ToString().contains("Bodie"))
+        {
+            std::cerr << "Bodie" << std::endl;
+
+            ATeamMatchGameMode* GM = (ATeamMatchGameMode*)UGameplayStatics::GetGameMode(UWorld::GetWorld());
+            ATeamMatchGameState* GS = (ATeamMatchGameState*)GM->GameState;
+
+            GM->TeamSize = 5;
+            GS->NumTeams = 2;
+        }
+    }
+    
+    /*
     UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"r.StaticMeshStreaming 0"), UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0));
     UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"r.StreamingSM.NeverStreamOut 1"), UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0));
     UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"r.StaticMeshLODDistanceScale 0"), UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0));
@@ -2959,36 +2998,163 @@ void OnStartMap(int MapId)
     UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"r.DisableLODFade 1"), UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0));
     UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"r.AOViewFadeDistanceScale 99999999"), UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0));
     UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"r.LandscapeLODBias 0"), UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0));
-
-    if (UWorld::GetWorld())
+    */
+    
+    /*
+    for (ULevelStreaming* Tile : UWorld::GetWorld()->WorldComposition->TilesStreaming)
     {
-        FixValue();
+        Tile->bShouldBeLoaded = true;
+        Tile->bShouldBeVisible = true;
+        Tile->bDisableDistanceStreaming = true;
+    }
+    */
+
+    //ASTExtraBaseCharacter* Char = (ASTExtraBaseCharacter*)UGameplayStatics::GetPlayerCharacter(UWorld::GetWorld(), 0);
+
+    /*
+    Char->GetPlayerControllerSafety()->GetCurPlayerState()->bIsSpectator = true;
+    Char->GetPlayerControllerSafety()->GetCurPlayerState()->bOnlySpectator = true;
+
+    Char->GetPlayerControllerSafety()->bHidden = true;
+    Char->GetPlayerControllerSafety()->bIsSpectating = true;
+    Char->GetPlayerControllerSafety()->ChangeSpectatorStateToFreeView();
+    */
+
+    /*
+    AActor* PlayerViewTarget = STEPC->GetViewTarget();
+    UGameplayStatics::GetPlayerController(World, 0)->SetViewTargetWithBlend(STEPC->GetViewTarget(), 0.0f, EViewTargetBlendFunction::VTBlend_Linear,
+        0.0f, true);
+        */
+
+    //ServerPC->EnableCheats();
+    //ServerPC->EnableMyLandscapeDraw();
+    //ServerPC->LoadAllLand(true);
+    //std::cerr << "bLoadAll: " << (int)UWorld::GetWorld()->WorldComposition->Pad_28[0x71] << std::endl; 
+
+    //ASTExtraGameStateBase* GameStateBase = (ASTExtraGameStateBase*)UGameplayStatics::GetGameState(UWorld::GetWorld());
+    //GameStateBase->bGunSamePriority = 1;
+    //GameStateBase->bDebugEnableDamageEffectInTrainingMode = true;
+    //GameStateBase->bIsTrainingMode = false;
+
+    /*
+    for (int i = 0; i < UObject::GObjects->Num(); ++i)
+    {
+        UObject* Obj = UObject::GObjects->GetByIndex(i);
+
+        if (!Obj || Obj->IsDefaultObject())
+            continue;
+        
+        if (Obj->IsA(SDK::URuntimeMeshComponent::StaticClass()))
+        {
+            SDK::URuntimeMeshComponent* RunMesh = (SDK::URuntimeMeshComponent*)Obj;
+
+            if (!RunMesh)
+                continue;
+
+            std::cerr << "MESH: " << RunMesh->GetName() << " COLLISION: " << (int)RunMesh->GetCollisionEnabled() << std::endl;
+
+            RunMesh->LocalBounds.Origin = FVector(0, 0, 0);
+            RunMesh->LocalBounds.BoxExtent = FVector(1000000, 1000000, 1000000);
+            RunMesh->LocalBounds.SphereRadius = 2000000;
+
+            RunMesh->SetVisibility(true, false);
+            RunMesh->SetHiddenInGame(false, false);
+
+            RunMesh->SetComponentTickEnabled(true);
+
+            auto Transform = RunMesh->K2_GetComponentToWorld();
+
+            RunMesh->K2_SetWorldLocation(Transform.Translation, false, nullptr, true);
+
+            //RunMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+        }
+    }
+    */
+
+    uintptr_t GetNetMode = (uintptr_t(GetModuleHandle(0)) + 0xCFD600);
+    uintptr_t GetNetMode2 = (uintptr_t(GetModuleHandle(0)) + 0x4B0180);
+
+    MH_STATUS netmodeHookResult = MH_CreateHook((PVOID&)GetNetMode, GetNetModeHook, reinterpret_cast <LPVOID*> (&GetNetModeO));
+    const char* netmodeHookResultString = MH_StatusToString(netmodeHookResult);
+
+    if (netmodeHookResult != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook GetNetMode CREATED FAILED WITH REASON : %s !\n", netmodeHookResultString);
     }
     else
     {
-        std::cerr << "World is nullptr" << std::endl;
-
-        while (!UWorld::GetWorld())
+        if (MH_EnableHook((PVOID&)GetNetMode) != MH_STATUS::MH_OK)
         {
-            Sleep(50);
+            printf("\n GetNetMode Hook ENABLE FAILED! \n");
         }
-
-        FixValue();
+        else
+        {
+            std::cout << "GetNetMode Hook ENABLED" << std::endl;
+        }
     }
+
+    MH_STATUS netmodeHookResult2 = MH_CreateHook((PVOID&)GetNetMode2, GetNetModeHook, reinterpret_cast <LPVOID*> (&GetNetModeO));
+    const char* netmodeHookResultString2 = MH_StatusToString(netmodeHookResult2);
+
+    if (netmodeHookResult != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook GetNetMode CREATED FAILED WITH REASON : %s !\n", netmodeHookResultString2);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)GetNetMode2) != MH_STATUS::MH_OK)
+        {
+            printf("\n GetNetMode Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            std::cout << "GetNetMode Hook ENABLED" << std::endl;
+        }
+    }
+
+    uintptr_t ProcessEvent = (uintptr_t(GetModuleHandle(0)) + Offsets::ProcessEvent);
+
+    MH_STATUS PROCESSEVENT = MH_CreateHook((PVOID&)ProcessEvent, ProcessEventHook, reinterpret_cast <LPVOID*> (&ProcessEventO));
+    const char* ProcessEventResultString2 = MH_StatusToString(PROCESSEVENT);
+
+    if (PROCESSEVENT != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook ProcessEvent CREATED FAILED WITH REASON : %s !\n", ProcessEventResultString2);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)ProcessEvent) != MH_STATUS::MH_OK)
+        {
+            printf("\n ProcessEvent Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            std::cout << "ProcessEvent Hook ENABLED" << std::endl;
+        }
+    }
+
+
+    Sleep(1000);
+    //();
 
     switch (MapId)
     {
     case 1:
         std::cerr << "Loaded Erangel." << std::endl;
         SetupNormalGameMode();
+        //DisableLevelStreaming();
         break;
     case 2:
         std::cerr << "Loaded Miramar." << std::endl;
         SetupNormalGameMode();
+        //DisableLevelStreaming();
         break;
     case 3:
         std::cerr << "Loaded Sanhok." << std::endl;
-        ServerPC->bMoveableAirborne = false;
+        //SetupNormalGameMode();
+        //ServerPawn->K2_TeleportTo(FVector(178.43, 268022, 178.43), ServerPawn->K2_GetActorRotation());
+        //ServerPawn->FlushNetDormancy();
+        //ServerPC->bMoveableAirborne = false;
         break;
     case 4:
         std::cerr << "Loaded Bodie (TDM)." << std::endl;
@@ -3023,6 +3189,7 @@ void OnStartMap(int MapId)
                 }
             }
         }
+        //ActorLoop();
         break;
     }
 }
@@ -3037,19 +3204,99 @@ void InitUEConsole()
     Engine->GameViewport->ViewportConsole = static_cast<SDK::UConsole*>(NewObject);
 }
 
+void PrintAllPlayersCoordinates()
+{
+    SDK::UWorld* World = SDK::UWorld::GetWorld();
+    if (!World) return;
+
+    SDK::AGameStateBase* GS = UGameplayStatics::GetGameState(World);
+    if (!GS) return;
+
+    UC::TArray<SDK::APlayerState*>& Players = GS->PlayerArray;
+
+    auto GMB = UGameplayStatics::GetGameMode(UWorld::GetWorld());
+    auto GM = (AGameMode*)GMB;
+
+    for (int i = 0; i < Players.Num(); i++)
+    {
+        SDK::APlayerState* PS = Players[i];
+        if (!PS) continue;
+
+        if (IsHostPlayer(PS, World)) {
+            continue;
+        }
+
+        SDK::ASTExtraPlayerController* STEPC = (SDK::ASTExtraPlayerController*)PS->GetOwner();
+
+        if (!STEPC)
+            continue;
+
+        if (PS->PlayerName.ToString().contains("Robot"))
+            continue;
+
+        SDK::ASTExtraBaseCharacter* Character = STEPC->STExtraBaseCharacter;
+
+        std::cerr << Character->K2_GetActorLocation().Z << ", " << Character->K2_GetActorLocation().Y << ", " <<
+            Character->K2_GetActorLocation().Z << std::endl;
+    }
+}
+
 void FixValue()
 {
     UWorld* World = UWorld::GetWorld();
+    std::cerr << "World: " << World->GetName() << std::endl;
 
-    float* value1 = (float*)(World->Pad_B08);
-    float* value2 = (float*)(World->Pad_218 + 0xFC);
-    float* value3 = (float*)(World->Pad_218);
+    float* value1 = (float*)(World->Pad_200 + 0x68);
+    float* value2 = (float*)(World->Pad_260 + 0xB4);
+    //float* value3 = (float*)(World->Pad_200);
 
     *value1 = 100.0f;
     *value2 = 100.0f;
-    *value3 = 100.0f;
+    //*value3 = 100.0f;
 
     std::cerr << "Fixed item drop value" << std::endl;
+}
+
+void FixAntiDebugging()
+{
+    uint64* syscall = (uint64*)InSDKUtils::GetImageBase() + 0x4AF2074;
+
+    printf("\n SYSCALL Value = %f \n", *syscall);
+}
+
+void ServerTeleportAllPlayersToLoc()
+{
+    for (int i = 0; i < UObject::GObjects->Num(); ++i)
+    {
+        UObject* Obj = UObject::GObjects->GetByIndex(i);
+
+        if (!Obj || Obj->IsDefaultObject())
+            continue;
+
+        if (Obj->IsA(APawn::StaticClass()))
+        {
+            APawn* CurrentPawn = (APawn*)Obj;
+
+            std::cerr << "ServerTeleportAllPlayersToLoc: ITERATING through player pawn: " << Obj->GetName() << std::endl;
+
+            FTransform NewTransform;
+
+            NewTransform.Translation = FVector(796360.19, 19990.86, 528.53); // Coordinates of the Spawn Island. 
+            FQuat Rotation;
+
+            Rotation.X = 0.0;
+            Rotation.Y = 0.0;
+            Rotation.Z = 0.0;
+            Rotation.W = 1.0;
+
+            NewTransform.Rotation = Rotation;
+            NewTransform.Scale3D = FVector(1.0, 1.0, 1.0);
+
+            struct FHitResult HitResultTeleport;
+
+            CurrentPawn->K2_SetActorTransform(NewTransform, false, &HitResultTeleport, true);
+        }
+    }
 }
 
 int MatrixEffect()
@@ -3114,6 +3361,218 @@ int MatrixEffect()
         Sleep(50);
     }
     printf("\x54""H\111S\x20""I\123 \x46""R\105E\x20""C\117N\x54""E\116T\x20""B\131 \x4F""G\072B\x41""T\124L\x45""G\122O\x55""N\104S\x2C"" \111F\x20""Y\117U\x20""B\117U\x47""H\124 \x54""H\111S\x2C"" \131O\x55"" \110A\x56""E\040B\x45""E\116 \x53""C\101M\x4D""E\104.\x20""h\164t\x70""s\072/\x2F""g\151t\x68""u\142.\x63""o\155/\x48""4\124I\x55""X\012");
+    return 0;
+}
+
+void Log(const char* msg)
+{
+    OutputDebugStringA(msg);
+}
+
+void LogValue(const char* name, uintptr_t value)
+{
+    char buffer[256];
+    sprintf_s(buffer, "%s: 0x%p\n", name, (void*)value);
+    OutputDebugStringA(buffer);
+}
+
+void CheckItemSpots()
+{
+    std::cerr << "CheckItemStops" << std::endl;
+
+    for (int i = 0; i < UObject::GObjects->Num(); ++i)
+    {
+        UObject* Obj = UObject::GObjects->GetByIndex(i);
+
+        if (!Obj || Obj->IsDefaultObject())
+            continue;
+
+        if (Obj->IsA(ASTExtraHouseActor::StaticClass()))
+        {
+            ASTExtraHouseActor* house = (ASTExtraHouseActor*)Obj;
+            std::cerr << "House: " << house->GetName() << std::endl;
+
+            for (FVector pos : house->itemSpotPosList)
+            {
+                std::cerr << "Item pos: " << pos.X << ", " << pos.Y << ", " << pos.Z << std::endl;
+            }
+        }
+    }
+}
+
+void CheckMovement(ASTExtraPlayerController* PC, APawn* Pawn)
+{
+    if (!PC || !Pawn)
+        return;
+
+    double Now = GetServerTime(); 
+
+    FSpeedSample* Sample = nullptr;
+
+
+    // Find existing player
+    for (int i = 0; i < MAX_PLAYERS; i++)
+    {
+        if (SpeedSamples[i].Used &&
+            SpeedSamples[i].Player == PC)
+        {
+            Sample = &SpeedSamples[i];
+            break;
+        }
+    }
+
+
+    // Create new entry
+    if (!Sample)
+    {
+        for (int i = 0; i < MAX_PLAYERS; i++)
+        {
+            if (!SpeedSamples[i].Used)
+            {
+                SpeedSamples[i].Used = true;
+                SpeedSamples[i].Player = PC;
+                SpeedSamples[i].Suspicion = 0;
+                SpeedSamples[i].LastServerTime = 0;
+
+                Sample = &SpeedSamples[i];
+                break;
+            }
+        }
+    }
+
+
+    if (!Sample)
+    {
+        return; // no slots available
+    }
+
+    FVector Current = Pawn->K2_GetActorLocation();
+
+    if (Sample->LastServerTime == 0)
+    {
+        Sample->LastLocation = Current;
+        Sample->LastServerTime = Now;
+        return;
+    }
+
+
+    float DeltaTime = Now - Sample->LastServerTime;
+
+    if (DeltaTime <= 0)
+        return;
+
+    float Distance = CalculateDistance(Current, Sample->LastLocation);
+
+
+    float Speed = Distance / DeltaTime;
+
+
+    constexpr float MaxAllowedSpeed = 800.f; // cm/s
+
+
+    if (Speed > MaxAllowedSpeed)
+    {
+        Sample->Suspicion += 1.f;
+
+        std::cerr << "Speed anomaly detected for player: " << PC->GetCurPlayerState()->PlayerName.ToString() << std::endl;
+    }
+    else
+    {
+        // slowly decay suspicion
+        Sample->Suspicion -= 0.1f;
+
+        if (Sample->Suspicion < 0.f)
+        {
+            Sample->Suspicion = 0.f;
+        }
+    }
+
+    if (Sample->Suspicion > 5.f)
+    {
+        PC->STExtraBaseCharacter->Health = 0.0f;
+        //PC->KickSelf();
+        //PC->ClientLeaveMatchIntentionally();
+        PC->ServerLeaveMatchIntentionally();
+
+        ATslLPCPlayerState* ServerPS = (ATslLPCPlayerState*)UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0)->PlayerState;
+
+        if (ServerPS->IsA(ATslLPCPlayerState::StaticClass()) && PC->GetCurPlayerState()->IsA(ATslLPCPlayerState::StaticClass()))
+        {
+            ServerPS->BroadcastMidGameBan((ATslLPCPlayerState*)PC->GetCurPlayerState(), FString(L"Banned"), FString(L"Banned"));
+        }
+        else
+        {
+            std::cerr << "Condition failed" << std::endl; 
+        }
+    }
+
+    Sample->LastLocation = Current;
+    Sample->LastServerTime = Now;
+}
+
+void hooksagain()
+{
+    uintptr_t GetNetMode = (uintptr_t(GetModuleHandle(0)) + 0xCFD600);
+    uintptr_t GetNetMode2 = (uintptr_t(GetModuleHandle(0)) + 0x4B0180);
+
+    MH_STATUS netmodeHookResult = MH_CreateHook((PVOID&)GetNetMode, GetNetModeHook, reinterpret_cast <LPVOID*> (&GetNetModeO));
+    const char* netmodeHookResultString = MH_StatusToString(netmodeHookResult);
+
+    if (netmodeHookResult != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook GetNetMode CREATED FAILED WITH REASON : %s !\n", netmodeHookResultString);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)GetNetMode) != MH_STATUS::MH_OK)
+        {
+            printf("\n GetNetMode Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            std::cout << "GetNetMode Hook ENABLED" << std::endl;
+        }
+    }
+
+    MH_STATUS netmodeHookResult2 = MH_CreateHook((PVOID&)GetNetMode2, GetNetModeHook, reinterpret_cast <LPVOID*> (&GetNetModeO));
+    const char* netmodeHookResultString2 = MH_StatusToString(netmodeHookResult2);
+
+    if (netmodeHookResult != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook GetNetMode CREATED FAILED WITH REASON : %s !\n", netmodeHookResultString2);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)GetNetMode2) != MH_STATUS::MH_OK)
+        {
+            printf("\n GetNetMode Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            std::cout << "GetNetMode Hook ENABLED" << std::endl;
+        }
+    }
+
+    uintptr_t ProcessEvent = (uintptr_t(GetModuleHandle(0)) + Offsets::ProcessEvent);
+
+    MH_STATUS PROCESSEVENT = MH_CreateHook((PVOID&)ProcessEvent, ProcessEventHook, reinterpret_cast <LPVOID*> (&ProcessEventO));
+    const char* ProcessEventResultString2 = MH_StatusToString(PROCESSEVENT);
+
+    if (PROCESSEVENT != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook ProcessEvent CREATED FAILED WITH REASON : %s !\n", ProcessEventResultString2);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)ProcessEvent) != MH_STATUS::MH_OK)
+        {
+            printf("\n ProcessEvent Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            std::cout << "ProcessEvent Hook ENABLED" << std::endl;
+        }
+    }
 }
 
 DWORD MainThread(HMODULE Module)
@@ -3121,8 +3580,8 @@ DWORD MainThread(HMODULE Module)
     /* Code to open a console window */
     AllocConsole();
     FILE* Dummy;
-    freopen_s(&Dummy, "CONOUT$", "w", stdout);
     freopen_s(&Dummy, "CONOUT$", "w", stderr);
+    freopen_s(&Dummy, "CONOUT$", "w", stdout);
     freopen_s(&Dummy, "CONIN$", "r", stdin);
 
     std::cerr << "Waiting for GObjects..." << std::endl;
@@ -3134,24 +3593,66 @@ DWORD MainThread(HMODULE Module)
 
     Sleep(8600);
 
-    InitUEConsole();
+    MH_STATUS InitStatus = MH_Initialize();
+    const char* StatusString = MH_StatusToString(InitStatus);
+    printf("\n MINHOOK STATUS INIT: %s \n", StatusString);
+
+    if (InitStatus != MH_OK)
+    {
+        printf("\n [!ERROR]: MINHOOK STATUS INIT : NOT OK !!!! -> ABORTING !\n");
+    }
+
+    /*
+    void* Target = (void*)((uintptr_t)GetModuleHandle(nullptr) + 0x4D3140);
+    void* Target2 = (void*)((uintptr_t)GetModuleHandle(nullptr) + 0x4CDD80);
+    void* Target3 = (void*)((uintptr_t)GetModuleHandle(nullptr) + 0x4CCA30);
+
+    if (MH_CreateHook(Target, &hkSub4D3140, reinterpret_cast<void**>(&oSub4D3140)) != MH_OK)
+    {
+        printf("4D3140 CreateHook failed\n");
+    }
+
+    if (MH_EnableHook(Target) != MH_OK)
+    {
+        printf("4D3140 EnableHook failed\n");
+    }
+
+    if (MH_CreateHook(Target2, &hkSub4CDD80, reinterpret_cast<void**>(&oSub4CDD80)) != MH_OK)
+    {
+        printf("4CDD80 CreateHook failed\n");
+    }
+
+    if (MH_EnableHook(Target2) != MH_OK)
+    {
+        printf("4CDD80 EnableHook failed\n");
+    }
+
+    if (MH_CreateHook(Target3, &hkGather, reinterpret_cast<void**>(&oGather)) != MH_OK)
+    {
+        printf("Gather CreateHook failed\n");
+    }
+
+    if (MH_EnableHook(Target3) != MH_OK)
+    {
+        printf("Gather EnableHook failed\n");
+    }
+    */
+
+    //InitUEConsole();
 
     UWorld* World = UWorld::GetWorld();
 
     UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"t.MaxFPS 60"), UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0));
 
+    UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"s.LoadAllStreamingLevels 1"), UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0));
+    UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"s.UseBackgroundLevelStreaming 0"), UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0));
+    UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"s.AsyncLoadingThreadEnabled 0"), UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0));
+    UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"LoadAllLand 1"), UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0));
+
     std::cerr << "Ready" << std::endl;
 
-    MatrixEffect();
+    //MatrixEffect();
 
-    /*
- * Copyright (C) 2026 H4TIUX & Phikill
- *
- * This ASCII artwork is an original work of H4TIUX & Phikill
- * and must be included as part of this software if redistributed.
- *
- * Licensed under the GNU Affero General Public License v3.0 or later.
- */
     std::cerr << R"(
                      ___  ___  ___   ___  _________  ___  ___  ___     ___    ___                         
                     |\  \|\  \|\  \ |\  \|\___   ___\\  \|\  \|\  \   |\  \  /  /|                        
@@ -3170,26 +3671,8 @@ DWORD MainThread(HMODULE Module)
     /  /_|\   / /       \ \__\    \ \__\ \__\ \__\ \__\\ \__\ \__\ \_______\ \_______\
    /_______   \/         \|__|     \|__|\|__|\|__|\|__| \|__|\|__|\|_______|\|_______|
    |_______|\__\                                                                      
-           \|__|                                     
-
-                                    https://t.me/ogbattlegrounds                                 
+           \|__|                                                                      
                                                                                       )" << std::endl;
-
-    std::cerr << R"(
-    Copyright (C) 2026  H4TIUX & Phikill
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License as published
-    by the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program. If not, see <https://www.gnu.org/licenses/>.)" << std::endl;
 
     printf("\x54""H\111S\x20""I\123 \x46""R\105E\x20""C\117N\x54""E\116T\x20""B\131 \x4F""G\072B\x41""T\124L\x45""G\122O\x55""N\104S\x2C"" \111F\x20""Y\117U\x20""B\117U\x47""H\124 \x54""H\111S\x2C"" \131O\x55"" \110A\x56""E\040B\x45""E\116 \x53""C\101M\x4D""E\104.\x20""h\164t\x70""s\072/\x2F""g\151t\x68""u\142.\x63""o\155/\x48""4\124I\x55""X\012");
 
@@ -3202,63 +3685,66 @@ DWORD MainThread(HMODULE Module)
     std::cerr << "4. Bodie (TDM)" << std::endl;
     std::cerr << "5. Periverka (TDM)" << std::endl;
     std::cerr << "6. Training Mode" << std::endl;
-    std::cerr << "7. Continue" << std::endl;
+    std::cerr << "7. Vikendi" << std::endl;
+    std::cerr << "8. Continue" << std::endl;
 
     std::cin >> Map;
 
     switch (Map) {
     case 1:
-        UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"open PUBG_Forest?listen"), nullptr);
+        UKismetSystemLibrary::ExecuteConsoleCommand(UWorld::GetWorld(), FString(L"open PUBG_Forest?listen"), nullptr);
         OnStartMap(1);
         break;
     case 2:
-        UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"open PUBG_Desert?listen"), nullptr);
+        UKismetSystemLibrary::ExecuteConsoleCommand(UWorld::GetWorld(), FString(L"open PUBG_Desert?listen"), nullptr);
         OnStartMap(2);
         break;
     case 3:
-        UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"open /Game/Maps/PUBG_Savage/PUBG_Savage_Main?listen"), nullptr);
+        UKismetSystemLibrary::ExecuteConsoleCommand(UWorld::GetWorld(), FString(L"open /Game/Maps/PUBG_Savage/PUBG_Savage_Main?listen"), nullptr);
         OnStartMap(3);
         break;
     case 4:
-        UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"open PUBG_Bodie_Main?listen?game=/Game/Blueprints/Core/TeamMatchMode/BP_BattleRoyaleTeamMatchGameMode_C"), nullptr);
+        UKismetSystemLibrary::ExecuteConsoleCommand(UWorld::GetWorld(), FString(L"open PUBG_Bodie_Main?game=/Game/Blueprints/Core/TeamMatchMode/BP_BattleRoyaleTeamMatchGameMode_C?listen"), nullptr);
         OnStartMap(4);
         break;
     case 5:
-        UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"open PUBG_School_Main?listen"), nullptr);
+        UKismetSystemLibrary::ExecuteConsoleCommand(UWorld::GetWorld(), FString(L"open PUBG_School_Main?listen"), nullptr);
         OnStartMap(5);
         break;
     case 6:
-        UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"open shooting_range4?listen"), nullptr);
-        OnStartMap(6);
+        UKismetSystemLibrary::ExecuteConsoleCommand(UWorld::GetWorld(), FString(L"open shooting_range4?listen"), nullptr);
+        bIsTrainingMode = true;
+        while (!UWorld::GetWorld()) Sleep(50);
+        Sleep(4000);
+        hooksagain();
+        //OnStartMap(6);
         break;
     case 7:
+        UKismetSystemLibrary::ExecuteConsoleCommand(UWorld::GetWorld(), FString(L"open /Game/Maps/PUBG_DihorOtok/DihorOtok_Main?listen"), nullptr);
+        OnStartMap(1);
+        break;
+    case 8:
         break;
 
     default:
         std::cerr << "Invalid map selection" << std::endl;
         break;
     }
+    
 
     while (true)
     {
-        SafeProcessPlayers();
-
-        //Sleep(33.333333333333336); // Frametime @30FPS. Server runs at 30FPS by default, which means 30Hz tickrate. 
-
-        if (GetAsyncKeyState(VK_F1)) {
-            UGameplayStatics::FlushLevelStreaming(UWorld::GetWorld());
-        }
+        SafeProcessPlayers(); 
+        Sleep(100);
     }
 
     return 0;
 }
 
-__declspec(dllexport) void __Main() {
-    // dummy function for imports   
-}
-
-BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID lpReserved) {
-    switch (reason) {
+BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID lpReserved)
+{
+    switch (reason)
+    {
     case DLL_PROCESS_ATTACH:
         DisableThreadLibraryCalls(hModule);
         CreateThread(0, 0, (LPTHREAD_START_ROUTINE)MainThread, hModule, 0, 0);

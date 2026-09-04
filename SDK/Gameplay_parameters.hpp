@@ -11,13 +11,111 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Gameplay_structs.hpp"
 #include "Engine_structs.hpp"
+#include "Gameplay_structs.hpp"
 #include "Basic_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function Gameplay.GeneratorActorAIInterface.RegisterAIPickupPoint
+// 0x0010 (0x0010 - 0x0000)
+struct GeneratorActorAIInterface_RegisterAIPickupPoint final
+{
+public:
+	class UItemSpotSceneComponent*                Spot;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 PickUpActor;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEPlayerState.GetUserIDByMemberID
+// 0x0008 (0x0008 - 0x0000)
+struct UAEPlayerState_GetUserIDByMemberID final
+{
+public:
+	int32                                         memberID;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEPlayerState.SetGVMemberID
+// 0x0004 (0x0004 - 0x0000)
+struct UAEPlayerState_SetGVMemberID final
+{
+public:
+	int32                                         memberID;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEPlayerState.SetGVMemberIDServerCall
+// 0x0004 (0x0004 - 0x0000)
+struct UAEPlayerState_SetGVMemberIDServerCall final
+{
+public:
+	int32                                         memberID;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEPlayerState.GetPlayerBattleResultData
+// 0x00E0 (0x00E0 - 0x0000)
+struct UAEPlayerState_GetPlayerBattleResultData final
+{
+public:
+	struct FGameModePlayerBattleResultData        ReturnValue;                                       // 0x0000(0x00E0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEPlayerState.GetTeammateBattleResultData
+// 0x0058 (0x0058 - 0x0000)
+struct UAEPlayerState_GetTeammateBattleResultData final
+{
+public:
+	struct FGameModeTeammateBattleResultData      ReturnValue;                                       // 0x0000(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAECharacter.ClientAcknowledgeReconnection_2
+// 0x0004 (0x0004 - 0x0000)
+struct UAECharacter_ClientAcknowledgeReconnection_2 final
+{
+public:
+	uint32                                        Token;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAECharacter.GetPlayerKey
+// 0x0010 (0x0010 - 0x0000)
+struct UAECharacter_GetPlayerKey final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAECharacter.GetNonDedicatedComponents
+// 0x0010 (0x0010 - 0x0000)
+struct UAECharacter_GetNonDedicatedComponents final
+{
+public:
+	TArray<class UActorComponent*>                ReturnValue;                                       // 0x0000(0x0010)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAECharacter.GetNonSimulatedComponents
+// 0x0010 (0x0010 - 0x0000)
+struct UAECharacter_GetNonSimulatedComponents final
+{
+public:
+	TArray<class UActorComponent*>                ReturnValue;                                       // 0x0000(0x0010)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAECharacter.GetNonSimulatedComponents_NonTeammates
+// 0x0010 (0x0010 - 0x0000)
+struct UAECharacter_GetNonSimulatedComponents_NonTeammates final
+{
+public:
+	TArray<class UActorComponent*>                ReturnValue;                                       // 0x0000(0x0010)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAECharacter.GetNonSimulatedComponents_OnFighting
+// 0x0010 (0x0010 - 0x0000)
+struct UAECharacter_GetNonSimulatedComponents_OnFighting final
+{
+public:
+	TArray<class UActorComponent*>                ReturnValue;                                       // 0x0000(0x0010)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
 
 // Function Gameplay.UAEGameMode.AddAirDropBox
 // 0x0010 (0x0010 - 0x0000)
@@ -110,6 +208,77 @@ public:
 	TArray<class AUAEPlayerState*>                ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 
+// Function Gameplay.GroupSpotSceneComponent.FindWorldCompositionID
+// 0x0004 (0x0004 - 0x0000)
+struct GroupSpotSceneComponent_FindWorldCompositionID final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.GroupSpotSceneComponent.IsValidGroup
+// 0x0001 (0x0001 - 0x0000)
+struct GroupSpotSceneComponent_IsValidGroup final
+{
+public:
+	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Gameplay.GroupSpotSceneComponent.SetGroupValid
+// 0x0001 (0x0001 - 0x0000)
+struct GroupSpotSceneComponent_SetGroupValid final
+{
+public:
+	uint8                                         Valid : 1;                                         // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Gameplay.ItemGroupSpotSceneComponent.RandomRepeatGenerateItemCD
+// 0x0030 (0x0030 - 0x0000)
+struct ItemGroupSpotSceneComponent_RandomRepeatGenerateItemCD final
+{
+public:
+	struct FSpotGroupProperty                     GroupProperty;                                     // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Gameplay.ItemGroupSpotSceneComponent.RandomSingleSpot
+// 0x0048 (0x0048 - 0x0000)
+struct ItemGroupSpotSceneComponent_RandomSingleSpot final
+{
+public:
+	TArray<class UItemSpotSceneComponent*>        Spots;                                             // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FSpotTypeProperty                      Property;                                          // 0x0010(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.ItemGroupSpotSceneComponent.RandomSpotByType
+// 0x0050 (0x0050 - 0x0000)
+struct ItemGroupSpotSceneComponent_RandomSpotByType final
+{
+public:
+	ESpotType                                     SpotType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UItemSpotSceneComponent*>        AllSpots;                                          // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FSpotTypeProperty                      Property;                                          // 0x0018(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.ItemGroupSpotSceneComponent.RepeatSingleSpot
+// 0x0008 (0x0008 - 0x0000)
+struct ItemGroupSpotSceneComponent_RepeatSingleSpot final
+{
+public:
+	class UItemSpotSceneComponent*                Spot;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.ItemGroupSpotSceneComponent.SetGroupProperty
+// 0x0030 (0x0030 - 0x0000)
+struct ItemGroupSpotSceneComponent_SetGroupProperty final
+{
+public:
+	class UItemGeneratorComponent*                Generator;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSpotGroupProperty                     Property;                                          // 0x0008(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+
 // Function Gameplay.SpotSceneComponent.GenerateActor
 // 0x0030 (0x0030 - 0x0000)
 struct SpotSceneComponent_GenerateActor final
@@ -173,93 +342,674 @@ public:
 	uint8                                         Valid : 1;                                         // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 };
 
-// Function Gameplay.UAECharacter.ClientAcknowledgeReconnection_2
+// Function Gameplay.GeneratorActorInterface.InitData
+// 0x0038 (0x0038 - 0x0000)
+struct GeneratorActorInterface_InitData final
+{
+public:
+	class UItemSpotSceneComponent*                ItemSpotSceneComponent;                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ItemCount;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Category;                                          // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         RepeatGenerateItem : 1;                            // 0x0030(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Gameplay.TestAttrModifyActor.GetAttrValue
+// 0x0008 (0x0008 - 0x0000)
+struct TestAttrModifyActor_GetAttrValue final
+{
+public:
+	int32                                         I;                                                 // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         F;                                                 // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.TestAttrModifyActor.SetModify
+// 0x0001 (0x0001 - 0x0000)
+struct TestAttrModifyActor_SetModify final
+{
+public:
+	uint8                                         Enable : 1;                                        // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Gameplay.TestAttrModifyActor.TestGetVariable
+// 0x0001 (0x0001 - 0x0000)
+struct TestAttrModifyActor_TestGetVariable final
+{
+public:
+	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Gameplay.UAECharacterAnimListComponent.OnAsyncLoadingFinished
+// 0x0050 (0x0050 - 0x0000)
+struct UAECharacterAnimListComponent_OnAsyncLoadingFinished final
+{
+public:
+	struct FAsyncLoadCharAnimParams               LoadingParam;                                      // 0x0000(0x0050)(Parm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAECharacterAnimListComponent.GetCharacterAnim
+// 0x0010 (0x0010 - 0x0000)
+struct UAECharacterAnimListComponent_GetCharacterAnim final
+{
+public:
+	ECharacterAnimType                            AnimType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECharacterPoseType                            PoseType;                                          // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimationAsset*                        ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAECharacterAnimListComponent.GetCharacterJumpAnim
+// 0x0018 (0x0018 - 0x0000)
+struct UAECharacterAnimListComponent_GetCharacterJumpAnim final
+{
+public:
+	ECharacterJumpType                            JumpType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FPlayerAnimData>                ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEPlayerController.ActorReports
+// 0x0010 (0x0010 - 0x0000)
+struct UAEPlayerController_ActorReports final
+{
+public:
+	class FString                                 InFileName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEPlayerController.CastUIMsg
+// 0x0020 (0x0020 - 0x0000)
+struct UAEPlayerController_CastUIMsg final
+{
+public:
+	class FString                                 strMsg;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 module;                                            // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEPlayerController.CheckAcknowledgedPawn
+// 0x0010 (0x0010 - 0x0000)
+struct UAEPlayerController_CheckAcknowledgedPawn final
+{
+public:
+	class APawn*                                  InPawn;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         ReturnValue : 1;                                   // 0x0008(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Gameplay.UAEPlayerController.ClientAcknowledgeReconnection_3
 // 0x0004 (0x0004 - 0x0000)
-struct UAECharacter_ClientAcknowledgeReconnection_2 final
+struct UAEPlayerController_ClientAcknowledgeReconnection_3 final
 {
 public:
 	uint32                                        Token;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function Gameplay.UAECharacter.GetPlayerKey
+// Function Gameplay.UAEPlayerController.ExcuteIntCounterRecord
+// 0x0018 (0x0018 - 0x0000)
+struct UAEPlayerController_ExcuteIntCounterRecord final
+{
+public:
+	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Count;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Gameplay.UAEPlayerController.ExcuteIntRecord
+// 0x0018 (0x0018 - 0x0000)
+struct UAEPlayerController_ExcuteIntRecord final
+{
+public:
+	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Count;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Gameplay.UAEPlayerController.InitWithPlayerParams
+// 0x00E0 (0x00E0 - 0x0000)
+struct UAEPlayerController_InitWithPlayerParams final
+{
+public:
+	struct FGameModePlayerParams                  Params_0;                                          // 0x0000(0x00E0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEPlayerController.LobbyMemberVoice
+// 0x0008 (0x0008 - 0x0000)
+struct UAEPlayerController_LobbyMemberVoice final
+{
+public:
+	int32                                         Member;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         State;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEPlayerController.ObjectCountReport
 // 0x0010 (0x0010 - 0x0000)
-struct UAECharacter_GetPlayerKey final
+struct UAEPlayerController_ObjectCountReport final
+{
+public:
+	class FString                                 InFileName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEPlayerController.ObjectPathReport
+// 0x0010 (0x0010 - 0x0000)
+struct UAEPlayerController_ObjectPathReport final
+{
+public:
+	class FString                                 InFileName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEPlayerController.ObjectReports
+// 0x0010 (0x0010 - 0x0000)
+struct UAEPlayerController_ObjectReports final
+{
+public:
+	class FString                                 InFileName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEPlayerController.OnCharacterDestroyed
+// 0x0008 (0x0008 - 0x0000)
+struct UAEPlayerController_OnCharacterDestroyed final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEPlayerController.ServerAcknowledgeReconnection_1
+// 0x0004 (0x0004 - 0x0000)
+struct UAEPlayerController_ServerAcknowledgeReconnection_1 final
+{
+public:
+	uint32                                        Token;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEPlayerController.ServerSetVoiceId
+// 0x0004 (0x0004 - 0x0000)
+struct UAEPlayerController_ServerSetVoiceId final
+{
+public:
+	int32                                         VoiceID;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEPlayerController.SetCustomDepth
+// 0x0001 (0x0001 - 0x0000)
+struct UAEPlayerController_SetCustomDepth final
+{
+public:
+	uint8                                         bOn : 1;                                           // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Gameplay.UAEPlayerController.SetPanels
+// 0x0010 (0x0010 - 0x0000)
+struct UAEPlayerController_SetPanels final
+{
+public:
+	TArray<class UUAEUserWidget*>                 panels;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEPlayerController.IsInSpectating
+// 0x0001 (0x0001 - 0x0000)
+struct UAEPlayerController_IsInSpectating final
+{
+public:
+	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Gameplay.UAEPlayerController.IsObserver
+// 0x0001 (0x0001 - 0x0000)
+struct UAEPlayerController_IsObserver final
+{
+public:
+	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Gameplay.UAEPlayerController.IsSpectator
+// 0x0001 (0x0001 - 0x0000)
+struct UAEPlayerController_IsSpectator final
+{
+public:
+	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Gameplay.UAEHouseActor.BroadcastWindowRepDataUpdated
+// 0x0050 (0x0050 - 0x0000)
+struct UAEHouseActor_BroadcastWindowRepDataUpdated final
+{
+public:
+	struct FUAEWindowRepData                      InRepData;                                         // 0x0000(0x0050)(Parm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEProjectile.GlassDetect
+// 0x0018 (0x0018 - 0x0000)
+struct UAEProjectile_GlassDetect final
+{
+public:
+	struct FVector                                Start;                                             // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                End;                                               // 0x000C(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEProjectile.IsOwnerAutomous
+// 0x0001 (0x0001 - 0x0000)
+struct UAEProjectile_IsOwnerAutomous final
+{
+public:
+	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Gameplay.UAEProjectile.ServerFireWeapon
+// 0x0004 (0x0004 - 0x0000)
+struct UAEProjectile_ServerFireWeapon final
+{
+public:
+	struct FAttackId                              AttackId;                                          // 0x0000(0x0004)(ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEProjectile.SetRotationAndLocationByNormal
+// 0x0008 (0x0008 - 0x0000)
+struct UAEProjectile_SetRotationAndLocationByNormal final
+{
+public:
+	class USceneComponent*                        Comp;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEProjectile.GetStartFlyPos
+// 0x000C (0x000C - 0x0000)
+struct UAEProjectile_GetStartFlyPos final
+{
+public:
+	struct FVector                                Out;                                               // 0x0000(0x000C)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.ItemSpotSceneComponent.CountCacheItemValeCategory
+// 0x0004 (0x0004 - 0x0000)
+struct ItemSpotSceneComponent_CountCacheItemValeCategory final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.ItemSpotSceneComponent.DoPickUp
+// 0x0020 (0x0020 - 0x0000)
+struct ItemSpotSceneComponent_DoPickUp final
+{
+public:
+	class FString                                 ItemValue;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ItemCategory;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.ItemSpotSceneComponent.GenerateItems
+// 0x0010 (0x0010 - 0x0000)
+struct ItemSpotSceneComponent_GenerateItems final
+{
+public:
+	TArray<struct FItemGenerateSpawnClass>        AllItemClass;                                      // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.ItemSpotSceneComponent.GenerateSpot
+// 0x0001 (0x0001 - 0x0000)
+struct ItemSpotSceneComponent_GenerateSpot final
+{
+public:
+	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Gameplay.ItemSpotSceneComponent.GetAllItemNames
+// 0x0010 (0x0010 - 0x0000)
+struct ItemSpotSceneComponent_GetAllItemNames final
+{
+public:
+	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.ItemSpotSceneComponent.RepeatSpotProperty
+// 0x0038 (0x0038 - 0x0000)
+struct ItemSpotSceneComponent_RepeatSpotProperty final
+{
+public:
+	struct FSpotTypeProperty                      Property;                                          // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.ItemSpotSceneComponent.SetSpotProperty
+// 0x0058 (0x0058 - 0x0000)
+struct ItemSpotSceneComponent_SetSpotProperty final
+{
+public:
+	int32                                         CompositionID;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESpotGroupType                                GroupType;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UItemGeneratorComponent*                Generator;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSpotTypeProperty                      Property;                                          // 0x0010(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UGroupSpotSceneComponent*               Component;                                         // 0x0048(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         RepeatGenerateItem : 1;                            // 0x0050(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Gameplay.BaseGeneratorComponent.GeneratorWorldTileSpots
+// 0x0018 (0x0018 - 0x0000)
+struct BaseGeneratorComponent_GeneratorWorldTileSpots final
+{
+public:
+	struct FWorldTileSpotArray                    SpotArray;                                         // 0x0000(0x0018)(Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.BaseGeneratorComponent.RegisterGroupSpotComponent
+// 0x0008 (0x0008 - 0x0000)
+struct BaseGeneratorComponent_RegisterGroupSpotComponent final
+{
+public:
+	class UGroupSpotSceneComponent*               GroupSpotComponent;                                // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.BaseGeneratorComponent.RegisterSpotComponentToTick
+// 0x0008 (0x0008 - 0x0000)
+struct BaseGeneratorComponent_RegisterSpotComponentToTick final
+{
+public:
+	class USpotSceneComponent*                    SpotComponent;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.BaseGeneratorComponent.RegisterWorldTileSpot
+// 0x0008 (0x0008 - 0x0000)
+struct BaseGeneratorComponent_RegisterWorldTileSpot final
+{
+public:
+	class USpotSceneComponent*                    Spot;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.VehicleGeneratorComponent.AddVehicleClassCount
+// 0x0018 (0x0018 - 0x0000)
+struct VehicleGeneratorComponent_AddVehicleClassCount final
+{
+public:
+	class FString                                 Path;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         IsValid : 1;                                       // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Count;                                             // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.VehicleGeneratorComponent.AddVehicleSpotCount
+// 0x0028 (0x0028 - 0x0000)
+struct VehicleGeneratorComponent_AddVehicleSpotCount final
+{
+public:
+	ESpotType                                     SpotType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Path;                                              // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LocationX;                                         // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LocationY;                                         // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LocationZ;                                         // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Gameplay.VehicleGeneratorComponent.GetRandomCategory
+// 0x0020 (0x0020 - 0x0000)
+struct VehicleGeneratorComponent_GetRandomCategory final
+{
+public:
+	TArray<struct FSpotWeight>                    SpotWeights;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.VehicleGeneratorComponent.GetRandomVehicleClass
+// 0x0040 (0x0040 - 0x0000)
+struct VehicleGeneratorComponent_GetRandomVehicleClass final
+{
+public:
+	class FString                                 Category;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVehicleGenerateSpawnData              ReturnValue;                                       // 0x0010(0x0030)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.VehicleGeneratorComponent.GetVehicleSpotRandomInfo
+// 0x0060 (0x0060 - 0x0000)
+struct VehicleGeneratorComponent_GetVehicleSpotRandomInfo final
+{
+public:
+	struct FVehicleSpotProperty                   SpotProperty;                                      // 0x0000(0x0038)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FVehicleGenerateRandomInfo             ReturnValue;                                       // 0x0038(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.VehicleGeneratorComponent.GetVehicleSpotRandomInfoBySpotType
+// 0x0030 (0x0030 - 0x0000)
+struct VehicleGeneratorComponent_GetVehicleSpotRandomInfoBySpotType final
+{
+public:
+	ESpotType                                     SpotType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVehicleGenerateRandomInfo             ReturnValue;                                       // 0x0008(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.VehicleGeneratorComponent.RandomSingleSpots
+// 0x0048 (0x0048 - 0x0000)
+struct VehicleGeneratorComponent_RandomSingleSpots final
+{
+public:
+	TArray<class UVehicleSpotSceneComponent*>     AllSpots;                                          // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FVehicleSpotProperty                   Property;                                          // 0x0010(0x0038)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.VehicleGeneratorComponent.RandomSpotsByType
+// 0x0050 (0x0050 - 0x0000)
+struct VehicleGeneratorComponent_RandomSpotsByType final
+{
+public:
+	struct FVehicleSpotProperty                   Property;                                          // 0x0000(0x0038)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FVehicleSpotComponentArray             Spots;                                             // 0x0038(0x0018)(Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.VehicleGeneratorComponent.RegisterGroupSpotComponent
+// 0x0008 (0x0008 - 0x0000)
+struct VehicleGeneratorComponent_RegisterGroupSpotComponent final
+{
+public:
+	class UGroupSpotSceneComponent*               GroupSpotComponent;                                // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.VehicleGeneratorComponent.RegisterVehicleGenerateSpawnData
+// 0x0030 (0x0030 - 0x0000)
+struct VehicleGeneratorComponent_RegisterVehicleGenerateSpawnData final
+{
+public:
+	struct FVehicleGenerateSpawnData              Data;                                              // 0x0000(0x0030)(Parm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEWindowComponent.GetRepData
+// 0x0050 (0x0050 - 0x0000)
+struct UAEWindowComponent_GetRepData final
+{
+public:
+	struct FUAEWindowRepData                      ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.UAEWindowComponent.HandleBroken
+// 0x0010 (0x0010 - 0x0000)
+struct UAEWindowComponent_HandleBroken final
+{
+public:
+	class APlayerController*                      Instigator;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bLocal : 1;                                        // 0x0008(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Gameplay.UAEWindowComponent.LocalHandleWindowBroken
+// 0x0002 (0x0002 - 0x0000)
+struct UAEWindowComponent_LocalHandleWindowBroken final
+{
+public:
+	uint8                                         bInitial : 1;                                      // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bLocal : 1;                                        // 0x0001(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Gameplay.UAEWindowComponent.LocalHandleWindowBrokenBP
+// 0x0002 (0x0002 - 0x0000)
+struct UAEWindowComponent_LocalHandleWindowBrokenBP final
+{
+public:
+	uint8                                         bInitial : 1;                                      // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bLocal : 1;                                        // 0x0001(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Gameplay.UAEWindowComponent.NotifyRepDataUpdated
+// 0x0002 (0x0002 - 0x0000)
+struct UAEWindowComponent_NotifyRepDataUpdated final
+{
+public:
+	uint8                                         bInitial : 1;                                      // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bLocal : 1;                                        // 0x0001(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Gameplay.VehicleConfigActorComponent.LoadActorClass
+// 0x0018 (0x0018 - 0x0000)
+struct VehicleConfigActorComponent_LoadActorClass final
+{
+public:
+	class FString                                 Path;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UClass*                                 ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.AddVehicleClassCount
+// 0x0018 (0x0018 - 0x0000)
+struct VehicleAndTreasureBoxGeneratorComponent_AddVehicleClassCount final
+{
+public:
+	class FString                                 Path;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         IsValid : 1;                                       // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Count;                                             // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.AddVehicleSpotCount
+// 0x0028 (0x0028 - 0x0000)
+struct VehicleAndTreasureBoxGeneratorComponent_AddVehicleSpotCount final
+{
+public:
+	ESpotType                                     SpotType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Path;                                              // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LocationX;                                         // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LocationY;                                         // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LocationZ;                                         // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetRandomCategory
+// 0x0020 (0x0020 - 0x0000)
+struct VehicleAndTreasureBoxGeneratorComponent_GetRandomCategory final
+{
+public:
+	TArray<struct FSpotWeight>                    SpotWeights;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetRandomVehicleClass
+// 0x0040 (0x0040 - 0x0000)
+struct VehicleAndTreasureBoxGeneratorComponent_GetRandomVehicleClass final
+{
+public:
+	class FString                                 Category;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVehicleGenerateSpawnData              ReturnValue;                                       // 0x0010(0x0030)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetTreasureBoxSpotRandomInfo
+// 0x0048 (0x0048 - 0x0000)
+struct VehicleAndTreasureBoxGeneratorComponent_GetTreasureBoxSpotRandomInfo final
+{
+public:
+	struct FTreasureBoxSpotProperty               SpotProperty;                                      // 0x0000(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FVehicleGenerateRandomInfo             ReturnValue;                                       // 0x0020(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetVehicleSpotRandomInfo
+// 0x0060 (0x0060 - 0x0000)
+struct VehicleAndTreasureBoxGeneratorComponent_GetVehicleSpotRandomInfo final
+{
+public:
+	struct FVehicleSpotProperty                   SpotProperty;                                      // 0x0000(0x0038)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FVehicleGenerateRandomInfo             ReturnValue;                                       // 0x0038(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetVehicleSpotRandomInfoBySpotType
+// 0x0030 (0x0030 - 0x0000)
+struct VehicleAndTreasureBoxGeneratorComponent_GetVehicleSpotRandomInfoBySpotType final
+{
+public:
+	ESpotType                                     SpotType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVehicleGenerateRandomInfo             ReturnValue;                                       // 0x0008(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RandomSingleSpots
+// 0x0048 (0x0048 - 0x0000)
+struct VehicleAndTreasureBoxGeneratorComponent_RandomSingleSpots final
+{
+public:
+	TArray<class UVehicleSpotSceneComponent*>     AllSpots;                                          // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FVehicleSpotProperty                   Property;                                          // 0x0010(0x0038)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RandomSpotsByType
+// 0x0050 (0x0050 - 0x0000)
+struct VehicleAndTreasureBoxGeneratorComponent_RandomSpotsByType final
+{
+public:
+	struct FVehicleSpotProperty                   Property;                                          // 0x0000(0x0038)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FVehicleSpotComponentArray             Spots;                                             // 0x0038(0x0018)(Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RandomTreasureBoxSingleSpots
+// 0x0030 (0x0030 - 0x0000)
+struct VehicleAndTreasureBoxGeneratorComponent_RandomTreasureBoxSingleSpots final
+{
+public:
+	TArray<class UVehicleSpotSceneComponent*>     AllSpots;                                          // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FTreasureBoxSpotProperty               Property;                                          // 0x0010(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RandomTreasureBoxSpotsByType
+// 0x0038 (0x0038 - 0x0000)
+struct VehicleAndTreasureBoxGeneratorComponent_RandomTreasureBoxSpotsByType final
+{
+public:
+	struct FTreasureBoxSpotProperty               Property;                                          // 0x0000(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FVehicleSpotComponentArray             Spots;                                             // 0x0020(0x0018)(Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RegisterGroupSpotComponent
+// 0x0008 (0x0008 - 0x0000)
+struct VehicleAndTreasureBoxGeneratorComponent_RegisterGroupSpotComponent final
+{
+public:
+	class UGroupSpotSceneComponent*               GroupSpotComponent;                                // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RegisterVehicleGenerateSpawnData
+// 0x0030 (0x0030 - 0x0000)
+struct VehicleAndTreasureBoxGeneratorComponent_RegisterVehicleGenerateSpawnData final
+{
+public:
+	struct FVehicleGenerateSpawnData              Data;                                              // 0x0000(0x0030)(Parm, NativeAccessSpecifierPublic)
+};
+
+// Function Gameplay.VehicleSpotSceneComponent.GenerateSpot
+// 0x0001 (0x0001 - 0x0000)
+struct VehicleSpotSceneComponent_GenerateSpot final
+{
+public:
+	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+
+// Function Gameplay.VehicleSpotSceneComponent.GetVehiclePath
+// 0x0010 (0x0010 - 0x0000)
+struct VehicleSpotSceneComponent_GetVehiclePath final
 {
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function Gameplay.UAECharacter.GetNonDedicatedComponents
-// 0x0010 (0x0010 - 0x0000)
-struct UAECharacter_GetNonDedicatedComponents final
+// Function Gameplay.VehicleSpotSceneComponent.SetSpotRandomInfo
+// 0x0028 (0x0028 - 0x0000)
+struct VehicleSpotSceneComponent_SetSpotRandomInfo final
 {
 public:
-	TArray<class UActorComponent*>                ReturnValue;                                       // 0x0000(0x0010)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAECharacter.GetNonSimulatedComponents
-// 0x0010 (0x0010 - 0x0000)
-struct UAECharacter_GetNonSimulatedComponents final
-{
-public:
-	TArray<class UActorComponent*>                ReturnValue;                                       // 0x0000(0x0010)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAECharacter.GetNonSimulatedComponents_NonTeammates
-// 0x0010 (0x0010 - 0x0000)
-struct UAECharacter_GetNonSimulatedComponents_NonTeammates final
-{
-public:
-	TArray<class UActorComponent*>                ReturnValue;                                       // 0x0000(0x0010)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAECharacter.GetNonSimulatedComponents_OnFighting
-// 0x0010 (0x0010 - 0x0000)
-struct UAECharacter_GetNonSimulatedComponents_OnFighting final
-{
-public:
-	TArray<class UActorComponent*>                ReturnValue;                                       // 0x0000(0x0010)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAEPlayerState.GetUserIDByMemberID
-// 0x0008 (0x0008 - 0x0000)
-struct UAEPlayerState_GetUserIDByMemberID final
-{
-public:
-	int32                                         memberID;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAEPlayerState.SetGVMemberID
-// 0x0004 (0x0004 - 0x0000)
-struct UAEPlayerState_SetGVMemberID final
-{
-public:
-	int32                                         memberID;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAEPlayerState.SetGVMemberIDServerCall
-// 0x0004 (0x0004 - 0x0000)
-struct UAEPlayerState_SetGVMemberIDServerCall final
-{
-public:
-	int32                                         memberID;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAEPlayerState.GetPlayerBattleResultData
-// 0x00E0 (0x00E0 - 0x0000)
-struct UAEPlayerState_GetPlayerBattleResultData final
-{
-public:
-	struct FGameModePlayerBattleResultData        ReturnValue;                                       // 0x0000(0x00E0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAEPlayerState.GetTeammateBattleResultData
-// 0x0058 (0x0058 - 0x0000)
-struct UAEPlayerState_GetTeammateBattleResultData final
-{
-public:
-	struct FGameModeTeammateBattleResultData      ReturnValue;                                       // 0x0000(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FVehicleGenerateRandomInfo             RandomInfo;                                        // 0x0000(0x0028)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
 
 // Function Gameplay.BackpackComponent.AddItemHandle
@@ -601,12 +1351,12 @@ public:
 };
 
 // Function Gameplay.BackpackComponent.GetItemByDefineID
-// 0x00B8 (0x00B8 - 0x0000)
+// 0x00B0 (0x00B0 - 0x0000)
 struct BackpackComponent_GetItemByDefineID final
 {
 public:
 	struct FItemDefineID                          DefineID;                                          // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBattleItemData                        ReturnValue;                                       // 0x0018(0x00A0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FBattleItemData                        ReturnValue;                                       // 0x0018(0x0098)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 
 // Function Gameplay.BackpackComponent.GetItemListByDefineID
@@ -635,430 +1385,6 @@ public:
 	class UBattleItemHandleBase*                  ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function Gameplay.UAEPlayerController.ActorReports
-// 0x0010 (0x0010 - 0x0000)
-struct UAEPlayerController_ActorReports final
-{
-public:
-	class FString                                 InFileName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAEPlayerController.CastUIMsg
-// 0x0020 (0x0020 - 0x0000)
-struct UAEPlayerController_CastUIMsg final
-{
-public:
-	class FString                                 strMsg;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 module;                                            // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAEPlayerController.CheckAcknowledgedPawn
-// 0x0010 (0x0010 - 0x0000)
-struct UAEPlayerController_CheckAcknowledgedPawn final
-{
-public:
-	class APawn*                                  InPawn;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         ReturnValue : 1;                                   // 0x0008(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function Gameplay.UAEPlayerController.ClientAcknowledgeReconnection_3
-// 0x0004 (0x0004 - 0x0000)
-struct UAEPlayerController_ClientAcknowledgeReconnection_3 final
-{
-public:
-	uint32                                        Token;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAEPlayerController.ExcuteIntCounterRecord
-// 0x0018 (0x0018 - 0x0000)
-struct UAEPlayerController_ExcuteIntCounterRecord final
-{
-public:
-	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Count;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function Gameplay.UAEPlayerController.ExcuteIntRecord
-// 0x0018 (0x0018 - 0x0000)
-struct UAEPlayerController_ExcuteIntRecord final
-{
-public:
-	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Count;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function Gameplay.UAEPlayerController.InitWithPlayerParams
-// 0x00D0 (0x00D0 - 0x0000)
-struct UAEPlayerController_InitWithPlayerParams final
-{
-public:
-	struct FGameModePlayerParams                  Params_0;                                          // 0x0000(0x00D0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAEPlayerController.LobbyMemberVoice
-// 0x0008 (0x0008 - 0x0000)
-struct UAEPlayerController_LobbyMemberVoice final
-{
-public:
-	int32                                         Member;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         State;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAEPlayerController.ObjectCountReport
-// 0x0010 (0x0010 - 0x0000)
-struct UAEPlayerController_ObjectCountReport final
-{
-public:
-	class FString                                 InFileName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAEPlayerController.ObjectPathReport
-// 0x0010 (0x0010 - 0x0000)
-struct UAEPlayerController_ObjectPathReport final
-{
-public:
-	class FString                                 InFileName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAEPlayerController.ObjectReports
-// 0x0010 (0x0010 - 0x0000)
-struct UAEPlayerController_ObjectReports final
-{
-public:
-	class FString                                 InFileName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAEPlayerController.OnCharacterDestroyed
-// 0x0008 (0x0008 - 0x0000)
-struct UAEPlayerController_OnCharacterDestroyed final
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAEPlayerController.ServerAcknowledgeReconnection_1
-// 0x0004 (0x0004 - 0x0000)
-struct UAEPlayerController_ServerAcknowledgeReconnection_1 final
-{
-public:
-	uint32                                        Token;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAEPlayerController.ServerSetVoiceId
-// 0x0004 (0x0004 - 0x0000)
-struct UAEPlayerController_ServerSetVoiceId final
-{
-public:
-	int32                                         VoiceID;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAEPlayerController.SetCustomDepth
-// 0x0001 (0x0001 - 0x0000)
-struct UAEPlayerController_SetCustomDepth final
-{
-public:
-	uint8                                         bOn : 1;                                           // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Gameplay.UAEPlayerController.SetPanels
-// 0x0010 (0x0010 - 0x0000)
-struct UAEPlayerController_SetPanels final
-{
-public:
-	TArray<class UUAEUserWidget*>                 panels;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAEPlayerController.IsInSpectating
-// 0x0001 (0x0001 - 0x0000)
-struct UAEPlayerController_IsInSpectating final
-{
-public:
-	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Gameplay.UAEPlayerController.IsObserver
-// 0x0001 (0x0001 - 0x0000)
-struct UAEPlayerController_IsObserver final
-{
-public:
-	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Gameplay.UAEPlayerController.IsSpectator
-// 0x0001 (0x0001 - 0x0000)
-struct UAEPlayerController_IsSpectator final
-{
-public:
-	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Gameplay.BaseGeneratorComponent.GeneratorWorldTileSpots
-// 0x0018 (0x0018 - 0x0000)
-struct BaseGeneratorComponent_GeneratorWorldTileSpots final
-{
-public:
-	struct FWorldTileSpotArray                    SpotArray;                                         // 0x0000(0x0018)(Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.BaseGeneratorComponent.RegisterGroupSpotComponent
-// 0x0008 (0x0008 - 0x0000)
-struct BaseGeneratorComponent_RegisterGroupSpotComponent final
-{
-public:
-	class UGroupSpotSceneComponent*               GroupSpotComponent;                                // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.BaseGeneratorComponent.RegisterSpotComponentToTick
-// 0x0008 (0x0008 - 0x0000)
-struct BaseGeneratorComponent_RegisterSpotComponentToTick final
-{
-public:
-	class USpotSceneComponent*                    SpotComponent;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.BaseGeneratorComponent.RegisterWorldTileSpot
-// 0x0008 (0x0008 - 0x0000)
-struct BaseGeneratorComponent_RegisterWorldTileSpot final
-{
-public:
-	class USpotSceneComponent*                    Spot;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.AddVehicleClassCount
-// 0x0018 (0x0018 - 0x0000)
-struct VehicleAndTreasureBoxGeneratorComponent_AddVehicleClassCount final
-{
-public:
-	class FString                                 Path;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         IsValid : 1;                                       // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Count;                                             // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.AddVehicleSpotCount
-// 0x0028 (0x0028 - 0x0000)
-struct VehicleAndTreasureBoxGeneratorComponent_AddVehicleSpotCount final
-{
-public:
-	ESpotType                                     SpotType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Path;                                              // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LocationX;                                         // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LocationY;                                         // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LocationZ;                                         // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetRandomCategory
-// 0x0020 (0x0020 - 0x0000)
-struct VehicleAndTreasureBoxGeneratorComponent_GetRandomCategory final
-{
-public:
-	TArray<struct FSpotWeight>                    SpotWeights;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetRandomVehicleClass
-// 0x0040 (0x0040 - 0x0000)
-struct VehicleAndTreasureBoxGeneratorComponent_GetRandomVehicleClass final
-{
-public:
-	class FString                                 Category;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVehicleGenerateSpawnData              ReturnValue;                                       // 0x0010(0x0030)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetTreasureBoxSpotRandomInfo
-// 0x0048 (0x0048 - 0x0000)
-struct VehicleAndTreasureBoxGeneratorComponent_GetTreasureBoxSpotRandomInfo final
-{
-public:
-	struct FTreasureBoxSpotProperty               SpotProperty;                                      // 0x0000(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
-	struct FVehicleGenerateRandomInfo             ReturnValue;                                       // 0x0020(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetVehicleSpotRandomInfo
-// 0x0060 (0x0060 - 0x0000)
-struct VehicleAndTreasureBoxGeneratorComponent_GetVehicleSpotRandomInfo final
-{
-public:
-	struct FVehicleSpotProperty                   SpotProperty;                                      // 0x0000(0x0038)(Parm, OutParm, NativeAccessSpecifierPublic)
-	struct FVehicleGenerateRandomInfo             ReturnValue;                                       // 0x0038(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetVehicleSpotRandomInfoBySpotType
-// 0x0030 (0x0030 - 0x0000)
-struct VehicleAndTreasureBoxGeneratorComponent_GetVehicleSpotRandomInfoBySpotType final
-{
-public:
-	ESpotType                                     SpotType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVehicleGenerateRandomInfo             ReturnValue;                                       // 0x0008(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RandomSingleSpots
-// 0x0048 (0x0048 - 0x0000)
-struct VehicleAndTreasureBoxGeneratorComponent_RandomSingleSpots final
-{
-public:
-	TArray<class UVehicleSpotSceneComponent*>     AllSpots;                                          // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	struct FVehicleSpotProperty                   Property;                                          // 0x0010(0x0038)(Parm, OutParm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RandomSpotsByType
-// 0x0050 (0x0050 - 0x0000)
-struct VehicleAndTreasureBoxGeneratorComponent_RandomSpotsByType final
-{
-public:
-	struct FVehicleSpotProperty                   Property;                                          // 0x0000(0x0038)(Parm, OutParm, NativeAccessSpecifierPublic)
-	struct FVehicleSpotComponentArray             Spots;                                             // 0x0038(0x0018)(Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RandomTreasureBoxSingleSpots
-// 0x0030 (0x0030 - 0x0000)
-struct VehicleAndTreasureBoxGeneratorComponent_RandomTreasureBoxSingleSpots final
-{
-public:
-	TArray<class UVehicleSpotSceneComponent*>     AllSpots;                                          // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	struct FTreasureBoxSpotProperty               Property;                                          // 0x0010(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RandomTreasureBoxSpotsByType
-// 0x0038 (0x0038 - 0x0000)
-struct VehicleAndTreasureBoxGeneratorComponent_RandomTreasureBoxSpotsByType final
-{
-public:
-	struct FTreasureBoxSpotProperty               Property;                                          // 0x0000(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
-	struct FVehicleSpotComponentArray             Spots;                                             // 0x0020(0x0018)(Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RegisterGroupSpotComponent
-// 0x0008 (0x0008 - 0x0000)
-struct VehicleAndTreasureBoxGeneratorComponent_RegisterGroupSpotComponent final
-{
-public:
-	class UGroupSpotSceneComponent*               GroupSpotComponent;                                // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RegisterVehicleGenerateSpawnData
-// 0x0030 (0x0030 - 0x0000)
-struct VehicleAndTreasureBoxGeneratorComponent_RegisterVehicleGenerateSpawnData final
-{
-public:
-	struct FVehicleGenerateSpawnData              Data;                                              // 0x0000(0x0030)(Parm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.TestAttrModifyActor.GetAttrValue
-// 0x0008 (0x0008 - 0x0000)
-struct TestAttrModifyActor_GetAttrValue final
-{
-public:
-	int32                                         I;                                                 // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         F;                                                 // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.TestAttrModifyActor.SetModify
-// 0x0001 (0x0001 - 0x0000)
-struct TestAttrModifyActor_SetModify final
-{
-public:
-	uint8                                         Enable : 1;                                        // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Gameplay.TestAttrModifyActor.TestGetVariable
-// 0x0001 (0x0001 - 0x0000)
-struct TestAttrModifyActor_TestGetVariable final
-{
-public:
-	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Gameplay.UAEHouseActor.BroadcastWindowRepDataUpdated
-// 0x0050 (0x0050 - 0x0000)
-struct UAEHouseActor_BroadcastWindowRepDataUpdated final
-{
-public:
-	struct FUAEWindowRepData                      InRepData;                                         // 0x0000(0x0050)(Parm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAECharacterAnimListComponent.OnAsyncLoadingFinished
-// 0x0060 (0x0060 - 0x0000)
-struct UAECharacterAnimListComponent_OnAsyncLoadingFinished final
-{
-public:
-	struct FAsyncLoadCharAnimParams               LoadingParam;                                      // 0x0000(0x0060)(Parm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAECharacterAnimListComponent.GetCharacterAnim
-// 0x0010 (0x0010 - 0x0000)
-struct UAECharacterAnimListComponent_GetCharacterAnim final
-{
-public:
-	ECharacterAnimType                            AnimType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECharacterPoseType                            PoseType;                                          // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimationAsset*                        ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAECharacterAnimListComponent.GetCharacterJumpAnim
-// 0x0018 (0x0018 - 0x0000)
-struct UAECharacterAnimListComponent_GetCharacterJumpAnim final
-{
-public:
-	ECharacterJumpType                            JumpType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPlayerAnimData>                ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.GeneratorActorAIInterface.RegisterAIPickupPoint
-// 0x0010 (0x0010 - 0x0000)
-struct GeneratorActorAIInterface_RegisterAIPickupPoint final
-{
-public:
-	class UItemSpotSceneComponent*                Spot;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 PickUpActor;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.GeneratorActorInterface.InitData
-// 0x0038 (0x0038 - 0x0000)
-struct GeneratorActorInterface_InitData final
-{
-public:
-	class UItemSpotSceneComponent*                ItemSpotSceneComponent;                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ItemCount;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Category;                                          // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         RepeatGenerateItem : 1;                            // 0x0030(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function Gameplay.VehicleSpotSceneComponent.GenerateSpot
-// 0x0001 (0x0001 - 0x0000)
-struct VehicleSpotSceneComponent_GenerateSpot final
-{
-public:
-	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Gameplay.VehicleSpotSceneComponent.GetVehiclePath
-// 0x0010 (0x0010 - 0x0000)
-struct VehicleSpotSceneComponent_GetVehiclePath final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.VehicleSpotSceneComponent.SetSpotRandomInfo
-// 0x0028 (0x0028 - 0x0000)
-struct VehicleSpotSceneComponent_SetSpotRandomInfo final
-{
-public:
-	struct FVehicleGenerateRandomInfo             RandomInfo;                                        // 0x0000(0x0028)(Parm, OutParm, NativeAccessSpecifierPublic)
-};
-
 // Function Gameplay.GeneratorVehicleInterface.InitVehicle
 // 0x0008 (0x0008 - 0x0000)
 struct GeneratorVehicleInterface_InitVehicle final
@@ -1075,126 +1401,6 @@ struct GeneratorVehicleInterface_SetSafeSpawn final
 {
 public:
 	uint8                                         ab_IsSafeSpawn : 1;                                // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Gameplay.VehicleGeneratorComponent.AddVehicleClassCount
-// 0x0018 (0x0018 - 0x0000)
-struct VehicleGeneratorComponent_AddVehicleClassCount final
-{
-public:
-	class FString                                 Path;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         IsValid : 1;                                       // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Count;                                             // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.VehicleGeneratorComponent.AddVehicleSpotCount
-// 0x0028 (0x0028 - 0x0000)
-struct VehicleGeneratorComponent_AddVehicleSpotCount final
-{
-public:
-	ESpotType                                     SpotType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Path;                                              // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LocationX;                                         // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LocationY;                                         // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LocationZ;                                         // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function Gameplay.VehicleGeneratorComponent.GetRandomCategory
-// 0x0020 (0x0020 - 0x0000)
-struct VehicleGeneratorComponent_GetRandomCategory final
-{
-public:
-	TArray<struct FSpotWeight>                    SpotWeights;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.VehicleGeneratorComponent.GetRandomVehicleClass
-// 0x0040 (0x0040 - 0x0000)
-struct VehicleGeneratorComponent_GetRandomVehicleClass final
-{
-public:
-	class FString                                 Category;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVehicleGenerateSpawnData              ReturnValue;                                       // 0x0010(0x0030)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.VehicleGeneratorComponent.GetVehicleSpotRandomInfo
-// 0x0060 (0x0060 - 0x0000)
-struct VehicleGeneratorComponent_GetVehicleSpotRandomInfo final
-{
-public:
-	struct FVehicleSpotProperty                   SpotProperty;                                      // 0x0000(0x0038)(Parm, OutParm, NativeAccessSpecifierPublic)
-	struct FVehicleGenerateRandomInfo             ReturnValue;                                       // 0x0038(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.VehicleGeneratorComponent.GetVehicleSpotRandomInfoBySpotType
-// 0x0030 (0x0030 - 0x0000)
-struct VehicleGeneratorComponent_GetVehicleSpotRandomInfoBySpotType final
-{
-public:
-	ESpotType                                     SpotType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVehicleGenerateRandomInfo             ReturnValue;                                       // 0x0008(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.VehicleGeneratorComponent.RandomSingleSpots
-// 0x0048 (0x0048 - 0x0000)
-struct VehicleGeneratorComponent_RandomSingleSpots final
-{
-public:
-	TArray<class UVehicleSpotSceneComponent*>     AllSpots;                                          // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	struct FVehicleSpotProperty                   Property;                                          // 0x0010(0x0038)(Parm, OutParm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.VehicleGeneratorComponent.RandomSpotsByType
-// 0x0050 (0x0050 - 0x0000)
-struct VehicleGeneratorComponent_RandomSpotsByType final
-{
-public:
-	struct FVehicleSpotProperty                   Property;                                          // 0x0000(0x0038)(Parm, OutParm, NativeAccessSpecifierPublic)
-	struct FVehicleSpotComponentArray             Spots;                                             // 0x0038(0x0018)(Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.VehicleGeneratorComponent.RegisterGroupSpotComponent
-// 0x0008 (0x0008 - 0x0000)
-struct VehicleGeneratorComponent_RegisterGroupSpotComponent final
-{
-public:
-	class UGroupSpotSceneComponent*               GroupSpotComponent;                                // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.VehicleGeneratorComponent.RegisterVehicleGenerateSpawnData
-// 0x0030 (0x0030 - 0x0000)
-struct VehicleGeneratorComponent_RegisterVehicleGenerateSpawnData final
-{
-public:
-	struct FVehicleGenerateSpawnData              Data;                                              // 0x0000(0x0030)(Parm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.GroupSpotSceneComponent.FindWorldCompositionID
-// 0x0004 (0x0004 - 0x0000)
-struct GroupSpotSceneComponent_FindWorldCompositionID final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.GroupSpotSceneComponent.IsValidGroup
-// 0x0001 (0x0001 - 0x0000)
-struct GroupSpotSceneComponent_IsValidGroup final
-{
-public:
-	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Gameplay.GroupSpotSceneComponent.SetGroupValid
-// 0x0001 (0x0001 - 0x0000)
-struct GroupSpotSceneComponent_SetGroupValid final
-{
-public:
-	uint8                                         Valid : 1;                                         // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 };
 
 // Function Gameplay.ItemConfigActorComponent.GetItemSpawnClass
@@ -1344,212 +1550,6 @@ struct ItemGeneratorComponent_SetCatetoryRate final
 {
 public:
 	TMap<class FString, float>                    Rates;                                             // 0x0000(0x0050)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.ItemGroupSpotSceneComponent.RandomRepeatGenerateItemCD
-// 0x0030 (0x0030 - 0x0000)
-struct ItemGroupSpotSceneComponent_RandomRepeatGenerateItemCD final
-{
-public:
-	struct FSpotGroupProperty                     GroupProperty;                                     // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function Gameplay.ItemGroupSpotSceneComponent.RandomSingleSpot
-// 0x0048 (0x0048 - 0x0000)
-struct ItemGroupSpotSceneComponent_RandomSingleSpot final
-{
-public:
-	TArray<class UItemSpotSceneComponent*>        Spots;                                             // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	struct FSpotTypeProperty                      Property;                                          // 0x0010(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.ItemGroupSpotSceneComponent.RandomSpotByType
-// 0x0050 (0x0050 - 0x0000)
-struct ItemGroupSpotSceneComponent_RandomSpotByType final
-{
-public:
-	ESpotType                                     SpotType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UItemSpotSceneComponent*>        AllSpots;                                          // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	struct FSpotTypeProperty                      Property;                                          // 0x0018(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.ItemGroupSpotSceneComponent.RepeatSingleSpot
-// 0x0008 (0x0008 - 0x0000)
-struct ItemGroupSpotSceneComponent_RepeatSingleSpot final
-{
-public:
-	class UItemSpotSceneComponent*                Spot;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.ItemGroupSpotSceneComponent.SetGroupProperty
-// 0x0030 (0x0030 - 0x0000)
-struct ItemGroupSpotSceneComponent_SetGroupProperty final
-{
-public:
-	class UItemGeneratorComponent*                Generator;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSpotGroupProperty                     Property;                                          // 0x0008(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.ItemSpotSceneComponent.CountCacheItemValeCategory
-// 0x0004 (0x0004 - 0x0000)
-struct ItemSpotSceneComponent_CountCacheItemValeCategory final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.ItemSpotSceneComponent.DoPickUp
-// 0x0020 (0x0020 - 0x0000)
-struct ItemSpotSceneComponent_DoPickUp final
-{
-public:
-	class FString                                 ItemValue;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ItemCategory;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.ItemSpotSceneComponent.GenerateItems
-// 0x0010 (0x0010 - 0x0000)
-struct ItemSpotSceneComponent_GenerateItems final
-{
-public:
-	TArray<struct FItemGenerateSpawnClass>        AllItemClass;                                      // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.ItemSpotSceneComponent.GenerateSpot
-// 0x0001 (0x0001 - 0x0000)
-struct ItemSpotSceneComponent_GenerateSpot final
-{
-public:
-	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Gameplay.ItemSpotSceneComponent.GetAllItemNames
-// 0x0010 (0x0010 - 0x0000)
-struct ItemSpotSceneComponent_GetAllItemNames final
-{
-public:
-	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.ItemSpotSceneComponent.RepeatSpotProperty
-// 0x0038 (0x0038 - 0x0000)
-struct ItemSpotSceneComponent_RepeatSpotProperty final
-{
-public:
-	struct FSpotTypeProperty                      Property;                                          // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.ItemSpotSceneComponent.SetSpotProperty
-// 0x0058 (0x0058 - 0x0000)
-struct ItemSpotSceneComponent_SetSpotProperty final
-{
-public:
-	int32                                         CompositionID;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESpotGroupType                                GroupType;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UItemGeneratorComponent*                Generator;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSpotTypeProperty                      Property;                                          // 0x0010(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UGroupSpotSceneComponent*               Component;                                         // 0x0048(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         RepeatGenerateItem : 1;                            // 0x0050(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function Gameplay.UAEProjectile.GlassDetect
-// 0x0018 (0x0018 - 0x0000)
-struct UAEProjectile_GlassDetect final
-{
-public:
-	struct FVector                                Start;                                             // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                End;                                               // 0x000C(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAEProjectile.IsOwnerAutomous
-// 0x0001 (0x0001 - 0x0000)
-struct UAEProjectile_IsOwnerAutomous final
-{
-public:
-	uint8                                         ReturnValue : 1;                                   // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Gameplay.UAEProjectile.ServerFireWeapon
-// 0x0004 (0x0004 - 0x0000)
-struct UAEProjectile_ServerFireWeapon final
-{
-public:
-	struct FAttackId                              AttackId;                                          // 0x0000(0x0004)(ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAEProjectile.SetRotationAndLocationByNormal
-// 0x0008 (0x0008 - 0x0000)
-struct UAEProjectile_SetRotationAndLocationByNormal final
-{
-public:
-	class USceneComponent*                        Comp;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAEProjectile.GetStartFlyPos
-// 0x000C (0x000C - 0x0000)
-struct UAEProjectile_GetStartFlyPos final
-{
-public:
-	struct FVector                                Out;                                               // 0x0000(0x000C)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAEWindowComponent.GetRepData
-// 0x0050 (0x0050 - 0x0000)
-struct UAEWindowComponent_GetRepData final
-{
-public:
-	struct FUAEWindowRepData                      ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function Gameplay.UAEWindowComponent.HandleBroken
-// 0x0010 (0x0010 - 0x0000)
-struct UAEWindowComponent_HandleBroken final
-{
-public:
-	class APlayerController*                      Instigator;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bLocal : 1;                                        // 0x0008(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function Gameplay.UAEWindowComponent.LocalHandleWindowBroken
-// 0x0002 (0x0002 - 0x0000)
-struct UAEWindowComponent_LocalHandleWindowBroken final
-{
-public:
-	uint8                                         bInitial : 1;                                      // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bLocal : 1;                                        // 0x0001(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Gameplay.UAEWindowComponent.LocalHandleWindowBrokenBP
-// 0x0002 (0x0002 - 0x0000)
-struct UAEWindowComponent_LocalHandleWindowBrokenBP final
-{
-public:
-	uint8                                         bInitial : 1;                                      // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bLocal : 1;                                        // 0x0001(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Gameplay.UAEWindowComponent.NotifyRepDataUpdated
-// 0x0002 (0x0002 - 0x0000)
-struct UAEWindowComponent_NotifyRepDataUpdated final
-{
-public:
-	uint8                                         bInitial : 1;                                      // 0x0000(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bLocal : 1;                                        // 0x0001(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-
-// Function Gameplay.VehicleConfigActorComponent.LoadActorClass
-// 0x0018 (0x0018 - 0x0000)
-struct VehicleConfigActorComponent_LoadActorClass final
-{
-public:
-	class FString                                 Path;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UClass*                                 ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 }

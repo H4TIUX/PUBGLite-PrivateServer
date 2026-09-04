@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PlayerRifleBulletImpact.BP_PlayerRifleBulletImpact_C
-// 0x0018 (0x08F0 - 0x08D8)
+// 0x0018 (0x0968 - 0x0950)
 class ABP_PlayerRifleBulletImpact_C final : public ASTEShootWeaponBulletImpactEffect
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x08D8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TArray<class UTexture2D*>                     CrossHairRefTexture;                               // 0x08E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0950(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TArray<class UTexture2D*>                     CrossHairRefTexture;                               // 0x0958(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 public:
 	void UserConstructionScript();

@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "ShadowTrackerExtra_structs.hpp"
-#include "Basic_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "ESwitchWeaponActionType_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "UnrealArchExt_classes.hpp"
 #include "UMG_structs.hpp"
+#include "Engine_structs.hpp"
+#include "ESwitchWeaponActionType_structs.hpp"
+#include "Basic_structs.hpp"
+#include "ShadowTrackerExtra_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "UnrealArchExt_classes.hpp"
 
 
 namespace SDK
@@ -81,13 +81,13 @@ public:
 
 public:
 	void ExecuteUbergraph_SwitchWeaponSlot_Mode2(int32 EntryPoint);
+	void StopToSwitchIfSprint();
 	void BndEvt__Button_Pistol_Fire_K2Node_ComponentBoundEvent_78_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__Button_0_K2Node_ComponentBoundEvent_28_OnButtonPressedEvent__DelegateSignature();
 	void BndEvt__Button_2_K2Node_ComponentBoundEvent_15_OnButtonPressedEvent__DelegateSignature();
 	void GetItemAnimFinished();
 	void ReceivedInitWidget();
 	void BndEvt__Button_1_K2Node_ComponentBoundEvent_39_OnButtonClickedEvent__DelegateSignature();
-	void StopToSwitchIfSprint();
 	void UpdateImage(const struct FSlateBrush& Brush, ESlateVisibility visible);
 	struct FEventReply OnMouseButtonDown(const struct FGeometry& MyGeometry, struct FPointerEvent& MouseEvent);
 	struct FEventReply OnTouchEnded(const struct FGeometry& MyGeometry, struct FPointerEvent& InTouchEvent);

@@ -30,141 +30,113 @@ void Abp_teamup_friend_C::UserConstructionScript()
 }
 
 
-// Function bp_teamup_friend.bp_teamup_friend_C.EventTeamupFriendCheckIsFriend
+// Function bp_teamup_friend.bp_teamup_friend_C.EventClickAddFriendBtn
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_friend_C::EventTeamupFriendCheckIsFriend()
+void Abp_teamup_friend_C::EventClickAddFriendBtn()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventTeamupFriendCheckIsFriend");
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickAddFriendBtn");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_friend.bp_teamup_friend_C.EventTeamupFriendCheckIsFriend_NoFetch
+// Function bp_teamup_friend.bp_teamup_friend_C.EventClickAddFriendBtn_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_friend_C::EventTeamupFriendCheckIsFriend_NoFetch()
+void Abp_teamup_friend_C::EventClickAddFriendBtn_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventTeamupFriendCheckIsFriend_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickAddFriendBtn_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_friend.bp_teamup_friend_C.EventSwitchFriend
+// Function bp_teamup_friend.bp_teamup_friend_C.EventClickJoinBtn
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_friend_C::EventSwitchFriend()
+void Abp_teamup_friend_C::EventClickJoinBtn()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventSwitchFriend");
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickJoinBtn");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_friend.bp_teamup_friend_C.EventSwitchFriend_NoFetch
+// Function bp_teamup_friend.bp_teamup_friend_C.EventClickJoinBtn_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_friend_C::EventSwitchFriend_NoFetch()
+void Abp_teamup_friend_C::EventClickJoinBtn_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventSwitchFriend_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickJoinBtn_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_friend.bp_teamup_friend_C.EventClickPlatformInviteQRCode
+// Function bp_teamup_friend.bp_teamup_friend_C.EventFetchTeamupFriendInfo
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_friend_C::EventClickPlatformInviteQRCode()
+void Abp_teamup_friend_C::EventFetchTeamupFriendInfo()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickPlatformInviteQRCode");
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventFetchTeamupFriendInfo");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_friend.bp_teamup_friend_C.EventClickPlatformInviteQRCode_NoFetch
+// Function bp_teamup_friend.bp_teamup_friend_C.EventFetchTeamupFriendInfo_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_friend_C::EventClickPlatformInviteQRCode_NoFetch()
+void Abp_teamup_friend_C::EventFetchTeamupFriendInfo_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickPlatformInviteQRCode_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventFetchTeamupFriendInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_friend.bp_teamup_friend_C.EventCheckReservationState
+// Function bp_teamup_friend.bp_teamup_friend_C.EventTeamupFriendScrollChanged
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_friend_C::EventCheckReservationState()
+void Abp_teamup_friend_C::EventTeamupFriendScrollChanged()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventCheckReservationState");
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventTeamupFriendScrollChanged");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_friend.bp_teamup_friend_C.EventCheckReservationState_NoFetch
+// Function bp_teamup_friend.bp_teamup_friend_C.EventTeamupFriendScrollChanged_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_friend_C::EventCheckReservationState_NoFetch()
+void Abp_teamup_friend_C::EventTeamupFriendScrollChanged_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventCheckReservationState_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup_friend.bp_teamup_friend_C.EventTeamupFriendSwitchMenu
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_friend_C::EventTeamupFriendSwitchMenu()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventTeamupFriendSwitchMenu");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup_friend.bp_teamup_friend_C.EventTeamupFriendSwitchMenu_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_friend_C::EventTeamupFriendSwitchMenu_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventTeamupFriendSwitchMenu_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventTeamupFriendScrollChanged_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -198,57 +170,57 @@ void Abp_teamup_friend_C::EventSetInfo_Push_NoFetch()
 }
 
 
-// Function bp_teamup_friend.bp_teamup_friend_C.EventClickInviteFriendBtn
+// Function bp_teamup_friend.bp_teamup_friend_C.EventSwitchCorps
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_friend_C::EventClickInviteFriendBtn()
+void Abp_teamup_friend_C::EventSwitchCorps()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickInviteFriendBtn");
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventSwitchCorps");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_friend.bp_teamup_friend_C.EventClickInviteFriendBtn_NoFetch
+// Function bp_teamup_friend.bp_teamup_friend_C.EventSwitchCorps_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_friend_C::EventClickInviteFriendBtn_NoFetch()
+void Abp_teamup_friend_C::EventSwitchCorps_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickInviteFriendBtn_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventSwitchCorps_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_friend.bp_teamup_friend_C.EventShowListCallBack
+// Function bp_teamup_friend.bp_teamup_friend_C.EventTeamupFriendCheckIsFriend
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_friend_C::EventShowListCallBack()
+void Abp_teamup_friend_C::EventTeamupFriendCheckIsFriend()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventShowListCallBack");
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventTeamupFriendCheckIsFriend");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_friend.bp_teamup_friend_C.EventShowListCallBack_NoFetch
+// Function bp_teamup_friend.bp_teamup_friend_C.EventTeamupFriendCheckIsFriend_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_friend_C::EventShowListCallBack_NoFetch()
+void Abp_teamup_friend_C::EventTeamupFriendCheckIsFriend_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventShowListCallBack_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventTeamupFriendCheckIsFriend_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -282,85 +254,29 @@ void Abp_teamup_friend_C::EventTeamUpFriendClickNearBy_NoFetch()
 }
 
 
-// Function bp_teamup_friend.bp_teamup_friend_C.EventSwitchRecent
+// Function bp_teamup_friend.bp_teamup_friend_C.EventTeamupFriendSwitchMenu
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_friend_C::EventSwitchRecent()
+void Abp_teamup_friend_C::EventTeamupFriendSwitchMenu()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventSwitchRecent");
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventTeamupFriendSwitchMenu");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_friend.bp_teamup_friend_C.EventSwitchRecent_NoFetch
+// Function bp_teamup_friend.bp_teamup_friend_C.EventTeamupFriendSwitchMenu_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_friend_C::EventSwitchRecent_NoFetch()
+void Abp_teamup_friend_C::EventTeamupFriendSwitchMenu_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventSwitchRecent_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup_friend.bp_teamup_friend_C.EventSwitchCorps
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_friend_C::EventSwitchCorps()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventSwitchCorps");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup_friend.bp_teamup_friend_C.EventSwitchCorps_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_friend_C::EventSwitchCorps_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventSwitchCorps_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup_friend.bp_teamup_friend_C.EventClickPlatformInviteWXMiniApp
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_friend_C::EventClickPlatformInviteWXMiniApp()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickPlatformInviteWXMiniApp");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup_friend.bp_teamup_friend_C.EventClickPlatformInviteWXMiniApp_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_friend_C::EventClickPlatformInviteWXMiniApp_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickPlatformInviteWXMiniApp_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventTeamupFriendSwitchMenu_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -394,6 +310,62 @@ void Abp_teamup_friend_C::EventSwitchCarTeam_NoFetch()
 }
 
 
+// Function bp_teamup_friend.bp_teamup_friend_C.EventClickPlatformInviteQRCode
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_friend_C::EventClickPlatformInviteQRCode()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickPlatformInviteQRCode");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup_friend.bp_teamup_friend_C.EventClickPlatformInviteQRCode_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_friend_C::EventClickPlatformInviteQRCode_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickPlatformInviteQRCode_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup_friend.bp_teamup_friend_C.EventClickPlatformInviteWXMiniApp
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_friend_C::EventClickPlatformInviteWXMiniApp()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickPlatformInviteWXMiniApp");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup_friend.bp_teamup_friend_C.EventClickPlatformInviteWXMiniApp_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_friend_C::EventClickPlatformInviteWXMiniApp_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickPlatformInviteWXMiniApp_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_teamup_friend.bp_teamup_friend_C.EventClickPlatformInvite
 // (BlueprintCallable, BlueprintEvent)
 
@@ -417,34 +389,6 @@ void Abp_teamup_friend_C::EventClickPlatformInvite_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickPlatformInvite_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup_friend.bp_teamup_friend_C.EventClickStartChat
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_friend_C::EventClickStartChat()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickStartChat");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup_friend.bp_teamup_friend_C.EventClickStartChat_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_friend_C::EventClickStartChat_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickStartChat_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -506,6 +450,34 @@ void Abp_teamup_friend_C::EventClickHeadBtn_NoFetch()
 }
 
 
+// Function bp_teamup_friend.bp_teamup_friend_C.EventSwitchRecent
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_friend_C::EventSwitchRecent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventSwitchRecent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup_friend.bp_teamup_friend_C.EventSwitchRecent_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_friend_C::EventSwitchRecent_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventSwitchRecent_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_teamup_friend.bp_teamup_friend_C.EventClickReserveFriend
 // (BlueprintCallable, BlueprintEvent)
 
@@ -562,113 +534,85 @@ void Abp_teamup_friend_C::EventClickOfflineShare_NoFetch()
 }
 
 
-// Function bp_teamup_friend.bp_teamup_friend_C.EventClickJoinBtn
+// Function bp_teamup_friend.bp_teamup_friend_C.EventClickInviteFriendBtn
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_friend_C::EventClickJoinBtn()
+void Abp_teamup_friend_C::EventClickInviteFriendBtn()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickJoinBtn");
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickInviteFriendBtn");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_friend.bp_teamup_friend_C.EventClickJoinBtn_NoFetch
+// Function bp_teamup_friend.bp_teamup_friend_C.EventClickInviteFriendBtn_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_friend_C::EventClickJoinBtn_NoFetch()
+void Abp_teamup_friend_C::EventClickInviteFriendBtn_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickJoinBtn_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickInviteFriendBtn_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_friend.bp_teamup_friend_C.EventTeamupFriendScrollChanged
+// Function bp_teamup_friend.bp_teamup_friend_C.EventShowListCallBack
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_friend_C::EventTeamupFriendScrollChanged()
+void Abp_teamup_friend_C::EventShowListCallBack()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventTeamupFriendScrollChanged");
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventShowListCallBack");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_friend.bp_teamup_friend_C.EventTeamupFriendScrollChanged_NoFetch
+// Function bp_teamup_friend.bp_teamup_friend_C.EventShowListCallBack_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_friend_C::EventTeamupFriendScrollChanged_NoFetch()
+void Abp_teamup_friend_C::EventShowListCallBack_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventTeamupFriendScrollChanged_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventShowListCallBack_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_friend.bp_teamup_friend_C.EventFetchTeamupFriendInfo
+// Function bp_teamup_friend.bp_teamup_friend_C.EventSwitchFriend
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_friend_C::EventFetchTeamupFriendInfo()
+void Abp_teamup_friend_C::EventSwitchFriend()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventFetchTeamupFriendInfo");
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventSwitchFriend");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_friend.bp_teamup_friend_C.EventFetchTeamupFriendInfo_NoFetch
+// Function bp_teamup_friend.bp_teamup_friend_C.EventSwitchFriend_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_friend_C::EventFetchTeamupFriendInfo_NoFetch()
+void Abp_teamup_friend_C::EventSwitchFriend_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventFetchTeamupFriendInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup_friend.bp_teamup_friend_C.EventClickAddFriendBtn
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_friend_C::EventClickAddFriendBtn()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickAddFriendBtn");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup_friend.bp_teamup_friend_C.EventClickAddFriendBtn_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_friend_C::EventClickAddFriendBtn_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickAddFriendBtn_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventSwitchFriend_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -697,6 +641,62 @@ void Abp_teamup_friend_C::EventCorpsFriendScrollChanged_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventCorpsFriendScrollChanged_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup_friend.bp_teamup_friend_C.EventCheckReservationState
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_friend_C::EventCheckReservationState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventCheckReservationState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup_friend.bp_teamup_friend_C.EventCheckReservationState_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_friend_C::EventCheckReservationState_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventCheckReservationState_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup_friend.bp_teamup_friend_C.EventClickStartChat
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_friend_C::EventClickStartChat()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickStartChat");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup_friend.bp_teamup_friend_C.EventClickStartChat_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_friend_C::EventClickStartChat_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_friend_C", "EventClickStartChat_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

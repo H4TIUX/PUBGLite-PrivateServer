@@ -19,45 +19,47 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_promotion.bp_promotion_C
-// 0x00D8 (0x04C0 - 0x03E8)
+// 0x00E0 (0x04B8 - 0x03D8)
 class Abp_promotion_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	int32                                         BP_Promotion_Friend_Page_Idx;                      // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F4[0x4];                                      // 0x03F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_Promotion_Friend_Info> BP_ARRAY_Promotion_Friend_Infos;                 // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBP_STRUCT_Promotion_Friend_Info       BP_STRUCT_Promotion_Friend_Info;                   // 0x0408(0x0038)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_Promotion_Award_Info> BP_ARRAY_Promotion_Award_Infos;                   // 0x0440(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_Promotion_Friend_Count;                         // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_Promotion_Award_Index_Get;                      // 0x0454(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 BP_Promotion_Open_Time;                            // 0x0458(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_Promotion_Help_Content;                         // 0x0468(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_Promotion_Friend_Info> BP_ARRAY_Promotion_Register_Friend_Infos;        // 0x0478(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class FString                                 BP_Promotion_Invite_Friend_OpenID;                 // 0x0488(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_Promotion_Award_Info        BP_STRUCT_Promotion_Award_Info;                    // 0x0498(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04B8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_Promotion_Friend_Info       BP_STRUCT_Promotion_Friend_Info;                   // 0x03E0(0x0038)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_Promotion_Friend_Page_Idx;                      // 0x0418(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41C[0x4];                                      // 0x041C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_Promotion_Friend_Info> BP_ARRAY_Promotion_Friend_Infos;                 // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FBP_STRUCT_Promotion_Award_Info> BP_ARRAY_Promotion_Award_Infos;                   // 0x0430(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	struct FBP_STRUCT_Promotion_Award_Info        BP_STRUCT_Promotion_Award_Info;                    // 0x0440(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_Promotion_Award_Index_Get;                      // 0x0460(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_464[0x4];                                      // 0x0464(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_Promotion_Open_Time;                            // 0x0468(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_Promotion_Friend_Count;                         // 0x0478(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_47C[0x4];                                      // 0x047C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_Promotion_Friend_Info> BP_ARRAY_Promotion_Register_Friend_Infos;        // 0x0480(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class FString                                 BP_Promotion_Help_Content;                         // 0x0490(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_Promotion_Invite_Friend_OpenID;                 // 0x04A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04B0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
+	void EventPromotionViewRegisterFriend();
+	void EventPromotionViewRegisterFriend_NoFetch();
+	void EventPromotionRule();
+	void EventPromotionRule_NoFetch();
+	void EventPromotionShare();
+	void EventPromotionShare_NoFetch();
 	void EventSetInfo_Push();
 	void EventSetInfo_Push_NoFetch();
 	void EventFetchInfo();
 	void EventFetchInfo_NoFetch();
-	void EventPromotionRule();
-	void EventPromotionRule_NoFetch();
-	void EventPromotionNextPage();
-	void EventPromotionNextPage_NoFetch();
-	void EventPromotionViewRegisterFriend();
-	void EventPromotionViewRegisterFriend_NoFetch();
-	void EventPromotionShare();
-	void EventPromotionShare_NoFetch();
 	void EventPromotionCloseUI();
 	void EventPromotionCloseUI_NoFetch();
-	void EventPromotionGetAward();
-	void EventPromotionGetAward_NoFetch();
 	void EventPromotionFriendInvite();
 	void EventPromotionFriendInvite_NoFetch();
+	void EventPromotionNextPage();
+	void EventPromotionNextPage_NoFetch();
+	void EventPromotionGetAward();
+	void EventPromotionGetAward_NoFetch();
 	void EventPromotionPrePage();
 	void EventPromotionPrePage_NoFetch();
 

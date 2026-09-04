@@ -30,34 +30,6 @@ void Abp_corps_rank_C::UserConstructionScript()
 }
 
 
-// Function bp_corps_rank.bp_corps_rank_C.EventCorpsRankShowCorpsDetails
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_rank_C::EventCorpsRankShowCorpsDetails()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_rank_C", "EventCorpsRankShowCorpsDetails");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_rank.bp_corps_rank_C.EventCorpsRankShowCorpsDetails_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_rank_C::EventCorpsRankShowCorpsDetails_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_rank_C", "EventCorpsRankShowCorpsDetails_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_corps_rank.bp_corps_rank_C.EventCorpsRankTypeChange
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,6 +53,34 @@ void Abp_corps_rank_C::EventCorpsRankTypeChange_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_corps_rank_C", "EventCorpsRankTypeChange_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_rank.bp_corps_rank_C.EventCorpsRankShowCorpsDetails
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_rank_C::EventCorpsRankShowCorpsDetails()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_rank_C", "EventCorpsRankShowCorpsDetails");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_rank.bp_corps_rank_C.EventCorpsRankShowCorpsDetails_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_rank_C::EventCorpsRankShowCorpsDetails_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_rank_C", "EventCorpsRankShowCorpsDetails_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,34 +114,6 @@ void Abp_corps_rank_C::EventCorpsRankShowUI_NoFetch()
 }
 
 
-// Function bp_corps_rank.bp_corps_rank_C.EventCorpsRankGetNextInfo
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_rank_C::EventCorpsRankGetNextInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_rank_C", "EventCorpsRankGetNextInfo");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_rank.bp_corps_rank_C.EventCorpsRankGetNextInfo_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_rank_C::EventCorpsRankGetNextInfo_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_rank_C", "EventCorpsRankGetNextInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_corps_rank.bp_corps_rank_C.EventCorpsRankHideUI
 // (BlueprintCallable, BlueprintEvent)
 
@@ -165,6 +137,34 @@ void Abp_corps_rank_C::EventCorpsRankHideUI_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_corps_rank_C", "EventCorpsRankHideUI_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_rank.bp_corps_rank_C.EventCorpsRankGetNextInfo
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_rank_C::EventCorpsRankGetNextInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_rank_C", "EventCorpsRankGetNextInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_rank.bp_corps_rank_C.EventCorpsRankGetNextInfo_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_rank_C::EventCorpsRankGetNextInfo_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_rank_C", "EventCorpsRankGetNextInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

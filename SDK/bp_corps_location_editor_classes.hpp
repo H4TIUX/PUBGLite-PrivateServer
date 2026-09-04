@@ -17,23 +17,23 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_corps_location_editor.bp_corps_location_editor_C
-// 0x0038 (0x0420 - 0x03E8)
+// 0x0038 (0x0410 - 0x03D8)
 class Abp_corps_location_editor_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	TArray<class FString>                         BP_ARRAY_CorpsHomepageLocationProvince;            // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
 	int32                                         BP_CorpsHomepageLocationSelectProvince;            // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         BP_CorpsHomepageLocationSelectCity;                // 0x03F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class FString>                         BP_ARRAY_CorpsHomepageLocationProvince;            // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class FString>                         BP_ARRAY_CorpsHomepageLocationCity;                // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0418(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TArray<class FString>                         BP_ARRAY_CorpsHomepageLocationCity;                // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0408(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventCorpsLocationEditorSelectProvince();
-	void EventCorpsLocationEditorSelectProvince_NoFetch();
 	void EventCorpsLocationEditorChange();
 	void EventCorpsLocationEditorChange_NoFetch();
+	void EventCorpsLocationEditorSelectProvince();
+	void EventCorpsLocationEditorSelectProvince_NoFetch();
 
 public:
 	static class UClass* StaticClass()

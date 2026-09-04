@@ -10,35 +10,35 @@
 
 #include "Basic.hpp"
 
+#include "BP_STRUCT_ShareHistoryResults_RadarInfo_structs.hpp"
 #include "BP_STRUCT_ShareHistoryResults_TeammateInfo_structs.hpp"
 #include "BP_STRUCT_ShareHistoryResults_DetailInfo_structs.hpp"
 #include "Client_classes.hpp"
-#include "BP_STRUCT_ShareHistoryResults_RadarInfo_structs.hpp"
 
 
 namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_share_history_results.bp_share_history_results_C
-// 0x0190 (0x0578 - 0x03E8)
+// 0x0190 (0x0568 - 0x03D8)
 class Abp_share_history_results_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FBP_STRUCT_ShareHistoryResults_TeammateInfo BP_STRUCT_ShareHistoryResults_TeammateInfo;   // 0x03F0(0x0078)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FBP_STRUCT_ShareHistoryResults_DetailInfo BP_STRUCT_ShareHistoryResults_DetailInfo;       // 0x0468(0x00A8)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FBP_STRUCT_ShareHistoryResults_RadarInfo BP_STRUCT_ShareHistoryResults_RadarInfo;         // 0x0510(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_ShareHistoryResults_TeammateInfo> BP_ARRAY_ShareHistoryResults_TeammateInfoList; // 0x0560(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0570(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_ShareHistoryResults_RadarInfo BP_STRUCT_ShareHistoryResults_RadarInfo;         // 0x03E0(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FBP_STRUCT_ShareHistoryResults_TeammateInfo BP_STRUCT_ShareHistoryResults_TeammateInfo;   // 0x0430(0x0078)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_ShareHistoryResults_TeammateInfo> BP_ARRAY_ShareHistoryResults_TeammateInfoList; // 0x04A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	struct FBP_STRUCT_ShareHistoryResults_DetailInfo BP_STRUCT_ShareHistoryResults_DetailInfo;       // 0x04B8(0x00A8)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0560(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventFetchInfo();
-	void EventFetchInfo_NoFetch();
-	void EventSetInfo_Push();
-	void EventSetInfo_Push_NoFetch();
 	void EventShareHistoryResultsHide();
 	void EventShareHistoryResultsHide_NoFetch();
+	void EventSetInfo_Push();
+	void EventSetInfo_Push_NoFetch();
+	void EventFetchInfo();
+	void EventFetchInfo_NoFetch();
 
 public:
 	static class UClass* StaticClass()

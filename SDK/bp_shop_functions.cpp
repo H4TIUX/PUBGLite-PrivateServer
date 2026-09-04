@@ -30,57 +30,57 @@ void Abp_shop_C::UserConstructionScript()
 }
 
 
-// Function bp_shop.bp_shop_C.EventRequestBuyItem
+// Function bp_shop.bp_shop_C.EventGetHelpTip
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_shop_C::EventRequestBuyItem()
+void Abp_shop_C::EventGetHelpTip()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_C", "EventRequestBuyItem");
+		Func = GetClass()->GetFunction("bp_shop_C", "EventGetHelpTip");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_shop.bp_shop_C.EventRequestBuyItem_NoFetch
+// Function bp_shop.bp_shop_C.EventGetHelpTip_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_shop_C::EventRequestBuyItem_NoFetch()
+void Abp_shop_C::EventGetHelpTip_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_C", "EventRequestBuyItem_NoFetch");
+		Func = GetClass()->GetFunction("bp_shop_C", "EventGetHelpTip_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_shop.bp_shop_C.EventShopChangeAvatar
+// Function bp_shop.bp_shop_C.EventSetInfo_Push
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_shop_C::EventShopChangeAvatar()
+void Abp_shop_C::EventSetInfo_Push()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_C", "EventShopChangeAvatar");
+		Func = GetClass()->GetFunction("bp_shop_C", "EventSetInfo_Push");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_shop.bp_shop_C.EventShopChangeAvatar_NoFetch
+// Function bp_shop.bp_shop_C.EventSetInfo_Push_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_shop_C::EventShopChangeAvatar_NoFetch()
+void Abp_shop_C::EventSetInfo_Push_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_C", "EventShopChangeAvatar_NoFetch");
+		Func = GetClass()->GetFunction("bp_shop_C", "EventSetInfo_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,57 +114,29 @@ void Abp_shop_C::EventFetchInfo_NoFetch()
 }
 
 
-// Function bp_shop.bp_shop_C.EventGetHelpTip
+// Function bp_shop.bp_shop_C.EventShopChangeAvatar
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_shop_C::EventGetHelpTip()
+void Abp_shop_C::EventShopChangeAvatar()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_C", "EventGetHelpTip");
+		Func = GetClass()->GetFunction("bp_shop_C", "EventShopChangeAvatar");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_shop.bp_shop_C.EventGetHelpTip_NoFetch
+// Function bp_shop.bp_shop_C.EventShopChangeAvatar_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_shop_C::EventGetHelpTip_NoFetch()
+void Abp_shop_C::EventShopChangeAvatar_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_C", "EventGetHelpTip_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shop.bp_shop_C.EventShopHide
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shop_C::EventShopHide()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_C", "EventShopHide");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shop.bp_shop_C.EventShopHide_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shop_C::EventShopHide_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_C", "EventShopHide_NoFetch");
+		Func = GetClass()->GetFunction("bp_shop_C", "EventShopChangeAvatar_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -198,29 +170,57 @@ void Abp_shop_C::EventLookItem_NoFetch()
 }
 
 
-// Function bp_shop.bp_shop_C.EventSetInfo_Push
+// Function bp_shop.bp_shop_C.EventShopHide
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_shop_C::EventSetInfo_Push()
+void Abp_shop_C::EventShopHide()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_C", "EventSetInfo_Push");
+		Func = GetClass()->GetFunction("bp_shop_C", "EventShopHide");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_shop.bp_shop_C.EventSetInfo_Push_NoFetch
+// Function bp_shop.bp_shop_C.EventShopHide_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_shop_C::EventSetInfo_Push_NoFetch()
+void Abp_shop_C::EventShopHide_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_C", "EventSetInfo_Push_NoFetch");
+		Func = GetClass()->GetFunction("bp_shop_C", "EventShopHide_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_shop.bp_shop_C.EventRequestBuyItem
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shop_C::EventRequestBuyItem()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shop_C", "EventRequestBuyItem");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_shop.bp_shop_C.EventRequestBuyItem_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shop_C::EventRequestBuyItem_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shop_C", "EventRequestBuyItem_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

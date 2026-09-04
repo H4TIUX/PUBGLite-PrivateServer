@@ -30,34 +30,6 @@ void Abp_share_honor_wall_C::UserConstructionScript()
 }
 
 
-// Function bp_share_honor_wall.bp_share_honor_wall_C.EventSetInfo_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_honor_wall_C::EventSetInfo_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_honor_wall_C", "EventSetInfo_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_honor_wall.bp_share_honor_wall_C.EventSetInfo_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_honor_wall_C::EventSetInfo_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_honor_wall_C", "EventSetInfo_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_share_honor_wall.bp_share_honor_wall_C.EventFetchInfo
 // (BlueprintCallable, BlueprintEvent)
 
@@ -109,6 +81,34 @@ void Abp_share_honor_wall_C::EventShareHonorWallHide_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_share_honor_wall_C", "EventShareHonorWallHide_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_honor_wall.bp_share_honor_wall_C.EventSetInfo_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_honor_wall_C::EventSetInfo_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_honor_wall_C", "EventSetInfo_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_honor_wall.bp_share_honor_wall_C.EventSetInfo_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_honor_wall_C::EventSetInfo_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_honor_wall_C", "EventSetInfo_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

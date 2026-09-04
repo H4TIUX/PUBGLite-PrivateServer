@@ -30,29 +30,29 @@ void Abp_moviecg_C::UserConstructionScript()
 }
 
 
-// Function bp_moviecg.bp_moviecg_C.EventFetchInfo
+// Function bp_moviecg.bp_moviecg_C.EventShowAuthorization
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_moviecg_C::EventFetchInfo()
+void Abp_moviecg_C::EventShowAuthorization()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_moviecg_C", "EventFetchInfo");
+		Func = GetClass()->GetFunction("bp_moviecg_C", "EventShowAuthorization");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_moviecg.bp_moviecg_C.EventFetchInfo_NoFetch
+// Function bp_moviecg.bp_moviecg_C.EventShowAuthorization_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_moviecg_C::EventFetchInfo_NoFetch()
+void Abp_moviecg_C::EventShowAuthorization_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_moviecg_C", "EventFetchInfo_NoFetch");
+		Func = GetClass()->GetFunction("bp_moviecg_C", "EventShowAuthorization_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,29 +86,29 @@ void Abp_moviecg_C::EventShowMovieCG_NoFetch()
 }
 
 
-// Function bp_moviecg.bp_moviecg_C.EventShowAuthorization
+// Function bp_moviecg.bp_moviecg_C.EventFetchInfo
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_moviecg_C::EventShowAuthorization()
+void Abp_moviecg_C::EventFetchInfo()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_moviecg_C", "EventShowAuthorization");
+		Func = GetClass()->GetFunction("bp_moviecg_C", "EventFetchInfo");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_moviecg.bp_moviecg_C.EventShowAuthorization_NoFetch
+// Function bp_moviecg.bp_moviecg_C.EventFetchInfo_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_moviecg_C::EventShowAuthorization_NoFetch()
+void Abp_moviecg_C::EventFetchInfo_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_moviecg_C", "EventShowAuthorization_NoFetch");
+		Func = GetClass()->GetFunction("bp_moviecg_C", "EventFetchInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

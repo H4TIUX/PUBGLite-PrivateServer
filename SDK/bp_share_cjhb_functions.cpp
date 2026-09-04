@@ -30,62 +30,6 @@ void Abp_share_cjhb_C::UserConstructionScript()
 }
 
 
-// Function bp_share_cjhb.bp_share_cjhb_C.EventClickShareCJBtn
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_cjhb_C::EventClickShareCJBtn()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_cjhb_C", "EventClickShareCJBtn");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_cjhb.bp_share_cjhb_C.EventClickShareCJBtn_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_cjhb_C::EventClickShareCJBtn_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_cjhb_C", "EventClickShareCJBtn_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_cjhb.bp_share_cjhb_C.EventShareCJFinaly_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_cjhb_C::EventShareCJFinaly_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_cjhb_C", "EventShareCJFinaly_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_cjhb.bp_share_cjhb_C.EventShareCJFinaly_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_cjhb_C::EventShareCJFinaly_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_cjhb_C", "EventShareCJFinaly_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_share_cjhb.bp_share_cjhb_C.EventHideCJUI
 // (BlueprintCallable, BlueprintEvent)
 
@@ -137,6 +81,62 @@ void Abp_share_cjhb_C::EventShareCJFinalyFetchInfo_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_share_cjhb_C", "EventShareCJFinalyFetchInfo_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_cjhb.bp_share_cjhb_C.EventClickShareCJBtn
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_cjhb_C::EventClickShareCJBtn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_cjhb_C", "EventClickShareCJBtn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_cjhb.bp_share_cjhb_C.EventClickShareCJBtn_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_cjhb_C::EventClickShareCJBtn_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_cjhb_C", "EventClickShareCJBtn_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_cjhb.bp_share_cjhb_C.EventShareCJFinaly_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_cjhb_C::EventShareCJFinaly_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_cjhb_C", "EventShareCJFinaly_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_cjhb.bp_share_cjhb_C.EventShareCJFinaly_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_cjhb_C::EventShareCJFinaly_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_cjhb_C", "EventShareCJFinaly_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass CharacterAvatarComp_BP.CharacterAvatarComp_BP_C
-// 0x0010 (0x06C0 - 0x06B0)
+// 0x0010 (0x06D0 - 0x06C0)
 class UCharacterAvatarComp_BP_C final : public UCharacterAvatarComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06B0(0x0008)(Transient, DuplicateTransient)
-	class UClass*                                 BackpackBlueprintUtils;                            // 0x06B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06C0(0x0008)(Transient, DuplicateTransient)
+	class UClass*                                 BackpackBlueprintUtils;                            // 0x06C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_CharacterAvatarComp_BP(int32 EntryPoint);
@@ -39,6 +39,7 @@ public:
 	int32 GetEquipmentSkinItemID(int32 InItemID);
 	int32 GetBaseSkinItemID(int32 InItemID);
 	void GetBackpackLobbyItemID(int32 ItemID, int32* BPID);
+	int32 GetFindSkinItemID(int32 InItemID);
 
 public:
 	static class UClass* StaticClass()

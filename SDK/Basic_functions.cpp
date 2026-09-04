@@ -17,206 +17,6 @@
 namespace SDK
 {
 
-// Function Basic.AttrModifyComponent.DisableAllAttrModifier
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 UAttrModifyComponent::DisableAllAttrModifier()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("AttrModifyComponent", "DisableAllAttrModifier");
-
-	Params::AttrModifyComponent_DisableAllAttrModifier Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Basic.AttrModifyComponent.DisableAttrModifier
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    AttrModifyItemName                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 UAttrModifyComponent::DisableAttrModifier(const class FString& AttrModifyItemName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("AttrModifyComponent", "DisableAttrModifier");
-
-	Params::AttrModifyComponent_DisableAttrModifier Parms{};
-
-	Parms.AttrModifyItemName = std::move(AttrModifyItemName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Basic.AttrModifyComponent.DisableModifierToActor
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                           TargetActor                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 UAttrModifyComponent::DisableModifierToActor(class AActor* TargetActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("AttrModifyComponent", "DisableModifierToActor");
-
-	Params::AttrModifyComponent_DisableModifierToActor Parms{};
-
-	Parms.TargetActor = TargetActor;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Basic.AttrModifyComponent.EnableAllAttrModifier
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 UAttrModifyComponent::EnableAllAttrModifier()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("AttrModifyComponent", "EnableAllAttrModifier");
-
-	Params::AttrModifyComponent_EnableAllAttrModifier Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Basic.AttrModifyComponent.EnableAttrModifier
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    AttrModifyItemName                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 UAttrModifyComponent::EnableAttrModifier(const class FString& AttrModifyItemName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("AttrModifyComponent", "EnableAttrModifier");
-
-	Params::AttrModifyComponent_EnableAttrModifier Parms{};
-
-	Parms.AttrModifyItemName = std::move(AttrModifyItemName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Basic.AttrModifyComponent.OnRep_AttrModifyStateList
-// (Final, Native, Private)
-
-void UAttrModifyComponent::OnRep_AttrModifyStateList()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("AttrModifyComponent", "OnRep_AttrModifyStateList");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Basic.AttrModifyComponent.OnRep_DynamicModifierList
-// (Final, Native, Private)
-
-void UAttrModifyComponent::OnRep_DynamicModifierList()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("AttrModifyComponent", "OnRep_DynamicModifierList");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Basic.AttrModifyComponent.RegisterModifyAbleAttr
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<struct FAttrRegisterItem>& AttrRegists                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-uint8 UAttrModifyComponent::RegisterModifyAbleAttr(const TArray<struct FAttrRegisterItem>& AttrRegists)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("AttrModifyComponent", "RegisterModifyAbleAttr");
-
-	Params::AttrModifyComponent_RegisterModifyAbleAttr Parms{};
-
-	Parms.AttrRegists = std::move(AttrRegists);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function Basic.ItemHandleBase.AddAssociation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -455,24 +255,24 @@ const struct FItemDefineID UItemHandleBase::GetDefineID() const
 }
 
 
-// Function Basic.UAEGameInstance.GetDeviceLevel
-// (Native, Public, BlueprintCallable)
+// Function Basic.BPClassManager.Get
+// (Final, Native, Static, Public)
 // Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UBPClassManager*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int32 UUAEGameInstance::GetDeviceLevel()
+class UBPClassManager* UBPClassManager::Get()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEGameInstance", "GetDeviceLevel");
+		Func = StaticClass()->GetFunction("BPClassManager", "Get");
 
-	Params::UAEGameInstance_GetDeviceLevel Parms{};
+	Params::BPClassManager_Get Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, &Parms);
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -480,19 +280,22 @@ int32 UUAEGameInstance::GetDeviceLevel()
 }
 
 
-// Function Basic.UAEGameInstance.GetWeatherID
+// Function Basic.BPClassManager.GetBPClassOverride
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UClass*                           InNativeClass                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UClass*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int32 UUAEGameInstance::GetWeatherID()
+class UClass* UBPClassManager::GetBPClassOverride(class UClass* InNativeClass)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEGameInstance", "GetWeatherID");
+		Func = GetClass()->GetFunction("BPClassManager", "GetBPClassOverride");
 
-	Params::UAEGameInstance_GetWeatherID Parms{};
+	Params::BPClassManager_GetBPClassOverride Parms{};
+
+	Parms.InNativeClass = InNativeClass;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -505,19 +308,22 @@ int32 UUAEGameInstance::GetWeatherID()
 }
 
 
-// Function Basic.UAEGameInstance.GetAssociatedFrontendHUD
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Function Basic.BPClassManager.GetBPClassOverrideByName
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UFrontendHUD*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    ClassTagName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UClass*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UFrontendHUD* UUAEGameInstance::GetAssociatedFrontendHUD() const
+class UClass* UBPClassManager::GetBPClassOverrideByName(const class FString& ClassTagName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEGameInstance", "GetAssociatedFrontendHUD");
+		Func = GetClass()->GetFunction("BPClassManager", "GetBPClassOverrideByName");
 
-	Params::UAEGameInstance_GetAssociatedFrontendHUD Parms{};
+	Params::BPClassManager_GetBPClassOverrideByName Parms{};
+
+	Parms.ClassTagName = std::move(ClassTagName);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -530,19 +336,154 @@ class UFrontendHUD* UUAEGameInstance::GetAssociatedFrontendHUD() const
 }
 
 
-// Function Basic.UAEGameInstance.GetLocalPlayerNetId
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Function Basic.BPClassManager.GetUClass
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
+// int32                                   KeyIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UClass*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UClass* UBPClassManager::GetUClass(int32 KeyIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BPClassManager", "GetUClass");
+
+	Params::BPClassManager_GetUClass Parms{};
+
+	Parms.KeyIndex = KeyIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Basic.UAELoadedClassManager.Get
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UUAELoadedClassManager*           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UUAELoadedClassManager* UUAELoadedClassManager::Get()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("UAELoadedClassManager", "Get");
+
+	Params::UAELoadedClassManager_Get Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Basic.UAELoadedClassManager.ClearAllData
+// (Final, Native, Public, BlueprintCallable)
+
+void UUAELoadedClassManager::ClearAllData()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAELoadedClassManager", "ClearAllData");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Basic.UAELoadedClassManager.CreateAndAddBPTable
+// (Final, Native, Protected, BlueprintCallable)
+// Parameters:
+// const class FString&                    BPTableName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UBPTable*                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UBPTable* UUAELoadedClassManager::CreateAndAddBPTable(const class FString& BPTableName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAELoadedClassManager", "CreateAndAddBPTable");
+
+	Params::UAELoadedClassManager_CreateAndAddBPTable Parms{};
+
+	Parms.BPTableName = std::move(BPTableName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Basic.UAELoadedClassManager.GetClass
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    BPTableName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ID                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UClass*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UClass* UUAELoadedClassManager::GetClass(const class FString& BPTableName, int32 ID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAELoadedClassManager", "GetClass");
+
+	Params::UAELoadedClassManager_GetClass Parms{};
+
+	Parms.BPTableName = std::move(BPTableName);
+	Parms.ID = ID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Basic.UAELoadedClassManager.GetMeshPath
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    BPTableName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ID                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class FString UUAEGameInstance::GetLocalPlayerNetId() const
+class FString UUAELoadedClassManager::GetMeshPath(const class FString& BPTableName, int32 ID)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAEGameInstance", "GetLocalPlayerNetId");
+		Func = GetClass()->GetFunction("UAELoadedClassManager", "GetMeshPath");
 
-	Params::UAEGameInstance_GetLocalPlayerNetId Parms{};
+	Params::UAELoadedClassManager_GetMeshPath Parms{};
+
+	Parms.BPTableName = std::move(BPTableName);
+	Parms.ID = ID;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -555,24 +496,29 @@ class FString UUAEGameInstance::GetLocalPlayerNetId() const
 }
 
 
-// Function Basic.AttrModifyInterface.GetAttrModifyComponent
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Function Basic.UAELoadedClassManager.GetParentID
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UAttrModifyComponent*             ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    BPTableName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ID                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UAttrModifyComponent* IAttrModifyInterface::GetAttrModifyComponent()
+class FString UUAELoadedClassManager::GetParentID(const class FString& BPTableName, int32 ID)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("AttrModifyInterface", "GetAttrModifyComponent");
+		Func = GetClass()->GetFunction("UAELoadedClassManager", "GetParentID");
 
-	Params::AttrModifyInterface_GetAttrModifyComponent Parms{};
+	Params::UAELoadedClassManager_GetParentID Parms{};
+
+	Parms.BPTableName = std::move(BPTableName);
+	Parms.ID = ID;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -580,28 +526,145 @@ class UAttrModifyComponent* IAttrModifyInterface::GetAttrModifyComponent()
 }
 
 
-// Function Basic.AttrModifyInterface.GetRelevantActors
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Function Basic.UAELoadedClassManager.GetPath
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<class AActor*>                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+// const class FString&                    BPTableName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ID                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-TArray<class AActor*> IAttrModifyInterface::GetRelevantActors()
+class FString UUAELoadedClassManager::GetPath(const class FString& BPTableName, int32 ID)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("AttrModifyInterface", "GetRelevantActors");
+		Func = GetClass()->GetFunction("UAELoadedClassManager", "GetPath");
 
-	Params::AttrModifyInterface_GetRelevantActors Parms{};
+	Params::UAELoadedClassManager_GetPath Parms{};
+
+	Parms.BPTableName = std::move(BPTableName);
+	Parms.ID = ID;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function Basic.UAELoadedClassManager.GetSkinPath
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    BPTableName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ID                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UUAELoadedClassManager::GetSkinPath(const class FString& BPTableName, int32 ID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAELoadedClassManager", "GetSkinPath");
+
+	Params::UAELoadedClassManager_GetSkinPath Parms{};
+
+	Parms.BPTableName = std::move(BPTableName);
+	Parms.ID = ID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Basic.UAELoadedClassManager.GetWrapperPath
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    BPTableName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ID                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UUAELoadedClassManager::GetWrapperPath(const class FString& BPTableName, int32 ID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAELoadedClassManager", "GetWrapperPath");
+
+	Params::UAELoadedClassManager_GetWrapperPath Parms{};
+
+	Parms.BPTableName = std::move(BPTableName);
+	Parms.ID = ID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Basic.UAELoadedClassManager.Init
+// (Final, Native, Public, BlueprintCallable)
+
+void UUAELoadedClassManager::Init()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAELoadedClassManager", "Init");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Basic.UAELoadedClassManager.InitBPTableMap
+// (Event, Public, BlueprintEvent)
+
+void UUAELoadedClassManager::InitBPTableMap()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAELoadedClassManager", "InitBPTableMap");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Basic.UAELoadedClassManager.InitTableData
+// (Native, Event, Public, BlueprintEvent)
+
+void UUAELoadedClassManager::InitTableData()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAELoadedClassManager", "InitTableData");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
@@ -869,128 +932,19 @@ class UWorld* UBattleItemHandleBase::GetWorldInternal() const
 }
 
 
-// Function Basic.BPClassManager.Get
-// (Final, Native, Static, Public)
+// Function Basic.AttrModifyInterface.GetAttrModifyComponent
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UBPClassManager*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAttrModifyComponent*             ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UBPClassManager* UBPClassManager::Get()
+class UAttrModifyComponent* IAttrModifyInterface::GetAttrModifyComponent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPClassManager", "Get");
+		Func = AsUObject()->Class->GetFunction("AttrModifyInterface", "GetAttrModifyComponent");
 
-	Params::BPClassManager_Get Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Basic.BPClassManager.GetBPClassOverride
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UClass*                           InNativeClass                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UClass*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UClass* UBPClassManager::GetBPClassOverride(class UClass* InNativeClass)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BPClassManager", "GetBPClassOverride");
-
-	Params::BPClassManager_GetBPClassOverride Parms{};
-
-	Parms.InNativeClass = InNativeClass;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Basic.BPClassManager.GetBPClassOverrideByName
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    ClassTagName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UClass*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UClass* UBPClassManager::GetBPClassOverrideByName(const class FString& ClassTagName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BPClassManager", "GetBPClassOverrideByName");
-
-	Params::BPClassManager_GetBPClassOverrideByName Parms{};
-
-	Parms.ClassTagName = std::move(ClassTagName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Basic.BPClassManager.GetUClass
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int32                                   KeyIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UClass*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UClass* UBPClassManager::GetUClass(int32 KeyIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BPClassManager", "GetUClass");
-
-	Params::BPClassManager_GetUClass Parms{};
-
-	Parms.KeyIndex = KeyIndex;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Basic.ItemContainerInterface.GetItemDefineIDList
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// TArray<struct FItemDefineID>            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FItemDefineID> IItemContainerInterface::GetItemDefineIDList()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("ItemContainerInterface", "GetItemDefineIDList");
-
-	Params::ItemContainerInterface_GetItemDefineIDList Parms{};
+	Params::AttrModifyInterface_GetAttrModifyComponent Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1003,124 +957,24 @@ TArray<struct FItemDefineID> IItemContainerInterface::GetItemDefineIDList()
 }
 
 
-// Function Basic.ItemContainerInterface.GetItemHandleByDefineID
-// (Native, Public, BlueprintCallable)
+// Function Basic.AttrModifyInterface.GetRelevantActors
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FItemDefineID&             DefineID                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UItemHandleBase*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class AActor*>                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
-class UItemHandleBase* IItemContainerInterface::GetItemHandleByDefineID(const struct FItemDefineID& DefineID)
+TArray<class AActor*> IAttrModifyInterface::GetRelevantActors()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("ItemContainerInterface", "GetItemHandleByDefineID");
+		Func = AsUObject()->Class->GetFunction("AttrModifyInterface", "GetRelevantActors");
 
-	Params::ItemContainerInterface_GetItemHandleByDefineID Parms{};
-
-	Parms.DefineID = std::move(DefineID);
+	Params::AttrModifyInterface_GetRelevantActors Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
 	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Basic.ItemContainerInterface.GetItemHandleListByDefineID
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// const struct FItemDefineID&             DefineID                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class UItemHandleBase*>          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<class UItemHandleBase*> IItemContainerInterface::GetItemHandleListByDefineID(const struct FItemDefineID& DefineID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("ItemContainerInterface", "GetItemHandleListByDefineID");
-
-	Params::ItemContainerInterface_GetItemHandleListByDefineID Parms{};
-
-	Parms.DefineID = std::move(DefineID);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Basic.ItemContainerInterface.GetOwningObject
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UObject* IItemContainerInterface::GetOwningObject() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("ItemContainerInterface", "GetOwningObject");
-
-	Params::ItemContainerInterface_GetOwningObject Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Basic.PackTool.CookResBySelection
-// (Final, Native, Public, BlueprintCallable)
-
-void UPackTool::CookResBySelection()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("PackTool", "CookResBySelection");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Basic.STBaseBuff.GetBuffPassPercentage
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float USTBaseBuff::GetBuffPassPercentage()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("STBaseBuff", "GetBuffPassPercentage");
-
-	Params::STBaseBuff_GetBuffPassPercentage Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -1353,6 +1207,356 @@ void ISTBaseBuffCarrierInterface::SyncInvincibleData(float TotalTime)
 	Func->FunctionFlags |= 0x400;
 
 	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Basic.AttrModifyComponent.DisableAllAttrModifier
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 UAttrModifyComponent::DisableAllAttrModifier()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("AttrModifyComponent", "DisableAllAttrModifier");
+
+	Params::AttrModifyComponent_DisableAllAttrModifier Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Basic.AttrModifyComponent.DisableAttrModifier
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    AttrModifyItemName                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 UAttrModifyComponent::DisableAttrModifier(const class FString& AttrModifyItemName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("AttrModifyComponent", "DisableAttrModifier");
+
+	Params::AttrModifyComponent_DisableAttrModifier Parms{};
+
+	Parms.AttrModifyItemName = std::move(AttrModifyItemName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Basic.AttrModifyComponent.DisableModifierToActor
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                           TargetActor                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 UAttrModifyComponent::DisableModifierToActor(class AActor* TargetActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("AttrModifyComponent", "DisableModifierToActor");
+
+	Params::AttrModifyComponent_DisableModifierToActor Parms{};
+
+	Parms.TargetActor = TargetActor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Basic.AttrModifyComponent.EnableAllAttrModifier
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 UAttrModifyComponent::EnableAllAttrModifier()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("AttrModifyComponent", "EnableAllAttrModifier");
+
+	Params::AttrModifyComponent_EnableAllAttrModifier Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Basic.AttrModifyComponent.EnableAttrModifier
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    AttrModifyItemName                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 UAttrModifyComponent::EnableAttrModifier(const class FString& AttrModifyItemName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("AttrModifyComponent", "EnableAttrModifier");
+
+	Params::AttrModifyComponent_EnableAttrModifier Parms{};
+
+	Parms.AttrModifyItemName = std::move(AttrModifyItemName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Basic.AttrModifyComponent.OnRep_AttrModifyStateList
+// (Final, Native, Private)
+
+void UAttrModifyComponent::OnRep_AttrModifyStateList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("AttrModifyComponent", "OnRep_AttrModifyStateList");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Basic.AttrModifyComponent.OnRep_DynamicModifierList
+// (Final, Native, Private)
+
+void UAttrModifyComponent::OnRep_DynamicModifierList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("AttrModifyComponent", "OnRep_DynamicModifierList");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Basic.AttrModifyComponent.RegisterModifyAbleAttr
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<struct FAttrRegisterItem>& AttrRegists                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 UAttrModifyComponent::RegisterModifyAbleAttr(const TArray<struct FAttrRegisterItem>& AttrRegists)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("AttrModifyComponent", "RegisterModifyAbleAttr");
+
+	Params::AttrModifyComponent_RegisterModifyAbleAttr Parms{};
+
+	Parms.AttrRegists = std::move(AttrRegists);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Basic.STBaseBuff.GetBuffPassPercentage
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float USTBaseBuff::GetBuffPassPercentage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("STBaseBuff", "GetBuffPassPercentage");
+
+	Params::STBaseBuff_GetBuffPassPercentage Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Basic.ItemContainerInterface.GetItemDefineIDList
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TArray<struct FItemDefineID>            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FItemDefineID> IItemContainerInterface::GetItemDefineIDList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("ItemContainerInterface", "GetItemDefineIDList");
+
+	Params::ItemContainerInterface_GetItemDefineIDList Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Basic.ItemContainerInterface.GetItemHandleByDefineID
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FItemDefineID&             DefineID                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UItemHandleBase*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UItemHandleBase* IItemContainerInterface::GetItemHandleByDefineID(const struct FItemDefineID& DefineID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("ItemContainerInterface", "GetItemHandleByDefineID");
+
+	Params::ItemContainerInterface_GetItemHandleByDefineID Parms{};
+
+	Parms.DefineID = std::move(DefineID);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Basic.ItemContainerInterface.GetItemHandleListByDefineID
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FItemDefineID&             DefineID                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class UItemHandleBase*>          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class UItemHandleBase*> IItemContainerInterface::GetItemHandleListByDefineID(const struct FItemDefineID& DefineID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("ItemContainerInterface", "GetItemHandleListByDefineID");
+
+	Params::ItemContainerInterface_GetItemHandleListByDefineID Parms{};
+
+	Parms.DefineID = std::move(DefineID);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Basic.ItemContainerInterface.GetOwningObject
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UObject* IItemContainerInterface::GetOwningObject() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("ItemContainerInterface", "GetOwningObject");
+
+	Params::ItemContainerInterface_GetOwningObject Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Basic.PackTool.CookResBySelection
+// (Final, Native, Public, BlueprintCallable)
+
+void UPackTool::CookResBySelection()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("PackTool", "CookResBySelection");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -1943,13 +2147,113 @@ void USTBaseBuffSystemComponent::ResetForDeath()
 }
 
 
+// Function Basic.UAEGameInstance.GetDeviceLevel
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UUAEGameInstance::GetDeviceLevel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEGameInstance", "GetDeviceLevel");
+
+	Params::UAEGameInstance_GetDeviceLevel Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Basic.UAEGameInstance.GetWeatherID
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UUAEGameInstance::GetWeatherID()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEGameInstance", "GetWeatherID");
+
+	Params::UAEGameInstance_GetWeatherID Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Basic.UAEGameInstance.GetAssociatedFrontendHUD
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UFrontendHUD*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UFrontendHUD* UUAEGameInstance::GetAssociatedFrontendHUD() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEGameInstance", "GetAssociatedFrontendHUD");
+
+	Params::UAEGameInstance_GetAssociatedFrontendHUD Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Basic.UAEGameInstance.GetLocalPlayerNetId
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UUAEGameInstance::GetLocalPlayerNetId() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("UAEGameInstance", "GetLocalPlayerNetId");
+
+	Params::UAEGameInstance_GetLocalPlayerNetId Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Basic.BPTable.GetClass
 // (Final, Native, Public)
 // Parameters:
 // int32                                   ID                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UClass*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UClass* UBPTable::GetBPTableClass(int32 ID)
+class UClass* UBPTable::GetClass(int32 ID)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2010,7 +2314,7 @@ class FString UBPTable::GetParentID(int32 ID)
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = UObject::GetClass()->GetFunction("BPTable", "GetParentID");
+		Func = GetClass()->GetFunction("BPTable", "GetParentID");
 
 	Params::BPTable_GetParentID Parms{};
 
@@ -2108,310 +2412,6 @@ class FString UBPTable::GetWrapperPath(int32 ID)
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
-}
-
-
-// Function Basic.UAELoadedClassManager.Get
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UUAELoadedClassManager*           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UUAELoadedClassManager* UUAELoadedClassManager::Get()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("UAELoadedClassManager", "Get");
-
-	Params::UAELoadedClassManager_Get Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Basic.UAELoadedClassManager.ClearAllData
-// (Final, Native, Public, BlueprintCallable)
-
-void UUAELoadedClassManager::ClearAllData()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = UObject::GetClass()->GetFunction("UAELoadedClassManager", "ClearAllData");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Basic.UAELoadedClassManager.CreateAndAddBPTable
-// (Final, Native, Protected, BlueprintCallable)
-// Parameters:
-// const class FString&                    BPTableName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UBPTable*                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UBPTable* UUAELoadedClassManager::CreateAndAddBPTable(const class FString& BPTableName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = UObject::GetClass()->GetFunction("UAELoadedClassManager", "CreateAndAddBPTable");
-
-	Params::UAELoadedClassManager_CreateAndAddBPTable Parms{};
-
-	Parms.BPTableName = std::move(BPTableName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Basic.UAELoadedClassManager.GetClass
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    BPTableName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ID                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UClass*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UClass* UUAELoadedClassManager::GetLoadedClassManagerClass(const class FString& BPTableName, int32 ID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAELoadedClassManager", "GetClass");
-
-	Params::UAELoadedClassManager_GetClass Parms{};
-
-	Parms.BPTableName = std::move(BPTableName);
-	Parms.ID = ID;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Basic.UAELoadedClassManager.GetMeshPath
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    BPTableName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ID                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString UUAELoadedClassManager::GetMeshPath(const class FString& BPTableName, int32 ID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAELoadedClassManager", "GetMeshPath");
-
-	Params::UAELoadedClassManager_GetMeshPath Parms{};
-
-	Parms.BPTableName = std::move(BPTableName);
-	Parms.ID = ID;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Basic.UAELoadedClassManager.GetParentID
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    BPTableName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ID                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString UUAELoadedClassManager::GetParentID(const class FString& BPTableName, int32 ID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAELoadedClassManager", "GetParentID");
-
-	Params::UAELoadedClassManager_GetParentID Parms{};
-
-	Parms.BPTableName = std::move(BPTableName);
-	Parms.ID = ID;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Basic.UAELoadedClassManager.GetPath
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    BPTableName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ID                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString UUAELoadedClassManager::GetPath(const class FString& BPTableName, int32 ID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAELoadedClassManager", "GetPath");
-
-	Params::UAELoadedClassManager_GetPath Parms{};
-
-	Parms.BPTableName = std::move(BPTableName);
-	Parms.ID = ID;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Basic.UAELoadedClassManager.GetSkinPath
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    BPTableName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ID                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString UUAELoadedClassManager::GetSkinPath(const class FString& BPTableName, int32 ID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAELoadedClassManager", "GetSkinPath");
-
-	Params::UAELoadedClassManager_GetSkinPath Parms{};
-
-	Parms.BPTableName = std::move(BPTableName);
-	Parms.ID = ID;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Basic.UAELoadedClassManager.GetWrapperPath
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    BPTableName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ID                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString UUAELoadedClassManager::GetWrapperPath(const class FString& BPTableName, int32 ID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = UObject::GetClass()->GetFunction("UAELoadedClassManager", "GetWrapperPath");
-
-	Params::UAELoadedClassManager_GetWrapperPath Parms{};
-
-	Parms.BPTableName = std::move(BPTableName);
-	Parms.ID = ID;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Basic.UAELoadedClassManager.Init
-// (Final, Native, Public, BlueprintCallable)
-
-void UUAELoadedClassManager::Init()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAELoadedClassManager", "Init");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Basic.UAELoadedClassManager.InitBPTableMap
-// (Event, Public, BlueprintEvent)
-
-void UUAELoadedClassManager::InitBPTableMap()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAELoadedClassManager", "InitBPTableMap");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Basic.UAELoadedClassManager.InitTableData
-// (Native, Event, Public, BlueprintEvent)
-
-void UUAELoadedClassManager::InitTableData()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("UAELoadedClassManager", "InitTableData");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
 }
 
 

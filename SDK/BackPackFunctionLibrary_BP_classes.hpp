@@ -37,11 +37,11 @@ public:
 	static void IsBullet(const struct FItemDefineID& DefineID, class UObject* __WorldContext, uint8* IsBullet_0);
 	static void IsGunSupportBullet(class ASTExtraWeapon* Weapon, const struct FItemDefineID& bulletDefineID, class UObject* __WorldContext, uint8* isSupport);
 	static void GetWeaponAttachPosByResID(int32 resID, class UUAEUserWidget* Widget, class UObject* __WorldContext, EWeaponAttachmentSocketType* socket);
-	static void GetWeaponSupportAttachResID(int32 WeaponID, class UUAEUserWidget* Widget, class UObject* __WorldContext, TArray<int32>* attachID);
-	static void GetWeaponSupportSocket(int32 WeaponID, class UUAEUserWidget* Widget, class UObject* __WorldContext, TArray<EWeaponAttachmentSocketType>* socketList);
+	static void GetWeaponSupportAttachResID(int32 WeaponId, class UUAEUserWidget* Widget, class UObject* __WorldContext, TArray<int32>* attachID);
+	static void GetWeaponSupportSocket(int32 WeaponId, class UUAEUserWidget* Widget, class UObject* __WorldContext, TArray<EWeaponAttachmentSocketType>* socketList);
 	static void IsGunSupportAttachByDefineID(const struct FItemDefineID& gunDefine, const struct FItemDefineID& attachDefine, class UUAEUserWidget* Widget, class UObject* __WorldContext, uint8* support);
 	static void IsGunSupportAttachByResID(int32 gunResID, int32 attachResID, class UUAEUserWidget* Widget, class UObject* __WorldContext, uint8* support);
-	static void GetWeaponAttachments(int32 WeaponID, uint8 IsContainBullet, class UObject* __WorldContext, TArray<int32>* Attachs);
+	static void GetWeaponAttachments(int32 WeaponId, uint8 IsContainBullet, class UObject* __WorldContext, TArray<int32>* Attachs);
 	static void IsMeleeWeapon(const struct FItemDefineID& DefineID, class UObject* __WorldContext, uint8* IsMeleeWeapon_0);
 	static void IsGrenadeWeapon(const struct FItemDefineID& DefineID, class UObject* __WorldContext, uint8* IsGrenadeWeapon_0);
 	static void IsPistolGun(const struct FItemDefineID& DefineID, class UObject* __WorldContext, uint8* IsPistolGun_0);

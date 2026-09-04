@@ -10,99 +10,95 @@
 
 #include "Basic.hpp"
 
-#include "BP_STRUCT_CreateRole_AvatarInfo_structs.hpp"
 #include "BP_STRUCT_CreateRole_BuyAvatarInfo_structs.hpp"
-#include "BP_STRUCT_CreateRole_SelectTip_structs.hpp"
 #include "Client_classes.hpp"
+#include "BP_STRUCT_CreateRole_SelectTip_structs.hpp"
+#include "BP_STRUCT_CreateRole_AvatarInfo_structs.hpp"
 
 
 namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_createrole.bp_createrole_C
-// 0x00D8 (0x04C0 - 0x03E8)
+// 0x00C8 (0x04A0 - 0x03D8)
 class Abp_createrole_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	int32                                         BP_CreateRole_Sex;                                 // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	int32                                         BP_CreateRole_Sex;                                 // 0x03E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_CreateRole_HairColor;                           // 0x03E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_CreateRole_Race;                                // 0x03E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_CreateRole_HairID;                              // 0x03EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_CreateRole_HeadId;                              // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3F4[0x4];                                      // 0x03F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_CreateRole_AvatarInfo> BP_ARRAY_CreateRole_Races;                       // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_CreateRole_HairID;                              // 0x0408(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_40C[0x4];                                      // 0x040C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_CreateRole_AvatarInfo> BP_ARRAY_CreateRole_Hairs;                       // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_CreateRole_HairColor;                           // 0x0420(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_424[0x4];                                      // 0x0424(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_CreateRole_Name;                                // 0x0428(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_CreateRole_Gold;                                // 0x0438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_CreateRole_ModeCost;                            // 0x043C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_CreateRole_BuyAvatarInfo    BP_STRUCT_CreateRole_BuyAvatarInfo;                // 0x0440(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_CreateRole_Mode;                                // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_454[0x4];                                      // 0x0454(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_CreateRole_BuyAvatarInfo> BP_Array_CreateRole_BuyAvatars;               // 0x0458(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_CreateRole_HeadId;                              // 0x0468(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_CreateRole_LobbyToAvatar;                       // 0x046C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_CreateRole_HairType;                            // 0x0470(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_CreateRole_AvatarInfo       BP_STRUCT_CreateRole_AvatarInfo;                   // 0x0474(0x000C)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_CreateRole_Race;                                // 0x0480(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_484[0x4];                                      // 0x0484(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_CreateRole_SelectTip        BP_STRUCT_CreateRole_SelectTip;                    // 0x0488(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04B8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_CreateRole_BuyAvatarInfo> BP_Array_CreateRole_BuyAvatars;               // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	struct FBP_STRUCT_CreateRole_SelectTip        BP_STRUCT_CreateRole_SelectTip;                    // 0x0408(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_CreateRole_HairType;                            // 0x0438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_CreateRole_Gold;                                // 0x043C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_CreateRole_AvatarInfo> BP_ARRAY_CreateRole_Races;                       // 0x0440(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	struct FBP_STRUCT_CreateRole_BuyAvatarInfo    BP_STRUCT_CreateRole_BuyAvatarInfo;                // 0x0450(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_CreateRole_ModeCost;                            // 0x0460(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBP_STRUCT_CreateRole_AvatarInfo       BP_STRUCT_CreateRole_AvatarInfo;                   // 0x0464(0x000C)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_CreateRole_AvatarInfo> BP_ARRAY_CreateRole_Hairs;                       // 0x0470(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_CreateRole_LobbyToAvatar;                       // 0x0480(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_CreateRole_Mode;                                // 0x0484(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 BP_CreateRole_Name;                                // 0x0488(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventSelectHairColor3();
-	void EventSelectHairColor3_NoFetch();
+	void EventFetchInfo();
+	void EventFetchInfo_NoFetch();
+	void EventShowAvatarResetBuyPanel();
+	void EventShowAvatarResetBuyPanel_NoFetch();
+	void EventGetCreateRoleHeadID();
+	void EventGetCreateRoleHeadID_NoFetch();
+	void EventSelectRace();
+	void EventSelectRace_NoFetch();
+	void EventSelectHairColor6();
+	void EventSelectHairColor6_NoFetch();
 	void EventSelectHairColor1();
 	void EventSelectHairColor1_NoFetch();
-	void EventGetCreateRoleHairColor();
-	void EventGetCreateRoleHairColor_NoFetch();
-	void EventFilterName();
-	void EventFilterName_NoFetch();
-	void EventSelectMale();
-	void EventSelectMale_NoFetch();
+	void EventSelectHairColor3();
+	void EventSelectHairColor3_NoFetch();
+	void EventCloseAvatarResetPanel();
+	void EventCloseAvatarResetPanel_NoFetch();
+	void EventSelectHairColor2();
+	void EventSelectHairColor2_NoFetch();
+	void EventSetInfo_Push();
+	void EventSetInfo_Push_NoFetch();
+	void EventSelectFeMale();
+	void EventSelectFeMale_NoFetch();
 	void EventSelectHairType();
 	void EventSelectHairType_NoFetch();
 	void EventEnterLobby();
 	void EventEnterLobby_NoFetch();
-	void EventSelectRace();
-	void EventSelectRace_NoFetch();
-	void EventSetInfo_Push();
-	void EventSetInfo_Push_NoFetch();
-	void EventSelectHairColor6();
-	void EventSelectHairColor6_NoFetch();
+	void EventGetCreateRoleSex();
+	void EventGetCreateRoleSex_NoFetch();
+	void EventGetCreateRoleHairColor();
+	void EventGetCreateRoleHairColor_NoFetch();
 	void EventGetCreateRoleHairID();
 	void EventGetCreateRoleHairID_NoFetch();
-	void EventBuyAvatar();
-	void EventBuyAvatar_NoFetch();
-	void EventShowAvatarResetBuyPanel();
-	void EventShowAvatarResetBuyPanel_NoFetch();
-	void EventFetchInfo();
-	void EventFetchInfo_NoFetch();
-	void EventCloseAvatarResetPanel();
-	void EventCloseAvatarResetPanel_NoFetch();
-	void EventCancelAvatarReset();
-	void EventCancelAvatarReset_NoFetch();
+	void EventFilterName();
+	void EventFilterName_NoFetch();
 	void EventSelectHairColor5();
 	void EventSelectHairColor5_NoFetch();
+	void EventCloseAvatarResetPanelInter();
+	void EventCloseAvatarResetPanelInter_NoFetch();
+	void EventCancelAvatarReset();
+	void EventCancelAvatarReset_NoFetch();
 	void EventOpenAvatarResetPanelInter();
 	void EventOpenAvatarResetPanelInter_NoFetch();
 	void EventOpenAvatarResetPanel();
 	void EventOpenAvatarResetPanel_NoFetch();
+	void EventSelectMale();
+	void EventSelectMale_NoFetch();
+	void EventBuyAvatar();
+	void EventBuyAvatar_NoFetch();
 	void EventSelectHairColor4();
 	void EventSelectHairColor4_NoFetch();
-	void EventSelectHairColor2();
-	void EventSelectHairColor2_NoFetch();
-	void EventSelectFeMale();
-	void EventSelectFeMale_NoFetch();
-	void EventCloseAvatarResetPanelInter();
-	void EventCloseAvatarResetPanelInter_NoFetch();
-	void EventGetCreateRoleHeadID();
-	void EventGetCreateRoleHeadID_NoFetch();
 	void EventRandomName();
 	void EventRandomName_NoFetch();
-	void EventGetCreateRoleSex();
-	void EventGetCreateRoleSex_NoFetch();
 
 public:
 	static class UClass* StaticClass()

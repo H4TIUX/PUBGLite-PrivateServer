@@ -19,27 +19,27 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C
-// 0x0080 (0x25E0 - 0x2560)
+// 0x0080 (0x2690 - 0x2610)
 class ABP_STExtraPlayerControllerPC_C final : public ABP_STExtraPlayerController_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_STExtraPlayerControllerPC_C;     // 0x2558(0x0008)(Transient, DuplicateTransient)
-	uint8                                         inventoryOpened : 1;                               // 0x2560(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         IsPressedCtrl : 1;                                 // 0x2561(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         MapOpened : 1;                                     // 0x2562(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         voiceMode;                                         // 0x2563(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         bShowPopup : 1;                                    // 0x2564(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_2565[0x3];                                     // 0x2565(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         SelectedEmoteIndex;                                // 0x2568(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         IsEmoteOpened : 1;                                 // 0x256C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         keyHintOpened : 1;                                 // 0x256D(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_256E[0x2];                                     // 0x256E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MoveToVehicleSeatTimstamp;                         // 0x2570(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         IsThrowableOpened : 1;                             // 0x2574(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         IsHealOpened : 1;                                  // 0x2575(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_2576[0x2];                                     // 0x2576(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	UMulticastDelegateProperty_                   OnRepToggleUIEvent;                                // 0x2578(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMap<class FString, uint8>                    CleanAvatarMap;                                    // 0x2588(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_STExtraPlayerControllerPC_C;     // 0x2608(0x0008)(Transient, DuplicateTransient)
+	uint8                                         inventoryOpened : 1;                               // 0x2610(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         IsPressedCtrl : 1;                                 // 0x2611(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         MapOpened : 1;                                     // 0x2612(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         voiceMode;                                         // 0x2613(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         bShowPopup : 1;                                    // 0x2614(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_2615[0x3];                                     // 0x2615(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SelectedEmoteIndex;                                // 0x2618(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         IsEmoteOpened : 1;                                 // 0x261C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         keyHintOpened : 1;                                 // 0x261D(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_261E[0x2];                                     // 0x261E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MoveToVehicleSeatTimstamp;                         // 0x2620(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         IsThrowableOpened : 1;                             // 0x2624(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         IsHealOpened : 1;                                  // 0x2625(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_2626[0x2];                                     // 0x2626(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	UMulticastDelegateProperty_                   OnRepToggleUIEvent;                                // 0x2628(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMap<class FString, uint8>                    CleanAvatarMap;                                    // 0x2638(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_BP_STExtraPlayerControllerPC(int32 EntryPoint);
@@ -47,9 +47,9 @@ public:
 	void HideInventoryMapWidget();
 	void ToggleInventoryEx();
 	void InpActEvt_ToggleInventory_K2Node_InputActionEvent_30(const struct FKey& Key);
-	void InpActEvt_ToggleMap_K2Node_InputActionEvent_31(const struct FKey& Key);
+	void InpActEvt_ToggleMissionList_K2Node_InputActionEvent_31(const struct FKey& Key);
 	void InpActEvt_ToggleMap_K2Node_InputActionEvent_32(const struct FKey& Key);
-	void InpActEvt_ToggleMissionList_K2Node_InputActionEvent_33(const struct FKey& Key);
+	void InpActEvt_ToggleMap_K2Node_InputActionEvent_33(const struct FKey& Key);
 	void InpActEvt_TakeScreenshot_K2Node_InputActionEvent_34(const struct FKey& Key);
 	void InpActEvt_ToggleHealItemWheel_K2Node_InputActionEvent_35(const struct FKey& Key);
 	void InpActEvt_ToggleHealItemWheel_K2Node_InputActionEvent_36(const struct FKey& Key);
@@ -64,18 +64,18 @@ public:
 	void InpActEvt_UseMedKit_K2Node_InputActionEvent_45(const struct FKey& Key);
 	void InpActEvt_UseFirstAid_K2Node_InputActionEvent_46(const struct FKey& Key);
 	void InpActEvt_ToggleExtendedMinimap_K2Node_InputActionEvent_47(const struct FKey& Key);
-	void InpActEvt_TestGoFightingState_K2Node_InputActionEvent_48(const struct FKey& Key);
+	void InpActEvt_ToggleEmoteWheel_K2Node_InputActionEvent_48(const struct FKey& Key);
 	void InpActEvt_ToggleEmoteWheel_K2Node_InputActionEvent_49(const struct FKey& Key);
-	void InpActEvt_ToggleEmoteWheel_K2Node_InputActionEvent_50(const struct FKey& Key);
-	void InpActEvt_SetMapMarkerAtCurrentPosition_K2Node_InputActionEvent_51(const struct FKey& Key);
-	void InpActEvt_DeleteMyMarker_K2Node_InputActionEvent_52(const struct FKey& Key);
-	void InpActEvt_ToggleUI_K2Node_InputActionEvent_53(const struct FKey& Key);
-	void InpActEvt_ToggleMuteMasterVolume_K2Node_InputActionEvent_54(const struct FKey& Key);
-	void InpActEvt_ToggleMuteVoiceChat_K2Node_InputActionEvent_55(const struct FKey& Key);
-	void InpActEvt_SwitchVoiceChannel_K2Node_InputActionEvent_56(const struct FKey& Key);
+	void InpActEvt_SetMapMarkerAtCurrentPosition_K2Node_InputActionEvent_50(const struct FKey& Key);
+	void InpActEvt_DeleteMyMarker_K2Node_InputActionEvent_51(const struct FKey& Key);
+	void InpActEvt_ToggleUI_K2Node_InputActionEvent_52(const struct FKey& Key);
+	void InpActEvt_ToggleMuteMasterVolume_K2Node_InputActionEvent_53(const struct FKey& Key);
+	void InpActEvt_ToggleMuteVoiceChat_K2Node_InputActionEvent_54(const struct FKey& Key);
+	void InpActEvt_SwitchVoiceChannel_K2Node_InputActionEvent_55(const struct FKey& Key);
+	void InpActEvt_PushToTalk_K2Node_InputActionEvent_56(const struct FKey& Key);
 	void InpActEvt_PushToTalk_K2Node_InputActionEvent_57(const struct FKey& Key);
-	void InpActEvt_PushToTalk_K2Node_InputActionEvent_58(const struct FKey& Key);
-	void InpActEvt_TestGoNextState_K2Node_InputActionEvent_59(const struct FKey& Key);
+	void InpActEvt_TestGoNextState_K2Node_InputActionEvent_58(const struct FKey& Key);
+	void InpActEvt_TestGoFightingState_K2Node_InputActionEvent_59(const struct FKey& Key);
 	void ToggleInventory();
 	void ToggleMap();
 	void HideInventory();

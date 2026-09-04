@@ -58,6 +58,34 @@ void Abp_shop_gift_C::EventGiftUIPushDataFunc_NoFetch()
 }
 
 
+// Function bp_shop_gift.bp_shop_gift_C.EventGiftUISearch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shop_gift_C::EventGiftUISearch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shop_gift_C", "EventGiftUISearch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_shop_gift.bp_shop_gift_C.EventGiftUISearch_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_shop_gift_C::EventGiftUISearch_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_shop_gift_C", "EventGiftUISearch_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_shop_gift.bp_shop_gift_C.EventGiftUIClose
 // (BlueprintCallable, BlueprintEvent)
 
@@ -137,34 +165,6 @@ void Abp_shop_gift_C::EventGiftUISendOrWant_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_shop_gift_C", "EventGiftUISendOrWant_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shop_gift.bp_shop_gift_C.EventGiftUISearch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shop_gift_C::EventGiftUISearch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_C", "EventGiftUISearch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_shop_gift.bp_shop_gift_C.EventGiftUISearch_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_shop_gift_C::EventGiftUISearch_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_shop_gift_C", "EventGiftUISearch_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

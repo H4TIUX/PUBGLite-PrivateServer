@@ -225,6 +225,202 @@ void UShootingUIPanel_C::LeaveWater(uint8 HideLung)
 }
 
 
+// Function ShootingUIPanel.ShootingUIPanel_C.OnBackpackOpen_StopFire
+// (BlueprintCallable, BlueprintEvent)
+
+void UShootingUIPanel_C::OnBackpackOpen_StopFire()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ShootingUIPanel_C", "OnBackpackOpen_StopFire");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShootingUIPanel.ShootingUIPanel_C.OnPersonPerspectiveChanged
+// (BlueprintCallable, BlueprintEvent)
+
+void UShootingUIPanel_C::OnPersonPerspectiveChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ShootingUIPanel_C", "OnPersonPerspectiveChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShootingUIPanel.ShootingUIPanel_C.OnFPPModeChange
+// (BlueprintCallable, BlueprintEvent)
+
+void UShootingUIPanel_C::OnFPPModeChange()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ShootingUIPanel_C", "OnFPPModeChange");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShootingUIPanel.ShootingUIPanel_C.OnPrefireEnd
+// (BlueprintCallable, BlueprintEvent)
+
+void UShootingUIPanel_C::OnPrefireEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ShootingUIPanel_C", "OnPrefireEnd");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShootingUIPanel.ShootingUIPanel_C.OnScopeChanged
+// (BlueprintCallable, BlueprintEvent)
+
+void UShootingUIPanel_C::OnScopeChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ShootingUIPanel_C", "OnScopeChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShootingUIPanel.ShootingUIPanel_C.OnHightLightAimBtn
+// (BlueprintCallable, BlueprintEvent)
+
+void UShootingUIPanel_C::OnHightLightAimBtn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ShootingUIPanel_C", "OnHightLightAimBtn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShootingUIPanel.ShootingUIPanel_C.OnNormalAimBtn
+// (BlueprintCallable, BlueprintEvent)
+
+void UShootingUIPanel_C::OnNormalAimBtn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ShootingUIPanel_C", "OnNormalAimBtn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShootingUIPanel.ShootingUIPanel_C.OnPeekRightEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UShootingUIPanel_C::OnPeekRightEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ShootingUIPanel_C", "OnPeekRightEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShootingUIPanel.ShootingUIPanel_C.OnDisablePeekEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UShootingUIPanel_C::OnDisablePeekEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ShootingUIPanel_C", "OnDisablePeekEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShootingUIPanel.ShootingUIPanel_C.OnPeekLeftEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UShootingUIPanel_C::OnPeekLeftEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ShootingUIPanel_C", "OnPeekLeftEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShootingUIPanel.ShootingUIPanel_C.OnUpdatePlayerBreathAmmount
+// (BlueprintCallable, BlueprintEvent)
+
+void UShootingUIPanel_C::OnUpdatePlayerBreathAmmount()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ShootingUIPanel_C", "OnUpdatePlayerBreathAmmount");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShootingUIPanel.ShootingUIPanel_C.OnActiveSprint
+// (BlueprintCallable, BlueprintEvent)
+
+void UShootingUIPanel_C::OnActiveSprint()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ShootingUIPanel_C", "OnActiveSprint");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShootingUIPanel.ShootingUIPanel_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UShootingUIPanel_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ShootingUIPanel_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShootingUIPanel.ShootingUIPanel_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UShootingUIPanel_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ShootingUIPanel_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ShootingUIPanel.ShootingUIPanel_C.InitDeathMatch
 // (BlueprintCallable, BlueprintEvent)
 
@@ -3876,6 +4072,20 @@ void UShootingUIPanel_C::SetStateThrowGrenade()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("ShootingUIPanel_C", "SetStateThrowGrenade");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShootingUIPanel.ShootingUIPanel_C.InitAttachmentImagePathDict
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UShootingUIPanel_C::InitAttachmentImagePathDict()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ShootingUIPanel_C", "InitAttachmentImagePathDict");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

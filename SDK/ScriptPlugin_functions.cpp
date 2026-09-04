@@ -17,6 +17,31 @@
 namespace SDK
 {
 
+// Function ScriptPlugin.ScriptContext.CallScriptFunction
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    FunctionName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UScriptContext::CallScriptFunction(const class FString& FunctionName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ScriptContext", "CallScriptFunction");
+
+	Params::ScriptContext_CallScriptFunction Parms{};
+
+	Parms.FunctionName = std::move(FunctionName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function ScriptPlugin.ScriptContextComponent.CallScriptFunction
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -145,31 +170,6 @@ void UScriptContextComponent::PushOneScriptPropertyValues(const class FString& P
 	Params::ScriptContextComponent_PushOneScriptPropertyValues Parms{};
 
 	Parms.ParamName = std::move(ParamName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ScriptPlugin.ScriptContext.CallScriptFunction
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    FunctionName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UScriptContext::CallScriptFunction(const class FString& FunctionName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("ScriptContext", "CallScriptFunction");
-
-	Params::ScriptContext_CallScriptFunction Parms{};
-
-	Parms.FunctionName = std::move(FunctionName);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

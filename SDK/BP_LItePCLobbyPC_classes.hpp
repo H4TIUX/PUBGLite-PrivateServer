@@ -18,17 +18,18 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_LItePCLobbyPC.BP_LitePCLobbyPC_C
-// 0x0010 (0x0950 - 0x0940)
+// 0x0010 (0x0948 - 0x0938)
 class ABP_LitePCLobbyPC_C final : public ALPCEntryPlayerController
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0940(0x0008)(Transient, DuplicateTransient)
-	class UGVoiceInterface*                       GVoice;                                            // 0x0948(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0938(0x0008)(Transient, DuplicateTransient)
+	class UGVoiceInterface*                       GVoice;                                            // 0x0940(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_LitePCLobbyPC(int32 EntryPoint);
 	void LobbyMemberVoice(int32 Member, int32 State);
 	void ReceiveBeginPlay();
+	void InpActEvt_H_K2Node_InputKeyEvent_1(const struct FKey& Key);
 	void InpActEvt_TakeScreenshot_K2Node_InputActionEvent_6(const struct FKey& Key);
 	void InpActEvt_ToggleMuteMasterVolume_K2Node_InputActionEvent_7(const struct FKey& Key);
 	void InpActEvt_ToggleMuteVoiceChat_K2Node_InputActionEvent_8(const struct FKey& Key);

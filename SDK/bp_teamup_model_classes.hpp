@@ -10,68 +10,68 @@
 
 #include "Basic.hpp"
 
-#include "BP_STRUCT_ListItemInfo_structs.hpp"
 #include "BP_STRUCT_TeamUpModelInfo_structs.hpp"
+#include "BP_STRUCT_ListItemInfo_structs.hpp"
+#include "Client_classes.hpp"
 #include "BP_STRUCT_ItemPerspective_structs.hpp"
 #include "BP_STRUCT_CurSelectedModelInfo_structs.hpp"
-#include "Client_classes.hpp"
 
 
 namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_teamup_model.bp_teamup_model_C
-// 0x01B0 (0x0598 - 0x03E8)
+// 0x01B0 (0x0588 - 0x03D8)
 class Abp_teamup_model_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FBP_STRUCT_ListItemInfo                BP_STRUCT_ListItemInfo;                            // 0x03F0(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_TeamUpModel_PlayerNum;                          // 0x0410(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_414[0x4];                                      // 0x0414(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_TeamUpModelInfo             BP_STRUCT_TeamUpModelInfo;                         // 0x0418(0x0080)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_TeamUpModel_SelectModelType;                    // 0x0498(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49C[0x4];                                      // 0x049C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_Teamup_CurMapName_Before;                       // 0x04A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_ListItemInfo>        BP_ARRAY_ListItemInfoList;                         // 0x04B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FBP_STRUCT_ItemPerspective>     BP_ARRAY_ListPerspective;                          // 0x04C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class FString                                 BP_Teamup_CurMapName;                              // 0x04D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_ItemPerspective             BP_STRUCT_ItemPerspective;                         // 0x04E0(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_TeamUpModel_Perspective;                        // 0x04F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FC[0x4];                                      // 0x04FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_CurSelectedModelInfo        BP_STRUCT_CurSelectedModelInfo;                    // 0x0500(0x0078)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_TeamUpModelInfo>     BP_ARRAY_TeamUpModelInfoList;                      // 0x0578(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_TeamUpModel_AutoMatch;                          // 0x0588(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         BP_Teamup_Show_NewteachingGuide : 1;               // 0x058C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_58D[0x3];                                      // 0x058D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0590(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_TeamUpModelInfo             BP_STRUCT_TeamUpModelInfo;                         // 0x03E0(0x0080)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_ListItemInfo>        BP_ARRAY_ListItemInfoList;                         // 0x0460(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class FString                                 BP_Teamup_CurMapName;                              // 0x0470(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_ItemPerspective>     BP_ARRAY_ListPerspective;                          // 0x0480(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_TeamUpModel_PlayerNum;                          // 0x0490(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_494[0x4];                                      // 0x0494(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_TeamUpModelInfo>     BP_ARRAY_TeamUpModelInfoList;                      // 0x0498(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	struct FBP_STRUCT_ItemPerspective             BP_STRUCT_ItemPerspective;                         // 0x04A8(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	uint8                                         BP_Teamup_Show_NewteachingGuide : 1;               // 0x04C0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_4C1[0x3];                                      // 0x04C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BP_TeamUpModel_AutoMatch;                          // 0x04C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 BP_Teamup_CurMapName_Before;                       // 0x04C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_TeamUpModel_SelectModelType;                    // 0x04D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4DC[0x4];                                      // 0x04DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_CurSelectedModelInfo        BP_STRUCT_CurSelectedModelInfo;                    // 0x04E0(0x0078)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FBP_STRUCT_ListItemInfo                BP_STRUCT_ListItemInfo;                            // 0x0558(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_TeamUpModel_Perspective;                        // 0x0578(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_57C[0x4];                                      // 0x057C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0580(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventSetHasGuideNewteaching_BAK();
-	void EventSetHasGuideNewteaching_BAK_NoFetch();
 	void EventClickAutoMatch_Push();
 	void EventClickAutoMatch_Push_NoFetch();
-	void EventClickListItem_Push();
-	void EventClickListItem_Push_NoFetch();
-	void EventClickTeach_BAK_Push();
-	void EventClickTeach_BAK_Push_NoFetch();
 	void EventClickTraining_BAK_Push();
 	void EventClickTraining_BAK_Push_NoFetch();
-	void EventClickRoom_Push();
-	void EventClickRoom_Push_NoFetch();
-	void EventAutoSelectSolo_Push();
-	void EventAutoSelectSolo_Push_NoFetch();
-	void EventFetchInfo();
-	void EventFetchInfo_NoFetch();
-	void EventClickMapList_Push();
-	void EventClickMapList_Push_NoFetch();
-	void EventClickPlayerNum_Push();
-	void EventClickPlayerNum_Push_NoFetch();
-	void EventClickModel_Push();
-	void EventClickModel_Push_NoFetch();
 	void EventClickPerspective_Push();
 	void EventClickPerspective_Push_NoFetch();
+	void EventClickTeach_BAK_Push();
+	void EventClickTeach_BAK_Push_NoFetch();
+	void EventFetchInfo();
+	void EventFetchInfo_NoFetch();
+	void EventClickModel_Push();
+	void EventClickModel_Push_NoFetch();
+	void EventClickPlayerNum_Push();
+	void EventClickPlayerNum_Push_NoFetch();
+	void EventClickRoom_Push();
+	void EventClickRoom_Push_NoFetch();
+	void EventClickListItem_Push();
+	void EventClickListItem_Push_NoFetch();
+	void EventAutoSelectSolo_Push();
+	void EventAutoSelectSolo_Push_NoFetch();
+	void EventClickMapList_Push();
+	void EventClickMapList_Push_NoFetch();
+	void EventSetHasGuideNewteaching_BAK();
+	void EventSetHasGuideNewteaching_BAK_NoFetch();
 
 public:
 	static class UClass* StaticClass()

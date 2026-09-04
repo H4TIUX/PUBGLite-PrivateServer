@@ -10,25 +10,25 @@
 
 #include "Basic.hpp"
 
-#include "BP_STRUCT_EightDayNewUI_Info_structs.hpp"
 #include "Client_classes.hpp"
+#include "BP_STRUCT_EightDayNewUI_Info_structs.hpp"
 
 
 namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_eightday_new.bp_eightday_new_C
-// 0x0088 (0x0470 - 0x03E8)
+// 0x0088 (0x0460 - 0x03D8)
 class Abp_eightday_new_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	int32                                         BP_STRUCT_EightDayNewUI_SignUpDay;                 // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F4[0x4];                                      // 0x03F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_EightDayNewUI_Info>  BP_ARRAY_EightDayNewUI_ItemList;                   // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class FString                                 BP_String_EightDayNewUI_ActiveTime;                // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_EightDayNewUI_Info          BP_STRUCT_EightDayNewUI_Info;                      // 0x0418(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_EightDayNewUI_Info          BP_STRUCT_EightDayNewUI_Info;                      // 0x03E0(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_EightDayNewUI_Info>  BP_ARRAY_EightDayNewUI_ItemList;                   // 0x0430(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_STRUCT_EightDayNewUI_SignUpDay;                 // 0x0440(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_444[0x4];                                      // 0x0444(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_String_EightDayNewUI_ActiveTime;                // 0x0448(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0458(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();

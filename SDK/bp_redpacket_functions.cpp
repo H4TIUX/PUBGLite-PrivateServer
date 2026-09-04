@@ -30,34 +30,6 @@ void Abp_redpacket_C::UserConstructionScript()
 }
 
 
-// Function bp_redpacket.bp_redpacket_C.EventRedPacketFetchInfo
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_redpacket_C::EventRedPacketFetchInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_redpacket_C", "EventRedPacketFetchInfo");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_redpacket.bp_redpacket_C.EventRedPacketFetchInfo_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_redpacket_C::EventRedPacketFetchInfo_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_redpacket_C", "EventRedPacketFetchInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_redpacket.bp_redpacket_C.EventClickRedPacketRuleBtn
 // (BlueprintCallable, BlueprintEvent)
 
@@ -109,6 +81,34 @@ void Abp_redpacket_C::EventRedPacket_Push_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_redpacket_C", "EventRedPacket_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_redpacket.bp_redpacket_C.EventRedPacketFetchInfo
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_redpacket_C::EventRedPacketFetchInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_redpacket_C", "EventRedPacketFetchInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_redpacket.bp_redpacket_C.EventRedPacketFetchInfo_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_redpacket_C::EventRedPacketFetchInfo_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_redpacket_C", "EventRedPacketFetchInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

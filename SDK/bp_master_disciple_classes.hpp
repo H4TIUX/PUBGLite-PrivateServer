@@ -18,55 +18,56 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_master_disciple.bp_master_disciple_C
-// 0x02F8 (0x06E0 - 0x03E8)
+// 0x0300 (0x06D8 - 0x03D8)
 class Abp_master_disciple_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_MasterFriendProfile> BP_ARRAY_RecommendDiscipleList;                    // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class FString                                 BP_MasterDisciple_TitleText_RecommendMaster;       // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_MasterFriendProfile> BP_ARRAY_ServerRecommendList;                      // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class FString                                 BP_MasterDisciple_ApplyToTeacherDefaultMsg;        // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_MasterDisciple_TitleText_RecommendDisciple;     // 0x0430(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_MasterDisciple_ApplyToDiscipleDefaultMsg;       // 0x0440(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_MasterDisciple_Recommend_Search;                // 0x0450(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_MasterDisciple_Empty_Disciple;                  // 0x0460(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_MasterDisciple_InputString;                     // 0x0470(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_MasterDisciple_SelfUID;                         // 0x0480(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_MasterDisciple_Empty_Master;                    // 0x0490(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_MasterDisciple_ClickPlayerId;                   // 0x04A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_MasterDisciple_FriendPlatform;                  // 0x04B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B4[0x4];                                      // 0x04B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_MasterDisciple_SegmentPostFix;                  // 0x04B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_MasterFriendProfile         BP_STRUCT_MasterFriendProfile;                     // 0x04C8(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_MasterDisciple_RecommendType;                   // 0x0678(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_67C[0x4];                                      // 0x067C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBP_STRUCT_MasterFriendProfile> BP_ARRAY_RecommendMasterList;                      // 0x0680(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FBP_STRUCT_MasterFriendProfile> BP_ARRAY_MasterDiscipleSearchList;                 // 0x0690(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class FString                                 BP_MasterDisciple_Recommend_Master;                // 0x06A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_MasterDisciple_Empty_Search;                    // 0x06B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_MasterDisciple_ClickPlayerGender;               // 0x06C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         BP_MasterDisciple_ShowSearch : 1;                  // 0x06C4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_6C5[0x3];                                      // 0x06C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_MasterDisciple_Recommend_Disciple;              // 0x06C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x06D8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	int32                                         BP_MasterDisciple_FriendPlatform;                  // 0x03E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E4[0x4];                                      // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_MasterDisciple_TitleText_RecommendDisciple;     // 0x03E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_MasterDisciple_TitleText_RecommendMaster;       // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_MasterDisciple_Recommend_Search;                // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_MasterDisciple_Empty_Search;                    // 0x0418(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_MasterDisciple_Recommend_Master;                // 0x0428(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         BP_MasterDisciple_ShowSearch : 1;                  // 0x0438(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_439[0x7];                                      // 0x0439(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_MasterDisciple_Empty_Master;                    // 0x0440(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_MasterFriendProfile> BP_ARRAY_RecommendDiscipleList;                    // 0x0450(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class FString                                 BP_MasterDisciple_InputString;                     // 0x0460(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_MasterDisciple_SegmentPostFix;                  // 0x0470(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_MasterFriendProfile> BP_ARRAY_MasterDiscipleSearchList;                 // 0x0480(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class FString                                 BP_MasterDisciple_ApplyToTeacherDefaultMsg;        // 0x0490(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_MasterFriendProfile> BP_ARRAY_ServerRecommendList;                      // 0x04A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class FString                                 BP_MasterDisciple_Empty_Disciple;                  // 0x04B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_MasterDisciple_Recommend_Disciple;              // 0x04C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_MasterDisciple_RecommendType;                   // 0x04D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4D4[0x4];                                      // 0x04D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBP_STRUCT_MasterFriendProfile> BP_ARRAY_RecommendMasterList;                      // 0x04D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class FString                                 BP_MasterDisciple_SelfUID;                         // 0x04E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	struct FBP_STRUCT_MasterFriendProfile         BP_STRUCT_MasterFriendProfile;                     // 0x04F8(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_MasterDisciple_ClickPlayerGender;               // 0x06A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6AC[0x4];                                      // 0x06AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_MasterDisciple_ClickPlayerId;                   // 0x06B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_MasterDisciple_ApplyToDiscipleDefaultMsg;       // 0x06C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x06D0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventClickMasterDiscipleApply();
-	void EventClickMasterDiscipleApply_NoFetch();
 	void EventMasterDiscipleCommentCheck();
 	void EventMasterDiscipleCommentCheck_NoFetch();
-	void EventMasterDiscipleShowSendAddFriendRequestTips();
-	void EventMasterDiscipleShowSendAddFriendRequestTips_NoFetch();
 	void EventClickMasterDiscipleAddFriend();
 	void EventClickMasterDiscipleAddFriend_NoFetch();
+	void EventMasterDiscipleShowSendAddFriendRequestTips();
+	void EventMasterDiscipleShowSendAddFriendRequestTips_NoFetch();
+	void EventClickMasterDiscipleSearch();
+	void EventClickMasterDiscipleSearch_NoFetch();
+	void EventClickMasterDiscipleApply();
+	void EventClickMasterDiscipleApply_NoFetch();
 	void EventClickMasterDiscipleHead();
 	void EventClickMasterDiscipleHead_NoFetch();
 	void EventClickMasterDiscipleOpenSearch();
 	void EventClickMasterDiscipleOpenSearch_NoFetch();
-	void EventClickMasterDiscipleSearch();
-	void EventClickMasterDiscipleSearch_NoFetch();
 	void EventFetchInfo();
 	void EventFetchInfo_NoFetch();
 

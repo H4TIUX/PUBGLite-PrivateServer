@@ -30,57 +30,29 @@ void Abp_market_buy_single_C::UserConstructionScript()
 }
 
 
-// Function bp_market_buy_single.bp_market_buy_single_C.EventMarketBuySingleCheckBoxStateChanged
+// Function bp_market_buy_single.bp_market_buy_single_C.EventMarketBuySingleUIOnGift
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_market_buy_single_C::EventMarketBuySingleCheckBoxStateChanged()
+void Abp_market_buy_single_C::EventMarketBuySingleUIOnGift()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_buy_single_C", "EventMarketBuySingleCheckBoxStateChanged");
+		Func = GetClass()->GetFunction("bp_market_buy_single_C", "EventMarketBuySingleUIOnGift");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_market_buy_single.bp_market_buy_single_C.EventMarketBuySingleCheckBoxStateChanged_NoFetch
+// Function bp_market_buy_single.bp_market_buy_single_C.EventMarketBuySingleUIOnGift_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_market_buy_single_C::EventMarketBuySingleCheckBoxStateChanged_NoFetch()
+void Abp_market_buy_single_C::EventMarketBuySingleUIOnGift_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_buy_single_C", "EventMarketBuySingleCheckBoxStateChanged_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_market_buy_single.bp_market_buy_single_C.EventMarketBuySingleUIOnDisableBuy
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_market_buy_single_C::EventMarketBuySingleUIOnDisableBuy()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_buy_single_C", "EventMarketBuySingleUIOnDisableBuy");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_market_buy_single.bp_market_buy_single_C.EventMarketBuySingleUIOnDisableBuy_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_market_buy_single_C::EventMarketBuySingleUIOnDisableBuy_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_buy_single_C", "EventMarketBuySingleUIOnDisableBuy_NoFetch");
+		Func = GetClass()->GetFunction("bp_market_buy_single_C", "EventMarketBuySingleUIOnGift_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -109,6 +81,62 @@ void Abp_market_buy_single_C::EventMarketBuySingleUIOnAddTen_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_market_buy_single_C", "EventMarketBuySingleUIOnAddTen_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_market_buy_single.bp_market_buy_single_C.EventMarketBuySingleUIOnSub
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_market_buy_single_C::EventMarketBuySingleUIOnSub()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_market_buy_single_C", "EventMarketBuySingleUIOnSub");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_market_buy_single.bp_market_buy_single_C.EventMarketBuySingleUIOnSub_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_market_buy_single_C::EventMarketBuySingleUIOnSub_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_market_buy_single_C", "EventMarketBuySingleUIOnSub_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_market_buy_single.bp_market_buy_single_C.EventMarketBuySingleCheckBoxStateChanged
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_market_buy_single_C::EventMarketBuySingleCheckBoxStateChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_market_buy_single_C", "EventMarketBuySingleCheckBoxStateChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_market_buy_single.bp_market_buy_single_C.EventMarketBuySingleCheckBoxStateChanged_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_market_buy_single_C::EventMarketBuySingleCheckBoxStateChanged_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_market_buy_single_C", "EventMarketBuySingleCheckBoxStateChanged_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -170,6 +198,34 @@ void Abp_market_buy_single_C::EventMarketBuySingleUIOnAdd_NoFetch()
 }
 
 
+// Function bp_market_buy_single.bp_market_buy_single_C.EventMarketBuySingleUIOnDisableBuy
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_market_buy_single_C::EventMarketBuySingleUIOnDisableBuy()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_market_buy_single_C", "EventMarketBuySingleUIOnDisableBuy");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_market_buy_single.bp_market_buy_single_C.EventMarketBuySingleUIOnDisableBuy_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_market_buy_single_C::EventMarketBuySingleUIOnDisableBuy_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_market_buy_single_C", "EventMarketBuySingleUIOnDisableBuy_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_market_buy_single.bp_market_buy_single_C.EventMarketBuySingleUIClose
 // (BlueprintCallable, BlueprintEvent)
 
@@ -221,62 +277,6 @@ void Abp_market_buy_single_C::EventMarketBuySingleUIOnBuy_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_market_buy_single_C", "EventMarketBuySingleUIOnBuy_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_market_buy_single.bp_market_buy_single_C.EventMarketBuySingleUIOnSub
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_market_buy_single_C::EventMarketBuySingleUIOnSub()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_buy_single_C", "EventMarketBuySingleUIOnSub");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_market_buy_single.bp_market_buy_single_C.EventMarketBuySingleUIOnSub_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_market_buy_single_C::EventMarketBuySingleUIOnSub_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_buy_single_C", "EventMarketBuySingleUIOnSub_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_market_buy_single.bp_market_buy_single_C.EventMarketBuySingleUIOnGift
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_market_buy_single_C::EventMarketBuySingleUIOnGift()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_buy_single_C", "EventMarketBuySingleUIOnGift");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_market_buy_single.bp_market_buy_single_C.EventMarketBuySingleUIOnGift_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_market_buy_single_C::EventMarketBuySingleUIOnGift_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_buy_single_C", "EventMarketBuySingleUIOnGift_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

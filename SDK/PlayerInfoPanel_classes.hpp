@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UnrealArchExt_classes.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK
@@ -60,6 +60,7 @@ public:
 
 public:
 	void ExecuteUbergraph_PlayerInfoPanel(int32 EntryPoint);
+	void Construct();
 	void OnMatchSessionChange();
 	void ResetUIStateAfterRespawn();
 	void OnRecoveryStart();

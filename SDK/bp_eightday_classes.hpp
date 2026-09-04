@@ -19,31 +19,31 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_eightday.bp_eightday_C
-// 0x00C8 (0x04B0 - 0x03E8)
+// 0x00C8 (0x04A0 - 0x03D8)
 class Abp_eightday_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FBP_STRUCT_BetterAwardInfo             BP_STRUCT_BetterAwardInfo;                         // 0x03F0(0x0048)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_EightDayUI_Info>     BP_ARRAY_EightDay_Items;                           // 0x0438(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	int32                                         BP_Request_EightDay_day;                           // 0x0448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44C[0x4];                                      // 0x044C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_String_EightDay_ActiveTime;                     // 0x0450(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_EightDayUI_Info             BP_STRUCT_EightDayUI_Info;                         // 0x0460(0x0048)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04A8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_BetterAwardInfo             BP_STRUCT_BetterAwardInfo;                         // 0x03E0(0x0048)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class FString                                 BP_String_EightDay_ActiveTime;                     // 0x0428(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_Request_EightDay_day;                           // 0x0438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_43C[0x4];                                      // 0x043C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_EightDayUI_Info             BP_STRUCT_EightDayUI_Info;                         // 0x0440(0x0048)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_EightDayUI_Info>     BP_ARRAY_EightDay_Items;                           // 0x0488(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventEightDayUpdateUI();
-	void EventEightDayUpdateUI_NoFetch();
-	void EventEightDayHideUI();
-	void EventEightDayHideUI_NoFetch();
-	void EventFetchInfo();
-	void EventFetchInfo_NoFetch();
-	void EventEightDaySignUpReq_Push();
-	void EventEightDaySignUpReq_Push_NoFetch();
 	void EventEightDaySignUpReq();
 	void EventEightDaySignUpReq_NoFetch();
+	void EventEightDayHideUI();
+	void EventEightDayHideUI_NoFetch();
+	void EventEightDaySignUpReq_Push();
+	void EventEightDaySignUpReq_Push_NoFetch();
+	void EventEightDayUpdateUI();
+	void EventEightDayUpdateUI_NoFetch();
+	void EventFetchInfo();
+	void EventFetchInfo_NoFetch();
 
 public:
 	static class UClass* StaticClass()

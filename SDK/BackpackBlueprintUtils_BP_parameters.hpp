@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "BP_STRUCT_AvatarBPTable_type_structs.hpp"
-#include "Basic_structs.hpp"
-#include "ShadowTrackerExtra_structs.hpp"
-#include "Gameplay_structs.hpp"
 #include "BP_STRUCT_BackpackMapping_type_structs.hpp"
-#include "BP_STRUCT_WeaponBPTable_type_structs.hpp"
+#include "Basic_structs.hpp"
 #include "BP_STRUCT_Item_type_structs.hpp"
+#include "BP_STRUCT_AvatarBPTable_type_structs.hpp"
+#include "Gameplay_structs.hpp"
+#include "ShadowTrackerExtra_structs.hpp"
+#include "BP_STRUCT_WeaponBPTable_type_structs.hpp"
 #include "BP_STRUCT_WeaponAttachments_type_structs.hpp"
 #include "BP_STRUCT_BattleText_type_structs.hpp"
 
@@ -50,15 +50,15 @@ public:
 };
 
 // Function BackpackBlueprintUtils_BP.BackpackBlueprintUtils_BP_C.GetCharacterVirtualItemInBackpack
-// 0x0170 (0x0170 - 0x0000)
+// 0x0160 (0x0160 - 0x0000)
 struct BackpackBlueprintUtils_BP_C_GetCharacterVirtualItemInBackpack final
 {
 public:
 	class UBackpackComponent*                     BackpackComp;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FBattleItemData                        ReturnValue;                                       // 0x0008(0x00A0)(Parm, OutParm, ReturnParm)
-	struct FItemDefineID                          K2Node_MakeStruct_ItemDefineID;                    // 0x00A8(0x0018)(NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBattleItemData>                CallFunc_GetItemListByDefineID_ReturnValue;        // 0x00C0(0x0010)(ZeroConstructor, ReferenceParm)
-	struct FBattleItemData                        CallFunc_Array_Get_Item;                           // 0x00D0(0x00A0)()
+	struct FBattleItemData                        ReturnValue;                                       // 0x0008(0x0098)(Parm, OutParm, ReturnParm)
+	struct FItemDefineID                          K2Node_MakeStruct_ItemDefineID;                    // 0x00A0(0x0018)(NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBattleItemData>                CallFunc_GetItemListByDefineID_ReturnValue;        // 0x00B8(0x0010)(ZeroConstructor, ReferenceParm)
+	struct FBattleItemData                        CallFunc_Array_Get_Item;                           // 0x00C8(0x0098)()
 };
 
 // Function BackpackBlueprintUtils_BP.BackpackBlueprintUtils_BP_C.GetItemSubTypeID
@@ -273,33 +273,33 @@ public:
 };
 
 // Function BackpackBlueprintUtils_BP.BackpackBlueprintUtils_BP_C.ConstructBattleItemDataByDefineID
-// 0x03D0 (0x03D0 - 0x0000)
+// 0x03C0 (0x03C0 - 0x0000)
 struct BackpackBlueprintUtils_BP_C_ConstructBattleItemDataByDefineID final
 {
 public:
 	struct FItemDefineID                          DefineID;                                          // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-	struct FBattleItemData                        ReturnValue;                                       // 0x0018(0x00A0)(Parm, OutParm, ReturnParm)
-	struct FBattleItemFeatureData                 CallFunc_GetBattleItemFeatureData_FeatureData;     // 0x00B8(0x0018)(NoDestructor)
-	struct FBP_STRUCT_Item_type                   CallFunc_GetItemTableRowByItemTableID_ItemTableRow; // 0x00D0(0x0240)(HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0310(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue2;           // 0x0320(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FBattleItemData                        K2Node_MakeStruct_BattleItemData;                  // 0x0330(0x00A0)()
+	struct FBattleItemData                        ReturnValue;                                       // 0x0018(0x0098)(Parm, OutParm, ReturnParm)
+	struct FBattleItemFeatureData                 CallFunc_GetBattleItemFeatureData_FeatureData;     // 0x00B0(0x0018)(NoDestructor)
+	struct FBP_STRUCT_Item_type                   CallFunc_GetItemTableRowByItemTableID_ItemTableRow; // 0x00C8(0x0240)(HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0308(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue2;           // 0x0318(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FBattleItemData                        K2Node_MakeStruct_BattleItemData;                  // 0x0328(0x0098)()
 };
 
 // Function BackpackBlueprintUtils_BP.BackpackBlueprintUtils_BP_C.ConstructBattleItemDataByItemTableID
-// 0x03D8 (0x03D8 - 0x0000)
+// 0x03C8 (0x03C8 - 0x0000)
 struct BackpackBlueprintUtils_BP_C_ConstructBattleItemDataByItemTableID final
 {
 public:
 	int32                                         ItemTableID;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBattleItemData                        ReturnValue;                                       // 0x0008(0x00A0)(Parm, OutParm, ReturnParm)
-	struct FBP_STRUCT_Item_type                   CallFunc_GetItemTableRowByItemTableID_ItemTableRow; // 0x00A8(0x0240)(HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x02E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue2;           // 0x02F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FItemDefineID                          K2Node_MakeStruct_ItemDefineID;                    // 0x0308(0x0018)(NoDestructor, HasGetValueTypeHash)
-	struct FBattleItemFeatureData                 CallFunc_GetBattleItemFeatureData_FeatureData;     // 0x0320(0x0018)(NoDestructor)
-	struct FBattleItemData                        K2Node_MakeStruct_BattleItemData;                  // 0x0338(0x00A0)()
+	struct FBattleItemData                        ReturnValue;                                       // 0x0008(0x0098)(Parm, OutParm, ReturnParm)
+	struct FBP_STRUCT_Item_type                   CallFunc_GetItemTableRowByItemTableID_ItemTableRow; // 0x00A0(0x0240)(HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x02E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue2;           // 0x02F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FItemDefineID                          K2Node_MakeStruct_ItemDefineID;                    // 0x0300(0x0018)(NoDestructor, HasGetValueTypeHash)
+	struct FBattleItemFeatureData                 CallFunc_GetBattleItemFeatureData_FeatureData;     // 0x0318(0x0018)(NoDestructor)
+	struct FBattleItemData                        K2Node_MakeStruct_BattleItemData;                  // 0x0330(0x0098)()
 };
 
 // Function BackpackBlueprintUtils_BP.BackpackBlueprintUtils_BP_C.CreateBattleItemHandle
@@ -404,13 +404,13 @@ public:
 };
 
 // Function BackpackBlueprintUtils_BP.BackpackBlueprintUtils_BP_C.IsVirtualItemData
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x00A0 (0x00A0 - 0x0000)
 struct BackpackBlueprintUtils_BP_C_IsVirtualItemData final
 {
 public:
-	struct FBattleItemData                        ItemData;                                          // 0x0000(0x00A0)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	uint8                                         ReturnValue : 1;                                   // 0x00A0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_Greater_IntInt_ReturnValue : 1;           // 0x00A1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	struct FBattleItemData                        ItemData;                                          // 0x0000(0x0098)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	uint8                                         ReturnValue : 1;                                   // 0x0098(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_Greater_IntInt_ReturnValue : 1;           // 0x0099(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 };
 
 // Function BackpackBlueprintUtils_BP.BackpackBlueprintUtils_BP_C.GenerateItemDefineIDByItemTableID
@@ -448,6 +448,16 @@ public:
 	class FString                                 CallFunc_GetBPTableName_BPTableName;               // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	struct FBP_STRUCT_Item_type                   CallFunc_GetItemTableRowByItemTableID_ItemTableRow; // 0x0040(0x0240)(HasGetValueTypeHash)
 	class FString                                 CallFunc_GetPath_ReturnValue;                      // 0x0280(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+};
+
+// Function BackpackBlueprintUtils_BP.BackpackBlueprintUtils_BP_C.GetBattleWeaponItemNameTextByDefineID
+// 0x0270 (0x0270 - 0x0000)
+struct BackpackBlueprintUtils_BP_C_GetBattleWeaponItemNameTextByDefineID final
+{
+public:
+	struct FItemDefineID                          DefineID;                                          // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm)
+	struct FBP_STRUCT_Item_type                   CallFunc_GetItemTableRowByItemTableID_ItemTableRow; // 0x0030(0x0240)(HasGetValueTypeHash)
 };
 
 }

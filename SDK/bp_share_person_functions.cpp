@@ -30,34 +30,6 @@ void Abp_share_person_C::UserConstructionScript()
 }
 
 
-// Function bp_share_person.bp_share_person_C.EventPersonWXZoneBtn
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_person_C::EventPersonWXZoneBtn()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_person_C", "EventPersonWXZoneBtn");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_person.bp_share_person_C.EventPersonWXZoneBtn_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_person_C::EventPersonWXZoneBtn_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_person_C", "EventPersonWXZoneBtn_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_share_person.bp_share_person_C.EventPersonQQFrientBtn
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,90 +53,6 @@ void Abp_share_person_C::EventPersonQQFrientBtn_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_share_person_C", "EventPersonQQFrientBtn_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_person.bp_share_person_C.EventPersonWXFrientBtn
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_person_C::EventPersonWXFrientBtn()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_person_C", "EventPersonWXFrientBtn");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_person.bp_share_person_C.EventPersonWXFrientBtn_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_person_C::EventPersonWXFrientBtn_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_person_C", "EventPersonWXFrientBtn_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_person.bp_share_person_C.EventPersonQQZoneBtn
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_person_C::EventPersonQQZoneBtn()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_person_C", "EventPersonQQZoneBtn");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_person.bp_share_person_C.EventPersonQQZoneBtn_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_person_C::EventPersonQQZoneBtn_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_person_C", "EventPersonQQZoneBtn_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_person.bp_share_person_C.EventHideUI
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_person_C::EventHideUI()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_person_C", "EventHideUI");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_share_person.bp_share_person_C.EventHideUI_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_share_person_C::EventHideUI_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_share_person_C", "EventHideUI_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -198,6 +86,34 @@ void Abp_share_person_C::EventSharePerson_Push_NoFetch()
 }
 
 
+// Function bp_share_person.bp_share_person_C.EventPersonWXFrientBtn
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_person_C::EventPersonWXFrientBtn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_person_C", "EventPersonWXFrientBtn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_person.bp_share_person_C.EventPersonWXFrientBtn_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_person_C::EventPersonWXFrientBtn_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_person_C", "EventPersonWXFrientBtn_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_share_person.bp_share_person_C.EventSharePersonFetchInfo
 // (BlueprintCallable, BlueprintEvent)
 
@@ -221,6 +137,90 @@ void Abp_share_person_C::EventSharePersonFetchInfo_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_share_person_C", "EventSharePersonFetchInfo_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_person.bp_share_person_C.EventHideUI
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_person_C::EventHideUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_person_C", "EventHideUI");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_person.bp_share_person_C.EventHideUI_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_person_C::EventHideUI_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_person_C", "EventHideUI_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_person.bp_share_person_C.EventPersonWXZoneBtn
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_person_C::EventPersonWXZoneBtn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_person_C", "EventPersonWXZoneBtn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_person.bp_share_person_C.EventPersonWXZoneBtn_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_person_C::EventPersonWXZoneBtn_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_person_C", "EventPersonWXZoneBtn_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_person.bp_share_person_C.EventPersonQQZoneBtn
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_person_C::EventPersonQQZoneBtn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_person_C", "EventPersonQQZoneBtn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_share_person.bp_share_person_C.EventPersonQQZoneBtn_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_share_person_C::EventPersonQQZoneBtn_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_share_person_C", "EventPersonQQZoneBtn_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

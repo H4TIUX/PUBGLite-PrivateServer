@@ -30,34 +30,6 @@ void Abp_corps_appoint_C::UserConstructionScript()
 }
 
 
-// Function bp_corps_appoint.bp_corps_appoint_C.EventCorpsAppointOnClickClose
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_appoint_C::EventCorpsAppointOnClickClose()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_appoint_C", "EventCorpsAppointOnClickClose");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_appoint.bp_corps_appoint_C.EventCorpsAppointOnClickClose_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_appoint_C::EventCorpsAppointOnClickClose_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_appoint_C", "EventCorpsAppointOnClickClose_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_corps_appoint.bp_corps_appoint_C.EventCorpsAppointOnClickConfirm
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,6 +53,34 @@ void Abp_corps_appoint_C::EventCorpsAppointOnClickConfirm_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_corps_appoint_C", "EventCorpsAppointOnClickConfirm_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_appoint.bp_corps_appoint_C.EventCorpsAppointOnClickClose
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_appoint_C::EventCorpsAppointOnClickClose()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_appoint_C", "EventCorpsAppointOnClickClose");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_appoint.bp_corps_appoint_C.EventCorpsAppointOnClickClose_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_appoint_C::EventCorpsAppointOnClickClose_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_appoint_C", "EventCorpsAppointOnClickClose_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

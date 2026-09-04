@@ -17,27 +17,27 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_share_cjhb.bp_share_cjhb_C
-// 0x0038 (0x0420 - 0x03E8)
+// 0x0038 (0x0410 - 0x03D8)
 class Abp_share_cjhb_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	class FString                                 BP_CJHBRoomId;                                     // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_CJHB_DelayShowTime;                             // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_404[0x4];                                      // 0x0404(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_CJHBRemainNum;                                  // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0418(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class FString                                 BP_CJHBRoomId;                                     // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_CJHB_DelayShowTime;                             // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3F4[0x4];                                      // 0x03F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_CJHBRemainNum;                                  // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0408(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventClickShareCJBtn();
-	void EventClickShareCJBtn_NoFetch();
-	void EventShareCJFinaly_Push();
-	void EventShareCJFinaly_Push_NoFetch();
 	void EventHideCJUI();
 	void EventHideCJUI_NoFetch();
 	void EventShareCJFinalyFetchInfo();
 	void EventShareCJFinalyFetchInfo_NoFetch();
+	void EventClickShareCJBtn();
+	void EventClickShareCJBtn_NoFetch();
+	void EventShareCJFinaly_Push();
+	void EventShareCJFinaly_Push_NoFetch();
 
 public:
 	static class UClass* StaticClass()

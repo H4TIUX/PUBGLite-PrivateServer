@@ -18,31 +18,31 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_share_exciting_party.bp_share_exciting_party_C
-// 0x0038 (0x0420 - 0x03E8)
+// 0x0038 (0x0410 - 0x03D8)
 class Abp_share_exciting_party_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	class FString                                 BP_ShareExcitingPartyPath;                         // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_ShareExcitingPartyInfo      BP_STRUCT_ShareExcitingPartyInfo;                  // 0x0400(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0418(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_ShareExcitingPartyInfo      BP_STRUCT_ShareExcitingPartyInfo;                  // 0x03E0(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class FString                                 BP_ShareExcitingPartyPath;                         // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0408(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventShareExcitingParty_Push();
-	void EventShareExcitingParty_Push_NoFetch();
-	void EventExcitingPartyWXZoneBtn();
-	void EventExcitingPartyWXZoneBtn_NoFetch();
 	void EventExcitingPartyWXFriendBtn();
 	void EventExcitingPartyWXFriendBtn_NoFetch();
-	void EventShareExcitingPartyFetchInfo();
-	void EventShareExcitingPartyFetchInfo_NoFetch();
-	void EventExcitingPartyHideUI();
-	void EventExcitingPartyHideUI_NoFetch();
 	void EventExcitingPartyQQZoneBtn();
 	void EventExcitingPartyQQZoneBtn_NoFetch();
 	void EventExcitingPartyQQFriendBtn();
 	void EventExcitingPartyQQFriendBtn_NoFetch();
+	void EventShareExcitingPartyFetchInfo();
+	void EventShareExcitingPartyFetchInfo_NoFetch();
+	void EventShareExcitingParty_Push();
+	void EventShareExcitingParty_Push_NoFetch();
+	void EventExcitingPartyWXZoneBtn();
+	void EventExcitingPartyWXZoneBtn_NoFetch();
+	void EventExcitingPartyHideUI();
+	void EventExcitingPartyHideUI_NoFetch();
 
 public:
 	static class UClass* StaticClass()

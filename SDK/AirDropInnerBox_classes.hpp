@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass AirDropInnerBox.AirDropInnerBox_C
-// 0x0008 (0x0420 - 0x0418)
+// 0x0008 (0x0410 - 0x0408)
 class AAirDropInnerBox_C final : public AAirDropInnerBox
 {
 public:
-	class USceneComponent*                        Scene;                                             // 0x0418(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Scene;                                             // 0x0408(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();

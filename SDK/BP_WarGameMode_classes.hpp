@@ -17,17 +17,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_WarGameMode.BP_WarGameMode_C
-// 0x0038 (0x17C8 - 0x1790)
+// 0x0038 (0x17D8 - 0x17A0)
 class ABP_WarGameMode_C : public AWarGameMode
 {
 public:
-	class UCircleMgrComponent*                    CircleMgr;                                         // 0x1790(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_WeatherGeneratorComponent_C*        BP_WeatherGeneratorComponent;                      // 0x1798(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_VehicleGeneratorComponent_C*        BP_VehicleGeneratorComponent;                      // 0x17A0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_ItemGeneratorComponent_C*           BP_ItemGeneratorComponent;                         // 0x17A8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAirAttackComponent*                    AirAttack;                                         // 0x17B0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAirDropComponent*                      AirDrop;                                           // 0x17B8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x17C0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCircleMgrComponent*                    CircleMgr;                                         // 0x17A0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_WeatherGeneratorComponent_C*        BP_WeatherGeneratorComponent;                      // 0x17A8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_VehicleGeneratorComponent_C*        BP_VehicleGeneratorComponent;                      // 0x17B0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_ItemGeneratorComponent_C*           BP_ItemGeneratorComponent;                         // 0x17B8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAirAttackComponent*                    AirAttack;                                         // 0x17C0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAirDropComponent*                      AirDrop;                                           // 0x17C8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x17D0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();

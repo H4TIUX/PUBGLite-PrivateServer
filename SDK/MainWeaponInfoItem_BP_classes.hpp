@@ -10,20 +10,20 @@
 
 #include "Basic.hpp"
 
+#include "Basic_structs.hpp"
 #include "EBackPackDragOrigin_structs.hpp"
 #include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "BP_STRUCT_Item_type_structs.hpp"
-#include "Basic_structs.hpp"
-#include "ShadowTrackerExtra_structs.hpp"
 #include "UnrealArchExt_classes.hpp"
+#include "BP_STRUCT_Item_type_structs.hpp"
+#include "ShadowTrackerExtra_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass MainWeaponInfoItem_BP.MainWeaponInfoItem_BP_C
-// 0x0490 (0x0748 - 0x02B8)
+// 0x0488 (0x0740 - 0x02B8)
 class UMainWeaponInfoItem_BP_C final : public UUAEUserWidget
 {
 public:
@@ -54,19 +54,19 @@ public:
 	struct FSlateBrush                            SmallIconBrush;                                    // 0x05A8(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
 	uint8                                         bHasStartedTouchIn : 1;                            // 0x0620(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
 	uint8                                         Pad_621[0x7];                                      // 0x0621(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBattleItemData                        battleData;                                        // 0x0628(0x00A0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class UFitingSlotItem_BP_C*>           SlotItemArray;                                     // 0x06C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	EBackPackDragOrigin                           DragOrigin;                                        // 0x06D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESurviveWeaponPropSlot                        WeaponSlot;                                        // 0x06D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6DA[0x6];                                      // 0x06DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	UMulticastDelegateProperty_                   ItemBeDragBegin;                                   // 0x06E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	UMulticastDelegateProperty_                   ItemBeDragCancelled;                               // 0x06F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	UMulticastDelegateProperty_                   ShowToolTip;                                       // 0x0700(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class FString                                 InputKeyActionName;                                // 0x0710(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class AItemStudio*                            ItemStudio;                                        // 0x0720(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTextureRenderTarget2D*                 RenderTargetTexture;                               // 0x0728(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               WeaponCaptureMaterial;                             // 0x0730(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	UMulticastDelegateProperty_                   UpdateAvatar;                                      // 0x0738(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FBattleItemData                        battleData;                                        // 0x0628(0x0098)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class UFitingSlotItem_BP_C*>           SlotItemArray;                                     // 0x06C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	EBackPackDragOrigin                           DragOrigin;                                        // 0x06D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESurviveWeaponPropSlot                        WeaponSlot;                                        // 0x06D1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6D2[0x6];                                      // 0x06D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	UMulticastDelegateProperty_                   ItemBeDragBegin;                                   // 0x06D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	UMulticastDelegateProperty_                   ItemBeDragCancelled;                               // 0x06E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	UMulticastDelegateProperty_                   ShowToolTip;                                       // 0x06F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class FString                                 InputKeyActionName;                                // 0x0708(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class AItemStudio*                            ItemStudio;                                        // 0x0718(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTextureRenderTarget2D*                 RenderTargetTexture;                               // 0x0720(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               WeaponCaptureMaterial;                             // 0x0728(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	UMulticastDelegateProperty_                   UpdateAvatar;                                      // 0x0730(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void ExecuteUbergraph_MainWeaponInfoItem_BP(int32 EntryPoint);

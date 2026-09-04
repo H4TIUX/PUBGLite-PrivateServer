@@ -30,6 +30,34 @@ void Abp_teamup_C::UserConstructionScript()
 }
 
 
+// Function bp_teamup.bp_teamup_C.EventTeamUpClickHead
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_C::EventTeamUpClickHead()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpClickHead");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup.bp_teamup_C.EventTeamUpClickHead_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_C::EventTeamUpClickHead_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpClickHead_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_teamup.bp_teamup_C.EventTeamUpSelectRefuseInfo
 // (BlueprintCallable, BlueprintEvent)
 
@@ -53,62 +81,6 @@ void Abp_teamup_C::EventTeamUpSelectRefuseInfo_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpSelectRefuseInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup.bp_teamup_C.EventTeamUpFailOnMatching
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_C::EventTeamUpFailOnMatching()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpFailOnMatching");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup.bp_teamup_C.EventTeamUpFailOnMatching_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_C::EventTeamUpFailOnMatching_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpFailOnMatching_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup.bp_teamup_C.EventFetchTeamUpInfo
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_C::EventFetchTeamUpInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventFetchTeamUpInfo");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup.bp_teamup_C.EventFetchTeamUpInfo_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_C::EventFetchTeamUpInfo_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventFetchTeamUpInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -142,34 +114,6 @@ void Abp_teamup_C::EventTeamUpEnterTrainingMode_NoFetch()
 }
 
 
-// Function bp_teamup.bp_teamup_C.EventSetHasGuideNewteaching
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_C::EventSetHasGuideNewteaching()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventSetHasGuideNewteaching");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup.bp_teamup_C.EventSetHasGuideNewteaching_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_C::EventSetHasGuideNewteaching_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventSetHasGuideNewteaching_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_teamup.bp_teamup_C.EventTeamUpUpdateClickPlayerInfo
 // (BlueprintCallable, BlueprintEvent)
 
@@ -193,174 +137,6 @@ void Abp_teamup_C::EventTeamUpUpdateClickPlayerInfo_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpUpdateClickPlayerInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup.bp_teamup_C.EventTeamUpApplyForbid
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_C::EventTeamUpApplyForbid()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpApplyForbid");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup.bp_teamup_C.EventTeamUpApplyForbid_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_C::EventTeamUpApplyForbid_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpApplyForbid_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup.bp_teamup_C.EventShowTopTip
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_C::EventShowTopTip()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventShowTopTip");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup.bp_teamup_C.EventShowTopTip_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_C::EventShowTopTip_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventShowTopTip_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup.bp_teamup_C.EventTeamUpChangeLeader
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_C::EventTeamUpChangeLeader()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpChangeLeader");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup.bp_teamup_C.EventTeamUpChangeLeader_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_C::EventTeamUpChangeLeader_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpChangeLeader_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup.bp_teamup_C.EventTeamUpClickQuit
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_C::EventTeamUpClickQuit()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpClickQuit");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup.bp_teamup_C.EventTeamUpClickQuit_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_C::EventTeamUpClickQuit_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpClickQuit_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup.bp_teamup_C.EventTeamUpClickPlayerInfo
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_C::EventTeamUpClickPlayerInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpClickPlayerInfo");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup.bp_teamup_C.EventTeamUpClickPlayerInfo_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_C::EventTeamUpClickPlayerInfo_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpClickPlayerInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup.bp_teamup_C.EventTeamUpLeaveTeam
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_C::EventTeamUpLeaveTeam()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpLeaveTeam");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup.bp_teamup_C.EventTeamUpLeaveTeam_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_C::EventTeamUpLeaveTeam_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpLeaveTeam_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -394,6 +170,34 @@ void Abp_teamup_C::EventTeamUpClickKick_NoFetch()
 }
 
 
+// Function bp_teamup.bp_teamup_C.EventTeamUpClickAutoMatchBtn
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_C::EventTeamUpClickAutoMatchBtn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpClickAutoMatchBtn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup.bp_teamup_C.EventTeamUpClickAutoMatchBtn_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_C::EventTeamUpClickAutoMatchBtn_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpClickAutoMatchBtn_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_teamup.bp_teamup_C.EventTeamUpClickExpand
 // (BlueprintCallable, BlueprintEvent)
 
@@ -417,6 +221,62 @@ void Abp_teamup_C::EventTeamUpClickExpand_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpClickExpand_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup.bp_teamup_C.EventTeamUpChangeLeader
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_C::EventTeamUpChangeLeader()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpChangeLeader");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup.bp_teamup_C.EventTeamUpChangeLeader_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_C::EventTeamUpChangeLeader_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpChangeLeader_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup.bp_teamup_C.EventTeamUpInviteApplyPermit
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_C::EventTeamUpInviteApplyPermit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpInviteApplyPermit");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup.bp_teamup_C.EventTeamUpInviteApplyPermit_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_C::EventTeamUpInviteApplyPermit_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpInviteApplyPermit_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -450,6 +310,90 @@ void Abp_teamup_C::EventTeamUpAddFriend_NoFetch()
 }
 
 
+// Function bp_teamup.bp_teamup_C.EventTeamUpNoHostRight
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_C::EventTeamUpNoHostRight()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpNoHostRight");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup.bp_teamup_C.EventTeamUpNoHostRight_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_C::EventTeamUpNoHostRight_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpNoHostRight_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup.bp_teamup_C.EventTeamUpClickCreateRoomBtn
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_C::EventTeamUpClickCreateRoomBtn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpClickCreateRoomBtn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup.bp_teamup_C.EventTeamUpClickCreateRoomBtn_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_C::EventTeamUpClickCreateRoomBtn_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpClickCreateRoomBtn_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup.bp_teamup_C.EventTeamUpFailOnMatching
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_C::EventTeamUpFailOnMatching()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpFailOnMatching");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup.bp_teamup_C.EventTeamUpFailOnMatching_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_C::EventTeamUpFailOnMatching_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpFailOnMatching_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_teamup.bp_teamup_C.EventTeamUpNoRightForMatching
 // (BlueprintCallable, BlueprintEvent)
 
@@ -478,57 +422,57 @@ void Abp_teamup_C::EventTeamUpNoRightForMatching_NoFetch()
 }
 
 
-// Function bp_teamup.bp_teamup_C.EventTeamUpChangeTeamType
+// Function bp_teamup.bp_teamup_C.EventFetchTeamUpInfo
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_C::EventTeamUpChangeTeamType()
+void Abp_teamup_C::EventFetchTeamUpInfo()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpChangeTeamType");
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventFetchTeamUpInfo");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup.bp_teamup_C.EventTeamUpChangeTeamType_NoFetch
+// Function bp_teamup.bp_teamup_C.EventFetchTeamUpInfo_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_C::EventTeamUpChangeTeamType_NoFetch()
+void Abp_teamup_C::EventFetchTeamUpInfo_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpChangeTeamType_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventFetchTeamUpInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup.bp_teamup_C.EventTeamUpNoHostRight
+// Function bp_teamup.bp_teamup_C.EventFetchInfo
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_C::EventTeamUpNoHostRight()
+void Abp_teamup_C::EventFetchInfo()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpNoHostRight");
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventFetchInfo");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup.bp_teamup_C.EventTeamUpNoHostRight_NoFetch
+// Function bp_teamup.bp_teamup_C.EventFetchInfo_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_C::EventTeamUpNoHostRight_NoFetch()
+void Abp_teamup_C::EventFetchInfo_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpNoHostRight_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventFetchInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -618,6 +562,34 @@ void Abp_teamup_C::EventTeamUpApplyPermit_NoFetch()
 }
 
 
+// Function bp_teamup.bp_teamup_C.EventTeamUpLeaveTeam
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_C::EventTeamUpLeaveTeam()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpLeaveTeam");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup.bp_teamup_C.EventTeamUpLeaveTeam_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_C::EventTeamUpLeaveTeam_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpLeaveTeam_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_teamup.bp_teamup_C.EventTeamUpInviteApplyRefuse
 // (BlueprintCallable, BlueprintEvent)
 
@@ -674,29 +646,57 @@ void Abp_teamup_C::EventTeamUpInviteApplyAutoRefuse_NoFetch()
 }
 
 
-// Function bp_teamup.bp_teamup_C.EventTeamUpInviteApplyPermit
+// Function bp_teamup.bp_teamup_C.EventTeamUpClickQuit
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_C::EventTeamUpInviteApplyPermit()
+void Abp_teamup_C::EventTeamUpClickQuit()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpInviteApplyPermit");
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpClickQuit");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup.bp_teamup_C.EventTeamUpInviteApplyPermit_NoFetch
+// Function bp_teamup.bp_teamup_C.EventTeamUpClickQuit_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_C::EventTeamUpInviteApplyPermit_NoFetch()
+void Abp_teamup_C::EventTeamUpClickQuit_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpInviteApplyPermit_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpClickQuit_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup.bp_teamup_C.EventTeamUpDestinyLimit
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_C::EventTeamUpDestinyLimit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpDestinyLimit");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup.bp_teamup_C.EventTeamUpDestinyLimit_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_C::EventTeamUpDestinyLimit_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpDestinyLimit_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -758,141 +758,141 @@ void Abp_teamup_C::EventTeamUpChangeClassicGameType_NoFetch()
 }
 
 
-// Function bp_teamup.bp_teamup_C.EventTeamUpDestinyLimit
+// Function bp_teamup.bp_teamup_C.EventShowTopTip
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_C::EventTeamUpDestinyLimit()
+void Abp_teamup_C::EventShowTopTip()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpDestinyLimit");
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventShowTopTip");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup.bp_teamup_C.EventTeamUpDestinyLimit_NoFetch
+// Function bp_teamup.bp_teamup_C.EventShowTopTip_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_C::EventTeamUpDestinyLimit_NoFetch()
+void Abp_teamup_C::EventShowTopTip_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpDestinyLimit_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventShowTopTip_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup.bp_teamup_C.EventTeamUpClickHead
+// Function bp_teamup.bp_teamup_C.EventTeamUpChangeTeamType
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_C::EventTeamUpClickHead()
+void Abp_teamup_C::EventTeamUpChangeTeamType()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpClickHead");
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpChangeTeamType");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup.bp_teamup_C.EventTeamUpClickHead_NoFetch
+// Function bp_teamup.bp_teamup_C.EventTeamUpChangeTeamType_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_C::EventTeamUpClickHead_NoFetch()
+void Abp_teamup_C::EventTeamUpChangeTeamType_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpClickHead_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpChangeTeamType_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup.bp_teamup_C.EventFetchInfo
+// Function bp_teamup.bp_teamup_C.EventSetHasGuideNewteaching
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_C::EventFetchInfo()
+void Abp_teamup_C::EventSetHasGuideNewteaching()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventFetchInfo");
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventSetHasGuideNewteaching");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup.bp_teamup_C.EventFetchInfo_NoFetch
+// Function bp_teamup.bp_teamup_C.EventSetHasGuideNewteaching_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_C::EventFetchInfo_NoFetch()
+void Abp_teamup_C::EventSetHasGuideNewteaching_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventFetchInfo_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventSetHasGuideNewteaching_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup.bp_teamup_C.EventTeamUpClickCreateRoomBtn
+// Function bp_teamup.bp_teamup_C.EventTeamUpClickPlayerInfo
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_C::EventTeamUpClickCreateRoomBtn()
+void Abp_teamup_C::EventTeamUpClickPlayerInfo()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpClickCreateRoomBtn");
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpClickPlayerInfo");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup.bp_teamup_C.EventTeamUpClickCreateRoomBtn_NoFetch
+// Function bp_teamup.bp_teamup_C.EventTeamUpClickPlayerInfo_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_C::EventTeamUpClickCreateRoomBtn_NoFetch()
+void Abp_teamup_C::EventTeamUpClickPlayerInfo_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpClickCreateRoomBtn_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpClickPlayerInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup.bp_teamup_C.EventTeamUpClickAutoMatchBtn
+// Function bp_teamup.bp_teamup_C.EventTeamUpApplyForbid
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_C::EventTeamUpClickAutoMatchBtn()
+void Abp_teamup_C::EventTeamUpApplyForbid()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpClickAutoMatchBtn");
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpApplyForbid");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup.bp_teamup_C.EventTeamUpClickAutoMatchBtn_NoFetch
+// Function bp_teamup.bp_teamup_C.EventTeamUpApplyForbid_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_C::EventTeamUpClickAutoMatchBtn_NoFetch()
+void Abp_teamup_C::EventTeamUpApplyForbid_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpClickAutoMatchBtn_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_C", "EventTeamUpApplyForbid_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

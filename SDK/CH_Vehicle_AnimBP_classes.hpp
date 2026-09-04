@@ -12,9 +12,9 @@
 
 #include "Engine_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
+#include "Gameplay_structs.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
 #include "ShadowTrackerExtra_classes.hpp"
-#include "Gameplay_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

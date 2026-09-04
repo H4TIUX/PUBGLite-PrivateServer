@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function SwitchWeaponSlot_Mode2.SwitchWeaponSlot_Mode2_C.ExecuteUbergraph_SwitchWeaponSlot_Mode2
-// (HasDefaults)
+// ()
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -34,6 +34,20 @@ void USwitchWeaponSlot_Mode2_C::ExecuteUbergraph_SwitchWeaponSlot_Mode2(int32 En
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function SwitchWeaponSlot_Mode2.SwitchWeaponSlot_Mode2_C.StopToSwitchIfSprint
+// (BlueprintCallable, BlueprintEvent)
+
+void USwitchWeaponSlot_Mode2_C::StopToSwitchIfSprint()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("SwitchWeaponSlot_Mode2_C", "StopToSwitchIfSprint");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -116,20 +130,6 @@ void USwitchWeaponSlot_Mode2_C::BndEvt__Button_1_K2Node_ComponentBoundEvent_39_O
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("SwitchWeaponSlot_Mode2_C", "BndEvt__Button_1_K2Node_ComponentBoundEvent_39_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SwitchWeaponSlot_Mode2.SwitchWeaponSlot_Mode2_C.StopToSwitchIfSprint
-// (BlueprintCallable, BlueprintEvent)
-
-void USwitchWeaponSlot_Mode2_C::StopToSwitchIfSprint()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("SwitchWeaponSlot_Mode2_C", "StopToSwitchIfSprint");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -1354,9 +1354,9 @@ void UCoherentUIGTJSEvent::AddObject(class UObject* Object)
 // Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddString
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// const class FString&                    str                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Str                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UCoherentUIGTJSEvent::AddString(const class FString& str)
+void UCoherentUIGTJSEvent::AddString(const class FString& Str)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1365,7 +1365,7 @@ void UCoherentUIGTJSEvent::AddString(const class FString& str)
 
 	Params::CoherentUIGTJSEvent_AddString Parms{};
 
-	Parms.str = std::move(str);
+	Parms.Str = std::move(Str);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

@@ -37,15 +37,43 @@ void UParachutingControl_C::ExecuteUbergraph_ParachutingControl(int32 EntryPoint
 }
 
 
-// Function ParachutingControl.ParachutingControl_C.BndEvt__Button_LeavePlane_K2Node_ComponentBoundEvent_169_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// Function ParachutingControl.ParachutingControl_C.OnParachutingLeaderChange
+// (BlueprintCallable, BlueprintEvent)
 
-void UParachutingControl_C::BndEvt__Button_LeavePlane_K2Node_ComponentBoundEvent_169_OnButtonClickedEvent__DelegateSignature()
+void UParachutingControl_C::OnParachutingLeaderChange()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("ParachutingControl_C", "BndEvt__Button_LeavePlane_K2Node_ComponentBoundEvent_169_OnButtonClickedEvent__DelegateSignature");
+		Func = GetClass()->GetFunction("ParachutingControl_C", "OnParachutingLeaderChange");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ParachutingControl.ParachutingControl_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UParachutingControl_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ParachutingControl_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ParachutingControl.ParachutingControl_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UParachutingControl_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ParachutingControl_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -87,20 +115,6 @@ void UParachutingControl_C::Tick(const struct FGeometry& MyGeometry, float InDel
 }
 
 
-// Function ParachutingControl.ParachutingControl_C.BndEvt__Button_Parachute_K2Node_ComponentBoundEvent_23_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UParachutingControl_C::BndEvt__Button_Parachute_K2Node_ComponentBoundEvent_23_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("ParachutingControl_C", "BndEvt__Button_Parachute_K2Node_ComponentBoundEvent_23_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function ParachutingControl.ParachutingControl_C.BndEvt__IN_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
 // (BlueprintEvent)
 
@@ -129,15 +143,15 @@ void UParachutingControl_C::BndEvt__ParachutingButton_K2Node_ComponentBoundEvent
 }
 
 
-// Function ParachutingControl.ParachutingControl_C.BndEvt__Button_OutOfFollow_K2Node_ComponentBoundEvent_37_OnButtonClickedEvent__DelegateSignature
+// Function ParachutingControl.ParachutingControl_C.BndEvt__Button_LeavePlane_K2Node_ComponentBoundEvent_169_OnButtonClickedEvent__DelegateSignature
 // (BlueprintEvent)
 
-void UParachutingControl_C::BndEvt__Button_OutOfFollow_K2Node_ComponentBoundEvent_37_OnButtonClickedEvent__DelegateSignature()
+void UParachutingControl_C::BndEvt__Button_LeavePlane_K2Node_ComponentBoundEvent_169_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("ParachutingControl_C", "BndEvt__Button_OutOfFollow_K2Node_ComponentBoundEvent_37_OnButtonClickedEvent__DelegateSignature");
+		Func = GetClass()->GetFunction("ParachutingControl_C", "BndEvt__Button_LeavePlane_K2Node_ComponentBoundEvent_169_OnButtonClickedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -166,6 +180,34 @@ void UParachutingControl_C::BndEvt__Button_Refuse_K2Node_ComponentBoundEvent_21_
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("ParachutingControl_C", "BndEvt__Button_Refuse_K2Node_ComponentBoundEvent_21_OnButtonClickedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ParachutingControl.ParachutingControl_C.BndEvt__Button_OutOfFollow_K2Node_ComponentBoundEvent_37_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UParachutingControl_C::BndEvt__Button_OutOfFollow_K2Node_ComponentBoundEvent_37_OnButtonClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ParachutingControl_C", "BndEvt__Button_OutOfFollow_K2Node_ComponentBoundEvent_37_OnButtonClickedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ParachutingControl.ParachutingControl_C.BndEvt__Button_Parachute_K2Node_ComponentBoundEvent_23_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UParachutingControl_C::BndEvt__Button_Parachute_K2Node_ComponentBoundEvent_23_OnButtonClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("ParachutingControl_C", "BndEvt__Button_Parachute_K2Node_ComponentBoundEvent_23_OnButtonClickedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

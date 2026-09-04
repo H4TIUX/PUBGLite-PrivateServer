@@ -12,9 +12,9 @@
 
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ShadowTrackerExtra_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UnrealArchExt_classes.hpp"
-#include "ShadowTrackerExtra_structs.hpp"
 
 
 namespace SDK

@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Skill_Melee_Machete_BP.Skill_Melee_Machete_BP_C
-// 0x0008 (0x0518 - 0x0510)
+// 0x0008 (0x0560 - 0x0558)
 class ASkill_Melee_Machete_BP_C final : public AUAESkill
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0510(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0558(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();

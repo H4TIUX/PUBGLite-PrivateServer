@@ -17,27 +17,27 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_corps_base.bp_corps_base_C
-// 0x0038 (0x0420 - 0x03E8)
+// 0x0038 (0x0410 - 0x03D8)
 class Abp_corps_base_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	int32                                         BP_CorpsBase_SelectedIndex;                        // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F4[0x4];                                      // 0x03F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<uint8>                                 BP_Array_CorpsBaseUI_ShowTab;                      // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	TArray<uint8>                                 BP_Array_CorpsBaseUI_RedPoint;                     // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0418(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	TArray<uint8>                                 BP_Array_CorpsBaseUI_RedPoint;                     // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	TArray<uint8>                                 BP_Array_CorpsBaseUI_ShowTab;                      // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_CorpsBase_SelectedIndex;                        // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_404[0x4];                                      // 0x0404(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0408(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventOnAfterHide();
-	void EventOnAfterHide_NoFetch();
-	void EventOnSelectIndex();
-	void EventOnSelectIndex_NoFetch();
-	void EventOnAfterShow();
-	void EventOnAfterShow_NoFetch();
 	void EventCorpsClose();
 	void EventCorpsClose_NoFetch();
+	void EventOnSelectIndex();
+	void EventOnSelectIndex_NoFetch();
+	void EventOnAfterHide();
+	void EventOnAfterHide_NoFetch();
+	void EventOnAfterShow();
+	void EventOnAfterShow_NoFetch();
 
 public:
 	static class UClass* StaticClass()

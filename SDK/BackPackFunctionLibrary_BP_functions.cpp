@@ -432,12 +432,12 @@ void UBackPackFunctionLibrary_BP_C::GetWeaponAttachPosByResID(int32 resID, class
 // Function BackPackFunctionLibrary_BP.BackPackFunctionLibrary_BP_C.GetWeaponSupportAttachResID
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   WeaponID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   WeaponId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UUAEUserWidget*                   Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // TArray<int32>*                          attachID                                               (Parm, OutParm, ZeroConstructor)
 
-void UBackPackFunctionLibrary_BP_C::GetWeaponSupportAttachResID(int32 WeaponID, class UUAEUserWidget* Widget, class UObject* __WorldContext, TArray<int32>* attachID)
+void UBackPackFunctionLibrary_BP_C::GetWeaponSupportAttachResID(int32 WeaponId, class UUAEUserWidget* Widget, class UObject* __WorldContext, TArray<int32>* attachID)
 {
 	static class UFunction* Func = nullptr;
 
@@ -446,7 +446,7 @@ void UBackPackFunctionLibrary_BP_C::GetWeaponSupportAttachResID(int32 WeaponID, 
 
 	Params::BackPackFunctionLibrary_BP_C_GetWeaponSupportAttachResID Parms{};
 
-	Parms.WeaponID = WeaponID;
+	Parms.WeaponId = WeaponId;
 	Parms.Widget = Widget;
 	Parms.__WorldContext = __WorldContext;
 
@@ -460,12 +460,12 @@ void UBackPackFunctionLibrary_BP_C::GetWeaponSupportAttachResID(int32 WeaponID, 
 // Function BackPackFunctionLibrary_BP.BackPackFunctionLibrary_BP_C.GetWeaponSupportSocket
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   WeaponID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   WeaponId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UUAEUserWidget*                   Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // TArray<EWeaponAttachmentSocketType>*    socketList                                             (Parm, OutParm, ZeroConstructor)
 
-void UBackPackFunctionLibrary_BP_C::GetWeaponSupportSocket(int32 WeaponID, class UUAEUserWidget* Widget, class UObject* __WorldContext, TArray<EWeaponAttachmentSocketType>* socketList)
+void UBackPackFunctionLibrary_BP_C::GetWeaponSupportSocket(int32 WeaponId, class UUAEUserWidget* Widget, class UObject* __WorldContext, TArray<EWeaponAttachmentSocketType>* socketList)
 {
 	static class UFunction* Func = nullptr;
 
@@ -474,7 +474,7 @@ void UBackPackFunctionLibrary_BP_C::GetWeaponSupportSocket(int32 WeaponID, class
 
 	Params::BackPackFunctionLibrary_BP_C_GetWeaponSupportSocket Parms{};
 
-	Parms.WeaponID = WeaponID;
+	Parms.WeaponId = WeaponId;
 	Parms.Widget = Widget;
 	Parms.__WorldContext = __WorldContext;
 
@@ -548,12 +548,12 @@ void UBackPackFunctionLibrary_BP_C::IsGunSupportAttachByResID(int32 gunResID, in
 // Function BackPackFunctionLibrary_BP.BackPackFunctionLibrary_BP_C.GetWeaponAttachments
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   WeaponID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   WeaponId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // uint8                                   IsContainBullet                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // TArray<int32>*                          Attachs                                                (Parm, OutParm, ZeroConstructor)
 
-void UBackPackFunctionLibrary_BP_C::GetWeaponAttachments(int32 WeaponID, uint8 IsContainBullet, class UObject* __WorldContext, TArray<int32>* Attachs)
+void UBackPackFunctionLibrary_BP_C::GetWeaponAttachments(int32 WeaponId, uint8 IsContainBullet, class UObject* __WorldContext, TArray<int32>* Attachs)
 {
 	static class UFunction* Func = nullptr;
 
@@ -562,7 +562,7 @@ void UBackPackFunctionLibrary_BP_C::GetWeaponAttachments(int32 WeaponID, uint8 I
 
 	Params::BackPackFunctionLibrary_BP_C_GetWeaponAttachments Parms{};
 
-	Parms.WeaponID = WeaponID;
+	Parms.WeaponId = WeaponId;
 	Parms.IsContainBullet = IsContainBullet;
 	Parms.__WorldContext = __WorldContext;
 

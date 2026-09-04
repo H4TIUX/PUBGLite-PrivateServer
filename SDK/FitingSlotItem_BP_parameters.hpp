@@ -11,11 +11,11 @@
 #include "Basic.hpp"
 
 #include "Basic_structs.hpp"
+#include "EBackPackDragOrigin_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "UMG_structs.hpp"
-#include "BP_STRUCT_Item_type_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "EBackPackDragOrigin_structs.hpp"
+#include "BP_STRUCT_Item_type_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -63,7 +63,7 @@ public:
 };
 
 // Function FitingSlotItem_BP.FitingSlotItem_BP_C.UpdateSlotItem
-// 0x0398 (0x0398 - 0x0000)
+// 0x0390 (0x0390 - 0x0000)
 struct FitingSlotItem_BP_C_UpdateSlotItem final
 {
 public:
@@ -94,11 +94,11 @@ public:
 	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x02D8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 	uint8                                         Pad_2D9[0x7];                                      // 0x02D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FBattleItemData>                CallFunc_GetWeaponAttachmentsInBackpack_ReturnValue; // 0x02E0(0x0010)(ZeroConstructor, ReferenceParm)
-	struct FBattleItemData                        CallFunc_Array_Get_Item;                           // 0x02F0(0x00A0)()
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0390(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Less_IntInt_ReturnValue : 1;              // 0x0394(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue : 1;        // 0x0395(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_BooleanAND_ReturnValue : 1;               // 0x0396(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	struct FBattleItemData                        CallFunc_Array_Get_Item;                           // 0x02F0(0x0098)()
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0388(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Less_IntInt_ReturnValue : 1;              // 0x038C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue : 1;        // 0x038D(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_BooleanAND_ReturnValue : 1;               // 0x038E(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 };
 
 // Function FitingSlotItem_BP.FitingSlotItem_BP_C.HighLightSocket
@@ -129,7 +129,7 @@ public:
 };
 
 // Function FitingSlotItem_BP.FitingSlotItem_BP_C.OnTouchEnded
-// 0x03C8 (0x03C8 - 0x0000)
+// 0x03C0 (0x03C0 - 0x0000)
 struct FitingSlotItem_BP_C_OnTouchEnded final
 {
 public:
@@ -137,22 +137,22 @@ public:
 	struct FPointerEvent                          InTouchEvent;                                      // 0x0038(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FEventReply                            ReturnValue;                                       // 0x00B0(0x00B8)(Parm, OutParm, ReturnParm)
 	class ABP_STExtraPlayerController_C*          PlayerController;                                  // 0x0168(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FBattleItemData                        CallFunc_GetGunBattleData_BattleData;              // 0x0170(0x00A0)()
-	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue;                // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_NotEqual_ByteByte_ReturnValue : 1;        // 0x0211(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_212[0x6];                                      // 0x0212(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBattleItemUseTarget                   K2Node_MakeStruct_BattleItemUseTarget;             // 0x0218(0x0020)(NoDestructor)
-	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0238(0x00B8)()
-	struct FEventReply                            CallFunc_ReleaseMouseCapture_ReturnValue;          // 0x02F0(0x00B8)()
-	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue : 1;        // 0x03A8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_3A9[0x7];                                      // 0x03A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x03B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_STExtraPlayerController_C*          K2Node_DynamicCast_AsBP_STExtra_Player_Controller; // 0x03B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         K2Node_DynamicCast_bSuccess : 1;                   // 0x03C0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	struct FBattleItemData                        CallFunc_GetGunBattleData_BattleData;              // 0x0170(0x0098)()
+	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue;                // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_NotEqual_ByteByte_ReturnValue : 1;        // 0x0209(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_20A[0x6];                                      // 0x020A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBattleItemUseTarget                   K2Node_MakeStruct_BattleItemUseTarget;             // 0x0210(0x0020)(NoDestructor)
+	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0230(0x00B8)()
+	struct FEventReply                            CallFunc_ReleaseMouseCapture_ReturnValue;          // 0x02E8(0x00B8)()
+	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue : 1;        // 0x03A0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_3A1[0x7];                                      // 0x03A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x03A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_STExtraPlayerController_C*          K2Node_DynamicCast_AsBP_STExtra_Player_Controller; // 0x03B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         K2Node_DynamicCast_bSuccess : 1;                   // 0x03B8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 };
 
 // Function FitingSlotItem_BP.FitingSlotItem_BP_C.OnDragDetected
-// 0x0178 (0x0178 - 0x0000)
+// 0x0170 (0x0170 - 0x0000)
 struct FitingSlotItem_BP_C_OnDragDetected final
 {
 public:
@@ -165,19 +165,19 @@ public:
 	uint8                                         CallFunc_NotEqual_ByteByte_ReturnValue : 1;        // 0x00C9(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 	uint8                                         CallFunc_NotEqual_IntInt_ReturnValue : 1;          // 0x00CA(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 	uint8                                         Pad_CB[0x5];                                       // 0x00CB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBattleItemData                        CallFunc_GetBattleItemByDefineID_battleItemData;   // 0x00D0(0x00A0)()
-	uint8                                         CallFunc_BooleanAND_ReturnValue : 1;               // 0x0170(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_BooleanAND_ReturnValue2 : 1;              // 0x0171(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	struct FBattleItemData                        CallFunc_GetBattleItemByDefineID_battleItemData;   // 0x00D0(0x0098)()
+	uint8                                         CallFunc_BooleanAND_ReturnValue : 1;               // 0x0168(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_BooleanAND_ReturnValue2 : 1;              // 0x0169(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 };
 
 // Function FitingSlotItem_BP.FitingSlotItem_BP_C.GetGunBattleData
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x00A0 (0x00A0 - 0x0000)
 struct FitingSlotItem_BP_C_GetGunBattleData final
 {
 public:
-	struct FBattleItemData                        battleData;                                        // 0x0000(0x00A0)(Parm, OutParm)
-	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x00A0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_IsValid_ReturnValue2 : 1;                 // 0x00A1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	struct FBattleItemData                        battleData;                                        // 0x0000(0x0098)(Parm, OutParm)
+	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x0098(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsValid_ReturnValue2 : 1;                 // 0x0099(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 };
 
 // Function FitingSlotItem_BP.FitingSlotItem_BP_C.OnMouseButtonUp
@@ -223,20 +223,20 @@ public:
 };
 
 // Function FitingSlotItem_BP.FitingSlotItem_BP_C.OnRightClickEvent
-// 0x00E8 (0x00E8 - 0x0000)
+// 0x00E0 (0x00E0 - 0x0000)
 struct FitingSlotItem_BP_C_OnRightClickEvent final
 {
 public:
 	class ASTExtraPlayerController*               PlayerController;                                  // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FBattleItemData                        CallFunc_GetGunBattleData_BattleData;              // 0x0010(0x00A0)()
-	class ABP_STExtraPlayerController_C*          K2Node_DynamicCast_AsBP_STExtra_Player_Controller; // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         K2Node_DynamicCast_bSuccess : 1;                   // 0x00B8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBattleItemUseTarget                   K2Node_MakeStruct_BattleItemUseTarget;             // 0x00C0(0x0020)(NoDestructor)
-	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue;                // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_NotEqual_ByteByte_ReturnValue : 1;        // 0x00E1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue : 1;        // 0x00E2(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	struct FBattleItemData                        CallFunc_GetGunBattleData_BattleData;              // 0x0010(0x0098)()
+	class ABP_STExtraPlayerController_C*          K2Node_DynamicCast_AsBP_STExtra_Player_Controller; // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         K2Node_DynamicCast_bSuccess : 1;                   // 0x00B0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBattleItemUseTarget                   K2Node_MakeStruct_BattleItemUseTarget;             // 0x00B8(0x0020)(NoDestructor)
+	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue;                // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_NotEqual_ByteByte_ReturnValue : 1;        // 0x00D9(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_EqualEqual_IntInt_ReturnValue : 1;        // 0x00DA(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 };
 
 }

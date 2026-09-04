@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "UnrealArchExt_classes.hpp"
 #include "BP_STRUCT_Item_type_structs.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
-#include "UnrealArchExt_classes.hpp"
 
 
 namespace SDK

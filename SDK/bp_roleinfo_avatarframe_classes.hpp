@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_roleinfo_avatarframe.bp_roleinfo_avatarframe_C
-// 0x00A0 (0x0488 - 0x03E8)
+// 0x00A0 (0x0478 - 0x03D8)
 class Abp_roleinfo_avatarframe_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FBP_STRUCT_RoleInfoAvatarFrame         BP_STRUCT_RoleInfoAvatarFrame;                     // 0x03F0(0x0058)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         RoleInfoAvatarFrameCurUseId;                       // 0x0448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44C[0x4];                                      // 0x044C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 RoleInfoAvatarFrameSelfUrl;                        // 0x0450(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 RoleInfoAvatarFrameSelfUid;                        // 0x0460(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_RoleInfoAvatarFrame> BP_ARRAY_RoleInfoAvatarFrameList;                  // 0x0470(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0480(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_RoleInfoAvatarFrame> BP_ARRAY_RoleInfoAvatarFrameList;                  // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class FString                                 RoleInfoAvatarFrameSelfUid;                        // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         RoleInfoAvatarFrameCurUseId;                       // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_404[0x4];                                      // 0x0404(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_RoleInfoAvatarFrame         BP_STRUCT_RoleInfoAvatarFrame;                     // 0x0408(0x0058)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class FString                                 RoleInfoAvatarFrameSelfUrl;                        // 0x0460(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0470(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();

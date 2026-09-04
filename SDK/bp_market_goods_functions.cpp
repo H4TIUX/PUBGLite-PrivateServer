@@ -30,29 +30,29 @@ void Abp_market_goods_C::UserConstructionScript()
 }
 
 
-// Function bp_market_goods.bp_market_goods_C.EventMarketGoodsUIBuy
+// Function bp_market_goods.bp_market_goods_C.EventMarketGoodsUISelect
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_market_goods_C::EventMarketGoodsUIBuy()
+void Abp_market_goods_C::EventMarketGoodsUISelect()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_goods_C", "EventMarketGoodsUIBuy");
+		Func = GetClass()->GetFunction("bp_market_goods_C", "EventMarketGoodsUISelect");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_market_goods.bp_market_goods_C.EventMarketGoodsUIBuy_NoFetch
+// Function bp_market_goods.bp_market_goods_C.EventMarketGoodsUISelect_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_market_goods_C::EventMarketGoodsUIBuy_NoFetch()
+void Abp_market_goods_C::EventMarketGoodsUISelect_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_goods_C", "EventMarketGoodsUIBuy_NoFetch");
+		Func = GetClass()->GetFunction("bp_market_goods_C", "EventMarketGoodsUISelect_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,29 +86,29 @@ void Abp_market_goods_C::EventMarketGoodsUISelectType_NoFetch()
 }
 
 
-// Function bp_market_goods.bp_market_goods_C.EventMarketGoodsUISelect
+// Function bp_market_goods.bp_market_goods_C.EventMarketGoodsUIBuy
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_market_goods_C::EventMarketGoodsUISelect()
+void Abp_market_goods_C::EventMarketGoodsUIBuy()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_goods_C", "EventMarketGoodsUISelect");
+		Func = GetClass()->GetFunction("bp_market_goods_C", "EventMarketGoodsUIBuy");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_market_goods.bp_market_goods_C.EventMarketGoodsUISelect_NoFetch
+// Function bp_market_goods.bp_market_goods_C.EventMarketGoodsUIBuy_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_market_goods_C::EventMarketGoodsUISelect_NoFetch()
+void Abp_market_goods_C::EventMarketGoodsUIBuy_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_market_goods_C", "EventMarketGoodsUISelect_NoFetch");
+		Func = GetClass()->GetFunction("bp_market_goods_C", "EventMarketGoodsUIBuy_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

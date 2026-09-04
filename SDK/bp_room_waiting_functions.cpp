@@ -30,365 +30,57 @@ void Abp_room_waiting_C::UserConstructionScript()
 }
 
 
-// Function bp_room_waiting.bp_room_waiting_C.EventChangeRoomName
+// Function bp_room_waiting.bp_room_waiting_C.EventRoomWaitingRelease
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_room_waiting_C::EventChangeRoomName()
+void Abp_room_waiting_C::EventRoomWaitingRelease()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventChangeRoomName");
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventRoomWaitingRelease");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_room_waiting.bp_room_waiting_C.EventChangeRoomName_NoFetch
+// Function bp_room_waiting.bp_room_waiting_C.EventRoomWaitingRelease_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_room_waiting_C::EventChangeRoomName_NoFetch()
+void Abp_room_waiting_C::EventRoomWaitingRelease_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventChangeRoomName_NoFetch");
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventRoomWaitingRelease_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_room_waiting.bp_room_waiting_C.EventExitRoom
+// Function bp_room_waiting.bp_room_waiting_C.EventChangeMap
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_room_waiting_C::EventExitRoom()
+void Abp_room_waiting_C::EventChangeMap()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventExitRoom");
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventChangeMap");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_room_waiting.bp_room_waiting_C.EventExitRoom_NoFetch
+// Function bp_room_waiting.bp_room_waiting_C.EventChangeMap_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_room_waiting_C::EventExitRoom_NoFetch()
+void Abp_room_waiting_C::EventChangeMap_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventExitRoom_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventKickRoleDisable
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventKickRoleDisable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventKickRoleDisable");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventKickRoleDisable_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventKickRoleDisable_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventKickRoleDisable_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventRequestKickMember
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventRequestKickMember()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventRequestKickMember");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventRequestKickMember_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventRequestKickMember_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventRequestKickMember_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventFetchInfo
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventFetchInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventFetchInfo");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventFetchInfo_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventFetchInfo_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventFetchInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventRequestChangeRoomPos
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventRequestChangeRoomPos()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventRequestChangeRoomPos");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventRequestChangeRoomPos_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventRequestChangeRoomPos_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventRequestChangeRoomPos_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventOnlyRoomMasterCanClick
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventOnlyRoomMasterCanClick()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventOnlyRoomMasterCanClick");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventOnlyRoomMasterCanClick_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventOnlyRoomMasterCanClick_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventOnlyRoomMasterCanClick_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventCreateQRImage
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventCreateQRImage()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventCreateQRImage");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventCreateQRImage_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventCreateQRImage_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventCreateQRImage_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventAfterLeaveRoomWaiting
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventAfterLeaveRoomWaiting()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventAfterLeaveRoomWaiting");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventAfterLeaveRoomWaiting_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventAfterLeaveRoomWaiting_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventAfterLeaveRoomWaiting_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventGetNewMemberProfInfo
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventGetNewMemberProfInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventGetNewMemberProfInfo");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventGetNewMemberProfInfo_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventGetNewMemberProfInfo_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventGetNewMemberProfInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventUnLockObPos
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventUnLockObPos()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventUnLockObPos");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventUnLockObPos_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventUnLockObPos_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventUnLockObPos_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventLockObPos
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventLockObPos()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventLockObPos");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventLockObPos_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventLockObPos_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventLockObPos_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventChangeToObEditDisableState
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventChangeToObEditDisableState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventChangeToObEditDisableState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventChangeToObEditDisableState_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventChangeToObEditDisableState_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventChangeToObEditDisableState_NoFetch");
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventChangeMap_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -422,6 +114,62 @@ void Abp_room_waiting_C::EventChangeToObEditState_NoFetch()
 }
 
 
+// Function bp_room_waiting.bp_room_waiting_C.EventRequestChangeRoomPos
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventRequestChangeRoomPos()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventRequestChangeRoomPos");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventRequestChangeRoomPos_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventRequestChangeRoomPos_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventRequestChangeRoomPos_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventChangeRoomName
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventChangeRoomName()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventChangeRoomName");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventChangeRoomName_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventChangeRoomName_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventChangeRoomName_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_room_waiting.bp_room_waiting_C.EventAfterEnterRoomWaiting
 // (BlueprintCallable, BlueprintEvent)
 
@@ -450,57 +198,85 @@ void Abp_room_waiting_C::EventAfterEnterRoomWaiting_NoFetch()
 }
 
 
-// Function bp_room_waiting.bp_room_waiting_C.EventBtnDisableInGaming
+// Function bp_room_waiting.bp_room_waiting_C.EventLockObPos
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_room_waiting_C::EventBtnDisableInGaming()
+void Abp_room_waiting_C::EventLockObPos()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventBtnDisableInGaming");
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventLockObPos");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_room_waiting.bp_room_waiting_C.EventBtnDisableInGaming_NoFetch
+// Function bp_room_waiting.bp_room_waiting_C.EventLockObPos_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_room_waiting_C::EventBtnDisableInGaming_NoFetch()
+void Abp_room_waiting_C::EventLockObPos_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventBtnDisableInGaming_NoFetch");
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventLockObPos_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_room_waiting.bp_room_waiting_C.EventSaveSuccess
+// Function bp_room_waiting.bp_room_waiting_C.EventUnLockObPos
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_room_waiting_C::EventSaveSuccess()
+void Abp_room_waiting_C::EventUnLockObPos()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventSaveSuccess");
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventUnLockObPos");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_room_waiting.bp_room_waiting_C.EventSaveSuccess_NoFetch
+// Function bp_room_waiting.bp_room_waiting_C.EventUnLockObPos_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_room_waiting_C::EventSaveSuccess_NoFetch()
+void Abp_room_waiting_C::EventUnLockObPos_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventSaveSuccess_NoFetch");
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventUnLockObPos_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventChangeToObEditDisableState
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventChangeToObEditDisableState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventChangeToObEditDisableState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventChangeToObEditDisableState_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventChangeToObEditDisableState_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventChangeToObEditDisableState_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -562,62 +338,6 @@ void Abp_room_waiting_C::EventOpenRoomWaitingChatUI_NoFetch()
 }
 
 
-// Function bp_room_waiting.bp_room_waiting_C.EventOpenRoleInfo
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventOpenRoleInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventOpenRoleInfo");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventOpenRoleInfo_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventOpenRoleInfo_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventOpenRoleInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventStarGame
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventStarGame()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventStarGame");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_room_waiting.bp_room_waiting_C.EventStarGame_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_room_waiting_C::EventStarGame_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventStarGame_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_room_waiting.bp_room_waiting_C.EventChangeRoomType
 // (BlueprintCallable, BlueprintEvent)
 
@@ -641,6 +361,202 @@ void Abp_room_waiting_C::EventChangeRoomType_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventChangeRoomType_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventBtnDisableInGaming
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventBtnDisableInGaming()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventBtnDisableInGaming");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventBtnDisableInGaming_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventBtnDisableInGaming_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventBtnDisableInGaming_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventKickRoleDisable
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventKickRoleDisable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventKickRoleDisable");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventKickRoleDisable_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventKickRoleDisable_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventKickRoleDisable_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventSaveSuccess
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventSaveSuccess()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventSaveSuccess");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventSaveSuccess_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventSaveSuccess_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventSaveSuccess_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventGetNewMemberProfInfo
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventGetNewMemberProfInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventGetNewMemberProfInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventGetNewMemberProfInfo_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventGetNewMemberProfInfo_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventGetNewMemberProfInfo_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventCreateQRImage
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventCreateQRImage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventCreateQRImage");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventCreateQRImage_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventCreateQRImage_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventCreateQRImage_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventAfterLeaveRoomWaiting
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventAfterLeaveRoomWaiting()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventAfterLeaveRoomWaiting");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventAfterLeaveRoomWaiting_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventAfterLeaveRoomWaiting_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventAfterLeaveRoomWaiting_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventOpenRoleInfo
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventOpenRoleInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventOpenRoleInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventOpenRoleInfo_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventOpenRoleInfo_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventOpenRoleInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -674,57 +590,141 @@ void Abp_room_waiting_C::EventWhetherDisbandRoom_NoFetch()
 }
 
 
-// Function bp_room_waiting.bp_room_waiting_C.EventChangeMap
+// Function bp_room_waiting.bp_room_waiting_C.EventOnlyRoomMasterCanClick
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_room_waiting_C::EventChangeMap()
+void Abp_room_waiting_C::EventOnlyRoomMasterCanClick()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventChangeMap");
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventOnlyRoomMasterCanClick");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_room_waiting.bp_room_waiting_C.EventChangeMap_NoFetch
+// Function bp_room_waiting.bp_room_waiting_C.EventOnlyRoomMasterCanClick_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_room_waiting_C::EventChangeMap_NoFetch()
+void Abp_room_waiting_C::EventOnlyRoomMasterCanClick_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventChangeMap_NoFetch");
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventOnlyRoomMasterCanClick_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_room_waiting.bp_room_waiting_C.EventRoomWaitingRelease
+// Function bp_room_waiting.bp_room_waiting_C.EventStarGame
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_room_waiting_C::EventRoomWaitingRelease()
+void Abp_room_waiting_C::EventStarGame()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventRoomWaitingRelease");
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventStarGame");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_room_waiting.bp_room_waiting_C.EventRoomWaitingRelease_NoFetch
+// Function bp_room_waiting.bp_room_waiting_C.EventStarGame_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_room_waiting_C::EventRoomWaitingRelease_NoFetch()
+void Abp_room_waiting_C::EventStarGame_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventRoomWaitingRelease_NoFetch");
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventStarGame_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventExitRoom
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventExitRoom()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventExitRoom");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventExitRoom_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventExitRoom_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventExitRoom_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventRequestKickMember
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventRequestKickMember()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventRequestKickMember");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventRequestKickMember_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventRequestKickMember_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventRequestKickMember_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventFetchInfo
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventFetchInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventFetchInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_room_waiting.bp_room_waiting_C.EventFetchInfo_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_room_waiting_C::EventFetchInfo_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_room_waiting_C", "EventFetchInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_STRUCT_CorpsAppoint_PanelData_structs.hpp"
 #include "BP_STRUCT_BASE_INFO_structs.hpp"
+#include "BP_STRUCT_CorpsAppoint_PanelData_structs.hpp"
 #include "BP_STRUCT_CorpsAppoint_ListItemData_structs.hpp"
 #include "Client_classes.hpp"
 
@@ -20,26 +20,26 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_corps_appoint.bp_corps_appoint_C
-// 0x0158 (0x0540 - 0x03E8)
+// 0x0158 (0x0530 - 0x03D8)
 class Abp_corps_appoint_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FBP_STRUCT_CorpsAppoint_ListItemData   BP_STRUCT_CorpsAppoint_ListItemData;               // 0x03F0(0x0068)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<int32>                                 BP_ARRAY_CorpsAppoint_PositionCount;               // 0x0458(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBP_STRUCT_CorpsAppoint_PanelData      BP_STRUCT_CorpsAppoint_PanelData;                  // 0x0468(0x0068)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<int32>                                 BP_ARRAY_CorpsAppoint_PositionCountMax;            // 0x04D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBP_STRUCT_BASE_INFO                   BP_STRUCT_BASE_INFO;                               // 0x04E0(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_CorpsAppoint_ChangeType;                        // 0x0530(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_534[0x4];                                      // 0x0534(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0538(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_CorpsAppoint_PanelData      BP_STRUCT_CorpsAppoint_PanelData;                  // 0x03E0(0x0068)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<int32>                                 BP_ARRAY_CorpsAppoint_PositionCount;               // 0x0448(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	int32                                         BP_CorpsAppoint_ChangeType;                        // 0x0458(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_45C[0x4];                                      // 0x045C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_CorpsAppoint_ListItemData   BP_STRUCT_CorpsAppoint_ListItemData;               // 0x0460(0x0068)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FBP_STRUCT_BASE_INFO                   BP_STRUCT_BASE_INFO;                               // 0x04C8(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<int32>                                 BP_ARRAY_CorpsAppoint_PositionCountMax;            // 0x0518(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0528(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventCorpsAppointOnClickClose();
-	void EventCorpsAppointOnClickClose_NoFetch();
 	void EventCorpsAppointOnClickConfirm();
 	void EventCorpsAppointOnClickConfirm_NoFetch();
+	void EventCorpsAppointOnClickClose();
+	void EventCorpsAppointOnClickClose_NoFetch();
 
 public:
 	static class UClass* StaticClass()

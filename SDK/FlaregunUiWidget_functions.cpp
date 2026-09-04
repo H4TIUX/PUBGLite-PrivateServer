@@ -37,20 +37,6 @@ void UFlaregunUiWidget_C::ExecuteUbergraph_FlaregunUiWidget(int32 EntryPoint)
 }
 
 
-// Function FlaregunUiWidget.FlaregunUiWidget_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UFlaregunUiWidget_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("FlaregunUiWidget_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function FlaregunUiWidget.FlaregunUiWidget_C.Tick
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -70,6 +56,20 @@ void UFlaregunUiWidget_C::Tick(const struct FGeometry& MyGeometry, float InDelta
 	Parms.InDeltaTime = InDeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function FlaregunUiWidget.FlaregunUiWidget_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UFlaregunUiWidget_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("FlaregunUiWidget_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

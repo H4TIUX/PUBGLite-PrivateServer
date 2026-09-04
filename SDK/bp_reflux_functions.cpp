@@ -114,29 +114,29 @@ void Abp_reflux_C::EventRefluxViewBox_NoFetch()
 }
 
 
-// Function bp_reflux.bp_reflux_C.EventRefluxRule
+// Function bp_reflux.bp_reflux_C.EventRefluxCloseUI
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_reflux_C::EventRefluxRule()
+void Abp_reflux_C::EventRefluxCloseUI()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_reflux_C", "EventRefluxRule");
+		Func = GetClass()->GetFunction("bp_reflux_C", "EventRefluxCloseUI");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_reflux.bp_reflux_C.EventRefluxRule_NoFetch
+// Function bp_reflux.bp_reflux_C.EventRefluxCloseUI_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_reflux_C::EventRefluxRule_NoFetch()
+void Abp_reflux_C::EventRefluxCloseUI_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_reflux_C", "EventRefluxRule_NoFetch");
+		Func = GetClass()->GetFunction("bp_reflux_C", "EventRefluxCloseUI_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -170,57 +170,29 @@ void Abp_reflux_C::EventRefluxViewRegisterFriend_NoFetch()
 }
 
 
-// Function bp_reflux.bp_reflux_C.EventRefluxGetAward
+// Function bp_reflux.bp_reflux_C.EventRefluxRule
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_reflux_C::EventRefluxGetAward()
+void Abp_reflux_C::EventRefluxRule()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_reflux_C", "EventRefluxGetAward");
+		Func = GetClass()->GetFunction("bp_reflux_C", "EventRefluxRule");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_reflux.bp_reflux_C.EventRefluxGetAward_NoFetch
+// Function bp_reflux.bp_reflux_C.EventRefluxRule_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_reflux_C::EventRefluxGetAward_NoFetch()
+void Abp_reflux_C::EventRefluxRule_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_reflux_C", "EventRefluxGetAward_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_reflux.bp_reflux_C.EventRefluxShare
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_reflux_C::EventRefluxShare()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_reflux_C", "EventRefluxShare");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_reflux.bp_reflux_C.EventRefluxShare_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_reflux_C::EventRefluxShare_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_reflux_C", "EventRefluxShare_NoFetch");
+		Func = GetClass()->GetFunction("bp_reflux_C", "EventRefluxRule_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -254,29 +226,85 @@ void Abp_reflux_C::EventRefluxPrePage_NoFetch()
 }
 
 
-// Function bp_reflux.bp_reflux_C.EventRefluxCloseUI
+// Function bp_reflux.bp_reflux_C.EventRefluxNextPage
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_reflux_C::EventRefluxCloseUI()
+void Abp_reflux_C::EventRefluxNextPage()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_reflux_C", "EventRefluxCloseUI");
+		Func = GetClass()->GetFunction("bp_reflux_C", "EventRefluxNextPage");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_reflux.bp_reflux_C.EventRefluxCloseUI_NoFetch
+// Function bp_reflux.bp_reflux_C.EventRefluxNextPage_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_reflux_C::EventRefluxCloseUI_NoFetch()
+void Abp_reflux_C::EventRefluxNextPage_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_reflux_C", "EventRefluxCloseUI_NoFetch");
+		Func = GetClass()->GetFunction("bp_reflux_C", "EventRefluxNextPage_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_reflux.bp_reflux_C.EventRefluxShare
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_reflux_C::EventRefluxShare()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_reflux_C", "EventRefluxShare");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_reflux.bp_reflux_C.EventRefluxShare_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_reflux_C::EventRefluxShare_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_reflux_C", "EventRefluxShare_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_reflux.bp_reflux_C.EventRefluxGetAward
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_reflux_C::EventRefluxGetAward()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_reflux_C", "EventRefluxGetAward");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_reflux.bp_reflux_C.EventRefluxGetAward_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_reflux_C::EventRefluxGetAward_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_reflux_C", "EventRefluxGetAward_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -305,34 +333,6 @@ void Abp_reflux_C::EventRefluxFriendInvite_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_reflux_C", "EventRefluxFriendInvite_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_reflux.bp_reflux_C.EventRefluxNextPage
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_reflux_C::EventRefluxNextPage()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_reflux_C", "EventRefluxNextPage");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_reflux.bp_reflux_C.EventRefluxNextPage_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_reflux_C::EventRefluxNextPage_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_reflux_C", "EventRefluxNextPage_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

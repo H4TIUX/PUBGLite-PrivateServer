@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass VH_MotorcycleCart.VH_MotorcycleCart_C
-// 0x0028 (0x0A28 - 0x0A00)
+// 0x0028 (0x0A48 - 0x0A20)
 class AVH_MotorcycleCart_C final : public ABP_STExtraWheeledVehicle_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_VH_MotorcycleCart_C;                // 0x0A00(0x0008)(Transient, DuplicateTransient)
-	class UUAEChaVehAnimListComponent*            UAEChaVehAnimList_PassengerR;                      // 0x0A08(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UUAEChaVehAnimListComponent*            UAEChaVehAnimList_PassengerL;                      // 0x0A10(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UUAEChaVehAnimListComponent*            UAEChaVehAnimList_Driver;                          // 0x0A18(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UVehicleMotorbikeComponent*             VehicleMotorbike;                                  // 0x0A20(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_VH_MotorcycleCart_C;                // 0x0A20(0x0008)(Transient, DuplicateTransient)
+	class UUAEChaVehAnimListComponent*            UAEChaVehAnimList_PassengerR;                      // 0x0A28(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UUAEChaVehAnimListComponent*            UAEChaVehAnimList_PassengerL;                      // 0x0A30(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UUAEChaVehAnimListComponent*            UAEChaVehAnimList_Driver;                          // 0x0A38(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UVehicleMotorbikeComponent*             VehicleMotorbike;                                  // 0x0A40(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_VH_MotorcycleCart(int32 EntryPoint);

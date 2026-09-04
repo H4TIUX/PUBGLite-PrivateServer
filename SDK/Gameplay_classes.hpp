@@ -22,22 +22,25 @@
 namespace SDK
 {
 
-// Class Gameplay.ConfigInterface
+// Class Gameplay.GeneratorActorAIInterface
 // 0x0000 (0x0000 - 0x0000)
-class IConfigInterface final
+class IGeneratorActorAIInterface final
 {
+public:
+	void RegisterAIPickupPoint(class UItemSpotSceneComponent* Spot, class AActor* PickUpActor);
+
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ConfigInterface")
+		STATIC_CLASS_IMPL("GeneratorActorAIInterface")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ConfigInterface")
+		STATIC_NAME_IMPL(L"GeneratorActorAIInterface")
 	}
-	static class IConfigInterface* GetDefaultObj()
+	static class IGeneratorActorAIInterface* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<IConfigInterface>();
+		return GetDefaultObjImpl<IGeneratorActorAIInterface>();
 	}
 
 	class UObject* AsUObject()
@@ -50,35 +53,153 @@ public:
 	}
 };
 
+// Class Gameplay.UAEPlayerState
+// 0x0118 (0x0558 - 0x0440)
+class AUAEPlayerState : public APlayerState
+{
+public:
+	int32                                         HealTimes;                                         // 0x0440(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MemberIdInVoiceRoom;                               // 0x0444(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         rescueTimes;                                       // 0x0448(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Assists;                                           // 0x044C(0x0004)(BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         GVMemberID;                                        // 0x0450(0x0004)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         driveDistance;                                     // 0x0454(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_458[0x4];                                      // 0x0458(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         destroyVehicleNum;                                 // 0x045C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_460[0x4];                                      // 0x0460(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Kills;                                             // 0x0464(0x0004)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_468[0x4];                                      // 0x0468(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DamageAmount;                                      // 0x046C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TeamID;                                            // 0x0470(0x0004)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HealAmount;                                        // 0x0474(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                DeadLocation;                                      // 0x0478(0x000C)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         HeadShotNum;                                       // 0x0484(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        Killer;                                            // 0x0488(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         marchDistance;                                     // 0x048C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_490[0x8];                                      // 0x0490(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	UMulticastDelegateProperty_                   OnTeamIdReplicated;                                // 0x0498(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	int32                                         ShootWeaponShotAndHitPlayerNum;                    // 0x04A8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4AC[0x4];                                      // 0x04AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FTLog_PickUpItemFlow>           TLog_PickUpItemFlowData;                           // 0x04B0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FVector                                LandLocation;                                      // 0x04C0(0x000C)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4CC[0x4];                                      // 0x04CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 DeadTimeStr;                                       // 0x04D0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4E0[0x8];                                      // 0x04E0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FTLog_PropEquipUnequipFlow>     TLog_PropEquipUnequipFlowData;                     // 0x04E8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4F8[0x4];                                      // 0x04F8(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ShootWeaponShotNum;                                // 0x04FC(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         KillFlow;                                          // 0x0500(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_510[0x4];                                      // 0x0510(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         travelDistance;                                    // 0x0514(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         surviveTime;                                       // 0x0518(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51C[0x4];                                      // 0x051C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Pronetime;                                         // 0x0520(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_524[0xC];                                      // 0x0524(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 DeadDamangeType;                                   // 0x0530(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         PlatformGender;                                    // 0x0540(0x0001)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         PlayerVoiceEnable : 1;                             // 0x0541(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_542[0x16];                                     // 0x0542(0x0016)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	uint32 GetUserIDByMemberID(int32 memberID);
+	void OnRep_GVMemberID();
+	void OnRep_PlayerKillsChange();
+	void OnRep_TeamID();
+	void SetGVMemberID(int32 memberID);
+	void SetGVMemberIDServerCall(int32 memberID);
+
+	struct FGameModePlayerBattleResultData GetPlayerBattleResultData() const;
+	struct FGameModeTeammateBattleResultData GetTeammateBattleResultData() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UAEPlayerState")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UAEPlayerState")
+	}
+	static class AUAEPlayerState* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AUAEPlayerState>();
+	}
+};
+
+// Class Gameplay.UAECharacter
+// 0x0060 (0x0830 - 0x07D0)
+class AUAECharacter : public ACharacter
+{
+public:
+	uint8                                         Pad_7D0[0x8];                                      // 0x07D0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGameModePlayerItem>            InitialItemList;                                   // 0x07D8(0x0010)(Net, ZeroConstructor, Transient, RepNotify, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7E8[0x5];                                      // 0x07E8(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	ECharacterGender                              DefaultCharacterGender;                            // 0x07ED(0x0001)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7EE[0x2];                                      // 0x07EE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        PlayerKey;                                         // 0x07F0(0x0004)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7F4[0xC];                                      // 0x07F4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bIsAI : 1;                                         // 0x0800(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_801[0x7];                                      // 0x0801(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 PlayerName;                                        // 0x0808(0x0010)(Net, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TeamID;                                            // 0x0818(0x0004)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_81C[0x14];                                     // 0x081C(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void ClientAcknowledgeReconnection_2(uint32 Token);
+	class FString GetPlayerKey();
+	void OnRep_InitialItemList();
+	void OnRep_PlayerKey();
+	void OnRep_TeamID();
+
+	TArray<class UActorComponent*> GetNonDedicatedComponents() const;
+	TArray<class UActorComponent*> GetNonSimulatedComponents() const;
+	TArray<class UActorComponent*> GetNonSimulatedComponents_NonTeammates() const;
+	TArray<class UActorComponent*> GetNonSimulatedComponents_OnFighting() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UAECharacter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UAECharacter")
+	}
+	static class AUAECharacter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AUAECharacter>();
+	}
+};
+
 // Class Gameplay.UAEGameMode
-// 0x09D0 (0x0E60 - 0x0490)
+// 0x0990 (0x0E10 - 0x0480)
 class AUAEGameMode : public AGameMode
 {
 public:
-	float                                         GridCheckSize;                                     // 0x0490(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DeepCheckSize;                                     // 0x0494(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxPlayerLimit;                                    // 0x0498(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bEnableClimbing : 1;                               // 0x049C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_49D[0x7];                                      // 0x049D(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxAllowReplicatedCharacterCount;                  // 0x04A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         AINoRepTimeInReady;                                // 0x04A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4AC[0x4];                                      // 0x04AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class AUAEOBState>                ObserverPlayerStateClass;                          // 0x04B0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoClear, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ItemTableName;                                     // 0x04B8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ItemClassPath;                                     // 0x04C8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PickupBoxConfigClassPath;                          // 0x04D8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PickupBoxConfigDataTableName;                      // 0x04E8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 VehicleTableName;                                  // 0x04F8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 VehicleClassPath;                                  // 0x0508(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, float>                    BattleCustomConfig;                                // 0x0518(0x0050)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class UGroupSpotSceneComponent*>       ItemGroupComponents;                               // 0x0568(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	uint8                                         Pad_578[0x748];                                    // 0x0578(0x0748)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bEnableDamage : 1;                                 // 0x0CC0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_CC1[0xCF];                                     // 0x0CC1(0x00CF)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         OBInfoTimeStep;                                    // 0x0D90(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D94[0x3C];                                     // 0x0D94(0x003C)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AUAEPlayerController*>           ObserverControllerList;                            // 0x0DD0(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_DE0[0x80];                                     // 0x0DE0(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         GridCheckSize;                                     // 0x0480(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DeepCheckSize;                                     // 0x0484(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxPlayerLimit;                                    // 0x0488(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bEnableClimbing : 1;                               // 0x048C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_48D[0x7];                                      // 0x048D(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxAllowReplicatedCharacterCount;                  // 0x0494(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AINoRepTimeInReady;                                // 0x0498(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49C[0x4];                                      // 0x049C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class AUAEOBState>                ObserverPlayerStateClass;                          // 0x04A0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoClear, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ItemTableName;                                     // 0x04A8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ItemClassPath;                                     // 0x04B8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PickupBoxConfigClassPath;                          // 0x04C8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PickupBoxConfigDataTableName;                      // 0x04D8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 VehicleTableName;                                  // 0x04E8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 VehicleClassPath;                                  // 0x04F8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, float>                    BattleCustomConfig;                                // 0x0508(0x0050)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class UGroupSpotSceneComponent*>       ItemGroupComponents;                               // 0x0558(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	uint8                                         Pad_568[0x708];                                    // 0x0568(0x0708)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bEnableDamage : 1;                                 // 0x0C70(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_C71[0xCF];                                     // 0x0C71(0x00CF)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         OBInfoTimeStep;                                    // 0x0D40(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D44[0x3C];                                     // 0x0D44(0x003C)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AUAEPlayerController*>           ObserverControllerList;                            // 0x0D80(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_D90[0x80];                                     // 0x0D90(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddAirDropBox(int32 boxId, const struct FVector& Pos);
@@ -110,6 +231,25 @@ public:
 	}
 };
 
+// Class Gameplay.SpotGeneratorStruct
+// 0x0000 (0x0028 - 0x0028)
+class USpotGeneratorStruct final : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SpotGeneratorStruct")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SpotGeneratorStruct")
+	}
+	static class USpotGeneratorStruct* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USpotGeneratorStruct>();
+	}
+};
+
 // Class Gameplay.ItemSceneComponent
 // 0x0000 (0x02D0 - 0x02D0)
 class UItemSceneComponent : public USceneComponent
@@ -126,6 +266,77 @@ public:
 	static class UItemSceneComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UItemSceneComponent>();
+	}
+};
+
+// Class Gameplay.GroupSpotSceneComponent
+// 0x0018 (0x02E8 - 0x02D0)
+#pragma pack(push, 0x1)
+class alignas(0x08) UGroupSpotSceneComponent : public UItemSceneComponent
+{
+public:
+	ESpotGroupType                                GroupType;                                         // 0x02D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bNearItem : 1;                                     // 0x02D1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_2D2[0x2];                                      // 0x02D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         WorldCompositionID;                                // 0x02D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LastGenerateItemTime;                              // 0x02D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GenerateItemTimeCD;                                // 0x02DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bPickup : 1;                                       // 0x02E0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bRepeatGenerateItem : 1;                           // 0x02E1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bIsValidGroup : 1;                                 // 0x02E2(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_2E3[0x5];                                      // 0x02E3(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void DoPickUp();
+	int32 FindWorldCompositionID();
+	uint8 IsValidGroup();
+	void SetGroupValid(uint8 Valid);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GroupSpotSceneComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GroupSpotSceneComponent")
+	}
+	static class UGroupSpotSceneComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGroupSpotSceneComponent>();
+	}
+};
+#pragma pack(pop)
+
+// Class Gameplay.ItemGroupSpotSceneComponent
+// 0x0028 (0x0310 - 0x02E8)
+class UItemGroupSpotSceneComponent final : public UGroupSpotSceneComponent
+{
+public:
+	class UItemGeneratorComponent*                ItemGenerator;                                     // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<class UItemSpotSceneComponent*>        SpotsCacheCur;                                     // 0x02F0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	TArray<class UItemSpotSceneComponent*>        SpotsCacheAll;                                     // 0x0300(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+
+public:
+	float RandomRepeatGenerateItemCD(const struct FSpotGroupProperty& GroupProperty);
+	void RandomSingleSpot(TArray<class UItemSpotSceneComponent*>* Spots, const struct FSpotTypeProperty& Property);
+	void RandomSpotByType(ESpotType SpotType, TArray<class UItemSpotSceneComponent*>* AllSpots, const struct FSpotTypeProperty& Property);
+	void RepeatSingleSpot(class UItemSpotSceneComponent* Spot);
+	void RepeatSpots();
+	void SetGroupProperty(class UItemGeneratorComponent* Generator, const struct FSpotGroupProperty& Property);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ItemGroupSpotSceneComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ItemGroupSpotSceneComponent")
+	}
+	static class UItemGroupSpotSceneComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UItemGroupSpotSceneComponent>();
 	}
 };
 
@@ -165,13 +376,44 @@ public:
 	}
 };
 
+// Class Gameplay.GeneratorActorInterface
+// 0x0000 (0x0000 - 0x0000)
+class IGeneratorActorInterface final
+{
+public:
+	void InitData(class UItemSpotSceneComponent* ItemSpotSceneComponent, int32 ItemCount, const class FString& Value, const class FString& Category, uint8 RepeatGenerateItem);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GeneratorActorInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeneratorActorInterface")
+	}
+	static class IGeneratorActorInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IGeneratorActorInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+
 // Class Gameplay.UAEGameState
-// 0x0018 (0x0438 - 0x0420)
+// 0x0018 (0x0428 - 0x0410)
 class AUAEGameState : public AGameState
 {
 public:
-	UMulticastDelegateProperty_                   OnSessionIdReplicated;                             // 0x0420(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_430[0x8];                                      // 0x0430(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	UMulticastDelegateProperty_                   OnSessionIdReplicated;                             // 0x0410(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_420[0x8];                                      // 0x0420(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -188,138 +430,666 @@ public:
 	}
 };
 
-// Class Gameplay.UAECharacter
-// 0x0060 (0x0840 - 0x07E0)
-class AUAECharacter : public ACharacter
+// Class Gameplay.TestAttrModifyActor
+// 0x0018 (0x03C8 - 0x03B0)
+class ATestAttrModifyActor final : public AActor
 {
 public:
-	uint8                                         Pad_7E0[0x8];                                      // 0x07E0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGameModePlayerItem>            InitialItemList;                                   // 0x07E8(0x0010)(Net, ZeroConstructor, Transient, RepNotify, NativeAccessSpecifierPublic)
-	ECharacterGender                              DefaultCharacterGender;                            // 0x07F8(0x0001)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7F9[0x7];                                      // 0x07F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         TeamID;                                            // 0x0800(0x0004)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_804[0x4];                                      // 0x0804(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bIsAI : 1;                                         // 0x0808(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_809[0xF];                                      // 0x0809(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        PlayerKey;                                         // 0x0818(0x0004)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_81C[0xC];                                      // 0x081C(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 PlayerName;                                        // 0x0828(0x0010)(Net, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_838[0x8];                                      // 0x0838(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3B0[0x8];                                      // 0x03B0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAttrModifyComponent*                   AttrModifyComp;                                    // 0x03B8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_3C0[0x4];                                      // 0x03C0(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         FloatAttr;                                         // 0x03C4(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
-	void ClientAcknowledgeReconnection_2(uint32 Token);
-	class FString GetPlayerKey();
+	void GetAttrValue(int32* I, float* F);
+	void SetModify(uint8 Enable);
+	uint8 TestGetVariable();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TestAttrModifyActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TestAttrModifyActor")
+	}
+	static class ATestAttrModifyActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ATestAttrModifyActor>();
+	}
+};
+
+// Class Gameplay.UAECharAnimListCompBase
+// 0x0000 (0x01B0 - 0x01B0)
+class UUAECharAnimListCompBase : public UUAEAnimListComponentBase
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UAECharAnimListCompBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UAECharAnimListCompBase")
+	}
+	static class UUAECharAnimListCompBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUAECharAnimListCompBase>();
+	}
+};
+
+// Class Gameplay.UAECharacterAnimListComponent
+// 0x0128 (0x02D8 - 0x01B0)
+class UUAECharacterAnimListComponent : public UUAECharAnimListCompBase
+{
+public:
+	uint8                                         Pad_1B0[0x1];                                      // 0x01B0(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         CurrentIsTPP : 1;                                  // 0x01B1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_1B2[0x6];                                      // 0x01B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FCharacterJumpAnimData>         CharacterJumpEditListFPP;                          // 0x01B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FAnimInfo                              CharacterMovementAnimInfoData;                     // 0x01C8(0x00D8)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	TArray<struct FCharacterJumpAnimData>         CharacterJumpEditList;                             // 0x02A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	EAnimBluePrintType                            AnimBluePrintType;                                 // 0x02B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2B1[0x7];                                      // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FCharacterMovementAnimData>     CharacterMovementAnimEditList;                     // 0x02B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FCharacterMovementAnimData>     CharacterFPPAnimEditList;                          // 0x02C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+
+public:
+	void OnAsyncLoadingFinished(const struct FAsyncLoadCharAnimParams& LoadingParam);
+
+	class UAnimationAsset* GetCharacterAnim(ECharacterAnimType AnimType, ECharacterPoseType PoseType) const;
+	TArray<struct FPlayerAnimData> GetCharacterJumpAnim(ECharacterJumpType JumpType) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UAECharacterAnimListComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UAECharacterAnimListComponent")
+	}
+	static class UUAECharacterAnimListComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUAECharacterAnimListComponent>();
+	}
+};
+
+// Class Gameplay.UAEChaVehAnimListComponent
+// 0x0010 (0x01C0 - 0x01B0)
+class UUAEChaVehAnimListComponent final : public UUAECharAnimListCompBase
+{
+public:
+	TArray<struct FVehCharAnimData>               VehCharAnimDataList;                               // 0x01B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UAEChaVehAnimListComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UAEChaVehAnimListComponent")
+	}
+	static class UUAEChaVehAnimListComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUAEChaVehAnimListComponent>();
+	}
+};
+
+// Class Gameplay.UAEPlayerController
+// 0x0200 (0x0930 - 0x0730)
+class AUAEPlayerController : public APlayerController
+{
+public:
+	uint8                                         bReconnected : 1;                                  // 0x0730(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bIsGM : 1;                                         // 0x0731(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bIsObserver : 1;                                   // 0x0732(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	ECharacterGender                              DefaultCharacterGender;                            // 0x0733(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_734[0x4];                                      // 0x0734(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPlayerNetStats                        NetStats;                                          // 0x0738(0x0040)(NativeAccessSpecifierPublic)
+	struct FGameModePlayerEquipmentAvatar         InitialEquipmentAvatarType;                        // 0x0778(0x000C)(BlueprintVisible, BlueprintReadOnly, Net, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_784[0x4];                                      // 0x0784(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Emotes;                                            // 0x0788(0x0010)(Net, ZeroConstructor, RepNotify, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<int32, int32>                            VehicleAvatarList;                                 // 0x0798(0x0050)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	UMulticastDelegateProperty_                   PlayerControllerRecoveredDelegate;                 // 0x07E8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7F8[0x10];                                     // 0x07F8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 InitialEquipmentAvatarList;                        // 0x0808(0x0010)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, RepNotify, NativeAccessSpecifierPublic)
+	TArray<struct FVoiceParam>                    InitialVoiceList;                                  // 0x0818(0x0010)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, RepNotify, NativeAccessSpecifierPublic)
+	UMulticastDelegateProperty_                   PlayerControllerAboutToRespawnDelegate;            // 0x0828(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_838[0x8];                                      // 0x0838(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGameModePlayerItem>            InitialItemList;                                   // 0x0840(0x0010)(Net, ZeroConstructor, RepNotify, NativeAccessSpecifierPublic)
+	uint8                                         Pad_850[0x8];                                      // 0x0850(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	UMulticastDelegateProperty_                   PlayerControllerAboutToReconnectDelegate;          // 0x0858(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_868[0x4];                                      // 0x0868(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class UUAEUserWidget>          InGameUIRoot;                                      // 0x086C(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                CharacterLocation;                                 // 0x0874(0x000C)(Net, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int32>                                 InitialWeaponAvatarList;                           // 0x0880(0x0010)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, RepNotify, NativeAccessSpecifierPublic)
+	TArray<int32>                                 InitialVehicleAvatarList;                          // 0x0890(0x0010)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, RepNotify, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8A0[0x8];                                      // 0x08A0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	UMulticastDelegateProperty_                   PlayerControllerReconnectedDelegate;               // 0x08A8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8B8[0x8];                                      // 0x08B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	UMulticastDelegateProperty_                   PlayerControllerLostDelegate;                      // 0x08C0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8D0[0x8];                                      // 0x08D0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	UMulticastDelegateProperty_                   PlayerControllerAboutToExitDelegate;               // 0x08D8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	int32                                         PlayerStartID;                                     // 0x08E8(0x0004)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8EC[0x14];                                     // 0x08EC(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         EmoteList;                                         // 0x0900(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_910[0x8];                                      // 0x0910(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	UMulticastDelegateProperty_                   PlayerControllerRespawnedDelegate;                 // 0x0918(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_928[0x1];                                      // 0x0928(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bIsSpectating : 1;                                 // 0x0929(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_92A[0x6];                                      // 0x092A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void ActorReports(const class FString& InFileName);
+	void CastUIMsg(const class FString& strMsg, const class FString& module);
+	uint8 CheckAcknowledgedPawn(class APawn* InPawn);
+	void ClientAcknowledgeReconnection_3(uint32 Token);
+	void ClientBroadcastReconnectionSuccessful();
+	void ClientBroadcastRespawnComplete();
+	void CopyDebugInfo();
+	void CopyDebugInfoLocation();
+	void CopyDebugInfoRotation();
+	void DisableInGameUI();
+	void DoCrash();
+	void DumpAllActors();
+	void DumpAllObjects();
+	void DumpAllUI();
+	void DumpNetActors();
+	void EnableInGameUI();
+	void ExcuteIntCounterRecord(const class FString& Key, int32 Count);
+	void ExcuteIntRecord(const class FString& Key, int32 Count);
+	void ExitGame();
+	void InitInGameUI();
+	void InitWithPlayerParams(const struct FGameModePlayerParams& Params_0);
+	void KickSelf();
+	void LobbyMemberVoice(int32 Member, int32 State);
+	void ObjectCountReport(const class FString& InFileName);
+	void ObjectPathReport(const class FString& InFileName);
+	void ObjectReports(const class FString& InFileName);
+	void OnCharacterDestroyed(class AActor* Actor);
+	void OnRep_Emotes();
+	void OnRep_InitialEquipmentAvatarList();
 	void OnRep_InitialItemList();
-	void OnRep_PlayerKey();
-	void OnRep_TeamID();
+	void OnRep_InitialVehicleAvatarList();
+	void OnRep_InitialVoiceList();
+	void OnRep_InitialWeaponAvatarList();
+	void OnRep_IsObserver();
+	void OnRep_IsSpectating();
+	void PlayerStartIDReceived();
+	void PrintLocation();
+	void PrintStatistics();
+	void ReleaseInGameUI();
+	void RequestScreenshot();
+	void Respawn();
+	void ServerAcknowledgeReconnection_1(uint32 Token);
+	void ServerExitGame();
+	void ServerKickSelf();
+	void ServerSetVoiceId(int32 VoiceID);
+	void SetCustomDepth(uint8 bOn);
+	void SetPanels(const TArray<class UUAEUserWidget*>& panels);
+	void TestReqScreenshot();
+	void TestRespawn();
 
-	TArray<class UActorComponent*> GetNonDedicatedComponents() const;
-	TArray<class UActorComponent*> GetNonSimulatedComponents() const;
-	TArray<class UActorComponent*> GetNonSimulatedComponents_NonTeammates() const;
-	TArray<class UActorComponent*> GetNonSimulatedComponents_OnFighting() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UAECharacter")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UAECharacter")
-	}
-	static class AUAECharacter* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AUAECharacter>();
-	}
-};
-
-// Class Gameplay.UAEPlayerState
-// 0x0120 (0x0570 - 0x0450)
-class AUAEPlayerState : public APlayerState
-{
-public:
-	float                                         Pronetime;                                         // 0x0450(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                LandLocation;                                      // 0x0454(0x000C)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         rescueTimes;                                       // 0x0460(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         destroyVehicleNum;                                 // 0x0464(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         PlatformGender;                                    // 0x0468(0x0001)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_469[0x7];                                      // 0x0469(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         travelDistance;                                    // 0x0470(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         surviveTime;                                       // 0x0474(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_478[0x8];                                      // 0x0478(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ShootWeaponShotNum;                                // 0x0480(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         HealTimes;                                         // 0x0484(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_488[0x8];                                      // 0x0488(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         KillFlow;                                          // 0x0490(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	UMulticastDelegateProperty_                   OnTeamIdReplicated;                                // 0x04A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	int32                                         MemberIdInVoiceRoom;                               // 0x04B0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         driveDistance;                                     // 0x04B4(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4B8[0x8];                                      // 0x04B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FTLog_PropEquipUnequipFlow>     TLog_PropEquipUnequipFlowData;                     // 0x04C0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4D0[0x4];                                      // 0x04D0(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Assists;                                           // 0x04D4(0x0004)(BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         GVMemberID;                                        // 0x04D8(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Kills;                                             // 0x04DC(0x0004)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HealAmount;                                        // 0x04E0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         PlayerVoiceEnable : 1;                             // 0x04E4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_4E5[0x7];                                      // 0x04E5(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        Killer;                                            // 0x04EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FTLog_PickUpItemFlow>           TLog_PickUpItemFlowData;                           // 0x04F0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_500[0x8];                                      // 0x0500(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         marchDistance;                                     // 0x0508(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_50C[0x4];                                      // 0x050C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 DeadDamangeType;                                   // 0x0510(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ShootWeaponShotAndHitPlayerNum;                    // 0x0520(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_524[0x4];                                      // 0x0524(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 DeadTimeStr;                                       // 0x0528(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TeamID;                                            // 0x0538(0x0004)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         HeadShotNum;                                       // 0x053C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DamageAmount;                                      // 0x0540(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_544[0x4];                                      // 0x0544(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                DeadLocation;                                      // 0x0548(0x000C)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_554[0x1C];                                     // 0x0554(0x001C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	uint32 GetUserIDByMemberID(int32 memberID);
-	void OnRep_PlayerKillsChange();
-	void OnRep_TeamID();
-	void SetGVMemberID(int32 memberID);
-	void SetGVMemberIDServerCall(int32 memberID);
-
-	struct FGameModePlayerBattleResultData GetPlayerBattleResultData() const;
-	struct FGameModeTeammateBattleResultData GetTeammateBattleResultData() const;
+	uint8 IsInSpectating() const;
+	uint8 IsObserver() const;
+	uint8 IsSpectator() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("UAEPlayerState")
+		STATIC_CLASS_IMPL("UAEPlayerController")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"UAEPlayerState")
+		STATIC_NAME_IMPL(L"UAEPlayerController")
 	}
-	static class AUAEPlayerState* GetDefaultObj()
+	static class AUAEPlayerController* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<AUAEPlayerState>();
+		return GetDefaultObjImpl<AUAEPlayerController>();
 	}
 };
 
-// Class Gameplay.SpotGeneratorStruct
-// 0x0000 (0x0028 - 0x0028)
-class USpotGeneratorStruct final : public UObject
+// Class Gameplay.WeatherConfigComponent
+// 0x0000 (0x0108 - 0x0108)
+class UWeatherConfigComponent final : public UActorComponent
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("SpotGeneratorStruct")
+		STATIC_CLASS_IMPL("WeatherConfigComponent")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"SpotGeneratorStruct")
+		STATIC_NAME_IMPL(L"WeatherConfigComponent")
 	}
-	static class USpotGeneratorStruct* GetDefaultObj()
+	static class UWeatherConfigComponent* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<USpotGeneratorStruct>();
+		return GetDefaultObjImpl<UWeatherConfigComponent>();
+	}
+};
+
+// Class Gameplay.UAEHouseActor
+// 0x00D8 (0x0498 - 0x03C0)
+class AUAEHouseActor : public AUAENetActor
+{
+public:
+	float                                         WindowHideDistanceSquared;                         // 0x03C0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         WindowLoadDistanceSquared;                         // 0x03C4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         WindowLoadDistanceSquaredOnVeryLowDevice;          // 0x03C8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         WindowLoadDistanceSquaredOnServer;                 // 0x03CC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FUAEWindowRepData>              WindowList;                                        // 0x03D0(0x0010)(Net, ZeroConstructor, RepNotify, NativeAccessSpecifierPrivate)
+	TMap<int32, class UUAEWindowComponent*>       WindowComponents;                                  // 0x03E0(0x0050)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	uint8                                         bEnableWindow : 1;                                 // 0x0430(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
+	uint8                                         Pad_431[0x67];                                     // 0x0431(0x0067)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void BroadcastWindowRepDataUpdated(const struct FUAEWindowRepData& InRepData);
+	void OnRep_WindowList();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UAEHouseActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UAEHouseActor")
+	}
+	static class AUAEHouseActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AUAEHouseActor>();
+	}
+};
+
+// Class Gameplay.UAEOBState
+// 0x0000 (0x0440 - 0x0440)
+class AUAEOBState : public APlayerState
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UAEOBState")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UAEOBState")
+	}
+	static class AUAEOBState* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AUAEOBState>();
+	}
+};
+
+// Class Gameplay.UAEProjectile
+// 0x0018 (0x03C8 - 0x03B0)
+class AUAEProjectile : public AActor
+{
+public:
+	uint8                                         IsServerAlreadyExplodedCpp : 1;                    // 0x03B0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_3B1[0x3];                                      // 0x03B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ItemDefineID;                                      // 0x03B4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_3B8[0x10];                                     // 0x03B8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void GlassDetect(const struct FVector& Start, const struct FVector& End);
+	uint8 IsOwnerAutomous();
+	void IsServerAlreadyExplodedCppNotify();
+	void OnRep_IsServerAlreadyExplodedCpp();
+	void OnStartFly();
+	void SendFireWeapon();
+	void ServerFireWeapon(const struct FAttackId& AttackId);
+	void SetRotationAndLocationByNormal(class USceneComponent* Comp);
+
+	void GetStartFlyPos(struct FVector* Out) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UAEProjectile")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UAEProjectile")
+	}
+	static class AUAEProjectile* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AUAEProjectile>();
+	}
+};
+
+// Class Gameplay.ItemSpotSceneComponent
+// 0x0080 (0x0360 - 0x02E0)
+class UItemSpotSceneComponent final : public USpotSceneComponent
+{
+public:
+	int32                                         AIGroupID;                                         // 0x02E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2E4[0x1];                                      // 0x02E4(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	ESpotGroupType                                SpotGroupType;                                     // 0x02E5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2E6[0x2];                                      // 0x02E6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UItemGeneratorComponent*                ItemGenerator;                                     // 0x02E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FItemGenerateSpawnClass>        AllItems;                                          // 0x02F0(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	class UGroupSpotSceneComponent*               GroupSpotSceneComponent;                           // 0x0300(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TMap<class FString, int32>                    CacheItemValeCategory;                             // 0x0308(0x0050)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_358[0x8];                                      // 0x0358(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	int32 CountCacheItemValeCategory();
+	void DoPickUp(const class FString& ItemValue, const class FString& ItemCategory);
+	void GenerateItems(TArray<struct FItemGenerateSpawnClass>* AllItemClass);
+	uint8 GenerateSpot();
+	TArray<class FName> GetAllItemNames();
+	void RepeatSpotProperty(const struct FSpotTypeProperty& Property);
+	void SetSpotProperty(int32 CompositionID, ESpotGroupType GroupType, class UItemGeneratorComponent* Generator, const struct FSpotTypeProperty& Property, class UGroupSpotSceneComponent* Component, uint8 RepeatGenerateItem);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ItemSpotSceneComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ItemSpotSceneComponent")
+	}
+	static class UItemSpotSceneComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UItemSpotSceneComponent>();
+	}
+};
+
+// Class Gameplay.ItemActorComponent
+// 0x0000 (0x0108 - 0x0108)
+class UItemActorComponent : public UActorComponent
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ItemActorComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ItemActorComponent")
+	}
+	static class UItemActorComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UItemActorComponent>();
+	}
+};
+
+// Class Gameplay.BaseGeneratorComponent
+// 0x00D8 (0x01E0 - 0x0108)
+class UBaseGeneratorComponent : public UItemActorComponent
+{
+public:
+	uint8                                         bWorldTileGenerator : 1;                           // 0x0108(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bModeStateControl : 1;                             // 0x0109(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_10A[0x2];                                      // 0x010A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         GenerateSpotCountPerTick;                          // 0x010C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ItemTableName;                                     // 0x0110(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUAEDataTable*                          ItemTable;                                         // 0x0120(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         IsWriteStatisticsToLog : 1;                        // 0x0128(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<ESpotGroupType, struct FGroupSpotComponentArray> AllGroupSpots;                             // 0x0130(0x0050)(ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	TArray<class USpotSceneComponent*>            AllSpotsToTick;                                    // 0x0180(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	TMap<int32, struct FWorldTileSpotArray>       WorldTileSpots;                                    // 0x0190(0x0050)(ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+
+public:
+	void CheckTileLevelsVisible();
+	void GenerateSpotOnTick();
+	void GenerateSpots();
+	void GeneratorWorldTileSpots(struct FWorldTileSpotArray* SpotArray);
+	void RegisterGroupSpotComponent(class UGroupSpotSceneComponent* GroupSpotComponent);
+	void RegisterSpotComponentToTick(class USpotSceneComponent* SpotComponent);
+	void RegisterWorldTileSpot(class USpotSceneComponent* Spot);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BaseGeneratorComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BaseGeneratorComponent")
+	}
+	static class UBaseGeneratorComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBaseGeneratorComponent>();
+	}
+};
+
+// Class Gameplay.VehicleGeneratorComponent
+// 0x0118 (0x02F8 - 0x01E0)
+class UVehicleGeneratorComponent : public UBaseGeneratorComponent
+{
+public:
+	TArray<struct FVehicleSpotProperty>           VehicleSpotPropertys;                              // 0x01E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         bStatisticsValid : 1;                              // 0x01F0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bIsRandom : 1;                                     // 0x01F1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_1F2[0x6];                                      // 0x01F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<ESpotType, struct FVehicleSpotComponentArray> AllVehicleSpots;                              // 0x01F8(0x0050)(ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	TMap<class FString, struct FVehicleGenerateSpawnDataArray> VehicleGenerateSpawnDatas;            // 0x0248(0x0050)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	struct FVehicleGenerateStatisticsData         VehicleStatisticsData;                             // 0x0298(0x0060)(Protected, NativeAccessSpecifierProtected)
+
+public:
+	void AddVehicleClassCount(const class FString& Path, uint8 IsValid, int32 Count);
+	void AddVehicleSpotCount(ESpotType SpotType, const class FString& Path, float LocationX, float LocationY, float LocationZ);
+	void DeleteGroups();
+	void GenerateSpotOnTick();
+	class FString GetRandomCategory(const TArray<struct FSpotWeight>& SpotWeights);
+	struct FVehicleGenerateSpawnData GetRandomVehicleClass(const class FString& Category);
+	struct FVehicleGenerateRandomInfo GetVehicleSpotRandomInfo(struct FVehicleSpotProperty* SpotProperty);
+	struct FVehicleGenerateRandomInfo GetVehicleSpotRandomInfoBySpotType(ESpotType SpotType);
+	void LoadVehicleGenerateTable();
+	void RandomGroups();
+	void RandomSingleSpots(TArray<class UVehicleSpotSceneComponent*>* AllSpots, struct FVehicleSpotProperty* Property);
+	void RandomSpotsByType(struct FVehicleSpotProperty* Property, struct FVehicleSpotComponentArray* Spots);
+	void RegisterGroupSpotComponent(class UGroupSpotSceneComponent* GroupSpotComponent);
+	void RegisterVehicleGenerateSpawnData(const struct FVehicleGenerateSpawnData& Data);
+	void WriteAllVehicleStatisticsDatas();
+	void WriteVehicleClassStatisticsDatas();
+	void WriteVehicleSpotStatisticsDatas();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("VehicleGeneratorComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"VehicleGeneratorComponent")
+	}
+	static class UVehicleGeneratorComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVehicleGeneratorComponent>();
+	}
+};
+
+// Class Gameplay.UAESimpleSceneActor
+// 0x0000 (0x03B0 - 0x03B0)
+class AUAESimpleSceneActor final : public AActor
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UAESimpleSceneActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UAESimpleSceneActor")
+	}
+	static class AUAESimpleSceneActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AUAESimpleSceneActor>();
+	}
+};
+
+// Class Gameplay.UAEWindowComponent
+// 0x0070 (0x07C0 - 0x0750)
+class UUAEWindowComponent final : public UStaticMeshComponent
+{
+public:
+	int32                                         ID;                                                // 0x0748(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bBroken : 1;                                       // 0x074C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_74D[0x3];                                      // 0x074D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  LastInstigatorPawn;                                // 0x0750(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            BrokenMesh;                                        // 0x0758(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UParticleSystem*                        BrokenEffect;                                      // 0x0760(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_768[0x58];                                     // 0x0768(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	struct FUAEWindowRepData GetRepData();
+	void HandleBroken(class APlayerController* Instigator, uint8 bLocal);
+	void LocalHandleWindowBroken(uint8 bInitial, uint8 bLocal);
+	void LocalHandleWindowBrokenBP(uint8 bInitial, uint8 bLocal);
+	void NotifyRepDataUpdated(uint8 bInitial, uint8 bLocal);
+	void NotifyServerBroken();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UAEWindowComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UAEWindowComponent")
+	}
+	static class UUAEWindowComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUAEWindowComponent>();
+	}
+};
+
+// Class Gameplay.VehicleConfigActorComponent
+// 0x0000 (0x0108 - 0x0108)
+class UVehicleConfigActorComponent final : public UActorComponent
+{
+public:
+	class UClass* LoadActorClass(const class FString& Path);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("VehicleConfigActorComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"VehicleConfigActorComponent")
+	}
+	static class UVehicleConfigActorComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVehicleConfigActorComponent>();
+	}
+};
+
+// Class Gameplay.VehicleAndTreasureBoxGeneratorComponent
+// 0x0180 (0x0360 - 0x01E0)
+class UVehicleAndTreasureBoxGeneratorComponent final : public UBaseGeneratorComponent
+{
+public:
+	TArray<struct FVehicleSpotProperty>           VehicleSpotPropertys;                              // 0x01E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FTreasureBoxSpotProperty>       TreasureBoxSpotPropertys;                          // 0x01F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         bStatisticsValid : 1;                              // 0x0200(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bIsRandom : 1;                                     // 0x0201(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_202[0x6];                                      // 0x0202(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<ESpotType, struct FVehicleSpotComponentArray> AllVehicleSpots;                              // 0x0208(0x0050)(ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	TMap<ESpotType, struct FVehicleSpotComponentArray> AllTreasureBoxSpots;                          // 0x0258(0x0050)(ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	TMap<class FString, struct FVehicleGenerateSpawnDataArray> VehicleGenerateSpawnDatas;            // 0x02A8(0x0050)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	struct FVehicleGenerateStatisticsData         VehicleStatisticsData;                             // 0x02F8(0x0060)(Protected, NativeAccessSpecifierProtected)
+	class UUAEDataTable*                          VehicleDataTable;                                  // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	void AddVehicleClassCount(const class FString& Path, uint8 IsValid, int32 Count);
+	void AddVehicleSpotCount(ESpotType SpotType, const class FString& Path, float LocationX, float LocationY, float LocationZ);
+	void DeleteGroups();
+	void GenerateSpotOnTick();
+	class FString GetRandomCategory(const TArray<struct FSpotWeight>& SpotWeights);
+	struct FVehicleGenerateSpawnData GetRandomVehicleClass(const class FString& Category);
+	struct FVehicleGenerateRandomInfo GetTreasureBoxSpotRandomInfo(struct FTreasureBoxSpotProperty* SpotProperty);
+	struct FVehicleGenerateRandomInfo GetVehicleSpotRandomInfo(struct FVehicleSpotProperty* SpotProperty);
+	struct FVehicleGenerateRandomInfo GetVehicleSpotRandomInfoBySpotType(ESpotType SpotType);
+	void LoadVehicleGenerateTable();
+	void RandomGroups();
+	void RandomSingleSpots(TArray<class UVehicleSpotSceneComponent*>* AllSpots, struct FVehicleSpotProperty* Property);
+	void RandomSpotsByType(struct FVehicleSpotProperty* Property, struct FVehicleSpotComponentArray* Spots);
+	void RandomTreasureBoxSingleSpots(TArray<class UVehicleSpotSceneComponent*>* AllSpots, struct FTreasureBoxSpotProperty* Property);
+	void RandomTreasureBoxSpotsByType(struct FTreasureBoxSpotProperty* Property, struct FVehicleSpotComponentArray* Spots);
+	void RegisterGroupSpotComponent(class UGroupSpotSceneComponent* GroupSpotComponent);
+	void RegisterVehicleGenerateSpawnData(const struct FVehicleGenerateSpawnData& Data);
+	void WriteAllVehicleStatisticsDatas();
+	void WriteAllVehicleStatisticsDatasToLog();
+	void WriteVehicleClassStatisticsDatas();
+	void WriteVehicleSpotStatisticsDatas();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("VehicleAndTreasureBoxGeneratorComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"VehicleAndTreasureBoxGeneratorComponent")
+	}
+	static class UVehicleAndTreasureBoxGeneratorComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVehicleAndTreasureBoxGeneratorComponent>();
+	}
+};
+
+// Class Gameplay.VehicleGroupSpotSceneComponent
+// 0x0008 (0x02F0 - 0x02E8)
+class UVehicleGroupSpotSceneComponent final : public UGroupSpotSceneComponent
+{
+public:
+	uint8                                         Pad_2E8[0x8];                                      // 0x02E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("VehicleGroupSpotSceneComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"VehicleGroupSpotSceneComponent")
+	}
+	static class UVehicleGroupSpotSceneComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVehicleGroupSpotSceneComponent>();
+	}
+};
+
+// Class Gameplay.VehicleSpotSceneComponent
+// 0x0040 (0x0320 - 0x02E0)
+class UVehicleSpotSceneComponent final : public USpotSceneComponent
+{
+public:
+	ESpotGroupType                                SpotGroupType;                                     // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bRandomRotation : 1;                               // 0x02E1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_2E2[0x2];                                      // 0x02E2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         RandomRotationMin;                                 // 0x02E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         RandomRotationMax;                                 // 0x02E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2EC[0x4];                                      // 0x02EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVehicleGenerateRandomInfo             SpotRandomInfo;                                    // 0x02F0(0x0028)(Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_318[0x8];                                      // 0x0318(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	uint8 GenerateSpot();
+	class FString GetVehiclePath();
+	void SetSpotRandomInfo(struct FVehicleGenerateRandomInfo* RandomInfo);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("VehicleSpotSceneComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"VehicleSpotSceneComponent")
+	}
+	static class UVehicleSpotSceneComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVehicleSpotSceneComponent>();
 	}
 };
 
@@ -408,431 +1178,22 @@ public:
 	}
 };
 
-// Class Gameplay.UAEPlayerController
-// 0x0200 (0x0938 - 0x0738)
-class AUAEPlayerController : public APlayerController
-{
-public:
-	uint8                                         Pad_738[0x1];                                      // 0x0738(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bIsGM : 1;                                         // 0x0739(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_73A[0x16];                                     // 0x073A(0x0016)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bIsSpectating : 1;                                 // 0x0750(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_751[0x7];                                      // 0x0751(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	UMulticastDelegateProperty_                   PlayerControllerRespawnedDelegate;                 // 0x0758(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	UMulticastDelegateProperty_                   PlayerControllerAboutToExitDelegate;               // 0x0768(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	int32                                         PlayerStartID;                                     // 0x0778(0x0004)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_77C[0x14];                                     // 0x077C(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
-	UMulticastDelegateProperty_                   PlayerControllerReconnectedDelegate;               // 0x0790(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7A0[0x8];                                      // 0x07A0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	UMulticastDelegateProperty_                   PlayerControllerAboutToReconnectDelegate;          // 0x07A8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	UMulticastDelegateProperty_                   PlayerControllerRecoveredDelegate;                 // 0x07B8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         bReconnected : 1;                                  // 0x07C8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_7C9[0xF];                                      // 0x07C9(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 InitialWeaponAvatarList;                           // 0x07D8(0x0010)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, RepNotify, NativeAccessSpecifierPublic)
-	TArray<int32>                                 InitialVehicleAvatarList;                          // 0x07E8(0x0010)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, RepNotify, NativeAccessSpecifierPublic)
-	struct FPlayerNetStats                        NetStats;                                          // 0x07F8(0x0040)(NativeAccessSpecifierPublic)
-	uint8                                         Pad_838[0x8];                                      // 0x0838(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         EmoteList;                                         // 0x0840(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         bIsObserver : 1;                                   // 0x0850(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	ECharacterGender                              DefaultCharacterGender;                            // 0x0851(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_852[0x6];                                      // 0x0852(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 InitialEquipmentAvatarList;                        // 0x0858(0x0010)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, RepNotify, NativeAccessSpecifierPublic)
-	UMulticastDelegateProperty_                   PlayerControllerLostDelegate;                      // 0x0868(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_878[0x4];                                      // 0x0878(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TWeakObjectPtr<class UUAEUserWidget>          InGameUIRoot;                                      // 0x087C(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_884[0x4];                                      // 0x0884(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameModePlayerEquipmentAvatar         InitialEquipmentAvatarType;                        // 0x0888(0x000C)(BlueprintVisible, BlueprintReadOnly, Net, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_894[0x4];                                      // 0x0894(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Emotes;                                            // 0x0898(0x0010)(Net, ZeroConstructor, RepNotify, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<int32, int32>                            VehicleAvatarList;                                 // 0x08A8(0x0050)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FVector                                CharacterLocation;                                 // 0x08F8(0x000C)(Net, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_904[0x4];                                      // 0x0904(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGameModePlayerItem>            InitialItemList;                                   // 0x0908(0x0010)(Net, ZeroConstructor, RepNotify, NativeAccessSpecifierPublic)
-	uint8                                         Pad_918[0x8];                                      // 0x0918(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	UMulticastDelegateProperty_                   PlayerControllerAboutToRespawnDelegate;            // 0x0920(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_930[0x8];                                      // 0x0930(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void ActorReports(const class FString& InFileName);
-	void CastUIMsg(const class FString& strMsg, const class FString& module);
-	uint8 CheckAcknowledgedPawn(class APawn* InPawn);
-	void ClientAcknowledgeReconnection_3(uint32 Token);
-	void ClientBroadcastReconnectionSuccessful();
-	void ClientBroadcastRespawnComplete();
-	void CopyDebugInfo();
-	void CopyDebugInfoLocation();
-	void CopyDebugInfoRotation();
-	void DisableInGameUI();
-	void DoCrash();
-	void DumpAllActors();
-	void DumpAllObjects();
-	void DumpAllUI();
-	void DumpNetActors();
-	void EnableInGameUI();
-	void ExcuteIntCounterRecord(const class FString& Key, int32 Count);
-	void ExcuteIntRecord(const class FString& Key, int32 Count);
-	void ExitGame();
-	void InitInGameUI();
-	void InitWithPlayerParams(const struct FGameModePlayerParams& Params_0);
-	void KickSelf();
-	void LobbyMemberVoice(int32 Member, int32 State);
-	void ObjectCountReport(const class FString& InFileName);
-	void ObjectPathReport(const class FString& InFileName);
-	void ObjectReports(const class FString& InFileName);
-	void OnCharacterDestroyed(class AActor* Actor);
-	void OnRep_Emotes();
-	void OnRep_InitialEquipmentAvatarList();
-	void OnRep_InitialItemList();
-	void OnRep_InitialVehicleAvatarList();
-	void OnRep_InitialWeaponAvatarList();
-	void OnRep_IsObserver();
-	void OnRep_IsSpectating();
-	void PlayerStartIDReceived();
-	void PrintLocation();
-	void PrintStatistics();
-	void ReleaseInGameUI();
-	void RequestScreenshot();
-	void Respawn();
-	void ServerAcknowledgeReconnection_1(uint32 Token);
-	void ServerExitGame();
-	void ServerKickSelf();
-	void ServerSetVoiceId(int32 VoiceID);
-	void SetCustomDepth(uint8 bOn);
-	void SetPanels(const TArray<class UUAEUserWidget*>& panels);
-	void TestReqScreenshot();
-	void TestRespawn();
-
-	uint8 IsInSpectating() const;
-	uint8 IsObserver() const;
-	uint8 IsSpectator() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UAEPlayerController")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UAEPlayerController")
-	}
-	static class AUAEPlayerController* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AUAEPlayerController>();
-	}
-};
-
-// Class Gameplay.WeatherConfigComponent
-// 0x0000 (0x0108 - 0x0108)
-class UWeatherConfigComponent final : public UActorComponent
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("WeatherConfigComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WeatherConfigComponent")
-	}
-	static class UWeatherConfigComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWeatherConfigComponent>();
-	}
-};
-
-// Class Gameplay.UAEOBState
-// 0x0000 (0x0450 - 0x0450)
-class AUAEOBState : public APlayerState
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UAEOBState")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UAEOBState")
-	}
-	static class AUAEOBState* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AUAEOBState>();
-	}
-};
-
-// Class Gameplay.ItemActorComponent
-// 0x0000 (0x0108 - 0x0108)
-class UItemActorComponent : public UActorComponent
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ItemActorComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ItemActorComponent")
-	}
-	static class UItemActorComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UItemActorComponent>();
-	}
-};
-
-// Class Gameplay.BaseGeneratorComponent
-// 0x00D8 (0x01E0 - 0x0108)
-class UBaseGeneratorComponent : public UItemActorComponent
-{
-public:
-	uint8                                         bWorldTileGenerator : 1;                           // 0x0108(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bModeStateControl : 1;                             // 0x0109(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_10A[0x2];                                      // 0x010A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         GenerateSpotCountPerTick;                          // 0x010C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ItemTableName;                                     // 0x0110(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UUAEDataTable*                          ItemTable;                                         // 0x0120(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         IsWriteStatisticsToLog : 1;                        // 0x0128(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<ESpotGroupType, struct FGroupSpotComponentArray> AllGroupSpots;                             // 0x0130(0x0050)(ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	TArray<class USpotSceneComponent*>            AllSpotsToTick;                                    // 0x0180(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	TMap<int32, struct FWorldTileSpotArray>       WorldTileSpots;                                    // 0x0190(0x0050)(ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-
-public:
-	void CheckTileLevelsVisible();
-	void GenerateSpotOnTick();
-	void GenerateSpots();
-	void GeneratorWorldTileSpots(struct FWorldTileSpotArray* SpotArray);
-	void RegisterGroupSpotComponent(class UGroupSpotSceneComponent* GroupSpotComponent);
-	void RegisterSpotComponentToTick(class USpotSceneComponent* SpotComponent);
-	void RegisterWorldTileSpot(class USpotSceneComponent* Spot);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BaseGeneratorComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BaseGeneratorComponent")
-	}
-	static class UBaseGeneratorComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBaseGeneratorComponent>();
-	}
-};
-
-// Class Gameplay.VehicleAndTreasureBoxGeneratorComponent
-// 0x0180 (0x0360 - 0x01E0)
-class UVehicleAndTreasureBoxGeneratorComponent final : public UBaseGeneratorComponent
-{
-public:
-	TArray<struct FVehicleSpotProperty>           VehicleSpotPropertys;                              // 0x01E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FTreasureBoxSpotProperty>       TreasureBoxSpotPropertys;                          // 0x01F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         bStatisticsValid : 1;                              // 0x0200(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bIsRandom : 1;                                     // 0x0201(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_202[0x6];                                      // 0x0202(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<ESpotType, struct FVehicleSpotComponentArray> AllVehicleSpots;                              // 0x0208(0x0050)(ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	TMap<ESpotType, struct FVehicleSpotComponentArray> AllTreasureBoxSpots;                          // 0x0258(0x0050)(ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	TMap<class FString, struct FVehicleGenerateSpawnDataArray> VehicleGenerateSpawnDatas;            // 0x02A8(0x0050)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	struct FVehicleGenerateStatisticsData         VehicleStatisticsData;                             // 0x02F8(0x0060)(Protected, NativeAccessSpecifierProtected)
-	class UUAEDataTable*                          VehicleDataTable;                                  // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	void AddVehicleClassCount(const class FString& Path, uint8 IsValid, int32 Count);
-	void AddVehicleSpotCount(ESpotType SpotType, const class FString& Path, float LocationX, float LocationY, float LocationZ);
-	void DeleteGroups();
-	void GenerateSpotOnTick();
-	class FString GetRandomCategory(const TArray<struct FSpotWeight>& SpotWeights);
-	struct FVehicleGenerateSpawnData GetRandomVehicleClass(const class FString& Category);
-	struct FVehicleGenerateRandomInfo GetTreasureBoxSpotRandomInfo(struct FTreasureBoxSpotProperty* SpotProperty);
-	struct FVehicleGenerateRandomInfo GetVehicleSpotRandomInfo(struct FVehicleSpotProperty* SpotProperty);
-	struct FVehicleGenerateRandomInfo GetVehicleSpotRandomInfoBySpotType(ESpotType SpotType);
-	void LoadVehicleGenerateTable();
-	void RandomGroups();
-	void RandomSingleSpots(TArray<class UVehicleSpotSceneComponent*>* AllSpots, struct FVehicleSpotProperty* Property);
-	void RandomSpotsByType(struct FVehicleSpotProperty* Property, struct FVehicleSpotComponentArray* Spots);
-	void RandomTreasureBoxSingleSpots(TArray<class UVehicleSpotSceneComponent*>* AllSpots, struct FTreasureBoxSpotProperty* Property);
-	void RandomTreasureBoxSpotsByType(struct FTreasureBoxSpotProperty* Property, struct FVehicleSpotComponentArray* Spots);
-	void RegisterGroupSpotComponent(class UGroupSpotSceneComponent* GroupSpotComponent);
-	void RegisterVehicleGenerateSpawnData(const struct FVehicleGenerateSpawnData& Data);
-	void WriteAllVehicleStatisticsDatas();
-	void WriteAllVehicleStatisticsDatasToLog();
-	void WriteVehicleClassStatisticsDatas();
-	void WriteVehicleSpotStatisticsDatas();
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("VehicleAndTreasureBoxGeneratorComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"VehicleAndTreasureBoxGeneratorComponent")
-	}
-	static class UVehicleAndTreasureBoxGeneratorComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVehicleAndTreasureBoxGeneratorComponent>();
-	}
-};
-
-// Class Gameplay.TestAttrModifyActor
-// 0x0018 (0x03D8 - 0x03C0)
-class ATestAttrModifyActor final : public AActor
-{
-public:
-	uint8                                         Pad_3C0[0x8];                                      // 0x03C0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAttrModifyComponent*                   AttrModifyComp;                                    // 0x03C8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3D0[0x4];                                      // 0x03D0(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         FloatAttr;                                         // 0x03D4(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	void GetAttrValue(int32* I, float* F);
-	void SetModify(uint8 Enable);
-	uint8 TestGetVariable();
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TestAttrModifyActor")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TestAttrModifyActor")
-	}
-	static class ATestAttrModifyActor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ATestAttrModifyActor>();
-	}
-};
-
-// Class Gameplay.UAECharAnimListCompBase
-// 0x0000 (0x01B0 - 0x01B0)
-class UUAECharAnimListCompBase : public UUAEAnimListComponentBase
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UAECharAnimListCompBase")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UAECharAnimListCompBase")
-	}
-	static class UUAECharAnimListCompBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUAECharAnimListCompBase>();
-	}
-};
-
-// Class Gameplay.UAEHouseActor
-// 0x00D8 (0x04A8 - 0x03D0)
-class AUAEHouseActor : public AUAENetActor
-{
-public:
-	float                                         WindowHideDistanceSquared;                         // 0x03D0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         WindowLoadDistanceSquared;                         // 0x03D4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         WindowLoadDistanceSquaredOnVeryLowDevice;          // 0x03D8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         WindowLoadDistanceSquaredOnServer;                 // 0x03DC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<struct FUAEWindowRepData>              WindowList;                                        // 0x03E0(0x0010)(Net, ZeroConstructor, RepNotify, NativeAccessSpecifierPrivate)
-	TMap<int32, class UUAEWindowComponent*>       WindowComponents;                                  // 0x03F0(0x0050)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         bEnableWindow : 1;                                 // 0x0440(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         Pad_441[0x67];                                     // 0x0441(0x0067)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void BroadcastWindowRepDataUpdated(const struct FUAEWindowRepData& InRepData);
-	void OnRep_WindowList();
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UAEHouseActor")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UAEHouseActor")
-	}
-	static class AUAEHouseActor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AUAEHouseActor>();
-	}
-};
-
-// Class Gameplay.UAECharacterAnimListComponent
-// 0x0128 (0x02D8 - 0x01B0)
-class UUAECharacterAnimListComponent : public UUAECharAnimListCompBase
-{
-public:
-	TArray<struct FCharacterMovementAnimData>     CharacterFPPAnimEditList;                          // 0x01B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C0[0x2];                                      // 0x01C0(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	EAnimBluePrintType                            AnimBluePrintType;                                 // 0x01C2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C3[0x5];                                      // 0x01C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FCharacterMovementAnimData>     CharacterMovementAnimEditList;                     // 0x01C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	uint8                                         CurrentIsTPP : 1;                                  // 0x01D8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1D9[0x7];                                      // 0x01D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FCharacterJumpAnimData>         CharacterJumpEditListFPP;                          // 0x01E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	struct FAnimInfo                              CharacterMovementAnimInfoData;                     // 0x01F0(0x00D8)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
-	TArray<struct FCharacterJumpAnimData>         CharacterJumpEditList;                             // 0x02C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-
-public:
-	void OnAsyncLoadingFinished(const struct FAsyncLoadCharAnimParams& LoadingParam);
-
-	class UAnimationAsset* GetCharacterAnim(ECharacterAnimType AnimType, ECharacterPoseType PoseType) const;
-	TArray<struct FPlayerAnimData> GetCharacterJumpAnim(ECharacterJumpType JumpType) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UAECharacterAnimListComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UAECharacterAnimListComponent")
-	}
-	static class UUAECharacterAnimListComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUAECharacterAnimListComponent>();
-	}
-};
-
-// Class Gameplay.UAEChaVehAnimListComponent
-// 0x0010 (0x01C0 - 0x01B0)
-class UUAEChaVehAnimListComponent final : public UUAECharAnimListCompBase
-{
-public:
-	TArray<struct FVehCharAnimData>               VehCharAnimDataList;                               // 0x01B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UAEChaVehAnimListComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UAEChaVehAnimListComponent")
-	}
-	static class UUAEChaVehAnimListComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUAEChaVehAnimListComponent>();
-	}
-};
-
-// Class Gameplay.GeneratorActorAIInterface
+// Class Gameplay.ConfigInterface
 // 0x0000 (0x0000 - 0x0000)
-class IGeneratorActorAIInterface final
+class IConfigInterface final
 {
-public:
-	void RegisterAIPickupPoint(class UItemSpotSceneComponent* Spot, class AActor* PickUpActor);
-
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("GeneratorActorAIInterface")
+		STATIC_CLASS_IMPL("ConfigInterface")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"GeneratorActorAIInterface")
+		STATIC_NAME_IMPL(L"ConfigInterface")
 	}
-	static class IGeneratorActorAIInterface* GetDefaultObj()
+	static class IConfigInterface* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<IGeneratorActorAIInterface>();
+		return GetDefaultObjImpl<IConfigInterface>();
 	}
 
 	class UObject* AsUObject()
@@ -842,71 +1203,6 @@ public:
 	const class UObject* AsUObject() const
 	{
 		return reinterpret_cast<const UObject*>(this);
-	}
-};
-
-// Class Gameplay.GeneratorActorInterface
-// 0x0000 (0x0000 - 0x0000)
-class IGeneratorActorInterface final
-{
-public:
-	void InitData(class UItemSpotSceneComponent* ItemSpotSceneComponent, int32 ItemCount, const class FString& Value, const class FString& Category, uint8 RepeatGenerateItem);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GeneratorActorInterface")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GeneratorActorInterface")
-	}
-	static class IGeneratorActorInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IGeneratorActorInterface>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-
-// Class Gameplay.VehicleSpotSceneComponent
-// 0x0040 (0x0320 - 0x02E0)
-class UVehicleSpotSceneComponent final : public USpotSceneComponent
-{
-public:
-	ESpotGroupType                                SpotGroupType;                                     // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bRandomRotation : 1;                               // 0x02E1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_2E2[0x2];                                      // 0x02E2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         RandomRotationMin;                                 // 0x02E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         RandomRotationMax;                                 // 0x02E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2EC[0x4];                                      // 0x02EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVehicleGenerateRandomInfo             SpotRandomInfo;                                    // 0x02F0(0x0028)(Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_318[0x8];                                      // 0x0318(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	uint8 GenerateSpot();
-	class FString GetVehiclePath();
-	void SetSpotRandomInfo(struct FVehicleGenerateRandomInfo* RandomInfo);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("VehicleSpotSceneComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"VehicleSpotSceneComponent")
-	}
-	static class UVehicleSpotSceneComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVehicleSpotSceneComponent>();
 	}
 };
 
@@ -943,13 +1239,13 @@ public:
 };
 
 // Class Gameplay.GlobalConfigActor
-// 0x0010 (0x03D0 - 0x03C0)
+// 0x0010 (0x03C0 - 0x03B0)
 class AGlobalConfigActor final : public AActor
 {
 public:
-	uint8                                         Pad_3C0[0x8];                                      // 0x03C0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bInitComponents : 1;                               // 0x03C8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_3C9[0x7];                                      // 0x03C9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3B0[0x8];                                      // 0x03B0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bInitComponents : 1;                               // 0x03B8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_3B9[0x7];                                      // 0x03B9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Init();
@@ -968,92 +1264,6 @@ public:
 		return GetDefaultObjImpl<AGlobalConfigActor>();
 	}
 };
-
-// Class Gameplay.VehicleGeneratorComponent
-// 0x0118 (0x02F8 - 0x01E0)
-class UVehicleGeneratorComponent : public UBaseGeneratorComponent
-{
-public:
-	TArray<struct FVehicleSpotProperty>           VehicleSpotPropertys;                              // 0x01E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         bStatisticsValid : 1;                              // 0x01F0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bIsRandom : 1;                                     // 0x01F1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_1F2[0x6];                                      // 0x01F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<ESpotType, struct FVehicleSpotComponentArray> AllVehicleSpots;                              // 0x01F8(0x0050)(ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	TMap<class FString, struct FVehicleGenerateSpawnDataArray> VehicleGenerateSpawnDatas;            // 0x0248(0x0050)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	struct FVehicleGenerateStatisticsData         VehicleStatisticsData;                             // 0x0298(0x0060)(Protected, NativeAccessSpecifierProtected)
-
-public:
-	void AddVehicleClassCount(const class FString& Path, uint8 IsValid, int32 Count);
-	void AddVehicleSpotCount(ESpotType SpotType, const class FString& Path, float LocationX, float LocationY, float LocationZ);
-	void DeleteGroups();
-	void GenerateSpotOnTick();
-	class FString GetRandomCategory(const TArray<struct FSpotWeight>& SpotWeights);
-	struct FVehicleGenerateSpawnData GetRandomVehicleClass(const class FString& Category);
-	struct FVehicleGenerateRandomInfo GetVehicleSpotRandomInfo(struct FVehicleSpotProperty* SpotProperty);
-	struct FVehicleGenerateRandomInfo GetVehicleSpotRandomInfoBySpotType(ESpotType SpotType);
-	void LoadVehicleGenerateTable();
-	void RandomGroups();
-	void RandomSingleSpots(TArray<class UVehicleSpotSceneComponent*>* AllSpots, struct FVehicleSpotProperty* Property);
-	void RandomSpotsByType(struct FVehicleSpotProperty* Property, struct FVehicleSpotComponentArray* Spots);
-	void RegisterGroupSpotComponent(class UGroupSpotSceneComponent* GroupSpotComponent);
-	void RegisterVehicleGenerateSpawnData(const struct FVehicleGenerateSpawnData& Data);
-	void WriteAllVehicleStatisticsDatas();
-	void WriteVehicleClassStatisticsDatas();
-	void WriteVehicleSpotStatisticsDatas();
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("VehicleGeneratorComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"VehicleGeneratorComponent")
-	}
-	static class UVehicleGeneratorComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVehicleGeneratorComponent>();
-	}
-};
-
-// Class Gameplay.GroupSpotSceneComponent
-// 0x0018 (0x02E8 - 0x02D0)
-#pragma pack(push, 0x1)
-class alignas(0x08) UGroupSpotSceneComponent : public UItemSceneComponent
-{
-public:
-	ESpotGroupType                                GroupType;                                         // 0x02D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bNearItem : 1;                                     // 0x02D1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_2D2[0x2];                                      // 0x02D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         WorldCompositionID;                                // 0x02D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LastGenerateItemTime;                              // 0x02D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GenerateItemTimeCD;                                // 0x02DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bPickup : 1;                                       // 0x02E0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bRepeatGenerateItem : 1;                           // 0x02E1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bIsValidGroup : 1;                                 // 0x02E2(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_2E3[0x5];                                      // 0x02E3(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void DoPickUp();
-	int32 FindWorldCompositionID();
-	uint8 IsValidGroup();
-	void SetGroupValid(uint8 Valid);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GroupSpotSceneComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GroupSpotSceneComponent")
-	}
-	static class UGroupSpotSceneComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGroupSpotSceneComponent>();
-	}
-};
-#pragma pack(pop)
 
 // Class Gameplay.ItemConfigActorComponent
 // 0x0060 (0x0168 - 0x0108)
@@ -1150,213 +1360,6 @@ public:
 	static class UItemGeneratorComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UItemGeneratorComponent>();
-	}
-};
-
-// Class Gameplay.ItemGroupSpotSceneComponent
-// 0x0028 (0x0310 - 0x02E8)
-class UItemGroupSpotSceneComponent final : public UGroupSpotSceneComponent
-{
-public:
-	class UItemGeneratorComponent*                ItemGenerator;                                     // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<class UItemSpotSceneComponent*>        SpotsCacheCur;                                     // 0x02F0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	TArray<class UItemSpotSceneComponent*>        SpotsCacheAll;                                     // 0x0300(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-
-public:
-	float RandomRepeatGenerateItemCD(const struct FSpotGroupProperty& GroupProperty);
-	void RandomSingleSpot(TArray<class UItemSpotSceneComponent*>* Spots, const struct FSpotTypeProperty& Property);
-	void RandomSpotByType(ESpotType SpotType, TArray<class UItemSpotSceneComponent*>* AllSpots, const struct FSpotTypeProperty& Property);
-	void RepeatSingleSpot(class UItemSpotSceneComponent* Spot);
-	void RepeatSpots();
-	void SetGroupProperty(class UItemGeneratorComponent* Generator, const struct FSpotGroupProperty& Property);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ItemGroupSpotSceneComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ItemGroupSpotSceneComponent")
-	}
-	static class UItemGroupSpotSceneComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UItemGroupSpotSceneComponent>();
-	}
-};
-
-// Class Gameplay.ItemSpotSceneComponent
-// 0x0080 (0x0360 - 0x02E0)
-class UItemSpotSceneComponent final : public USpotSceneComponent
-{
-public:
-	int32                                         AIGroupID;                                         // 0x02E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2E4[0x1];                                      // 0x02E4(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	ESpotGroupType                                SpotGroupType;                                     // 0x02E5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2E6[0x2];                                      // 0x02E6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UItemGeneratorComponent*                ItemGenerator;                                     // 0x02E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<struct FItemGenerateSpawnClass>        AllItems;                                          // 0x02F0(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	class UGroupSpotSceneComponent*               GroupSpotSceneComponent;                           // 0x0300(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TMap<class FString, int32>                    CacheItemValeCategory;                             // 0x0308(0x0050)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_358[0x8];                                      // 0x0358(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	int32 CountCacheItemValeCategory();
-	void DoPickUp(const class FString& ItemValue, const class FString& ItemCategory);
-	void GenerateItems(TArray<struct FItemGenerateSpawnClass>* AllItemClass);
-	uint8 GenerateSpot();
-	TArray<class FName> GetAllItemNames();
-	void RepeatSpotProperty(const struct FSpotTypeProperty& Property);
-	void SetSpotProperty(int32 CompositionID, ESpotGroupType GroupType, class UItemGeneratorComponent* Generator, const struct FSpotTypeProperty& Property, class UGroupSpotSceneComponent* Component, uint8 RepeatGenerateItem);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ItemSpotSceneComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ItemSpotSceneComponent")
-	}
-	static class UItemSpotSceneComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UItemSpotSceneComponent>();
-	}
-};
-
-// Class Gameplay.UAEProjectile
-// 0x0018 (0x03D8 - 0x03C0)
-class AUAEProjectile : public AActor
-{
-public:
-	uint8                                         IsServerAlreadyExplodedCpp : 1;                    // 0x03C0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_3C1[0x3];                                      // 0x03C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ItemDefineID;                                      // 0x03C4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3C8[0x10];                                     // 0x03C8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void GlassDetect(const struct FVector& Start, const struct FVector& End);
-	uint8 IsOwnerAutomous();
-	void IsServerAlreadyExplodedCppNotify();
-	void OnRep_IsServerAlreadyExplodedCpp();
-	void OnStartFly();
-	void SendFireWeapon();
-	void ServerFireWeapon(const struct FAttackId& AttackId);
-	void SetRotationAndLocationByNormal(class USceneComponent* Comp);
-
-	void GetStartFlyPos(struct FVector* Out) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UAEProjectile")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UAEProjectile")
-	}
-	static class AUAEProjectile* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AUAEProjectile>();
-	}
-};
-
-// Class Gameplay.UAESimpleSceneActor
-// 0x0000 (0x03C0 - 0x03C0)
-class AUAESimpleSceneActor final : public AActor
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UAESimpleSceneActor")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UAESimpleSceneActor")
-	}
-	static class AUAESimpleSceneActor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AUAESimpleSceneActor>();
-	}
-};
-
-// Class Gameplay.UAEWindowComponent
-// 0x0070 (0x07C0 - 0x0750)
-class UUAEWindowComponent final : public UStaticMeshComponent
-{
-public:
-	int32                                         ID;                                                // 0x0748(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bBroken : 1;                                       // 0x074C(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_74D[0x3];                                      // 0x074D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  LastInstigatorPawn;                                // 0x0750(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UStaticMesh*                            BrokenMesh;                                        // 0x0758(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UParticleSystem*                        BrokenEffect;                                      // 0x0760(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_768[0x58];                                     // 0x0768(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	struct FUAEWindowRepData GetRepData();
-	void HandleBroken(class APlayerController* Instigator, uint8 bLocal);
-	void LocalHandleWindowBroken(uint8 bInitial, uint8 bLocal);
-	void LocalHandleWindowBrokenBP(uint8 bInitial, uint8 bLocal);
-	void NotifyRepDataUpdated(uint8 bInitial, uint8 bLocal);
-	void NotifyServerBroken();
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UAEWindowComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UAEWindowComponent")
-	}
-	static class UUAEWindowComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUAEWindowComponent>();
-	}
-};
-
-// Class Gameplay.VehicleConfigActorComponent
-// 0x0000 (0x0108 - 0x0108)
-class UVehicleConfigActorComponent final : public UActorComponent
-{
-public:
-	class UClass* LoadActorClass(const class FString& Path);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("VehicleConfigActorComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"VehicleConfigActorComponent")
-	}
-	static class UVehicleConfigActorComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVehicleConfigActorComponent>();
-	}
-};
-
-// Class Gameplay.VehicleGroupSpotSceneComponent
-// 0x0008 (0x02F0 - 0x02E8)
-class UVehicleGroupSpotSceneComponent final : public UGroupSpotSceneComponent
-{
-public:
-	uint8                                         Pad_2E8[0x8];                                      // 0x02E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("VehicleGroupSpotSceneComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"VehicleGroupSpotSceneComponent")
-	}
-	static class UVehicleGroupSpotSceneComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVehicleGroupSpotSceneComponent>();
 	}
 };
 

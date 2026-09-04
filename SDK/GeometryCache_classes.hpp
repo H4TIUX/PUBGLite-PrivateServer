@@ -43,11 +43,11 @@ public:
 };
 
 // Class GeometryCache.GeometryCacheActor
-// 0x0008 (0x03C8 - 0x03C0)
+// 0x0008 (0x03B8 - 0x03B0)
 class AGeometryCacheActor final : public AActor
 {
 public:
-	class UGeometryCacheComponent*                GeometryCacheComponent;                            // 0x03C0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UGeometryCacheComponent*                GeometryCacheComponent;                            // 0x03B0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	class UGeometryCacheComponent* GetGeometryCacheComponent() const;

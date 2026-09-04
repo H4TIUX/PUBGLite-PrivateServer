@@ -30,6 +30,34 @@ void Abp_roleinfo_historydetail_C::UserConstructionScript()
 }
 
 
+// Function bp_roleinfo_historydetail.bp_roleinfo_historydetail_C.EventRoleInfoHistoryDetailAddFriend
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_historydetail_C::EventRoleInfoHistoryDetailAddFriend()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_historydetail_C", "EventRoleInfoHistoryDetailAddFriend");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_roleinfo_historydetail.bp_roleinfo_historydetail_C.EventRoleInfoHistoryDetailAddFriend_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_roleinfo_historydetail_C::EventRoleInfoHistoryDetailAddFriend_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_roleinfo_historydetail_C", "EventRoleInfoHistoryDetailAddFriend_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_roleinfo_historydetail.bp_roleinfo_historydetail_C.EventRoleInfoHistoryShareResults
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,34 +109,6 @@ void Abp_roleinfo_historydetail_C::EventRoleInfoHistoryShareRanking_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_roleinfo_historydetail_C", "EventRoleInfoHistoryShareRanking_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo_historydetail.bp_roleinfo_historydetail_C.EventRoleInfoHistoryDetailAddFriend
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_historydetail_C::EventRoleInfoHistoryDetailAddFriend()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_historydetail_C", "EventRoleInfoHistoryDetailAddFriend");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_roleinfo_historydetail.bp_roleinfo_historydetail_C.EventRoleInfoHistoryDetailAddFriend_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_roleinfo_historydetail_C::EventRoleInfoHistoryDetailAddFriend_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_roleinfo_historydetail_C", "EventRoleInfoHistoryDetailAddFriend_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

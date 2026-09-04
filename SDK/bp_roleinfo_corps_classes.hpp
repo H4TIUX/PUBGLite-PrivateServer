@@ -10,41 +10,41 @@
 
 #include "Basic.hpp"
 
-#include "BP_STRUCT_RoleInfo_CorpsAvatar_structs.hpp"
-#include "BP_STRUCT_RoleInfo_CorpsData_structs.hpp"
 #include "BP_STRUCT_RoleInfo_Corps_AvatarData_structs.hpp"
 #include "Client_classes.hpp"
+#include "BP_STRUCT_RoleInfo_CorpsData_structs.hpp"
+#include "BP_STRUCT_RoleInfo_CorpsAvatar_structs.hpp"
 
 
 namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_roleinfo_corps.bp_roleinfo_corps_C
-// 0x0148 (0x0530 - 0x03E8)
+// 0x0148 (0x0520 - 0x03D8)
 class Abp_roleinfo_corps_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FBP_STRUCT_RoleInfo_CorpsAvatar        BP_STRUCT_RoleInfo_CorpsAvatar;                    // 0x03F0(0x0058)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FBP_STRUCT_RoleInfo_Corps_AvatarData   BP_STRUCT_RoleInfo_Corps_AvatarData;               // 0x0448(0x0058)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	uint8                                         BP_RoleInfoCorpsCanJoint : 1;                      // 0x04A0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_4A1[0x7];                                      // 0x04A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_RoleInfo_CorpsData          BP_STRUCT_RoleInfo_CorpsData;                      // 0x04A8(0x0070)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class FString                                 BP_RoleInfoCorpsMyCorpsID;                         // 0x0518(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0528(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class FString                                 BP_RoleInfoCorpsMyCorpsID;                         // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         BP_RoleInfoCorpsCanJoint : 1;                      // 0x03F0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_3F1[0x7];                                      // 0x03F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_RoleInfo_CorpsData          BP_STRUCT_RoleInfo_CorpsData;                      // 0x03F8(0x0070)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FBP_STRUCT_RoleInfo_Corps_AvatarData   BP_STRUCT_RoleInfo_Corps_AvatarData;               // 0x0468(0x0058)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FBP_STRUCT_RoleInfo_CorpsAvatar        BP_STRUCT_RoleInfo_CorpsAvatar;                    // 0x04C0(0x0058)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0518(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventRoleInfoCorpsRefresh();
-	void EventRoleInfoCorpsRefresh_NoFetch();
-	void EventRoleInfoCorpsApplyJoinCorps();
-	void EventRoleInfoCorpsApplyJoinCorps_NoFetch();
-	void EventRoleInfoCorpsClose();
-	void EventRoleInfoCorpsClose_NoFetch();
 	void EventRoleInfoCorpsShow();
 	void EventRoleInfoCorpsShow_NoFetch();
+	void EventRoleInfoCorpsClose();
+	void EventRoleInfoCorpsClose_NoFetch();
+	void EventRoleInfoCorpsRefresh();
+	void EventRoleInfoCorpsRefresh_NoFetch();
 	void EventRoleInfoCorpsReport();
 	void EventRoleInfoCorpsReport_NoFetch();
+	void EventRoleInfoCorpsApplyJoinCorps();
+	void EventRoleInfoCorpsApplyJoinCorps_NoFetch();
 
 public:
 	static class UClass* StaticClass()

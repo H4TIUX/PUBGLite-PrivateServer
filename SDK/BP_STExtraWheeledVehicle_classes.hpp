@@ -19,24 +19,24 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_STExtraWheeledVehicle.BP_STExtraWheeledVehicle_C
-// 0x0060 (0x0A00 - 0x09A0)
+// 0x0060 (0x0A20 - 0x09C0)
 class ABP_STExtraWheeledVehicle_C : public ASTExtraWheeledVehicle
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x09A0(0x0008)(Transient, DuplicateTransient)
-	class UVehicleAvatarComponent_BP_C*           VehicleAvatarComponent_BP;                         // 0x09A8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCameraComponent*                       TPPCamera;                                         // 0x09B0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCameraComponent*                       FPPCamera;                                         // 0x09B8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UVehicleSpringArmComponent*             FPPCameraSpringArm;                                // 0x09C0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               PSCExhaust;                                        // 0x09C8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UVehicleSpringArmComponent*             TPPCameraSpringArm;                                // 0x09D0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               PSCFire;                                           // 0x09D8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               PSCSmoke;                                          // 0x09E0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	uint8                                         IsPlayingEngineAk : 1;                             // 0x09E8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         ToggleFPP : 1;                                     // 0x09E9(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         bEngineStarted : 1;                                // 0x09EA(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_9EB[0x5];                                      // 0x09EB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UParticleSystemComponent*>       BoostParticleSystemComp;                           // 0x09F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x09C0(0x0008)(Transient, DuplicateTransient)
+	class UVehicleAvatarComponent_BP_C*           VehicleAvatarComponent_BP;                         // 0x09C8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCameraComponent*                       TPPCamera;                                         // 0x09D0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCameraComponent*                       FPPCamera;                                         // 0x09D8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UVehicleSpringArmComponent*             FPPCameraSpringArm;                                // 0x09E0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               PSCExhaust;                                        // 0x09E8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UVehicleSpringArmComponent*             TPPCameraSpringArm;                                // 0x09F0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               PSCFire;                                           // 0x09F8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               PSCSmoke;                                          // 0x0A00(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	uint8                                         IsPlayingEngineAk : 1;                             // 0x0A08(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         ToggleFPP : 1;                                     // 0x0A09(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         bEngineStarted : 1;                                // 0x0A0A(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_A0B[0x5];                                      // 0x0A0B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UParticleSystemComponent*>       BoostParticleSystemComp;                           // 0x0A10(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_BP_STExtraWheeledVehicle(int32 EntryPoint);

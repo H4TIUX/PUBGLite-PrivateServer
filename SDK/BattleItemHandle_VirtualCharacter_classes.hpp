@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BattleItemHandle_VirtualCharacter.BattleItemHandle_VirtualCharacter_C
-// 0x0000 (0x00C0 - 0x00C0)
+// 0x0000 (0x00C8 - 0x00C8)
 class UBattleItemHandle_VirtualCharacter_C final : public UBattleItemHandle_VirtualItem_C
 {
 public:

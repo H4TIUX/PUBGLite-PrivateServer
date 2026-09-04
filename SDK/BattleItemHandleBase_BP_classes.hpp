@@ -19,15 +19,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BattleItemHandleBase_BP.BattleItemHandleBase_BP_C
-// 0x0090 (0x0150 - 0x00C0)
+// 0x0088 (0x0150 - 0x00C8)
 #pragma pack(push, 0x1)
 class alignas(0x10) UBattleItemHandleBase_BP_C : public UBattleItemHandleBase
 {
 public:
-	class ASTExtraPlayerController*               OwningPlayerController;                            // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ASTExtraBaseCharacter*                  OwningCharacter;                                   // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBackpackComponent*                     OwningBackpackComponent;                           // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D8[0x8];                                       // 0x00D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class ASTExtraPlayerController*               OwningPlayerController;                            // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ASTExtraBaseCharacter*                  OwningCharacter;                                   // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBackpackComponent*                     OwningBackpackComponent;                           // 0x00D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             WrapperPutdownTrans;                               // 0x00E0(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	struct FTransform                             SourceWrapperTrans;                                // 0x0110(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	class ABaseAIController*                      OwningAIController;                                // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

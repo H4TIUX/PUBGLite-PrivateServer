@@ -30,85 +30,29 @@ void Abp_mail_C::UserConstructionScript()
 }
 
 
-// Function bp_mail.bp_mail_C.EventMailRead
+// Function bp_mail.bp_mail_C.EventMailDelete
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_mail_C::EventMailRead()
+void Abp_mail_C::EventMailDelete()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventMailRead");
+		Func = GetClass()->GetFunction("bp_mail_C", "EventMailDelete");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_mail.bp_mail_C.EventMailRead_NoFetch
+// Function bp_mail.bp_mail_C.EventMailDelete_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_mail_C::EventMailRead_NoFetch()
+void Abp_mail_C::EventMailDelete_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventMailRead_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_mail.bp_mail_C.EventHideGiftMsgCenter
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_mail_C::EventHideGiftMsgCenter()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventHideGiftMsgCenter");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_mail.bp_mail_C.EventHideGiftMsgCenter_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_mail_C::EventHideGiftMsgCenter_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventHideGiftMsgCenter_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_mail.bp_mail_C.EventMailAddTestDatas
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_mail_C::EventMailAddTestDatas()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventMailAddTestDatas");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_mail.bp_mail_C.EventMailAddTestDatas_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_mail_C::EventMailAddTestDatas_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventMailAddTestDatas_NoFetch");
+		Func = GetClass()->GetFunction("bp_mail_C", "EventMailDelete_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -142,57 +86,29 @@ void Abp_mail_C::EventMailChangeFilterType_NoFetch()
 }
 
 
-// Function bp_mail.bp_mail_C.EventMailRequestList
+// Function bp_mail.bp_mail_C.EventMailAddTestDatas
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_mail_C::EventMailRequestList()
+void Abp_mail_C::EventMailAddTestDatas()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventMailRequestList");
+		Func = GetClass()->GetFunction("bp_mail_C", "EventMailAddTestDatas");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_mail.bp_mail_C.EventMailRequestList_NoFetch
+// Function bp_mail.bp_mail_C.EventMailAddTestDatas_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_mail_C::EventMailRequestList_NoFetch()
+void Abp_mail_C::EventMailAddTestDatas_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventMailRequestList_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_mail.bp_mail_C.EventMailReceiveAll
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_mail_C::EventMailReceiveAll()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventMailReceiveAll");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_mail.bp_mail_C.EventMailReceiveAll_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_mail_C::EventMailReceiveAll_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventMailReceiveAll_NoFetch");
+		Func = GetClass()->GetFunction("bp_mail_C", "EventMailAddTestDatas_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -226,169 +142,29 @@ void Abp_mail_C::EventMailReadAll_NoFetch()
 }
 
 
-// Function bp_mail.bp_mail_C.EventShowGiftMsgCenter
+// Function bp_mail.bp_mail_C.EventMailReceiveAttach
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_mail_C::EventShowGiftMsgCenter()
+void Abp_mail_C::EventMailReceiveAttach()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventShowGiftMsgCenter");
+		Func = GetClass()->GetFunction("bp_mail_C", "EventMailReceiveAttach");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_mail.bp_mail_C.EventShowGiftMsgCenter_NoFetch
+// Function bp_mail.bp_mail_C.EventMailReceiveAttach_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_mail_C::EventShowGiftMsgCenter_NoFetch()
+void Abp_mail_C::EventMailReceiveAttach_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventShowGiftMsgCenter_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_mail.bp_mail_C.EventOnClickHead_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_mail_C::EventOnClickHead_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventOnClickHead_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_mail.bp_mail_C.EventOnClickHead_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_mail_C::EventOnClickHead_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventOnClickHead_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_mail.bp_mail_C.EventMailClose
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_mail_C::EventMailClose()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventMailClose");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_mail.bp_mail_C.EventMailClose_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_mail_C::EventMailClose_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventMailClose_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_mail.bp_mail_C.EventMailDeleteAll
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_mail_C::EventMailDeleteAll()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventMailDeleteAll");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_mail.bp_mail_C.EventMailDeleteAll_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_mail_C::EventMailDeleteAll_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventMailDeleteAll_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_mail.bp_mail_C.EventMailDelete
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_mail_C::EventMailDelete()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventMailDelete");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_mail.bp_mail_C.EventMailDelete_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_mail_C::EventMailDelete_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventMailDelete_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_mail.bp_mail_C.EventMailReceiveAllNext
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_mail_C::EventMailReceiveAllNext()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventMailReceiveAllNext");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_mail.bp_mail_C.EventMailReceiveAllNext_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_mail_C::EventMailReceiveAllNext_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventMailReceiveAllNext_NoFetch");
+		Func = GetClass()->GetFunction("bp_mail_C", "EventMailReceiveAttach_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -422,29 +198,85 @@ void Abp_mail_C::EventFetchMailInfo_NoFetch()
 }
 
 
-// Function bp_mail.bp_mail_C.EventMailReceiveAttach
+// Function bp_mail.bp_mail_C.EventHideGiftMsgCenter
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_mail_C::EventMailReceiveAttach()
+void Abp_mail_C::EventHideGiftMsgCenter()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventMailReceiveAttach");
+		Func = GetClass()->GetFunction("bp_mail_C", "EventHideGiftMsgCenter");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_mail.bp_mail_C.EventMailReceiveAttach_NoFetch
+// Function bp_mail.bp_mail_C.EventHideGiftMsgCenter_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_mail_C::EventMailReceiveAttach_NoFetch()
+void Abp_mail_C::EventHideGiftMsgCenter_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_mail_C", "EventMailReceiveAttach_NoFetch");
+		Func = GetClass()->GetFunction("bp_mail_C", "EventHideGiftMsgCenter_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_mail.bp_mail_C.EventMailReceiveAll
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_mail_C::EventMailReceiveAll()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_mail_C", "EventMailReceiveAll");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_mail.bp_mail_C.EventMailReceiveAll_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_mail_C::EventMailReceiveAll_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_mail_C", "EventMailReceiveAll_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_mail.bp_mail_C.EventShowGiftMsgCenter
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_mail_C::EventShowGiftMsgCenter()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_mail_C", "EventShowGiftMsgCenter");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_mail.bp_mail_C.EventShowGiftMsgCenter_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_mail_C::EventShowGiftMsgCenter_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_mail_C", "EventShowGiftMsgCenter_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -473,6 +305,174 @@ void Abp_mail_C::EventMailViewBtnClick_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_mail_C", "EventMailViewBtnClick_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_mail.bp_mail_C.EventMailClose
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_mail_C::EventMailClose()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_mail_C", "EventMailClose");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_mail.bp_mail_C.EventMailClose_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_mail_C::EventMailClose_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_mail_C", "EventMailClose_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_mail.bp_mail_C.EventMailRequestList
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_mail_C::EventMailRequestList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_mail_C", "EventMailRequestList");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_mail.bp_mail_C.EventMailRequestList_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_mail_C::EventMailRequestList_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_mail_C", "EventMailRequestList_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_mail.bp_mail_C.EventMailRead
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_mail_C::EventMailRead()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_mail_C", "EventMailRead");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_mail.bp_mail_C.EventMailRead_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_mail_C::EventMailRead_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_mail_C", "EventMailRead_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_mail.bp_mail_C.EventMailReceiveAllNext
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_mail_C::EventMailReceiveAllNext()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_mail_C", "EventMailReceiveAllNext");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_mail.bp_mail_C.EventMailReceiveAllNext_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_mail_C::EventMailReceiveAllNext_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_mail_C", "EventMailReceiveAllNext_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_mail.bp_mail_C.EventOnClickHead_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_mail_C::EventOnClickHead_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_mail_C", "EventOnClickHead_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_mail.bp_mail_C.EventOnClickHead_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_mail_C::EventOnClickHead_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_mail_C", "EventOnClickHead_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_mail.bp_mail_C.EventMailDeleteAll
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_mail_C::EventMailDeleteAll()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_mail_C", "EventMailDeleteAll");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_mail.bp_mail_C.EventMailDeleteAll_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_mail_C::EventMailDeleteAll_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_mail_C", "EventMailDeleteAll_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

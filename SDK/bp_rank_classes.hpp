@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_STRUCT_RankInfo_structs.hpp"
 #include "BP_STRUCT_RankInfoMe_structs.hpp"
+#include "BP_STRUCT_RankInfo_structs.hpp"
 #include "BP_STRUCT_RankUpdateItemInfo_structs.hpp"
 #include "Client_classes.hpp"
 
@@ -20,39 +20,41 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_rank.bp_rank_C
-// 0x0250 (0x0638 - 0x03E8)
+// 0x0258 (0x0630 - 0x03D8)
 class Abp_rank_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	class FString                                 BP_RankSelectMemberType;                           // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_RankInfo                    BP_STRUCT_RankInfo;                                // 0x0400(0x0098)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_RankInfo>            BP_ARRAY_RankList;                                 // 0x0498(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	class FString                                 BP_RankSelectType;                                 // 0x04A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_RankInfoSelfBelow1wDisplay;                     // 0x04B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_RankInfoMe                  BP_STRUCT_RankInfoMe;                              // 0x04C8(0x0098)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         BP_RankUpdateIdx;                                  // 0x0560(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_RankScrollPos;                                  // 0x0564(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_RankUpdateItemInfo          BP_STRUCT_RankUpdateItemInfo;                      // 0x0568(0x0098)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class FString                                 BP_RankRegionType;                                 // 0x0600(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_RankShowHelpContent;                            // 0x0610(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_RankShowRoleUid;                                // 0x0620(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0630(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class FString                                 BP_RankSelectType;                                 // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_RankUpdateIdx;                                  // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3F4[0x4];                                      // 0x03F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_RankShowHelpContent;                            // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_RankRegionType;                                 // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	struct FBP_STRUCT_RankInfoMe                  BP_STRUCT_RankInfoMe;                              // 0x0418(0x0098)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class FString                                 BP_RankSelectMemberType;                           // 0x04B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_RankInfo>            BP_ARRAY_RankList;                                 // 0x04C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class FString                                 BP_RankInfoSelfBelow1wDisplay;                     // 0x04D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	struct FBP_STRUCT_RankInfo                    BP_STRUCT_RankInfo;                                // 0x04E0(0x0098)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class FString                                 BP_RankShowRoleUid;                                // 0x0578(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	struct FBP_STRUCT_RankUpdateItemInfo          BP_STRUCT_RankUpdateItemInfo;                      // 0x0588(0x0098)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         BP_RankScrollPos;                                  // 0x0620(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_624[0x4];                                      // 0x0624(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0628(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventRankScrollPos();
-	void EventRankScrollPos_NoFetch();
-	void EventTestRank();
-	void EventTestRank_NoFetch();
-	void EventRankShowHelp();
-	void EventRankShowHelp_NoFetch();
 	void EventRankShowRole();
 	void EventRankShowRole_NoFetch();
-	void EventRankClose();
-	void EventRankClose_NoFetch();
+	void EventRankShowHelp();
+	void EventRankShowHelp_NoFetch();
+	void EventTestRank();
+	void EventTestRank_NoFetch();
+	void EventRankScrollPos();
+	void EventRankScrollPos_NoFetch();
 	void EventQueryRank();
 	void EventQueryRank_NoFetch();
+	void EventRankClose();
+	void EventRankClose_NoFetch();
 	void EventRankFetchInfo();
 	void EventRankFetchInfo_NoFetch();
 

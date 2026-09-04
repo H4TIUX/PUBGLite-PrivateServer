@@ -37,6 +37,20 @@ void UBP_BreatheBarWidgetADS_C::ExecuteUbergraph_BP_BreatheBarWidgetADS(int32 En
 }
 
 
+// Function BP_BreatheBarWidgetADS.BP_BreatheBarWidgetADS_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UBP_BreatheBarWidgetADS_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("BP_BreatheBarWidgetADS_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_BreatheBarWidgetADS.BP_BreatheBarWidgetADS_C.OnChangeBreatheRatio
 // (BlueprintCallable, BlueprintEvent)
 

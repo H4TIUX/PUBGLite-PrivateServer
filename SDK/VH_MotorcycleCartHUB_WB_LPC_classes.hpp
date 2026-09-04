@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass VH_MotorcycleCartHUB_WB_LPC.VH_MotorcycleCartHUB_WB_LPC_C
-// 0x0000 (0x0128 - 0x0128)
+// 0x0000 (0x0140 - 0x0140)
 class UVH_MotorcycleCartHUB_WB_LPC_C final : public USTExtraVehicleWheel
 {
 public:

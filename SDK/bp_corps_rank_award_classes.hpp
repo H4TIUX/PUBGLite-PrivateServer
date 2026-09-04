@@ -10,37 +10,37 @@
 
 #include "Basic.hpp"
 
+#include "BP_STRUCT_Corps_Rank_Award_Member1_Info_structs.hpp"
 #include "BP_STRUCT_BASE_INFO_structs.hpp"
 #include "BP_STRUCT_Corps_Rank_Award_Member2_Info_structs.hpp"
+#include "Client_classes.hpp"
 #include "BP_STRUCT_Corps_Rank_Award_Member3_Info_structs.hpp"
 #include "BP_STRUCT_CorpsAwardInfo_structs.hpp"
-#include "Client_classes.hpp"
-#include "BP_STRUCT_Corps_Rank_Award_Member1_Info_structs.hpp"
 
 
 namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_corps_rank_award.bp_corps_rank_award_C
-// 0x01B0 (0x0598 - 0x03E8)
+// 0x01B0 (0x0588 - 0x03D8)
 class Abp_corps_rank_award_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FBP_STRUCT_BASE_INFO                   BP_STRUCT_BASE_INFO;                               // 0x03F0(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FBP_STRUCT_Corps_Rank_Award_Member2_Info BP_STRUCT_Corps_Rank_Award_Member2_Info;         // 0x0440(0x0058)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FBP_STRUCT_Corps_Rank_Award_Member3_Info BP_STRUCT_Corps_Rank_Award_Member3_Info;         // 0x0498(0x0058)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FBP_STRUCT_CorpsAwardInfo              BP_STRUCT_CorpsAwardInfo;                          // 0x04F0(0x0038)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class FString                                 BP_CorpsRankAward_Player_ID;                       // 0x0528(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_Corps_Rank_Award_Member1_Info BP_STRUCT_Corps_Rank_Award_Member1_Info;         // 0x0538(0x0058)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0590(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_Corps_Rank_Award_Member1_Info BP_STRUCT_Corps_Rank_Award_Member1_Info;         // 0x03E0(0x0058)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FBP_STRUCT_BASE_INFO                   BP_STRUCT_BASE_INFO;                               // 0x0438(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FBP_STRUCT_Corps_Rank_Award_Member2_Info BP_STRUCT_Corps_Rank_Award_Member2_Info;         // 0x0488(0x0058)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FBP_STRUCT_Corps_Rank_Award_Member3_Info BP_STRUCT_Corps_Rank_Award_Member3_Info;         // 0x04E0(0x0058)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FBP_STRUCT_CorpsAwardInfo              BP_STRUCT_CorpsAwardInfo;                          // 0x0538(0x0038)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class FString                                 BP_CorpsRankAward_Player_ID;                       // 0x0570(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0580(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventCorpsRankAwardUICloseWeekSendSeason();
-	void EventCorpsRankAwardUICloseWeekSendSeason_NoFetch();
 	void EventCorpsRankAwardUIShowPlayerDetails();
 	void EventCorpsRankAwardUIShowPlayerDetails_NoFetch();
+	void EventCorpsRankAwardUICloseWeekSendSeason();
+	void EventCorpsRankAwardUICloseWeekSendSeason_NoFetch();
 	void EventCorpsRankAwardUICloseSeaon();
 	void EventCorpsRankAwardUICloseSeaon_NoFetch();
 

@@ -17,52 +17,53 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_share_result.bp_share_result_C
-// 0x0078 (0x0460 - 0x03E8)
+// 0x0080 (0x0458 - 0x03D8)
 class Abp_share_result_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	uint8                                         BP_ShareResult_TeamShowSingle : 1;                 // 0x03F0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_3F1[0x3];                                      // 0x03F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         BP_ShareResultTeamNum;                             // 0x03F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_ShareResult_FamousId;                           // 0x03F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_PlayerCount;                                    // 0x03FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 BP_PlayerIcon;                                     // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_ModeKillInfo;                                   // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_PlayerRank;                                     // 0x0420(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_KillNum;                                        // 0x0424(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 BP_ShareImagePath;                                 // 0x0428(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_ShareResult_SelectedTitle;                      // 0x0438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_SHARE_RESULT_TYPE;                              // 0x043C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 BP_PlayerName;                                     // 0x0440(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_LoginChannel;                                   // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_454[0x4];                                      // 0x0454(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0458(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	int32                                         BP_ShareResultTeamNum;                             // 0x03E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_PlayerRank;                                     // 0x03E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_ShareResult_FamousId;                           // 0x03E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3EC[0x4];                                      // 0x03EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_PlayerIcon;                                     // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_PlayerCount;                                    // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_404[0x4];                                      // 0x0404(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_PlayerName;                                     // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_ModeKillInfo;                                   // 0x0418(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_KillNum;                                        // 0x0428(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_ShareResult_SelectedTitle;                      // 0x042C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_LoginChannel;                                   // 0x0430(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_SHARE_RESULT_TYPE;                              // 0x0434(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 BP_ShareImagePath;                                 // 0x0438(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         BP_ShareResult_TeamShowSingle : 1;                 // 0x0448(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_449[0x7];                                      // 0x0449(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventShareResult_BtnShareQQZone();
-	void EventShareResult_BtnShareQQZone_NoFetch();
-	void EventShareResult_BtnShareGameZone();
-	void EventShareResult_BtnShareGameZone_NoFetch();
 	void EventShareResult_BtnShareQQTribe();
 	void EventShareResult_BtnShareQQTribe_NoFetch();
-	void EventShareResult_ShowUI_Push();
-	void EventShareResult_ShowUI_Push_NoFetch();
+	void EventShareResult_BtnShareGameZone();
+	void EventShareResult_BtnShareGameZone_NoFetch();
+	void EventShareResult_BtnShareQQZone();
+	void EventShareResult_BtnShareQQZone_NoFetch();
 	void EventShareResult_BtnShareQQFriend();
 	void EventShareResult_BtnShareQQFriend_NoFetch();
 	void EventShareResultVariable_Push();
 	void EventShareResultVariable_Push_NoFetch();
+	void EventShareResult_BtnCaptureScreen();
+	void EventShareResult_BtnCaptureScreen_NoFetch();
+	void EventShareResult_BtnShareFriend();
+	void EventShareResult_BtnShareFriend_NoFetch();
+	void EventShareResult_BtnSave();
+	void EventShareResult_BtnSave_NoFetch();
+	void EventShareResult_ShowUI_Push();
+	void EventShareResult_ShowUI_Push_NoFetch();
 	void EventShareResult_BtnShareTimeLine();
 	void EventShareResult_BtnShareTimeLine_NoFetch();
 	void EventShareResultPanelClosed();
 	void EventShareResultPanelClosed_NoFetch();
-	void EventShareResult_BtnCaptureScreen();
-	void EventShareResult_BtnCaptureScreen_NoFetch();
-	void EventShareResult_BtnSave();
-	void EventShareResult_BtnSave_NoFetch();
-	void EventShareResult_BtnShareFriend();
-	void EventShareResult_BtnShareFriend_NoFetch();
 
 public:
 	static class UClass* StaticClass()

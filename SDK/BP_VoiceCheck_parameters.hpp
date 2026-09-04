@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "BP_VoiceCheckWeatherConfig_structs.hpp"
 #include "BP_VoiceCheckType_structs.hpp"
 #include "BP_VoiceCheckData_structs.hpp"
-#include "BP_VoiceCheckWeatherConfig_structs.hpp"
 
 
 namespace SDK::Params

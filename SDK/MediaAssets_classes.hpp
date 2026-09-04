@@ -21,6 +21,31 @@
 namespace SDK
 {
 
+// Class MediaAssets.MediaSoundComponent
+// 0x0060 (0x0670 - 0x0610)
+class UMediaSoundComponent final : public USynthComponent
+{
+public:
+	EMediaSoundChannels                           Channels;                                          // 0x0610(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_614[0x4];                                      // 0x0614(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMediaPlayer*                           MediaPlayer;                                       // 0x0618(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_620[0x50];                                     // 0x0620(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MediaSoundComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MediaSoundComponent")
+	}
+	static class UMediaSoundComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMediaSoundComponent>();
+	}
+};
+
 // Class MediaAssets.MediaSource
 // 0x0008 (0x0030 - 0x0028)
 class UMediaSource : public UObject
@@ -44,6 +69,40 @@ public:
 	static class UMediaSource* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMediaSource>();
+	}
+};
+
+// Class MediaAssets.MediaTexture
+// 0x0070 (0x0138 - 0x00C8)
+class UMediaTexture final : public UTexture
+{
+public:
+	ETextureAddress                               AddressX;                                          // 0x00C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETextureAddress                               AddressY;                                          // 0x00C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         AutoClear : 1;                                     // 0x00CA(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_CB[0x1];                                       // 0x00CB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           ClearColor;                                        // 0x00CC(0x0010)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_DC[0x4];                                       // 0x00DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMediaPlayer*                           MediaPlayer;                                       // 0x00E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E8[0x50];                                      // 0x00E8(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	float GetAspectRatio() const;
+	int32 GetHeight() const;
+	int32 GetWidth() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MediaTexture")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MediaTexture")
+	}
+	static class UMediaTexture* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMediaTexture>();
 	}
 };
 
@@ -160,7 +219,7 @@ public:
 	uint8 OpenPlaylist(class UMediaPlaylist* InPlaylist);
 	uint8 OpenPlaylistIndex(class UMediaPlaylist* InPlaylist, int32 Index_0);
 	uint8 OpenSource(class UMediaSource* MediaSource);
-	uint8 OpenURL(const class FString& URL);
+	uint8 OpenUrl(const class FString& URL);
 	uint8 Pause();
 	uint8 Play();
 	uint8 Previous();
@@ -266,65 +325,6 @@ public:
 	static class UMediaPlaylist* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMediaPlaylist>();
-	}
-};
-
-// Class MediaAssets.MediaSoundComponent
-// 0x0060 (0x0670 - 0x0610)
-class UMediaSoundComponent final : public USynthComponent
-{
-public:
-	EMediaSoundChannels                           Channels;                                          // 0x0610(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_614[0x4];                                      // 0x0614(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMediaPlayer*                           MediaPlayer;                                       // 0x0618(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_620[0x50];                                     // 0x0620(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MediaSoundComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MediaSoundComponent")
-	}
-	static class UMediaSoundComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMediaSoundComponent>();
-	}
-};
-
-// Class MediaAssets.MediaTexture
-// 0x0070 (0x0138 - 0x00C8)
-class UMediaTexture final : public UTexture
-{
-public:
-	ETextureAddress                               AddressX;                                          // 0x00C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETextureAddress                               AddressY;                                          // 0x00C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         AutoClear : 1;                                     // 0x00CA(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_CB[0x1];                                       // 0x00CB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           ClearColor;                                        // 0x00CC(0x0010)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_DC[0x4];                                       // 0x00DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMediaPlayer*                           MediaPlayer;                                       // 0x00E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E8[0x50];                                      // 0x00E8(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	float GetAspectRatio() const;
-	int32 GetHeight() const;
-	int32 GetWidth() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MediaTexture")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MediaTexture")
-	}
-	static class UMediaTexture* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMediaTexture>();
 	}
 };
 

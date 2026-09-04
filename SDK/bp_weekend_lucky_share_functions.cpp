@@ -30,29 +30,29 @@ void Abp_weekend_lucky_share_C::UserConstructionScript()
 }
 
 
-// Function bp_weekend_lucky_share.bp_weekend_lucky_share_C.EventFetchInfo
+// Function bp_weekend_lucky_share.bp_weekend_lucky_share_C.EventShareWeekenSuperawardHide
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_weekend_lucky_share_C::EventFetchInfo()
+void Abp_weekend_lucky_share_C::EventShareWeekenSuperawardHide()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_weekend_lucky_share_C", "EventFetchInfo");
+		Func = GetClass()->GetFunction("bp_weekend_lucky_share_C", "EventShareWeekenSuperawardHide");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_weekend_lucky_share.bp_weekend_lucky_share_C.EventFetchInfo_NoFetch
+// Function bp_weekend_lucky_share.bp_weekend_lucky_share_C.EventShareWeekenSuperawardHide_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_weekend_lucky_share_C::EventFetchInfo_NoFetch()
+void Abp_weekend_lucky_share_C::EventShareWeekenSuperawardHide_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_weekend_lucky_share_C", "EventFetchInfo_NoFetch");
+		Func = GetClass()->GetFunction("bp_weekend_lucky_share_C", "EventShareWeekenSuperawardHide_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,6 +86,34 @@ void Abp_weekend_lucky_share_C::EventDelayOnStartShare_NoFetch()
 }
 
 
+// Function bp_weekend_lucky_share.bp_weekend_lucky_share_C.EventFetchInfo
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_weekend_lucky_share_C::EventFetchInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_weekend_lucky_share_C", "EventFetchInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_weekend_lucky_share.bp_weekend_lucky_share_C.EventFetchInfo_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_weekend_lucky_share_C::EventFetchInfo_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_weekend_lucky_share_C", "EventFetchInfo_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_weekend_lucky_share.bp_weekend_lucky_share_C.EventSetInfo_Push
 // (BlueprintCallable, BlueprintEvent)
 
@@ -109,34 +137,6 @@ void Abp_weekend_lucky_share_C::EventSetInfo_Push_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_weekend_lucky_share_C", "EventSetInfo_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_weekend_lucky_share.bp_weekend_lucky_share_C.EventShareWeekenSuperawardHide
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_weekend_lucky_share_C::EventShareWeekenSuperawardHide()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_weekend_lucky_share_C", "EventShareWeekenSuperawardHide");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_weekend_lucky_share.bp_weekend_lucky_share_C.EventShareWeekenSuperawardHide_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_weekend_lucky_share_C::EventShareWeekenSuperawardHide_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_weekend_lucky_share_C", "EventShareWeekenSuperawardHide_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

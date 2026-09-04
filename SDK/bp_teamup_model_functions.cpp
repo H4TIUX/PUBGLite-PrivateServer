@@ -30,34 +30,6 @@ void Abp_teamup_model_C::UserConstructionScript()
 }
 
 
-// Function bp_teamup_model.bp_teamup_model_C.EventSetHasGuideNewteaching_BAK
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_model_C::EventSetHasGuideNewteaching_BAK()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventSetHasGuideNewteaching_BAK");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup_model.bp_teamup_model_C.EventSetHasGuideNewteaching_BAK_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_model_C::EventSetHasGuideNewteaching_BAK_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventSetHasGuideNewteaching_BAK_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_teamup_model.bp_teamup_model_C.EventClickAutoMatch_Push
 // (BlueprintCallable, BlueprintEvent)
 
@@ -81,62 +53,6 @@ void Abp_teamup_model_C::EventClickAutoMatch_Push_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickAutoMatch_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup_model.bp_teamup_model_C.EventClickListItem_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_model_C::EventClickListItem_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickListItem_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup_model.bp_teamup_model_C.EventClickListItem_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_model_C::EventClickListItem_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickListItem_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup_model.bp_teamup_model_C.EventClickTeach_BAK_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_model_C::EventClickTeach_BAK_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickTeach_BAK_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_teamup_model.bp_teamup_model_C.EventClickTeach_BAK_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_teamup_model_C::EventClickTeach_BAK_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickTeach_BAK_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -170,57 +86,57 @@ void Abp_teamup_model_C::EventClickTraining_BAK_Push_NoFetch()
 }
 
 
-// Function bp_teamup_model.bp_teamup_model_C.EventClickRoom_Push
+// Function bp_teamup_model.bp_teamup_model_C.EventClickPerspective_Push
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_model_C::EventClickRoom_Push()
+void Abp_teamup_model_C::EventClickPerspective_Push()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickRoom_Push");
+		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickPerspective_Push");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_model.bp_teamup_model_C.EventClickRoom_Push_NoFetch
+// Function bp_teamup_model.bp_teamup_model_C.EventClickPerspective_Push_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_model_C::EventClickRoom_Push_NoFetch()
+void Abp_teamup_model_C::EventClickPerspective_Push_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickRoom_Push_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickPerspective_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_model.bp_teamup_model_C.EventAutoSelectSolo_Push
+// Function bp_teamup_model.bp_teamup_model_C.EventClickTeach_BAK_Push
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_model_C::EventAutoSelectSolo_Push()
+void Abp_teamup_model_C::EventClickTeach_BAK_Push()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventAutoSelectSolo_Push");
+		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickTeach_BAK_Push");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_model.bp_teamup_model_C.EventAutoSelectSolo_Push_NoFetch
+// Function bp_teamup_model.bp_teamup_model_C.EventClickTeach_BAK_Push_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_model_C::EventAutoSelectSolo_Push_NoFetch()
+void Abp_teamup_model_C::EventClickTeach_BAK_Push_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventAutoSelectSolo_Push_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickTeach_BAK_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -254,29 +170,29 @@ void Abp_teamup_model_C::EventFetchInfo_NoFetch()
 }
 
 
-// Function bp_teamup_model.bp_teamup_model_C.EventClickMapList_Push
+// Function bp_teamup_model.bp_teamup_model_C.EventClickModel_Push
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_model_C::EventClickMapList_Push()
+void Abp_teamup_model_C::EventClickModel_Push()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickMapList_Push");
+		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickModel_Push");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_model.bp_teamup_model_C.EventClickMapList_Push_NoFetch
+// Function bp_teamup_model.bp_teamup_model_C.EventClickModel_Push_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_model_C::EventClickMapList_Push_NoFetch()
+void Abp_teamup_model_C::EventClickModel_Push_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickMapList_Push_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickModel_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -310,57 +226,141 @@ void Abp_teamup_model_C::EventClickPlayerNum_Push_NoFetch()
 }
 
 
-// Function bp_teamup_model.bp_teamup_model_C.EventClickModel_Push
+// Function bp_teamup_model.bp_teamup_model_C.EventClickRoom_Push
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_model_C::EventClickModel_Push()
+void Abp_teamup_model_C::EventClickRoom_Push()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickModel_Push");
+		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickRoom_Push");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_model.bp_teamup_model_C.EventClickModel_Push_NoFetch
+// Function bp_teamup_model.bp_teamup_model_C.EventClickRoom_Push_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_model_C::EventClickModel_Push_NoFetch()
+void Abp_teamup_model_C::EventClickRoom_Push_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickModel_Push_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickRoom_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_model.bp_teamup_model_C.EventClickPerspective_Push
+// Function bp_teamup_model.bp_teamup_model_C.EventClickListItem_Push
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_model_C::EventClickPerspective_Push()
+void Abp_teamup_model_C::EventClickListItem_Push()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickPerspective_Push");
+		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickListItem_Push");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_teamup_model.bp_teamup_model_C.EventClickPerspective_Push_NoFetch
+// Function bp_teamup_model.bp_teamup_model_C.EventClickListItem_Push_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_teamup_model_C::EventClickPerspective_Push_NoFetch()
+void Abp_teamup_model_C::EventClickListItem_Push_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickPerspective_Push_NoFetch");
+		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickListItem_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup_model.bp_teamup_model_C.EventAutoSelectSolo_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_model_C::EventAutoSelectSolo_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventAutoSelectSolo_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup_model.bp_teamup_model_C.EventAutoSelectSolo_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_model_C::EventAutoSelectSolo_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventAutoSelectSolo_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup_model.bp_teamup_model_C.EventClickMapList_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_model_C::EventClickMapList_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickMapList_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup_model.bp_teamup_model_C.EventClickMapList_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_model_C::EventClickMapList_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventClickMapList_Push_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup_model.bp_teamup_model_C.EventSetHasGuideNewteaching_BAK
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_model_C::EventSetHasGuideNewteaching_BAK()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventSetHasGuideNewteaching_BAK");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_teamup_model.bp_teamup_model_C.EventSetHasGuideNewteaching_BAK_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_teamup_model_C::EventSetHasGuideNewteaching_BAK_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_teamup_model_C", "EventSetHasGuideNewteaching_BAK_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

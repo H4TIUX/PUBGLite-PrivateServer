@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "UMG_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -28,7 +28,7 @@ public:
 	static void GetGlobalData(class UObject* __WorldContext, class Abp_global_C** globalObj);
 	static void UpdateRankIcon(class UImage* imageObj, int32 Level, class UObject* __WorldContext);
 	static void UpdateRankName(class UTextBlock* Text, int32 Level, class UObject* __WorldContext);
-	static void OpenURL(const class FString& URL, uint8 Direction, uint8 hastoken, class UObject* __WorldContext);
+	static void OpenUrl(const class FString& URL, uint8 Direction, uint8 hastoken, class UObject* __WorldContext);
 	static void isEnglish(const class FString& Text, class UObject* __WorldContext, uint8* isEnglish_0);
 	static void GetValidString(int32 MaxLength, const class FString& Text, uint8 CanBeEnglish, uint8 CanBeNumber, uint8 CanBeSpace, uint8 CanBeChinese, uint8 ChineseSensity, class UObject* __WorldContext, class FString* validText);
 	static void BoolToVisible(uint8 visible, uint8 collapse, uint8 isButton, class UObject* __WorldContext, ESlateVisibility* Visibility);

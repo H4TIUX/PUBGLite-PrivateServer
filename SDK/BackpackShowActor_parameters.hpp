@@ -12,9 +12,9 @@
 
 #include "Basic_structs.hpp"
 #include "BP_STRUCT_Item_type_structs.hpp"
+#include "Engine_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK::Params

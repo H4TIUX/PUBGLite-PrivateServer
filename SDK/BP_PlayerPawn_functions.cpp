@@ -577,60 +577,6 @@ void ABP_PlayerPawn_C::SwitchCameraToNormal()
 }
 
 
-// Function BP_PlayerPawn.BP_PlayerPawn_C.TickParachute
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_PlayerPawn_C::TickParachute()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BP_PlayerPawn_C", "TickParachute");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerPawn.BP_PlayerPawn_C.DoMoveForward
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   Rate                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PlayerPawn_C::DoMoveForward(float Rate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BP_PlayerPawn_C", "DoMoveForward");
-
-	Params::BP_PlayerPawn_C_DoMoveForward Parms{};
-
-	Parms.Rate = Rate;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PlayerPawn.BP_PlayerPawn_C.DoMoveRight
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   Rate                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PlayerPawn_C::DoMoveRight(float Rate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("BP_PlayerPawn_C", "DoMoveRight");
-
-	Params::BP_PlayerPawn_C_DoMoveRight Parms{};
-
-	Parms.Rate = Rate;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_PlayerPawn.BP_PlayerPawn_C.StartCamShake
 // (BlueprintCallable, BlueprintEvent)
 

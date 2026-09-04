@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_STRUCT_LocalizeRes_type_structs.hpp"
 #include "Engine_structs.hpp"
+#include "BP_STRUCT_LocalizeRes_type_structs.hpp"
 
 
 namespace SDK::Params

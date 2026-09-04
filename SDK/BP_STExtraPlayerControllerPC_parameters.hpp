@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "InputCore_structs.hpp"
 #include "Engine_structs.hpp"
+#include "InputCore_structs.hpp"
 #include "ShadowTrackerExtra_structs.hpp"
 
 
@@ -19,14 +19,13 @@ namespace SDK::Params
 {
 
 // Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.ExecuteUbergraph_BP_STExtraPlayerControllerPC
-// 0x03B0 (0x03B0 - 0x0000)
+// 0x03C0 (0x03C0 - 0x0000)
 struct BP_STExtraPlayerControllerPC_C_ExecuteUbergraph_BP_STExtraPlayerControllerPC final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_IsSpectating_ReturnValue : 1;             // 0x0004(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKey                                   K2Node_InputActionEvent_Key9;                      // 0x0008(0x0018)(HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKey                                   K2Node_InputActionEvent_Key30;                     // 0x0008(0x0018)(HasGetValueTypeHash)
 	struct FKey                                   K2Node_InputActionEvent_Key8;                      // 0x0020(0x0018)(HasGetValueTypeHash)
 	struct FKey                                   ___struct_Variable;                                // 0x0038(0x0018)(HasGetValueTypeHash)
 	struct FKey                                   K2Node_InputActionEvent_Key7;                      // 0x0050(0x0018)(HasGetValueTypeHash)
@@ -35,64 +34,68 @@ public:
 	struct FKey                                   K2Node_InputActionEvent_Key5;                      // 0x0098(0x0018)(HasGetValueTypeHash)
 	struct FKey                                   K2Node_InputActionEvent_Key4;                      // 0x00B0(0x0018)(HasGetValueTypeHash)
 	struct FKey                                   K2Node_InputActionEvent_Key3;                      // 0x00C8(0x0018)(HasGetValueTypeHash)
-	struct FKey                                   K2Node_InputActionEvent_Key2;                      // 0x00E0(0x0018)(HasGetValueTypeHash)
-	struct FKey                                   ___struct_Variable3;                               // 0x00F8(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   ___struct_Variable3;                               // 0x00E0(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   K2Node_InputActionEvent_Key2;                      // 0x00F8(0x0018)(HasGetValueTypeHash)
 	struct FKey                                   K2Node_InputActionEvent_Key;                       // 0x0110(0x0018)(HasGetValueTypeHash)
-	struct FKey                                   K2Node_InputActionEvent_Key11;                     // 0x0128(0x0018)(HasGetValueTypeHash)
-	struct FKey                                   K2Node_InputActionEvent_Key12;                     // 0x0140(0x0018)(HasGetValueTypeHash)
-	struct FKey                                   K2Node_InputActionEvent_Key13;                     // 0x0158(0x0018)(HasGetValueTypeHash)
-	struct FKey                                   K2Node_InputActionEvent_Key14;                     // 0x0170(0x0018)(HasGetValueTypeHash)
-	uint8                                         CallFunc_GetUseGlobalVoice_ReturnValue : 1;        // 0x0188(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_GetUseTeamVoice_ReturnValue : 1;          // 0x0189(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_18A[0x6];                                      // 0x018A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKey                                   K2Node_InputActionEvent_Key15;                     // 0x0190(0x0018)(HasGetValueTypeHash)
-	struct FKey                                   K2Node_InputActionEvent_Key16;                     // 0x01A8(0x0018)(HasGetValueTypeHash)
-	uint8                                         CallFunc_IsVoiceOutputMute_ReturnValue : 1;        // 0x01C0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_Not_PreBool_ReturnValue : 1;              // 0x01C1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_IsMasterSoundMute_ReturnValue : 1;        // 0x01C2(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_Not_PreBool_ReturnValue2 : 1;             // 0x01C3(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_IsVoiceInputMute_ReturnValue : 1;         // 0x01C4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_GetUsePushToTalk_ReturnValue : 1;         // 0x01C5(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_Not_PreBool_ReturnValue3 : 1;             // 0x01C6(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_IsVoiceInputMute_ReturnValue2 : 1;        // 0x01C7(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_BooleanAND_ReturnValue : 1;               // 0x01C8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_Not_PreBool_ReturnValue4 : 1;             // 0x01C9(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_GetUsePushToTalk_ReturnValue2 : 1;        // 0x01CA(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_1CB[0x5];                                      // 0x01CB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKey                                   K2Node_InputActionEvent_Key17;                     // 0x01D0(0x0018)(HasGetValueTypeHash)
-	uint8                                         CallFunc_BooleanAND_ReturnValue2 : 1;              // 0x01E8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_1E9[0x7];                                      // 0x01E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKey                                   K2Node_InputActionEvent_Key18;                     // 0x01F0(0x0018)(HasGetValueTypeHash)
-	struct FKey                                   K2Node_InputActionEvent_Key19;                     // 0x0208(0x0018)(HasGetValueTypeHash)
-	struct FKey                                   ___struct_Variable4;                               // 0x0220(0x0018)(HasGetValueTypeHash)
-	struct FKey                                   K2Node_InputActionEvent_Key20;                     // 0x0238(0x0018)(HasGetValueTypeHash)
-	struct FKey                                   K2Node_InputActionEvent_Key21;                     // 0x0250(0x0018)(HasGetValueTypeHash)
-	struct FKey                                   K2Node_InputActionEvent_Key22;                     // 0x0268(0x0018)(HasGetValueTypeHash)
-	struct FKey                                   K2Node_InputActionEvent_Key23;                     // 0x0280(0x0018)(HasGetValueTypeHash)
-	struct FKey                                   K2Node_InputActionEvent_Key24;                     // 0x0298(0x0018)(HasGetValueTypeHash)
-	struct FKey                                   K2Node_InputActionEvent_Key25;                     // 0x02B0(0x0018)(HasGetValueTypeHash)
-	struct FKey                                   K2Node_InputActionEvent_Key26;                     // 0x02C8(0x0018)(HasGetValueTypeHash)
-	struct FKey                                   K2Node_InputActionEvent_Key27;                     // 0x02E0(0x0018)(HasGetValueTypeHash)
-	struct FKey                                   ___struct_Variable5;                               // 0x02F8(0x0018)(HasGetValueTypeHash)
-	struct FKey                                   K2Node_InputActionEvent_Key28;                     // 0x0310(0x0018)(HasGetValueTypeHash)
-	ETslInputModes                                CallFunc_GetTslInputMode_ReturnValue;              // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_EqualEqual_ByteByte_ReturnValue : 1;      // 0x0329(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_32A[0x6];                                      // 0x032A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKey                                   K2Node_InputActionEvent_Key10;                     // 0x0330(0x0018)(HasGetValueTypeHash)
-	uint8                                         CallFunc_IsSpectator_ReturnValue : 1;              // 0x0348(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_349[0x7];                                      // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKey                                   K2Node_InputActionEvent_Key29;                     // 0x0350(0x0018)(HasGetValueTypeHash)
-	uint8                                         CallFunc_IsObserving_ReturnValue : 1;              // 0x0368(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_IsGameplayFinished_bGameplayFinish : 1;   // 0x0369(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_IsGameplayFinished_bGameplayFinish2 : 1;  // 0x036A(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_IsGameEnded_bGameEnded : 1;               // 0x036B(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x036C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_36D[0x3];                                      // 0x036D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0370(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate2;             // 0x0380(0x0010)(ZeroConstructor, NoDestructor)
-	struct FKey                                   K2Node_InputActionEvent_Key30;                     // 0x0390(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   K2Node_InputActionEvent_Key10;                     // 0x0128(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   K2Node_InputActionEvent_Key11;                     // 0x0140(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   K2Node_InputActionEvent_Key12;                     // 0x0158(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   K2Node_InputActionEvent_Key13;                     // 0x0170(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   K2Node_InputActionEvent_Key14;                     // 0x0188(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   K2Node_InputActionEvent_Key9;                      // 0x01A0(0x0018)(HasGetValueTypeHash)
+	uint8                                         CallFunc_GetUseGlobalVoice_ReturnValue : 1;        // 0x01B8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_GetUseTeamVoice_ReturnValue : 1;          // 0x01B9(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_1BA[0x6];                                      // 0x01BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKey                                   K2Node_InputActionEvent_Key15;                     // 0x01C0(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   K2Node_InputActionEvent_Key16;                     // 0x01D8(0x0018)(HasGetValueTypeHash)
+	uint8                                         CallFunc_IsVoiceOutputMute_ReturnValue : 1;        // 0x01F0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_Not_PreBool_ReturnValue : 1;              // 0x01F1(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsMasterSoundMute_ReturnValue : 1;        // 0x01F2(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_Not_PreBool_ReturnValue2 : 1;             // 0x01F3(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsVoiceInputMute_ReturnValue : 1;         // 0x01F4(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_GetUsePushToTalk_ReturnValue : 1;         // 0x01F5(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_Not_PreBool_ReturnValue3 : 1;             // 0x01F6(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsVoiceInputMute_ReturnValue2 : 1;        // 0x01F7(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_BooleanAND_ReturnValue : 1;               // 0x01F8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_Not_PreBool_ReturnValue4 : 1;             // 0x01F9(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_GetUsePushToTalk_ReturnValue2 : 1;        // 0x01FA(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_1FB[0x5];                                      // 0x01FB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKey                                   K2Node_InputActionEvent_Key17;                     // 0x0200(0x0018)(HasGetValueTypeHash)
+	uint8                                         CallFunc_BooleanAND_ReturnValue2 : 1;              // 0x0218(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_219[0x7];                                      // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKey                                   K2Node_InputActionEvent_Key18;                     // 0x0220(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   ___struct_Variable4;                               // 0x0238(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   K2Node_InputActionEvent_Key19;                     // 0x0250(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   K2Node_InputActionEvent_Key20;                     // 0x0268(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   K2Node_InputActionEvent_Key21;                     // 0x0280(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   K2Node_InputActionEvent_Key22;                     // 0x0298(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   K2Node_InputActionEvent_Key23;                     // 0x02B0(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   K2Node_InputActionEvent_Key24;                     // 0x02C8(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   K2Node_InputActionEvent_Key25;                     // 0x02E0(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   K2Node_InputActionEvent_Key26;                     // 0x02F8(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   ___struct_Variable5;                               // 0x0310(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   K2Node_InputActionEvent_Key27;                     // 0x0328(0x0018)(HasGetValueTypeHash)
+	ETslInputModes                                CallFunc_GetTslInputMode_ReturnValue;              // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_EqualEqual_ByteByte_ReturnValue : 1;      // 0x0341(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_342[0x6];                                      // 0x0342(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKey                                   K2Node_InputActionEvent_Key28;                     // 0x0348(0x0018)(HasGetValueTypeHash)
+	uint8                                         CallFunc_IsSpectator_ReturnValue : 1;              // 0x0360(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_361[0x7];                                      // 0x0361(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKey                                   K2Node_InputActionEvent_Key29;                     // 0x0368(0x0018)(HasGetValueTypeHash)
+	uint8                                         CallFunc_IsObserving_ReturnValue : 1;              // 0x0380(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsGameplayFinished_bGameplayFinish : 1;   // 0x0381(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsGameplayFinished_bGameplayFinish2 : 1;  // 0x0382(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsGameEnded_bGameEnded : 1;               // 0x0383(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0384(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_385[0x3];                                      // 0x0385(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0388(0x0010)(ZeroConstructor, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate2;             // 0x0398(0x0010)(ZeroConstructor, NoDestructor)
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x03A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_IsGameEnded_bGameEnded2 : 1;              // 0x03AC(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsSpectating_ReturnValue : 1;             // 0x03AD(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_3AE[0x2];                                      // 0x03AE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class USTExtraGameEvents*                     CallFunc_GetGameEvents_ReturnValue;                // 0x03B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x03B8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 };
 
 // Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.ReceiveEndPlay
@@ -111,9 +114,9 @@ public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
 
-// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_ToggleMap_K2Node_InputActionEvent_31
+// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_ToggleMissionList_K2Node_InputActionEvent_31
 // 0x0018 (0x0018 - 0x0000)
-struct BP_STExtraPlayerControllerPC_C_InpActEvt_ToggleMap_K2Node_InputActionEvent_31 final
+struct BP_STExtraPlayerControllerPC_C_InpActEvt_ToggleMissionList_K2Node_InputActionEvent_31 final
 {
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
@@ -127,9 +130,9 @@ public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
 
-// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_ToggleMissionList_K2Node_InputActionEvent_33
+// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_ToggleMap_K2Node_InputActionEvent_33
 // 0x0018 (0x0018 - 0x0000)
-struct BP_STExtraPlayerControllerPC_C_InpActEvt_ToggleMissionList_K2Node_InputActionEvent_33 final
+struct BP_STExtraPlayerControllerPC_C_InpActEvt_ToggleMap_K2Node_InputActionEvent_33 final
 {
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
@@ -247,9 +250,9 @@ public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
 
-// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_TestGoFightingState_K2Node_InputActionEvent_48
+// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_ToggleEmoteWheel_K2Node_InputActionEvent_48
 // 0x0018 (0x0018 - 0x0000)
-struct BP_STExtraPlayerControllerPC_C_InpActEvt_TestGoFightingState_K2Node_InputActionEvent_48 final
+struct BP_STExtraPlayerControllerPC_C_InpActEvt_ToggleEmoteWheel_K2Node_InputActionEvent_48 final
 {
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
@@ -263,57 +266,57 @@ public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
 
-// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_ToggleEmoteWheel_K2Node_InputActionEvent_50
+// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_SetMapMarkerAtCurrentPosition_K2Node_InputActionEvent_50
 // 0x0018 (0x0018 - 0x0000)
-struct BP_STExtraPlayerControllerPC_C_InpActEvt_ToggleEmoteWheel_K2Node_InputActionEvent_50 final
+struct BP_STExtraPlayerControllerPC_C_InpActEvt_SetMapMarkerAtCurrentPosition_K2Node_InputActionEvent_50 final
 {
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
 
-// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_SetMapMarkerAtCurrentPosition_K2Node_InputActionEvent_51
+// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_DeleteMyMarker_K2Node_InputActionEvent_51
 // 0x0018 (0x0018 - 0x0000)
-struct BP_STExtraPlayerControllerPC_C_InpActEvt_SetMapMarkerAtCurrentPosition_K2Node_InputActionEvent_51 final
+struct BP_STExtraPlayerControllerPC_C_InpActEvt_DeleteMyMarker_K2Node_InputActionEvent_51 final
 {
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
 
-// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_DeleteMyMarker_K2Node_InputActionEvent_52
+// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_ToggleUI_K2Node_InputActionEvent_52
 // 0x0018 (0x0018 - 0x0000)
-struct BP_STExtraPlayerControllerPC_C_InpActEvt_DeleteMyMarker_K2Node_InputActionEvent_52 final
+struct BP_STExtraPlayerControllerPC_C_InpActEvt_ToggleUI_K2Node_InputActionEvent_52 final
 {
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
 
-// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_ToggleUI_K2Node_InputActionEvent_53
+// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_ToggleMuteMasterVolume_K2Node_InputActionEvent_53
 // 0x0018 (0x0018 - 0x0000)
-struct BP_STExtraPlayerControllerPC_C_InpActEvt_ToggleUI_K2Node_InputActionEvent_53 final
+struct BP_STExtraPlayerControllerPC_C_InpActEvt_ToggleMuteMasterVolume_K2Node_InputActionEvent_53 final
 {
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
 
-// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_ToggleMuteMasterVolume_K2Node_InputActionEvent_54
+// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_ToggleMuteVoiceChat_K2Node_InputActionEvent_54
 // 0x0018 (0x0018 - 0x0000)
-struct BP_STExtraPlayerControllerPC_C_InpActEvt_ToggleMuteMasterVolume_K2Node_InputActionEvent_54 final
+struct BP_STExtraPlayerControllerPC_C_InpActEvt_ToggleMuteVoiceChat_K2Node_InputActionEvent_54 final
 {
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
 
-// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_ToggleMuteVoiceChat_K2Node_InputActionEvent_55
+// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_SwitchVoiceChannel_K2Node_InputActionEvent_55
 // 0x0018 (0x0018 - 0x0000)
-struct BP_STExtraPlayerControllerPC_C_InpActEvt_ToggleMuteVoiceChat_K2Node_InputActionEvent_55 final
+struct BP_STExtraPlayerControllerPC_C_InpActEvt_SwitchVoiceChannel_K2Node_InputActionEvent_55 final
 {
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
 
-// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_SwitchVoiceChannel_K2Node_InputActionEvent_56
+// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_PushToTalk_K2Node_InputActionEvent_56
 // 0x0018 (0x0018 - 0x0000)
-struct BP_STExtraPlayerControllerPC_C_InpActEvt_SwitchVoiceChannel_K2Node_InputActionEvent_56 final
+struct BP_STExtraPlayerControllerPC_C_InpActEvt_PushToTalk_K2Node_InputActionEvent_56 final
 {
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
@@ -327,59 +330,66 @@ public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
 
-// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_PushToTalk_K2Node_InputActionEvent_58
+// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_TestGoNextState_K2Node_InputActionEvent_58
 // 0x0018 (0x0018 - 0x0000)
-struct BP_STExtraPlayerControllerPC_C_InpActEvt_PushToTalk_K2Node_InputActionEvent_58 final
+struct BP_STExtraPlayerControllerPC_C_InpActEvt_TestGoNextState_K2Node_InputActionEvent_58 final
 {
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
 
-// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_TestGoNextState_K2Node_InputActionEvent_59
+// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.InpActEvt_TestGoFightingState_K2Node_InputActionEvent_59
 // 0x0018 (0x0018 - 0x0000)
-struct BP_STExtraPlayerControllerPC_C_InpActEvt_TestGoNextState_K2Node_InputActionEvent_59 final
+struct BP_STExtraPlayerControllerPC_C_InpActEvt_TestGoFightingState_K2Node_InputActionEvent_59 final
 {
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
 
 // Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.ToggleInventory
-// 0x0028 (0x0028 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct BP_STExtraPlayerControllerPC_C_ToggleInventory final
 {
 public:
-	class AHUD*                                   CallFunc_GetHUD_ReturnValue;                       // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ASurviveHUD*                            K2Node_DynamicCast_AsSurvive_HUD;                  // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         K2Node_DynamicCast_bSuccess : 1;                   // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_Not_PreBool_ReturnValue : 1;              // 0x0011(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_IsSpectator_ReturnValue : 1;              // 0x0012(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_Not_PreBool_ReturnValue2 : 1;             // 0x0013(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	int32                                         CallFunc_GetViewportSize_SizeX;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetViewportSize_SizeY;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Divide_IntInt_ReturnValue;                // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Divide_IntInt_ReturnValue2;               // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.ToggleMap
-// 0x0040 (0x0040 - 0x0000)
-struct BP_STExtraPlayerControllerPC_C_ToggleMap final
-{
-public:
-	class AHUD*                                   CallFunc_GetHUD_ReturnValue;                       // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ASurviveHUD*                            K2Node_DynamicCast_AsSurvive_HUD;                  // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         K2Node_DynamicCast_bSuccess : 1;                   // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_IsObserverPlayerListVisible_bResultVisible : 1; // 0x0011(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         CallFunc_IsObserving_ReturnValue : 1;              // 0x0012(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class AHUD*                                   CallFunc_GetHUD_ReturnValue2;                      // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ASurviveHUD*                            K2Node_DynamicCast_AsSurvive_HUD2;                 // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         K2Node_DynamicCast_bSuccess2 : 1;                  // 0x0028(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	class USTExtraGameEvents*                     CallFunc_GetGameEvents_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USTExtraGameEvents*                     CallFunc_GetGameEvents_ReturnValue2;               // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AHUD*                                   CallFunc_GetHUD_ReturnValue;                       // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ASurviveHUD*                            K2Node_DynamicCast_AsSurvive_HUD;                  // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         K2Node_DynamicCast_bSuccess : 1;                   // 0x0028(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 	uint8                                         CallFunc_Not_PreBool_ReturnValue : 1;              // 0x0029(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         CallFunc_IsSpectator_ReturnValue : 1;              // 0x002A(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_Not_PreBool_ReturnValue2 : 1;             // 0x002B(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
 	int32                                         CallFunc_GetViewportSize_SizeX;                    // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetViewportSize_SizeY;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Divide_IntInt_ReturnValue;                // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Divide_IntInt_ReturnValue2;               // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.ToggleMap
+// 0x0050 (0x0050 - 0x0000)
+struct BP_STExtraPlayerControllerPC_C_ToggleMap final
+{
+public:
+	class USTExtraGameEvents*                     CallFunc_GetGameEvents_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AHUD*                                   CallFunc_GetHUD_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_IsValid_ReturnValue : 1;                  // 0x0010(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ASurviveHUD*                            K2Node_DynamicCast_AsSurvive_HUD;                  // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         K2Node_DynamicCast_bSuccess : 1;                   // 0x0020(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsObserverPlayerListVisible_bResultVisible : 1; // 0x0021(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_IsObserving_ReturnValue : 1;              // 0x0022(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class AHUD*                                   CallFunc_GetHUD_ReturnValue2;                      // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ASurviveHUD*                            K2Node_DynamicCast_AsSurvive_HUD2;                 // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         K2Node_DynamicCast_bSuccess2 : 1;                  // 0x0038(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         CallFunc_Not_PreBool_ReturnValue : 1;              // 0x0039(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetViewportSize_SizeX;                    // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetViewportSize_SizeY;                    // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Divide_IntInt_ReturnValue;                // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Divide_IntInt_ReturnValue2;               // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 // Function BP_STExtraPlayerControllerPC.BP_STExtraPlayerControllerPC_C.HideInventory

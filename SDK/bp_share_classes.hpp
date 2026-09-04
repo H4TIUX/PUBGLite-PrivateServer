@@ -18,17 +18,19 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_share.bp_share_C
-// 0x0060 (0x0448 - 0x03E8)
+// 0x0060 (0x0438 - 0x03D8)
 class Abp_share_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	class FString                                 BP_Share_Image_Path;                               // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FBP_STRUCT_ShareRoleData               BP_STRUCT_ShareRoleData;                           // 0x0400(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class FString                                 BP_Share_Image_Path;                               // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	struct FBP_STRUCT_ShareRoleData               BP_STRUCT_ShareRoleData;                           // 0x03F0(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0430(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
+	void EventSaveLocalFail();
+	void EventSaveLocalFail_NoFetch();
 	void EventShare_Push();
 	void EventShare_Push_NoFetch();
 	void EventShareToFriend();
@@ -37,24 +39,22 @@ public:
 	void EventStructShare_NoFetch();
 	void EventClickClose();
 	void EventClickClose_NoFetch();
-	void EventClickSaveLocal();
-	void EventClickSaveLocal_NoFetch();
-	void EventClickWXFrientBtn();
-	void EventClickWXFrientBtn_NoFetch();
-	void EventClickQQZoneBtn();
-	void EventClickQQZoneBtn_NoFetch();
-	void EventSaveLocalSuccess();
-	void EventSaveLocalSuccess_NoFetch();
 	void EventShareFetchInfo();
 	void EventShareFetchInfo_NoFetch();
-	void EventSaveLocalFail();
-	void EventSaveLocalFail_NoFetch();
 	void EventGetRoleData();
 	void EventGetRoleData_NoFetch();
-	void EventClickQQFrientBtn();
-	void EventClickQQFrientBtn_NoFetch();
 	void EventClickWXZoneBtn();
 	void EventClickWXZoneBtn_NoFetch();
+	void EventClickQQFrientBtn();
+	void EventClickQQFrientBtn_NoFetch();
+	void EventSaveLocalSuccess();
+	void EventSaveLocalSuccess_NoFetch();
+	void EventClickSaveLocal();
+	void EventClickSaveLocal_NoFetch();
+	void EventClickQQZoneBtn();
+	void EventClickQQZoneBtn_NoFetch();
+	void EventClickWXFrientBtn();
+	void EventClickWXFrientBtn_NoFetch();
 
 public:
 	static class UClass* StaticClass()

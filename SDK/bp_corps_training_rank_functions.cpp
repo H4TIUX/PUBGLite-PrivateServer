@@ -30,85 +30,29 @@ void Abp_corps_training_rank_C::UserConstructionScript()
 }
 
 
-// Function bp_corps_training_rank.bp_corps_training_rank_C.EventCorpsTrainingRankUIHide
+// Function bp_corps_training_rank.bp_corps_training_rank_C.EventCorpsTrainingRankUIUpdate
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_training_rank_C::EventCorpsTrainingRankUIHide()
+void Abp_corps_training_rank_C::EventCorpsTrainingRankUIUpdate()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_training_rank_C", "EventCorpsTrainingRankUIHide");
+		Func = GetClass()->GetFunction("bp_corps_training_rank_C", "EventCorpsTrainingRankUIUpdate");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_corps_training_rank.bp_corps_training_rank_C.EventCorpsTrainingRankUIHide_NoFetch
+// Function bp_corps_training_rank.bp_corps_training_rank_C.EventCorpsTrainingRankUIUpdate_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_training_rank_C::EventCorpsTrainingRankUIHide_NoFetch()
+void Abp_corps_training_rank_C::EventCorpsTrainingRankUIUpdate_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_training_rank_C", "EventCorpsTrainingRankUIHide_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_training_rank.bp_corps_training_rank_C.EventCorpsTrainingRankUIAddFriend
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_training_rank_C::EventCorpsTrainingRankUIAddFriend()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_training_rank_C", "EventCorpsTrainingRankUIAddFriend");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_training_rank.bp_corps_training_rank_C.EventCorpsTrainingRankUIAddFriend_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_training_rank_C::EventCorpsTrainingRankUIAddFriend_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_training_rank_C", "EventCorpsTrainingRankUIAddFriend_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_training_rank.bp_corps_training_rank_C.EventCorpsTrainingRankUIItemMenu
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_training_rank_C::EventCorpsTrainingRankUIItemMenu()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_training_rank_C", "EventCorpsTrainingRankUIItemMenu");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_corps_training_rank.bp_corps_training_rank_C.EventCorpsTrainingRankUIItemMenu_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_corps_training_rank_C::EventCorpsTrainingRankUIItemMenu_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_training_rank_C", "EventCorpsTrainingRankUIItemMenu_NoFetch");
+		Func = GetClass()->GetFunction("bp_corps_training_rank_C", "EventCorpsTrainingRankUIUpdate_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -142,29 +86,29 @@ void Abp_corps_training_rank_C::EventCorpsTrainingRankUIChat_NoFetch()
 }
 
 
-// Function bp_corps_training_rank.bp_corps_training_rank_C.EventCorpsTrainingRankUIUpdate
+// Function bp_corps_training_rank.bp_corps_training_rank_C.EventCorpsTrainingRankUIAddFriend
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_training_rank_C::EventCorpsTrainingRankUIUpdate()
+void Abp_corps_training_rank_C::EventCorpsTrainingRankUIAddFriend()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_training_rank_C", "EventCorpsTrainingRankUIUpdate");
+		Func = GetClass()->GetFunction("bp_corps_training_rank_C", "EventCorpsTrainingRankUIAddFriend");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function bp_corps_training_rank.bp_corps_training_rank_C.EventCorpsTrainingRankUIUpdate_NoFetch
+// Function bp_corps_training_rank.bp_corps_training_rank_C.EventCorpsTrainingRankUIAddFriend_NoFetch
 // (BlueprintCallable, BlueprintEvent)
 
-void Abp_corps_training_rank_C::EventCorpsTrainingRankUIUpdate_NoFetch()
+void Abp_corps_training_rank_C::EventCorpsTrainingRankUIAddFriend_NoFetch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_corps_training_rank_C", "EventCorpsTrainingRankUIUpdate_NoFetch");
+		Func = GetClass()->GetFunction("bp_corps_training_rank_C", "EventCorpsTrainingRankUIAddFriend_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -193,6 +137,62 @@ void Abp_corps_training_rank_C::EventCorpsTrainingRankUIShowRoleInfo_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_corps_training_rank_C", "EventCorpsTrainingRankUIShowRoleInfo_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_training_rank.bp_corps_training_rank_C.EventCorpsTrainingRankUIHide
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_training_rank_C::EventCorpsTrainingRankUIHide()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_training_rank_C", "EventCorpsTrainingRankUIHide");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_training_rank.bp_corps_training_rank_C.EventCorpsTrainingRankUIHide_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_training_rank_C::EventCorpsTrainingRankUIHide_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_training_rank_C", "EventCorpsTrainingRankUIHide_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_training_rank.bp_corps_training_rank_C.EventCorpsTrainingRankUIItemMenu
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_training_rank_C::EventCorpsTrainingRankUIItemMenu()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_training_rank_C", "EventCorpsTrainingRankUIItemMenu");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_corps_training_rank.bp_corps_training_rank_C.EventCorpsTrainingRankUIItemMenu_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_corps_training_rank_C::EventCorpsTrainingRankUIItemMenu_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_corps_training_rank_C", "EventCorpsTrainingRankUIItemMenu_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

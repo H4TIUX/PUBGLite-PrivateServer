@@ -17,10 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_DJ_Sniper_EQ_Pickup.BP_DJ_Sniper_EQ_Pickup_C
-// 0x0008 (0x0568 - 0x0560)
+// 0x0010 (0x0568 - 0x0558)
 class ABP_DJ_Sniper_EQ_Pickup_C final : public APickUpWrapperActor
 {
 public:
+	uint8                                         Pad_558[0x8];                                      // 0x0558(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStaticMeshComponent*                   SM_DJ_Sniper_EQ;                                   // 0x0560(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:

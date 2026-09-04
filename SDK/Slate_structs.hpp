@@ -17,56 +17,6 @@
 namespace SDK
 {
 
-// Enum Slate.ETextFlowDirection
-// NumValues: 0x0004
-enum class ETextFlowDirection : uint8
-{
-	Auto                                     = 0,
-	LeftToRight                              = 1,
-	RightToLeft                              = 2,
-	ETextFlowDirection_MAX                   = 3,
-};
-
-// Enum Slate.ETextWrappingPolicy
-// NumValues: 0x0004
-enum class ETextWrappingPolicy : uint8
-{
-	DefaultWrapping                          = 0,
-	AllowPerCharacterWrapping                = 1,
-	AllowPerWordHyphenWrapping               = 2,
-	ETextWrappingPolicy_MAX                  = 3,
-};
-
-// Enum Slate.ETextVerticalJustify
-// NumValues: 0x0004
-enum class ETextVerticalJustify : uint8
-{
-	Top                                      = 0,
-	Middle                                   = 1,
-	Down                                     = 2,
-	ETextVerticalJustify_MAX                 = 3,
-};
-
-// Enum Slate.ETextJustify
-// NumValues: 0x0004
-enum class ETextJustify : uint8
-{
-	Left                                     = 0,
-	Center                                   = 1,
-	Right                                    = 2,
-	ETextJustify_MAX                         = 3,
-};
-
-// Enum Slate.EJoystickOperatingMode
-// NumValues: 0x0004
-enum class EJoystickOperatingMode : uint8
-{
-	JSNormal                                 = 0,
-	JSEightDirection                         = 1,
-	JSEasyGoStraight                         = 2,
-	EJoystickOperatingMode_MAX               = 3,
-};
-
 // Enum Slate.EHitTestAreaPolicyType
 // NumValues: 0x0003
 enum class EHitTestAreaPolicyType : uint8
@@ -156,6 +106,56 @@ enum class EListItemAlignment : uint8
 	CenterAligned                            = 5,
 	Fill                                     = 6,
 	EListItemAlignment_MAX                   = 7,
+};
+
+// Enum Slate.EJoystickOperatingMode
+// NumValues: 0x0004
+enum class EJoystickOperatingMode : uint8
+{
+	JSNormal                                 = 0,
+	JSEightDirection                         = 1,
+	JSEasyGoStraight                         = 2,
+	EJoystickOperatingMode_MAX               = 3,
+};
+
+// Enum Slate.ETextFlowDirection
+// NumValues: 0x0004
+enum class ETextFlowDirection : uint8
+{
+	Auto                                     = 0,
+	LeftToRight                              = 1,
+	RightToLeft                              = 2,
+	ETextFlowDirection_MAX                   = 3,
+};
+
+// Enum Slate.ETextWrappingPolicy
+// NumValues: 0x0004
+enum class ETextWrappingPolicy : uint8
+{
+	DefaultWrapping                          = 0,
+	AllowPerCharacterWrapping                = 1,
+	AllowPerWordHyphenWrapping               = 2,
+	ETextWrappingPolicy_MAX                  = 3,
+};
+
+// Enum Slate.ETextVerticalJustify
+// NumValues: 0x0004
+enum class ETextVerticalJustify : uint8
+{
+	Top                                      = 0,
+	Middle                                   = 1,
+	Down                                     = 2,
+	ETextVerticalJustify_MAX                 = 3,
+};
+
+// Enum Slate.ETextJustify
+// NumValues: 0x0004
+enum class ETextJustify : uint8
+{
+	Left                                     = 0,
+	Center                                   = 1,
+	Right                                    = 2,
+	ETextJustify_MAX                         = 3,
 };
 
 // Enum Slate.EMultipleKeyBindingIndex

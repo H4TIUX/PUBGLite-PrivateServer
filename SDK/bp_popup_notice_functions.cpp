@@ -114,34 +114,6 @@ void Abp_popup_notice_C::EventShowOpenSpeakerAtFirst_Push_NoFetch()
 }
 
 
-// Function bp_popup_notice.bp_popup_notice_C.EventFetchInfo
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_popup_notice_C::EventFetchInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_popup_notice_C", "EventFetchInfo");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_popup_notice.bp_popup_notice_C.EventFetchInfo_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_popup_notice_C::EventFetchInfo_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_popup_notice_C", "EventFetchInfo_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_popup_notice.bp_popup_notice_C.EventShrinkMessageBoxStack
 // (BlueprintCallable, BlueprintEvent)
 
@@ -165,6 +137,34 @@ void Abp_popup_notice_C::EventShrinkMessageBoxStack_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_popup_notice_C", "EventShrinkMessageBoxStack_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_popup_notice.bp_popup_notice_C.EventFetchInfo
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_popup_notice_C::EventFetchInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_popup_notice_C", "EventFetchInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_popup_notice.bp_popup_notice_C.EventFetchInfo_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_popup_notice_C::EventFetchInfo_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_popup_notice_C", "EventFetchInfo_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

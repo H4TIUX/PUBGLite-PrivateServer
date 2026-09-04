@@ -18,37 +18,38 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_master_apply_list.bp_master_apply_list_C
-// 0x0130 (0x0518 - 0x03E8)
+// 0x0138 (0x0510 - 0x03D8)
 class Abp_master_apply_list_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_MasterApplyInfo>     BP_ARRAY_Master_ApplyList;                         // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBP_STRUCT_MasterApplyInfo             BP_STRUCT_MasterApplyInfo;                         // 0x0400(0x00F8)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	uint8                                         BP_MasterMasterApplistIsShow : 1;                  // 0x04F8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         BP_CurrentMasterCheck : 1;                         // 0x04F9(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_4FA[0x6];                                      // 0x04FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_CurrentMasterApplistUID;                        // 0x0500(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0510(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	uint8                                         BP_CurrentMasterCheck : 1;                         // 0x03E0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_3E1[0x7];                                      // 0x03E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBP_STRUCT_MasterApplyInfo             BP_STRUCT_MasterApplyInfo;                         // 0x03E8(0x00F8)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_MasterApplyInfo>     BP_ARRAY_Master_ApplyList;                         // 0x04E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	class FString                                 BP_CurrentMasterApplistUID;                        // 0x04F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         BP_MasterMasterApplistIsShow : 1;                  // 0x0500(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_501[0x7];                                      // 0x0501(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0508(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
-	void EventMasterApplyClickHead();
-	void EventMasterApplyClickHead_NoFetch();
-	void EventMasterApplyOk();
-	void EventMasterApplyOk_NoFetch();
-	void EventMasterApplyAddFriend();
-	void EventMasterApplyAddFriend_NoFetch();
-	void EventMasterApplyRefuse();
-	void EventMasterApplyRefuse_NoFetch();
-	void EventFetchMasterApplyList();
-	void EventFetchMasterApplyList_NoFetch();
-	void EventMasterApplyList_Push();
-	void EventMasterApplyList_Push_NoFetch();
 	void EventMasterApplyListUIHide();
 	void EventMasterApplyListUIHide_NoFetch();
 	void EventMasterApplyHarass();
 	void EventMasterApplyHarass_NoFetch();
+	void EventMasterApplyAddFriend();
+	void EventMasterApplyAddFriend_NoFetch();
+	void EventMasterApplyClickHead();
+	void EventMasterApplyClickHead_NoFetch();
+	void EventFetchMasterApplyList();
+	void EventFetchMasterApplyList_NoFetch();
+	void EventMasterApplyRefuse();
+	void EventMasterApplyRefuse_NoFetch();
+	void EventMasterApplyOk();
+	void EventMasterApplyOk_NoFetch();
+	void EventMasterApplyList_Push();
+	void EventMasterApplyList_Push_NoFetch();
 
 public:
 	static class UClass* StaticClass()

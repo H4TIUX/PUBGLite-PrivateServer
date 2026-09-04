@@ -58,34 +58,6 @@ void Abp_weekend_superaward_share_C::EventFetchInfo_NoFetch()
 }
 
 
-// Function bp_weekend_superaward_share.bp_weekend_superaward_share_C.EventSetInfo_Push
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_weekend_superaward_share_C::EventSetInfo_Push()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_weekend_superaward_share_C", "EventSetInfo_Push");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_weekend_superaward_share.bp_weekend_superaward_share_C.EventSetInfo_Push_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_weekend_superaward_share_C::EventSetInfo_Push_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_weekend_superaward_share_C", "EventSetInfo_Push_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function bp_weekend_superaward_share.bp_weekend_superaward_share_C.EventShareWeekenSuperawardHide
 // (BlueprintCallable, BlueprintEvent)
 
@@ -109,6 +81,34 @@ void Abp_weekend_superaward_share_C::EventShareWeekenSuperawardHide_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_weekend_superaward_share_C", "EventShareWeekenSuperawardHide_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_weekend_superaward_share.bp_weekend_superaward_share_C.EventSetInfo_Push
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_weekend_superaward_share_C::EventSetInfo_Push()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_weekend_superaward_share_C", "EventSetInfo_Push");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_weekend_superaward_share.bp_weekend_superaward_share_C.EventSetInfo_Push_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_weekend_superaward_share_C::EventSetInfo_Push_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_weekend_superaward_share_C", "EventSetInfo_Push_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

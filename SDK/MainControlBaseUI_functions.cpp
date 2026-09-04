@@ -37,6 +37,176 @@ void UMainControlBaseUI_C::ExecuteUbergraph_MainControlBaseUI(int32 EntryPoint)
 }
 
 
+// Function MainControlBaseUI.MainControlBaseUI_C.OnDeath_이벤트_0
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ASTExtraBaseCharacter*            DeadCharacter                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AController*                      Killer                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                KillingHitInfo                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// const struct FVector&                   KillingHitImpulseDir                                   (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           KillingHitDamageType                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UMainControlBaseUI_C::OnDeath_이벤트_0(class ASTExtraBaseCharacter* DeadCharacter, class AController* Killer, class AActor* DamageCauser, const struct FHitResult& KillingHitInfo, const struct FVector& KillingHitImpulseDir, class UClass* KillingHitDamageType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlBaseUI_C", "OnDeath_이벤트_0");
+
+	Params::MainControlBaseUI_C_OnDeath_이벤트_0 Parms{};
+
+	Parms.DeadCharacter = DeadCharacter;
+	Parms.Killer = Killer;
+	Parms.DamageCauser = DamageCauser;
+	Parms.KillingHitInfo = std::move(KillingHitInfo);
+	Parms.KillingHitImpulseDir = std::move(KillingHitImpulseDir);
+	Parms.KillingHitDamageType = KillingHitDamageType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MainControlBaseUI.MainControlBaseUI_C.OnMapUIDrawAirplaneRoute
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlBaseUI_C::OnMapUIDrawAirplaneRoute()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlBaseUI_C", "OnMapUIDrawAirplaneRoute");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlBaseUI.MainControlBaseUI_C.OnForceEndConsumeItemUI
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlBaseUI_C::OnForceEndConsumeItemUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlBaseUI_C", "OnForceEndConsumeItemUI");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlBaseUI.MainControlBaseUI_C.OnRefreshFlyNum
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlBaseUI_C::OnRefreshFlyNum()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlBaseUI_C", "OnRefreshFlyNum");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlBaseUI.MainControlBaseUI_C.OnShowAirplane
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlBaseUI_C::OnShowAirplane()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlBaseUI_C", "OnShowAirplane");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlBaseUI.MainControlBaseUI_C.OnHideQuickChatMenu
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlBaseUI_C::OnHideQuickChatMenu()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlBaseUI_C", "OnHideQuickChatMenu");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlBaseUI.MainControlBaseUI_C.OnGamemodeStateChangedEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlBaseUI_C::OnGamemodeStateChangedEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlBaseUI_C", "OnGamemodeStateChangedEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlBaseUI.MainControlBaseUI_C.OnMapUIHideAirplaneRoute
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlBaseUI_C::OnMapUIHideAirplaneRoute()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlBaseUI_C", "OnMapUIHideAirplaneRoute");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlBaseUI.MainControlBaseUI_C.OnHideAirplane
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlBaseUI_C::OnHideAirplane()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlBaseUI_C", "OnHideAirplane");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlBaseUI.MainControlBaseUI_C.OnNoAmmunition
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlBaseUI_C::OnNoAmmunition()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlBaseUI_C", "OnNoAmmunition");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlBaseUI.MainControlBaseUI_C.OnPlayerControllerStateChanged
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlBaseUI_C::OnPlayerControllerStateChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlBaseUI_C", "OnPlayerControllerStateChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function MainControlBaseUI.MainControlBaseUI_C.OnChangeGameModeStateEvent
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -519,42 +689,6 @@ void UMainControlBaseUI_C::BndEvt__button_speakerteamonly_K2Node_ComponentBoundE
 }
 
 
-// Function MainControlBaseUI.MainControlBaseUI_C.SetSettingControlUI
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UMainControlBaseUI_C::SetSettingControlUI()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("MainControlBaseUI_C", "SetSettingControlUI");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MainControlBaseUI.MainControlBaseUI_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UMainControlBaseUI_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("MainControlBaseUI_C", "Tick");
-
-	Params::MainControlBaseUI_C_Tick Parms{};
-
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InDeltaTime = InDeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function MainControlBaseUI.MainControlBaseUI_C.BndEvt__Button_Microphone_K2Node_ComponentBoundEvent_101_OnButtonClickedEvent__DelegateSignature
 // (BlueprintEvent)
 
@@ -673,6 +807,20 @@ void UMainControlBaseUI_C::DisplayNextTips()
 }
 
 
+// Function MainControlBaseUI.MainControlBaseUI_C.SetSettingControlUI
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UMainControlBaseUI_C::SetSettingControlUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlBaseUI_C", "SetSettingControlUI");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function MainControlBaseUI.MainControlBaseUI_C.ItemUpdated
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -693,17 +841,25 @@ void UMainControlBaseUI_C::ItemUpdated(const struct FItemDefineID& DefineID)
 }
 
 
-// Function MainControlBaseUI.MainControlBaseUI_C.Destruct
+// Function MainControlBaseUI.MainControlBaseUI_C.Tick
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UMainControlBaseUI_C::Destruct()
+void UMainControlBaseUI_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("MainControlBaseUI_C", "Destruct");
+		Func = GetClass()->GetFunction("MainControlBaseUI_C", "Tick");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::MainControlBaseUI_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -749,15 +905,15 @@ void UMainControlBaseUI_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_81_OnButt
 }
 
 
-// Function MainControlBaseUI.MainControlBaseUI_C.ShowCircleInfoTips
-// (BlueprintCallable, BlueprintEvent)
+// Function MainControlBaseUI.MainControlBaseUI_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UMainControlBaseUI_C::ShowCircleInfoTips()
+void UMainControlBaseUI_C::Destruct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("MainControlBaseUI_C", "ShowCircleInfoTips");
+		Func = GetClass()->GetFunction("MainControlBaseUI_C", "Destruct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -883,6 +1039,42 @@ void UMainControlBaseUI_C::BndEvt__Button_21_K2Node_ComponentBoundEvent_210_OnBu
 }
 
 
+// Function MainControlBaseUI.MainControlBaseUI_C.ShowCircleInfoTips
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlBaseUI_C::ShowCircleInfoTips()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlBaseUI_C", "ShowCircleInfoTips");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlBaseUI.MainControlBaseUI_C.OnReceiveAirAttackBroadcast
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EAirAttackInfo                          airattacktype                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   waveindex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UMainControlBaseUI_C::OnReceiveAirAttackBroadcast(EAirAttackInfo airattacktype, int32 waveindex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlBaseUI_C", "OnReceiveAirAttackBroadcast");
+
+	Params::MainControlBaseUI_C_OnReceiveAirAttackBroadcast Parms{};
+
+	Parms.airattacktype = airattacktype;
+	Parms.waveindex = waveindex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function MainControlBaseUI.MainControlBaseUI_C.CustomEvent_0
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -923,6 +1115,20 @@ void UMainControlBaseUI_C::SprintAnimFinished()
 }
 
 
+// Function MainControlBaseUI.MainControlBaseUI_C.EnterJumping
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlBaseUI_C::EnterJumping()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlBaseUI_C", "EnterJumping");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function MainControlBaseUI.MainControlBaseUI_C.OnDamageToOther
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -943,20 +1149,6 @@ void UMainControlBaseUI_C::OnDamageToOther(float damageToOther)
 }
 
 
-// Function MainControlBaseUI.MainControlBaseUI_C.EnterJumping
-// (BlueprintCallable, BlueprintEvent)
-
-void UMainControlBaseUI_C::EnterJumping()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("MainControlBaseUI_C", "EnterJumping");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function MainControlBaseUI.MainControlBaseUI_C.ClearCurFatalDamagetWidget
 // (BlueprintCallable, BlueprintEvent)
 
@@ -966,6 +1158,20 @@ void UMainControlBaseUI_C::ClearCurFatalDamagetWidget()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("MainControlBaseUI_C", "ClearCurFatalDamagetWidget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlBaseUI.MainControlBaseUI_C.AddOneNewItem
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainControlBaseUI_C::AddOneNewItem()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlBaseUI_C", "AddOneNewItem");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -988,20 +1194,6 @@ void UMainControlBaseUI_C::GameStartCountDown(float CountDownTime)
 	Parms.CountDownTime = CountDownTime;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MainControlBaseUI.MainControlBaseUI_C.AddOneNewItem
-// (BlueprintCallable, BlueprintEvent)
-
-void UMainControlBaseUI_C::AddOneNewItem()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("MainControlBaseUI_C", "AddOneNewItem");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -1112,28 +1304,6 @@ void UMainControlBaseUI_C::OnPlayerNumChange()
 		Func = GetClass()->GetFunction("MainControlBaseUI_C", "OnPlayerNumChange");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MainControlBaseUI.MainControlBaseUI_C.OnReceiveAirAttackBroadcast
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EAirAttackInfo                          airattacktype                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   waveindex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UMainControlBaseUI_C::OnReceiveAirAttackBroadcast(EAirAttackInfo airattacktype, int32 waveindex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("MainControlBaseUI_C", "OnReceiveAirAttackBroadcast");
-
-	Params::MainControlBaseUI_C_OnReceiveAirAttackBroadcast Parms{};
-
-	Parms.airattacktype = airattacktype;
-	Parms.waveindex = waveindex;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -1949,15 +2119,15 @@ struct FEventReply UMainControlBaseUI_C::On_Image_SettingConsoleBtn_MouseButtonD
 }
 
 
-// Function MainControlBaseUI.MainControlBaseUI_C.onplayercontrollerstatechanged
+// Function MainControlBaseUI.MainControlBaseUI_C.ControllerStateChanged
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UMainControlBaseUI_C::onplayercontrollerstatechanged()
+void UMainControlBaseUI_C::ControllerStateChanged()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = GetClass()->GetFunction("MainControlBaseUI_C", "onplayercontrollerstatechanged");
+		Func = GetClass()->GetFunction("MainControlBaseUI_C", "ControllerStateChanged");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2174,27 +2344,6 @@ void UMainControlBaseUI_C::DisplayGameTipWithMsgIDAndParam()
 		Func = GetClass()->GetFunction("MainControlBaseUI_C", "DisplayGameTipWithMsgIDAndParam");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MainControlBaseUI.MainControlBaseUI_C.GetEquipItemDataTableRowMap
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// TMap<int32, struct FBP_STRUCT_Item_type>*DataMap                                                (Parm, OutParm, ZeroConstructor)
-
-void UMainControlBaseUI_C::GetEquipItemDataTableRowMap(TMap<int32, struct FBP_STRUCT_Item_type>* DataMap)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("MainControlBaseUI_C", "GetEquipItemDataTableRowMap");
-
-	Params::MainControlBaseUI_C_GetEquipItemDataTableRowMap Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (DataMap != nullptr)
-		*DataMap = std::move(Parms.DataMap);
 }
 
 
@@ -3278,6 +3427,34 @@ void UMainControlBaseUI_C::SetHiddenHitNav()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("MainControlBaseUI_C", "SetHiddenHitNav");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlBaseUI.MainControlBaseUI_C.SetHitNavColor
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UMainControlBaseUI_C::SetHitNavColor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlBaseUI_C", "SetHitNavColor");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainControlBaseUI.MainControlBaseUI_C.CheckEquipItemData
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UMainControlBaseUI_C::CheckEquipItemData()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("MainControlBaseUI_C", "CheckEquipItemData");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -58,6 +58,34 @@ void Abp_week_signup_C::EventWeekSignUpHide_NoFetch()
 }
 
 
+// Function bp_week_signup.bp_week_signup_C.EventWeekSignUpInit
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_week_signup_C::EventWeekSignUpInit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_week_signup_C", "EventWeekSignUpInit");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function bp_week_signup.bp_week_signup_C.EventWeekSignUpInit_NoFetch
+// (BlueprintCallable, BlueprintEvent)
+
+void Abp_week_signup_C::EventWeekSignUpInit_NoFetch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = GetClass()->GetFunction("bp_week_signup_C", "EventWeekSignUpInit_NoFetch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function bp_week_signup.bp_week_signup_C.EventWeekSignPlatform_FetchInfo
 // (BlueprintCallable, BlueprintEvent)
 
@@ -109,34 +137,6 @@ void Abp_week_signup_C::EventWeekSignUpReq_NoFetch()
 
 	if (Func == nullptr)
 		Func = GetClass()->GetFunction("bp_week_signup_C", "EventWeekSignUpReq_NoFetch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_week_signup.bp_week_signup_C.EventWeekSignUpInit
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_week_signup_C::EventWeekSignUpInit()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_week_signup_C", "EventWeekSignUpInit");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function bp_week_signup.bp_week_signup_C.EventWeekSignUpInit_NoFetch
-// (BlueprintCallable, BlueprintEvent)
-
-void Abp_week_signup_C::EventWeekSignUpInit_NoFetch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = GetClass()->GetFunction("bp_week_signup_C", "EventWeekSignUpInit_NoFetch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

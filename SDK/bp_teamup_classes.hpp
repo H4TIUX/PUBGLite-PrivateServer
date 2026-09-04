@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "BP_STRUCT_TopTipRefuseInfo_structs.hpp"
 #include "BP_STRUCT_TeamUpMenuInfo_structs.hpp"
 #include "BP_STRUCT_TopTipProfileInfo_structs.hpp"
-#include "BP_STRUCT_TopTipRefuseInfo_structs.hpp"
 #include "Client_classes.hpp"
 
 
@@ -20,146 +20,143 @@ namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_teamup.bp_teamup_C
-// 0x02F0 (0x06D8 - 0x03E8)
+// 0x02E8 (0x06C0 - 0x03D8)
 class Abp_teamup_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	class FString                                 TeamUp_Host_ID;                                    // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 TEAMUP_CHS_NAME_DOUBLE;                            // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 TEAMUP_CHS_NAME_SOLO;                              // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_TopTip_ClickHeadID;                             // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	uint8                                         TeamUp_IsSelfHost : 1;                             // 0x0430(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_431[0x7];                                      // 0x0431(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 TEAMUP_APPLY_TIP;                                  // 0x0438(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         TeamUp_Invite_Apply_Type;                          // 0x0448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TeamUp_Change_Game_Type;                           // 0x044C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TeamUp_Change_Team_Type;                           // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_454[0x4];                                      // 0x0454(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 TeamUp_Inviter_Name;                               // 0x0458(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 TeamUp_Applyer_Name;                               // 0x0468(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         TeamUp_Count_Down;                                 // 0x0478(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47C[0x4];                                      // 0x047C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 TeamUp_Click_Player_ID;                            // 0x0480(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         TeamUp_Will_Change_Fill;                           // 0x0490(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Teamup_Show_NewteachingGuide : 1;                  // 0x0494(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         BP_DestinyIsLock : 1;                              // 0x0495(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_496[0x2];                                      // 0x0496(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_TeamUpMenuInfo              BP_STRUCT_TeamUpMenuInfo;                          // 0x0498(0x0070)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         TeamUp_CrtTeam_Count;                              // 0x0508(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50C[0x4];                                      // 0x050C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 TeamUp_Quick_Msg_Content;                          // 0x0510(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_TeamUpMenuInfo>      BP_ARRAY_TeamUpMenuInfoList;                       // 0x0520(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FBP_STRUCT_TopTipProfileInfo           BP_STRUCT_TopTipProfileInfo;                       // 0x0530(0x0078)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class FString                                 BP_TopTipApplyMessage;                             // 0x05A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FBP_STRUCT_TopTipRefuseInfo>    BP_ARRAY_TopTipRefuseInfos;                        // 0x05B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	uint8                                         TeamUp_IS_LOCK_SOLO : 1;                           // 0x05C8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         TeamUP_Shield_Lock_Double : 1;                     // 0x05C9(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         TeamUp_IS_LOCK_DOUBLE : 1;                         // 0x05CA(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_5CB[0x1];                                      // 0x05CB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         TeamUp_Team_Type;                                  // 0x05CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 TEAMUP_APPLY_TIMEOUT_TIP;                          // 0x05D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	uint8                                         TeamUp_Click_Player_IS_FRIEND : 1;                 // 0x05E0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_5E1[0x3];                                      // 0x05E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         TeamUp_GameType;                                   // 0x05E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         TeamUp_Is_Matching : 1;                            // 0x05E8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_5E9[0x3];                                      // 0x05E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         TEAMUP_TEAM_TYPE_DOUBLE;                           // 0x05EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TeamUp_Invite_GameType;                            // 0x05F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F4[0x4];                                      // 0x05F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 TeamUp_Quick_Msg_GID;                              // 0x05F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	uint8                                         TeamUP_Shield_Lock_Solo : 1;                       // 0x0608(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_609[0x7];                                      // 0x0609(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 TEAMUP_CHS_NAME_QUAD;                              // 0x0610(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 TEAMUP_INVITE_TIP;                                 // 0x0620(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 TeamUp_Click_Player_Name;                          // 0x0630(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 TeamUp_My_User_ID;                                 // 0x0640(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	uint8                                         TeamUp_Click_Switch_Camera : 1;                    // 0x0650(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_651[0x3];                                      // 0x0651(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         TeamUp_Click_Switch_Camera_Time;                   // 0x0654(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         TeamUP_Shield_Lock_Quad : 1;                       // 0x0658(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_659[0x7];                                      // 0x0659(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBP_STRUCT_TopTipRefuseInfo            BP_STRUCT_TopTipRefuseInfo;                        // 0x0660(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class FString                                 TEAMUP_CHS_NAME_NONE;                              // 0x0670(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         TEAMUP_TEAM_TYPE_SOLO;                             // 0x0680(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_684[0x4];                                      // 0x0684(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 TeamUp_CrtTeam_ID;                                 // 0x0688(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         TEAMUP_TEAM_TYPE_QUAD;                             // 0x0698(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_69C[0x4];                                      // 0x069C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 TEAMUP_INVITE_TIMEOUT_TIP;                         // 0x06A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	uint8                                         TeamUp_Auto_Refuse : 1;                            // 0x06B0(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_6B1[0x3];                                      // 0x06B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         TeamUp_Fill;                                       // 0x06B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         TeamUp_IS_LOCK_QUAD : 1;                           // 0x06B8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         TeamUp_AutoMatch : 1;                              // 0x06B9(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
-	uint8                                         Pad_6BA[0x6];                                      // 0x06BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 TeamUp_Team_Type_Name;                             // 0x06C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x06D0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_TopTipRefuseInfo            BP_STRUCT_TopTipRefuseInfo;                        // 0x03E0(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class FString                                 TEAMUP_CHS_NAME_SOLO;                              // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         TeamUp_IsSelfHost : 1;                             // 0x0400(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_401[0x3];                                      // 0x0401(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         TeamUp_Change_Game_Type;                           // 0x0404(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 TeamUp_Quick_Msg_Content;                          // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         TeamUp_AutoMatch : 1;                              // 0x0418(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_419[0x7];                                      // 0x0419(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 TeamUp_Team_Type_Name;                             // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         TeamUp_Invite_Apply_Type;                          // 0x0430(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_434[0x4];                                      // 0x0434(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 TEAMUP_APPLY_TIMEOUT_TIP;                          // 0x0438(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 TeamUp_Applyer_Name;                               // 0x0448(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         TeamUp_IS_LOCK_SOLO : 1;                           // 0x0458(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         TeamUp_IS_LOCK_DOUBLE : 1;                         // 0x0459(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_45A[0x6];                                      // 0x045A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 TEAMUP_INVITE_TIP;                                 // 0x0460(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         TeamUp_Click_Switch_Camera : 1;                    // 0x0470(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_471[0x7];                                      // 0x0471(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 TEAMUP_CHS_NAME_DOUBLE;                            // 0x0478(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 TeamUp_Click_Player_Name;                          // 0x0488(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 TeamUp_Quick_Msg_GID;                              // 0x0498(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         TEAMUP_TEAM_TYPE_DOUBLE;                           // 0x04A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         TeamUp_Is_Matching : 1;                            // 0x04AC(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_4AD[0x3];                                      // 0x04AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         TeamUp_GameType;                                   // 0x04B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TeamUp_Invite_GameType;                            // 0x04B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         TeamUP_Shield_Lock_Quad : 1;                       // 0x04B8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_4B9[0x7];                                      // 0x04B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 TeamUp_Inviter_Name;                               // 0x04C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         TeamUp_Count_Down;                                 // 0x04D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4D4[0x4];                                      // 0x04D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 TEAMUP_INVITE_TIMEOUT_TIP;                         // 0x04D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_TopTip_ClickHeadID;                             // 0x04E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         TeamUp_Click_Player_IS_FRIEND : 1;                 // 0x04F8(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_4F9[0x3];                                      // 0x04F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         TeamUp_Team_Type;                                  // 0x04FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBP_STRUCT_TeamUpMenuInfo              BP_STRUCT_TeamUpMenuInfo;                          // 0x0500(0x0070)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_TeamUpMenuInfo>      BP_ARRAY_TeamUpMenuInfoList;                       // 0x0570(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	uint8                                         Teamup_Show_NewteachingGuide : 1;                  // 0x0580(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_581[0x3];                                      // 0x0581(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         TEAMUP_TEAM_TYPE_SOLO;                             // 0x0584(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBP_STRUCT_TopTipProfileInfo           BP_STRUCT_TopTipProfileInfo;                       // 0x0588(0x0078)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FBP_STRUCT_TopTipRefuseInfo>    BP_ARRAY_TopTipRefuseInfos;                        // 0x0600(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	uint8                                         BP_DestinyIsLock : 1;                              // 0x0610(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         TeamUp_IS_LOCK_QUAD : 1;                           // 0x0611(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_612[0x6];                                      // 0x0612(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 TEAMUP_CHS_NAME_QUAD;                              // 0x0618(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         TeamUP_Shield_Lock_Solo : 1;                       // 0x0628(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         TeamUP_Shield_Lock_Double : 1;                     // 0x0629(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         TeamUp_Auto_Refuse : 1;                            // 0x062A(0x0001)(BitIndex: 0xFF, PropSize: 0x0001 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor))
+	uint8                                         Pad_62B[0x1];                                      // 0x062B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         TEAMUP_TEAM_TYPE_QUAD;                             // 0x062C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TeamUp_Fill;                                       // 0x0630(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TeamUp_Will_Change_Fill;                           // 0x0634(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TeamUp_CrtTeam_Count;                              // 0x0638(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_63C[0x4];                                      // 0x063C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 TeamUp_CrtTeam_ID;                                 // 0x0640(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 TeamUp_Host_ID;                                    // 0x0650(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_TopTipApplyMessage;                             // 0x0660(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 TeamUp_My_User_ID;                                 // 0x0670(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 TeamUp_Click_Player_ID;                            // 0x0680(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 TEAMUP_APPLY_TIP;                                  // 0x0690(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         TeamUp_Click_Switch_Camera_Time;                   // 0x06A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TeamUp_Change_Team_Type;                           // 0x06A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 TEAMUP_CHS_NAME_NONE;                              // 0x06A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x06B8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
+	void EventTeamUpClickHead();
+	void EventTeamUpClickHead_NoFetch();
 	void EventTeamUpSelectRefuseInfo();
 	void EventTeamUpSelectRefuseInfo_NoFetch();
-	void EventTeamUpFailOnMatching();
-	void EventTeamUpFailOnMatching_NoFetch();
-	void EventFetchTeamUpInfo();
-	void EventFetchTeamUpInfo_NoFetch();
 	void EventTeamUpEnterTrainingMode();
 	void EventTeamUpEnterTrainingMode_NoFetch();
-	void EventSetHasGuideNewteaching();
-	void EventSetHasGuideNewteaching_NoFetch();
 	void EventTeamUpUpdateClickPlayerInfo();
 	void EventTeamUpUpdateClickPlayerInfo_NoFetch();
-	void EventTeamUpApplyForbid();
-	void EventTeamUpApplyForbid_NoFetch();
-	void EventShowTopTip();
-	void EventShowTopTip_NoFetch();
-	void EventTeamUpChangeLeader();
-	void EventTeamUpChangeLeader_NoFetch();
-	void EventTeamUpClickQuit();
-	void EventTeamUpClickQuit_NoFetch();
-	void EventTeamUpClickPlayerInfo();
-	void EventTeamUpClickPlayerInfo_NoFetch();
-	void EventTeamUpLeaveTeam();
-	void EventTeamUpLeaveTeam_NoFetch();
 	void EventTeamUpClickKick();
 	void EventTeamUpClickKick_NoFetch();
+	void EventTeamUpClickAutoMatchBtn();
+	void EventTeamUpClickAutoMatchBtn_NoFetch();
 	void EventTeamUpClickExpand();
 	void EventTeamUpClickExpand_NoFetch();
+	void EventTeamUpChangeLeader();
+	void EventTeamUpChangeLeader_NoFetch();
+	void EventTeamUpInviteApplyPermit();
+	void EventTeamUpInviteApplyPermit_NoFetch();
 	void EventTeamUpAddFriend();
 	void EventTeamUpAddFriend_NoFetch();
-	void EventTeamUpNoRightForMatching();
-	void EventTeamUpNoRightForMatching_NoFetch();
-	void EventTeamUpChangeTeamType();
-	void EventTeamUpChangeTeamType_NoFetch();
 	void EventTeamUpNoHostRight();
 	void EventTeamUpNoHostRight_NoFetch();
+	void EventTeamUpClickCreateRoomBtn();
+	void EventTeamUpClickCreateRoomBtn_NoFetch();
+	void EventTeamUpFailOnMatching();
+	void EventTeamUpFailOnMatching_NoFetch();
+	void EventTeamUpNoRightForMatching();
+	void EventTeamUpNoRightForMatching_NoFetch();
+	void EventFetchTeamUpInfo();
+	void EventFetchTeamUpInfo_NoFetch();
+	void EventFetchInfo();
+	void EventFetchInfo_NoFetch();
 	void EventTeamUpUI_Push();
 	void EventTeamUpUI_Push_NoFetch();
 	void EventTeamUpClickTrainingBtn();
 	void EventTeamUpClickTrainingBtn_NoFetch();
 	void EventTeamUpApplyPermit();
 	void EventTeamUpApplyPermit_NoFetch();
+	void EventTeamUpLeaveTeam();
+	void EventTeamUpLeaveTeam_NoFetch();
 	void EventTeamUpInviteApplyRefuse();
 	void EventTeamUpInviteApplyRefuse_NoFetch();
 	void EventTeamUpInviteApplyAutoRefuse();
 	void EventTeamUpInviteApplyAutoRefuse_NoFetch();
-	void EventTeamUpInviteApplyPermit();
-	void EventTeamUpInviteApplyPermit_NoFetch();
+	void EventTeamUpClickQuit();
+	void EventTeamUpClickQuit_NoFetch();
+	void EventTeamUpDestinyLimit();
+	void EventTeamUpDestinyLimit_NoFetch();
 	void EventTeamUpChangeRingGameType();
 	void EventTeamUpChangeRingGameType_NoFetch();
 	void EventTeamUpChangeClassicGameType();
 	void EventTeamUpChangeClassicGameType_NoFetch();
-	void EventTeamUpDestinyLimit();
-	void EventTeamUpDestinyLimit_NoFetch();
-	void EventTeamUpClickHead();
-	void EventTeamUpClickHead_NoFetch();
-	void EventFetchInfo();
-	void EventFetchInfo_NoFetch();
-	void EventTeamUpClickCreateRoomBtn();
-	void EventTeamUpClickCreateRoomBtn_NoFetch();
-	void EventTeamUpClickAutoMatchBtn();
-	void EventTeamUpClickAutoMatchBtn_NoFetch();
+	void EventShowTopTip();
+	void EventShowTopTip_NoFetch();
+	void EventTeamUpChangeTeamType();
+	void EventTeamUpChangeTeamType_NoFetch();
+	void EventSetHasGuideNewteaching();
+	void EventSetHasGuideNewteaching_NoFetch();
+	void EventTeamUpClickPlayerInfo();
+	void EventTeamUpClickPlayerInfo_NoFetch();
+	void EventTeamUpApplyForbid();
+	void EventTeamUpApplyForbid_NoFetch();
 
 public:
 	static class UClass* StaticClass()

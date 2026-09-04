@@ -10,24 +10,24 @@
 
 #include "Basic.hpp"
 
-#include "Client_classes.hpp"
-#include "BP_STRUCT_DropItem_structs.hpp"
 #include "BP_STRUCT_ActiveAwardItem_structs.hpp"
+#include "BP_STRUCT_DropItem_structs.hpp"
+#include "Client_classes.hpp"
 
 
 namespace SDK
 {
 
 // ScriptBlueprintGeneratedClass bp_common_treasurebox_popup.bp_common_treasurebox_popup_C
-// 0x0050 (0x0438 - 0x03E8)
+// 0x0050 (0x0428 - 0x03D8)
 class Abp_common_treasurebox_popup_C final : public ALuaClassObj
 {
 public:
-	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FBP_STRUCT_DropItem                    BP_STRUCT_DropItem;                                // 0x03F0(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FBP_STRUCT_ActiveAwardItem             BP_STRUCT_ActiveAwardItem;                         // 0x0400(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class FString                                 BP_TitleName_String;                               // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0430(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScriptContextComponent*                Generated_ScriptContext;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FBP_STRUCT_ActiveAwardItem             BP_STRUCT_ActiveAwardItem;                         // 0x03E0(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FBP_STRUCT_DropItem                    BP_STRUCT_DropItem;                                // 0x0400(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class FString                                 BP_TitleName_String;                               // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0420(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();

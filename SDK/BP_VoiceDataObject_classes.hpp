@@ -47,7 +47,7 @@ public:
 	void UpdateChekcVehicleMove();
 	void UpdateWaeponCheck();
 	void InitSubList();
-	void SetCheckData(int32 Index_0, const struct FVector& Postion, float CheckLength, class ASTExtraBaseCharacter* nowPlayer, class ASTExtraShootWeapon* nowWeapon, class ASTExtraVehicleBase* nowVehicle);
+	void SetCheckData(int32 Index_0, const struct FVector& postion, float CheckLength, class ASTExtraBaseCharacter* nowPlayer, class ASTExtraShootWeapon* nowWeapon, class ASTExtraVehicleBase* nowVehicle);
 	void SetSubObjectData(float nowScale, const struct FVector& nowPos, class UBP_VoiceDataSubObject_C* subObject, float MaxCheckLength);
 
 public:
