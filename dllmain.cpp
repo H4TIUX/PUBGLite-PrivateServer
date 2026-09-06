@@ -3299,7 +3299,7 @@ void ServerTeleportAllPlayersToLoc()
     }
 }
 
-int MatrixEffect()
+void MatrixEffect()
 {
     srand((unsigned)time(nullptr));
 
