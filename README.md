@@ -1,7 +1,7 @@
 ## PUBGLite-PrivateServer
 Experimental PUBG PC Lite Open Source Private Server.
 
-OG:BG Discord: https://discord.gg/VQCTHh6wMB
+OG:BG Discord: https://discord.gg/Qx9Cqx4VEq 
 OG:BG Telegram: https://t.me/ogbattlegrounds
 Stable releases are thoroughly stress tested on our public server before every source code release. Staging releases include changes we haven't tested enough, but that work.
 To play online with other players, join the Discord or Telegram link above. 
