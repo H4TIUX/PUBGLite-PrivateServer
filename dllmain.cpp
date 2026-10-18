@@ -1,6 +1,4 @@
-﻿#ifndef NOMINMAX
-#define NOMINMAX
-#endif
+﻿#define NOMINMAX
 
 #include <Windows.h>
 #include <wininet.h>
@@ -36,6 +34,8 @@
 
 //#include"characterCore.hpp"
 
+static HMODULE g_hModule = nullptr;
+
 #define PI 3.14159265358979323846f
 
 using namespace SDK;
@@ -53,8 +53,11 @@ volatile bool HOST_UMP_SPAWN = 0;
 volatile bool client_character_change = 0;
 
 volatile bool bot_follow_test = 0;
+volatile bool gRequestBuildingRefresh = 0;
+volatile bool gRequestErangelLoot = 0;
 
 volatile bool serverPanelInitialized = 0;
+volatile bool bIsLootFinished = 0;
 
 int gLastTeamID = 0;
 
@@ -193,6 +196,81 @@ typedef struct CharacterPlayerData_
 
 static CharacterPlayerData g_Players[MAX_PLAYERS];
 static CRITICAL_SECTION g_Lock;
+
+static bool s_VisualWrappersInitialized = false;
+static SDK::UClass* s_BaseWrapper = nullptr;
+
+// Weapons
+static SDK::UClass* s_AUG = nullptr;        // AR (SM_M416 mesh)
+static SDK::UClass* s_Groza = nullptr;      // AR / SMG (SM_Groza mesh)
+static SDK::UClass* s_M249 = nullptr;       // LMG (SM_M249 mesh)
+static SDK::UClass* s_AWM = nullptr;        // Sniper (SM_AWM mesh)
+static SDK::UClass* s_M24 = nullptr;        // Sniper (SM_M24 mesh)
+static SDK::UClass* s_Mk14 = nullptr;       // DMR (SM_Mk14 mesh)
+static SDK::UClass* s_Kar98 = nullptr;
+static SDK::UClass* s_SKS = nullptr;
+static SDK::UClass* s_Mini14 = nullptr;
+static SDK::UClass* s_SLR = nullptr;
+static SDK::UClass* s_M416 = nullptr;
+static SDK::UClass* s_AKM = nullptr;
+static SDK::UClass* s_SCAR = nullptr;
+static SDK::UClass* s_Beryl = nullptr;
+static SDK::UClass* s_UMP = nullptr;
+static SDK::UClass* s_Uzi = nullptr;
+static SDK::UClass* s_Vector = nullptr;
+static SDK::UClass* s_Tommy = nullptr;
+static SDK::UClass* s_S686 = nullptr;
+static SDK::UClass* s_S1897 = nullptr;
+static SDK::UClass* s_S12K = nullptr;
+static SDK::UClass* s_P92 = nullptr;
+static SDK::UClass* s_P1911 = nullptr;
+static SDK::UClass* s_P18C = nullptr;
+static SDK::UClass* s_Crossbow = nullptr;
+static SDK::UClass* s_Pan = nullptr;
+static SDK::UClass* s_Crowbar = nullptr;
+static SDK::UClass* s_Machete = nullptr;
+
+// Ammo
+static SDK::UClass* s_Ammo556 = nullptr;    // 5.56mm ammo box mesh
+static SDK::UClass* s_Ammo762 = nullptr;    // 7.62mm ammo box mesh
+static SDK::UClass* s_Ammo300 = nullptr;    // .300 Magnum ammo box mesh
+static SDK::UClass* s_Ammo9mm = nullptr;
+static SDK::UClass* s_Ammo45 = nullptr;
+static SDK::UClass* s_Ammo12G = nullptr;
+
+// Armor & Gear
+static SDK::UClass* s_Armor1 = nullptr;
+static SDK::UClass* s_Armor2 = nullptr;
+static SDK::UClass* s_Armor3 = nullptr;     // Level 3 Armor mesh
+static SDK::UClass* s_Helmet1 = nullptr;
+static SDK::UClass* s_Helmet2 = nullptr;
+static SDK::UClass* s_Helmet3 = nullptr;    // Level 3 Helmet mesh
+static SDK::UClass* s_Bag1 = nullptr;
+static SDK::UClass* s_Bag2 = nullptr;
+static SDK::UClass* s_Bag3 = nullptr;       // Level 3 Backpack mesh
+static SDK::UClass* s_Ghillie = nullptr;    // Ghillie Suit mesh
+
+// Medical / Consumables
+static SDK::UClass* s_FirstAid = nullptr;   // First Aid kit mesh
+static SDK::UClass* s_Injection = nullptr;  // Adrenaline / painkiller mesh
+static SDK::UClass* s_GasCan = nullptr;
+
+// Weapon Attachments & Scopes
+static SDK::UClass* s_Scope4x = nullptr;
+static SDK::UClass* s_Scope8x = nullptr;
+static SDK::UClass* s_CompAR = nullptr;
+static SDK::UClass* s_CompSR = nullptr;
+static SDK::UClass* s_Stock = nullptr;
+static SDK::UClass* s_RedDot = nullptr;
+static SDK::UClass* s_GripVert = nullptr;
+static SDK::UClass* s_MagAR = nullptr;
+static SDK::UClass* s_MagSR = nullptr;
+
+// Throwables
+static SDK::UClass* s_GrenadeFrag = nullptr;
+static SDK::UClass* s_GrenadeSmoke = nullptr;
+static SDK::UClass* s_GrenadeMolotov = nullptr;
+static SDK::UClass* s_GrenadeStun = nullptr;
 
 SDK::ASTExtraBaseCharacter* GetCharacterFromDController(SDK::APlayerController* PC)
 {
@@ -1164,6 +1242,1213 @@ void CheckFireRate(ASTExtraPlayerController* Player, float WeaponFireDelay)
     Sample->LastShotTime = Now;
 }
 
+using ShouldFn = bool(__fastcall*)(ULevelStreaming*);
+
+ShouldFn oShouldBeLoaded;
+ShouldFn oShouldBeVisible;
+
+/*
+VTable[70] = 00007FF79E919FE0 // 1389FE0
+VTable[71] = 00007FF79E919FF0 // 1389FF0
+*/
+
+bool IsGameplayStreamingLevel(ULevelStreaming* level)
+{
+    //if (!level->IsA(ULevelStreamingKismet::StaticClass()) || level->GetName().contains("32")) return false;
+
+    return true;
+}
+
+bool __fastcall hkShouldBeLoaded(ULevelStreaming* level)
+{
+    //if (IsGameplayStreamingLevel(level))
+    return true;
+
+    //return oShouldBeLoaded(level);
+}
+
+bool __fastcall hkShouldBeVisible(ULevelStreaming* level)
+{
+    //if (IsGameplayStreamingLevel(level))
+    return true;
+
+    //return oShouldBeVisible(level);
+}
+
+volatile bool gStreamingHooksInstalled = false;
+
+void InstallStreamingHooks(ULevelStreaming* anyStreamingObject)
+{
+    /*
+    void** vtable = *(void***)anyStreamingObject;
+
+    DWORD old;
+    VirtualProtect(&vtable[70], sizeof(void*) * 2, PAGE_EXECUTE_READWRITE, &old);
+
+    oShouldBeLoaded = (ShouldFn)vtable[70];
+    oShouldBeVisible = (ShouldFn)vtable[71];
+
+    vtable[70] = (void*)&hkShouldBeLoaded;
+    vtable[71] = (void*)&hkShouldBeVisible;
+
+    VirtualProtect(&vtable[70], sizeof(void*) * 2, old, &old);
+    */
+
+
+
+    
+    uintptr_t func_Addr = (uintptr_t(GetModuleHandle(0)) + 0x1389FE0); // ShouldBeLoaded
+
+    oShouldBeLoaded = decltype(oShouldBeLoaded)(func_Addr);
+    MH_STATUS HookResult = MH_CreateHook((PVOID&)func_Addr, hkShouldBeLoaded, reinterpret_cast <LPVOID*> (&oShouldBeLoaded));
+    const char* HookResultString = MH_StatusToString(HookResult);
+
+    if (HookResult != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook hkShouldBeLoaded CREATED FAILED WITH REASON : %s !\n", HookResultString);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)func_Addr) != MH_STATUS::MH_OK)
+        {
+            printf("\n hkShouldBeLoaded Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            printf("\n hkShouldBeLoaded Hook Enabled! \n");
+        }
+    }
+
+
+    uintptr_t func_Addr2 = (uintptr_t(GetModuleHandle(0)) + 0x1389FF0); // ShouldBeVisible
+
+    oShouldBeVisible = decltype(oShouldBeVisible)(func_Addr2);
+    MH_STATUS HookResult2 = MH_CreateHook((PVOID&)func_Addr, hkShouldBeLoaded, reinterpret_cast <LPVOID*> (&oShouldBeVisible));
+    const char* HookResultString2 = MH_StatusToString(HookResult2);
+
+    if (HookResult2 != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook hkShouldBeVisible CREATED FAILED WITH REASON : %s !\n", HookResultString2);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)func_Addr2) != MH_STATUS::MH_OK)
+        {
+            printf("\n hkShouldBeVisible Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            printf("\n hkShouldBeVisible Hook Enabled! \n");
+        }
+    }
+}
+
+int DisableCullingForStreamingLevels(SDK::UWorld* World)
+{
+    if (!World)
+    {
+        printf("DisableCullingForAllActors: World is null.\n");
+        return 0;
+    }
+
+    printf("\nDisableCullingForAllActors: World is valid, proceeding.\n");
+
+    auto pc = SDK::UGameplayStatics::GetPlayerController(World, 0);
+    auto stpc = (SDK::ASTExtraPlayerController*)pc;
+
+    // Ignore persistent level, focus on streaming levels
+    if (World->WorldComposition)
+    {
+        for (SDK::ULevelStreaming* StreamingLevel : World->WorldComposition->TilesStreaming)
+        {
+            if (!gStreamingHooksInstalled)
+            {
+                if (StreamingLevel)
+                {
+                    std::string LevelName = StreamingLevel->GetName();
+
+                    printf("We are iterating the level: %s\n", LevelName.c_str());
+
+                    InstallStreamingHooks(StreamingLevel);
+                    gStreamingHooksInstalled = true;
+                    break;
+                }
+            }
+        }
+    }
+
+    /*
+    if (stpc)
+    {
+        stpc->LoadAllLand(true);
+        stpc->bIsBattleOwner = true;
+        stpc->bIsGM = true;
+    }
+    */
+
+    return 0;
+}
+
+void InitVisualWrapperClasses()
+{
+    std::cerr << "InitVisualWrapperClasses" << std::endl;
+
+    if (s_VisualWrappersInitialized) { std::cerr << "Already initialized." << std::endl; return; }
+
+    s_BaseWrapper = SDK::APickUpWrapperActor::StaticClass();
+
+    int foundCount = 0;
+    int totalObjects = SDK::UObject::GObjects->Num();
+
+    for (int i = 0; i < totalObjects; ++i)
+    {
+        SDK::UObject* Obj = SDK::UObject::GObjects->GetByIndex(i);
+        if (!Obj) continue;
+
+        if (!Obj->HasTypeFlag(SDK::EClassCastFlags::Class)) continue;
+
+        std::string name = Obj->GetName();
+
+        // Core preloaded visual wrappers
+        if (!s_AUG && name == "BP_Rifle_AUG_Wrapper_C") { s_AUG = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Groza && name == "BP_Rifle_Groza_Wrapper_C") { s_Groza = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_M249 && name == "BP_Other_M249_Wrapper_C") { s_M249 = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_AWM && name == "BP_Sniper_AWM_Wrapper_C") { s_AWM = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_M24 && name == "BP_Sniper_M24_Wrapper_C") { s_M24 = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Mk14 && name == "BP_WEP_Mk14_Pickup_C") { s_Mk14 = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Ammo556 && name == "BP_Ammo_556mm_Pickup_C") { s_Ammo556 = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Ammo762 && name == "BP_Ammo_762mm_Pickup_C") { s_Ammo762 = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Ammo300 && name == "BP_Ammo_300Magnum_Pickup_C") { s_Ammo300 = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Armor3 && name == "PickUp_BP_Armor_Lv3_C") { s_Armor3 = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Helmet3 && name == "PickUp_BP_Helmet_Lv3_C") { s_Helmet3 = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Bag3 && name == "PickUp_BP_Bag_Lv3_C") { s_Bag3 = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Ghillie && name == "PickUp_BP_Ghillie_1_C") { s_Ghillie = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_FirstAid && name == "FirstAidbox_Pickup_C") { s_FirstAid = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Injection && name == "Injection_Pickup_C") { s_Injection = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Scope4x && name == "BP_MZJ_4X_Pickup_C") { s_Scope4x = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Scope8x && name == "BP_MZJ_8X_Pickup_C") { s_Scope8x = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_CompAR && name == "BP_QK_Large_Compensator_Pickup_C") { s_CompAR = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_CompSR && name == "BP_QK_Sniper_Compensator_Pickup_C") { s_CompSR = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Stock && name == "BP_QT_A_Pickup_C") { s_Stock = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_RedDot && name == "BP_SideRail_Dotsight_Pickup_C") { s_RedDot = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_GripVert && name == "BP_WB_Vertical_Pickup_C") { s_GripVert = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_MagAR && name == "BP_DJ_Large_EQ_Pickup_C") { s_MagAR = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_MagSR && name == "BP_DJ_Sniper_EQ_Pickup_C") { s_MagSR = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_GrenadeFrag && name == "BP_Grenade_Shoulei_Weapon_Wrapper_C") { s_GrenadeFrag = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_GrenadeSmoke && name == "BP_Grenade_Smoke_Weapon_Wrapper_C") { s_GrenadeSmoke = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_GrenadeMolotov && name == "BP_Grenade_Burn_Weapon_Wrapper_C") { s_GrenadeMolotov = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_GrenadeStun && name == "BP_Grenade_Stun_Weapon_Wrapper_C") { s_GrenadeStun = (SDK::UClass*)Obj; foundCount++; }
+
+        // Dynamic extra weapon wrappers if loaded
+        else if (!s_M416 && (name == "BP_Rifle_M416_Wrapper_C" || name == "BP_WEP_M416_Pickup_C")) { s_M416 = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_AKM && (name == "BP_Rifle_AKM_Wrapper_C" || name == "BP_WEP_AKM_Pickup_C")) { s_AKM = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_SCAR && (name == "BP_Rifle_SCAR_Wrapper_C" || name == "BP_WEP_SCAR_Pickup_C")) { s_SCAR = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Beryl && (name == "BP_Rifle_BerylM762_Wrapper_C" || name == "BP_WEP_BerylM762_Pickup_C")) { s_Beryl = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Kar98 && (name == "BP_Sniper_Kar98k_Wrapper_C" || name == "BP_WEP_Kar98k_Pickup_C")) { s_Kar98 = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_SKS && (name == "BP_Sniper_SKS_Wrapper_C" || name == "BP_WEP_SKS_Pickup_C")) { s_SKS = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Mini14 && (name == "BP_Sniper_Mini14_Wrapper_C" || name == "BP_WEP_Mini14_Pickup_C")) { s_Mini14 = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_SLR && (name == "BP_Sniper_SLR_Wrapper_C" || name == "BP_WEP_SLR_Pickup_C")) { s_SLR = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_UMP && (name == "BP_Other_UMP45_Wrapper_C" || name == "BP_WEP_UMP9_Pickup_C" || name == "BP_WEP_UMP45_Pickup_C")) { s_UMP = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Uzi && (name == "BP_Other_UZI_Wrapper_C" || name == "BP_WEP_UZI_Pickup_C")) { s_Uzi = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Vector && (name == "BP_Other_Vector_Wrapper_C" || name == "BP_WEP_Vector_Pickup_C")) { s_Vector = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Tommy && (name == "BP_Other_TommyGun_Wrapper_C" || name == "BP_WEP_TommyGun_Pickup_C")) { s_Tommy = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_S686 && (name == "BP_Shotgun_S686_Wrapper_C" || name == "BP_WEP_S686_Pickup_C")) { s_S686 = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_S1897 && (name == "BP_Shotgun_S1897_Wrapper_C" || name == "BP_WEP_S1897_Pickup_C")) { s_S1897 = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_S12K && (name == "BP_Shotgun_S12K_Wrapper_C" || name == "BP_WEP_S12K_Pickup_C")) { s_S12K = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_P92 && (name == "BP_Pistol_P92_Wrapper_C" || name == "BP_WEP_P92_Pickup_C")) { s_P92 = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_P1911 && (name == "BP_Pistol_P1911_Wrapper_C" || name == "BP_WEP_P1911_Pickup_C")) { s_P1911 = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_P18C && (name == "BP_Pistol_P18C_Wrapper_C" || name == "BP_WEP_P18C_Pickup_C")) { s_P18C = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Crossbow && (name == "BP_Other_Crossbow_Wrapper_C" || name == "BP_WEP_Crossbow_Pickup_C")) { s_Crossbow = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Pan && (name == "BP_Melee_Pan_Wrapper_C" || name == "BP_WEP_Pan_Pickup_C")) { s_Pan = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Crowbar && (name == "BP_Melee_Crowbar_Wrapper_C" || name == "BP_WEP_Crowbar_Pickup_C")) { s_Crowbar = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Machete && (name == "BP_Melee_Machete_Wrapper_C" || name == "BP_WEP_Machete_Pickup_C")) { s_Machete = (SDK::UClass*)Obj; foundCount++; }
+
+        // Dynamic extra gear
+        else if (!s_Helmet1 && name == "PickUp_BP_Helmet_Lv1_C") { s_Helmet1 = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Helmet2 && name == "PickUp_BP_Helmet_Lv2_C") { s_Helmet2 = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Armor1 && name == "PickUp_BP_Armor_Lv1_C") { s_Armor1 = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Armor2 && name == "PickUp_BP_Armor_Lv2_C") { s_Armor2 = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Bag1 && name == "PickUp_BP_Bag_Lv1_C") { s_Bag1 = (SDK::UClass*)Obj; foundCount++; }
+        else if (!s_Bag2 && name == "PickUp_BP_Bag_Lv2_C") { s_Bag2 = (SDK::UClass*)Obj; foundCount++; }
+    }
+
+    printf("[VisualLoot] Resolved %d visual mesh wrapper classes in 1 pass across GObjects (AUG=%p, Groza=%p, M24=%p, AWM=%p, Ammo556=%p, Ammo762=%p, Helmet=%p, Armor=%p, Bag=%p)\n",
+        foundCount, s_AUG, s_Groza, s_M24, s_AWM, s_Ammo556, s_Ammo762, s_Helmet3, s_Armor3, s_Bag3);
+
+    s_VisualWrappersInitialized = true;
+}
+
+SDK::UClass* GetVisualWrapperClass(SDK::EBackpackItemType ItemType, int32_t SpecificID)
+{
+    if (!s_VisualWrappersInitialized)
+    {
+        InitVisualWrapperClasses();
+    }
+
+    SDK::UClass* Chosen = nullptr;
+
+    switch (ItemType)
+    {
+    case SDK::EBackpackItemType::BackpackItemType_Weapon:
+    {
+        switch (SpecificID)
+        {
+        case 101004: // M416
+            Chosen = s_M416 ? s_M416 : s_AUG;
+            break;
+        case 101003: // SCAR-L
+            Chosen = s_SCAR ? s_SCAR : (s_AUG ? s_AUG : s_Groza);
+            break;
+        case 101001: // AKM
+            Chosen = s_AKM ? s_AKM : (s_Groza ? s_Groza : s_AUG);
+            break;
+        case 101008: // Beryl M762
+            Chosen = s_Beryl ? s_Beryl : (s_Groza ? s_Groza : s_AUG);
+            break;
+        case 101005: // Groza
+            Chosen = s_Groza ? s_Groza : s_AUG;
+            break;
+        case 103001: // Kar98k
+            Chosen = s_Kar98 ? s_Kar98 : (s_M24 ? s_M24 : s_AWM);
+            break;
+        case 103002: // M24
+            Chosen = s_M24 ? s_M24 : s_AWM;
+            break;
+        case 103003: // AWM
+            Chosen = s_AWM ? s_AWM : s_M24;
+            break;
+        case 103004: // SKS
+            Chosen = s_SKS ? s_SKS : (s_Mk14 ? s_Mk14 : s_M24);
+            break;
+        case 103006: // Mini14
+            Chosen = s_Mini14 ? s_Mini14 : (s_Mk14 ? s_Mk14 : s_M24);
+            break;
+        case 103009: // SLR
+            Chosen = s_SLR ? s_SLR : (s_Mk14 ? s_Mk14 : s_M24);
+            break;
+        case 105001: // M249
+            Chosen = s_M249 ? s_M249 : s_AUG;
+            break;
+        case 102001: // Micro Uzi
+            Chosen = s_Uzi ? s_Uzi : (s_Groza ? s_Groza : s_AUG);
+            break;
+        case 102002: // UMP45
+            Chosen = s_UMP ? s_UMP : (s_Groza ? s_Groza : s_AUG);
+            break;
+        case 102003: // Vector
+            Chosen = s_Vector ? s_Vector : (s_Groza ? s_Groza : s_AUG);
+            break;
+        case 102004: // Tommy Gun
+            Chosen = s_Tommy ? s_Tommy : (s_Groza ? s_Groza : s_AUG);
+            break;
+        case 104001: // S686
+            Chosen = s_S686 ? s_S686 : (s_M24 ? s_M24 : s_AUG);
+            break;
+        case 104002: // S1897
+            Chosen = s_S1897 ? s_S1897 : (s_M24 ? s_M24 : s_AUG);
+            break;
+        case 104003: // S12K
+            Chosen = s_S12K ? s_S12K : (s_AUG ? s_AUG : s_Groza);
+            break;
+        case 106001: // P92 / Frag grenade slot fallback
+            Chosen = s_P92 ? s_P92 : (s_RedDot ? s_RedDot : s_AUG);
+            break;
+        case 106002: // P1911 / Smoke grenade slot fallback
+            Chosen = s_P1911 ? s_P1911 : (s_RedDot ? s_RedDot : s_AUG);
+            break;
+        case 106004: // P18C / Stun grenade slot fallback
+            Chosen = s_P18C ? s_P18C : (s_RedDot ? s_RedDot : s_AUG);
+            break;
+        case 108001: // Crossbow
+            Chosen = s_Crossbow ? s_Crossbow : (s_M24 ? s_M24 : s_AUG);
+            break;
+        case 108002: // Crowbar
+            Chosen = s_Crowbar ? s_Crowbar : (s_Stock ? s_Stock : s_RedDot);
+            break;
+        case 108003: // Machete / Flare Gun
+            Chosen = s_Machete ? s_Machete : (s_Stock ? s_Stock : s_RedDot);
+            break;
+        case 108004: // Pan
+            Chosen = s_Pan ? s_Pan : (s_Stock ? s_Stock : s_RedDot);
+            break;
+            // Throwables
+        case 401001: Chosen = s_GrenadeFrag; break;
+        case 401002: Chosen = s_GrenadeSmoke; break;
+        case 401003: Chosen = s_GrenadeStun; break;
+        case 401004: Chosen = s_GrenadeMolotov; break;
+        default:
+            Chosen = s_AUG ? s_AUG : s_Groza;
+            break;
+        }
+        break;
+    }
+    case SDK::EBackpackItemType::BackpackItemType_Ammo:
+    {
+        switch (SpecificID)
+        {
+        case 303001: // 5.56mm
+            Chosen = s_Ammo556 ? s_Ammo556 : s_Ammo762;
+            break;
+        case 302001: // 7.62mm
+            Chosen = s_Ammo762 ? s_Ammo762 : s_Ammo556;
+            break;
+        case 306001: // .300 Magnum
+            Chosen = s_Ammo300 ? s_Ammo300 : s_Ammo762;
+            break;
+        case 301001: // 9mm
+            Chosen = s_Ammo9mm ? s_Ammo9mm : (s_Ammo556 ? s_Ammo556 : s_Ammo762);
+            break;
+        case 305001: // .45 ACP
+            Chosen = s_Ammo45 ? s_Ammo45 : (s_Ammo762 ? s_Ammo762 : s_Ammo556);
+            break;
+        case 304001: // 12 Gauge
+            Chosen = s_Ammo12G ? s_Ammo12G : (s_Ammo762 ? s_Ammo762 : s_Ammo556);
+            break;
+        default:
+            Chosen = s_Ammo556 ? s_Ammo556 : s_Ammo762;
+            break;
+        }
+        break;
+    }
+    case SDK::EBackpackItemType::BackpackItemType_Armor:
+    {
+        if (SpecificID == 501001) Chosen = s_Bag1 ? s_Bag1 : s_Bag3;
+        else if (SpecificID == 501002) Chosen = s_Bag2 ? s_Bag2 : s_Bag3;
+        else if (SpecificID == 501003) Chosen = s_Bag3;
+        else if (SpecificID == 502001) Chosen = s_Helmet1 ? s_Helmet1 : s_Helmet3;
+        else if (SpecificID == 502002) Chosen = s_Helmet2 ? s_Helmet2 : s_Helmet3;
+        else if (SpecificID == 502003) Chosen = s_Helmet3;
+        else if (SpecificID == 503001) Chosen = s_Armor1 ? s_Armor1 : s_Armor3;
+        else if (SpecificID == 503002) Chosen = s_Armor2 ? s_Armor2 : s_Armor3;
+        else if (SpecificID == 503003) Chosen = s_Armor3;
+        else if (SpecificID >= 501000 && SpecificID < 502000) Chosen = s_Bag3;
+        else if (SpecificID >= 502000 && SpecificID < 503000) Chosen = s_Helmet3;
+        else if (SpecificID >= 503000 && SpecificID < 504000) Chosen = s_Armor3;
+        else Chosen = s_Armor3 ? s_Armor3 : s_Helmet3;
+        break;
+    }
+    case SDK::EBackpackItemType::BackpackItemType_Clothing:
+    {
+        Chosen = s_Ghillie ? s_Ghillie : s_Armor3;
+        break;
+    }
+    case SDK::EBackpackItemType::BackpackItemType_Consumable:
+    {
+        switch (SpecificID)
+        {
+        case 601002: // First Aid
+        case 601001: // Bandages
+        case 601003: // Med Kit
+            Chosen = s_FirstAid ? s_FirstAid : s_Injection;
+            break;
+        case 601006: // Energy Drink
+        case 601004: // Painkiller
+        case 601005: // Adrenaline
+            Chosen = s_Injection ? s_Injection : s_FirstAid;
+            break;
+        case 602001: // Gas Can
+            Chosen = s_GasCan ? s_GasCan : (s_FirstAid ? s_FirstAid : s_Injection);
+            break;
+        default:
+            Chosen = s_FirstAid ? s_FirstAid : s_Injection;
+            break;
+        }
+        break;
+    }
+    case SDK::EBackpackItemType::BackpackItemType_WeaponAttachment:
+    {
+        switch (SpecificID)
+        {
+        case 201001: // Red Dot
+        case 201002: // Holo
+            Chosen = s_RedDot;
+            break;
+        case 201003: // 2x
+        case 201009: // 3x
+        case 201004: // 4x
+            Chosen = s_Scope4x ? s_Scope4x : s_Scope8x;
+            break;
+        case 201005: // 6x
+        case 201006: // 8x
+            Chosen = s_Scope8x ? s_Scope8x : s_Scope4x;
+            break;
+        case 202001: // AR Comp
+        case 202004: // AR Supp
+        case 202006: // SMG Supp
+            Chosen = s_CompAR ? s_CompAR : s_CompSR;
+            break;
+        case 202005: // SR Supp
+            Chosen = s_CompSR ? s_CompSR : s_CompAR;
+            break;
+        case 204003: // AR Ext Quickdraw
+            Chosen = s_MagAR ? s_MagAR : s_CompAR;
+            break;
+        case 204006: // SR Ext Quickdraw
+            Chosen = s_MagSR ? s_MagSR : s_CompSR;
+            break;
+        case 203001: // Vert Grip
+        case 203002: // Angled Grip
+            Chosen = s_GripVert;
+            break;
+        default:
+            Chosen = s_Stock ? s_Stock : s_CompAR;
+            break;
+        }
+        break;
+    }
+    default:
+        break;
+    }
+
+    if (Chosen) {
+        //std::cerr << "RETURNING: " << Chosen->GetName() << std::endl;
+    }
+
+    if (!Chosen) {
+        //std::cerr << "RETURNING: " << s_BaseWrapper->GetName() << std::endl; 
+        Chosen = s_BaseWrapper;
+    }
+    if (!Chosen) {
+        Chosen = SDK::APickUpWrapperActor::StaticClass();
+        //std::cerr << "RETURNING: " << Chosen->GetName() << std::endl;
+    }
+
+    return Chosen;
+}
+
+bool SpawnLootItemAtLocation(
+    SDK::UWorld* World,
+    const SDK::FVector& Location,
+    SDK::EBackpackItemType ItemType,
+    int32_t SpecificID,
+    int32_t Count,
+    SDK::AActor* Owner = nullptr
+)
+{
+    if (!World) return false;
+
+    SDK::FTransform SpawnTransform{};
+    SpawnTransform.Translation = Location;
+    SpawnTransform.Translation.Z += 32.0f; // Sits cleanly above floorboards/tables to prevent clipping
+    SpawnTransform.Rotation = SDK::FQuat{ 0.0f, 0.0f, 0.0f, 1.0f };
+    SpawnTransform.Scale3D = SDK::FVector(1.0f, 1.0f, 1.0f);
+
+    SDK::UClass* WrapperClass = GetVisualWrapperClass(ItemType, SpecificID);
+    if (!WrapperClass) WrapperClass = SDK::APickUpWrapperActor::StaticClass();
+    if (!WrapperClass) return false;
+
+    SDK::AActor* GenericActor = nullptr;
+    __try
+    {
+        GenericActor = SDK::UGameplayStatics::BeginDeferredActorSpawnFromClass(
+            World,
+            WrapperClass,
+            SpawnTransform,
+            SDK::ESpawnActorCollisionHandlingMethod::AlwaysSpawn,
+            Owner
+        );
+    }
+    __except (EXCEPTION_EXECUTE_HANDLER)
+    {
+        std::cerr << "SEH spawning actor" << std::endl;
+        return false;
+    }
+
+    
+    if (!GenericActor) {
+        std::cerr << "GenericActor is still nullptr" << std::endl;
+        return false;
+    }
+
+    SDK::APickUpWrapperActor* Pickup = reinterpret_cast<SDK::APickUpWrapperActor*>(GenericActor);
+
+    SDK::FItemDefineID ItemID{};
+    ItemID.Type = (int32_t)ItemType;
+    ItemID.TypeSpecificID = SpecificID;
+    ItemID.AvatarID = 0;
+    ItemID.bValidItem = true;
+    ItemID.bValidInstance = true;
+    ItemID.InstanceID = SDK::UBackpackUtils::GenerateRandomInstanceID();
+
+    Pickup->DefineID = ItemID;
+    Pickup->Count = Count;
+    Pickup->bDropedByPlayer = true;
+    //Pickup->bDropedByPlayer = false;
+
+    __try
+    {
+        SDK::UGameplayStatics::FinishSpawningActor(Pickup, SpawnTransform);
+    }
+    __except (EXCEPTION_EXECUTE_HANDLER)
+    {
+        std::cerr << "SEH FinishSpawningActor" << std::endl;
+        return false;
+    }
+
+    Pickup->bAlwaysRelevant = false;
+    Pickup->NetPriority = 1.5f;
+    Pickup->NetCullDistanceSquared = 15000.0f * 15000.0f; // 150m cull distance
+
+    __try { Pickup->SetDefineID(ItemID); }
+    __except (EXCEPTION_EXECUTE_HANDLER) {}
+    __try { Pickup->SetCountOnServerAfterSpawn(Count); }
+    __except (EXCEPTION_EXECUTE_HANDLER) {}
+    __try { Pickup->MarkIsDropedByPlayerOnServer(1); }
+    __except (EXCEPTION_EXECUTE_HANDLER) {}
+    __try { Pickup->ShowActor(); }
+    __except (EXCEPTION_EXECUTE_HANDLER) {}
+    __try { Pickup->ShowMesh(1); }
+    __except (EXCEPTION_EXECUTE_HANDLER) {}
+
+    return true;
+}
+
+// Authentic PUBG Loot Tables
+struct MapWeaponDef
+{
+    int32_t WeaponID;
+    int32_t AmmoID;
+    int32_t AmmoCount;
+    const char* Name;
+};
+
+static const MapWeaponDef kMapWeapons[] = {
+    // Assault Rifles
+    { 101004, 303001, 30, "M416" },
+    { 101003, 303001, 30, "SCAR-L" },
+    { 101007, 303001, 30, "QBZ"},
+    { 101001, 303001, 30, "AKM" },
+    { 101008, 302001, 30, "Beryl M762" },
+    //{ 101005, 302001, 30, "Groza" },
+    { 101009, 302001, 30, "Mk47 Mutant"},
+    { 105002, 302001, 60, "DP-28"},
+
+
+    // Sniper Rifles & DMRs
+    { 103001, 302001, 20, "Kar98k" },
+    { 103002, 302001, 20, "M24" },
+    { 103004, 302001, 30, "SKS" },
+    { 103006, 303001, 30, "Mini14" },
+    { 103009, 302001, 30, "SLR" },
+    //{ 103003, 304001, 15, "AWM" },
+
+    // SMGs
+    { 102002, 305001, 30, "UMP45" },
+    { 102001, 301001, 30, "Micro Uzi" },
+    { 102003, 301001, 30, "Vector" },
+    { 102004, 305001, 30, "Tommy Gun" },
+
+    // Shotguns
+    { 104001, 304001, 15, "S686" },
+    { 104002, 304001, 15, "S1897" },
+    { 104003, 304001, 15, "S12K" },
+
+    // Pistols
+    { 106001, 301001, 30, "P92" },
+    { 106002, 305001, 25, "P1911" },
+    { 106004, 301001, 40, "P18C" },
+
+    // Special / Melee
+    { 108001, 307001, 15, "Crossbow" },
+    { 108004,      0,  0, "Pan" },
+    { 108002,      0,  0, "Crowbar" },
+    { 108003,      0,  0, "Machete" },
+    { 108003, 308001,  1, "Flare Gun" }
+};
+
+struct MapAmmoDef
+{
+    int32_t AmmoID;
+    int32_t Count;
+    const char* Name;
+};
+
+static const MapAmmoDef kMapAmmo[] = {
+    { 301001, 30, "9mm Ammo" },
+    { 303001, 30, "5.56mm Ammo" },
+    { 302001, 30, "7.62mm Ammo" },
+    { 305001, 30, ".45 ACP Ammo" },
+    { 304001, 5, "12 Gauge Ammo" }
+};
+
+struct MapGearDef
+{
+    SDK::EBackpackItemType Type;
+    int32_t SpecificID;
+    const char* Name;
+};
+
+static const MapGearDef kMapGear[] = {
+    { SDK::EBackpackItemType::BackpackItemType_Armor, 501001, "Level 1 Backpack" },
+    { SDK::EBackpackItemType::BackpackItemType_Armor, 501002, "Level 2 Backpack" },
+    { SDK::EBackpackItemType::BackpackItemType_Armor, 501003, "Level 3 Backpack" },
+    { SDK::EBackpackItemType::BackpackItemType_Armor, 502001, "Level 1 Helmet" },
+    { SDK::EBackpackItemType::BackpackItemType_Armor, 502002, "Level 2 Helmet" },
+    { SDK::EBackpackItemType::BackpackItemType_Armor, 502003, "Level 3 Helmet" },
+    { SDK::EBackpackItemType::BackpackItemType_Armor, 503001, "Level 1 Vest" },
+    { SDK::EBackpackItemType::BackpackItemType_Armor, 503002, "Level 2 Vest" },
+    { SDK::EBackpackItemType::BackpackItemType_Armor, 503003, "Level 3 Vest" },
+    { SDK::EBackpackItemType::BackpackItemType_Clothing, 403989, "Ghillie Suit" }
+};
+
+struct MapConsumableDef
+{
+    int32_t SpecificID;
+    int32_t Count;
+    const char* Name;
+};
+
+static const MapConsumableDef kMapConsumables[] = {
+    { 601002, 1, "First Aid Kit" },
+    { 601001, 5, "Bandages (x5)" },
+    { 601006, 2, "Energy Drink (x2)" },
+    { 601004, 1, "Painkiller" },
+    { 601003, 1, "Med Kit" },
+    { 601005, 1, "Adrenaline Syringe" },
+    { 602001, 1, "Gas Can" }
+};
+
+struct MapAttachmentDef
+{
+    int32_t SpecificID;
+    const char* Name;
+};
+
+static const MapAttachmentDef kMapAttachments[] = {
+    { 201001, "Red Dot Sight" },
+    { 201002, "Holographic Sight" },
+    { 201003, "2x Aimpoint Scope" },
+    { 201009, "3x Backlit Scope" },
+    { 201004, "4x ACOG Scope" },
+    { 201005, "6x Scope" },
+    { 201006, "8x CQBSS Scope" },
+    { 202001, "AR Compensator" },
+    { 202004, "AR Suppressor" },
+    { 202005, "SR Suppressor" },
+    { 202006, "SMG Suppressor" },
+    { 204003, "AR Ext. Quickdraw" },
+    { 204006, "SR Ext. Quickdraw" },
+    { 203001, "Vertical Foregrip" },
+    { 203002, "Angled Foregrip" }
+};
+
+struct MapThrowableDef
+{
+    int32_t SpecificID;
+    int32_t Count;
+    const char* Name;
+};
+
+static const MapThrowableDef kMapThrowablesMelee[] = {
+    { 106001, 2, "Frag Grenade (x2)" },
+    { 106002, 2, "Smoke Grenade (x2)" },
+    { 106003, 1, "Molotov Cocktail" },
+    { 106004, 1, "Stun Grenade" }
+};
+
+struct MapLootSpawnerState
+{
+    bool bActive = false;
+    std::vector<SDK::FVector> Spots;
+    size_t CurrentIndex = 0;
+    int TotalItemsSpawned = 0;
+    int TotalSpotsProcessed = 0;
+};
+static MapLootSpawnerState g_MapLoot;
+
+void ForceHighQualityForBuildingActors();
+
+template <typename T, size_t N>
+bool TryPick(const T(&items)[N], const T*& result)
+{
+    if constexpr (N == 0)
+        return false;
+
+    static thread_local std::mt19937 rng{ std::random_device{}() };
+
+    std::uniform_int_distribution<size_t> dist(0, N - 1);
+    result = &items[dist(rng)];
+    return true;
+}
+
+void ProcessMapLootTick(SDK::UWorld* World)
+{
+    if (!g_MapLoot.bActive || !World) return;
+
+    const size_t BATCH_SIZE = 50;
+    size_t totalSpots = g_MapLoot.Spots.size();
+    size_t endIndex = (std::min)(g_MapLoot.CurrentIndex + BATCH_SIZE, totalSpots);
+
+    //for (size_t i = g_MapLoot.CurrentIndex; i < totalSpots; ++i)
+    for (size_t i = g_MapLoot.CurrentIndex; i < endIndex; ++i)
+    {
+        __try
+        {
+            const SDK::FVector& SpotPos = g_MapLoot.Spots[i];
+            g_MapLoot.TotalSpotsProcessed++;
+
+            // 65% spawn chance per spot (matches authentic PUBG rate)
+            //if ((rand() % 100) >= 65)
+            //    continue;
+
+            SDK::FVector SpawnPos = SpotPos;
+
+            int roll = rand() % 100;
+
+            if (roll < 32)
+            {
+                // Weapon + matching paired ammo
+                int wIndex = rand() % (sizeof(kMapWeapons) / sizeof(kMapWeapons[0]));
+                const auto& wDef = kMapWeapons[wIndex];
+
+                if (SpawnLootItemAtLocation(World, SpawnPos, SDK::EBackpackItemType::BackpackItemType_Weapon, wDef.WeaponID, 1))
+                {
+                    g_MapLoot.TotalItemsSpawned++;
+
+                    if (wDef.AmmoID > 0 && wDef.AmmoCount > 0)
+                    {
+                        SDK::FVector AmmoPos = SpawnPos;
+                        AmmoPos.X += 25.0f;
+                        AmmoPos.Y += 25.0f;
+                        if (SpawnLootItemAtLocation(World, AmmoPos, SDK::EBackpackItemType::BackpackItemType_Ammo, wDef.AmmoID, wDef.AmmoCount))
+                        {
+                            g_MapLoot.TotalItemsSpawned++;
+                        }
+                    }
+                }
+            }
+            else if (roll < 54)
+            {
+                // Standalone Ammo
+                int aIndex = rand() % (sizeof(kMapAmmo) / sizeof(kMapAmmo[0]));
+                const auto& aDef = kMapAmmo[aIndex];
+
+                if (SpawnLootItemAtLocation(World, SpawnPos, SDK::EBackpackItemType::BackpackItemType_Ammo, aDef.AmmoID, aDef.Count))
+                {
+                    g_MapLoot.TotalItemsSpawned++;
+                }
+            }
+            else if (roll < 70)
+            {
+                // Armor / Helmet / Bag / Ghillie
+                int gIndex = rand() % (sizeof(kMapGear) / sizeof(kMapGear[0]));
+                const auto& gDef = kMapGear[gIndex];
+
+                if (SpawnLootItemAtLocation(World, SpawnPos, gDef.Type, gDef.SpecificID, 1))
+                {
+                    g_MapLoot.TotalItemsSpawned++;
+                }
+            }
+            else if (roll < 84)
+            {
+                // Consumables / Meds
+                int cIndex = rand() % (sizeof(kMapConsumables) / sizeof(kMapConsumables[0]));
+                const auto& cDef = kMapConsumables[cIndex];
+
+                if (SpawnLootItemAtLocation(World, SpawnPos, SDK::EBackpackItemType::BackpackItemType_Consumable, cDef.SpecificID, cDef.Count))
+                {
+                    g_MapLoot.TotalItemsSpawned++;
+                }
+            }
+            else if (roll < 94)
+            {
+                // Attachments & Optics
+                int atIndex = rand() % (sizeof(kMapAttachments) / sizeof(kMapAttachments[0]));
+                const auto& atDef = kMapAttachments[atIndex];
+
+                if (SpawnLootItemAtLocation(World, SpawnPos, SDK::EBackpackItemType::BackpackItemType_WeaponAttachment, atDef.SpecificID, 1))
+                {
+                    g_MapLoot.TotalItemsSpawned++;
+                }
+            }
+            else
+            {
+                // Throwables & Melee
+                int tIndex = rand() % (sizeof(kMapThrowablesMelee) / sizeof(kMapThrowablesMelee[0]));
+                const auto& tDef = kMapThrowablesMelee[tIndex];
+
+                if (SpawnLootItemAtLocation(World, SpawnPos, SDK::EBackpackItemType::BackpackItemType_Weapon, tDef.SpecificID, tDef.Count))
+                {
+                    g_MapLoot.TotalItemsSpawned++;
+                }
+            }
+        }
+        __except (EXCEPTION_EXECUTE_HANDLER)
+        {
+        }
+    }
+
+    g_MapLoot.CurrentIndex = endIndex;
+
+    // Log progress every 2,000 spots
+    if (g_MapLoot.CurrentIndex % 2000 < BATCH_SIZE || g_MapLoot.CurrentIndex >= totalSpots)
+    {
+        printf("[MapLoot] Progress: %zu / %zu spots (%d items on ground)\n",
+            g_MapLoot.CurrentIndex, totalSpots, g_MapLoot.TotalItemsSpawned);
+    }
+
+    if (g_MapLoot.CurrentIndex >= totalSpots)
+    {
+        g_MapLoot.bActive = false;
+        printf("[MapLoot] ========================================================\n");
+        printf("[MapLoot] *** FULL MAP LOOT SPAWNING COMPLETE! ***\n");
+        printf("[MapLoot] Processed: %zu spots | Total Ground Items: %d\n",
+            totalSpots, g_MapLoot.TotalItemsSpawned);
+        printf("[MapLoot] All houses, cities, and military bases now have loot!\n");
+        printf("[MapLoot] ========================================================\n");
+
+        bIsLootFinished = true;
+    }
+}
+
+static void SaveLootCoordinatesToFile(const std::vector<SDK::FVector>& Spots)
+{
+    if (Spots.size() < 10000)
+    {
+        printf("[MapLoot] Guard: Skipping save to disk because spot count (%zu) is too small (protecting full-map file).\n", Spots.size());
+        return;
+    }
+
+    std::vector<std::string> targetDirs;
+    targetDirs.push_back(""); // CWD
+
+    uint32_t count = (uint32_t)Spots.size();
+
+    for (const auto& dir : targetDirs)
+    {
+        std::string binPath = dir + "Erangel_Loot_Coordinates.bin";
+        FILE* f = nullptr;
+        fopen_s(&f, binPath.c_str(), "wb");
+        if (f)
+        {
+            fwrite(&count, sizeof(uint32_t), 1, f);
+            fwrite(Spots.data(), sizeof(SDK::FVector), count, f);
+            fclose(f);
+            printf("[MapLoot] Saved %u authentic interior spot coordinates to %s\n", count, binPath.c_str());
+        }
+    }
+}
+
+static void AddFloorSpots(
+    const SDK::FVector& Center,
+    const SDK::FVector& Fwd,
+    const SDK::FVector& Right,
+    float ExtentX,   // half-width  (along Right)
+    float ExtentY,   // half-depth  (along Fwd)
+    std::vector<SDK::FVector>& OutSpots)
+{
+    const float Spacing = 120.0f;  // cm between spots
+
+    int colsX = std::max(1, (int)(ExtentX * 2.0f / Spacing));
+    int colsY = std::max(1, (int)(ExtentY * 2.0f / Spacing));
+    colsX = std::min(colsX, 6);
+    colsY = std::min(colsY, 6);
+
+    for (int iy = 0; iy < colsY; ++iy)
+    {
+        // -1..+1 range mapped across the depth
+        float fy = (colsY == 1) ? 0.0f : ((float)iy / (colsY - 1) - 0.5f) * 2.0f;
+        for (int ix = 0; ix < colsX; ++ix)
+        {
+            float fx = (colsX == 1) ? 0.0f : ((float)ix / (colsX - 1) - 0.5f) * 2.0f;
+
+            SDK::FVector Spot = Center
+                + (Fwd * (fy * ExtentY * 0.8f))  // 80% of half-extent (stay inside walls)
+                + (Right * (fx * ExtentX * 0.8f));
+
+            OutSpots.push_back(Spot);
+        }
+    }
+}
+
+// Compute the actual interior envelope from window positions (local space)
+// Windows are on the walls, so their extent ≈ the building footprint.
+bool GetInteriorEnvelope(
+    SDK::AUAEHouseActor* House,
+    const SDK::FVector& Loc,
+    const SDK::FVector& Fwd,
+    const SDK::FVector& Right,
+    float& OutHalfX,   // half-width  along Right
+    float& OutHalfY,   // half-depth  along Fwd
+    SDK::FVector& OutCenterOffset) // offset from Loc to true center
+{
+    if (House->WindowList.Num() == 0)
+    {
+        // No windows — fall back to a conservative 40% of actor bounds
+        SDK::FVector Origin, BoxExtent;
+        House->GetActorBounds(false, &Origin, &BoxExtent);
+        OutHalfX = BoxExtent.X * 0.4f;
+        OutHalfY = BoxExtent.Y * 0.4f;
+        OutCenterOffset = SDK::FVector(0, 0, 0);
+        return true;
+    }
+
+    // Project all window positions into the house's local X/Y plane
+    float minX = 1e9f, maxX = -1e9f;
+    float minY = 1e9f, maxY = -1e9f;
+
+    for (int w = 0; w < House->WindowList.Num(); ++w)
+    {
+        SDK::FVector WinLocal = House->WindowList[w].Transform.Translation - Loc;
+        // Dot with Fwd/Right to get local coordinates
+        float lx = WinLocal.X * Right.X + WinLocal.Y * Right.Y; // along Right
+        float ly = WinLocal.X * Fwd.X + WinLocal.Y * Fwd.Y;   // along Fwd
+
+        minX = (lx < minX) ? lx : minX;
+        maxX = (lx > maxX) ? lx : maxX;
+        minY = (ly < minY) ? ly : minY;
+        maxY = (ly > maxY) ? ly : maxY;
+    }
+
+    // Inset by ~60 cm so spots don't sit on the wall
+    const float WallInset = 60.0f;
+    float width = (maxX - minX) - WallInset * 2.0f;
+    float depth = (maxY - minY) - WallInset * 2.0f;
+
+    if (width < 200.0f)  width = 200.0f;  // minimum 2 m interior
+    if (depth < 200.0f)  depth = 200.0f;
+
+    OutHalfX = width * 0.5f;
+    OutHalfY = depth * 0.5f;
+
+    // True center is the midpoint of the window envelope
+    float cx = (minX + maxX) * 0.5f;
+    float cy = (minY + maxY) * 0.5f;
+    OutCenterOffset = (Right * cx) + (Fwd * cy);
+
+    return true;
+}
+
+static bool HarvestAuthenticInteriorLootSpots(SDK::UWorld* World, std::vector<SDK::FVector>& OutSpots)
+{
+    OutSpots.clear();
+    if (!SDK::UObject::GObjects) return false;
+
+    int totalHousesScanned = 0;
+
+    for (int i = 0; i < SDK::UObject::GObjects->Num(); ++i)
+    {
+        __try
+        {
+            SDK::UObject* Obj = SDK::UObject::GObjects->GetByIndex(i);
+            if (!Obj || Obj->IsDefaultObject()) continue;
+
+            if (!Obj->IsA(SDK::AUAEHouseActor::StaticClass())) continue;
+
+            SDK::AUAEHouseActor* House = static_cast<SDK::AUAEHouseActor*>(Obj);
+            totalHousesScanned++;
+
+            SDK::FVector Loc = House->K2_GetActorLocation();
+            if (Loc.X == 0.f && Loc.Y == 0.f) continue;
+
+            SDK::FRotator Rot = House->K2_GetActorRotation();
+            float YawRad = Rot.Yaw * (3.14159265358979323846f / 180.0f);
+            SDK::FVector Fwd(cosf(YawRad), sinf(YawRad), 0.0f);
+            SDK::FVector Right(-sinf(YawRad), cosf(YawRad), 0.0f);
+
+            // Ground floor center: +25cm above house root pivot
+            SDK::FVector Center = Loc;
+            Center.Z = Loc.Z + 25.0f;
+
+            // Check building height and window positions for 2nd and 3rd floors
+            SDK::FVector Origin(0, 0, 0);
+            SDK::FVector BoxExtent(0, 0, 0);
+            House->GetActorBounds(false, &Origin, &BoxExtent);
+
+            float HalfX, HalfY;
+            SDK::FVector CenterOffset;
+            GetInteriorEnvelope(House, Loc, Fwd, Right, HalfX, HalfY, CenterOffset);
+
+            // Adjust the floor centers to the true interior center
+            SDK::FVector TrueCenter = Loc + CenterOffset;
+            TrueCenter.Z = Loc.Z + 25.0f;
+
+            AddFloorSpots(TrueCenter, Fwd, Right, HalfX, HalfY, OutSpots);
+
+            bool bHasFloor2 = false;
+            bool bHasFloor3 = false;
+
+            if (BoxExtent.Z >= 280.0f) bHasFloor2 = true;
+            if (BoxExtent.Z >= 500.0f) bHasFloor3 = true;
+
+            if (House->WindowList.Num() > 0)
+            {
+                for (int w = 0; w < House->WindowList.Num(); w++)
+                {
+                    float winZ = House->WindowList[w].Transform.Translation.Z - Loc.Z;
+                    if (winZ > 240.0f) bHasFloor2 = true;
+                    if (winZ > 540.0f) bHasFloor3 = true;
+                }
+            }
+
+            // Floor 2 spots (~3.7m above ground floor)
+            if (bHasFloor2)
+            {
+                SDK::FVector Floor2 = TrueCenter;
+                Floor2.Z = Loc.Z + 370.0f;
+                AddFloorSpots(Floor2, Fwd, Right, HalfX, HalfY, OutSpots);
+            }
+
+            // Floor 3 / Attic / Roof spots (~7.3m above ground floor)
+            if (bHasFloor3)
+            {
+                SDK::FVector Floor3 = TrueCenter;
+                Floor3.Z = Loc.Z + 730.0f;
+                AddFloorSpots(Floor3, Fwd, Right, HalfX, HalfY, OutSpots);
+            }
+        }
+        __except (EXCEPTION_EXECUTE_HANDLER)
+        {
+            continue;
+        }
+    }
+
+    printf("[MapLoot] Harvested %d houses from memory (%zu multi-story interior spots).\n",
+        totalHousesScanned, OutSpots.size());
+
+    return !OutSpots.empty();
+}
+
+static bool LoadMapLootSpots(std::vector<SDK::FVector>& OutSpots)
+{
+    OutSpots.clear();
+
+    /*
+    std::vector<std::string> baseDirs;
+    baseDirs.push_back(""); // Current working directory
+
+    char exePath[MAX_PATH] = { 0 };
+    if (GetModuleFileNameA(NULL, exePath, MAX_PATH))
+    {
+        char* lastSlash = strrchr(exePath, '\\');
+        if (lastSlash)
+        {
+            *(lastSlash + 1) = '\0';
+            baseDirs.push_back(std::string(exePath));
+        }
+    }
+
+    if (g_hModule)
+    {
+        char dllPath[MAX_PATH] = { 0 };
+        if (GetModuleFileNameA(g_hModule, dllPath, MAX_PATH))
+        {
+            char* lastSlash = strrchr(dllPath, '\\');
+            if (lastSlash)
+            {
+                *(lastSlash + 1) = '\0';
+                baseDirs.push_back(std::string(dllPath));
+            }
+        }
+    }
+    */
+
+    if (HarvestAuthenticInteriorLootSpots(SDK::UWorld::GetWorld(), OutSpots))
+    {
+        printf("[MapLoot] Harvested %zu interior spots from memory!\n", OutSpots.size());
+        //SaveLootCoordinatesToFile(OutSpots);
+        return true;
+    }
+
+    return !OutSpots.empty();
+}
+
+void StartMapLootSpawning(SDK::UWorld* World)
+{
+    if (!World) World = SDK::UWorld::GetWorld();
+    if (!World) return;
+
+    if (g_MapLoot.bActive)
+    {
+        printf("[MapLoot] Map loot spawning already in progress (%zu / %zu spots)...\n",
+            g_MapLoot.CurrentIndex, g_MapLoot.Spots.size());
+        return;
+    }
+
+    if (g_MapLoot.TotalItemsSpawned > 0 || g_MapLoot.TotalSpotsProcessed > 0)
+    {
+        printf("[MapLoot] Map loot already spawned (%d items on ground). Skipping duplicate spawn!\n",
+            g_MapLoot.TotalItemsSpawned);
+        return;
+    }
+
+    printf("\n[MapLoot] ========================================================\n");
+    printf("[MapLoot] Initializing Full Map Loot Spawner...\n");
+
+    InitVisualWrapperClasses();
+
+    if (g_MapLoot.Spots.empty())
+    {
+        LoadMapLootSpots(g_MapLoot.Spots);
+    }
+
+    if (g_MapLoot.Spots.empty())
+    {
+        printf("[MapLoot] ERROR: No loot spots found to spawn!\n");
+        printf("[MapLoot] ========================================================\n");
+        return;
+    }
+
+    g_MapLoot.CurrentIndex = 0;
+    g_MapLoot.TotalItemsSpawned = 0;
+    g_MapLoot.TotalSpotsProcessed = 0;
+    g_MapLoot.bActive = true;
+    //gRequestErangelLoot = true;
+
+    printf("[MapLoot] Queued %zu spots across the map.\n", g_MapLoot.Spots.size());
+    printf("[MapLoot] Spawning in batches of 25 spots/tick on game thread...\n");
+    printf("[MapLoot] ========================================================\n");
+}
+
+static void SetupErangelLoot(SDK::UWorld* World)
+{
+    // 1. Configure replication settings with realistic distances
+    SDK::UTslSettings* Settings = SDK::UTslSettings::GetTslSettings();
+    if (!Settings) Settings = SDK::UTslSettings::GetDefaultObj();
+    if (Settings)
+    {
+        Settings->RepDistance_Character = 100000.0f; // 1km
+        Settings->RepDistance_Item = 20000.0f;      // 200m
+        Settings->RepDistance_Weapon = 20000.0f;    // 200m
+        Settings->RepDistance_Door = 30000.0f;      // 300m
+        Settings->RepDistance_Window = 30000.0f;    // 300m
+        Settings->RepDistance_Vehicle = 50000.0f;   // 500m
+        Settings->RepVehicle_SpawnDistance = 50000.0f;
+        printf("[Erangel-Loot] UTslSettings: Configured replication distances (Item=200m, Char=1km, Vehicle=500m).\n");
+    }
+
+    // 2. APickUpWrapperActor CDO replication settings
+    SDK::APickUpWrapperActor* DefPickup = SDK::APickUpWrapperActor::GetDefaultObj();
+    if (DefPickup)
+    {
+        DefPickup->bAlwaysRelevant = false;
+        DefPickup->NetCullDistanceSquared = 15000.0f * 15000.0f; // 150m
+        DefPickup->NetPriority = 1.5f;
+    }
+
+    // 3. GameMode setup
+    SDK::AGameModeBase* BaseGM = SDK::UGameplayStatics::GetGameMode(World);
+    if (!BaseGM)
+    {
+        printf("[Erangel-Loot] BaseGM is null!\n");
+        return;
+    }
+    printf("[Erangel-Loot] GameMode: %s\n", BaseGM->GetName().c_str());
+
+    if (BaseGM->IsA(SDK::AUAEGameMode::StaticClass()))
+    {
+        SDK::AUAEGameMode* UAEGM = (SDK::AUAEGameMode*)BaseGM;
+        UAEGM->MaxAllowReplicatedCharacterCount = 101;
+        UAEGM->MaxPlayerLimit = 101;
+        UAEGM->bEnableDamage = true;
+    }
+
+    // 4. Start Full Map Loot Spawner across all 14,256 spots!
+    StartMapLootSpawning(World);
+}
+
+void StartMapLootSpawning(SDK::UWorld* World);
+
 void* ProcessEventHook(UObject* Obj, UFunction* Func, void* Func_Params)
 {
     if (Obj && Func)
@@ -1171,30 +2456,84 @@ void* ProcessEventHook(UObject* Obj, UFunction* Func, void* Func_Params)
         auto ObjName = Obj->GetName();
         auto FuncName = Func->GetName();
 
+        if (FuncName == "OnGameModeEnterFlying")
+        {
+
+            //Sleep(12000);
+
+            //gRequestErangelLoot = true;
+
+            //StartMapLootSpawning(UWorld::GetWorld());
+
+            /*
+            SDK::UWorld* World = UWorld::GetWorld();
+
+            SDK::AGameStateBase* GS = UGameplayStatics::GetGameState(World);
+
+            UC::TArray<SDK::APlayerState*>& Players = GS->PlayerArray;
+
+            ASTExtraPlayerController* STEPC = (ASTExtraPlayerController*)UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0);
+
+            std::cerr << "Players: " << Players.Num() << std::endl;
+
+            if (Players.Num() <= 100) {
+                for (int i = 0; i < 100 - Players.Num() - 10; ++i) {
+                    UKismetSystemLibrary::ExecuteConsoleCommand(UWorld::GetWorld(), L"localspawnai 1", nullptr);
+                }
+            }
+
+            std::cerr << "Players: " << Players.Num() << std::endl;
+            */
+
+
+            /*
+            if (FuncName == "K2_OnSetMatchState")
+            {
+                std::cerr << "New MatchState" << std::endl;
+
+                auto Parmss = (Params::GameMode_K2_OnSetMatchState*)Func_Params;
+
+                if (Parmss->NewState.ToString() == "WaitingPostMatch")
+                {
+                    Sleep(5000);
+                    __fastfail(0);
+                }
+            }
+            */
+
+            if (!g_MapLoot.bActive && g_MapLoot.TotalItemsSpawned == 0)
+            {
+                printf("[Plane] >>> Match entering Airplane / Flying phase! Starting Full Map Loot Spawner! <<<\n");
+                gRequestErangelLoot = true;
+            }
+        }
+
         if (Func->GetName() == "BP_OnWeaponReloadEnd")
         {
-            std::cerr << "Reload ended for a player" << std::endl; 
+            std::cerr << "Reload ended for a player" << std::endl;
 
             ASTExtraShootWeapon* shoot = (ASTExtraShootWeapon*)Obj;
             ASTExtraBaseCharacter* wepowner = (ASTExtraBaseCharacter*)shoot->GetOwner();
             ASTExtraPlayerController* wepownerPC = (ASTExtraPlayerController*)wepowner->GetController();
 
             if (shoot)
-            std::cerr << "shoot: " << shoot->GetName() << std::endl;
+                std::cerr << "shoot: " << shoot->GetName() << std::endl;
 
             if (wepowner)
-            std::cerr << "wepowner: " << wepowner->GetName() << std::endl;
+                std::cerr << "wepowner: " << wepowner->GetName() << std::endl;
 
             if (wepownerPC)
-            std::cerr << "wepownerpc: " << wepownerPC->GetName() << std::endl; 
+                std::cerr << "wepownerpc: " << wepownerPC->GetName() << std::endl;
+
+            std::cerr << "ID: " << shoot->GetWeaponID() << std::endl;
 
             int BulletsBefore = 0;
             int BulletsAfter = 0;
             int BulletsToRemove = 0;
 
             std::cerr << "Bullets before: " << (int)shoot->CurBulletNumInClip << std::endl;
-            std::cerr << "Max bullets: " << (int)shoot->CurMaxBulletNumInOneClip << std::endl; 
-           // BulletsBefore = (int)shoot->CurBulletNumInClip;
+            std::cerr << "Max bullets: " << (int)shoot->CurMaxBulletNumInOneClip << std::endl;
+            // BulletsBefore = (int)shoot->CurBulletNumInClip;
 
             shoot->CurBulletNumInClip = shoot->CurMaxBulletNumInOneClip;
 
@@ -1203,11 +2542,11 @@ void* ProcessEventHook(UObject* Obj, UFunction* Func, void* Func_Params)
             //shoot->TslBallisticsComp->ClientNotifyAmmo(shoot->CurMaxBulletNumInOneClip);
             //std::cerr << "ClientNotifyAmmo called" << std::endl; 
             shoot->StartReload();
-            std::cerr << "StartReload called" << std::endl; 
+            std::cerr << "StartReload called" << std::endl;
             shoot->SimulateWeaponReload(EWeaponReloadAnimExec::Tactical, shoot->CurMaxBulletNumInOneClip);
-            std::cerr << "SimulateWeaponReload called" << std::endl; 
+            std::cerr << "SimulateWeaponReload called" << std::endl;
             shoot->SetCurrentBulletNumInClipOnClient(shoot->CurMaxBulletNumInOneClip);
-            std::cerr << "SetCurrentBulletNumInClipOnClient called" << std::endl; 
+            std::cerr << "SetCurrentBulletNumInClipOnClient called" << std::endl;
             shoot->SetCurrentBulletNumInClipOnServer(shoot->CurMaxBulletNumInOneClip);
             //auto sec2 = shoot->ShootWeaponEntityComp;
             //sec2->BaseImpactDamage = shoot->TslBallisticsComp->GetDamage();
@@ -1268,8 +2607,31 @@ void* ProcessEventHook(UObject* Obj, UFunction* Func, void* Func_Params)
                         std::cerr << "Bullet type: .12 shotgun gauge" << std::endl;
                     }
                 }
-                
+
             }*/
+        }
+
+        if (FuncName == "ClientAdjustPosition" || FuncName == "ClientVeryShortAdjustPosition" ||
+            FuncName == "ClientAdjustRootMotionPosition" || FuncName == "ClientAdjustRootMotionSourcePosition")
+        {
+            return nullptr;
+        }
+
+        if (FuncName == "ServerMove" || FuncName == "ServerMoveDual" || FuncName == "ServerMoveDualHybridRootMotion" || FuncName == "ServerMoveOld")
+        {
+            if (Obj->IsA(UCharacterMovementComponent::StaticClass()))
+            {
+                UCharacterMovementComponent* CMC = (UCharacterMovementComponent*)Obj;
+                CMC->bIgnoreClientMovementErrorChecksAndCorrection = true;
+                if (CMC->IsA(USTCharacterMovementComponent::StaticClass()))
+                {
+                    USTCharacterMovementComponent* STCMC = (USTCharacterMovementComponent*)CMC;
+                    STCMC->bServerMoveCheckPassWall = false;
+                    STCMC->AdjustRadiusScaleWhenPassWall = 0.f;
+                    STCMC->RadiusScaleWhenCheckPassWall = 0.f;
+                    STCMC->MaxPenetrationAdjustmentSize = 0.f;
+                }
+            }
         }
 
         if (Func->GetName() == "FlushServerNotifyHitList_NonPlayerCharacter")
@@ -1282,8 +2644,8 @@ void* ProcessEventHook(UObject* Obj, UFunction* Func, void* Func_Params)
             UTslBallisticsComp* Wep = (UTslBallisticsComp*)Obj;
             auto ShootWeapon = (ASTExtraShootWeapon*)Wep->GetOwner();
             ASTExtraBaseCharacter* Character = (ASTExtraBaseCharacter*)ShootWeapon->GetOwner();
-            std::cerr << "OWNER: " << ShootWeapon->GetOwner()->GetName() << std::endl; 
-            std::cerr << "Time between shots: " << Wep->WeaponGunConfig->WeaponGunConfig.TimeBetweenShots << std::endl; 
+            std::cerr << "OWNER: " << ShootWeapon->GetOwner()->GetName() << std::endl;
+            std::cerr << "Time between shots: " << Wep->WeaponGunConfig->WeaponGunConfig.TimeBetweenShots << std::endl;
             */
 
             //CheckFireRate(Character->GetPlayerControllerSafety(), Wep->WeaponGunConfig->WeaponGunConfig.TimeBetweenShots);
@@ -1341,18 +2703,18 @@ void* ProcessEventHook(UObject* Obj, UFunction* Func, void* Func_Params)
                      }
                      */
 
-                    //ASTExtraBaseCharacter* basechar = (ASTExtraBaseCharacter*)Args.ServerOriginImpact.Actor.Get();
-                    //ASTExtraGameStateBase* gamestate = (ASTExtraGameStateBase*)UGameplayStatics::GetGameState(UWorld::GetWorld());
+                     //ASTExtraBaseCharacter* basechar = (ASTExtraBaseCharacter*)Args.ServerOriginImpact.Actor.Get();
+                     //ASTExtraGameStateBase* gamestate = (ASTExtraGameStateBase*)UGameplayStatics::GetGameState(UWorld::GetWorld());
 
-                    /*
-                    SDK::USTExtraGameplayStatics::STApplyPointDamage(Args.OptimizedHitResult.HitActor.Get(),
-                        finalDamage,
-                        Args.ClientOriginAmmoStartLoc,
-                        Final,
-                        weaponowner->GetOwnerController(),
-                        weaponowner,
-                        weaponowner->ShootWeaponComponent->ShootWeaponEntityComponent->DamageType);
-                        */
+                     /*
+                     SDK::USTExtraGameplayStatics::STApplyPointDamage(Args.OptimizedHitResult.HitActor.Get(),
+                         finalDamage,
+                         Args.ClientOriginAmmoStartLoc,
+                         Final,
+                         weaponowner->GetOwnerController(),
+                         weaponowner,
+                         weaponowner->ShootWeaponComponent->ShootWeaponEntityComponent->DamageType);
+                         */
 
                     SDK::USTExtraGameplayStatics::STApplyPointDamage(Args.ServerOriginImpact.Actor.Get(),
                         finalDamage,
@@ -1955,7 +3317,7 @@ void Fix_Character_Logic(ASTExtraBaseCharacter* Character)
 {
     if (!Character)
     {
-        std::cerr << "Passed character is invalid" << std::endl; 
+        std::cerr << "Passed character is invalid" << std::endl;
         return;
     }
 
@@ -2365,7 +3727,7 @@ void ProcessPlayers()
         if (!Character)
             continue;
 
-        CheckMovement(STEPC, Character);
+        //CheckMovement(STEPC, Character);
 
         SDK::APlayerController* PC = (SDK::APlayerController*)PS->GetOwner();
         if (!PC) {
@@ -2644,11 +4006,11 @@ void SetupNormalGameMode()
 
         if (Obj->IsA(URendererSettings::StaticClass()))
         {
-            std::cerr << "RendererSettings found: " << Obj->GetName() << std::endl; 
+            std::cerr << "RendererSettings found: " << Obj->GetName() << std::endl;
             URendererSettings* RendererSettings = (URendererSettings*)Obj;
 
-            std::cerr << "VTF Landscape: " << (int)RendererSettings->bMobileVTFLandscape << std::endl; 
-            std::cerr << "bDiscardUnusedQualityLevels: " << (int)RendererSettings->bDiscardUnusedQualityLevels << std::endl; 
+            std::cerr << "VTF Landscape: " << (int)RendererSettings->bMobileVTFLandscape << std::endl;
+            std::cerr << "bDiscardUnusedQualityLevels: " << (int)RendererSettings->bDiscardUnusedQualityLevels << std::endl;
 
             RendererSettings->bOcclusionCulling = false;
             RendererSettings->bMobileVTFLandscape = true;
@@ -2689,7 +4051,7 @@ void SetupNormalGameMode()
         if (Obj->IsA(URuntimeMeshComponent::StaticClass()))
         {
             std::cerr << "RuntimeMeshComponent: " << Obj->GetName() << std::endl;
-            
+
             URuntimeMeshComponent* MeshComp = (URuntimeMeshComponent*)Obj;
 
             MeshComp->LDMaxDrawDistance = FLT_MAX;
@@ -2722,7 +4084,7 @@ void SetupNormalGameMode()
                 std::cerr << "Landscape level: " << Level->GetName();
             }
         }
-        
+
         if (Obj->IsA(ALandscapeStreamingProxy::StaticClass()))
         {
             std::cerr << "ALandscapeStreamingProxy: " << Obj->GetName() << std::endl;
@@ -2747,7 +4109,7 @@ void SetupNormalGameMode()
             //StreamingProxy->ChangeLODDistanceFactor(0.f);
             StreamingProxy->MaxLODLevel = 0;
         }
-        
+
         if (Obj->IsA(ULandscapeComponent::StaticClass()))
         {
             ULandscapeComponent* LandscapeComponent = (ULandscapeComponent*)Obj;
@@ -2987,7 +4349,7 @@ void OnStartMap(int MapId)
             GS->NumTeams = 2;
         }
     }
-    
+
     /*
     UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"r.StaticMeshStreaming 0"), UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0));
     UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"r.StreamingSM.NeverStreamOut 1"), UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0));
@@ -2999,7 +4361,7 @@ void OnStartMap(int MapId)
     UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"r.AOViewFadeDistanceScale 99999999"), UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0));
     UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"r.LandscapeLODBias 0"), UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0));
     */
-    
+
     /*
     for (ULevelStreaming* Tile : UWorld::GetWorld()->WorldComposition->TilesStreaming)
     {
@@ -3026,50 +4388,50 @@ void OnStartMap(int MapId)
         0.0f, true);
         */
 
-    //ServerPC->EnableCheats();
-    //ServerPC->EnableMyLandscapeDraw();
-    //ServerPC->LoadAllLand(true);
-    //std::cerr << "bLoadAll: " << (int)UWorld::GetWorld()->WorldComposition->Pad_28[0x71] << std::endl; 
+        //ServerPC->EnableCheats();
+        //ServerPC->EnableMyLandscapeDraw();
+        //ServerPC->LoadAllLand(true);
+        //std::cerr << "bLoadAll: " << (int)UWorld::GetWorld()->WorldComposition->Pad_28[0x71] << std::endl; 
 
-    //ASTExtraGameStateBase* GameStateBase = (ASTExtraGameStateBase*)UGameplayStatics::GetGameState(UWorld::GetWorld());
-    //GameStateBase->bGunSamePriority = 1;
-    //GameStateBase->bDebugEnableDamageEffectInTrainingMode = true;
-    //GameStateBase->bIsTrainingMode = false;
+        //ASTExtraGameStateBase* GameStateBase = (ASTExtraGameStateBase*)UGameplayStatics::GetGameState(UWorld::GetWorld());
+        //GameStateBase->bGunSamePriority = 1;
+        //GameStateBase->bDebugEnableDamageEffectInTrainingMode = true;
+        //GameStateBase->bIsTrainingMode = false;
 
-    /*
-    for (int i = 0; i < UObject::GObjects->Num(); ++i)
-    {
-        UObject* Obj = UObject::GObjects->GetByIndex(i);
-
-        if (!Obj || Obj->IsDefaultObject())
-            continue;
-        
-        if (Obj->IsA(SDK::URuntimeMeshComponent::StaticClass()))
+        /*
+        for (int i = 0; i < UObject::GObjects->Num(); ++i)
         {
-            SDK::URuntimeMeshComponent* RunMesh = (SDK::URuntimeMeshComponent*)Obj;
+            UObject* Obj = UObject::GObjects->GetByIndex(i);
 
-            if (!RunMesh)
+            if (!Obj || Obj->IsDefaultObject())
                 continue;
 
-            std::cerr << "MESH: " << RunMesh->GetName() << " COLLISION: " << (int)RunMesh->GetCollisionEnabled() << std::endl;
+            if (Obj->IsA(SDK::URuntimeMeshComponent::StaticClass()))
+            {
+                SDK::URuntimeMeshComponent* RunMesh = (SDK::URuntimeMeshComponent*)Obj;
 
-            RunMesh->LocalBounds.Origin = FVector(0, 0, 0);
-            RunMesh->LocalBounds.BoxExtent = FVector(1000000, 1000000, 1000000);
-            RunMesh->LocalBounds.SphereRadius = 2000000;
+                if (!RunMesh)
+                    continue;
 
-            RunMesh->SetVisibility(true, false);
-            RunMesh->SetHiddenInGame(false, false);
+                std::cerr << "MESH: " << RunMesh->GetName() << " COLLISION: " << (int)RunMesh->GetCollisionEnabled() << std::endl;
 
-            RunMesh->SetComponentTickEnabled(true);
+                RunMesh->LocalBounds.Origin = FVector(0, 0, 0);
+                RunMesh->LocalBounds.BoxExtent = FVector(1000000, 1000000, 1000000);
+                RunMesh->LocalBounds.SphereRadius = 2000000;
 
-            auto Transform = RunMesh->K2_GetComponentToWorld();
+                RunMesh->SetVisibility(true, false);
+                RunMesh->SetHiddenInGame(false, false);
 
-            RunMesh->K2_SetWorldLocation(Transform.Translation, false, nullptr, true);
+                RunMesh->SetComponentTickEnabled(true);
 
-            //RunMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+                auto Transform = RunMesh->K2_GetComponentToWorld();
+
+                RunMesh->K2_SetWorldLocation(Transform.Translation, false, nullptr, true);
+
+                //RunMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+            }
         }
-    }
-    */
+        */
 
     uintptr_t GetNetMode = (uintptr_t(GetModuleHandle(0)) + 0xCFD600);
     uintptr_t GetNetMode2 = (uintptr_t(GetModuleHandle(0)) + 0x4B0180);
@@ -3231,9 +4593,6 @@ void PrintAllPlayersCoordinates()
         if (!STEPC)
             continue;
 
-        if (PS->PlayerName.ToString().contains("Robot"))
-            continue;
-
         SDK::ASTExtraBaseCharacter* Character = STEPC->STExtraBaseCharacter;
 
         std::cerr << Character->K2_GetActorLocation().Z << ", " << Character->K2_GetActorLocation().Y << ", " <<
@@ -3299,7 +4658,7 @@ void ServerTeleportAllPlayersToLoc()
     }
 }
 
-void MatrixEffect()
+int MatrixEffect()
 {
     srand((unsigned)time(nullptr));
 
@@ -3405,7 +4764,7 @@ void CheckMovement(ASTExtraPlayerController* PC, APawn* Pawn)
     if (!PC || !Pawn)
         return;
 
-    double Now = GetServerTime(); 
+    double Now = GetServerTime();
 
     FSpeedSample* Sample = nullptr;
 
@@ -3502,7 +4861,7 @@ void CheckMovement(ASTExtraPlayerController* PC, APawn* Pawn)
         }
         else
         {
-            std::cerr << "Condition failed" << std::endl; 
+            std::cerr << "Condition failed" << std::endl;
         }
     }
 
@@ -3510,13 +4869,982 @@ void CheckMovement(ASTExtraPlayerController* PC, APawn* Pawn)
     Sample->LastServerTime = Now;
 }
 
+void ForceHighQualityForBuildingActors()
+{
+    printf("[BuildingQuality] ForceHighQualityForBuildingActors starting...\n");
+    fflush(stdout);
+
+    __try
+    {
+        UWorld* World = UWorld::GetWorld();
+        if (!World || !UObject::GObjects)
+            return;
+
+        auto PC = UGameplayStatics::GetPlayerController(World, 0);
+        if (PC)
+        {
+            UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"r.HLOD 0"), PC);
+            UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"r.StaticMeshStreaming 0"), PC);
+            UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"r.StreamingSM.NeverStreamOut 1"), PC);
+            UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"r.StaticMeshLODDistanceScale 0"), PC);
+            UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"r.DistanceCullingFactor 0"), PC);
+            UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"r.DisableLODFade 1"), PC);
+            UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"foliage.ForceLOD 0"), PC);
+        }
+
+        UTslSettings* TslSettings = UTslSettings::GetTslSettings();
+        if (!TslSettings)
+            TslSettings = UTslSettings::GetDefaultObj();
+
+        if (TslSettings)
+        {
+            TslSettings->RepDistance_Door = 30000.0f;
+            TslSettings->RepDistance_Window = 30000.0f;
+            TslSettings->CharacterCorrection_MaxSpeed = 100000.0f;
+            TslSettings->CharacterCorrection_MaxSpeedPositionError = 100000.0f;
+            TslSettings->CharacterCorrection_ZeroSpeedPositionError = 100000.0f;
+        }
+
+        int totalObjects = UObject::GObjects->Num();
+        for (int i = 0; i < totalObjects; ++i)
+        {
+            __try
+            {
+                UObject* Obj = UObject::GObjects->GetByIndex(i);
+                if (!Obj || Obj->IsDefaultObject())
+                    continue;
+
+                if (Obj->IsA(AUAEHouseActor::StaticClass()))
+                {
+                    AUAEHouseActor* House = (AUAEHouseActor*)Obj;
+                    House->SetActorEnableCollision(true);
+                    House->WindowHideDistanceSquared = FLT_MAX;
+                    House->WindowLoadDistanceSquared = FLT_MAX;
+                    House->WindowLoadDistanceSquaredOnServer = FLT_MAX;
+                    House->bEnableWindow = true;
+
+                }
+                else if (Obj->IsA(AStaticMeshActorFM::StaticClass()))
+                {
+                    AStaticMeshActorFM* SMAFM = (AStaticMeshActorFM*)Obj;
+                    SMAFM->SetActorEnableCollision(true);
+
+                    if (SMAFM->InstancedMeshComponent)
+                    {
+                        SMAFM->InstancedMeshComponent->bDisableCollision = false;
+                        SMAFM->InstancedMeshComponent->LDMaxDrawDistance = FLT_MAX;
+                        SMAFM->InstancedMeshComponent->CachedMaxDrawDistance = FLT_MAX;
+                        SMAFM->InstancedMeshComponent->bAllowCullDistanceVolume = false;
+                    }
+                }
+                else if (Obj->IsA(AStaticMeshActor::StaticClass()))
+                {
+                    AStaticMeshActor* SMA = (AStaticMeshActor*)Obj;
+                    SMA->SetActorEnableCollision(true);
+
+                    if (SMA->StaticMeshComponent)
+                    {
+                        SMA->StaticMeshComponent->LDMaxDrawDistance = FLT_MAX;
+                        SMA->StaticMeshComponent->CachedMaxDrawDistance = FLT_MAX;
+                        SMA->StaticMeshComponent->bAllowCullDistanceVolume = false;
+                    }
+                }
+                else if (Obj->IsA(APUBGDoor::StaticClass()))
+                {
+                    APUBGDoor* Door = (APUBGDoor*)Obj;
+                    Door->SetActorEnableCollision(true);
+                    if (Door->doorMesh)
+                    {
+                        Door->doorMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+                        Door->doorMesh->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Block);
+                        Door->doorMesh->SetCollisionObjectType(ECollisionChannel::ECC_WorldStatic);
+                    }
+                    if (Door->doorMeshEx)
+                    {
+                        Door->doorMeshEx->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+                        Door->doorMeshEx->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Block);
+                        Door->doorMeshEx->SetCollisionObjectType(ECollisionChannel::ECC_WorldStatic);
+                    }
+                }
+            }
+            __except (EXCEPTION_EXECUTE_HANDLER)
+            {
+                continue;
+            }
+        }
+
+        printf("[BuildingQuality] ForceHighQualityForBuildingActors completed successfully.\n");
+        fflush(stdout);
+    }
+    __except (EXCEPTION_EXECUTE_HANDLER)
+    {
+        printf("[BuildingQuality] SEH Exception caught in ForceHighQualityForBuildingActors.\n");
+        fflush(stdout);
+    }
+}
+
+__int64 (*UpdateStreamingStateO)(SDK::UWorldComposition* a1);
+__int64 UpdateStreamingStateHook(SDK::UWorldComposition* a1)
+{
+    __try
+    {
+        //SafeProcessPlayers();
+
+        SDK::UWorld* World = nullptr;
+        if (GWorld && !IsBadReadPtr(GWorld, 8))
+        {
+            World = GWorld;
+        }
+        else if (a1)
+        {
+            auto OuterObj = a1->GetOuter();
+            if (OuterObj && OuterObj->IsA(SDK::UWorld::StaticClass()))
+            {
+                World = (SDK::UWorld*)OuterObj;
+                GWorld = World;
+            }
+        }
+
+
+        // Run building setup only once on load or on explicit hotkey request (not every 10 seconds)
+        static bool gBuildingInitDone = false;
+        if (!gBuildingInitDone && World)
+        {
+            gBuildingInitDone = true;
+            ForceHighQualityForBuildingActors();
+        }
+        if (gRequestBuildingRefresh)
+        {
+            gRequestBuildingRefresh = false;
+            ForceHighQualityForBuildingActors();
+        }
+
+        if (gRequestErangelLoot && World)
+        {
+            gRequestErangelLoot = false;
+            SetupErangelLoot(World);
+        }
+
+        if (World)
+        {
+            ProcessMapLootTick(World);
+        }
+    }
+    __except (EXCEPTION_EXECUTE_HANDLER)
+    {
+        std::cerr << "SEH Exception on UpdateStreamingState" << std::endl;
+    }
+
+    return UpdateStreamingStateO(a1);
+}
+
+// 0x7ff79f3e83e0
+ENetMode(*T_UActorComponent_InternalGetNetMode)(SDK::UActorComponent*);
+ENetMode hk_UActorComponent_InternalGetNetMode(SDK::UActorComponent* self)
+{
+    //void* caller = _ReturnAddress();
+
+    return ENetMode::NM_DedicatedServer;
+}
+
+DWORD Hook_UActorComponent_InternalGetNetMode()
+{
+
+    // 0x7ff79f3e83e0
+    {
+        uintptr_t func_Addr = (uintptr_t(GetModuleHandle(0)) + 0x1E583E0); // 0x
+
+        T_UActorComponent_InternalGetNetMode = decltype(T_UActorComponent_InternalGetNetMode)(func_Addr);
+        MH_STATUS HookResult = MH_CreateHook((PVOID&)func_Addr, hk_UActorComponent_InternalGetNetMode, reinterpret_cast <LPVOID*> (&T_UActorComponent_InternalGetNetMode));
+        const char* HookResultString = MH_StatusToString(HookResult);
+
+        if (HookResult != MH_STATUS::MH_OK)
+        {
+            printf("\n Hook UActorComponent::InternalGetNetMode() CREATED FAILED WITH REASON : %s !\n", HookResultString);
+        }
+        else
+        {
+            if (MH_EnableHook((PVOID&)func_Addr) != MH_STATUS::MH_OK)
+            {
+                printf("\n UActorComponent::InternalGetNetMode() Hook ENABLE FAILED! \n");
+            }
+            else
+            {
+                printf("\n UActorComponent::InternalGetNetMode() Hook Enabled! \n");
+            }
+        }
+    } // -------------------------------------------------------------------------------------------------------------------------
+
+
+
+    return 0;
+}
+
+
+// FUN_7ff79da40180 =  ENetMode AActor::InternalGetNetMode(AActor *this)
+ENetMode(*T_AActor_InternalGetNetMode)(SDK::AActor*);
+ENetMode hk_AActor_InternalGetNetMode(SDK::AActor* self)
+{
+    //void* caller = _ReturnAddress();
+
+
+    return ENetMode::NM_DedicatedServer;
+}
+
+DWORD Hook_AActor_InternalGetNetMode()
+{
+    // 0x7ff79da40180
+
+    {
+        uintptr_t func_Addr = (uintptr_t(GetModuleHandle(0)) + 0x4B0180); // 0x4B0180
+
+        T_AActor_InternalGetNetMode = decltype(T_AActor_InternalGetNetMode)(func_Addr);
+        MH_STATUS HookResult = MH_CreateHook((PVOID&)func_Addr, hk_AActor_InternalGetNetMode, reinterpret_cast <LPVOID*> (&T_AActor_InternalGetNetMode));
+        const char* HookResultString = MH_StatusToString(HookResult);
+
+        if (HookResult != MH_STATUS::MH_OK)
+        {
+            printf("\n Hook AActor::InternalGetNetMode() CREATED FAILED WITH REASON : %s !\n", HookResultString);
+        }
+        else
+        {
+            if (MH_EnableHook((PVOID&)func_Addr) != MH_STATUS::MH_OK)
+            {
+                printf("\n AActor::InternalGetNetMode() Hook ENABLE FAILED! \n");
+            }
+            else
+            {
+                printf("\n AActor::InternalGetNetMode() Hook Enabled! \n");
+            }
+        }
+    } // -------------------------------------------------------------------------------------------------------------------------
+
+
+
+    return 0;
+}
+
+using IsDistanceDependentLevelFn = bool(__fastcall*)(UWorldComposition* __this, FName a2);
+IsDistanceDependentLevelFn oIsDistanceDependentLevel = nullptr;
+
+bool __fastcall hkIsDistanceDependentLevel(UWorldComposition* __this, FName a2)
+{
+    return false;
+}
+
+DWORD HookDistanceStreaming()
+{
+    uintptr_t func_Addr = (uintptr_t(GetModuleHandle(0)) + 0xC5A140); // 0x4B0180
+
+    oIsDistanceDependentLevel = decltype(oIsDistanceDependentLevel)(func_Addr);
+    MH_STATUS HookResult = MH_CreateHook((PVOID&)func_Addr, hkIsDistanceDependentLevel, reinterpret_cast <LPVOID*> (&oIsDistanceDependentLevel));
+    const char* HookResultString = MH_StatusToString(HookResult);
+
+    if (HookResult != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook IsDistanceDependentLevel CREATED FAILED WITH REASON : %s !\n", HookResultString);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)func_Addr) != MH_STATUS::MH_OK)
+        {
+            printf("\n IsDistanceDependentLevel Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            printf("\n IsDistanceDependentLevel Hook Enabled! \n");
+        }
+    }
+
+    return 0;
+}
+
+using IsTileVisibleFn = bool(__fastcall*)(void* WorldComposition, int TileIndex);
+
+IsTileVisibleFn oIsTileVisible = nullptr;
+
+bool __fastcall hkIsTileVisible(void* WorldComposition, int TileIndex)
+{
+    return true;
+}
+
+DWORD HookTileVisibility()
+{
+    uintptr_t func_Addr = (uintptr_t(GetModuleHandle(0)) + 0x193BEB0);
+
+    oIsTileVisible = decltype(oIsTileVisible)(func_Addr);
+    MH_STATUS HookResult = MH_CreateHook((PVOID&)func_Addr, hkIsTileVisible, reinterpret_cast <LPVOID*> (&oIsTileVisible));
+    const char* HookResultString = MH_StatusToString(HookResult);
+
+    if (HookResult != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook hkIsTileVisible CREATED FAILED WITH REASON : %s !\n", HookResultString);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)func_Addr) != MH_STATUS::MH_OK)
+        {
+            printf("\n hkIsTileVisible Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            printf("\n hkIsTileVisible Hook Enabled! \n");
+        }
+    }
+
+    return 0;
+}
+
+using hk769DE0Fn = __int64(__fastcall*)(void* PC,
+    void* LevelName,
+    bool Loaded,
+    bool Visible,
+    bool Block,
+    int LOD);
+hk769DE0Fn o769DE0 = nullptr;
+__int64 __fastcall hk769DE0(
+    UObject* PC,
+    void* LevelName,
+    bool Loaded,
+    bool Visible,
+    bool Block,
+    int LOD)
+{
+    std::cerr << "769DE0" << std::endl; std::cerr << PC->GetName() << std::endl;
+    std::cerr << "LOD: " << LOD << std::endl;
+    return o769DE0(PC, LevelName, true, true, true, 0);
+}
+
+DWORD Hook769DE0()
+{
+    uintptr_t func_Addr = (uintptr_t(GetModuleHandle(0)) + 0x769DE0);
+
+    o769DE0 = decltype(o769DE0)(func_Addr);
+    MH_STATUS HookResult = MH_CreateHook((PVOID&)func_Addr, hk769DE0, reinterpret_cast <LPVOID*> (&o769DE0));
+    const char* HookResultString = MH_StatusToString(HookResult);
+
+    if (HookResult != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook 769DE0 CREATED FAILED WITH REASON : %s !\n", HookResultString);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)func_Addr) != MH_STATUS::MH_OK)
+        {
+            printf("\n 769DE0 Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            printf("\n 769DE0 Hook Enabled! \n");
+        }
+    }
+
+    return 0;
+}
+
+using hkC51650Fn = bool(__fastcall*)(__int64 a1, __int64 a2, float a3, float* a4);
+hkC51650Fn oC51650 = nullptr;
+bool __fastcall hkC51650(__int64 a1, __int64 a2, float a3, float* a4)
+{
+    //std::cerr << "C51650" << std::endl;
+    return true;
+    //return oC51650(PC, LevelName, true, true, true, LOD);
+}
+
+DWORD HookC51650()
+{
+    uintptr_t func_Addr = (uintptr_t(GetModuleHandle(0)) + 0xC51650);
+
+    oC51650 = decltype(oC51650)(func_Addr);
+    MH_STATUS HookResult = MH_CreateHook((PVOID&)func_Addr, hkC51650, reinterpret_cast <LPVOID*> (&oC51650));
+    const char* HookResultString = MH_StatusToString(HookResult);
+
+    if (HookResult != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook C51650 CREATED FAILED WITH REASON : %s !\n", HookResultString);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)func_Addr) != MH_STATUS::MH_OK)
+        {
+            printf("\n C51650 Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            printf("\n C51650 Hook Enabled! \n");
+        }
+    }
+
+    return 0;
+}
+
+using hk10BE040Fn = bool(__fastcall*)(__int64 a1, unsigned int* a2, unsigned int* a3);
+hk10BE040Fn o10BE040 = nullptr;
+bool __fastcall hk10BE040(__int64 a1, unsigned int* a2, unsigned int* a3)
+{
+    //std::cerr << "10BE040" << std::endl;
+    return true;
+    //return oC51650(PC, LevelName, true, true, true, LOD);
+}
+
+DWORD Hook10BE040()
+{
+    uintptr_t func_Addr = (uintptr_t(GetModuleHandle(0)) + 0x10BE040);
+
+    o10BE040 = decltype(o10BE040)(func_Addr);
+    MH_STATUS HookResult = MH_CreateHook((PVOID&)func_Addr, hk10BE040, reinterpret_cast <LPVOID*> (&o10BE040));
+    const char* HookResultString = MH_StatusToString(HookResult);
+
+    if (HookResult != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook 10BE040 CREATED FAILED WITH REASON : %s !\n", HookResultString);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)func_Addr) != MH_STATUS::MH_OK)
+        {
+            printf("\n 10BE040 Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            printf("\n 10BE040 Hook Enabled! \n");
+        }
+    }
+
+    return 0;
+}
+
+using hkGetMaxDrawDistanceFn = float(__fastcall*)(__int64 proxy);
+hkGetMaxDrawDistanceFn oGetMaxDrawDistance = nullptr;
+float hkGetMaxDrawDistance(__int64 proxy)
+{
+    return FLT_MAX;
+}
+
+DWORD HookGetMaxDrawDistance()
+{
+    uintptr_t func_Addr = (uintptr_t(GetModuleHandle(0)) + 0x1B405D0);
+
+    oGetMaxDrawDistance = decltype(oGetMaxDrawDistance)(func_Addr);
+    MH_STATUS HookResult = MH_CreateHook((PVOID&)func_Addr, hkGetMaxDrawDistance, reinterpret_cast <LPVOID*> (&oGetMaxDrawDistance));
+    const char* HookResultString = MH_StatusToString(HookResult);
+
+    if (HookResult != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook GetMaxDrawDistance CREATED FAILED WITH REASON : %s !\n", HookResultString);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)func_Addr) != MH_STATUS::MH_OK)
+        {
+            printf("\n GetMaxDrawDistance Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            printf("\n GetMaxDrawDistance Hook Enabled! \n");
+        }
+    }
+
+    return 0;
+}
+
+using hk1B40590Fn = float(__fastcall*)(__int64 proxy);
+hk1B40590Fn o1B40590 = nullptr;
+float hk1B40590(__int64 proxy)
+{
+    return FLT_MAX;
+}
+
+DWORD Hook1B40590()
+{
+    uintptr_t func_Addr = (uintptr_t(GetModuleHandle(0)) + 0x1B40590);
+
+    o1B40590 = decltype(o1B40590)(func_Addr);
+    MH_STATUS HookResult = MH_CreateHook((PVOID&)func_Addr, hk1B40590, reinterpret_cast <LPVOID*> (&o1B40590));
+    const char* HookResultString = MH_StatusToString(HookResult);
+
+    if (HookResult != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook 1B40590 CREATED FAILED WITH REASON : %s !\n", HookResultString);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)func_Addr) != MH_STATUS::MH_OK)
+        {
+            printf("\n 1B40590 Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            printf("\n 1B40590 Hook Enabled! \n");
+        }
+    }
+
+    return 0;
+}
+
+using hk4C8A50Fn = void(__fastcall*)(__int64* a1, int a2, __int64 a3);
+hk4C8A50Fn o4C8A50 = nullptr;
+void hk4C8A50(__int64* a1, int a2, __int64 a3)
+{
+    return;
+}
+
+DWORD Hook4C8A50()
+{
+    uintptr_t func_Addr = (uintptr_t(GetModuleHandle(0)) + 0x4C8A50);
+
+    o4C8A50 = decltype(o4C8A50)(func_Addr);
+    MH_STATUS HookResult = MH_CreateHook((PVOID&)func_Addr, hk4C8A50, reinterpret_cast <LPVOID*> (&o4C8A50));
+    const char* HookResultString = MH_StatusToString(HookResult);
+
+    if (HookResult != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook 4C8A50 CREATED FAILED WITH REASON : %s !\n", HookResultString);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)func_Addr) != MH_STATUS::MH_OK)
+        {
+            printf("\n 4C8A50 Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            printf("\n 4C8A50 Hook Enabled! \n");
+        }
+    }
+
+    return 0;
+}
+
+using hk8D5220Fn = void(__fastcall*)(__int64 a1);
+hk8D5220Fn o8D5220 = nullptr;
+__int64 hk8D5220(__int64 a1)
+{
+    return a1;
+}
+
+DWORD Hook8D5220()
+{
+    uintptr_t func_Addr = (uintptr_t(GetModuleHandle(0)) + 0x8D5220);
+
+    o8D5220 = decltype(o8D5220)(func_Addr);
+    MH_STATUS HookResult = MH_CreateHook((PVOID&)func_Addr, hk8D5220, reinterpret_cast <LPVOID*> (&o8D5220));
+    const char* HookResultString = MH_StatusToString(HookResult);
+
+    if (HookResult != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook 8D5220 CREATED FAILED WITH REASON : %s !\n", HookResultString);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)func_Addr) != MH_STATUS::MH_OK)
+        {
+            printf("\n 8D5220 Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            printf("\n 8D5220 Hook Enabled! \n");
+        }
+    }
+
+    return 0;
+}
+
+struct FDistanceVisibleLevel
+{
+    // 0x00
+    int32 TileIdx;
+
+    // 0x04
+    int32 Pad[0x04];
+
+    // 0x08
+    ULevelStreaming* StreamingLevel;
+
+    // 0x10
+    int32 LODIndex;
+
+    // 0x14
+    int32 Pad2[0x04];
+
+    // 0x18
+    float DistanceSquared;
+
+    // 0x1C
+    float something;
+};
+
+struct TArrayRaw
+{
+    uint8_t* Data;  // +0x00
+    int32_t  Num;   // +0x08
+    int32_t  Max;   // +0x0C
+};
+
+inline void GrowArrayRaw(void* Array)
+{
+    reinterpret_cast<uint64_t(__fastcall*)(void*)>(InSDKUtils::GetImageBase() + 0x2B26D0)(Array);
+}
+
+using hkC53BD0Fn = __int64(__fastcall*)(UWorldComposition* a1, const FVector* InLocations,
+    int32 Num,
+    TArray<FDistanceVisibleLevel>& OutVisibleLevels,
+    TArray<FDistanceVisibleLevel>& OutHiddenLevels); //GetDistanceVisibleLevels
+hkC53BD0Fn oC53BD0 = nullptr;
+__int64 hkC53BD0(
+    UWorldComposition* WorldComposition,
+    const FVector* InLocations,
+    int32 Num,
+    TArray<FDistanceVisibleLevel>& Visible,
+    TArray<FDistanceVisibleLevel>& Hidden)
+{
+    const auto result =
+        oC53BD0(WorldComposition, InLocations, Num, Visible, Hidden);
+
+    auto* V = reinterpret_cast<TArrayRaw*>(&Visible);
+    auto* H = reinterpret_cast<TArrayRaw*>(&Hidden);
+
+    const int32 oldVisibleNum = V->Num;
+    const int32 hiddenNum = H->Num;
+
+    if (hiddenNum > 0)
+    {
+        const int32 required = oldVisibleNum + hiddenNum;
+
+        if (required > V->Max)
+        {
+            V->Num = required;
+            GrowArrayRaw(V);
+            V->Num = oldVisibleNum;
+        }
+
+        uint8_t* visibleData = V->Data;
+        uint8_t* hiddenData = H->Data;
+
+        std::memcpy(
+            visibleData + (size_t)oldVisibleNum * 0x20,
+            hiddenData,
+            (size_t)hiddenNum * 0x20);
+
+        V->Num = required;
+        H->Num = 0;
+    }
+
+    return result;
+}
+
+DWORD HookC53BD0()
+{
+    uintptr_t func_Addr = (uintptr_t(GetModuleHandle(0)) + 0xC53BD0);
+
+    oC53BD0 = decltype(oC53BD0)(func_Addr);
+    MH_STATUS HookResult = MH_CreateHook((PVOID&)func_Addr, hkC53BD0, reinterpret_cast <LPVOID*> (&oC53BD0));
+    const char* HookResultString = MH_StatusToString(HookResult);
+
+    if (HookResult != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook C53BD0 CREATED FAILED WITH REASON : %s !\n", HookResultString);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)func_Addr) != MH_STATUS::MH_OK)
+        {
+            printf("\n C53BD0 Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            printf("\n C53BD0 Hook Enabled! \n");
+        }
+    }
+
+    return 0;
+}
+
+using SetLoadedLevelFn = __int64(__fastcall*)(__int64 StreamingLevel, __int64 NewLevel);
+SetLoadedLevelFn o1389470;
+
+__int64 __fastcall hk1389470(__int64 StreamingLevel, __int64 NewLevel)
+{
+    // Ignore unload requests.
+    if (NewLevel == 0)
+        return 0;
+
+    // Preserve normal load behavior.
+    return o1389470(StreamingLevel, NewLevel);
+}
+
+DWORD Hook1389470()
+{
+    uintptr_t func_Addr = (uintptr_t(GetModuleHandle(0)) + 0x1389470);
+
+    o1389470 = decltype(o1389470)(func_Addr);
+    MH_STATUS HookResult = MH_CreateHook((PVOID&)func_Addr, hk1389470, reinterpret_cast <LPVOID*> (&o1389470));
+    const char* HookResultString = MH_StatusToString(HookResult);
+
+    if (HookResult != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook 1389470 CREATED FAILED WITH REASON : %s !\n", HookResultString);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)func_Addr) != MH_STATUS::MH_OK)
+        {
+            printf("\n 1389470 Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            printf("\n 1389470 Hook Enabled! \n");
+        }
+    }
+
+    return 0;
+}
+
+using RemoveFromWorldFn = char(__fastcall*)(__int64 World, __int64 Level, char bSomething);
+RemoveFromWorldFn oC60330;
+char __fastcall hkC60330(__int64 World, __int64 Level, char bSomething)
+{
+    return 1;
+}
+
+DWORD HookC60330()
+{
+    uintptr_t func_Addr = (uintptr_t(GetModuleHandle(0)) + 0xC60330);
+
+    oC60330 = decltype(oC60330)(func_Addr);
+    MH_STATUS HookResult = MH_CreateHook((PVOID&)func_Addr, hkC60330, reinterpret_cast <LPVOID*> (&oC60330));
+    const char* HookResultString = MH_StatusToString(HookResult);
+
+    if (HookResult != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook C60330 CREATED FAILED WITH REASON : %s !\n", HookResultString);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)func_Addr) != MH_STATUS::MH_OK)
+        {
+            printf("\n C60330 Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            printf("\n C60330 Hook Enabled! \n");
+        }
+    }
+
+    return 0;
+}
+
+using C4C1E0Fn = char(__fastcall*)(__int64 WC,
+    __int64 World,
+    int Tile,
+    uint8_t Visible,
+    uint8_t Loaded,
+    uint8_t Block,
+    int LOD);
+C4C1E0Fn oC4C1E0;
+char __fastcall hkC4C1E0(
+    __int64 WC,
+    __int64 World,
+    int Tile,
+    uint8_t Visible,
+    uint8_t Loaded,
+    uint8_t Block,
+    int LOD)
+{
+    auto ret = oC4C1E0(WC, World, Tile, 1, 1, 1, LOD);
+
+    auto streaming = *(__int64**)(WC + 160);
+    auto level = streaming[Tile];
+
+    *(uint32_t*)(level + 196) |= 0x20 | 0x40 | 0x100;
+    *(uint8_t*)(level + 208) &= ~0x02;
+
+    return ret;
+}
+
+DWORD HookC4C1E0()
+{
+    uintptr_t func_Addr = (uintptr_t(GetModuleHandle(0)) + 0xC4C1E0);
+
+    oC4C1E0 = decltype(oC4C1E0)(func_Addr);
+    MH_STATUS HookResult = MH_CreateHook((PVOID&)func_Addr, hkC4C1E0, reinterpret_cast <LPVOID*> (&oC4C1E0));
+    const char* HookResultString = MH_StatusToString(HookResult);
+
+    if (HookResult != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook C4C1E0 CREATED FAILED WITH REASON : %s !\n", HookResultString);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)func_Addr) != MH_STATUS::MH_OK)
+        {
+            printf("\n C4C1E0 Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            printf("\n C4C1E0 Hook Enabled! \n");
+        }
+    }
+
+    return 0;
+}
+
+using F5FFD0Fn = __int64(__fastcall*)(__int64 a1);
+F5FFD0Fn oF5FFD0;
+char __fastcall hkF5FFD0(__int64 a1)
+{
+    std::cerr << "UBaseGeneratorComponent::CheckTileLevelsVisible CALLED" << std::endl;
+    return oF5FFD0(a1);
+}
+
+DWORD HookF5FFD0()
+{
+    uintptr_t func_Addr = (uintptr_t(GetModuleHandle(0)) + 0xF5FFD0);
+
+    oF5FFD0 = decltype(oF5FFD0)(func_Addr);
+    MH_STATUS HookResult = MH_CreateHook((PVOID&)func_Addr, hkF5FFD0, reinterpret_cast <LPVOID*> (&oF5FFD0));
+    const char* HookResultString = MH_StatusToString(HookResult);
+
+    if (HookResult != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook F5FFD0 CREATED FAILED WITH REASON : %s !\n", HookResultString);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)func_Addr) != MH_STATUS::MH_OK)
+        {
+            printf("\n F5FFD0 Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            printf("\n F5FFD0 Hook Enabled! \n");
+        }
+    }
+
+    return 0;
+}
+
+using F6BFD0Fn = __int64(__fastcall*)(__int64 a1);
+F6BFD0Fn oF6BFD0;
+char __fastcall hkF6BFD0(__int64 a1)
+{
+    std::cerr << "UItemGeneratorComponent::InitCatetorys CALLED" << std::endl;
+    return oF6BFD0(a1);
+}
+
+DWORD HookF6BFD0()
+{
+    uintptr_t func_Addr = (uintptr_t(GetModuleHandle(0)) + 0xF6BFD0);
+
+    oF6BFD0 = decltype(oF6BFD0)(func_Addr);
+    MH_STATUS HookResult = MH_CreateHook((PVOID&)func_Addr, hkF6BFD0, reinterpret_cast <LPVOID*> (&oF6BFD0));
+    const char* HookResultString = MH_StatusToString(HookResult);
+
+    if (HookResult != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook F6BFD0 CREATED FAILED WITH REASON : %s !\n", HookResultString);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)func_Addr) != MH_STATUS::MH_OK)
+        {
+            printf("\n F6BFD0 Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            printf("\n F6BFD0 Hook Enabled! \n");
+        }
+    }
+
+    return 0;
+}
+
+using F6CDD0Fn = __int64(__fastcall*)(__int64 a1);
+F6CDD0Fn oF6CDD0;
+char __fastcall hkF6CDD0(__int64 a1)
+{
+    std::cerr << "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABCDEFG" << std::endl;
+    return oF6CDD0(a1);
+}
+
+DWORD HookF6CDD0()
+{
+    uintptr_t func_Addr = (uintptr_t(GetModuleHandle(0)) + 0xF6CDD0);
+
+    oF6CDD0 = decltype(oF6CDD0)(func_Addr);
+    MH_STATUS HookResult = MH_CreateHook((PVOID&)func_Addr, hkF6CDD0, reinterpret_cast <LPVOID*> (&oF6CDD0));
+    const char* HookResultString = MH_StatusToString(HookResult);
+
+    if (HookResult != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook F6CDD0 CREATED FAILED WITH REASON : %s !\n", HookResultString);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)func_Addr) != MH_STATUS::MH_OK)
+        {
+            printf("\n F6CDD0 Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            printf("\n F6CDD0 Hook Enabled! \n");
+        }
+    }
+
+    return 0;
+}
+
 void hooksagain()
 {
+    Hook_AActor_InternalGetNetMode();
+    Hook_UActorComponent_InternalGetNetMode();
+
+    HookDistanceStreaming();
+    HookTileVisibility();
+
+    HookGetMaxDrawDistance();
+
+    Hook1B40590();
+    Hook769DE0();
+    HookC51650();
+    Hook10BE040();
+    Hook4C8A50();
+    Hook8D5220();
+    HookC53BD0();
+    Hook1389470();
+    HookC60330();
+    HookC4C1E0();
+    HookF5FFD0();
+    HookF6BFD0();
+    HookF6CDD0();
+
     uintptr_t GetNetMode = (uintptr_t(GetModuleHandle(0)) + 0xCFD600);
     uintptr_t GetNetMode2 = (uintptr_t(GetModuleHandle(0)) + 0x4B0180);
+    uintptr_t UpdateStreamingState = (uintptr_t(GetModuleHandle(0)) + 0xC6A560);
 
     MH_STATUS netmodeHookResult = MH_CreateHook((PVOID&)GetNetMode, GetNetModeHook, reinterpret_cast <LPVOID*> (&GetNetModeO));
     const char* netmodeHookResultString = MH_StatusToString(netmodeHookResult);
+
+    
+    MH_STATUS UpdateStreamingStateHookResult = MH_CreateHook((PVOID&)UpdateStreamingState, UpdateStreamingStateHook, reinterpret_cast<LPVOID*>(&UpdateStreamingStateO));
+    const char* UpdateStreamingStateHookResultString = MH_StatusToString(UpdateStreamingStateHookResult);
+
+    if (UpdateStreamingStateHookResult != MH_STATUS::MH_OK)
+    {
+        printf("\n Hook ProcessLevelStreamingVolumes CREATED FAILED WITH REASON : %s !\n", UpdateStreamingStateHookResultString);
+    }
+    else
+    {
+        if (MH_EnableHook((PVOID&)UpdateStreamingState) != MH_STATUS::MH_OK)
+        {
+            printf("\n ProcessLevelStreamingVolumes Hook ENABLE FAILED! \n");
+        }
+        else
+        {
+            std::cout << "ProcessLevelStreamingVolumes Hook ENABLED" << std::endl;
+        }
+    }
+    
 
     if (netmodeHookResult != MH_STATUS::MH_OK)
     {
@@ -3575,8 +5903,233 @@ void hooksagain()
     }
 }
 
+enum class GameMap
+{
+    Unknown,
+    Bodie,
+    Periverka,
+    Erangel,
+    Miramar,
+    Sanhok,
+    Vikendi,
+    Training
+};
+
+GameMap GetLaunchMap()
+{
+    const wchar_t* commandLine = GetCommandLineW();
+
+    if (!commandLine)
+        return GameMap::Unknown;
+
+    std::wstring cmd(commandLine);
+
+    // Convert to lowercase so -map=BODIE also works.
+    std::transform(
+        cmd.begin(),
+        cmd.end(),
+        cmd.begin(),
+        [](wchar_t c) {
+            return static_cast<wchar_t>(towlower(c));
+        }
+    );
+
+    const std::wstring prefix = L"-map=";
+
+    size_t pos = cmd.find(prefix);
+
+    if (pos == std::wstring::npos)
+    {
+        if (cmd.find(L"-erangel") != std::wstring::npos)
+            return GameMap::Erangel;
+        if (cmd.find(L"-miramar") != std::wstring::npos)
+            return GameMap::Miramar;
+        if (cmd.find(L"-sanhok") != std::wstring::npos)
+            return GameMap::Sanhok;
+        if (cmd.find(L"-vikendi") != std::wstring::npos)
+            return GameMap::Vikendi;
+        if (cmd.find(L"-bodie") != std::wstring::npos)
+            return GameMap::Bodie;
+        if (cmd.find(L"-periverka") != std::wstring::npos)
+            return GameMap::Periverka;
+        if (cmd.find(L"-training") != std::wstring::npos)
+            return GameMap::Training;
+
+        return GameMap::Unknown;
+    }
+
+    pos += prefix.length();
+
+    size_t end = cmd.find_first_of(L" \t\r\n", pos);
+
+    std::wstring mapName;
+
+    if (end == std::wstring::npos)
+        mapName = cmd.substr(pos);
+    else
+        mapName = cmd.substr(pos, end - pos);
+
+    if (mapName == L"bodie")
+        return GameMap::Bodie;
+
+    if (mapName == L"periverka")
+        return GameMap::Periverka;
+
+    if (mapName == L"erangel")
+        return GameMap::Erangel;
+
+    if (mapName == L"miramar")
+        return GameMap::Miramar;
+
+    if (mapName == L"sanhok")
+        return GameMap::Sanhok;
+
+    if (mapName == L"vikendi")
+        return GameMap::Vikendi;
+
+    if (mapName == L"training")
+        return GameMap::Training;
+
+    return GameMap::Unknown;
+}
+
+struct FProp
+{
+    SDK::UProperty* Property = nullptr;
+    std::string Type;
+    int32 Off = 0;
+    int32 ByteOff = 0;
+    uint8 Mask = 0xFF;
+
+    bool Ok() const
+    {
+        return Property != nullptr;
+    }
+};
+
+static FProp ObjProp(SDK::UObject* O, const char* Name)
+{
+    if (!O || !Name)
+        return {};
+
+    static std::unordered_map<std::string, FProp> Cache;
+    static std::mutex CacheMutex;
+
+    SDK::UClass* Cls = O->GetClass();
+    if (!Cls)
+        return {};
+
+    std::string Key = Cls->GetName();
+    Key += "::";
+    Key += Name;
+
+    {
+        std::lock_guard<std::mutex> Lock(CacheMutex);
+        auto It = Cache.find(Key);
+        if (It != Cache.end())
+            return It->second;
+    }
+
+    FProp Result{};
+
+    for (SDK::UStruct* S = Cls; S; S = S->Super)
+    {
+        for (SDK::UField* Field = S->Children;
+            Field;
+            Field = Field->Next)
+        {
+            if (!Field->IsA(SDK::UProperty::StaticClass()))
+                continue;
+
+            auto* P = static_cast<SDK::UProperty*>(Field);
+
+            if (P->GetName() != Name)
+                continue;
+
+            Result.Property = P;
+            Result.Off = P->Offset;
+
+            if (P->IsA(SDK::UBoolProperty::StaticClass()))
+            {
+                auto* BP = static_cast<SDK::UBoolProperty*>(P);
+                Result.Type = "BoolProperty";
+                Result.ByteOff = BP->ByteOffset;
+                Result.Mask = BP->FieldMask;
+            }
+            else
+            {
+                Result.Type = "OtherProperty";
+            }
+
+            break;
+        }
+
+        if (Result.Ok())
+            break;
+    }
+
+    if (Result.Ok())
+    {
+        std::lock_guard<std::mutex> Lock(CacheMutex);
+        Cache.emplace(Key, Result);
+    }
+
+    return Result;
+}
+
+bool WriteBool(SDK::UObject* O, const char* Name, bool V)
+{
+    FProp P = ObjProp(O, Name);
+
+    if (!O || !P.Ok() || P.Type != "BoolProperty")
+        return false;
+
+    auto* B = reinterpret_cast<uint8*>(
+        reinterpret_cast<uint8*>(O) + P.Off + P.ByteOff
+        );
+
+    if (P.Mask == 0xFF)
+        *B = V ? 1 : 0;
+    else
+        *B = V ? (*B | P.Mask) : (*B & ~P.Mask);
+
+    return true;
+}
+
+void zaebal(UWorld* World)
+{
+    for (ULevelStreaming* L : World->StreamingLevels) {
+        if (!L) continue;
+
+        std::cerr << L->PackageName.ToString() << std::endl;
+
+        //if (L->PackageName.ToString().contains("eather")) continue;
+        //read bShouldBeLoaded / bShouldBeVisible / bDisableDistanceStreaming; if all set, continue;
+        WriteBool(L, "bDisableDistanceStreaming", true);
+        WriteBool(L, "bShouldBeLoaded", true);
+        WriteBool(L, "bShouldBeVisible", true);
+    }
+
+    for (ULevelStreaming* LS : World->WorldComposition->TilesStreaming)
+    {
+        if (!LS) continue;
+
+        std::cerr << LS->PackageName.ToString() << std::endl;
+
+        UGameplayStatics::LoadStreamLevel(UWorld::GetWorld(), LS->PackageNameToLoad, 1, 0, FLatentActionInfo());
+
+        //if (LS->PackageName.ToString().contains("eather")) continue;
+        //read bShouldBeLoaded / bShouldBeVisible / bDisableDistanceStreaming; if all set, continue;
+        WriteBool(LS, "bDisableDistanceStreaming", true);
+        WriteBool(LS, "bShouldBeLoaded", true);
+        WriteBool(LS, "bShouldBeVisible", true);
+    }
+    //if (FullDetailTiles) WriteVal<int32>(L, "LevelLODIndex", -1);
+}
+
 DWORD MainThread(HMODULE Module)
 {
+    g_hModule = Module;
     /* Code to open a console window */
     AllocConsole();
     FILE* Dummy;
@@ -3592,6 +6145,8 @@ DWORD MainThread(HMODULE Module)
     } while (!Dec::objobjects(Offsets::GObjects));
 
     Sleep(8600);
+
+    DisableCullingForStreamingLevels(UWorld::GetWorld());
 
     MH_STATUS InitStatus = MH_Initialize();
     const char* StatusString = MH_StatusToString(InitStatus);
@@ -3638,7 +6193,7 @@ DWORD MainThread(HMODULE Module)
     }
     */
 
-    //InitUEConsole();
+    InitUEConsole();
 
     UWorld* World = UWorld::GetWorld();
 
@@ -3676,6 +6231,7 @@ DWORD MainThread(HMODULE Module)
 
     printf("\x54""H\111S\x20""I\123 \x46""R\105E\x20""C\117N\x54""E\116T\x20""B\131 \x4F""G\072B\x41""T\124L\x45""G\122O\x55""N\104S\x2C"" \111F\x20""Y\117U\x20""B\117U\x47""H\124 \x54""H\111S\x2C"" \131O\x55"" \110A\x56""E\040B\x45""E\116 \x53""C\101M\x4D""E\104.\x20""h\164t\x70""s\072/\x2F""g\151t\x68""u\142.\x63""o\155/\x48""4\124I\x55""X\012");
 
+    /*
     int Map;
 
     std::cerr << "Select map" << std::endl;
@@ -3730,12 +6286,169 @@ DWORD MainThread(HMODULE Module)
         std::cerr << "Invalid map selection" << std::endl;
         break;
     }
-    
+    */
+
+    GameMap Map = GetLaunchMap();
+
+    if (Map == GameMap::Unknown)
+        std::cerr << "Unknown map" << std::endl;
+
+    if (Map == GameMap::Bodie)
+    {
+        std::cerr << "Launching Bodie..." << std::endl;
+        UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"open PUBG_Bodie_Main?listen?game=/Game/Blueprints/Core/TeamMatchMode/BP_BattleRoyaleTeamMatchGameMode_C"), nullptr);
+        OnStartMap(4);
+    }
+    else if (Map == GameMap::Periverka)
+    {
+        std::cerr << "Launching Periverka..." << std::endl;
+        UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"open PUBG_School_Main?listen"), nullptr);
+        OnStartMap(5);
+    }
+    else if (Map == GameMap::Erangel)
+    {
+        std::cerr << "Launching Erangel..." << std::endl;
+        if (!World) World = UWorld::GetWorld();
+        UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"open PUBG_Forest?listen"), nullptr);
+        Sleep(15000);
+        hooksagain();
+
+        DisableCullingForStreamingLevels(UWorld::GetWorld());
+        zaebal(UWorld::GetWorld());
+
+        gRequestBuildingRefresh = true;
+        // NOTE: Loot spawner is strictly delayed until players board the airplane!
+
+        Sleep(30000);
+
+        SDK::UWorld* World = UWorld::GetWorld();
+
+        SDK::AGameStateBase* GS = UGameplayStatics::GetGameState(World);
+
+        UC::TArray<SDK::APlayerState*>& Players = GS->PlayerArray;
+
+        ASTExtraPlayerController* STEPC = (ASTExtraPlayerController*)UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0);
+
+        std::cerr << "Players: " << Players.Num() << std::endl;
+
+        if (Players.Num() <= 100) {
+            for (int i = 0; i < 100 - Players.Num(); ++i) {
+                UKismetSystemLibrary::ExecuteConsoleCommand(UWorld::GetWorld(), L"localspawnai 1", nullptr);
+            }
+        }
+
+        std::cerr << "Players: " << Players.Num() << std::endl;
+    }
+    else if (Map == GameMap::Miramar)
+    {
+        std::cerr << "Launching Miramar..." << std::endl;
+        UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"open PUBG_Desert?listen"), nullptr);
+        Sleep(15000);
+        hooksagain();
+
+        DisableCullingForStreamingLevels(UWorld::GetWorld());
+
+        gRequestBuildingRefresh = true;
+
+        Sleep(30000);
+
+        SDK::UWorld* World = UWorld::GetWorld();
+
+        SDK::AGameStateBase* GS = UGameplayStatics::GetGameState(World);
+
+        UC::TArray<SDK::APlayerState*>& Players = GS->PlayerArray;
+
+        ASTExtraPlayerController* STEPC = (ASTExtraPlayerController*)UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0);
+
+        std::cerr << "Players: " << Players.Num() << std::endl;
+
+        if (Players.Num() <= 100) {
+            for (int i = 0; i < 100 - Players.Num(); ++i) {
+                UKismetSystemLibrary::ExecuteConsoleCommand(UWorld::GetWorld(), L"localspawnai 1", nullptr);
+            }
+        }
+
+        std::cerr << "Players: " << Players.Num() << std::endl;
+    }
+    else if (Map == GameMap::Sanhok)
+    {
+        std::cerr << "Launching Sanhok..." << std::endl;
+        UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"open /Game/Maps/PUBG_Savage/PUBG_Savage_Main?listen"), nullptr);
+        Sleep(15000);
+        hooksagain();
+
+        DisableCullingForStreamingLevels(UWorld::GetWorld());
+
+        gRequestBuildingRefresh = true;
+
+        Sleep(30000);
+
+        SDK::UWorld* World = UWorld::GetWorld();
+
+        SDK::AGameStateBase* GS = UGameplayStatics::GetGameState(World);
+
+        UC::TArray<SDK::APlayerState*>& Players = GS->PlayerArray;
+
+        ASTExtraPlayerController* STEPC = (ASTExtraPlayerController*)UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0);
+
+        std::cerr << "Players: " << Players.Num() << std::endl;
+
+        if (Players.Num() <= 100) {
+            for (int i = 0; i < 100 - Players.Num(); ++i) {
+                UKismetSystemLibrary::ExecuteConsoleCommand(UWorld::GetWorld(), L"localspawnai 1", nullptr);
+            }
+        }
+
+        std::cerr << "Players: " << Players.Num() << std::endl;
+    }
+    else if (Map == GameMap::Vikendi)
+    {
+        std::cerr << "Launching Vikendi..." << std::endl;
+        UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"open /Game/Maps/PUBG_DihorOtok/DihorOtok_Main?listen"), nullptr);
+        Sleep(15000);
+        hooksagain();
+
+        DisableCullingForStreamingLevels(UWorld::GetWorld());
+
+        gRequestBuildingRefresh = true;
+
+        Sleep(30000);
+
+        SDK::UWorld* World = UWorld::GetWorld();
+
+        SDK::AGameStateBase* GS = UGameplayStatics::GetGameState(World);
+
+        UC::TArray<SDK::APlayerState*>& Players = GS->PlayerArray;
+
+        ASTExtraPlayerController* STEPC = (ASTExtraPlayerController*)UGameplayStatics::GetPlayerController(UWorld::GetWorld(), 0);
+
+        std::cerr << "Players: " << Players.Num() << std::endl;
+
+        if (Players.Num() <= 100) {
+            for (int i = 0; i < 100 - Players.Num(); ++i) {
+                UKismetSystemLibrary::ExecuteConsoleCommand(UWorld::GetWorld(), L"localspawnai 1", nullptr);
+            }
+        }
+
+        std::cerr << "Players: " << Players.Num() << std::endl;
+    }
+    else if (Map == GameMap::Training)
+    {
+        bIsTrainingMode = true;
+        std::cerr << "Launching Training..." << std::endl;
+        UKismetSystemLibrary::ExecuteConsoleCommand(World, FString(L"open shooting_range4?listen"), nullptr);
+        //OnStartMap(6);
+        Sleep(7500);
+        hooksagain();
+        //FixValue();
+    }
+
+    GWorld = UWorld::GetWorld();
 
     while (true)
     {
-        SafeProcessPlayers(); 
-        Sleep(100);
+        //zaebal(UWorld::GetWorld());
+        //Sleep(100);
     }
 
     return 0;
@@ -3746,6 +6459,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID lpReserved)
     switch (reason)
     {
     case DLL_PROCESS_ATTACH:
+        g_hModule = hModule;
         DisableThreadLibraryCalls(hModule);
         CreateThread(0, 0, (LPTHREAD_START_ROUTINE)MainThread, hModule, 0, 0);
         break;

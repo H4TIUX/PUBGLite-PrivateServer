@@ -35,6 +35,7 @@ public:
 
 	std::string GetFullName() const;
 	std::string GetName() const;
+
 	bool HasTypeFlag(EClassCastFlags TypeFlags) const;
 	bool IsA(EClassCastFlags TypeFlags) const;
 	bool IsA(const class FName& ClassName) const;
@@ -44,6 +45,8 @@ public:
 	int32 GetIndex() const;
 	UClass* GetClass() const;
 	UObject* GetOuter() const;
+
+	FName GetFName() const;
 
 	void ExecuteUbergraph(int32 EntryPoint);
 

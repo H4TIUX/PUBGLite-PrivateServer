@@ -101,6 +101,25 @@ std::string UObject::GetFullName() const
 	return "None";
 }
 
+FName UObject::GetFName() const 
+{
+	//return this ? Name.ToString() : "None";
+
+	struct FName_Decrypted
+	{
+		uint32_t ComparisonIndex;
+		uint32_t Number;
+	};
+	FName EncryptedName = Name;
+	FName_Decrypted DecryptedName;
+
+	uint32_t v14 = std::rotl(uint32_t(EncryptedName.ComparisonIndex) ^ 0xED10C7AF, 4);
+	DecryptedName.ComparisonIndex = v14 ^ (v14 << 16) ^ 0x3C659A4D;
+	uint32_t v15 = std::rotl(EncryptedName.Number ^ 0xF7B20EA6, 14);
+	DecryptedName.Number = v15 ^ (v15 << 16) ^ 0xF914F7B2;
+
+	return FName(DecryptedName.ComparisonIndex, DecryptedName.Number);
+}
 
 // Predefined Function
 // Retuns the name of this object

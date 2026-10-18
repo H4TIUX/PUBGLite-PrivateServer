@@ -2833,7 +2833,7 @@ public:
 
 // Class ShadowTrackerExtra.STExtraVehicleBase
 // 0x0430 (0x0840 - 0x0410)
-class ASTExtraVehicleBase : public APawn
+class alignas(0x8) ASTExtraVehicleBase : public APawn 
 {
 public:
 	uint8                                         Pad_410[0x8];                                      // 0x0410(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -9581,7 +9581,7 @@ public:
 
 // Class ShadowTrackerExtra.STExtraBaseCharacter
 // 0x15C0 (0x1DF0 - 0x0830)
-#pragma pack(push, 0x1)
+//#pragma pack(push, 0x1)
 class alignas(0x10) ASTExtraBaseCharacter : public AUAECharacter
 {
 public:

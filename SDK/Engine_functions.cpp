@@ -57555,8 +57555,20 @@ void UWindDirectionalSourceComponent::SetWindType(EWindSourceType InNewType)
 // Predefined Function
 // Gets a pointer to the current World of the GameViewport
 
-class UWorld* UWorld::GetWorld()
+SDK::UWorld* UWorld::GetWorld()
 {
+	/*
+	if (SDK::UEngine* Engine = SDK::UEngine::GetEngine())
+	{
+		if (!Engine->GameViewport)
+			return nullptr;
+
+		return *(SDK::UWorld**)((uintptr_t)Engine->GameViewport + 0x0150);
+	}
+
+	return nullptr;
+	*/
+
 	for (int i = 0; i < UObject::GObjects->Num(); ++i)
 	{
 		UObject* Obj = UObject::GObjects->GetByIndex(i);
@@ -57567,8 +57579,6 @@ class UWorld* UWorld::GetWorld()
 		if (Obj->IsA(UWorld::StaticClass()))
 			return (UWorld*)Obj;
 	}
-
-	return nullptr;
 }
 
 

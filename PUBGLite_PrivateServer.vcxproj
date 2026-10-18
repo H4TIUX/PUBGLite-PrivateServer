@@ -148,6 +148,7 @@
     <ClInclude Include="cJSON.h" />
     <ClInclude Include="cJSON_Utils.h" />
     <ClInclude Include="dummy.hpp" />
+    <ClInclude Include="ErangelItemSpots.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="include\MinHook\MinHook.h" />
     <ClInclude Include="pch.h" />
